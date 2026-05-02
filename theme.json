@@ -1,0 +1,33 @@
+{
+  "name": "Neo",
+  "author": "QYL",
+  "url": "https://github.com/QYLexpired/Neo",
+  "version": "1.0.0",
+  "displayName": {
+    "default": "Neo",
+    "zh_CN": "Neo",
+    "en_US": "Neo"
+  },
+  "description": {
+    "default": "Neo",
+    "zh_CN": "Neo",
+    "zh_CHT": "Neo",
+    "en_US": "Neo"
+  },
+  "readme": {
+    "default": "README.md",
+    "zh_CN": "README_zh_CN.md",
+    "zh_CHT": "README_zh_CHT.md",
+    "en_US": "README.md"
+  },
+  "funding": {
+    "custom": ["https://ifdian.net/a/QYLexpired"]
+  },
+  "modes": [
+    "light",
+    "dark"
+  ],
+  "keywords": [
+    "Neo"
+  ]
+}

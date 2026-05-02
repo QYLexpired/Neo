@@ -1,0 +1,216 @@
+// reference: https://github.com/mustakshif/Asri
+@use "sass:string";
+@use "sass:list";
+@mixin smoothGradientHex($startColor: #000, $startColorOpacityFactor: 1, $direction: "to bottom") {
+    $scrimCoordinates: (
+        0: 1,
+        19: 0.738,
+        34: 0.541,
+        47: 0.382,
+        56.5: 0.278,
+        65: 0.194,
+        73: 0.126,
+        80.2: 0.075,
+        86.1: 0.042,
+        91: 0.021,
+        95.2: 0.008,
+        98.2: 0.002,
+        100: 0,
+    );
+    $hue: hue($startColor);
+    $saturation: saturation($startColor);
+    $lightness: lightness($startColor);
+    $stops: ();
+    @each $colorStop, $alphaValue in $scrimCoordinates {
+        $stop: hsla($hue, $saturation, $lightness, calc($alphaValue * $startColorOpacityFactor)) percentage(calc($colorStop/100));
+        $stops: list.append($stops, $stop, comma);
+    }
+    background: linear-gradient(unquote($direction), $stops);
+  }
+  @mixin smoothGradientVar($startColor, $startColorOpacityFactorLight: 1, $startColorOpacityFactorDark: $startColorOpacityFactorLight, $direction: "to bottom") {
+    $scrimCoordinates: (
+        0: 1,
+        19: 0.738,
+        34: 0.541,
+        47: 0.382,
+        56.5: 0.278,
+        65: 0.194,
+        73: 0.126,
+        80.2: 0.075,
+        86.1: 0.042,
+        91: 0.021,
+        95.2: 0.008,
+        98.2: 0.002,
+        100: 0,
+    );
+    $stops-light: ();
+    $stops-dark: ();
+    @each $colorStop, $alphaValue in $scrimCoordinates {
+        $stop-light: rgb(from $startColor r g b / calc($alphaValue * $startColorOpacityFactorLight)) percentage(calc($colorStop/100));
+        $stop-dark: rgb(from $startColor r g b / calc($alphaValue * $startColorOpacityFactorDark)) percentage(calc($colorStop/100));
+        $stops-light: list.append($stops-light, $stop-light, comma);
+        $stops-dark: list.append($stops-dark, $stop-dark, comma);
+    }
+    background: linear-gradient(unquote($direction), $stops-light);
+    @if $startColorOpacityFactorLight !=$startColorOpacityFactorDark {
+        @include darkmode-counterpart {
+            background: linear-gradient(unquote($direction), $stops-dark);
+        }
+    }
+  }
+  @mixin overflow-indicator-line($height: 1px) {
+    &::before {
+        content: "";
+        display: block;
+        position: sticky;
+        top: 0;
+        width: 100%;
+        height: $height;
+        z-index: 1;
+        opacity: 0;
+        background-color: var(--b3-border-color-trans);
+        animation-name: maskAppear-bgClr;
+        animation-timeline: scroll();
+        animation-range: 2px 100%;
+        margin-bottom: calc(-1 * $height);
+        pointer-events: none;
+    }
+  }
+  // rtl unresolved
+  @mixin overflow-indicator-fadein-bgClr($size: 12px, $bg-clr: var(--b3-theme-background), $range: "top bottom") {
+    $range-dir: (
+        "top": "to bottom",
+        "bottom": "to top",
+        "left": "to right",
+        "right": "to left",
+    );
+    @if string.index($range, "top") or string.index($range, "left") {
+        $dir: map-get($range-dir, list.nth(string.split($range, " "), 1));
+        &::before {
+            content: "";
+            display: block;
+            position: sticky;
+            z-index: 1;
+            opacity: 0;
+            animation-name: maskAppear-bgClr;
+            animation-range: 1px 100%;
+            // background-image: linear-gradient(#{$dir}, $bg-clr, transparent);
+            @include smoothGradientVar($bg-clr, $direction: #{$dir});
+                margin-#{str-slice($dir, 4)}: calc(-1 * $size);
+                pointer-events: none;
+            @if $dir == "to bottom" {
+                top: 0;
+                width: 100%;
+                height: $size;
+                animation-timeline: scroll();
+            } @else {
+                left: 0;
+                min-width: $size;
+                height: 100%;
+                animation-timeline: scroll(x);
+            }
+        }
+    }
+    @if string.index($range, "bottom") or string.index($range, "right") {
+        $dir: map-get($range-dir, list.nth(string.split($range, " "), -1)); // -> 'to top' / 'to left'
+        &::after {
+            content: "";
+            display: block;
+            position: sticky;
+            z-index: 1;
+            opacity: 0;
+            animation-name: maskAppear-bgClr;
+            animation-range: 0% calc(100% - 1px);
+            animation-direction: alternate-reverse;
+            // background-image: linear-gradient(#{$dir}, $bg-clr, transparent);
+            @include smoothGradientVar($bg-clr, $direction: #{$dir});
+                margin-#{str-slice($dir, 4)}: calc(-1 * $size);
+                pointer-events: none;
+            @if $dir == "to top" {
+                bottom: 0;
+                width: 100%;
+                height: $size;
+                animation-timeline: scroll();
+            } @else {
+                right: 0;
+                min-width: $size;
+                height: 100%;
+                animation-timeline: scroll(x);
+            }
+        }
+    }
+  }
+  @mixin overflow-indicator-fadein-mask($size: 12px, $range: "top bottom") {
+    $range-parts: string.split($range, " ");
+    $range-start: list.nth($range-parts, 1);
+    $range-end: list.nth($range-parts, -1);
+    $gradient-dir: "";
+    $this-id: string.unique-id();
+    @if string.index($range, "top") or string.index($range, "bottom") {
+        $gradient-dir: "to bottom";
+    } @else {
+        $gradient-dir: "to right";
+    }
+    mask-image: linear-gradient(#{$gradient-dir}, transparent, black var(--mask-stop-start), black calc(100% - var(--mask-stop-end)), transparent);
+    $anim-name: ();
+    $anim-range: ();
+    $anim-dir: ();
+    @if $range-start == "top" or $range-start == "left" {
+        $anim-name: list.append($anim-name, "maskAppear-mask-start-#{$this-id}", comma);
+        $anim-range: list.append($anim-range, "1px 100%", comma);
+        $anim-dir: list.append($anim-dir, "alternate", comma);
+    }
+    @if $range-end == "bottom" or $range-end == "right" {
+        $anim-name: list.append($anim-name, "maskAppear-mask-end-#{$this-id}", comma);
+        $anim-range: list.append($anim-range, "0% calc(100% - 1px)", comma);
+        $anim-dir: list.append($anim-dir, "alternate-reverse", comma);
+    }
+    animation-name: #{$anim-name};
+    animation-range: #{$anim-range};
+    animation-direction: #{$anim-dir};
+    @if $range-start == "top" or $range-start == "bottom" {
+        animation-timeline: scroll(self y);
+    } @else {
+        animation-timeline: scroll(self x);
+        :where(:lang(ar_SA), :lang(he_IL)) & {
+            animation-range: #{reverse-list($anim-range)};
+            animation-direction: #{reverse-list($anim-dir)};
+        }
+    }
+    @keyframes maskAppear-mask-start-#{$this-id} {
+        0% {
+            --mask-stop-start: 0px;
+        }
+        1% {
+            --mask-stop-start: #{$size};
+        }
+        100% {
+            --mask-stop-start: #{$size};
+        }
+    }
+    @keyframes maskAppear-mask-end-#{$this-id} {
+        0% {
+            --mask-stop-end: 0px;
+        }
+        1% {
+            --mask-stop-end: #{$size};
+        }
+        100% {
+            --mask-stop-end: #{$size};
+        }
+    }
+}
+@property --mask-stop-start {
+    syntax: "<length>";
+    inherits: false;
+    initial-value: 0px;
+}
+@property --mask-stop-end {
+    syntax: "<length>";
+    inherits: false;
+    initial-value: 0px;
+}
+$fadeout-size-s: 18px;
+$fadeout-size-m: 32px;
+$fadeout-size-l: 40px;
+$fadeout-size-xl: 50px;

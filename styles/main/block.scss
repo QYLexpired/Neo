@@ -1,0 +1,52 @@
+// heading
+.b3-typography,
+.protyle-wysiwyg {
+  @for $i from 1 through 6 {
+    h#{$i},
+    .h#{$i} {
+        color: var(--b3-theme-accent);
+    }
+  }
+}
+// block ref
+.protyle-wysiwyg [data-node-id] span[data-type~=block-ref]:not(.av__celltext),
+.protyle-wysiwyg [data-node-id] span[data-type~=file-annotation-ref] {
+    color: inherit;
+    text-decoration-line: underline;
+    text-decoration-style: dashed;
+    text-underline-offset: 4px;
+    text-decoration-color: var(--b3-theme-accent);
+    &:hover {
+        color: var(--b3-theme-accent);
+    }
+}
+// link
+.protyle-wysiwyg [data-node-id] span[data-type~=a] {
+    color: inherit;
+    text-decoration-line: underline;
+    text-decoration-style: solid;
+    text-underline-offset: 4px;
+    text-decoration-color: var(--b3-theme-accent);
+    &:hover {
+        border: none;
+        color: var(--b3-theme-accent);
+    }
+}
+// inline-mark
+.b3-typography mark,
+.b3-typography span[data-type~=mark],
+.protyle-wysiwyg mark,
+.protyle-wysiwyg span[data-type~=mark] {
+    background: rgba(0, 0, 0, 0);
+    box-shadow: 0 -0.5em 0 0 inset oklch(from var(--b3-theme-accent) l c h / 0.35), 0 .1em 0 0 oklch(from var(--b3-theme-accent) l c h / 0.35);
+    color: inherit;
+}
+// kbd
+.search__tip kbd,
+.config-keymap__key,
+.protyle-wysiwyg span[data-type~=kbd],
+.b3-typography kbd,
+.b3-typography span[data-type~=kbd] {
+    border-color: color-mix(in srgb, currentColor 15%, rgba(0, 0, 0, 0));
+    background-color: color-mix(in srgb, currentColor 10%, rgba(0, 0, 0, 0));
+}

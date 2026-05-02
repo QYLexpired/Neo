@@ -1,0 +1,118 @@
+@use "../tools" as *;
+@mixin frostedglass-before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    border-radius: inherit;
+    corner-shape: inherit;
+    pointer-events: none;
+}
+// status
+.status {
+    @include frostedglass($blur: s, $color: background);
+}
+// menu
+.b3-menu,
+.b3-menu__submenu {
+    background-color: transparent;
+    &::before {
+        @include frostedglass-before;
+        @include frostedglass($blur: l, $color: menu);
+        box-shadow: var(--b3-menu-shadow);
+    }
+}
+.b3-menu__item {
+    background-color: transparent;
+}
+// protyle-toolbar
+.protyle-toolbar {
+    background-color: transparent;
+    &::before {
+        @include frostedglass-before;
+        @include frostedglass($blur: s, $color: menu);
+        box-shadow: var(--b3-menu-shadow);
+    }
+}
+// protyle-hint
+.protyle-hint {
+    background-color: transparent;
+    &::before {
+        @include frostedglass-before;
+        @include frostedglass($blur: l, $color: menu);
+        box-shadow: var(--b3-menu-shadow);
+    }
+}
+// protyle-util
+.protyle-util {
+    background-color: transparent;
+    &::before {
+        @include frostedglass-before;
+        @include frostedglass($blur: l, $color: menu);
+        box-shadow: var(--b3-menu-shadow);
+    }
+}
+// dialog
+.b3-dialog__scrim {
+    background-color: transparent;
+}
+.b3-dialog__container {
+    background-color: transparent;
+    &::before {
+        @include frostedglass-before;
+        @include frostedglass($blur: l, $color: background);
+        box-shadow: var(--b3-dialog-shadow);
+    }
+    .b3-dialog__content {
+        background-color: transparent !important;
+    }
+    .config__tab-wrap {
+        background-color: transparent;
+        .config__tab-container {
+            background-color: transparent;
+        }
+    }
+    .config__panel .b3-tab-bar {
+        background-color: TODO！！！;
+    }
+    .search__header {
+        background: transparent;
+        .b3-text-field {
+            background-color: transparent;
+        }
+    }
+    .search__preview:not(.fullscreen) {
+        background-color: transparent;
+    }
+    .search__list,
+    #searchList,
+    #searchUnRefList {
+        background-color: transparent;
+    }
+    .protyle:not(.fullscreen) {
+        background-color: transparent;
+        .protyle-breadcrumb {
+            background-color: transparent;
+        }
+        // 修复部分窗口毛玻璃失效
+        .protyle-wysiwyg [data-node-id] {
+            z-index: 1; 
+        }
+        .protyle-background {
+            z-index: 1;
+        }
+    }
+    .fullscreen {
+        @include frostedglass($blur: l, $color: background);
+        .protyle-breadcrumb {
+            background-color: transparent;
+        }
+        // 修复部分窗口毛玻璃失效
+        .protyle-wysiwyg [data-node-id] {
+            z-index: 1; 
+        }
+    }
+    .layout-tab-bar + .fn__flex-1 {
+        background-color: transparent;
+    }
+}

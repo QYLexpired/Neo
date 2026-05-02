@@ -1,0 +1,89 @@
+@use "../tools" as *;
+// center tab
+.layout-tab-bar {
+    border-bottom: unset;
+    &:not(.layout-tab-bar--readonly) {
+        @include overflow-indicator-fadein-mask($fadeout-size-l, "left right");
+        padding: 0;
+        .item {
+            @include superellipse(6px);
+            margin: 6px 3px;
+            background-color: transparent;
+            .item__icon,
+            .item__graphic,
+            .item__text {
+                transform: translateX(11px);
+            }
+            .item__close {
+                opacity: 0;
+            }
+            &:first-child {
+                margin-left: 6px;
+            }
+            &:last-child {
+                margin-right: 6px;
+            }
+            &:hover {
+                background-color: transparent !important;
+                .item__icon,
+                .item__graphic,
+                .item__text {
+                    transform: translateX(0px);
+                }
+                .item__close {
+                    opacity: 1;
+                }
+            }
+            &.item--focus {
+                background-color: var(--b3-theme-background) !important;
+                box-shadow: var(--b3-tab-shadow);
+                &::before {
+                    content: none !important;
+                }
+                & + .item::before {
+                    content: none !important;
+                }
+                & ~ .item.fn__none + .item::before {
+                    // 有时.item--focus后面可能紧接.fn__none.item，需排除
+                    content: none !important;
+                }
+            }
+            overflow: visible;
+            &:not(:first-child)::before {
+                content: "";
+                position: absolute;
+                left: -3.5px;
+                top: 50%;
+                transform: translateY(-50%);
+                background-color: var(--b3-border-color-trans);
+                height: calc(100% - 8px);
+                width: 1px;
+                pointer-events: none;
+            }
+        }
+    }
+    &--readonly {
+        margin-left: unset;
+    }
+}
+// other-tab
+.layout-tab-bar:not(.layout__center .layout-tab-bar) {
+    max-width: max-content;
+    margin: 0 auto;
+    .item {
+        max-width: max-content;
+        .item__text {
+            padding: 0 16px;
+            transform: none;
+        }
+    }
+}
+.av__views .layout-tab-bar {
+    .item {
+        .item__icon,
+        .item__graphic,
+        .item__text {
+            transform: none;
+        }
+    }
+}

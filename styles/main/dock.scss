@@ -1,0 +1,29 @@
+// dock
+.dock__item {
+    color: var(--b3-theme-on-surface);
+    background-color: transparent !important;
+    &:hover {
+        color: var(--b3-theme-on-background);
+        box-shadow: var(--b3-hover-shadow);
+    }
+}
+.dock__item--active,
+.dock__item--activefocus {
+    box-shadow: var(--b3-tab-shadow) !important;
+    color: var(--b3-theme-on-background) !important;
+    background-color: var(--b3-theme-background) !important;
+}
+.dock__split::after {
+    background-color: var(--b3-border-color-trans);
+    width: 24px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.block__icon {
+    color: var(--b3-theme-on-surface);
+    &:hover {
+        color: var(--b3-theme-on-background);
+        background-color: transparent !important;
+        box-shadow: var(--b3-hover-shadow);
+    }
+}

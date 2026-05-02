@@ -1,0 +1,25 @@
+@mixin frostedglass($blur: l, $color: background) {
+    $blur-value: 20px;
+    @if $blur == s {
+        $blur-value: 6px;
+    } @else if $blur == m {
+        $blur-value: 12px;
+    } @else if $blur == l {
+        $blur-value: 20px;
+    } @else {
+        $blur-value: $blur;
+    }
+    $color-var: --b3-theme-background;
+    @if $color == surface {
+        $color-var: --b3-theme-surface;
+    } @else if $color == menu {
+        $color-var: --b3-menu-background;
+    }
+    background-color: oklch(from var(#{$color-var}) l c h / 0.7);
+    backdrop-filter: blur(#{$blur-value}) saturate(1.5) brightness(1.1);
+    @at-root {
+        [data-theme-mode="dark"] & {
+            backdrop-filter: blur(#{$blur-value}) saturate(1.5) brightness(0.9);
+        }
+    }
+}

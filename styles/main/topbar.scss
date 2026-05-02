@@ -1,0 +1,7 @@
+.toolbar__item {
+    &:hover {
+        background-color: transparent !important;
+        color: var(--b3-theme-on-background);
+        box-shadow: var(--b3-hover-shadow);
+    }
+}

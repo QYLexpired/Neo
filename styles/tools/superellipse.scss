@@ -1,0 +1,12 @@
+// reference: https://github.com/mustakshif/Asri
+@use "sass:list";
+$layout-border-radius: 8px;
+$k: 1.4;
+@mixin superellipse($r: ()) {
+    $out: ();
+    @each $i in $r {
+        $out: list.append($out, calc(#{$i} * #{$k}), space);
+    }
+    corner-shape: superellipse($k);
+    border-radius: $out;
+}

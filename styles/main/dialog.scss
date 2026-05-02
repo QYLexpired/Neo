@@ -1,0 +1,20 @@
+@use "../tools" as *;
+.b3-dialog__container {
+    border: unset;
+    box-shadow: unset;
+    @include superellipse(12px);
+    .b3-dialog__header,
+    .search__header,
+    .search__tip,
+    .history__action,
+    .switch-doc .b3-list:last-child,
+    .switch-doc__path,
+    .history__resize,
+    .b3-dialog__action {
+        --b3-border-color: var(--b3-border-color-trans) !important;
+        border-color: var(--b3-border-color-trans) !important;
+    }
+    .search__drag::after {
+        background-color: var(--b3-border-color-trans) !important;
+    }
+}
