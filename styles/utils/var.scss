@@ -13,7 +13,7 @@
 }
 [data-theme-mode="dark"] {
     // shadow
-    --b3-menu-shadow: 0 0 1px rgba(255, 255, 255, 0.2), 0 0 1px rgba(255, 255, 255, 0.4), 0 0 1px rgba(0, 0, 0, 0.4), 0 8px 16px rgba(0, 0, 0, 0.2);
+    --b3-menu-shadow: 0 0 1px rgba(255, 255, 255, 0.2), 0 0 1px rgba(255, 255, 255, 0.4), 0 0 1px rgba(0, 0, 0, 0.4), 0 8px 16px rgba(0, 0, 0, 0.45);
     --b3-dialog-shadow: var(--b3-menu-shadow);
     --b3-layout-shadow: 0 0 1px rgba(255, 255, 255, 0.5), 0 0 1px rgba(0, 0, 0, 0.4), 0 8px 16px rgba(0, 0, 0, 0.2);
     --b3-status-shadow: var(--b3-layout-shadow);

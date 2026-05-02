@@ -1,5 +1,10 @@
 @use "components" as *;
+@use "../tools" as *;
 // breadcrumb
+.protyle-breadcrumb {
+    min-height: unset;
+    padding: 0 4px;
+}
 .protyle-breadcrumb__item {
     padding: 0;
     margin: 2px;
@@ -9,7 +14,7 @@
         height: 15.5px;
         width: 15.5px;
         padding: 2px;
-        border-radius: var(--b3-border-radius);
+        @include superellipse(4px);
     }
     &:hover {
         background-color: transparent;

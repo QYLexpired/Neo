@@ -116,3 +116,13 @@
         background-color: transparent;
     }
 }
+// tooltip
+.tooltip {
+    @include frostedglass($blur: m, $color: menu);
+}
+.b3-tooltips::after {
+    @include frostedglass($blur: m, $color: menu);
+}
+.b3-snackbar__content {
+    @include frostedglass($blur: m, $color: menu);
+}

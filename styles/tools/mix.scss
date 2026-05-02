@@ -1,0 +1,11 @@
+@use "superellipse" as *;
+@mixin icon {
+    @include superellipse(4px);
+    color: var(--b3-theme-on-surface);
+    background-color: transparent !important;
+    &:hover {
+        background-color: transparent !important;
+        color: var(--b3-theme-on-background);
+        box-shadow: var(--b3-hover-shadow);
+    }
+}

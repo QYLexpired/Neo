@@ -6,7 +6,7 @@
         @include overflow-indicator-fadein-mask($fadeout-size-l, "left right");
         padding: 0;
         .item {
-            @include superellipse(6px);
+            @include superellipse(4px);
             margin: 6px 3px;
             background-color: transparent;
             .item__icon,
@@ -64,6 +64,15 @@
     }
     &--readonly {
         margin-left: unset;
+        .item--readonly {
+            padding: 0 3px;
+            .block__icon {
+                margin: 0 6px;
+            }
+            .fn__flex-1 {
+                display: none;
+            }
+        }
     }
 }
 // other-tab

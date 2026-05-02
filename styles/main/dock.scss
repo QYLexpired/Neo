@@ -1,11 +1,7 @@
+@use "../tools" as *;
 // dock
 .dock__item {
-    color: var(--b3-theme-on-surface);
-    background-color: transparent !important;
-    &:hover {
-        color: var(--b3-theme-on-background);
-        box-shadow: var(--b3-hover-shadow);
-    }
+    @include icon;
 }
 .dock__item--active,
 .dock__item--activefocus {
@@ -20,10 +16,5 @@
     transform: translateX(-50%);
 }
 .block__icon {
-    color: var(--b3-theme-on-surface);
-    &:hover {
-        color: var(--b3-theme-on-background);
-        background-color: transparent !important;
-        box-shadow: var(--b3-hover-shadow);
-    }
+    @include icon;
 }

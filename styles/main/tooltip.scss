@@ -1,0 +1,21 @@
+@use "../tools" as *;
+.tooltip {
+    @include superellipse(6px);
+    box-shadow: var(--b3-layout-shadow);
+    color: var(--b3-theme-on-background);
+}
+.b3-tooltips::after {
+    @include superellipse(6px);
+    box-shadow: var(--b3-layout-shadow);
+    color: var(--b3-theme-on-background);
+}
+.b3-snackbar__content {
+    @include superellipse(12px);
+    box-shadow: var(--b3-layout-shadow);
+    color: var(--b3-theme-on-background);
+    padding: 15px !important;
+    margin: 15px;
+}
+.b3-snackbar--error .b3-snackbar__content::after {
+    content: none;
+}

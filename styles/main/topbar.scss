@@ -1,7 +1,13 @@
+@use "../tools" as *;
 .toolbar__item {
-    &:hover {
-        background-color: transparent !important;
-        color: var(--b3-theme-on-background);
-        box-shadow: var(--b3-hover-shadow);
+    @include icon;
+}
+#barWorkspace {
+    box-shadow: var(--b3-layout-shadow);
+    .toolbar__text {
+        font-size: 13px;
+    }
+    .atoolbar__svg {
+        display: none;
     }
 }
