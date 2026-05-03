@@ -24,10 +24,15 @@ body:not(.body--toolbar-hide) [data-type="wnd"] > .fn__flex:first-child {
             }
             .item__close {
                 transition: var(--b3-transition);
-                color: var(--b3-theme-on-surface);
                 opacity: 0;
+                svg {
+                    color: var(--b3-theme-on-surface);
+                }
                 &:hover {
-                    color: var(--b3-theme-on-background);
+                    svg {
+                        color: var(--b3-theme-error);
+                    }
+
                 }
             }
             &:first-child {

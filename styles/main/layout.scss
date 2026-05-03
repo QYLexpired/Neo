@@ -80,7 +80,6 @@ body {
     @include layout-dockpanel;
 }
 // resize
-$resize-hl: oklch(from var(--b3-theme-primary) l c h / 0.5);
 .layout__resize {
     &:not(.layout__resize--lr) {
         margin: 0;

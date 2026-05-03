@@ -29,6 +29,8 @@
     --b3-scroll-color-hover: oklch(from var(--b3-theme-on-background) l c h / 0.18);
     --b3-protyle-code-background: oklch(from var(--b3-theme-surface) 0.9 c h / 0.5);
     --b3-empty-color: oklch(from var(--b3-theme-on-background) l c h / 0.45);
+    // other
+    --b3-theme-error: #ff2a2a;
 }
 [data-theme-mode="dark"] {
     --b3-theme-primary: #338bf4;
@@ -55,4 +57,6 @@
     --b3-scroll-color-hover: oklch(from var(--b3-theme-on-background) l c h / 0.18);
     --b3-protyle-code-background: oklch(from var(--b3-theme-surface) 0.4 c h / 0.6);
     --b3-empty-color: oklch(from var(--b3-theme-on-background) l c h / 0.45);
+    // other
+    --b3-theme-error: #ff2a2a;
 }

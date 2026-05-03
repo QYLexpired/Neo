@@ -10,11 +10,40 @@
     .switch-doc .b3-list:last-child,
     .switch-doc__path,
     .history__resize,
-    .b3-dialog__action {
+    .b3-dialog__action,
+    .block__icons,
+    .config__side,
+    .b3-label {
         --b3-border-color: var(--b3-border-color-trans) !important;
         border-color: var(--b3-border-color-trans) !important;
     }
     .search__drag::after {
         background-color: var(--b3-border-color-trans) !important;
     }
+}
+.b3-dialog__close {
+    display: none;
+}
+.b3-dialog__header {
+    text-align: center;
+}
+// bazaar
+.config-bazaar__panel {
+    .b3-card {
+        border: unset;
+        box-shadow: inset 0 0 0 1px var(--b3-border-color-trans);
+        @include superellipse(16px);
+        background-color: transparent;
+        transition: var(--b3-transition);
+        &:hover {
+            transform: scale(1.02);
+            box-shadow: var(--neo-main-shadow);
+        }
+    }
+}
+// popover
+.block__popover.block__popover--open {
+    border: unset;
+    box-shadow: unset;
+    @include superellipse(12px);
 }

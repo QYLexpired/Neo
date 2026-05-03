@@ -13,11 +13,16 @@
 }
 @mixin menu-item-current {
     background-color: var(--b3-theme-primary);
+    &.b3-menu__item--warning,
+    [data-type="delete-view"] {
+        background-color: var(--b3-theme-error);
+    }
     & > .b3-menu__icon,
     & > .b3-menu__label,
     & > .b3-menu__accelerator,
     & > .fn__flex-center,
-    & > .b3-menu__label > .b3-menu__icon {
+    & > .b3-menu__label > .b3-menu__icon,
+    & > .b3-menu__action {
         color: var(--b3-theme-on-primary);
     }
     .b3-switch {
@@ -59,13 +64,14 @@
 }
 // protyle-hint
 .protyle-hint {
-    padding: 4px;
+    padding: 6px;
     @include superellipse(6px);
     border: unset;
     box-shadow: unset;
     overflow: unset;
     & > .b3-text-field {
         margin: 0 0 4px 0 !important;
+        width: unset;
     }
     & > div {
         .b3-list-item {
@@ -80,6 +86,16 @@
     @include superellipse(6px);
     border: unset;
     box-shadow: unset;
+    & .block__icons--menu {
+        background-color: transparent;
+        & + .b3-text-field {
+            background-color: transparent;
+            &:hover,
+            &:focus {
+                box-shadow: none !important;
+            }
+        }
+    }
 }
 // slash menu
 @mixin multicol-menu($min-width, $column-width) {
@@ -119,7 +135,7 @@
     @include icon;
 }
 .b3-form__icona-icon {
-    top: 50%;
+    top: 50% !important;
     transform: translateY(-50%);
     @include icon;
     box-shadow: none !important;
