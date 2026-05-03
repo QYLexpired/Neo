@@ -1,10 +1,12 @@
 @use "../tools" as *;
 .toolbar__item {
     @include icon;
+    @include superellipse(6px);
 }
 #barWorkspace {
     background-color: var(--b3-theme-background) !important;
     box-shadow: var(--neo-main-shadow);
+    transition: var(--b3-transition);
     .toolbar__text {
         font-size: 13px;
     }

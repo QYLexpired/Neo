@@ -12,6 +12,7 @@
     padding: 0 4px;
 }
 .protyle-breadcrumb__item {
+    transition: var(--b3-transition);
     padding: 0;
     margin: 2px;
     height: auto;
@@ -47,6 +48,7 @@
     }
 }
 [data-type="exit-focus"] {
+    transition: var(--b3-transition);
     padding: 2px 6px;
     line-height: 16px;
     width: max-content;
@@ -67,6 +69,7 @@
 }
 // protyle-icons
 .protyle-icons {
+    transition: var(--b3-transition);
     @include superellipse($layout-border-radius);
     box-shadow: var(--neo-main-shadow);
     .protyle-icon {
@@ -80,12 +83,14 @@
 }
 .protyle-background__img .protyle-icons {
     .protyle-icon {
+        transition: var(--b3-transition);
         padding: 6px;
         height: unset;
     }
 }
 .b3-typography .code-block:not(pre) .protyle-action .protyle-icon,
 .protyle-wysiwyg .code-block:not(pre) .protyle-action .protyle-icon {
+    transition: var(--b3-transition);
     background-color: var(--b3-theme-background);
     color: var(--b3-theme-on-surface);
     &:hover {

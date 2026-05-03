@@ -1,6 +1,7 @@
 @use "../tools" as *;
 // dock
 .dock__item {
+    transition: var(--b3-transition);
     @include icon;
 }
 .dock__item--active,
@@ -22,4 +23,18 @@
 }
 .block__icon {
     @include icon;
+}
+// dock-panel
+.layout__tab--active .b3-list--background li.b3-list-item--focus {
+    background-color: var(--b3-list-active);
+}
+.b3-list-item__action {
+    @include icon;
+}
+.b3-list-item__toggle {
+    color: var(--b3-theme-on-surface);
+    &:hover {
+        background-color: transparent;
+        color: var(--b3-theme-on-background);
+    }
 }

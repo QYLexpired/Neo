@@ -1,21 +1,34 @@
 @use "../tools" as *;
 // center tab
+body:not(.body--toolbar-hide) [data-type="wnd"] > .fn__flex:first-child {
+    // 修正渐隐颜色
+    background-color: var(--b3-theme-background);
+}
 .layout-tab-bar {
     border-bottom: unset;
     &:not(.layout-tab-bar--readonly) {
         @include overflow-indicator-fadein-mask($fadeout-size-l, "left right");
         padding: 0;
         .item {
-            @include superellipse(4px);
+            @include superellipse(6px);
             margin: 6px 3px;
             background-color: transparent;
+            .item__graphic {
+                padding: 4px 0 4px 8px;
+            }
             .item__icon,
             .item__graphic,
             .item__text {
+                transition: var(--b3-transition);
                 transform: translateX(11px);
             }
             .item__close {
+                transition: var(--b3-transition);
+                color: var(--b3-theme-on-surface);
                 opacity: 0;
+                &:hover {
+                    color: var(--b3-theme-on-background);
+                }
             }
             &:first-child {
                 margin-left: 6px;
@@ -38,14 +51,29 @@
                 background-color: var(--b3-theme-background) !important;
                 box-shadow: var(--neo-main-shadow);
                 &::before {
-                    content: none !important;
+                    opacity: 0;
                 }
                 & + .item::before {
-                    content: none !important;
+                    opacity: 0;
                 }
                 & ~ .item.fn__none + .item::before {
                     // 有时.item--focus后面可能紧接.fn__none.item，需排除
-                    content: none !important;
+                    opacity: 0;
+                }
+            }
+            &.item--pin {
+                .item__icon,
+                .item__graphic,
+                .item__text {
+                    transform: translateX(0px);
+                }
+                .item__text {
+                    color: var(--b3-theme-on-surface);
+                }
+                &:hover {
+                    .item__text {
+                        color: var(--b3-theme-on-background);
+                    }
                 }
             }
             overflow: visible;
@@ -59,6 +87,7 @@
                 height: calc(100% - 8px);
                 width: 1px;
                 pointer-events: none;
+                transition: var(--b3-transition);
             }
         }
     }
@@ -78,7 +107,8 @@
 // other-tab
 .layout-tab-bar:not(.layout__center .layout-tab-bar) {
     max-width: max-content;
-    margin: 0 auto;
+    margin: 3px auto;
+    background-color: transparent;
     .item {
         max-width: max-content;
         .item__text {
