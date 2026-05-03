@@ -173,11 +173,9 @@ $toggle-width: 36px;
     width: max-content;
     min-width: 75px;
     &:hover {
-        background-color: var(--b3-list-hover);
         box-shadow: unset !important;
     }
     &:focus {
-        background-color: var(--b3-theme-background);
         box-shadow: 0 0 0 2px oklch(from var(--b3-theme-primary) l c h / 0.5) !important;
     }
     &.fn__block {

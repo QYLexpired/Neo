@@ -13,7 +13,8 @@
     .b3-dialog__action,
     .block__icons,
     .config__side,
-    .b3-label {
+    .b3-label,
+    .search__layout--row {
         --b3-border-color: var(--b3-border-color-trans) !important;
         border-color: var(--b3-border-color-trans) !important;
     }

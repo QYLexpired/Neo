@@ -1,3 +1,4 @@
+@use "../tools" as *;
 // heading
 .b3-typography,
 .protyle-wysiwyg {
@@ -38,7 +39,7 @@
 .protyle-wysiwyg mark,
 .protyle-wysiwyg span[data-type~=mark] {
     background: rgba(0, 0, 0, 0);
-    box-shadow: 0 -0.5em 0 0 inset oklch(from var(--b3-theme-accent) l c h / 0.35), 0 .1em 0 0 oklch(from var(--b3-theme-accent) l c h / 0.35);
+    box-shadow: 0 -0.5em 0 0 inset color-mix(in srgb, #00ff25 50%, rgba(0, 0, 0, 0)), 0 .1em 0 0 color-mix(in srgb, #00ff25 35%, rgba(0, 0, 0, 0));
     color: inherit;
 }
 // kbd
@@ -47,6 +48,49 @@
 .protyle-wysiwyg span[data-type~=kbd],
 .b3-typography kbd,
 .b3-typography span[data-type~=kbd] {
+    border: 1px solid;
     border-color: color-mix(in srgb, currentColor 15%, rgba(0, 0, 0, 0));
     background-color: color-mix(in srgb, currentColor 10%, rgba(0, 0, 0, 0));
+    box-shadow: rgba(0, 0, 0, 0.04) 0px 2px 8px -2px, rgba(0, 0, 0, 0.04) 0px 2px 4px -2px;
+    @include superellipse(6px);
+}
+// tag 
+.protyle-wysiwyg [data-node-id] span[data-type~=tag] {
+    @include superellipse(6px);
+    background-color: oklch(from var(--b3-theme-accent) l c h / 0.2);
+    color: var(--b3-theme-accent);
+    padding: 2px 4px;
+    border: none;
+    font-size: 0.85em;
+    &::before {
+        content: "#";
+        display: inline-block;
+    }
+    &:hover {
+        background-color: oklch(from var(--b3-theme-accent) l c calc(h + 10) / 0.3);
+        color: oklch(from var(--b3-theme-accent) l c calc(h + 10));
+    }
+}
+// inline-code
+.b3-typography span[data-type~=code],
+.b3-typography code:not(.hljs),
+.protyle-wysiwyg span[data-type~=code],
+.protyle-wysiwyg code:not(.hljs) {
+    background-color: color-mix(in srgb, currentColor 12%, rgba(0, 0, 0, 0));
+    box-shadow: 0 0 0 1px color-mix(in srgb, currentColor 5%, rgba(0, 0, 0, 0)) inset;
+    padding: 2px 4px;
+    @include superellipse(6px);
+}
+// inline-memo
+.b3-typography span[data-type~=inline-memo],
+.protyle-wysiwyg span[data-type~=inline-memo] {
+    color: oklch(from var(--b3-theme-accent) l c calc(h + 30));
+    background-color: color-mix(in srgb, currentColor 12%, rgba(0, 0, 0, 0));
+    border-bottom: 1.5px solid;
+    transition: var(--b3-transition);
+    &:hover {
+        background-color: oklch(from var(--b3-theme-accent) l c calc(h + 30));
+        color: var(--b3-theme-on-primary);
+        border-color: oklch(from var(--b3-theme-accent) l c calc(h + 30));
+    }
 }
