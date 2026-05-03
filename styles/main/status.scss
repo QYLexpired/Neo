@@ -5,10 +5,10 @@
 }
 .status {
     position: absolute;
-    bottom: calc(anchor(--anchor-layout-center bottom) + $layout-gap * 2);
-    right: calc(anchor(--anchor-layout-center right) + $layout-gap * 2);
+    bottom: calc(anchor(--anchor-layout-center bottom) + $layout-gap);
+    right: calc(anchor(--anchor-layout-center right) + $layout-gap);
     @include superellipse($layout-border-radius);
-    box-shadow: var(--b3-status-shadow);
+    box-shadow: var(--neo-main-shadow);
     height: 26px;
     line-height: 26px;
     border: 0;

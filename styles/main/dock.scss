@@ -5,9 +5,14 @@
 }
 .dock__item--active,
 .dock__item--activefocus {
-    box-shadow: var(--b3-tab-shadow) !important;
+    box-shadow: var(--neo-main-shadow) !important;
     color: var(--b3-theme-on-background) !important;
     background-color: var(--b3-theme-background) !important;
+    &:hover {
+        box-shadow: var(--neo-main-shadow) !important;
+        color: var(--b3-theme-on-background) !important;
+        background-color: var(--b3-theme-background) !important;
+    }
 }
 .dock__split::after {
     background-color: var(--b3-border-color-trans);

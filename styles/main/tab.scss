@@ -36,7 +36,7 @@
             }
             &.item--focus {
                 background-color: var(--b3-theme-background) !important;
-                box-shadow: var(--b3-tab-shadow);
+                box-shadow: var(--neo-main-shadow);
                 &::before {
                     content: none !important;
                 }

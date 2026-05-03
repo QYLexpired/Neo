@@ -184,7 +184,6 @@ textarea.b3-text-field {
     width: 100%;
     min-width: unset;
     field-sizing: content;
-    min-height: 40px;
     max-height: 150px;
     overflow-y: auto;
     height: unset;
@@ -212,7 +211,7 @@ $slider-track-height: 6px;
         width: $slider-thumb-width;
         border-radius: 24px;
         background: #ffffff;
-        box-shadow: var(--b3-point-shadow);
+        box-shadow: var(--neo-main-shadow);
     }
     &:is([data-theme-mode="dark"] .b3-slider) {
         &::-webkit-slider-thumb {

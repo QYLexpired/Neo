@@ -126,3 +126,7 @@
 .b3-snackbar__content {
     @include frostedglass($blur: m, $color: menu);
 }
+// .protyle-icons
+.protyle-icons {
+    @include frostedglass($blur: s, $color: menu);
+}

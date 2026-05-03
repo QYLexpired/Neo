@@ -3,11 +3,12 @@
     @include icon;
 }
 #barWorkspace {
-    box-shadow: var(--b3-layout-shadow);
+    background-color: var(--b3-theme-background) !important;
+    box-shadow: var(--neo-main-shadow);
     .toolbar__text {
         font-size: 13px;
     }
-    .atoolbar__svg {
+    .toolbar__svg {
         display: none;
     }
 }

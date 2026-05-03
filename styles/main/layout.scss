@@ -18,14 +18,12 @@ body {
 // center
 .layout:not(.layout__center) .layout__center {
     border-radius: unset;
-    & > .fn__flex,
-    & > .fn__flex-1,
-    & > .fn__flex-column {
+    .fn__flex:has( > [data-type="wnd"]) {
         padding: calc($layout-gap / 2);
         [data-type="wnd"] {
             corner-shape: superellipse(1.4);
             border-radius: calc(8px * 1.4);
-            box-shadow: var(--b3-layout-shadow);
+            box-shadow: var(--neo-main-shadow);
         }
     }
 }
@@ -33,14 +31,12 @@ body {
 @mixin layout-dockpanel {
     border-radius: unset;
     background-color: unset;
-    & > .fn__flex,
-    & > .fn__flex-1,
-    & > .fn__flex-column {
+    .fn__flex:has( > [data-type="wnd"]) {
         padding: calc($layout-gap / 2);
         [data-type="wnd"] {
             corner-shape: superellipse(1.4);
             border-radius: calc(8px * 1.4);
-            box-shadow: var(--b3-layout-shadow);
+            box-shadow: var(--neo-main-shadow);
             background-color: var(--b3-theme-background);
             & > .layout-tab-container {
                 .dockPanel {
@@ -148,9 +144,7 @@ $resize-hl: oklch(from var(--b3-theme-primary) l c h / 0.5);
         margin-bottom: unset;
     }
     .layout:not(.layout__center) .layout__center {
-        & > .fn__flex,
-        & > .fn__flex-1,
-        & > .fn__flex-column {
+        .fn__flex:has( > [data-type="wnd"]) {
             padding: unset;
             [data-type="wnd"] {
                 padding: calc($layout-gap / 2);
@@ -165,7 +159,7 @@ $resize-hl: oklch(from var(--b3-theme-primary) l c h / 0.5);
                 & > .layout-tab-container {
                     corner-shape: superellipse(1.4);
                     border-radius: calc(8px * 1.4);
-                    box-shadow: var(--b3-layout-shadow);
+                    box-shadow: var(--neo-main-shadow);
                 }
                 .layout-tab-bar {
                     background-color: transparent;
@@ -175,7 +169,7 @@ $resize-hl: oklch(from var(--b3-theme-primary) l c h / 0.5);
     }
     .layout__dockl,
     .layout__dockr {
-        & > :nth-child(1 of .fn__flex, .fn__flex-1, .fn__flex-column) {
+        & > :nth-child(1 of .fn__flex:not(.fn__none), .fn__flex-1:not(.fn__none), .fn__flex-column:not(.fn__none)) {
             margin-top: calc($layout-gap / -2);
         }
     }
@@ -196,6 +190,12 @@ $resize-hl: oklch(from var(--b3-theme-primary) l c h / 0.5);
         &::after {
             top: 42px;
             height: calc(100% - 42px);
+        }
+    }
+    .layout__dockb > .layout__resize--lr {
+        &::after {
+            top: 0;
+            height: 100%;
         }
     }
 }

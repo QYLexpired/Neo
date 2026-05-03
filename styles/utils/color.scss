@@ -2,13 +2,55 @@
     #{$property}: oklch(from var(#{$css-var}) clamp(0, calc((0.72 - l) * 10000), 1) 0 0);
 }
 [data-theme-mode="light"] {
-    --b3-theme-background: #4193fb;
+    --b3-theme-primary: #338bf4;
     --b3-theme-accent: var(--b3-theme-primary);
     --b3-theme-background: #ffffff;
     --b3-theme-surface: #f3f3f3;
+    --b3-theme-on-background: #454545;
+    --b3-theme-on-surface: oklch(from var(--b3-theme-on-background) l c h / 0.65);
+    // inherit
+    --b3-theme-primary-light: oklch(from var(--b3-theme-primary) l c h / 0.56);
+    --b3-theme-primary-lighter: oklch(from var(--b3-theme-primary) l c h / 0.38);
+    --b3-theme-primary-lightest: oklch(from var(--b3-theme-primary) l c h / 0.2);
+    --b3-theme-background-light: oklch(from var(--b3-theme-background) l c h / 0.1);
+    --b3-theme-surface-light: oklch(from var(--b3-theme-surface) l c h / 0.5);
+    --b3-theme-surface-lighter: oklch(from var(--b3-theme-surface) 0.9 c h);
+    --b3-theme-on-primary: oklch(from var(--b3-theme-primary) 0.99 0.01 h);
     --b3-menu-background: oklch(from var(--b3-theme-background) 0.965 c h);
+    --b3-theme-on-surface-light: oklch(from var(--b3-theme-on-surface) 0.65 c h / 0.68);
     --b3-border-color: oklch(from var(--b3-theme-on-background) l c h / 0.3);
     --b3-border-color-trans: oklch(from var(--b3-theme-on-background) l c h / 0.15);
-    // inherit
     --b3-toolbar-color: var(--b3-theme-on-surface);
+    --b3-list-hover: oklch(from var(--b3-theme-on-background) l c h / 0.08);
+    --b3-av-background-hl: color-mix(in srgb, var(--b3-theme-primary) 20%, var(--b3-theme-background));
+    --b3-av-hover: oklch(from var(--b3-theme-on-background) 0.93 0.02 h);
+    --b3-scroll-color: oklch(from var(--b3-theme-on-background) l c h / 0.09);
+    --b3-scroll-color-hover: oklch(from var(--b3-theme-on-background) l c h / 0.18);
+    --b3-protyle-code-background: oklch(from var(--b3-theme-surface) 0.9 c h / 0.5);
+    --b3-empty-color: oklch(from var(--b3-theme-on-background) l c h / 0.45);
+}
+[data-theme-mode="dark"] {
+    --b3-theme-primary: #338bf4;
+    --b3-theme-accent: var(--b3-theme-primary);
+    --b3-theme-background: #282c34;
+    --b3-theme-surface: #1e2227;
+    --b3-theme-on-background: #d7dae0;
+    --b3-theme-on-surface: oklch(from var(--b3-theme-on-background) l c h / 0.65);
+    // inherit
+    --b3-theme-background-light: oklch(from var(--b3-theme-background) l c h / 0.1);
+    --b3-theme-surface-light: oklch(from var(--b3-theme-surface) l c h / 0.5);
+    --b3-theme-surface-lighter: var(--b3-border-color);
+    --b3-theme-on-primary: oklch(from var(--b3-theme-primary) 0.99 0.01 h);
+    --b3-menu-background: oklch(from var(--b3-theme-background) 0.25 c h);
+    --b3-theme-on-surface-light: oklch(from var(--b3-theme-on-surface) 0.6 c h / 0.68);
+    --b3-border-color: oklch(from var(--b3-theme-background) 0.34 0.01 h);
+    --b3-border-color-trans: oklch(from var(--b3-theme-on-background) l c h / 0.15);
+    --b3-toolbar-color: var(--b3-theme-on-surface);
+    --b3-list-hover: oklch(from var(--b3-theme-on-background) l c h / 0.08);
+    --b3-av-background-hl: color-mix(in srgb, var(--b3-theme-primary) 20%, var(--b3-theme-background));
+    --b3-av-hover: oklch(from var(--b3-theme-on-background) 0.35 0.02 h);
+    --b3-scroll-color: oklch(from var(--b3-theme-on-background) l c h / 0.09);
+    --b3-scroll-color-hover: oklch(from var(--b3-theme-on-background) l c h / 0.18);
+    --b3-protyle-code-background: oklch(from var(--b3-theme-surface) 0.4 c h / 0.6);
+    --b3-empty-color: oklch(from var(--b3-theme-on-background) l c h / 0.45);
 }
