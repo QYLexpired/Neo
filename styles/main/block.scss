@@ -1,4 +1,8 @@
 @use "../tools" as *;
+// block 
+.protyle-wysiwyg [data-node-id] {
+    @include superellipse(8px);
+}
 // heading
 .b3-typography,
 .protyle-wysiwyg {
@@ -6,6 +10,14 @@
     h#{$i},
     .h#{$i} {
         color: var(--b3-theme-accent);
+        &[fold="1"] {
+            outline: 1px solid var(--b3-border-color-trans);
+            background-color: var(--b3-theme-surface);
+            opacity: 0.5;
+            &::before {
+                opacity: 0;
+            }
+        }
     }
   }
 }
@@ -92,5 +104,28 @@
         background-color: oklch(from var(--b3-theme-accent) l c calc(h + 30));
         color: var(--b3-theme-on-primary);
         border-color: oklch(from var(--b3-theme-accent) l c calc(h + 30));
+    }
+}
+// embed
+.protyle-wysiwyg [data-node-id].render-node[data-type=NodeBlockQueryEmbed] {
+    border: unset;
+    background-color: var(--b3-theme-surface);
+    padding: 4px 12px;
+}
+// quote
+.b3-typography blockquote,
+.b3-typography .bq,
+.protyle-wysiwyg blockquote,
+.protyle-wysiwyg .bq {
+    &::before {
+        border-radius: 0;
+    }
+}
+// code
+.b3-typography .code-block:not(pre),
+.protyle-wysiwyg .code-block:not(pre) {
+    background-color: var(--b3-theme-surface);
+    .protyle-action {
+        padding: 4px 4px 4px 0;
     }
 }

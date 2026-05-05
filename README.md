@@ -1,1 +1,3 @@
-Neo
+> Neo is an ultra-minimalist theme for SiYuan Note that refines numerous details upon the default appearance while introducing modern features such as global frosted glass effects.
+
+> Heavily inspired by the Asri and Cupertino many, thanks to their creators.

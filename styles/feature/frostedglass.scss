@@ -52,6 +52,10 @@
         box-shadow: var(--b3-menu-shadow);
     }
 }
+// fullscreen
+.fullscreen {
+    @include frostedglass($blur: l, $color: background);
+}
 // dialog
 .b3-dialog__scrim {
     background-color: transparent;
@@ -215,9 +219,6 @@
             select,
             button {
                 backdrop-filter: blur(20px);
-            }
-            button {
-                padding: 2px 4px;
             }
             .counter--bg {
                 background-color: transparent;

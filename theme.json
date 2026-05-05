@@ -3,16 +3,17 @@
   "author": "QYL",
   "url": "https://github.com/QYLexpired/Neo",
   "version": "1.0.0",
+  "minAppVersion": "3.7.0",
   "displayName": {
     "default": "Neo",
     "zh_CN": "Neo",
     "en_US": "Neo"
   },
   "description": {
-    "default": "Neo",
-    "zh_CN": "Neo",
-    "zh_CHT": "Neo",
-    "en_US": "Neo"
+    "default": "An ultra-minimalist theme for SiYuan",
+    "zh_CN": "一款极致简约的思源笔记主题",
+    "zh_CHT": "一款极致簡約的思源筆記主題",
+    "en_US": "An ultra-minimalist theme for SiYuan"
   },
   "readme": {
     "default": "README.md",
@@ -28,6 +29,5 @@
     "dark"
   ],
   "keywords": [
-    "Neo"
   ]
 }

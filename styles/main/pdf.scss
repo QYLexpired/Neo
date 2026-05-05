@@ -4,6 +4,7 @@
     background-color: var(--b3-theme-background);
 }
 #sidebarResizer {
+    right: 0;
     &::after {
         background-color: var(--b3-border-color-trans);
     }
