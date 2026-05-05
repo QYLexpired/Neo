@@ -5,21 +5,17 @@
   "version": "1.0.0",
   "minAppVersion": "3.7.0",
   "displayName": {
-    "default": "Neo",
-    "zh_CN": "Neo",
-    "en_US": "Neo"
+    "default": "Neo"
   },
   "description": {
     "default": "An ultra-minimalist theme for SiYuan",
     "zh_CN": "一款极致简约的思源笔记主题",
-    "zh_CHT": "一款极致簡約的思源筆記主題",
-    "en_US": "An ultra-minimalist theme for SiYuan"
+    "zh_CHT": "一款极致簡約的思源筆記主題"
   },
   "readme": {
     "default": "README.md",
     "zh_CN": "README_zh_CN.md",
-    "zh_CHT": "README_zh_CHT.md",
-    "en_US": "README.md"
+    "zh_CHT": "README_zh_CHT.md"
   },
   "funding": {
     "custom": ["https://ifdian.net/a/QYLexpired"]

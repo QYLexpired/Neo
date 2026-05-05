@@ -203,6 +203,13 @@
         }
     }
 }
+// settings
+.config__tab-container .config-group {
+    background-color: oklch(from var(--b3-theme-surface) l c h / 0.5);
+    & > .b3-label {
+        border: unset;
+    }
+}
 // bazaar
 #configBazaarReadme {
     @include frostedglass($blur: l, $color: background);
@@ -227,5 +234,15 @@
                 z-index: 1;
             }
         }
+    }
+}
+// account
+.config-account {
+    background-color: transparent;
+    .config-account__center {
+        background-color: transparent;
+    }
+    .config-account__info {
+        background-color: transparent;
     }
 }

@@ -1,4 +1,5 @@
 @use "../tools" as *;
+@use "components" as *;
 .b3-dialog__container {
     border: unset;
     box-shadow: unset;
@@ -33,6 +34,14 @@
 .b3-dialog__action {
     border: unset;
 }
+// settings
+.config__tab-container .b3-label:not(.b3-label--inner).config__item {
+    & > .config__item-line.fn__flex-center {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+    }
+}
 // bazaar
 .config-bazaar__panel {
     .b3-card {
@@ -44,6 +53,55 @@
         &:hover {
             transform: scale(1.02);
             box-shadow: var(--neo-main-shadow);
+        }
+    }
+}
+// account
+.config-account__form {
+    .b3-button {
+        width: 100%;
+    }
+}
+.config-account__center:not(.config-account__center--text) {
+    margin: 20px;
+    background: oklch(from var(--b3-theme-surface) l c h / 0.5);
+    @include superellipse(12px);
+    box-shadow: var(--neo-main-shadow);
+    max-width: 350px;
+    max-height: max-content;
+    min-height: 60%;
+    padding: 20px 0;
+    align-self: center;
+    .b3-chips .b3-chip {
+        padding: 4px 12px;
+        line-height: 16px;
+        width: max-content;
+        transition: var(--b3-transition);
+        @include superellipse(7px);
+        @include button-transparent-outline;
+    }
+}
+.config-account__center.config-account__center--text {
+    margin: 20px;
+    #activationCode {
+        display: none;
+    }
+    .fn__hr--b {
+        height: 8px;
+    }
+    .b3-chip {
+        padding: 4px 12px;
+        line-height: 16px;
+        width: max-content;
+        transition: var(--b3-transition);
+        @include superellipse(7px);
+        @include button-transparent-outline;  
+    }
+    .b3-button {
+        @include button-transparent-outline;
+        &.b3-button--big {
+            font-size: unset;
+            min-width: unset;
         }
     }
 }

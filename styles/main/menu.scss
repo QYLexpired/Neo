@@ -120,3 +120,20 @@
 .av__panel .b3-menu .block__icon {
     padding: 4px !important;
 }
+// emoji
+.emojis {
+    .emojis__tabheader {
+        padding-bottom: 0;
+        border-bottom: unset;
+    }
+    .emojis__type {
+        transition: var(--b3-transition);
+        &:hover {
+            filter: saturate(1.5) brightness(1.05);
+            background-color: transparent;
+        }
+    }
+    .emojis__panel + .fn__flex {
+        padding: 8px 8px 0 8px;
+    }
+}

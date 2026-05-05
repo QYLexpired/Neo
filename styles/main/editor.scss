@@ -64,7 +64,31 @@
 // protyle-background
 .protyle-background__action {
     .b3-button {
-        @include button-primary;
+        @include button-transparent-outline;
+    }
+}
+.b3-chips__doctag .b3-chip {
+    @include superellipse(6px);
+    @include button-transparent-outline;
+    $offset: 16px;
+    padding: 4px 14px;
+    .b3-chip__close {
+        opacity: 0;
+        margin-right: -$offset;
+        margin-left: 0;
+        padding-right: 0;
+        transition: var(--b3-transition);
+        &:hover {
+            background-color: transparent;
+            color: var(--b3-theme-error);
+        }
+    }
+    &:hover {
+        padding: 4px 6px;
+        .b3-chip__close {
+            opacity: 1;
+            margin-right: 0;
+        }
     }
 }
 // protyle-icons
@@ -105,5 +129,17 @@
         @include superellipse($layout-border-radius);
         border-top-left-radius: 0;
         border-bottom-left-radius: 0;
+    }
+}
+// protyle-attr--refcount
+.protyle-attr--refcount {
+    @include superellipse(6px);
+    padding: 2px 6px;
+    color: var(--b3-theme-on-surface);
+    background-color: color-mix(in srgb, currentColor 12%, rgba(0, 0, 0, 0));
+    transition: var(--b3-transition);
+    &:hover {
+        color: var(--b3-theme-accent);
+        background-color: color-mix(in srgb, currentColor 12%, rgba(0, 0, 0, 0));
     }
 }

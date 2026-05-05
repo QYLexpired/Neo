@@ -2,24 +2,34 @@
 // block 
 .protyle-wysiwyg [data-node-id] {
     @include superellipse(8px);
+    &::after {
+        @include superellipse(8px);
+    }
 }
 // heading
 .b3-typography,
 .protyle-wysiwyg {
-  @for $i from 1 through 6 {
-    h#{$i},
-    .h#{$i} {
-        color: var(--b3-theme-accent);
-        &[fold="1"] {
-            outline: 1px solid var(--b3-border-color-trans);
-            background-color: var(--b3-theme-surface);
-            opacity: 0.5;
-            &::before {
-                opacity: 0;
+    @for $i from 1 through 6 {
+        h#{$i},
+        .h#{$i} {
+            @include superellipse(8px);
+            margin-top: 0.8em;
+            margin-bottom: 0.2em;
+            color: var(--b3-theme-accent);
+            &[fold="1"] {
+                outline: 1px solid var(--b3-border-color-trans);
+                background-color: oklch(from var(--b3-theme-surface) l c h / 0.7);
+                opacity: 0.5;
+                &::before {
+                    opacity: 0;
+                }
             }
         }
+        & > h#{$i}:first-child,
+        & > .h#{$i}:first-child {
+            margin-top: 0;
+        }
     }
-  }
 }
 // block ref
 .protyle-wysiwyg [data-node-id] span[data-type~=block-ref]:not(.av__celltext),
@@ -60,6 +70,7 @@
 .protyle-wysiwyg span[data-type~=kbd],
 .b3-typography kbd,
 .b3-typography span[data-type~=kbd] {
+    color: var(--b3-theme-on-surface);
     border: 1px solid;
     border-color: color-mix(in srgb, currentColor 15%, rgba(0, 0, 0, 0));
     background-color: color-mix(in srgb, currentColor 10%, rgba(0, 0, 0, 0));
@@ -88,6 +99,7 @@
 .b3-typography code:not(.hljs),
 .protyle-wysiwyg span[data-type~=code],
 .protyle-wysiwyg code:not(.hljs) {
+    color: var(--b3-theme-on-surface);
     background-color: color-mix(in srgb, currentColor 12%, rgba(0, 0, 0, 0));
     box-shadow: 0 0 0 1px color-mix(in srgb, currentColor 5%, rgba(0, 0, 0, 0)) inset;
     padding: 2px 4px;
@@ -96,20 +108,20 @@
 // inline-memo
 .b3-typography span[data-type~=inline-memo],
 .protyle-wysiwyg span[data-type~=inline-memo] {
-    color: oklch(from var(--b3-theme-accent) l c calc(h + 30));
+    color: oklch(from var(--b3-theme-accent) l c h);
     background-color: color-mix(in srgb, currentColor 12%, rgba(0, 0, 0, 0));
     border-bottom: 1.5px solid;
     transition: var(--b3-transition);
     &:hover {
-        background-color: oklch(from var(--b3-theme-accent) l c calc(h + 30));
+        background-color: oklch(from var(--b3-theme-accent) l c h);
         color: var(--b3-theme-on-primary);
-        border-color: oklch(from var(--b3-theme-accent) l c calc(h + 30));
+        border-color: oklch(from var(--b3-theme-accent) l c h);
     }
 }
 // embed
 .protyle-wysiwyg [data-node-id].render-node[data-type=NodeBlockQueryEmbed] {
     border: unset;
-    background-color: var(--b3-theme-surface);
+    background-color: oklch(from var(--b3-theme-surface) l c h / 0.7);
     padding: 4px 12px;
 }
 // quote
@@ -117,15 +129,170 @@
 .b3-typography .bq,
 .protyle-wysiwyg blockquote,
 .protyle-wysiwyg .bq {
+    @include superellipse(8px);
+    background-color: color-mix(in srgb, currentColor 8%, rgba(0, 0, 0, 0));
+    padding: 4px 12px;
+    margin: 0.4em 0;
     &::before {
-        border-radius: 0;
+        display: none;
     }
 }
 // code
 .b3-typography .code-block:not(pre),
 .protyle-wysiwyg .code-block:not(pre) {
-    background-color: var(--b3-theme-surface);
+    @include superellipse(8px);
+    background-color: oklch(from var(--b3-theme-surface) l c h / 0.7);
     .protyle-action {
         padding: 4px 4px 4px 0;
+    }
+}
+// list
+.protyle-wysiwyg [data-node-id] {
+    .li {
+        &::before {
+            border-color: var(--b3-theme-on-background);
+            transition: var(--b3-transition);
+            opacity: 0.2;
+        }
+        &:hover {
+            &::before {
+                border-color: var(--b3-theme-on-background);
+                opacity: 0.4;
+            }
+        }
+        &[fold="1"] > .protyle-action {
+            color: oklch(from var(--b3-theme-accent) l c h);
+            &::after {
+                color: oklch(from var(--b3-theme-accent) l c h);
+                background-color: color-mix(in srgb, currentColor 12%, rgba(0, 0, 0, 0));
+                width: 1.25em;
+                height: 1.25em;
+                transform: translate(-50%, -50%);
+                margin: unset;
+                border-radius: 50% !important;
+            }
+            &:hover {
+                color: oklch(from var(--b3-theme-accent) l c h) !important;
+                &::after {    
+                    color: oklch(from var(--b3-theme-accent) l c h) !important;
+                    background-color: color-mix(in srgb, currentColor 12%, rgba(0, 0, 0, 0)) !important;
+                }
+            }
+        }
+    }
+}
+// callout
+.b3-typography .callout,
+.protyle-wysiwyg .callout {
+    background-color: color-mix(in srgb, currentColor 8%, rgba(0, 0, 0, 0));
+    padding: 4px 12px;
+    margin: 0.4em 0;
+    &::before {
+        display: none;
+    }
+    .callout-icon  {
+        transition: var(--b3-transition);
+        @include icon;
+    }
+    &[data-subtype="NOTE"] {
+        --b3-callout-note: oklch(from var(--b3-theme-accent) l c 260);
+        color: var(--b3-callout-note);
+    }
+    &[data-subtype="TIP"] {
+        --b3-callout-tip: oklch(from var(--b3-theme-accent) l c 140);
+        color: var(--b3-callout-tip);
+    }
+    &[data-subtype="IMPORTANT"] {
+        --b3-callout-important: oklch(from var(--b3-theme-accent) l c 285);
+        color: var(--b3-callout-important);
+    }
+    &[data-subtype="WARNING"] {
+        --b3-callout-warning: oklch(from var(--b3-theme-accent) l c 90);
+        color: var(--b3-callout-warning);
+    }
+    &[data-subtype="CAUTION"] {
+        --b3-callout-caution: oklch(from var(--b3-theme-accent) l c 30);
+        color: var(--b3-callout-caution);
+    }
+}
+// table
+.b3-typography table,
+.protyle-wysiwyg table {
+    --b3-table-even-background: oklch(from var(--b3-theme-on-background) l c h / 0.035);
+    td,
+    th {
+        border-color: var(--b3-border-color-trans);
+    }
+    thead th,
+    thead td {
+        background-color: var(--b3-table-even-background);
+    }
+}
+// drag
+.protyle-wysiwyg [data-node-id] .img .protyle-action__drag {
+    background: var(--b3-theme-on-surface);
+    box-shadow: none;
+    &:hover {
+        background: var(--b3-theme-on-background);
+        box-shadow: none;
+    }
+}
+.protyle-wysiwyg [data-node-id].iframe .protyle-action__drag {
+    background: var(--b3-theme-on-surface);
+    box-shadow: none;
+    bottom: -4px;
+    &:hover {
+        background: var(--b3-theme-on-background);
+        box-shadow: none;
+        &::after {
+            background: var(--b3-theme-on-background);
+            box-shadow: none;
+        }
+    }
+    &::after {
+        background: var(--b3-theme-on-surface);
+        box-shadow: none;
+    }
+}
+// img
+.protyle-wysiwyg [data-node-id] .img--select {
+    filter: unset;
+    img {
+        transition: var(--b3-transition);
+        box-shadow: var(--neo-main-shadow);
+    }
+}
+.viewer-backdrop {
+    @include frostedglass($blur: l, $color: background);
+}
+.viewer-navbar {
+    background-color: oklch(from var(--b3-theme-surface) l c h / 0.7);
+    .viewer-list {
+        transition: var(--b3-transition);
+    }
+}
+.viewer-title {
+    color: var(--b3-theme-on-surface);
+    &:hover {
+        color: var(--b3-theme-on-background);
+    }
+}
+.viewer-toolbar > ul > li {
+    background-color: transparent;
+    transition: var(--b3-transition);
+    svg {
+        color: var(--b3-theme-on-surface);
+    }
+    &:hover {
+        svg {
+            color: var(--b3-theme-on-background);
+        }
+    }
+}
+.viewer-tooltip {
+    background-color: transparent;
+    color: var(--b3-theme-on-surface);
+    &:hover {
+        color: var(--b3-theme-on-background);
     }
 }
