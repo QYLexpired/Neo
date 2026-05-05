@@ -120,6 +120,16 @@
         @include button-transparent;
     }
 }
+.config-bazaar__readme .item__side {
+    .b3-button {
+        width: unset !important;
+        min-width: 100px;
+        @include button-primary;
+        &[data-type="feedback"] {
+            @include button-warning();
+        }
+    }
+}
 // switch
 $toggle-border-width: 2px;
 $toggle-thumb-height: 13px;
