@@ -42,6 +42,9 @@
         align-items: flex-end;
     }
 }
+.config__tab-container .config-group {
+    @include superellipse(12px);
+}
 // bazaar
 .config-bazaar__panel {
     .b3-card {
@@ -102,6 +105,33 @@
         &.b3-button--big {
             font-size: unset;
             min-width: unset;
+        }
+    }
+}
+// search
+#criteria {
+    .b3-chips .b3-chip {
+        @include superellipse(6px);
+        @include button-transparent-outline;
+        $offset: 16px;
+        padding: 4px 14px;
+        .b3-chip__close {
+            opacity: 0;
+            margin-right: -$offset;
+            margin-left: 0;
+            padding-right: 0;
+            transition: var(--b3-transition);
+            &:hover {
+                background-color: transparent;
+                color: var(--b3-theme-error);
+            }
+        }
+        &:hover {
+            padding: 4px 6px;
+            .b3-chip__close {
+                opacity: 1;
+                margin-right: 0;
+            }
         }
     }
 }

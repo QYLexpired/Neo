@@ -92,7 +92,8 @@
     }
 }
 // protyle-icons
-.protyle-icons {
+.protyle-icons,
+.av__gallery-actions {
     transition: var(--b3-transition);
     @include superellipse($layout-border-radius);
     box-shadow: var(--neo-main-shadow);

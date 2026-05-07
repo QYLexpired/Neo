@@ -205,7 +205,7 @@
 }
 // settings
 .config__tab-container .config-group {
-    background-color: oklch(from var(--b3-theme-surface) l c h / 0.5);
+    background-color: oklch(from var(--b3-theme-surface) l c h / 0.7);
     & > .b3-label {
         border: unset;
     }

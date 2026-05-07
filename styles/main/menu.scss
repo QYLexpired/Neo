@@ -66,7 +66,7 @@
 // protyle-hint
 .protyle-hint {
     padding: 6px;
-    @include superellipse(6px);
+    @include superellipse(10px);
     border: unset;
     box-shadow: unset;
     overflow: unset;
@@ -84,7 +84,7 @@
 // protyle-util
 .protyle-util {
     padding: 4px;
-    @include superellipse(6px);
+    @include superellipse(10px);
     border: unset;
     box-shadow: unset;
     & .block__icons--menu {
@@ -97,6 +97,10 @@
             }
         }
     }
+}
+.color__square:hover:not(.color__square--list):not(.color__square--current),
+.protyle-font__style:hover {
+    box-shadow: var(--neo-main-shadow);
 }
 // av-menu
 .b3-list-item__icon,

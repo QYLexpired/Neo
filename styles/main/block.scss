@@ -108,14 +108,14 @@
 // inline-memo
 .b3-typography span[data-type~=inline-memo],
 .protyle-wysiwyg span[data-type~=inline-memo] {
-    color: oklch(from var(--b3-theme-accent) l c h);
-    background-color: color-mix(in srgb, currentColor 12%, rgba(0, 0, 0, 0));
+    background-color: oklch(from var(--b3-theme-accent) l c h / 0.2);
+    color: var(--b3-theme-accent);
     border-bottom: 1.5px solid;
     transition: var(--b3-transition);
     &:hover {
-        background-color: oklch(from var(--b3-theme-accent) l c h);
-        color: var(--b3-theme-on-primary);
-        border-color: oklch(from var(--b3-theme-accent) l c h);
+        background-color: oklch(from var(--b3-theme-accent) l c calc(h + 10) / 0.2);
+        color: oklch(from var(--b3-theme-accent) l c calc(h + 10));
+        border-color: oklch(from var(--b3-theme-accent) l c calc(h + 10));
     }
 }
 // embed

@@ -4,8 +4,8 @@
 [data-theme-mode="light"] {
     --b3-theme-primary: #338bf4;
     --b3-theme-accent: var(--b3-theme-primary);
-    --b3-theme-background: #f8faff;
-    --b3-theme-surface: #e8edf8;
+    --b3-theme-background: #ffffff;
+    --b3-theme-surface: #f3f3f4;
     --b3-theme-on-background: #353c48;
     --b3-theme-on-surface: oklch(from var(--b3-theme-on-background) l c h / 0.65);
     // inherit

@@ -1,0 +1,21 @@
+@use "components" as *;
+@use "../tools" as *;
+.av__cell [data-type=block-more] {
+    @include button-transparent-outline;
+    @include frostedglass($blur: s, $color: background);
+}
+.av__gallery-item {
+    box-shadow: 0 0 0 1px var(--b3-border-color-trans);
+    @include superellipse(10px);
+}
+.av__gallery-add {
+    box-shadow: 0 0 0 1px var(--b3-border-color-trans);
+    @include button-transparent-outline;
+    @include superellipse(10px);
+}
+.av__group-icon {
+    @include icon;
+}
+.av__gallery-cover {
+    border-color: var(--b3-border-color-trans);
+}

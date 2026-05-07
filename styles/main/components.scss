@@ -106,6 +106,9 @@
                 box-shadow: none;
             }
         }
+        &[data-type="install-all"] {
+            @include button-primary;
+        }
     }
 }
 #criteria {
@@ -290,6 +293,10 @@ textarea.b3-text-field {
 }
 .layout__center .search__header .b3-text-field {
     background-color: transparent;
+}
+.av__mask .b3-text-field,
+.block__icons .b3-text-field {
+    background-color: var(--b3-theme-background);
 }
 // slider
 $slider-thumb-border-width: 0;
