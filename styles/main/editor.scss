@@ -11,6 +11,9 @@
     min-height: unset;
     padding: 0 4px;
 }
+.body--toolbar-hide .layout:not(.layout__center) .layout__center [data-type=wnd] > .fn__flex + .layout-tab-container > .protyle > .protyle-breadcrumb {
+    padding: 4px 8px 0 8px;
+}
 .protyle-breadcrumb__item {
     transition: var(--b3-transition);
     padding: 0;

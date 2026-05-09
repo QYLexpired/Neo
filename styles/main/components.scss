@@ -3,14 +3,14 @@
 // button
 @mixin button-primary {
     background-color: var(--b3-theme-primary);
-    color: var(--b3-theme-on-primary);
+    @include color-reverse(--b3-theme-primary);
     box-shadow: none;
     transition: var(--b3-transition);
     &:hover,
     &:active,
     &:focus {
         background-color: oklch(from var(--b3-theme-primary) calc(l + 0.1) c h);
-        color: var(--b3-theme-on-primary);
+        @include color-reverse(--b3-theme-primary);
         box-shadow: none;
     }
 }
@@ -59,6 +59,7 @@
     width: max-content;
     transition: var(--b3-transition);
     @include superellipse(7px);
+    @include button-primary;
     &--outline {
         min-width: 75px;
         @include button-primary;
@@ -179,6 +180,7 @@ $toggle-thumb-height: 13px;
 $toggle-thumb-width: 21px;
 $toggle-width: 36px;
 .b3-switch {
+    --neo-switch-fix: oklch(from var(--b3-theme-primary) clamp(0, l, 0.82) c h);
     transition: var(--b3-transition);
     width: $toggle-width;
     height: calc($toggle-thumb-height + $toggle-border-width * 2);
@@ -199,12 +201,10 @@ $toggle-width: 36px;
         background-color: #ffffff;
     }
     &:is([data-theme-mode="dark"] .b3-switch) {
-        &::after {
-            background-color: #e0e0e0 !important;
-        }
+        --neo-switch-fix: oklch(from var(--b3-theme-primary) clamp(0.48, l, 0.72) c h);
     }
     &:checked {
-        background-color: var(--b3-theme-primary);
+        background-color: var(--neo-switch-fix);
         &::after {
             width: $toggle-thumb-width !important;
             height: $toggle-thumb-height !important;
@@ -213,7 +213,7 @@ $toggle-width: 36px;
             transform: translateY(-50%);
             left: 13px;
             right: $toggle-border-width;
-            background-color: var(--b3-theme-on-primary) !important;
+            background-color: #ffffff !important;
         }
     }
 }
@@ -283,6 +283,7 @@ textarea.b3-text-field {
     max-height: 150px;
     overflow-y: auto;
     height: unset;
+    transition-property: box-shadow;
 }
 .search__header .b3-text-field {
     box-shadow: none !important;

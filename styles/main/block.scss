@@ -1,4 +1,10 @@
 @use "../tools" as *;
+:root {
+    --neo-block-background-light: -0.05;
+    &[data-theme-mode="dark"] {
+        --neo-block-background-light: 0.05;
+    }
+}
 // block 
 .protyle-wysiwyg [data-node-id] {
     @include superellipse(8px);
@@ -18,7 +24,7 @@
             color: var(--b3-theme-accent);
             &[fold="1"] {
                 outline: 1px solid var(--b3-border-color-trans);
-                background-color: oklch(from var(--b3-theme-surface) l c h / 0.7);
+                background-color: oklch(from var(--b3-theme-background) calc(l + var(--neo-block-background-light)) c h / 0.7);
                 opacity: 0.5;
                 &::before {
                     opacity: 0;
@@ -70,28 +76,30 @@
 .protyle-wysiwyg span[data-type~=kbd],
 .b3-typography kbd,
 .b3-typography span[data-type~=kbd] {
-    color: var(--b3-theme-on-surface);
+    color: unset;
     border: 1px solid;
-    border-color: color-mix(in srgb, currentColor 15%, rgba(0, 0, 0, 0));
-    background-color: color-mix(in srgb, currentColor 10%, rgba(0, 0, 0, 0));
+    border-color: color-mix(in srgb, currentColor 12%, rgba(0, 0, 0, 0));
+    background-color: color-mix(in srgb, currentColor 8%, rgba(0, 0, 0, 0));
     box-shadow: rgba(0, 0, 0, 0.04) 0px 2px 8px -2px, rgba(0, 0, 0, 0.04) 0px 2px 4px -2px;
     @include superellipse(6px);
+    vertical-align: 1px;
 }
 // tag 
 .protyle-wysiwyg [data-node-id] span[data-type~=tag] {
     @include superellipse(6px);
-    background-color: oklch(from var(--b3-theme-accent) l c h / 0.2);
+    background-color: oklch(from var(--b3-theme-accent) l c h / 0.1);
     color: var(--b3-theme-accent);
+    border: 1px solid oklch(from var(--b3-theme-accent) l c h / 0.15);
     padding: 2px 4px;
-    border: none;
     font-size: 0.85em;
     &::before {
         content: "#";
         display: inline-block;
     }
     &:hover {
-        background-color: oklch(from var(--b3-theme-accent) l c calc(h + 10) / 0.3);
+        background-color: oklch(from var(--b3-theme-accent) l c calc(h + 10) / 0.1);
         color: oklch(from var(--b3-theme-accent) l c calc(h + 10));
+        border-color: oklch(from var(--b3-theme-accent) l c calc(h + 10) / 0.15);
     }
 }
 // inline-code
@@ -99,21 +107,20 @@
 .b3-typography code:not(.hljs),
 .protyle-wysiwyg span[data-type~=code],
 .protyle-wysiwyg code:not(.hljs) {
-    color: var(--b3-theme-on-surface);
-    background-color: color-mix(in srgb, currentColor 12%, rgba(0, 0, 0, 0));
-    box-shadow: 0 0 0 1px color-mix(in srgb, currentColor 5%, rgba(0, 0, 0, 0)) inset;
+    color: unset;
+    background-color: color-mix(in srgb, currentColor 8%, rgba(0, 0, 0, 0));
     padding: 2px 4px;
     @include superellipse(6px);
 }
 // inline-memo
 .b3-typography span[data-type~=inline-memo],
 .protyle-wysiwyg span[data-type~=inline-memo] {
-    background-color: oklch(from var(--b3-theme-accent) l c h / 0.2);
+    background-color: oklch(from var(--b3-theme-accent) l c h / 0.1);
     color: var(--b3-theme-accent);
     border-bottom: 1.5px solid;
     transition: var(--b3-transition);
     &:hover {
-        background-color: oklch(from var(--b3-theme-accent) l c calc(h + 10) / 0.2);
+        background-color: oklch(from var(--b3-theme-accent) l c calc(h + 10) / 0.1);
         color: oklch(from var(--b3-theme-accent) l c calc(h + 10));
         border-color: oklch(from var(--b3-theme-accent) l c calc(h + 10));
     }
@@ -121,7 +128,7 @@
 // embed
 .protyle-wysiwyg [data-node-id].render-node[data-type=NodeBlockQueryEmbed] {
     border: unset;
-    background-color: oklch(from var(--b3-theme-surface) l c h / 0.7);
+    background-color: oklch(from var(--b3-theme-background) calc(l + var(--neo-block-background-light)) c h / 0.7);
     padding: 4px 12px;
 }
 // quote
@@ -130,7 +137,7 @@
 .protyle-wysiwyg blockquote,
 .protyle-wysiwyg .bq {
     @include superellipse(8px);
-    background-color: color-mix(in srgb, currentColor 8%, rgba(0, 0, 0, 0));
+    background-color: oklch(from var(--b3-theme-background) calc(l + var(--neo-block-background-light)) c h / 0.7);
     padding: 4px 12px;
     margin: 0.4em 0;
     &::before {
@@ -141,7 +148,7 @@
 .b3-typography .code-block:not(pre),
 .protyle-wysiwyg .code-block:not(pre) {
     @include superellipse(8px);
-    background-color: oklch(from var(--b3-theme-surface) l c h / 0.7);
+    background-color: oklch(from var(--b3-theme-background) calc(l + var(--neo-block-background-light)) c h / 0.7);
     .protyle-action {
         padding: 4px 4px 4px 0;
     }
@@ -184,7 +191,7 @@
 // callout
 .b3-typography .callout,
 .protyle-wysiwyg .callout {
-    background-color: color-mix(in srgb, currentColor 8%, rgba(0, 0, 0, 0));
+    background-color: color-mix(in srgb, currentColor 10%, rgba(0, 0, 0, 0));
     padding: 4px 12px;
     margin: 0.4em 0;
     &::before {
@@ -218,7 +225,7 @@
 // table
 .b3-typography table,
 .protyle-wysiwyg table {
-    --b3-table-even-background: oklch(from var(--b3-theme-on-background) l c h / 0.035);
+    --b3-table-even-background: oklch(from var(--b3-theme-background) calc(l + var(--neo-block-background-light)) c h / 0.7);
     td,
     th {
         border-color: var(--b3-border-color-trans);

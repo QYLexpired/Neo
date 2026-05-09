@@ -1,5 +1,6 @@
 @use "../tools" as *;
 @use "components" as *;
+@use "../utils" as *;
 .b3-dialog__container {
     border: unset;
     box-shadow: unset;
@@ -16,7 +17,8 @@
     .config__side,
     .b3-label,
     .search__layout--row,
-    .block__edit {
+    .block__edit,
+    .config__side {
         --b3-border-color: var(--b3-border-color-trans) !important;
         border-color: var(--b3-border-color-trans) !important;
     }
@@ -40,10 +42,24 @@
         display: flex;
         flex-direction: column;
         align-items: flex-end;
+        .b3-button {
+            width: max-content;
+        }
     }
 }
 .config__tab-container .config-group {
     @include superellipse(12px);
+}
+.config__side .b3-list-item {
+    @include superellipse(8px);
+    line-height: 26px;
+    margin: 4px 8px;
+    &:first-child {
+        margin-top: 0;
+    }
+    &:last-child {
+        margin-bottom: 0;
+    }
 }
 // bazaar
 .config-bazaar__panel {
@@ -133,6 +149,21 @@
                 margin-right: 0;
             }
         }
+    }
+}
+.search__drag {
+    transition: var(--b3-transition);
+    &:hover {
+        &::after {
+            background-color: $resize-hl !important;
+        }
+    }
+}
+// history
+.history__resize {
+    transition: var(--b3-transition);
+    &:hover {
+        box-shadow: 2px 0 0 0 var(--b3-theme-background) inset, 3px 0 0 0 $resize-hl inset;
     }
 }
 // popover

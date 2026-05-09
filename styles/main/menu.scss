@@ -1,4 +1,5 @@
 @use "../tools" as *;
+@use "../utils" as *;
 // menu
 .b3-menu,
 .b3-menu__submenu {
@@ -11,22 +12,27 @@
 .b3-menu__items {
     padding: 0;
 }
+.b3-menu__item--selected {
+    color: var(--b3-theme-accent);
+    & > .b3-menu__icon,
+    & > .b3-menu__label,
+    & > .b3-menu__accelerator {
+        color: var(--b3-theme-accent);
+    }
+}
 @mixin menu-item-current {
     background-color: var(--b3-theme-primary);
-    &.b3-menu__item--warning,
-    [data-type="delete-view"] {
-        background-color: var(--b3-theme-error);
-    }
     & > .b3-menu__icon,
     & > .b3-menu__label,
     & > .b3-menu__accelerator,
     & > .fn__flex-center,
     & > .b3-menu__label > .b3-menu__icon,
     & > .b3-menu__action {
-        color: var(--b3-theme-on-primary);
+        @include color-reverse(--b3-theme-primary);
     }
     .b3-switch {
-        outline: 1px solid var(--b3-theme-on-primary);
+        outline: 1px solid oklch(from var(--b3-theme-primary) clamp(0, calc((0.72 - l) * 10000), 1) 0 0 / 0.7);
+        transition: none;
     }
 }
 .b3-menu__item {
