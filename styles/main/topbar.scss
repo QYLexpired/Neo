@@ -16,3 +16,14 @@
         box-shadow: var(--neo-main-shadow);
     }
 }
+#windowControls {
+    .toolbar__item {
+        &:hover {
+            box-shadow: none;
+            color: var(--b3-theme-accent);
+            &#closeWindow {
+                color: var(--b3-theme-error);
+            }
+        }
+    }
+}
