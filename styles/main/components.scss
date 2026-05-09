@@ -109,6 +109,7 @@
         }
         &[data-type="install-all"] {
             @include button-primary;
+            padding: 4px 12px;
         }
     }
 }
@@ -140,6 +141,7 @@
 }
 .card__action .b3-button {
     line-height: 32px;
+    @include superellipse(16px);
     .card__icon {
         display: none
     }
@@ -237,7 +239,8 @@ $toggle-width: 36px;
         background-color: var(--b3-theme-background);
         box-shadow: 0 0 0 2px oklch(from var(--b3-theme-primary) l c h / 0.5);
     }
-    &.fn__block {
+    &.fn__block,
+    &.fn__flex-shrink {
         width: 100%;
     }
 }
@@ -269,12 +272,11 @@ $toggle-width: 36px;
     &:focus {
         box-shadow: 0 0 0 2px oklch(from var(--b3-theme-primary) l c h / 0.5) !important;
     }
-    &.fn__block {
+    &.fn__block,
+    &.fn__flex-shrink,
+    &.b3-form__icona-input {
         width: 100%;
     }
-}
-.b3-form__icona-input.b3-text-field {
-    width: 100%;
 }
 textarea.b3-text-field {
     width: 100%;
@@ -340,7 +342,8 @@ $slider-track-height: 6px;
             transform: scale(1.25);
         }
     }
-    &.fn__block {
+    &.fn__block,
+    &.fn__flex-shrink {
         width: 100%;
     }
 }

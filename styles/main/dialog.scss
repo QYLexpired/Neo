@@ -194,3 +194,7 @@
     box-shadow: unset;
     @include superellipse(12px);
 }
+// 闪卡
+.layout__center .card__main {
+    background-color: transparent;
+}

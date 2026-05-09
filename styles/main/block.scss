@@ -1,10 +1,4 @@
 @use "../tools" as *;
-:root {
-    --neo-block-background-light: -0.05;
-    &[data-theme-mode="dark"] {
-        --neo-block-background-light: 0.05;
-    }
-}
 // block 
 .protyle-wysiwyg [data-node-id] {
     @include superellipse(8px);
@@ -24,7 +18,7 @@
             color: var(--b3-theme-accent);
             &[fold="1"] {
                 outline: 1px solid var(--b3-border-color-trans);
-                background-color: oklch(from var(--b3-theme-background) calc(l + var(--neo-block-background-light)) c h / 0.7);
+                background-color: oklch(from var(--b3-theme-surface) l c h / 0.7);
                 opacity: 0.5;
                 &::before {
                     opacity: 0;
@@ -128,7 +122,7 @@
 // embed
 .protyle-wysiwyg [data-node-id].render-node[data-type=NodeBlockQueryEmbed] {
     border: unset;
-    background-color: oklch(from var(--b3-theme-background) calc(l + var(--neo-block-background-light)) c h / 0.7);
+    background-color: oklch(from var(--b3-theme-surface) l c h / 0.7);
     padding: 4px 12px;
 }
 // quote
@@ -137,7 +131,7 @@
 .protyle-wysiwyg blockquote,
 .protyle-wysiwyg .bq {
     @include superellipse(8px);
-    background-color: oklch(from var(--b3-theme-background) calc(l + var(--neo-block-background-light)) c h / 0.7);
+    background-color: oklch(from var(--b3-theme-surface) l c h / 0.7);
     padding: 4px 12px;
     margin: 0.4em 0;
     &::before {
@@ -148,7 +142,7 @@
 .b3-typography .code-block:not(pre),
 .protyle-wysiwyg .code-block:not(pre) {
     @include superellipse(8px);
-    background-color: oklch(from var(--b3-theme-background) calc(l + var(--neo-block-background-light)) c h / 0.7);
+    background-color: oklch(from var(--b3-theme-surface) l c h / 0.7);
     .protyle-action {
         padding: 4px 4px 4px 0;
     }
@@ -225,7 +219,7 @@
 // table
 .b3-typography table,
 .protyle-wysiwyg table {
-    --b3-table-even-background: oklch(from var(--b3-theme-background) calc(l + var(--neo-block-background-light)) c h / 0.7);
+    --b3-table-even-background: oklch(from var(--b3-theme-surface) l c h / 0.7);
     td,
     th {
         border-color: var(--b3-border-color-trans);

@@ -2,11 +2,18 @@
     #{$property}: oklch(from var(#{$css-var}) clamp(0, calc((0.72 - l) * 10000), 1) 0 0);
 }
 [data-theme-mode="light"] {
-    --b3-theme-primary: #6a85e3;
+    // 自定义主题色
+    --neo-custom-primary: unset;
+    --neo-custom-saturation: 1;
+    --neo-custom-background: oklch(from var(--neo-custom-primary) 0.99 calc(0.005 * var(--neo-custom-saturation)) h);
+    --neo-custom-surface: oklch(from var(--neo-custom-primary) 0.97 calc(0.015 * var(--neo-custom-saturation)) h);
+    --neo-custom-on-background: oklch(from var(--neo-custom-primary) 0.35 calc(0.045 * var(--neo-custom-saturation)) h);
+    // 主题色
+    --b3-theme-primary: var(--neo-custom-primary, #6a85e3);
     --b3-theme-accent: oklch(from var(--b3-theme-primary) 0.7 clamp(0.1, c, 1) h);
-    --b3-theme-background: #ffffff;
-    --b3-theme-surface: #f1f2ff;
-    --b3-theme-on-background: #192945;
+    --b3-theme-background: var(--neo-custom-background, #ffffff);
+    --b3-theme-surface: var(--neo-custom-surface, #f1f2ff);
+    --b3-theme-on-background: var(--neo-custom-on-background, #192945);
     --b3-theme-on-surface: oklch(from var(--b3-theme-on-background) l c h / 0.65);
     // inherit
     --b3-theme-primary-light: oklch(from var(--b3-theme-primary) l c h / 0.56);
@@ -33,11 +40,18 @@
     --b3-theme-error: #ff2a2a;
 }
 [data-theme-mode="dark"] {
-    --b3-theme-primary: #636de1;
+    // 自定义主题色
+    --neo-custom-primary: unset;
+    --neo-custom-saturation: 1;
+    --neo-custom-background: oklch(from var(--neo-custom-primary) 0.25 calc(0.012 * var(--neo-custom-saturation)) h);
+    --neo-custom-surface: oklch(from var(--neo-custom-primary) 0.18 calc(0.008 * var(--neo-custom-saturation)) h);
+    --neo-custom-on-background: oklch(from var(--neo-custom-primary) 0.95 calc(0.008 * var(--neo-custom-saturation)) h);
+    // 主题色
+    --b3-theme-primary: var(--neo-custom-primary, #636de1);
     --b3-theme-accent: oklch(from var(--b3-theme-primary) 0.74 clamp(0.1, c, 1) h);
-    --b3-theme-background: #282c34;
-    --b3-theme-surface: #1e2227;
-    --b3-theme-on-background: #d7dae0;
+    --b3-theme-background: var(--neo-custom-background, #282c34);
+    --b3-theme-surface: var(--neo-custom-surface, #1e2227);
+    --b3-theme-on-background: var(--neo-custom-on-background, #d7dae0);
     --b3-theme-on-surface: oklch(from var(--b3-theme-on-background) l c h / 0.65);
     // inherit
     --b3-theme-primary-light: oklch(from var(--b3-theme-primary) l c h / 0.56);
@@ -63,4 +77,3 @@
     // other
     --b3-theme-error: #ff2a2a;
 }
-// 多配色
