@@ -107,13 +107,11 @@
 }
 .config-account__center:not(.config-account__center--text) {
     margin: 20px;
-    background: oklch(from var(--b3-theme-surface) l c h / 0.5);
     @include superellipse(12px);
     box-shadow: var(--neo-main-shadow);
     max-width: 350px;
     max-height: max-content;
     min-height: 60%;
-    padding: 20px 0;
     align-self: center;
     .b3-chips .b3-chip {
         padding: 4px 12px;

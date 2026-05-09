@@ -1,0 +1,90 @@
+// 块标
+.protyle-gutters button {
+    animation: neo-gutters-entrance 0.5s cubic-bezier(0.25, -0.5, 0.25, 1.5);
+    animation-delay: calc((sibling-count() - sibling-index()) * 0.05s);
+    transform-origin: right bottom;
+    animation-fill-mode: both
+}
+@keyframes neo-gutters-entrance {
+    0% {
+        transform: scale(0.85) translateX(5px);
+        opacity: 0;
+    }
+    40% {
+        transform: scale(1.03) translateX(0px);
+        opacity: 1;
+    }
+    70% {
+        transform: scale(0.98);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+// protyle-toolbar
+.protyle-toolbar {
+    animation: neo-toolbar-entrance 0.5s cubic-bezier(0.25, -0.5, 0.25, 1.5);
+    transform-origin: center;
+}
+@keyframes neo-toolbar-entrance {
+    0% {
+        transform: scale(0.985);
+    }
+    40% {
+        transform: scale(1.005);
+    }
+    70% {
+        transform: scale(0.998);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+// slash
+.protyle-hint.hint--menu {
+    animation: neo-slash-entrance 0.5s cubic-bezier(0.25, -0.5, 0.25, 1.5);
+    transform-origin: center;
+}
+@keyframes neo-slash-entrance {
+    0% {
+        transform: scale(0.985);
+    }
+    40% {
+        transform: scale(1.001);
+    }
+    70% {
+        transform: scale(0.999);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+// dialog
+.b3-dialog__container {
+    transform: translateY(-3%);
+    transition: transform 0.3s cubic-bezier(0.25, 0, 0.25, 1.55);
+}
+// dock
+.layout__dockl,
+.layout__dockr {
+    transition: width 0.3s cubic-bezier(0.55, 0.06, 0.68, 0.19);
+    will-change: width;
+    & > .fn__flex {
+        transition: width 0.3s cubic-bezier(0.55, 0.06, 0.68, 0.19), display 0.3s cubic-bezier(0.55, 0.06, 0.68, 0.19);
+        transition-behavior: allow-discrete;
+        & > .fn__none {
+            width: 0;
+        }
+    }
+}
+.layout__dockb {
+    transition: height 0.3s cubic-bezier(0.55, 0.06, 0.68, 0.19);
+    will-change: height;
+    & > .fn__flex {
+        transition: height 0.3s cubic-bezier(0.55, 0.06, 0.68, 0.19), display 0.3s cubic-bezier(0.55, 0.06, 0.68, 0.19);
+        transition-behavior: allow-discrete;
+        & > .fn__none {
+            height: 0;
+        }
+    }
+}
