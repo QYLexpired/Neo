@@ -80,6 +80,36 @@
 }
 // bazaar
 .config-bazaar__panel {
+    .b3-cards {
+        grid-template-columns: repeat(auto-fill, minmax(min(100%, 320px), 1fr));
+    }
+    // reference: https://github.com/mustakshif/Asri
+    &[data-type=downloaded] {
+        .b3-card {
+            display: grid;
+            grid-template-areas:
+            "img info"
+            "img buttons";
+            grid-template-columns: 90px 1fr;
+            & > .b3-card__img {
+                grid-area: img;
+                & + div {
+                    grid-area: info;
+                }
+            }
+            & > .b3-card__actions {
+                grid-area: buttons;
+                padding: 3px 11px 11px;
+                align-self: flex-end;
+                & > .fn__space--small:first-child {
+                    margin-left: auto;
+                }
+                & > .block__icon:first-child {
+                    margin-left: auto;
+                }
+            }
+        }
+    }
     .b3-card {
         border: unset;
         box-shadow: inset 0 0 0 1px var(--b3-border-color-trans);
@@ -91,6 +121,9 @@
             box-shadow: inset 0 0 0 1px oklch(from var(--b3-theme-primary) l c h / 0.25);
             background-color: oklch(from var(--b3-theme-primary) l c h / 0.08);
         }
+        .b3-card__img img {
+            @include superellipse(12px);
+        }
     }
 }
 #configBazaarReadme {
@@ -100,6 +133,9 @@
         margin: $layout-gap 0 $layout-gap $layout-gap;
         height: calc(100% - $layout-gap * 4);
         @include superellipse(12px);
+        .item__img {
+            @include superellipse(12px);
+        }
     }
     .item__main {
         margin: 0;
@@ -110,6 +146,16 @@
         }
         .b3-typography {
             padding: 0 64px;
+            & > blockquote:first-child {
+                margin: 24px 0;
+                padding: 0;
+                background-color: transparent;
+                font-size: 1.2em;
+                font-weight: bold;
+            }
+        }
+        .item__readme {
+            margin-top: 0;
         }
     }
 }

@@ -5,7 +5,7 @@ $k: 1.4;
 @mixin superellipse($r: ()) {
     $out: ();
     @each $i in $r {
-        $out: list.append($out, calc(#{$i} * #{$k}), space);
+        $out: list.append($out, $i * $k, space);
     }
     corner-shape: superellipse($k);
     border-radius: $out;
