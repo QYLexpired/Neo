@@ -79,8 +79,9 @@
     .config__panel {
         background-color: transparent;
     }
+    .config__side,
     .config__panel .b3-tab-bar {
-        background-color: transparent;
+        background-color: oklch(from var(--b3-theme-surface) l c h / 0.7);
     }
     .search__header {
         background: transparent;

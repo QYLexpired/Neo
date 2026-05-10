@@ -38,6 +38,9 @@
     --b3-empty-color: oklch(from var(--b3-theme-on-background) l c h / 0.45);
     // other
     --b3-theme-error: #ff2a2a;
+    --b3-highlight-background: oklch(from var(--b3-theme-primary) clamp(0.68, l, 1) clamp(0.5, c, 1) h);
+    --b3-highlight-current-background: oklch(from var(--b3-theme-primary) clamp(0.68, l, 1) clamp(0.5, c, 1) calc(h + 10));
+    --b3-highlight-color: oklch(from var(--b3-highlight-background) clamp(0, calc((0.72 - l) * 10000), 1) 0 0);
 }
 [data-theme-mode="dark"] {
     // 自定义主题色
@@ -75,5 +78,8 @@
     --b3-protyle-code-background: oklch(from var(--b3-theme-surface) 0.4 c h / 0.6);
     --b3-empty-color: oklch(from var(--b3-theme-on-background) l c h / 0.45);
     // other
-    --b3-theme-error: #ff2a2a;
+    --b3-theme-error: #d22727;
+    --b3-highlight-background: oklch(from var(--b3-theme-primary) clamp(0.68, l, 1) clamp(0.5, c, 1) h);
+    --b3-highlight-current-background: oklch(from var(--b3-theme-primary) clamp(0.68, l, 1) clamp(0.5, c, 1) calc(h + 10));
+    --b3-highlight-color: oklch(from var(--b3-highlight-background) clamp(0, calc((0.72 - l) * 10000), 1) 0 0);
 }

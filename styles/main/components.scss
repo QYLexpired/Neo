@@ -61,7 +61,6 @@
     @include superellipse(7px);
     @include button-primary;
     &--outline {
-        min-width: 75px;
         @include button-primary;
     }
     &--text {
@@ -158,9 +157,9 @@
     &[data-type="2"],
     &[data-type="3"],
     &[data-type="4"] {
-        background-color: color-mix(in srgb, currentColor 20%, rgba(0, 0, 0, 0));
+        background-color: oklch(from currentColor l c h / 0.25);
         &:hover {
-            background-color: color-mix(in srgb, currentColor 15%, rgba(0, 0, 0, 0));
+            background-color: oklch(from currentColor l c h / 0.15);
         }
     }
     &[data-type="1"] {
@@ -183,7 +182,6 @@ $toggle-thumb-width: 21px;
 $toggle-width: 36px;
 .b3-switch {
     --neo-switch-fix: oklch(from var(--b3-theme-primary) clamp(0, l, 0.82) c h);
-    transition: var(--b3-transition);
     width: $toggle-width;
     height: calc($toggle-thumb-height + $toggle-border-width * 2);
     border-radius: 24px;
@@ -193,7 +191,6 @@ $toggle-width: 36px;
         display: none !important;
     }
     &::after {
-        transition: var(--b3-transition);
         width: $toggle-thumb-width !important;
         height: $toggle-thumb-height !important;
         border-radius: 24px;
@@ -221,7 +218,6 @@ $toggle-width: 36px;
 }
 // select
 .b3-select {
-    transition: var(--b3-transition);
     @include superellipse(7px);
     height: 24px;
     line-height: 1.3;
@@ -256,7 +252,6 @@ $toggle-width: 36px;
     overflow: visible !important;
 }
 .b3-text-field {
-    transition: var(--b3-transition);
     @include superellipse(7px);
     height: 24px;
     line-height: 1.3;
@@ -309,7 +304,6 @@ $slider-thumb-width: 20px;
 $slider-track-height: 6px;
 .b3-slider,
 .protyle-scroll__bar .b3-slider {
-    transition: var(--b3-transition);
     width: 120px;
     height: 24px;
     -webkit-appearance: none;
@@ -355,5 +349,20 @@ $slider-track-height: 6px;
     color: var(--b3-theme-on-surface);
     &:hover {
         color: var(--b3-theme-on-background);
+    }
+}
+// ratio
+input[type="radio" i] {
+    appearance: none;
+    width: 1em;
+    height: 1em;
+    vertical-align: -2px;
+    align-self: center;
+    flex-shrink: 0;
+    background-color: var(--b3-theme-on-surface);
+    mask-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024"><path d="M512 1001.6A489.6 489.6 0 1 1 1001.6 512 489.92 489.92 0 0 1 512 1001.6z m0-896A406.4 406.4 0 1 0 918.4 512 407.04 407.04 0 0 0 512 105.6z"/></svg>');
+    &:checked {
+        background-color: var(--b3-theme-primary);
+        mask-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024"><path d="M512 16A496 496 0 1 0 1008 512 496.32 496.32 0 0 0 512 16z m0 800a304 304 0 1 1 304-304 304.32 304.32 0 0 1-304 304z"/><path d="M512 512m-112 0a112 112 0 1 0 224 0 112 112 0 1 0-224 0Z"/></svg>');
     }
 }

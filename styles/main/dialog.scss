@@ -54,10 +54,18 @@
     @include superellipse(12px);
     margin: 16px 64px 0 64px;
 }
+.config__side,
+.b3-dialog__container .config__panel .b3-tab-bar {
+    @include superellipse(12px);
+    margin: $layout-gap;
+    padding: 8px 0;
+    border: unset;
+}
 .config__side .b3-form__icon {
     margin: 0 8px 16px 8px;
 }
-.config__side .b3-list-item {
+.config__side .b3-list-item,
+.b3-dialog__container .config__panel .b3-tab-bar .b3-list-item {
     @include superellipse(8px);
     line-height: 26px;
     margin: 4px 8px;

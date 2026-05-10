@@ -1,69 +1,53 @@
 // 块标
 .protyle-gutters button,
 .protyle-title:hover .protyle-title__icon svg {
-    animation: neo-gutters-entrance 0.5s;
+    animation: neo-gutters-entrance 0.25s cubic-bezier(0.18, 0.89, 0.32, 1.38);
     animation-delay: calc((sibling-count() - sibling-index()) * 0.05s);
     transform-origin: right bottom;
     animation-fill-mode: both
 }
 @keyframes neo-gutters-entrance {
-    0% {
+    from {
         transform: scale(0.85) translateX(5px);
         opacity: 0;
     }
-    30% {
-        transform: scale(1.03) translateX(0px);
-        opacity: 1;
-    }
-    60% {
-        transform: scale(0.98);
-    }
-    100% {
+    to {
         transform: scale(1);
     }
 }
 // protyle-toolbar
 .protyle-toolbar {
-    animation: neo-toolbar-entrance 0.5s;
+    animation: neo-toolbar-entrance 0.25s cubic-bezier(0.18, 0.89, 0.32, 1.8);
     transform-origin: center;
+    will-change: transform;
 }
 @keyframes neo-toolbar-entrance {
-    0% {
-        transform: scale(0.975);
+    from {
+        transform: scale(0.97);
     }
-    30% {
-        transform: scale(1.01);
-    }
-    60% {
-        transform: scale(0.995);
-    }
-    100% {
+    to {
         transform: scale(1);
     }
 }
-// slash
-.protyle-hint.hint--menu {
-    animation: neo-slash-entrance 0.5s;
-    transform-origin: center;
+// s-menu
+.protyle-hint,
+.protyle-util {
+    animation: neo-smenu-entrance 0.25s cubic-bezier(0.18, 0.89, 0.32, 1.8);
+    transform-origin: top left;
+    animation-fill-mode: both;
 }
-@keyframes neo-slash-entrance {
-    0% {
+@keyframes neo-smenu-entrance {
+    from {
         transform: scale(0.985);
     }
-    30% {
-        transform: scale(1.002);
-    }
-    60% {
-        transform: scale(0.998);
-    }
-    100% {
+    to {
         transform: scale(1);
     }
 }
 // dialog
 .b3-dialog__container {
     transform: translateY(-3%);
-    transition: transform 0.3s cubic-bezier(0.25, 0, 0.25, 1.55);
+    transition: transform 0.25s cubic-bezier(0.25, 0, 0.25, 1.55);
 }
 // dock
 #dockLeft,
@@ -103,24 +87,217 @@
 }
 // tooltip
 .tooltip {
-    animation: neo-tooltip-entrance 0.5s;
-    transform-origin: top center;
+    animation: neo-tooltip-entrance 0.25s cubic-bezier(0.18, 0.89, 0.32, 1.5);
+    transform-origin: center;
     animation-delay: 0.3s;
     animation-fill-mode: both
 }
 @keyframes neo-tooltip-entrance {
-    0% {
-        transform: scale(0.95);
+    from {
+        transform: scale(0.9);
         opacity: 0;
     }
-    30% {
-        transform: scale(1.015);
-        opacity: 1;
+    to {
+        transform: scale(1);
     }
-    60% {
-        transform: scale(0.995);
+}
+// ratio
+input[type="radio" i] {
+    animation: neo-ratio-entrance 0.25s cubic-bezier(0.18, 0.89, 0.32, 1.7);
+    transform-origin: center;
+    &:checked {
+        animation: neo-ratio-checked-entrance 0.25s cubic-bezier(0.18, 0.89, 0.32, 1.7);
+    }
+}
+@keyframes neo-ratio-entrance {
+    from {
+        transform: scale(1.2);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+@keyframes neo-ratio-checked-entrance {
+    from {
+        transform: scale(0.8);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+// task
+.protyle-wysiwyg .li[data-subtype=t] .protyle-action--task {
+    &::before {
+        animation: neo-task-entrance 0.15s cubic-bezier(0.18, 0.89, 0.32, 1.7);
+        transform-origin: center;
+    }
+}
+.protyle-wysiwyg .li[data-subtype=t].protyle-task--done .protyle-action--task {
+    &::before {
+        animation: neo-task-done-entrance 0.15s cubic-bezier(0.18, 0.89, 0.32, 1.7);
+    }
+}
+@keyframes neo-task-entrance {
+    from {
+        transform: scale(1.2) translateY(-50%);
+    }
+    to {
+        transform: scale(1) translateY(-50%);
+    }
+}
+@keyframes neo-task-done-entrance {
+    from {
+        transform: scale(0.8) translateY(-50%);
+    }
+    to {
+        transform: scale(1) translateY(-50%);
+    }
+}
+// block ref
+.protyle-wysiwyg [data-node-id] span[data-type~=block-ref]:not(.av__celltext),
+.protyle-wysiwyg [data-node-id] span[data-type~=file-annotation-ref] {
+    animation-play-state: paused;
+    &:hover {
+        animation: neo-blockref-flow 0.8s linear infinite;
+        animation-play-state: running;
+    }
+}
+@keyframes neo-blockref-flow {
+    0% {
+        background-position: 0 100%;
+}
+    100% {
+        background-position: 8px 100%;
+    }
+}
+// link
+.protyle-wysiwyg [data-node-id] span[data-type~=a],
+a {
+    animation: neo-link-flow 0.8s linear infinite;
+    animation-play-state: paused;
+    &:hover {
+        animation-play-state: running;
+    }
+}
+@keyframes neo-link-flow {
+    0% {
+        background-position: 0% 100%;
     }
     100% {
+        background-position: -100% 100%;
+    }
+}
+// list mark
+.b3-list mark {  
+    animation: neo-listmark-flow 5s linear infinite;
+}
+@keyframes neo-listmark-flow {
+    0% { 
+        background-position: 0% 50%; 
+    }
+    100% { 
+        background-position: 100% 50%; 
+    }
+}
+// title
+.protyle-title__input {
+    padding-left: 0.8em;
+    &::before {
+        content: "";
+        pointer-events: none;
+        position: absolute;
+        left: 0.3em;
+        top: 50%;
+        transform: translate(-50%, -50%) rotate(0deg);
+        box-sizing: border-box;
+        width: 0.3em;
+        height: calc(100% - 0.6em);
+        background-color: currentColor;
+        border-radius: 0;
+        transition: 0.25s cubic-bezier(0.18, 0.89, 0.32, 1.28);
+    }
+    &:focus {
+        &::before {
+            width: 0.8em;
+            height: 0.8em;
+            background-color: transparent;
+            border: 0.15em solid currentColor;
+            border-top-color: transparent;
+            border-radius: 50%;
+            animation: neo-title-spin 1.2s linear infinite;
+        }
+    }
+}
+@keyframes neo-title-spin {
+    from { 
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+    to { 
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
+// swicth
+.b3-switch {
+    transition: 0.5s cubic-bezier(0.18, 0.89, 0.32, 1.48);
+    &::after {
+        transition: 0.5s cubic-bezier(0.18, 0.89, 0.32, 1.48);
+    }
+    &:active {
+        &::after {
+            transition: 0.3s cubic-bezier(0.18, 0.49, 0.52, 1.58);
+            transform: translateY(-50%) scale(1.3);
+            box-shadow: var(--neo-main-shadow);
+        }
+    }
+}
+// select
+.b3-select {
+    transition: 0.3s cubic-bezier(0.18, 0.49, 0.52, 1.58);
+}
+// text-field
+.b3-text-field {
+    transition: 0.3s cubic-bezier(0.18, 0.49, 0.52, 1.58);
+}
+// slider
+.b3-slider,
+.protyle-scroll__bar .b3-slider {
+    transition: 0.3s cubic-bezier(0.18, 0.49, 0.52, 1.58);
+    &::-webkit-slider-thumb  {
+        transition: 0.3s cubic-bezier(0.18, 0.49, 0.52, 1.58);
+    }
+}
+// filetree icon
+.file-tree:hover .block__icons .block__icon,
+.file-tree:not(.fullscreen):hover .block__icons .fn__space {
+    animation: neo-filetree-icon-entrance 0.25s cubic-bezier(0.18, 0.89, 0.32, 1.8);
+    animation-delay: calc((sibling-index() - 1) * 0.02s);
+    transform-origin: left;
+    animation-fill-mode: both;
+}
+.file-tree:not(:hover) .block__icons .block__icon,
+.file-tree:not(.fullscreen):not(:hover) .block__icons .fn__space {
+    opacity: 1;
+    animation: neo-filetree-icon-exit 0.35s cubic-bezier(0.18, 0.89, 0.32, 1.8);
+    animation-delay: calc((sibling-count() - sibling-index()) * 0.02s);
+    transform-origin: right;
+    animation-fill-mode: both;
+}
+@keyframes neo-filetree-icon-entrance {
+    from {
+        transform: scale(0.75);
+        opacity: 1;
+    }
+    to {
         transform: scale(1);
+    }
+}
+@keyframes neo-filetree-icon-exit {
+    from {
+        transform: scale(1);
+        opacity: 1;
+    }
+    to {
+        transform: scale(0.75);
+        opacity: 0;
     }
 }
