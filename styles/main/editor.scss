@@ -97,6 +97,7 @@
 // protyle-icons
 .protyle-icons,
 .av__gallery-actions {
+    max-width: max-content;
     transition: var(--b3-transition);
     @include superellipse($layout-border-radius);
     box-shadow: var(--neo-main-shadow);
@@ -108,6 +109,15 @@
             color: var(--b3-theme-on-background);
         }
     }
+}
+.av__gallery-item:hover .av__gallery-actions,
+.protyle-wysiwyg[data-readonly=false] .img:hover .protyle-icons,
+.protyle-wysiwyg [data-node-id].render-node:hover > .protyle-icons,
+.b3-typography .code-block:not(pre):hover .protyle-icon,
+.b3-typography .code-block:not(pre):hover .protyle-action__language,
+.protyle-wysiwyg .code-block:not(pre):hover .protyle-icon,
+.protyle-wysiwyg .code-block:not(pre):hover .protyle-action__language {
+    opacity: 1;
 }
 .protyle-background__img .protyle-icons {
     .protyle-icon {

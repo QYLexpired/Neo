@@ -217,6 +217,9 @@
     .item__main  {
         background-color: transparent;
     }
+    .item__side {
+        background-color: oklch(from var(--b3-theme-surface) l c h / 0.7);
+    }
 }
 [data-name=bazaar] {
     .config-bazaar__panel {
@@ -246,4 +249,11 @@
     .config-account__info {
         background-color: transparent;
     }
+}
+// actions
+.protyle-icons,
+.av__gallery-actions,
+.b3-typography .code-block:not(pre) .protyle-action .protyle-icon,
+.protyle-wysiwyg .code-block:not(pre) .protyle-action .protyle-icon {
+    @include frostedglass($blur: s, $color: transparent);
 }

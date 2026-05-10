@@ -30,14 +30,26 @@
     & > .b3-menu__action {
         @include color-reverse(--b3-theme-primary);
     }
-    .b3-switch {
-        outline: 1px solid oklch(from var(--b3-theme-primary) clamp(0, calc((0.72 - l) * 10000), 1) 0 0 / 0.7);
-        transition: none;
+    & > .b3-menu__label {
+        .b3-switch {
+            outline: 1px solid oklch(from var(--b3-theme-primary) clamp(0, calc((0.72 - l) * 10000), 1) 0 0 / 0.7);
+            transition: none;
+        }
+        .b3-text-field {
+            box-shadow: 0 0 0 2px oklch(from var(--b3-theme-primary) clamp(0, calc((0.72 - l) * 10000), 1) 0 0 / 0.5) !important;
+            @include color-reverse(--b3-theme-primary);
+        }
+    }
+}
+@mixin menu-item-origin {
+    .b3-text-field {
+        margin: 4px 0;
     }
 }
 .b3-menu__item {
     line-height: 24px;
     @include superellipse(6px);
+    @include menu-item-origin;
     &.b3-menu__item--current:not(.b3-menu__item--readonly),
     &.pdf__util__hide:hover {
         @include menu-item-current;

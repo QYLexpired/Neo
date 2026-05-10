@@ -1,12 +1,32 @@
 @use "components" as *;
 @use "../tools" as *;
-.av__cell [data-type=block-more] {
+.av__views .b3-text-field {
+    padding-left: 4px !important;
+    padding-right: 4px !important;
+}
+.av__cell [data-type=block-more],
+.b3-button[data-type="av-add-bottom"] {
     @include button-transparent-outline;
     @include frostedglass($blur: s, $color: background);
 }
 .av__gallery-item {
-    box-shadow: 0 0 0 1px var(--b3-border-color-trans);
+    box-shadow: var(--neo-main-shadow);
     @include superellipse(10px);
+    &::before {
+        background-color: transparent;
+    }
+    &:hover:not(.av__gallery-item--select) {
+        &::before {
+            background-color: transparent;
+        }
+    }
+}
+.av__gallery-fields:hover .b3-chip[data-type=block-more] {
+    right: 56px;
+}
+.av__gallery-actions {
+    right: 4px;
+    top: 4px;
 }
 .av__gallery-add {
     box-shadow: 0 0 0 1px var(--b3-border-color-trans);

@@ -5,26 +5,6 @@
     border: unset;
     box-shadow: unset;
     @include superellipse(12px);
-    .b3-dialog__header,
-    .search__header,
-    .search__tip,
-    .history__action,
-    .switch-doc .b3-list:last-child,
-    .switch-doc__path,
-    .history__resize,
-    .b3-dialog__action,
-    .block__icons,
-    .config__side,
-    .b3-label,
-    .search__layout--row,
-    .block__edit,
-    .config__side {
-        --b3-border-color: var(--b3-border-color-trans) !important;
-        border-color: var(--b3-border-color-trans) !important;
-    }
-    .search__drag::after {
-        background-color: var(--b3-border-color-trans) !important;
-    }
 }
 .b3-dialog__close {
     display: none;
@@ -35,6 +15,28 @@
 }
 .b3-dialog__action {
     border: unset;
+}
+// border-color
+.b3-dialog__header,
+.search__header,
+.search__tip,
+.history__action,
+.switch-doc .b3-list:last-child,
+.switch-doc__path,
+.history__resize,
+.b3-dialog__action,
+.block__icons,
+.config__side,
+.b3-label,
+.search__layout--row,
+.block__edit,
+.config__side,
+.search__list {
+    --b3-border-color: var(--b3-border-color-trans) !important;
+    border-color: var(--b3-border-color-trans) !important;
+}
+.search__drag::after {
+    background-color: var(--b3-border-color-trans) !important;
 }
 // settings
 .config__tab-container .b3-label:not(.b3-label--inner).config__item {
@@ -57,7 +59,7 @@
 .config__side,
 .b3-dialog__container .config__panel .b3-tab-bar {
     @include superellipse(12px);
-    margin: $layout-gap;
+    margin: $layout-gap 0 $layout-gap $layout-gap;
     padding: 8px 0;
     border: unset;
 }
@@ -94,13 +96,17 @@
 #configBazaarReadme {
     padding: unset;
     .item__side {
-        padding: 16px;
-        border-right: 1px solid var(--b3-border-color-trans);
+        padding: $layout-gap;
+        margin: $layout-gap 0 $layout-gap $layout-gap;
+        height: calc(100% - $layout-gap * 4);
+        @include superellipse(12px);
     }
     .item__main {
         margin: 0;
         .item__preview {
-            border-radius: 0;
+            margin: $layout-gap $layout-gap 0 $layout-gap;
+            width: calc(100% - $layout-gap * 2);
+            @include superellipse(12px);
         }
         .b3-typography {
             padding: 0 64px;
