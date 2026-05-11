@@ -4,7 +4,7 @@
 .b3-dialog__container {
     border: unset;
     box-shadow: unset;
-    @include superellipse(12px);
+    @include superellipse(16px);
 }
 .b3-dialog__close {
     display: none;
@@ -53,7 +53,7 @@
     padding: 32px 64px 0 64px;
 }
 .config__tab-container .config-group {
-    @include superellipse(12px);
+    @include superellipse(16px);
     margin: 16px 64px 0 64px;
 }
 .config__side,
@@ -118,8 +118,11 @@
         transition: var(--b3-transition);
         &:hover,
         &.b3-card--current {
-            box-shadow: inset 0 0 0 1px oklch(from var(--b3-theme-primary) l c h / 0.25);
-            background-color: oklch(from var(--b3-theme-primary) l c h / 0.08);
+            box-shadow: inset 0 0 0 1px oklch(from var(--neo-input-primary) l c h / 0.25);
+            background-color: oklch(from var(--neo-input-primary) l c h / 0.08);
+        }
+        &:hover {
+            scale: 1.02;
         }
         .b3-card__img img {
             @include superellipse(12px);
@@ -134,7 +137,7 @@
         height: calc(100% - $layout-gap * 4);
         @include superellipse(12px);
         .item__img {
-            @include superellipse(12px);
+            @include superellipse(16px);
         }
     }
     .item__main {

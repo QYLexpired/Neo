@@ -2,18 +2,14 @@
     #{$property}: oklch(from var(#{$css-var}) clamp(0, calc((0.72 - l) * 10000), 1) 0 0);
 }
 [data-theme-mode="light"] {
-    // 自定义主题色
-    --neo-custom-primary: unset;
-    --neo-custom-saturation: 1;
-    --neo-custom-background: oklch(from var(--neo-custom-primary) 0.99 calc(0.005 * var(--neo-custom-saturation)) h);
-    --neo-custom-surface: oklch(from var(--neo-custom-primary) 0.97 calc(0.015 * var(--neo-custom-saturation)) h);
-    --neo-custom-on-background: oklch(from var(--neo-custom-primary) 0.35 calc(0.045 * var(--neo-custom-saturation)) h);
     // 主题色
-    --b3-theme-primary: var(--neo-custom-primary, #6a85e3);
-    --b3-theme-accent: oklch(from var(--b3-theme-primary) 0.7 clamp(0.1, c, 1) h);
-    --b3-theme-background: var(--neo-custom-background, #ffffff);
-    --b3-theme-surface: var(--neo-custom-surface, #f1f2ff);
-    --b3-theme-on-background: var(--neo-custom-on-background, #192945);
+    --b3-base-color: #6a85e3;
+    --b3-base-saturation: unset;
+    --b3-theme-primary: oklch(from var(--b3-base-color) 0.68 c h);
+    --b3-theme-accent: oklch(from var(--b3-theme-primary) l 0.2 h);
+    --b3-theme-background: oklch(from var(--b3-theme-primary) 0.99 calc(0.005 * var(--b3-base-saturation, 1)) h);
+    --b3-theme-surface: oklch(from var(--b3-theme-primary) 0.96 calc(0.015 * var(--b3-base-saturation, 1)) h);
+    --b3-theme-on-background: oklch(from var(--b3-theme-primary) 0.35 calc(0.045 * var(--b3-base-saturation, 1)) h);
     --b3-theme-on-surface: oklch(from var(--b3-theme-on-background) l c h / 0.65);
     // inherit
     --b3-theme-primary-light: oklch(from var(--b3-theme-primary) l c h / 0.56);
@@ -38,23 +34,19 @@
     --b3-empty-color: oklch(from var(--b3-theme-on-background) l c h / 0.45);
     // other
     --b3-theme-error: #ff2a2a;
-    --b3-highlight-background: oklch(from var(--b3-theme-primary) clamp(0.68, l, 1) clamp(0.5, c, 1) h);
-    --b3-highlight-current-background: oklch(from var(--b3-theme-primary) clamp(0.68, l, 1) clamp(0.5, c, 1) calc(h + 10));
+    --b3-highlight-background: oklch(from var(--b3-base-color) clamp(0.68, l, 1) clamp(0.5, c, 1) h);
+    --b3-highlight-current-background: oklch(from var(--b3-base-color) clamp(0.68, l, 1) clamp(0.5, c, 1) calc(h + 10));
     --b3-highlight-color: oklch(from var(--b3-highlight-background) clamp(0, calc((0.72 - l) * 10000), 1) 0 0);
 }
 [data-theme-mode="dark"] {
-    // 自定义主题色
-    --neo-custom-primary: unset;
-    --neo-custom-saturation: 1;
-    --neo-custom-background: oklch(from var(--neo-custom-primary) 0.25 calc(0.012 * var(--neo-custom-saturation)) h);
-    --neo-custom-surface: oklch(from var(--neo-custom-primary) 0.18 calc(0.008 * var(--neo-custom-saturation)) h);
-    --neo-custom-on-background: oklch(from var(--neo-custom-primary) 0.95 calc(0.008 * var(--neo-custom-saturation)) h);
     // 主题色
-    --b3-theme-primary: var(--neo-custom-primary, #636de1);
-    --b3-theme-accent: oklch(from var(--b3-theme-primary) 0.74 clamp(0.1, c, 1) h);
-    --b3-theme-background: var(--neo-custom-background, #282c34);
-    --b3-theme-surface: var(--neo-custom-surface, #1e2227);
-    --b3-theme-on-background: var(--neo-custom-on-background, #d7dae0);
+    --b3-base-color: #636de1;
+    --b3-base-saturation: unset;
+    --b3-theme-primary: oklch(from var(--b3-base-color) 0.66 c h);
+    --b3-theme-accent: oklch(from var(--b3-theme-primary) l 0.2 h);
+    --b3-theme-background: oklch(from var(--b3-theme-primary) 0.25 calc(0.012 * var(--b3-base-saturation, 1)) h);
+    --b3-theme-surface: oklch(from var(--b3-theme-primary) 0.2 calc(0.008 * var(--b3-base-saturation, 1)) h);
+    --b3-theme-on-background: oklch(from var(--b3-theme-primary) 0.95 calc(0.008 * var(--b3-base-saturation, 1)) h);
     --b3-theme-on-surface: oklch(from var(--b3-theme-on-background) l c h / 0.65);
     // inherit
     --b3-theme-primary-light: oklch(from var(--b3-theme-primary) l c h / 0.56);
@@ -79,7 +71,7 @@
     --b3-empty-color: oklch(from var(--b3-theme-on-background) l c h / 0.45);
     // other
     --b3-theme-error: #d22727;
-    --b3-highlight-background: oklch(from var(--b3-theme-primary) clamp(0.68, l, 1) clamp(0.5, c, 1) h);
-    --b3-highlight-current-background: oklch(from var(--b3-theme-primary) clamp(0.68, l, 1) clamp(0.5, c, 1) calc(h + 10));
+    --b3-highlight-background: oklch(from var(--b3-base-color) clamp(0.66, l, 1) clamp(0.5, c, 1) h);
+    --b3-highlight-current-background: oklch(from var(--b3-base-color) clamp(0.66, l, 1) clamp(0.5, c, 1) calc(h + 10));
     --b3-highlight-color: oklch(from var(--b3-highlight-background) clamp(0, calc((0.72 - l) * 10000), 1) 0 0);
 }

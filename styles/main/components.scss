@@ -1,16 +1,26 @@
 @use "../tools" as *;
 @use "../utils" as *;
 // button
+:root {
+    --neo-button-primary: oklch(from var(--b3-base-color) clamp(0, l, 0.95) c h);
+    --neo-switch-primary: oklch(from var(--b3-base-color) clamp(0, l, 0.9) c h);
+    --neo-input-primary: oklch(from var(--b3-base-color) clamp(0, l, 0.8) c h);
+    &[data-theme-mode="dark"] {
+        --neo-button-primary: oklch(from var(--b3-base-color) clamp(0.4, l, 1) c h);
+        --neo-switch-primary: oklch(from var(--b3-base-color) clamp(0.38, l, 78) c h);
+        --neo-input-primary: oklch(from var(--b3-base-color) clamp(0.4, l, 1) c h);
+    }
+}
 @mixin button-primary {
-    background-color: var(--b3-theme-primary);
-    @include color-reverse(--b3-theme-primary);
+    background-color: var(--neo-button-primary);
+    @include color-reverse(--neo-button-primary);
     box-shadow: none;
     transition: var(--b3-transition);
     &:hover,
     &:active,
     &:focus {
-        background-color: oklch(from var(--b3-theme-primary) calc(l + 0.1) c h);
-        @include color-reverse(--b3-theme-primary);
+        background-color: oklch(from var(--neo-button-primary) calc(l + (0.08 * sign(0.4999999 - l))) c h);
+        @include color-reverse(--neo-button-primary);
         box-shadow: none;
     }
 }
@@ -98,7 +108,7 @@
             }
         }
         &:not(.b3-button--outline) {
-            color: var(--b3-theme-primary);
+            color: var(--b3-theme-accent);
             background-color: transparent;
             &:hover,
             &:active,
@@ -181,7 +191,6 @@ $toggle-thumb-height: 13px;
 $toggle-thumb-width: 21px;
 $toggle-width: 36px;
 .b3-switch {
-    --neo-switch-fix: oklch(from var(--b3-theme-primary) clamp(0, l, 0.82) c h);
     width: $toggle-width;
     height: calc($toggle-thumb-height + $toggle-border-width * 2);
     border-radius: 24px;
@@ -199,11 +208,8 @@ $toggle-width: 36px;
         left: $toggle-border-width;
         background-color: #ffffff;
     }
-    &:is([data-theme-mode="dark"] .b3-switch) {
-        --neo-switch-fix: oklch(from var(--b3-theme-primary) clamp(0.48, l, 0.72) c h);
-    }
     &:checked {
-        background-color: var(--neo-switch-fix);
+        background-color: var(--neo-switch-primary);
         &::after {
             width: $toggle-thumb-width !important;
             height: $toggle-thumb-height !important;
@@ -233,7 +239,7 @@ $toggle-width: 36px;
     }
     &:focus {
         background-color: var(--b3-theme-background);
-        box-shadow: 0 0 0 2px oklch(from var(--b3-theme-primary) l c h / 0.5);
+        box-shadow: 0 0 0 2px var(--neo-input-primary);
     }
     &.fn__block,
     &.fn__flex-shrink {
@@ -265,7 +271,7 @@ $toggle-width: 36px;
         box-shadow: unset !important;
     }
     &:focus {
-        box-shadow: 0 0 0 2px oklch(from var(--b3-theme-primary) l c h / 0.5) !important;
+        box-shadow: 0 0 0 2px var(--neo-input-primary) !important;
     }
     &.fn__block,
     &.fn__flex-shrink,

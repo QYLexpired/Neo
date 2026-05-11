@@ -15,7 +15,7 @@
             @include superellipse(8px);
             margin-top: 0.8em;
             margin-bottom: 0.2em;
-            color: var(--b3-theme-accent);
+            color: var(--b3-theme-primary);
             &[fold="1"] {
                 outline: 1px solid var(--b3-border-color-trans);
                 background-color: oklch(from var(--b3-theme-surface) l c h / 0.7);
@@ -32,14 +32,14 @@
     }
 }
 .protyle-title__input {
-    color: var(--b3-theme-accent);
+    color: var(--b3-theme-primary);
 }
 // block ref
 .protyle-wysiwyg [data-node-id] span[data-type~=block-ref]:not(.av__celltext),
 .protyle-wysiwyg [data-node-id] span[data-type~=file-annotation-ref] {
     color: inherit;
     background-image: repeating-linear-gradient(90deg, var(--b3-theme-accent) 0px, var(--b3-theme-accent) 3px, transparent 3px, transparent 6px);
-    background-size: 8px 1.5px;
+    background-size: 8px 1px;
     background-position: 0 100%;
     background-repeat: repeat-x;
     padding-bottom: 2px;
@@ -51,8 +51,8 @@
 .protyle-wysiwyg [data-node-id] span[data-type~=a] {
     color: inherit;
     text-decoration: none;
-    background-image: linear-gradient(90deg, var(--b3-theme-accent) 0%, var(--b3-theme-accent) 40%, oklch(from var(--b3-theme-accent) l c calc(h + 30)) 50%, oklch(from var(--b3-theme-accent) l c calc(h - 30)) 60%, var(--b3-theme-accent) 100%);
-    background-size: 300% 1.5px;
+    background-image: linear-gradient(90deg, var(--b3-theme-accent) 0%, var(--b3-theme-accent) 40%, oklch(from var(--b3-theme-accent) l c calc(h + 10)) 50%, oklch(from var(--b3-theme-accent) l c calc(h - 10)) 60%, var(--b3-theme-accent) 100%);
+    background-size: 300% 1px;
     background-position: 0% 100%;
     background-repeat: repeat-x;
     padding-bottom: 2px;
