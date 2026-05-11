@@ -2,7 +2,7 @@
 @use "../utils" as *;
 // button
 :root {
-    --neo-button-primary: oklch(from var(--b3-base-color) clamp(0, l, 0.95) c h);
+    --neo-button-primary: oklch(from var(--b3-base-color) clamp(0, l, 0.92) c h);
     --neo-switch-primary: oklch(from var(--b3-base-color) clamp(0, l, 0.9) c h);
     --neo-input-primary: oklch(from var(--b3-base-color) clamp(0, l, 0.8) c h);
     &[data-theme-mode="dark"] {
@@ -19,8 +19,9 @@
     &:hover,
     &:active,
     &:focus {
-        background-color: oklch(from var(--neo-button-primary) calc(l + (0.08 * sign(0.4999999 - l))) c h);
-        @include color-reverse(--neo-button-primary);
+        --neo-button-primary-hover: oklch(from var(--neo-button-primary) calc(l + (0.05 * sign(0.4999999 - l))) c h);
+        background-color: var(--neo-button-primary-hover);
+        @include color-reverse(--neo-button-primary-hover);
         box-shadow: none;
     }
 }
@@ -52,14 +53,15 @@
 }
 @mixin button-warning {
     background-color: var(--b3-theme-error);
-    color: var(--b3-theme-on-primary);
+    @include color-reverse(--b3-theme-error);
     box-shadow: none;
     transition: var(--b3-transition);
     &:hover,
     &:active,
     &:focus {
-        background-color: oklch(from var(--b3-theme-error) calc(l + 0.1) c h);
-        color: var(--b3-theme-on-primary);
+        --neo-button-warning-hover: oklch(from var(--b3-theme-error) calc(l + (0.05 * sign(0.4999999 - l))) c h);
+        background-color: var(--neo-button-warning-hover);
+        @include color-reverse(--neo-button-warning-hover);
         box-shadow: none;
     }
 }
