@@ -60,14 +60,66 @@
 // dock
 #dockLeft,
 #dockRight {
-    transition: width 0.3s cubic-bezier(0.55, 0.06, 0.68, 0.19), display 0.3s cubic-bezier(0.55, 0.06, 0.68, 0.19);
+    transition: display 0.3s cubic-bezier(0.55, 0.06, 0.68, 0.19);
     transition-behavior: allow-discrete;
     width: 42px;
-    @starting-style {
-        width: 0px;
+}
+#dockLeft {
+    &:not(.fn__none) {
+        animation: neo-dockLeft-expand 0.3s cubic-bezier(0.55, 0.06, 0.68, 0.19);
     }
+    
     &.fn__none {
+        animation: neo-dockLeft-collapse 0.3s cubic-bezier(0.55, 0.06, 0.68, 0.19);
+    }
+}
+#dockRight {
+    &:not(.fn__none) {
+        animation: neo-dockRight-expand 0.3s cubic-bezier(0.55, 0.06, 0.68, 0.19);
+    }
+    
+    &.fn__none {
+        animation: neo-dockRight-collapse 0.3s cubic-bezier(0.55, 0.06, 0.68, 0.19);
+    }
+}
+@keyframes neo-dockLeft-expand {
+    from {
         width: 0px;
+        margin-right: var(--b3-layout-space);
+    }
+    to {
+        width: 42px;
+        margin-right: calc(var(--b3-layout-space) / -2);
+    }
+}
+@keyframes neo-dockLeft-collapse {
+    from {
+        width: 42px;
+        margin-right: calc(var(--b3-layout-space) * -1.5);
+    }
+    to {
+        width: 0px;
+        margin-right: 0;
+    }
+}
+@keyframes neo-dockRight-expand {
+    from {
+        width: 0px;
+        margin-left: var(--b3-layout-space);
+    }
+    to {
+        width: 42px;
+        margin-left: calc(var(--b3-layout-space) / -2);
+    }
+}
+@keyframes neo-dockRight-collapse {
+    from {
+        width: 42px;
+        margin-left: calc(var(--b3-layout-space) * -1.5);
+    }
+    to {
+        width: 0px;
+        margin-left: 0;
     }
 }
 .layout__dockl,
@@ -316,14 +368,17 @@ $header-parallax: 5vh;
     }
 }
 // block reveal
-.protyle-wysiwyg > [data-node-id] {
-    animation: neo-block-reveal linear both;
+.protyle-wysiwyg [data-node-id],
+.protyle-title,
+.protyle-background__ia,
+.protyle-background__icon {
+    animation: neo-block-reveal cubic-bezier(0.46, 0.03, 0.52, 0.96) both;
     animation-timeline: view(block);
 }
 @keyframes neo-block-reveal {
     0% {
         opacity: 0;
-        transform: translateY(20px);
+        transform: translateY(15px);
         filter: blur(2px);
     }
     10% {
@@ -338,7 +393,7 @@ $header-parallax: 5vh;
     }
     100% {
         opacity: 0;
-        transform: translateY(-20px);
+        transform: translateY(-15px);
         filter: blur(2px);
     }
 }

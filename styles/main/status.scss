@@ -7,13 +7,18 @@
     position: absolute;
     bottom: calc(anchor(--anchor-layout-center bottom) + $layout-gap);
     right: calc(anchor(--anchor-layout-center right) + $layout-gap);
-    @include superellipse($layout-border-radius);
+    @include superellipse(24px);
     box-shadow: var(--neo-main-shadow);
-    height: 28px;
-    line-height: 28px;
+    height: 26px;
+    line-height: 26px;
     border: unset;
     padding: 0 2px;
     overflow: hidden;
     z-index: 3;
     max-width: max(anchor-size(--anchor-layout-center) - 16px, 200px);
+    .toolbar__item {
+        &:hover {
+            box-shadow: none;
+        }
+    }
 }

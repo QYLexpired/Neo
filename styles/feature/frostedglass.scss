@@ -10,7 +10,7 @@
 }
 // status
 .status {
-    @include frostedglass($blur: s, $color: background);
+    @include frostedglass($blur: s, $color: menu);
 }
 // menu
 .b3-menu,
