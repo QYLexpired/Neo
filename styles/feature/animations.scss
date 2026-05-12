@@ -194,18 +194,6 @@ input[type="radio" i] {
         background-position: -100% 100%;
     }
 }
-// list mark
-.b3-list mark {  
-    animation: neo-listmark-flow 5s linear infinite;
-}
-@keyframes neo-listmark-flow {
-    0% { 
-        background-position: 0% 50%; 
-    }
-    100% { 
-        background-position: 100% 50%; 
-    }
-}
 // title
 .protyle-title__input {
     padding-left: 0.8em;
