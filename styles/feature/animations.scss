@@ -369,9 +369,7 @@ $header-parallax: 5vh;
 }
 // block reveal
 .protyle-wysiwyg [data-node-id],
-.protyle-title,
-.protyle-background__ia,
-.protyle-background__icon {
+.protyle-title {
     animation: neo-block-reveal cubic-bezier(0.46, 0.03, 0.52, 0.96) both;
     animation-timeline: view(block);
 }
