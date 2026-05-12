@@ -204,9 +204,6 @@
 }
 // list-mark
 .b3-list mark {
-    background-color: unset;
-    color: transparent;
-    background-image: linear-gradient(90deg, var(--b3-theme-accent), oklch(from var(--b3-theme-accent) l c calc(h + 30)), var(--b3-theme-accent));
-    background-size: 500% 100%;
-    background-clip: text;
+    color: var(--b3-highlight-color);
+    background-color: var(--b3-highlight-background);
 }

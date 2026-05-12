@@ -5,7 +5,7 @@
     // 主题色
     --b3-base-color: #6a85e3;
     --b3-base-saturation: unset;
-    --b3-theme-primary: oklch(from var(--b3-base-color) clamp(0.55, l, 0.78) c h);
+    --b3-theme-primary: oklch(from var(--b3-base-color) clamp(0.55, l, 0.75) c h);
     --b3-theme-accent: oklch(from var(--b3-theme-primary) l max(c, 0.2) h);
     --b3-theme-background: oklch(from var(--b3-theme-primary) 0.99 calc(0.005 * var(--b3-base-saturation, 1)) h);
     --b3-theme-surface: oklch(from var(--b3-theme-primary) 0.96 calc(0.015 * var(--b3-base-saturation, 1)) h);

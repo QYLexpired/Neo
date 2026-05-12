@@ -64,6 +64,9 @@
         color: var(--b3-theme-on-background);
     }
 }
+[data-subtype="unlock"] {
+    color: var(--b3-theme-accent) !important;
+}
 // protyle-background
 .protyle-background__action {
     .b3-button {
@@ -158,4 +161,27 @@
         color: var(--b3-theme-accent);
         background-color: oklch(from currentColor l c h / 0.1);
     }
+}
+// layout__empty
+.layout__empty {
+    .b3-list-item {
+        transition: var(--b3-transition);
+    }
+}
+// protyle-scroll
+.protyle-scroll__up {
+    top: calc(50% - var(--b3-dynamicscroll-width)/2 - 30px)
+}
+.protyle-scroll__down,
+.protyle-scroll__up {
+    right: 0;
+}
+.protyle-scroll svg {
+    width: 18px;
+    height: 18px;
+}
+// def--mark
+.protyle-wysiwyg [data-node-id] .def--mark {
+    color: var(--b3-highlight-color) !important;
+    background-color: var(--b3-highlight-background) !important;
 }

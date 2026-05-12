@@ -3,6 +3,7 @@
 .dock__item {
     transition: var(--b3-transition);
     @include icon;
+    @include superellipse(6px);
 }
 .dock__item--active,
 .dock__item--activefocus {

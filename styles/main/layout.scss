@@ -21,8 +21,7 @@ body {
     .fn__flex:has( > [data-type="wnd"]) {
         padding: calc($layout-gap / 2);
         [data-type="wnd"] {
-            corner-shape: superellipse(1.4);
-            border-radius: calc(8px * 1.4);
+            @include superellipse(8px);
             box-shadow: var(--neo-main-shadow);
         }
     }
@@ -34,8 +33,7 @@ body {
     .fn__flex:has( > [data-type="wnd"]) {
         padding: calc($layout-gap / 2);
         [data-type="wnd"] {
-            corner-shape: superellipse(1.4);
-            border-radius: calc(8px * 1.4);
+            @include superellipse(8px);
             box-shadow: var(--neo-main-shadow);
             background-color: var(--b3-theme-background);
             & > .layout-tab-container {
@@ -156,8 +154,7 @@ body {
                     margin-top: calc($layout-gap * -1);
                 }
                 & > .layout-tab-container {
-                    corner-shape: superellipse(1.4);
-                    border-radius: calc(8px * 1.4);
+                    @include superellipse(8px);
                     box-shadow: var(--neo-main-shadow);
                 }
                 .layout-tab-bar {

@@ -95,6 +95,13 @@ body:not(.body--toolbar-hide) [data-type="wnd"] > .fn__flex:first-child {
                 transition: var(--b3-transition);
             }
         }
+        &:empty {
+            & + .layout-tab-bar--readonly {
+                .block__icon {
+                    display: none;
+                }
+            }
+        }
     }
     &--readonly {
         margin-left: unset;

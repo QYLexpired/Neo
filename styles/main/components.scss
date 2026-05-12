@@ -19,7 +19,7 @@
     &:hover,
     &:active,
     &:focus {
-        --neo-button-primary-hover: oklch(from var(--neo-button-primary) calc(l + (0.05 * sign(0.4999999 - l))) c h);
+        --neo-button-primary-hover: oklch(from var(--neo-button-primary) calc(l + 0.0225 + 0.0575 * sign(0.680000001 - l)) c h);
         background-color: var(--neo-button-primary-hover);
         @include color-reverse(--neo-button-primary-hover);
         box-shadow: none;
