@@ -86,7 +86,8 @@
         @include button-transparent-outline;
     }
     &--remove,
-    &#removeAll {
+    &#removeAll,
+    &#removeAVAll {
         padding: 4px 12px;
         line-height: 16px;
         @include button-warning;
@@ -256,7 +257,8 @@ $toggle-width: 36px;
 .b3-form__icon.fn__flex-1,
 .b3-form__icona,
 .label:has( > .b3-text-field),
-.b3-label__text:has( > .b3-text-field) {
+.b3-label__text:has( > .b3-text-field),
+.custom-attr .block__icons .fn__flex-1:has( > .b3-text-field) {
     overflow: visible !important;
 }
 .b3-text-field {

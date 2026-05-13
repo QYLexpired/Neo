@@ -361,13 +361,15 @@ $header-parallax: 5vh;
         opacity: 0;
     }
 }
-// block reveal
+// content scroll reveal
 .protyle-wysiwyg [data-node-id],
-.protyle-title {
-    animation: neo-block-reveal cubic-bezier(0.46, 0.03, 0.52, 0.96) both;
+.protyle-title,
+.config-bazaar__panel .b3-card,
+.config-group > .b3-label {
+    animation: neo-content-scroll-reveal cubic-bezier(0.46, 0.03, 0.52, 0.96) both;
     animation-timeline: view(block);
 }
-@keyframes neo-block-reveal {
+@keyframes neo-content-scroll-reveal {
     0% {
         opacity: 0;
         transform: translateY(15px);

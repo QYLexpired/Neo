@@ -40,6 +40,14 @@
     & > .b3-menu__action {
         @include color-reverse(--neo-menu-item-primary);
     }
+    & > .b3-switch {
+        outline: 1px solid oklch(from var(--neo-menu-item-primary) clamp(0, calc((0.72 - l) * 10000), 1) 0 0 / 0.7);
+        transition: none;
+    }
+    & > .b3-text-field {
+        box-shadow: 0 0 0 2px oklch(from var(--neo-menu-item-primary) clamp(0, calc((0.72 - l) * 10000), 1) 0 0 / 0.5) !important;
+        @include color-reverse(--neo-menu-item-primary);
+    }
     & > .b3-menu__label {
         .b3-switch {
             outline: 1px solid oklch(from var(--neo-menu-item-primary) clamp(0, calc((0.72 - l) * 10000), 1) 0 0 / 0.7);

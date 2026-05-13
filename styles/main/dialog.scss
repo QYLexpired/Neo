@@ -261,3 +261,30 @@
 .layout__center .card__main {
     background-color: transparent;
 }
+// attr
+.custom-attr__avheader .block__logo {
+    color: var(--b3-theme-accent);
+}
+.custom-attr .b3-button[data-type=addColumn] {
+    @include button-transparent-outline;
+}
+.custom-attr__avvalue,
+.custom-attr .block__logo:not(.popover__block) {
+    transition: var(--b3-transition);
+}
+.custom-attr .block__logo:not(.popover__block):hover,
+.custom-attr__avvalue:not(.custom-attr__avvalue--readonly):hover,
+.custom-attr__avvalue--active {
+    background-color: var(--b3-list-hover);
+}
+.av__mask .b3-text-field,
+.block__icons .b3-text-field {
+    background-color: transparent;
+    transition: var(--b3-transition);
+    &:hover {
+        background-color: var(--b3-list-hover);
+    }
+    &:focus {
+        background-color: var(--b3-list-hover);
+    }
+}
