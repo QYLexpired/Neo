@@ -60,26 +60,24 @@
 // dock
 #dockLeft,
 #dockRight {
-    transition: display 0.3s cubic-bezier(0.55, 0.06, 0.68, 0.19);
+    transition: display 0.2s cubic-bezier(0.39, 0.29, 0.77, 0.05);
     transition-behavior: allow-discrete;
     width: 42px;
 }
 #dockLeft {
     &:not(.fn__none) {
-        animation: neo-dockLeft-expand 0.3s cubic-bezier(0.55, 0.06, 0.68, 0.19);
+        animation: neo-dockLeft-expand 0.2s cubic-bezier(0.39, 0.29, 0.77, 0.05);
     }
-    
     &.fn__none {
-        animation: neo-dockLeft-collapse 0.3s cubic-bezier(0.55, 0.06, 0.68, 0.19);
+        animation: neo-dockLeft-collapse 0.2s cubic-bezier(0.39, 0.29, 0.77, 0.05);
     }
 }
 #dockRight {
     &:not(.fn__none) {
-        animation: neo-dockRight-expand 0.3s cubic-bezier(0.55, 0.06, 0.68, 0.19);
+        animation: neo-dockRight-expand 0.2s cubic-bezier(0.39, 0.29, 0.77, 0.05);
     }
-    
     &.fn__none {
-        animation: neo-dockRight-collapse 0.3s cubic-bezier(0.55, 0.06, 0.68, 0.19);
+        animation: neo-dockRight-collapse 0.2s cubic-bezier(0.39, 0.29, 0.77, 0.05);
     }
 }
 @keyframes neo-dockLeft-expand {
@@ -124,10 +122,10 @@
 }
 .layout__dockl,
 .layout__dockr {
-    transition: width 0.3s cubic-bezier(0.55, 0.06, 0.68, 0.19);
+    transition: width 0.2s cubic-bezier(0.39, 0.29, 0.77, 0.05);
     will-change: width;
     & > .fn__flex {
-        transition: width 0.3s cubic-bezier(0.55, 0.06, 0.68, 0.19), display 0.3s cubic-bezier(0.55, 0.06, 0.68, 0.19);
+        transition: width 0.2s cubic-bezier(0.39, 0.29, 0.77, 0.05), display 0.2s cubic-bezier(0.39, 0.29, 0.77, 0.05);
         transition-behavior: allow-discrete;
         & > .fn__none {
             width: 0;
@@ -135,10 +133,10 @@
     }
 }
 .layout__dockb {
-    transition: height 0.3s cubic-bezier(0.55, 0.06, 0.68, 0.19);
+    transition: height 0.2s cubic-bezier(0.39, 0.29, 0.77, 0.05);
     will-change: height;
     & > .fn__flex {
-        transition: height 0.3s cubic-bezier(0.55, 0.06, 0.68, 0.19), display 0.3s cubic-bezier(0.55, 0.06, 0.68, 0.19);
+        transition: height 0.2s cubic-bezier(0.39, 0.29, 0.77, 0.05), display 0.2s cubic-bezier(0.39, 0.29, 0.77, 0.05);
         transition-behavior: allow-discrete;
         & > .fn__none {
             height: 0;
@@ -306,19 +304,15 @@ input[type="radio" i] {
     }
 }
 // filetree icon
-.file-tree:hover .block__icons:not(:hover) .block__icon,
-.file-tree:hover:not(.fullscreen) .block__icons:not(:hover) .fn__space {
-    opacity: 0 !important;
-}
-.file-tree .block__icons:hover .block__icon,
-.file-tree:not(.fullscreen) .block__icons:hover .fn__space {
+.file-tree:hover .block__icons .block__icon,
+.file-tree:not(.fullscreen):hover .block__icons .fn__space {
     animation: neo-filetree-icon-entrance 0.25s cubic-bezier(0.18, 0.89, 0.32, 1.8);
     animation-delay: calc((sibling-index() - 1) * 0.02s);
     transform-origin: left;
     animation-fill-mode: both;
 }
-.file-tree .block__icons:not(:hover) .block__icon,
-.file-tree:not(.fullscreen) .block__icons:not(:hover) .fn__space {
+.file-tree:not(:hover) .block__icons .block__icon,
+.file-tree:not(.fullscreen):not(:hover) .block__icons .fn__space {
     opacity: 1;
     animation: neo-filetree-icon-exit 0.35s cubic-bezier(0.18, 0.89, 0.32, 1.8);
     animation-delay: calc((sibling-count() - sibling-index()) * 0.02s);
@@ -345,7 +339,7 @@ input[type="radio" i] {
     }
 }
 // parallax scrolling
-$header-height: 40vh;
+$header-height: 30vh;
 $header-parallax: 5vh;
 .protyle-content {
     scroll-timeline-name: --protyle-conten-scroll;

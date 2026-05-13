@@ -5,4 +5,4 @@ Neo is an ultra-minimalist theme for SiYuan Note that refines numerous details u
 - Immersive Visual Depth: Cinematic parallax effects for header images, delivering breathtaking visual tension.
 - Silky Reading Experience: Scroll-driven animations in the editor, providing an authentically tactile reading experience.
 - Meticulous Detail Craftsmanship: Smooth rounded corners applied globally, paired with fade-in effects to minimize visual fragmentation.
-> Heavily inspired by the Asri and Cupertino many, thanks to their creators.
+> Heavily inspired by the Asri, cupertino and Rem Craft many, thanks to their creators.

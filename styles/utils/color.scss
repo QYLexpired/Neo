@@ -2,15 +2,31 @@
     #{$property}: oklch(from var(#{$css-var}) clamp(0, calc((0.72 - l) * 10000), 1) 0 0);
 }
 [data-theme-mode="light"] {
-    // 主题色
-    --b3-base-color: #6a85e3;
-    --b3-base-saturation: unset;
-    --b3-theme-primary: oklch(from var(--b3-base-color) clamp(0.55, l, 0.75) c h);
-    --b3-theme-accent: oklch(from var(--b3-theme-primary) l max(c, 0.2) h);
-    --b3-theme-background: oklch(from var(--b3-theme-primary) 0.99 calc(0.005 * var(--b3-base-saturation, 1)) h);
-    --b3-theme-surface: oklch(from var(--b3-theme-primary) 0.96 calc(0.015 * var(--b3-base-saturation, 1)) h);
-    --b3-theme-on-background: oklch(from var(--b3-theme-primary) 0.35 calc(0.045 * var(--b3-base-saturation, 1)) h);
-    --b3-theme-on-surface: oklch(from var(--b3-theme-on-background) l c h / 0.65);
+    // 默认色
+    --neo-default-base-color: #6a85e3;
+    --neo-default-primary: #6a85e3;
+    --neo-default-accent: #6a85e3;
+    --neo-default-background: #ffffff;
+    --neo-default-surface: #f1f2ff;
+    --neo-default-on-background: #181051;
+    --neo-default-on-surface: #6b668d;
+    // 自定义色
+    --neo-custom-base-color: unset;
+    --neo-custom-saturation: unset;
+    --neo-custom-primary: oklch(from var(--neo-custom-base-color) clamp(0.55, l, 0.75) c h);
+    --neo-custom-accent: oklch(from var(--neo-custom-primary) l max(c, 0.2) h);
+    --neo-custom-background: oklch(from var(--neo-custom-primary) 0.99 calc(0.005 * var(--neo-custom-saturation, 1)) h);
+    --neo-custom-surface: oklch(from var(--neo-custom-primary) 0.96 calc(0.015 * var(--neo-custom-saturation, 1)) h);
+    --neo-custom-on-background: oklch(from var(--neo-custom-primary) 0.35 calc(0.045 * var(--neo-custom-saturation, 1)) h);
+    --neo-custom-on-surface: oklch(from var(--neo-custom-on-background) l c h / 0.65);
+    // 主要色
+    --b3-base-color: var(--neo-custom-base-color, var(--neo-default-base-color));
+    --b3-theme-primary: var(--neo-custom-primary, var(--neo-default-primary));
+    --b3-theme-accent: var(--neo-custom-accent, var(--neo-default-accent));
+    --b3-theme-background: var(--neo-custom-background, var(--neo-default-background));
+    --b3-theme-surface: var(--neo-custom-surface, var(--neo-default-surface));
+    --b3-theme-on-background: var(--neo-custom-on-background, var(--neo-default-on-background));
+    --b3-theme-on-surface: var(--neo-custom-on-surface, var(--neo-default-on-surface));
     // inherit
     --b3-theme-primary-light: oklch(from var(--b3-theme-primary) l c h / 0.56);
     --b3-theme-primary-lighter: oklch(from var(--b3-theme-primary) l c h / 0.38);
@@ -39,15 +55,31 @@
     --b3-highlight-color: oklch(from var(--b3-highlight-background) clamp(0, calc((0.72 - l) * 10000), 1) 0 0);
 }
 [data-theme-mode="dark"] {
-    // 主题色
-    --b3-base-color: #636de1;
-    --b3-base-saturation: unset;
-    --b3-theme-primary: oklch(from var(--b3-base-color) clamp(0.55, l, 0.95) c h);
-    --b3-theme-accent: oklch(from var(--b3-theme-primary) l max(c, 0.2) h);
-    --b3-theme-background: oklch(from var(--b3-theme-primary) 0.25 calc(0.012 * var(--b3-base-saturation, 1)) h);
-    --b3-theme-surface: oklch(from var(--b3-theme-primary) 0.2 calc(0.008 * var(--b3-base-saturation, 1)) h);
-    --b3-theme-on-background: oklch(from var(--b3-theme-primary) 0.95 calc(0.008 * var(--b3-base-saturation, 1)) h);
-    --b3-theme-on-surface: oklch(from var(--b3-theme-on-background) l c h / 0.65);
+    // 默认色
+    --neo-default-base-color: #636de1;
+    --neo-default-primary: #636de1;
+    --neo-default-accent: #636de1;
+    --neo-default-background: #282c34;
+    --neo-default-surface: #1e2227;
+    --neo-default-on-background: #d7dae0;
+    --neo-default-on-surface: #a3a2a8;
+    // 自定义色
+    --neo-custom-base-color: unset;
+    --neo-custom-saturation: unset;
+    --neo-custom-primary: oklch(from var(--neo-custom-base-color) clamp(0.55, l, 0.95) c h);
+    --neo-custom-accent: oklch(from var(--neo-custom-primary) l max(c, 0.2) h);
+    --neo-custom-background: oklch(from var(--neo-custom-primary) 0.25 calc(0.012 * var(--neo-custom-saturation, 1)) h);
+    --neo-custom-surface: oklch(from var(--neo-custom-primary) 0.2 calc(0.008 * var(--neo-custom-saturation, 1)) h);
+    --neo-custom-on-background: oklch(from var(--neo-custom-primary) 0.95 calc(0.008 * var(--neo-custom-saturation, 1)) h);
+    --neo-custom-on-surface: oklch(from var(--neo-custom-on-background) l c h / 0.65);
+    // 主要色
+    --b3-base-color: var(--neo-custom-base-color, var(--neo-default-base-color));
+    --b3-theme-primary: var(--neo-custom-primary, var(--neo-default-primary));
+    --b3-theme-accent: var(--neo-custom-accent, var(--neo-default-accent));
+    --b3-theme-background: var(--neo-custom-background, var(--neo-default-background));
+    --b3-theme-surface: var(--neo-custom-surface, var(--neo-default-surface));
+    --b3-theme-on-background: var(--neo-custom-on-background, var(--neo-default-on-background));
+    --b3-theme-on-surface: var(--neo-custom-on-surface, var(--neo-default-on-surface));
     // inherit
     --b3-theme-primary-light: oklch(from var(--b3-theme-primary) l c h / 0.56);
     --b3-theme-primary-lighter: oklch(from var(--b3-theme-primary) l c h / 0.38);

@@ -175,6 +175,10 @@
 .protyle-scroll__down,
 .protyle-scroll__up {
     right: 0;
+    color: var(--b3-theme-on-surface-light);
+    &:hover {
+        color: var(--b3-theme-on-background);
+    }
 }
 .protyle-scroll svg {
     width: 18px;

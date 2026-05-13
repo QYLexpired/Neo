@@ -7,7 +7,7 @@
     --neo-input-primary: oklch(from var(--b3-base-color) clamp(0, l, 0.8) c h);
     &[data-theme-mode="dark"] {
         --neo-button-primary: oklch(from var(--b3-base-color) clamp(0.4, l, 1) c h);
-        --neo-switch-primary: oklch(from var(--b3-base-color) clamp(0.38, l, 78) c h);
+        --neo-switch-primary: oklch(from var(--b3-base-color) clamp(0.38, l, 0.8) c h);
         --neo-input-primary: oklch(from var(--b3-base-color) clamp(0.4, l, 1) c h);
     }
 }
