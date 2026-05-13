@@ -52,6 +52,16 @@
 .config__tab-container .config-group__title {
     padding: 32px 64px 0 64px;
 }
+.config__tab-wrap {
+    padding: 0 !important;
+    .fn__hr--b:first-child,
+    .fn__hr--b:last-child {
+        display: none;
+    }
+    .layout-tab-bar:not(.layout-tab-bar--readonly) {
+        padding-top: 16px;
+    }
+}
 .config__tab-container .config-group {
     @include superellipse(16px);
     margin: 16px 64px 0 64px;
@@ -59,24 +69,23 @@
 .config__side,
 .b3-dialog__container .config__panel .b3-tab-bar {
     @include superellipse(12px);
-    margin: $layout-gap 0 $layout-gap $layout-gap;
-    padding: 8px 0;
+    margin: $layout-gap;
+    padding: $layout-gap 0;
     border: unset;
+    .b3-list-item {
+        @include superellipse(8px);
+        line-height: 26px;
+        margin: calc($layout-gap / 2) $layout-gap;
+        &:first-child {
+            margin-top: 0;
+        }
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
 }
 .config__side .b3-form__icon {
     margin: 0 8px 16px 8px;
-}
-.config__side .b3-list-item,
-.b3-dialog__container .config__panel .b3-tab-bar .b3-list-item {
-    @include superellipse(8px);
-    line-height: 26px;
-    margin: 4px 8px;
-    &:first-child {
-        margin-top: 0;
-    }
-    &:last-child {
-        margin-bottom: 0;
-    }
 }
 // bazaar
 .config-bazaar__panel {
@@ -131,9 +140,10 @@
 }
 #configBazaarReadme {
     padding: unset;
+    @include superellipse(16px);
     .item__side {
         padding: $layout-gap;
-        margin: $layout-gap 0 $layout-gap $layout-gap;
+        margin: $layout-gap;
         height: calc(100% - $layout-gap * 4);
         @include superellipse(12px);
         .item__img {

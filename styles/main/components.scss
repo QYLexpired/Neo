@@ -236,6 +236,7 @@ $toggle-width: 36px;
     box-shadow: unset;
     width: max-content;
     min-width: 75px;
+    field-sizing: content;
     &:hover {
         background-color: var(--b3-list-hover);
         box-shadow: unset;

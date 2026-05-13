@@ -293,7 +293,7 @@
 .viewer-title {
     color: var(--b3-theme-on-surface);
     &:hover {
-        color: var(--b3-theme-on-background);
+        color: var(--b3-theme-on-surface);
     }
 }
 .viewer-toolbar > ul > li {
@@ -301,6 +301,7 @@
     transition: var(--b3-transition);
     svg {
         color: var(--b3-theme-on-surface);
+        transition: var(--b3-transition);
     }
     &:hover {
         svg {
@@ -312,7 +313,7 @@
     background-color: transparent;
     color: var(--b3-theme-on-surface);
     &:hover {
-        color: var(--b3-theme-on-background);
+        color: var(--b3-theme-on-surface);
     }
 }
 // task
