@@ -4,11 +4,11 @@
 :root {
     --neo-button-primary: oklch(from var(--b3-base-color) clamp(0, l, 0.92) c h);
     --neo-switch-primary: oklch(from var(--b3-base-color) clamp(0, l, 0.9) c h);
-    --neo-input-primary: oklch(from var(--b3-base-color) clamp(0, l, 0.8) c h);
+    --neo-input-primary: oklch(from var(--b3-base-color) clamp(0, l, 0.8) c h / 0.7);
     &[data-theme-mode="dark"] {
         --neo-button-primary: oklch(from var(--b3-base-color) clamp(0.4, l, 1) c h);
         --neo-switch-primary: oklch(from var(--b3-base-color) clamp(0.38, l, 0.8) c h);
-        --neo-input-primary: oklch(from var(--b3-base-color) clamp(0.4, l, 1) c h);
+        --neo-input-primary: oklch(from var(--b3-base-color) clamp(0.4, l, 1) c h) / 0.7;
     }
 }
 @mixin button-primary {
