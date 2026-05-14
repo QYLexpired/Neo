@@ -11,8 +11,6 @@
     --neo-default-on-background: #181051;
     --neo-default-on-surface: #6b668d;
     // 自定义色
-    --neo-custom-base-color: unset;
-    --neo-custom-saturation: unset;
     --neo-custom-primary: oklch(from var(--neo-custom-base-color) clamp(0.55, l, 0.75) c h);
     --neo-custom-accent: oklch(from var(--neo-custom-primary) l max(c, 0.2) h);
     --neo-custom-background: oklch(from var(--neo-custom-primary) 0.99 calc(0.005 * var(--neo-custom-saturation, 1)) h);
@@ -64,8 +62,6 @@
     --neo-default-on-background: #d7dae0;
     --neo-default-on-surface: #a3a2a8;
     // 自定义色
-    --neo-custom-base-color: unset;
-    --neo-custom-saturation: unset;
     --neo-custom-primary: oklch(from var(--neo-custom-base-color) clamp(0.55, l, 0.95) c h);
     --neo-custom-accent: oklch(from var(--neo-custom-primary) l max(c, 0.2) h);
     --neo-custom-background: oklch(from var(--neo-custom-primary) 0.25 calc(0.012 * var(--neo-custom-saturation, 1)) h);
