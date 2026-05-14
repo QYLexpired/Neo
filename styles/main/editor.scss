@@ -8,11 +8,6 @@
 // breadcrumb
 .protyle-breadcrumb {
     background-color: transparent;
-    min-height: unset;
-    padding: 0 4px;
-}
-.body--toolbar-hide .layout:not(.layout__center) .layout__center [data-type=wnd] > .fn__flex + .layout-tab-container > .protyle:not(.fullscreen) > .protyle-breadcrumb {
-    padding: 4px 8px 0 8px;
 }
 .protyle-breadcrumb__item {
     transition: var(--b3-transition);
@@ -55,14 +50,7 @@
     padding: 2px 6px;
     line-height: 16px;
     width: max-content;
-    background-color: transparent;
-    color: var(--b3-theme-on-surface);
-    box-shadow: var(--neo-main-shadow);
-    &:hover,
-    &:active,
-    &:focus {
-        color: var(--b3-theme-on-background);
-    }
+    @include button-transparent-outline;
 }
 [data-subtype="unlock"] {
     color: var(--b3-theme-accent) !important;
@@ -189,8 +177,18 @@
     color: var(--b3-highlight-color) !important;
     background-color: var(--b3-highlight-background) !important;
 }
-// fullscreen
-.fullscreen {
-    padding: $layout-gap;
-    box-sizing: border-box;
+// 导出预览
+.protyle-preview__action {
+    background-color: transparent;
+    button {
+        @include button-transparent;
+        &.protyle-preview__action--current {
+            background-color: transparent;
+            color: var(--b3-theme-accent);
+        }
+    }
+}
+// 导出
+.export-img {
+    border: unset;
 }

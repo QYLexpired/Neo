@@ -1,0 +1,51 @@
+@use "../tools" as *;
+.body--toolbar-hide {
+    .protyle {
+        --neo-superfusion-offset: 42px;
+        & > .protyle-breadcrumb {
+            margin-top: calc(var(--neo-superfusion-offset) * -1);
+            padding-top: calc(var(--neo-superfusion-offset) + 6px);
+            z-index: 2;
+            .protyle-breadcrumb__bar {
+                @include superellipse(6px);
+                @include frostedglass($blur: s, $color: background);
+                padding: 0 4px;
+            }
+            .block__icon {
+                @include superellipse(6px);
+                @include frostedglass($blur: s, $color: background);
+                padding: 2px;
+                &:nth-last-child(1 of :not(.fn__none)) {
+                    margin-right: 10px;
+                }
+            }
+            .protyle-breadcrumb__icon {
+                @include frostedglass($blur: s, $color: background);
+            }
+        }
+        & > .protyle-content {
+            margin-top: calc(var(--neo-superfusion-offset) * -1 + 6px);
+            .protyle-background__img {
+                &::after {
+                    content: "";
+                    position: absolute;
+                    top: calc(25vh + 2px);
+                    left: 0;
+                    width: 100%;
+                    height: 15vh;
+                    background: linear-gradient(to top, var(--b3-theme-background) 2%, rgba(from var(--b3-theme-background) r g b / 0.97) 9%, rgba(from var(--b3-theme-background) r g b / 0.9) 18%, rgba(from var(--b3-theme-background) r g b / 0.75) 33%, rgba(from var(--b3-theme-background) r g b / 0.05) 92%, transparent 99%);
+                    pointer-events: none;
+                }
+                .protyle-icons {
+                    top: var(--neo-superfusion-offset);
+                }
+                &.fn__none + .protyle-background__ia {
+                    padding-top: calc(var(--neo-superfusion-offset) + 6px);
+                }
+                &:not(.fn__none) + .protyle-background__ia {
+                    margin-top: -5vh;
+                }
+            }
+        }
+    }
+}

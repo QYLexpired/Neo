@@ -339,18 +339,19 @@ input[type="radio" i] {
     }
 }
 // parallax scrolling
-$header-height: 30vh;
+$header-height: 40vh;
 $header-parallax: 5vh;
 .protyle-content {
     scroll-timeline-name: --protyle-conten-scroll;
     scroll-timeline-axis: block;
     .protyle-background__img {
-        img, video {
+        height: $header-height;
+        transform-origin: center;
+        animation: header-parallax ease-out;
+        animation-timeline: --protyle-conten-scroll;
+        animation-range: 0 $header-height;
+        img,video {
             height: $header-height;
-            transform-origin: center;
-            animation: header-parallax ease-out;
-            animation-timeline: --protyle-conten-scroll;
-            animation-range: 0 $header-height;
         }
     }
 }
@@ -362,9 +363,10 @@ $header-parallax: 5vh;
     }
 }
 // content scroll reveal
-.protyle-wysiwyg [data-node-id],
+.protyle-wysiwyg [data-node-id]:not(#preview [data-node-id]),
 .protyle-title,
 .config-bazaar__panel .b3-card,
+[data-key="dialog-backgroundrandom"] .b3-card,
 .config-group > .b3-label {
     animation: neo-content-scroll-reveal cubic-bezier(0.46, 0.03, 0.52, 0.96) both;
     animation-timeline: view(block);
@@ -375,12 +377,12 @@ $header-parallax: 5vh;
         transform: translateY(15px);
         filter: blur(2px);
     }
-    10% {
+    12% {
         opacity: 1;
         transform: translateY(0);
         filter: blur(0);
     }
-    90% {
+    88% {
         opacity: 1;
         transform: translateY(0);
         filter: blur(0);

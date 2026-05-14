@@ -15,7 +15,7 @@
     } @else if $color == menu {
         $color-var: --b3-menu-background;
     }
-    background-color: oklch(from var(#{$color-var}) l c h / 0.7);
+    background-color: oklch(from var(#{$color-var}) l c h / 0.7) !important;
     backdrop-filter: blur(#{$blur-value}) saturate(1.8) brightness(1.1);
     @at-root {
         [data-theme-mode="dark"] & {

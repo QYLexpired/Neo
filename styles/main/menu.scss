@@ -2,7 +2,6 @@
 @use "../utils" as *;
 [data-theme-mode="light"] {
     --neo-menu-item-primary: oklch(from var(--b3-base-color) clamp(0, l, 0.9) c h);
-
 }
 [data-theme-mode="dark"] {
     --neo-menu-item-primary: oklch(from var(--b3-base-color) clamp(0.4, l, 1) c h);
@@ -215,4 +214,12 @@
 .b3-list mark {
     color: var(--b3-highlight-color);
     background-color: var(--b3-highlight-background);
+}
+// 资源
+.b3-menu[data-name="background-asset"] {
+    & > .b3-menu__items {
+        & > .b3-menu__item {
+            padding: 0;
+        }
+    }
 }
