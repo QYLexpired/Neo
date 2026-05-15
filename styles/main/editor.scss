@@ -47,7 +47,7 @@
 }
 [data-type="exit-focus"] {
     transition: var(--b3-transition);
-    padding: 2px 6px;
+    padding: 4px 8px;
     line-height: 16px;
     width: max-content;
     @include button-transparent-outline;

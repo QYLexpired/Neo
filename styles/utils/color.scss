@@ -48,7 +48,7 @@
     --b3-empty-color: oklch(from var(--b3-theme-on-background) l c h / 0.45);
     // other
     --b3-theme-error: oklch(from var(--b3-base-color) max(l, 0.58) max(c, 0.2) 30);
-    --b3-highlight-background: oklch(from var(--b3-base-color) clamp(0.68, l, 1) clamp(0.5, c, 1) h);
+    --b3-highlight-background: oklch(from var(--b3-base-color) clamp(0.66, l, 0.9) clamp(0.2, c, 1) h);
     --b3-highlight-current-background: oklch(from var(--b3-highlight-background) l c calc(h + 10));
     --b3-highlight-color: oklch(from var(--b3-highlight-background) clamp(0, calc((0.72 - l) * 10000), 1) 0 0);
     --b3-tooltips-second-color: var(--b3-theme-on-surface);
@@ -100,7 +100,7 @@
     --b3-empty-color: oklch(from var(--b3-theme-on-background) l c h / 0.45);
     // other
     --b3-theme-error: oklch(from var(--b3-base-color) max(l, 0.58) max(c, 0.2) 30);
-    --b3-highlight-background: oklch(from var(--b3-base-color) clamp(0.66, l, 1) clamp(0.5, c, 1) h);
+    --b3-highlight-background: oklch(from var(--b3-base-color) clamp(0.66, l, 0.9) clamp(0.2, c, 1) h);
     --b3-highlight-current-background: oklch(from var(--b3-highlight-background) l c calc(h + 10));
     --b3-highlight-color: oklch(from var(--b3-highlight-background) clamp(0, calc((0.72 - l) * 10000), 1) 0 0);
     --b3-tooltips-second-color: var(--b3-theme-on-surface);

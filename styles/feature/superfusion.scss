@@ -8,19 +8,23 @@
             z-index: 2;
             .protyle-breadcrumb__bar {
                 @include superellipse(6px);
-                @include frostedglass($blur: s, $color: background);
+                background-color: oklch(from var(--b3-theme-background) l c h / 0.5);
+                backdrop-filter: blur(6px) saturate(1.8);
                 padding: 0 4px;
+                &:empty {
+                    visibility: hidden;
+                }
             }
             .block__icon {
-                @include superellipse(6px);
-                @include frostedglass($blur: s, $color: background);
-                padding: 2px;
+                svg {
+                    filter: drop-shadow(0 0 0.5px var(--b3-theme-background)) drop-shadow(0 0 0.5px var(--b3-theme-background)) drop-shadow(0 0 0.5px var(--b3-theme-background));
+                }
                 &:nth-last-child(1 of :not(.fn__none)) {
                     margin-right: 10px;
                 }
             }
             .protyle-breadcrumb__icon {
-                @include frostedglass($blur: s, $color: background);
+                text-shadow: 0 0 0.5px var(--b3-theme-background), 0 0 1px var(--b3-theme-background), 0 0 1px var(--b3-theme-background);
             }
         }
         & > .protyle-content {
