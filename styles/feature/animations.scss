@@ -60,24 +60,24 @@
 // dock
 #dockLeft,
 #dockRight {
-    transition: display 0.2s cubic-bezier(0.39, 0.29, 0.77, 0.05);
+    transition: display 0.3s cubic-bezier(0.7, 0, 0.3, 1);
     transition-behavior: allow-discrete;
     width: 42px;
 }
 #dockLeft {
     &:not(.fn__none) {
-        animation: neo-dockLeft-expand 0.2s cubic-bezier(0.39, 0.29, 0.77, 0.05);
+        animation: neo-dockLeft-expand 0.3s cubic-bezier(0.7, 0, 0.3, 1);
     }
     &.fn__none {
-        animation: neo-dockLeft-collapse 0.2s cubic-bezier(0.39, 0.29, 0.77, 0.05);
+        animation: neo-dockLeft-collapse 0.3s cubic-bezier(0.7, 0, 0.3, 1);
     }
 }
 #dockRight {
     &:not(.fn__none) {
-        animation: neo-dockRight-expand 0.2s cubic-bezier(0.39, 0.29, 0.77, 0.05);
+        animation: neo-dockRight-expand 0.3s cubic-bezier(0.7, 0, 0.3, 1);
     }
     &.fn__none {
-        animation: neo-dockRight-collapse 0.2s cubic-bezier(0.39, 0.29, 0.77, 0.05);
+        animation: neo-dockRight-collapse 0.3s cubic-bezier(0.7, 0, 0.3, 1);
     }
 }
 @keyframes neo-dockLeft-expand {
@@ -122,25 +122,17 @@
 }
 .layout__dockl,
 .layout__dockr {
-    transition: width 0.2s cubic-bezier(0.39, 0.29, 0.77, 0.05);
-    will-change: width;
+    transition: width 0.3s cubic-bezier(0.7, 0, 0.3, 1);
     & > .fn__flex {
-        transition: width 0.2s cubic-bezier(0.39, 0.29, 0.77, 0.05), display 0.2s cubic-bezier(0.39, 0.29, 0.77, 0.05);
+        transition: display 0.3s;
         transition-behavior: allow-discrete;
-        & > .fn__none {
-            width: 0;
-        }
     }
 }
 .layout__dockb {
-    transition: height 0.2s cubic-bezier(0.39, 0.29, 0.77, 0.05);
-    will-change: height;
+    transition: height 0.3s cubic-bezier(0.7, 0, 0.3, 1);
     & > .fn__flex {
-        transition: height 0.2s cubic-bezier(0.39, 0.29, 0.77, 0.05), display 0.2s cubic-bezier(0.39, 0.29, 0.77, 0.05);
+        transition: display 0.3s;
         transition-behavior: allow-discrete;
-        & > .fn__none {
-            height: 0;
-        }
     }
 }
 // tooltip
