@@ -76,6 +76,7 @@ body {
 .layout__dockr,
 .layout__dockb {
     @include layout-dockpanel;
+    overflow: visible;
 }
 // resize
 .layout__resize {

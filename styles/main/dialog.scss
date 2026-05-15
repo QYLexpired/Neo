@@ -179,13 +179,11 @@
     }
 }
 .config-account__center:not(.config-account__center--text) {
-    margin: 20px;
     @include superellipse(12px);
-    box-shadow: var(--neo-main-shadow);
-    max-width: 350px;
-    max-height: max-content;
-    min-height: 60%;
-    align-self: center;
+    box-shadow: var(--b3-menu-shadow);
+    height: min(100% - 80px, 650px);
+    max-width: min(100%, 400px);
+    margin: auto 20px;
     .b3-chips .b3-chip {
         padding: 4px 12px;
         line-height: 16px;
@@ -196,12 +194,13 @@
     }
 }
 .config-account__center.config-account__center--text {
-    margin: 20px;
+    margin: auto 20px;
     #activationCode {
         display: none;
     }
     .fn__hr--b {
-        height: 8px;
+        height: 16px;
+        min-height: 16px;
     }
     .b3-chip {
         padding: 4px 12px;
