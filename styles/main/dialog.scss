@@ -58,8 +58,11 @@
     .fn__hr--b:last-child {
         display: none;
     }
-    .layout-tab-bar:not(.layout-tab-bar--readonly) {
-        padding-top: 16px;
+    .config__tab-container {
+        padding: $layout-gap 0;
+        .layout-tab-bar {
+            padding-top: 16px;
+        }
     }
 }
 .config__tab-container .config-group {
@@ -72,6 +75,7 @@
     margin: $layout-gap;
     padding: $layout-gap 0;
     border: unset;
+    box-shadow: var(--neo-main-shadow);
     .b3-list-item {
         @include superellipse(8px);
         line-height: 26px;
@@ -146,15 +150,16 @@
         margin: $layout-gap;
         height: calc(100% - $layout-gap * 4);
         @include superellipse(12px);
+        box-shadow: var(--neo-main-shadow);
         .item__img {
             @include superellipse(16px);
         }
     }
     .item__main {
         margin: 0;
+        padding: $layout-gap 0;
         .item__preview {
-            margin: $layout-gap $layout-gap 0 $layout-gap;
-            width: calc(100% - $layout-gap * 2);
+            margin: 0;
             @include superellipse(12px);
         }
         .b3-typography {

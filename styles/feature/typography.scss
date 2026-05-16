@@ -1,0 +1,68 @@
+:root {
+    --b3-font-family: system-ui, ui-sans-serif, -apple-system, "Emojis Additional", "Emojis Reset",
+    BlinkMacSystemFont, "SF Pro Text", "SF Pro Icons", "Helvetica Neue",
+    "Luxi Sans", "DejaVu Sans", "PingFang SC", "Segoe UI", "Microsoft Yahei",
+    "Hiragino Sans GB", sans-serif, "Segoe UI Emoji", "Noto Color Emoji",
+    "Segoe UI Symbol", "Android Emoji", "EmojiSymbols";
+    --b3-font-family-code: SF Mono, "JetBrains Mono", JetBrainsMono-Regular,
+    Menlo, mononoki, Consolas, "Liberation Mono", Courier,
+    "Apple Color Emoji", "Segoe UI Emoji", "Noto Color Emoji",
+    "Segoe UI Symbol", "Android Emoji", "EmojiSymbols",
+    var(--b3-font-family), monospace;
+    text-underline-position: under;
+    text-decoration-skip-ink: all;
+    text-spacing-trim: trim-start;
+    text-autospace: normal;
+    font-variant-ligatures: normal;
+}
+[data-theme-mode="light"] body {
+    -webkit-font-smoothing: auto;
+}
+[data-theme-mode="dark"] body {
+    -webkit-font-smoothing: antialiased;
+}
+table,
+.av__scroll,
+.av__cell[data-dtype="number"] {
+  font-variant-numeric: tabular-nums;
+}
+@for $i from 1 through 6 {
+    .b3-typography, .protyle-wysiwyg {
+        h#{$i}, .h#{$i} {
+            word-break: auto-phrase;
+        }
+    }
+    @if $i == 1 {
+        .b3-typography, .protyle-wysiwyg {
+            h1, .h1 {
+            padding: 0 4px;
+            margin-bottom: calc(0.1em + 4px);
+            }
+        }
+    }
+    @if $i < 6 {
+        $sel: "h1";
+        @for $j from 2 through $i {
+            $sel: $sel + ", h#{$j}";
+        }
+        .b3-typography, .protyle-wysiwyg {
+            :is(#{$sel}) + h#{($i + 1)} {
+            margin-top: 0;
+            }
+        }
+    }
+}
+.protyle-title__input {
+    word-break: auto-phrase;
+    text-wrap-style: pretty;
+    white-space: normal;
+}
+.b3-typography, .protyle-wysiwyg {
+    kbd,
+    span[data-type~="kbd"],
+    code:not(.hljs),
+    span[data-type~="code"],
+    span[data-type~="tag"] {
+        box-decoration-break: clone;
+    }
+}

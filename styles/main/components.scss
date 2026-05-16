@@ -172,7 +172,7 @@
     &[data-type="4"] {
         background-color: oklch(from currentColor l c h / 0.25);
         &:hover {
-            background-color: oklch(from currentColor l c h / 0.15);
+            background-color: oklch(from currentColor calc(l + 0.08) c h / 0.25);
         }
     }
     &[data-type="1"] {
@@ -315,6 +315,7 @@ $slider-thumb-width: 20px;
 $slider-track-height: 6px;
 .b3-slider,
 .protyle-scroll__bar .b3-slider {
+    padding: 0;
     width: 120px;
     height: 24px;
     -webkit-appearance: none;
@@ -353,6 +354,7 @@ $slider-track-height: 6px;
     }
 }
 .protyle-scroll__bar .b3-slider {
+    padding: 0 4px;
     width: 200px;
     height: unset;
 }

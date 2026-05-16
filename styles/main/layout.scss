@@ -19,7 +19,8 @@ body {
 .layout:not(.layout__center) .layout__center {
     border-radius: unset;
     .fn__flex:has( > [data-type="wnd"]) {
-        padding: calc($layout-gap / 2);
+        margin: calc($layout-gap / 2);
+        overflow: visible;
         [data-type="wnd"] {
             @include superellipse(8px);
             box-shadow: var(--neo-main-shadow);
@@ -30,8 +31,9 @@ body {
 @mixin layout-dockpanel {
     border-radius: unset;
     background-color: unset;
-    .fn__flex:has( > [data-type="wnd"]) {
-        padding: calc($layout-gap / 2);
+    & > .fn__flex {
+        margin: calc($layout-gap / 2);
+        overflow: visible;
         [data-type="wnd"] {
             @include superellipse(8px);
             box-shadow: var(--neo-main-shadow);
@@ -76,7 +78,7 @@ body {
 .layout__dockr,
 .layout__dockb {
     @include layout-dockpanel;
-    overflow: visible;
+    overflow: visible !important;
 }
 // resize
 .layout__resize {
@@ -143,14 +145,15 @@ body {
     }
     .layout:not(.layout__center) .layout__center {
         .fn__flex:has( > [data-type="wnd"]) {
-            padding: unset;
+            margin: unset;
             [data-type="wnd"] {
-                padding: calc($layout-gap / 2);
-                margin-top: calc($layout-gap / -2);
+                margin: calc($layout-gap / 2);
+                margin-top: 0;
                 min-height: 0.1px;
                 corner-shape: unset;
                 border-radius: unset;
                 box-shadow: unset;
+                overflow: visible;
                 &:not(.layout__wnd--center > [data-type="wnd"]) {
                     margin-top: calc($layout-gap * -1);
                 }
@@ -167,7 +170,7 @@ body {
     .layout__dockl,
     .layout__dockr {
         & > :nth-child(1 of .fn__flex:not(.fn__none), .fn__flex-1:not(.fn__none), .fn__flex-column:not(.fn__none)) {
-            margin-top: calc($layout-gap / -2);
+            margin-top: 0;
         }
     }
     #dockLeft,

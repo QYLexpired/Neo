@@ -60,24 +60,24 @@
 // dock
 #dockLeft,
 #dockRight {
-    transition: display 0.3s cubic-bezier(0.7, 0, 0.3, 1);
+    transition: display 0.2s;
     transition-behavior: allow-discrete;
     width: 42px;
 }
 #dockLeft {
     &:not(.fn__none) {
-        animation: neo-dockLeft-expand 0.3s cubic-bezier(0.7, 0, 0.3, 1);
+        animation: neo-dockLeft-expand 0.2s;
     }
     &.fn__none {
-        animation: neo-dockLeft-collapse 0.3s cubic-bezier(0.7, 0, 0.3, 1);
+        animation: neo-dockLeft-collapse 0.2s;
     }
 }
 #dockRight {
     &:not(.fn__none) {
-        animation: neo-dockRight-expand 0.3s cubic-bezier(0.7, 0, 0.3, 1);
+        animation: neo-dockRight-expand 0.2s;
     }
     &.fn__none {
-        animation: neo-dockRight-collapse 0.3s cubic-bezier(0.7, 0, 0.3, 1);
+        animation: neo-dockRight-collapse 0.2s;
     }
 }
 @keyframes neo-dockLeft-expand {
@@ -122,18 +122,19 @@
 }
 .layout__dockl,
 .layout__dockr {
-    transition: width 0.3s cubic-bezier(0.7, 0, 0.3, 1);
-    & > .fn__flex {
-        transition: display 0.3s;
-        transition-behavior: allow-discrete;
-    }
+    transition: width 0.2s;
+    //  给dockpanel设置了margin会导致初始化时宽度跳动，暂时无法解决
+    //   & > .fn__flex {
+    //        transition: display 0.2s;
+    //        transition-behavior: allow-discrete;
+    //    }
 }
 .layout__dockb {
-    transition: height 0.3s cubic-bezier(0.7, 0, 0.3, 1);
-    & > .fn__flex {
-        transition: display 0.3s;
-        transition-behavior: allow-discrete;
-    }
+    transition: height 0.2s;
+    //   & > .fn__flex {
+    //        transition: display 0.2s;
+    //        transition-behavior: allow-discrete;
+    //    }
 }
 // tooltip
 .tooltip {
@@ -248,7 +249,7 @@ input[type="radio" i] {
         transform: translate(-50%, -50%) rotate(0deg);
         box-sizing: border-box;
         width: 0.3em;
-        height: calc(100% - 0.6em);
+        height: calc(100% - 0.5em);
         background-color: currentColor;
         border-radius: 0;
         transition: 0.25s cubic-bezier(0.18, 0.89, 0.32, 1.28);
@@ -355,7 +356,10 @@ $header-parallax: 5vh;
     }
 }
 // content scroll reveal
-.protyle-wysiwyg [data-node-id]:not(#preview [data-node-id]),
+#preview [data-node-id] {
+    animation: none;
+}
+.protyle-wysiwyg [data-node-id],
 .protyle-title,
 .config-bazaar__panel .b3-card,
 [data-key="dialog-backgroundrandom"] .b3-card,
