@@ -9,6 +9,9 @@
 .protyle-breadcrumb {
     background-color: transparent;
 }
+.protyle-breadcrumb__arrow {
+    color: var(--b3-theme-on-surface);
+}
 .protyle-breadcrumb__item {
     transition: var(--b3-transition);
     padding: 0;
@@ -26,7 +29,7 @@
         color: var(--b3-theme-on-surface);
         svg {
             color: var(--b3-theme-on-background);
-            box-shadow: var(--neo-main-shadow);
+            box-shadow: var(--neo-main-shadow-light);
         }
     }
     &--active {
@@ -34,13 +37,13 @@
         background-color: transparent;
         svg {
             color: var(--b3-theme-on-background);
-            box-shadow: var(--neo-main-shadow);
+            box-shadow: var(--neo-main-shadow-light);
         }
         &:hover {
             color: var(--b3-theme-on-background);
             svg {
                 color: var(--b3-theme-on-background);
-                box-shadow: var(--neo-main-shadow);
+                box-shadow: var(--neo-main-shadow-light);
             }
         }
     }
@@ -91,7 +94,7 @@
     max-width: max-content;
     transition: var(--b3-transition);
     @include superellipse($layout-border-radius);
-    box-shadow: var(--neo-main-shadow);
+    box-shadow: var(--neo-main-shadow-light);
     .protyle-icon {
         background-color: transparent;
         color: var(--b3-theme-on-surface);

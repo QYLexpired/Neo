@@ -10,7 +10,7 @@
     @include frostedglass($blur: s, $color: background);
 }
 .av__gallery-item {
-    box-shadow: var(--neo-main-shadow);
+    box-shadow: var(--neo-main-shadow-light);
     @include superellipse(10px);
     &::before {
         background-color: transparent;

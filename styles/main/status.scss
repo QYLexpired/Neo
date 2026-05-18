@@ -8,7 +8,7 @@
     bottom: calc(anchor(--anchor-layout-center bottom) + $layout-gap);
     right: calc(anchor(--anchor-layout-center right) + $layout-gap);
     @include superellipse(24px);
-    box-shadow: var(--neo-main-shadow);
+    box-shadow: var(--neo-main-shadow-heavy);
     height: 26px;
     line-height: 26px;
     border: unset;

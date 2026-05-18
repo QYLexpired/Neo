@@ -75,7 +75,7 @@
     margin: $layout-gap;
     padding: $layout-gap 0;
     border: unset;
-    box-shadow: var(--neo-main-shadow);
+    box-shadow: var(--neo-main-shadow-heavy);
     .b3-list-item {
         @include superellipse(8px);
         line-height: 26px;
@@ -137,8 +137,12 @@
         &:hover {
             scale: 1.02;
         }
-        .b3-card__img img {
-            @include superellipse(12px);
+        .b3-card__img {
+            margin-left: unset;
+            margin-inline-start: 16px;
+            img {
+                @include superellipse(12px);
+            }
         }
     }
 }
@@ -150,16 +154,17 @@
         margin: $layout-gap;
         height: calc(100% - $layout-gap * 4);
         @include superellipse(12px);
-        box-shadow: var(--neo-main-shadow);
+        box-shadow: var(--neo-main-shadow-heavy);
         .item__img {
-            @include superellipse(16px);
+            @include superellipse(12px);
         }
     }
     .item__main {
         margin: 0;
         padding: $layout-gap 0;
         .item__preview {
-            margin: 0;
+            margin: 0 $layout-gap 0 0;
+            width: calc(100% - $layout-gap);
             @include superellipse(12px);
         }
         .b3-typography {
@@ -291,6 +296,7 @@
 .custom-attr__avvalue--active {
     background-color: var(--b3-list-hover);
 }
+.custom-attr {
 .av__mask .b3-text-field,
 .block__icons .b3-text-field {
     background-color: transparent;
@@ -301,4 +307,5 @@
     &:focus {
         background-color: var(--b3-list-hover);
     }
+}
 }

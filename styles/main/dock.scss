@@ -3,15 +3,14 @@
 .dock__item {
     transition: var(--b3-transition);
     @include icon;
-    @include superellipse(6px);
 }
 .dock__item--active,
 .dock__item--activefocus {
-    box-shadow: var(--neo-main-shadow) !important;
+    box-shadow: var(--neo-main-shadow-heavy) !important;
     color: var(--b3-theme-on-background) !important;
-    background-color: var(--b3-theme-background) !important;
+    background-color: oklch(from var(--b3-theme-background) l c h / 0.7) !important;
     &:hover {
-        box-shadow: var(--neo-main-shadow) !important;
+        box-shadow: var(--neo-main-shadow-heavy) !important;
         color: var(--b3-theme-on-background) !important;
         background-color: var(--b3-theme-background) !important;
     }
@@ -24,6 +23,7 @@
 }
 .block__icon {
     transition: var(--b3-transition) allow-discrete !important;
+    line-height: 12px;
     @include icon;
 }
 // dock-panel
