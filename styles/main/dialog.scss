@@ -35,9 +35,6 @@
     --b3-border-color: var(--b3-border-color-trans) !important;
     border-color: var(--b3-border-color-trans) !important;
 }
-.search__drag::after {
-    background-color: var(--b3-border-color-trans) !important;
-}
 // settings
 .config__tab-container .b3-label:not(.b3-label--inner).config__item {
     & > .config__item-line.fn__flex-center {
@@ -255,11 +252,40 @@
         }
     }
 }
+.search__preview {
+    border-top: none;
+}
 .search__drag {
     transition: var(--b3-transition);
+    margin: 0;
+    height: calc($layout-gap / 2);
+    &::after {
+        height: 1px;
+        top: 50%;
+        transform: translateY(-50%);
+        background-color: var(--b3-border-color-trans);
+    }
     &:hover {
         &::after {
-            background-color: $resize-hl !important;
+            background-color: $resize-hl;
+        }
+    }
+}
+.search__layout--row .search__drag {
+    transition: var(--b3-transition);
+    margin: 0;
+    width: calc($layout-gap / 2);
+    height: 100%;
+    &::after {
+        width: 1px;
+        height: 100%;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    &:hover {
+        &::after {
+            background-color: $resize-hl;
         }
     }
 }

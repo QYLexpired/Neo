@@ -1,57 +1,92 @@
 @use "../tools" as *;
-.body--toolbar-hide {
-    [data-type="wnd"] > .layout-tab-container > .protyle,
-    .search__preview.protyle {
-        --neo-superfusion-offset: 42px;
-        .protyle-scroll {
-            top: calc(30px + var(--neo-superfusion-offset));
-            bottom: calc(9px + var(--neo-superfusion-offset));
-        }
-        & > .protyle-breadcrumb {
-            margin-top: calc(var(--neo-superfusion-offset) * -1);
-            padding-top: calc(var(--neo-superfusion-offset) + 6px);
-            z-index: 2;
-            .protyle-breadcrumb__bar {
-                @include superellipse(6px);
-                background-color: oklch(from var(--b3-theme-background) l c h / 0.5);
-                backdrop-filter: blur(6px);
-                padding: 0 4px;
-                &:empty {
-                    visibility: hidden;
-                }
+[data-type="wnd"] > .layout-tab-container > .protyle,
+.search__preview.protyle {
+    --neo-superfusion-offset: 42px;
+    .protyle-scroll {
+        top: calc(30px + var(--neo-superfusion-offset));
+        bottom: calc(9px + var(--neo-superfusion-offset));
+    }
+    & > .protyle-breadcrumb {
+        margin-top: calc(var(--neo-superfusion-offset) * -1);
+        padding-top: calc(var(--neo-superfusion-offset) + 6px);
+        z-index: 2;
+        .protyle-breadcrumb__bar {
+            @include superellipse(6px);
+            backdrop-filter: blur(6px);
+            padding: 0 4px;
+            &:empty {
+                visibility: hidden;
             }
-            .block__icon {
-                svg {
-                    filter: drop-shadow(0 0 0.5px var(--b3-theme-background)) drop-shadow(0 0 0.5px var(--b3-theme-background)) drop-shadow(0 0 0.5px var(--b3-theme-background));
-                }
+            svg {
+                filter: drop-shadow(0 0 0.5px var(--b3-theme-background)) drop-shadow(0 0 0.5px var(--b3-theme-background)) drop-shadow(0 0 0.5px var(--b3-theme-background));
             }
-            .protyle-breadcrumb__icon {
-                text-shadow: 0 0 0.5px var(--b3-theme-background), 0 0 1px var(--b3-theme-background), 0 0 1px var(--b3-theme-background);
+            .protyle-breadcrumb__text {
+                text-shadow: 0 0 0.5px var(--b3-theme-background), 0.5px 0.5px 0.5px var(--b3-theme-background);
             }
         }
-        & > .protyle-content {
-            margin-top: calc(var(--neo-superfusion-offset) * -1 + 6px);
-            .protyle-background__img {
-                &::after {
-                    content: "";
-                    position: absolute;
-                    top: calc(25vh + 2px);
-                    left: 0;
-                    width: 100%;
-                    height: 15vh;
-                    background: linear-gradient(to top, var(--b3-theme-background) 2%, rgba(from var(--b3-theme-background) r g b / 0.97) 9%, rgba(from var(--b3-theme-background) r g b / 0.9) 18%, rgba(from var(--b3-theme-background) r g b / 0.75) 33%, rgba(from var(--b3-theme-background) r g b / 0.05) 92%, transparent 99%);
-                    pointer-events: none;
-                }
-                .protyle-icons {
-                    top: var(--neo-superfusion-offset);
-                }
-                &.fn__none + .protyle-background__ia {
-                    padding-top: calc(var(--neo-superfusion-offset) + 6px);
-                }
-                &:not(.fn__none) + .protyle-background__ia {
-                    margin-top: -5vh;
+        .block__icon {
+            svg {
+                filter: drop-shadow(0 0 0.5px var(--b3-theme-background)) drop-shadow(0 0 0.5px var(--b3-theme-background)) drop-shadow(0 0 0.5px var(--b3-theme-background));
+            }
+        }
+        .protyle-breadcrumb__icon {
+            text-shadow: 0 0 0.5px var(--b3-theme-background), 0 0 1px var(--b3-theme-background), 0 0 1px var(--b3-theme-background);
+        }
+    }
+    & > .protyle-content {
+        margin-top: calc(var(--neo-superfusion-offset) * -1 + 6px);
+        .protyle-background__img {
+            &::after {
+                content: "";
+                position: absolute;
+                top: calc(25vh + 2px);
+                left: 0;
+                width: 100%;
+                height: 15vh;
+                background: linear-gradient(to top, var(--b3-theme-background) 2%, rgba(from var(--b3-theme-background) r g b / 0.97) 9%, rgba(from var(--b3-theme-background) r g b / 0.9) 18%, rgba(from var(--b3-theme-background) r g b / 0.75) 33%, rgba(from var(--b3-theme-background) r g b / 0.05) 92%, transparent 99%);
+                pointer-events: none;
+            }
+            .protyle-icons {
+                top: var(--neo-superfusion-offset);
+            }
+            &.fn__none + .protyle-background__ia {
+                padding-top: calc(var(--neo-superfusion-offset) + 6px);
+            }
+            &:not(.fn__none) + .protyle-background__ia {
+                margin-top: -5vh;
+            }
+        }
+    }
+}
+/*
+body:not(.body--toolbar-hide),
+.body--window {
+    --neo-superfusion-tab-offset: 41px;
+    .layout__center [data-type="wnd"] > .fn__flex:first-child {
+        background-color: transparent;
+        z-index: 3;
+        margin-bottom: calc(var(--neo-superfusion-tab-offset) * -1);
+        .layout-tab-bar {
+            background-color: transparent;
+        }
+        & + .layout-tab-container > .protyle {
+            & > .protyle-breadcrumb {
+                padding-top: calc(var(--neo-superfusion-tab-offset) + var(--neo-superfusion-offset));
+            }
+            & > .protyle-content {
+                margin-top: calc((var(--neo-superfusion-tab-offset) + var(--neo-superfusion-offset)) * -1);
+                & > .protyle-top {
+                    .protyle-background__img {
+                        .protyle-icons {
+                            top: calc(var(--neo-superfusion-tab-offset) + var(--neo-superfusion-offset) + 12px);
+                        }
+                    }
+                    .protyle-background__ia {
+                        padding-top: calc(var(--neo-superfusion-tab-offset) + var(--neo-superfusion-offset));
+                    }
                 }
             }
         }
     }
 }
+*/

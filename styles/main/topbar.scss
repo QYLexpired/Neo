@@ -12,9 +12,13 @@
         display: none;
     }
     &:hover {
-        background-color: var(--b3-theme-background) !important;
-        box-shadow: var(--neo-main-shadow-light);
+        background-color: oklch(from var(--b3-theme-background) l c h / 0.7) !important;
+        box-shadow: var(--neo-main-shadow-heavy);
     }
+}
+.body--toolbar-hide #barWorkspace {
+    line-height: 20px;
+    height: unset;
 }
 #windowControls {
     .toolbar__item {

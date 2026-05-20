@@ -199,3 +199,27 @@ body {
         }
     }
 }
+// 拖拽区域
+#toolbar {
+    app-region: drag;
+    .toolbar__item {
+        app-region: no-drag;
+    }
+}
+.body--toolbar-hide,
+.body--window {
+    .layout__center [data-type="wnd"] > .fn__flex:first-child {
+        & > .layout-tab-bar:not(.layout-tab-bar--readonly) {
+            app-region: drag;
+            .item {
+                app-region: no-drag;
+            }
+        }
+        & > .layout-tab-bar--readonly {
+            app-region: drag;
+            .block__icon {
+                app-region: no-drag;
+            }
+        }
+    }
+}

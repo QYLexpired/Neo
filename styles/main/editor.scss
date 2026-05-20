@@ -54,6 +54,11 @@
     line-height: 16px;
     width: max-content;
     @include button-transparent-outline;
+    color: var(--b3-theme-accent);
+    &:hover,
+    &:focus {
+        color: var(--b3-theme-accent);
+    }
 }
 [data-subtype="unlock"] {
     color: var(--b3-theme-accent) !important;

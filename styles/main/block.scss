@@ -1,4 +1,5 @@
 @use "../tools" as *;
+@use "../utils" as *;
 // block 
 .protyle-wysiwyg [data-node-id] {
     @include superellipse(8px);
@@ -17,8 +18,8 @@
             margin-top: 1.2em;
             line-height: 1.5;
             &[fold="1"] {
-                outline: 1px solid var(--b3-border-color-trans);
-                background-color: oklch(from var(--b3-theme-surface) l c h / 0.7);
+                outline: 1px solid oklch(from currentColor l c h / 0.25);
+                background-color: oklch(from currentColor l c h / 0.15);
                 opacity: 0.5;
                 &::before {
                     opacity: 0;
@@ -74,26 +75,44 @@
     color: inherit;
 }
 // kbd
+:root {
+    --neo-kbd-color: var(--b3-theme-on-surface);
+}
 .search__tip kbd,
 .config-keymap__key,
 .protyle-wysiwyg span[data-type~=kbd],
 .b3-typography kbd,
 .b3-typography span[data-type~=kbd] {
-    color: unset;
-    border: 1px solid;
-    border-color: oklch(from currentColor l c h / 0.1);
-    background-color: oklch(from currentColor l c h / 0.08);
-    box-shadow: inset 0 1px 0 oklch(from currentColor l c h / 0.1);
+    color: var(--neo-kbd-color);
+    border: 0.5px solid;
+    border-color: oklch(from currentColor l c h / 0.25);
+    line-height: 1.625;
+    background-color: oklch(from currentColor l c h / 0.15);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.8), inset 0 -0.5px 0 rgba(255, 255, 255, 0.56);
     @include superellipse(6px);
     vertical-align: 1px;
-    font-size: 0.8em;
+    font-size: 0.85em;
 }
-// tag 
+[data-theme-mode="dark"] {
+    .search__tip kbd,
+    .config-keymap__key,
+    .protyle-wysiwyg span[data-type~=kbd],
+    .b3-typography kbd,
+    .b3-typography span[data-type~=kbd] {
+        border-color: oklch(from currentColor l c h / 0.1);
+        box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.35), inset 0 -0.5px 0 rgba(255, 255, 255, 0.24);
+    }
+}
+// tag
+:root {
+    --neo-tag-color: var(--b3-theme-accent);
+}
 .protyle-wysiwyg [data-node-id] span[data-type~=tag] {
+    padding: 2px 4px;
     @include superellipse(6px);
     background-color: oklch(from currentColor l c h / 0.15);
-    color: var(--b3-theme-accent);
-    border: 1px solid oklch(from currentColor l c h / 0.08);
+    color: var(--neo-tag-color);
+    border: 0.5px solid oklch(from currentColor l c h / 0.15);
     padding: 2px 4px;
     font-size: 0.85em;
     &::before {
@@ -102,49 +121,48 @@
         margin-inline-end: 4px;
     }
     &:hover {
-        background-color: transparent;
-        border-color: oklch(from currentColor l c h / 0.3);
+        background-color: oklch(from currentColor l c h / 0.2);
     }
 }
 // inline-code
+:root {
+    --neo-inline-code-color: var(--b3-theme-on-surface);
+}
 .b3-typography span[data-type~=code],
 .b3-typography code:not(.hljs),
 .protyle-wysiwyg span[data-type~=code],
 .protyle-wysiwyg code:not(.hljs) {
-    color: unset;
-    background-color: oklch(from currentColor l c h / 0.08);
+    color: var(--neo-inline-code-color);
+    background-color: oklch(from currentColor l c h / 0.15);
     padding: 2px 4px;
     @include superellipse(6px);
 }
 // inline-memo
+:root {
+    --neo-inline-memo-color: var(--b3-theme-accent);
+}
 .b3-typography span[data-type~=inline-memo],
 .protyle-wysiwyg span[data-type~=inline-memo] {
-    background-color: oklch(from currentColor l c calc(h + 10) / 0.1);
-    color: var(--b3-theme-accent);
-    border-bottom: none;
+    background-color: oklch(from currentColor l c h / 0.15);
+    color: var(--neo-inline-memo-color);
+    border-bottom: 1.5px solid;
     transition: var(--b3-transition);
-    margin-right: 1em;
     &:hover {
-        background-color: transparent;
+        @include superellipse(1px);
+        background-color: var(--neo-inline-memo-color);
+        box-shadow: 0 0 0 4px var(--neo-inline-memo-color);
+        @include color-reverse(--neo-inline-memo-color);
+        border-color: transparent;
     }
-    &::after {
-        content: "";
-        display: inline-block;
-        position: absolute;
-        width: 1em;
-        height: 1em;
-        mask-image: url("data:image/svg+xml,%3Csvg%20viewBox%3D%220%200%201024%201024%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22M391.478613%20819.2H245.76a54.272%2054.272%200%200%201-38.611627-15.99488A54.24128%2054.24128%200%200%201%20191.146667%20764.586667v-84.077227a302.127787%20302.127787%200%200%201-40.301227-79.530667A283.70944%20283.70944%200%200%201%20136.533333%20512a283.79136%20283.79136%200%200%201%207.6288-65.35168%20291.283627%20291.283627%200%200%201%2021.879467-60.869973%20313.344%20313.344%200%200%201%2034.618027-55.08096%20342.777173%20342.777173%200%200%201%2045.847893-47.991467%20372.268373%20372.268373%200%200%201%2055.569067-39.594667%20397.892267%20397.892267%200%200%201%2063.778133-29.897386A424.649387%20424.649387%200%200%201%20512%20187.733333a424.639147%20424.639147%200%200%201%20146.152107%2025.480534%20397.892267%20397.892267%200%200%201%2063.778133%2029.897386%20372.241067%20372.241067%200%200%201%2055.565653%2039.594667%20342.55872%20342.55872%200%200%201%2045.847894%2047.991467%20312.951467%20312.951467%200%200%201%2034.618026%2055.08096%20291.57376%20291.57376%200%200%201%2021.879467%2060.869973A283.88352%20283.88352%200%200%201%20887.466667%20512a283.866453%20283.866453%200%200%201-7.6288%2065.348267%20291.560107%20291.560107%200%200%201-21.879467%2060.869973%20312.828587%20312.828587%200%200%201-34.618027%2055.08096%20342.295893%20342.295893%200%200%201-45.847893%2047.99488%20372.360533%20372.360533%200%200%201-55.565653%2039.594667%20398.03904%20398.03904%200%200%201-63.778134%2029.897386A424.639147%20424.639147%200%200%201%20512%20836.266667a429.056%20429.056%200%200%201-120.521387-17.066667zM204.8%20512c0%2052.432213%2018.889387%20102.83008%2054.613333%20145.749333V703.146667a47.844693%2047.844693%200%200%200%2047.786667%2047.786666h94.286507a360.628907%20360.628907%200%200%200%20110.516906%2017.066667c169.39008%200%20307.2-114.845013%20307.2-256s-137.813333-256-307.2-256S204.8%20370.845013%20204.8%20512z%20m257.706667%20116.053333a32.426667%2032.426667%200%200%201-32.426667-32.426666%2032.426667%2032.426667%200%200%201%2032.426667-32.426667h98.986666a32.426667%2032.426667%200%200%201%2032.426667%2032.426667%2032.426667%2032.426667%200%200%201-32.426667%2032.426666z%20m-68.266667-163.84a32.426667%2032.426667%200%200%201-32.426667-32.426666%2032.426667%2032.426667%200%200%201%2032.426667-32.426667h235.52a32.426667%2032.426667%200%200%201%2032.426667%2032.426667%2032.426667%2032.426667%200%200%201-32.426667%2032.426666z%22%20fill%3D%22black%22%2F%3E%3C%2Fsvg%3E");
-        mask-size: contain;
-        mask-repeat: no-repeat;
-        mask-position: center;
-        background-color: oklch(from currentColor l c calc(h + 10) / 0.7);
-    } 
 }
 // embed
 .protyle-wysiwyg [data-node-id].render-node[data-type=NodeBlockQueryEmbed] {
     border: unset;
     background-color: oklch(from var(--b3-theme-surface) l c h / 0.7);
-    padding: 4px 12px;
+    padding: 8px 16px;
+    .protyle-wysiwyg__embed {
+        border-color: var(--b3-border-color-trans);
+    }
 }
 // quote
 .b3-typography blockquote,
@@ -153,7 +171,7 @@
 .protyle-wysiwyg .bq {
     @include superellipse(8px);
     background-color: oklch(from var(--b3-theme-surface) l c h / 0.7);
-    padding: 4px 12px;
+    padding: 8px 16px;
     margin: 0.4em 0;
     &::before {
         display: none;
@@ -177,6 +195,7 @@
             border-color: var(--b3-theme-on-background);
             transition: var(--b3-transition);
             opacity: 0.2;
+            left: 16.5px;
         }
         &:hover {
             &::before {
@@ -194,7 +213,7 @@
             color: oklch(from var(--b3-theme-accent) l c h);
             &::after {
                 color: oklch(from var(--b3-theme-accent) l c h);
-                background-color: oklch(from currentColor l c h / 0.12);
+                background-color: oklch(from currentColor l c h / 0.18);
                 width: 1.5em;
                 height: 1.5em;
                 transform: translate(-50%, -50%);
@@ -215,7 +234,7 @@
 .b3-typography .callout,
 .protyle-wysiwyg .callout {
     background-color: oklch(from currentColor l c h / 0.1);
-    padding: 4px 12px;
+    padding: 8px 16px;
     margin: 0.4em 0;
     &::before {
         display: none;
@@ -227,35 +246,74 @@
     &[data-subtype="NOTE"] {
         --b3-callout-note: oklch(from var(--b3-theme-accent) l c 260);
         color: var(--b3-callout-note);
+        --neo-kbd-color: var(--b3-callout-note);
+        --neo-inline-code-color: var(--b3-callout-note);
+        --neo-tag-color: var(--b3-callout-note);
+        --neo-inline-memo-color: var(--b3-callout-note);
     }
     &[data-subtype="TIP"] {
         --b3-callout-tip: oklch(from var(--b3-theme-accent) l c 140);
         color: var(--b3-callout-tip);
+        --neo-kbd-color: var(--b3-callout-tip);
+        --neo-inline-code-color: var(--b3-callout-tip);
+        --neo-tag-color: var(--b3-callout-tip);
+        --neo-inline-memo-color: var(--b3-callout-tip);
     }
     &[data-subtype="IMPORTANT"] {
         --b3-callout-important: oklch(from var(--b3-theme-accent) l c 285);
         color: var(--b3-callout-important);
+        --neo-kbd-color: var(--b3-callout-important);
+        --neo-inline-code-color: var(--b3-callout-important);
+        --neo-tag-color: var(--b3-callout-important);
+        --neo-inline-memo-color: var(--b3-callout-important);
     }
     &[data-subtype="WARNING"] {
         --b3-callout-warning: oklch(from var(--b3-theme-accent) l c 90);
         color: var(--b3-callout-warning);
+        --neo-kbd-color: var(--b3-callout-warning);
+        --neo-inline-code-color: var(--b3-callout-warning);
+        --neo-tag-color: var(--b3-callout-warning);
+        --neo-inline-memo-color: var(--b3-callout-warning);
     }
     &[data-subtype="CAUTION"] {
         --b3-callout-caution: oklch(from var(--b3-theme-accent) l c 30);
         color: var(--b3-callout-caution);
+        --neo-kbd-color: var(--b3-callout-caution);
+        --neo-inline-code-color: var(--b3-callout-caution);
+        --neo-tag-color: var(--b3-callout-caution);
+        --neo-inline-memo-color: var(--b3-callout-caution);
     }
 }
 // table
 .b3-typography table,
 .protyle-wysiwyg table {
-    --b3-table-even-background: oklch(from var(--b3-theme-surface) l c h / 0.7);
+    --b3-table-even-background: oklch(from var(--b3-theme-surface) l c h / 0.5);
+    border: 1px solid var(--b3-border-color-trans);
+    @include superellipse(8px);
     td,
     th {
-        border-color: var(--b3-border-color-trans);
+        border: none;
     }
     thead th,
     thead td {
         background-color: var(--b3-table-even-background);
+    }
+    th {
+        border-bottom: 1px solid var(--b3-border-color-trans);
+        &:not(:last-child) {
+            border-right: 1px solid var(--b3-border-color-trans);
+        }
+    }
+    td {
+        border-bottom: 1px solid var(--b3-border-color-trans);
+        &:not(:last-child) {
+            border-right: 1px solid var(--b3-border-color-trans);
+        }
+    }
+    tr:last-child {
+        td {
+            border-bottom: none;
+        }
     }
 }
 // drag
