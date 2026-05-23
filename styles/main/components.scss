@@ -170,22 +170,22 @@
     &[data-type="2"],
     &[data-type="3"],
     &[data-type="4"] {
-        background-color: oklch(from currentColor l c h / 0.25);
+        background-color: oklch(from currentColor l c h / 0.15);
         &:hover {
             background-color: oklch(from currentColor calc(l + 0.08) c h / 0.25);
         }
     }
     &[data-type="1"] {
-        color: oklch(from var(--b3-theme-accent) l 0.15 30);
+        color: var(--b3-card-error-color);
     }
     &[data-type="2"] {
-        color: oklch(from var(--b3-theme-accent) l 0.15 80);
+        color: var(--b3-card-warning-color);
     }
     &[data-type="3"] {
-        color: oklch(from var(--b3-theme-accent) l 0.15 240);
+        color: var(--b3-card-info-color);
     }
     &[data-type="4"] {
-        color: oklch(from var(--b3-theme-accent) l 0.15 150);
+        color: var(--b3-card-success-color);
     }
 }
 // switch
@@ -224,6 +224,9 @@ $toggle-width: 36px;
             background-color: #ffffff !important;
         }
     }
+}
+[data-theme-mode="dark"] .b3-switch {
+    box-shadow: inset 0 0 0 1px oklch(from var(--b3-theme-on-background) l c h / 0.12);
 }
 // select
 .b3-select {

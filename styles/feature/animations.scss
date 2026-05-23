@@ -3,7 +3,7 @@
 .protyle-title:hover .protyle-title__icon svg {
     transition: color var(--b3-transition);
     animation: neo-gutters-entrance 0.25s cubic-bezier(0.18, 0.89, 0.32, 1.38);
-    animation-delay: calc((sibling-count() - sibling-index()) * 0.05s);
+    animation-delay: calc((sibling-count() - sibling-index()) * 0.03s);
     transform-origin: right bottom;
     animation-fill-mode: both;
     & svg {
@@ -16,7 +16,7 @@
 }
 @keyframes neo-gutters-entrance {
     from {
-        transform: scale(0.55) translateX(5px);
+        transform: scale(0.75) translateX(10px);
         opacity: 0;
     }
     to {
@@ -276,9 +276,9 @@ input[type="radio" i] {
 }
 // swicth
 .b3-switch {
-    transition: 0.5s cubic-bezier(0.18, 0.89, 0.32, 1.48);
+    transition: .5s cubic-bezier(0.01, 1.4, 0.52, 1.48);
     &::after {
-        transition: 0.5s cubic-bezier(0.18, 0.89, 0.32, 1.48);
+        transition: .5s cubic-bezier(0.01, 1.4, 0.52, 1.48);
     }
     &:active {
         &::after {
@@ -353,39 +353,6 @@ $header-parallax: 5vh;
         transform: scale(1.35) translateY($header-parallax);
         filter: blur(1px);
         opacity: 0;
-    }
-}
-// content scroll reveal
-#preview [data-node-id],
-[data-type=NodeBlockQueryEmbed],
-.card__main [data-node-id] {
-    animation: none !important;
-}
-.protyle-wysiwyg [data-node-id],
-.protyle-title {
-    animation: neo-content-scroll-reveal cubic-bezier(0.46, 0.03, 0.52, 0.96) both;
-    animation-timeline: view(block);
-}
-@keyframes neo-content-scroll-reveal {
-    0% {
-        opacity: 0.2;
-        transform: translate(3px, 12px);
-        filter: blur(2px);
-    }
-    15% {
-        opacity: 1;
-        transform: translate(0, 0);
-        filter: blur(0);
-    }
-    85% {
-        opacity: 1;
-        transform: translate(0, 0);
-        filter: blur(0);
-    }
-    100% {
-        opacity: 0.5;
-        transform: translate(-3px, -12px);
-        filter: blur(2px);
     }
 }
 // protyle-scroll

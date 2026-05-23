@@ -19,6 +19,7 @@
     height: auto;
     color: var(--b3-theme-on-surface);
     svg {
+        transition: var(--b3-transition);
         height: 15.5px;
         width: 15.5px;
         padding: 2px;

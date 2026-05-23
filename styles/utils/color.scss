@@ -1,5 +1,5 @@
 @mixin color-reverse($css-var, $property: color) {
-    #{$property}: oklch(from var(#{$css-var}) clamp(0, calc((0.72 - l) * 10000), 1) 0 0 / 0.85);
+    #{$property}: oklch(from var(#{$css-var}) clamp(0, calc((0.72 - l) * 10000), 1) 0 0);
 }
 [data-theme-mode="light"] {
     // 默认色
@@ -50,7 +50,7 @@
     --b3-theme-error: oklch(from var(--b3-base-color) max(l, 0.58) max(c, 0.2) 30);
     --b3-highlight-background: oklch(from var(--b3-base-color) clamp(0.66, l, 0.9) clamp(0.2, c, 1) h);
     --b3-highlight-current-background: oklch(from var(--b3-highlight-background) l c calc(h + 10));
-    --b3-highlight-color: oklch(from var(--b3-highlight-background) clamp(0, calc((0.72 - l) * 10000), 1) 0 0 / 0.85);
+    --b3-highlight-color: oklch(from var(--b3-highlight-background) clamp(0, calc((0.72 - l) * 10000), 1) 0 0);
     --b3-tooltips-second-color: var(--b3-theme-on-surface);
     --b3-protyle-inline-mark-background: #00ff25;
 }
@@ -103,7 +103,51 @@
     --b3-theme-error: oklch(from var(--b3-base-color) max(l, 0.58) max(c, 0.2) 30);
     --b3-highlight-background: oklch(from var(--b3-base-color) clamp(0.66, l, 0.9) clamp(0.2, c, 1) h);
     --b3-highlight-current-background: oklch(from var(--b3-highlight-background) l c calc(h + 10));
-    --b3-highlight-color: oklch(from var(--b3-highlight-background) clamp(0, calc((0.72 - l) * 10000), 1) 0 0 / 0.85);
+    --b3-highlight-color: oklch(from var(--b3-highlight-background) clamp(0, calc((0.72 - l) * 10000), 1) 0 0);
     --b3-tooltips-second-color: var(--b3-theme-on-surface);
     --b3-protyle-inline-mark-background: #00ff25;
+}
+[data-theme-mode="light"] {
+    $font-l-light: min(0.55, l);
+    $background-l-light: min(0.96, l);
+    $font-c-light: 0.18;
+    $background-c-light: 0.08;
+    // 文字颜色
+    --b3-card-error-color: oklch(from var(--b3-theme-accent) #{$font-l-light} #{$font-c-light} 30);
+    --b3-card-error-background: oklch(from var(--b3-theme-background) #{$background-l-light} #{$background-c-light} 30);
+    --b3-card-warning-color: oklch(from var(--b3-theme-accent) #{$font-l-light} #{$font-c-light} 75);
+    --b3-card-warning-background: oklch(from var(--b3-theme-background) #{$background-l-light} #{$background-c-light} 75);
+    --b3-card-info-color: oklch(from var(--b3-theme-accent) #{$font-l-light} #{$font-c-light} 265);
+    --b3-card-info-background: oklch(from var(--b3-theme-background) #{$background-l-light} #{$background-c-light} 265);
+    --b3-card-success-color: oklch(from var(--b3-theme-accent) #{$font-l-light} #{$font-c-light} 145);
+    --b3-card-success-background: oklch(from var(--b3-theme-background) #{$background-l-light} #{$background-c-light} 145);
+    @for $i from 1 through 12 {
+        $hue: $i * 30;
+        --b3-font-color#{$i}: oklch(from var(--b3-theme-accent) #{$font-l-light} #{$font-c-light} #{$hue});
+        --b3-font-background#{$i}: oklch(from var(--b3-theme-background) #{$background-l-light} #{$background-c-light} #{$hue});
+    }
+    --b3-font-color13: oklch(from var(--b3-theme-accent) #{$font-l-light} 0 h);
+    --b3-font-background13:oklch(from var(--b3-theme-background) min(0.92, l) 0 h);
+}
+[data-theme-mode="dark"] {
+    $font-l-dark: max(0.82, l);
+    $background-l-dark: max(0.35, l);
+    $font-c-dark: 0.16;
+    $background-c-dark: 0.05;
+    // 文字颜色
+    --b3-card-error-color: oklch(from var(--b3-theme-accent) #{$font-l-dark} #{$font-c-dark} 30);
+    --b3-card-error-background: oklch(from var(--b3-theme-background) #{$background-l-dark} #{$background-c-dark} 30);
+    --b3-card-warning-color: oklch(from var(--b3-theme-accent) #{$font-l-dark} #{$font-c-dark} 75);
+    --b3-card-warning-background: oklch(from var(--b3-theme-background) #{$background-l-dark} #{$background-c-dark} 75);
+    --b3-card-info-color: oklch(from var(--b3-theme-accent) #{$font-l-dark} #{$font-c-dark} 265);
+    --b3-card-info-background: oklch(from var(--b3-theme-background) #{$background-l-dark} #{$background-c-dark} 265);
+    --b3-card-success-color: oklch(from var(--b3-theme-accent) #{$font-l-dark} #{$font-c-dark} 145);
+    --b3-card-success-background: oklch(from var(--b3-theme-background) #{$background-l-dark} #{$background-c-dark} 145);
+    @for $i from 1 through 12 {
+        $hue: $i * 30;
+        --b3-font-color#{$i}: oklch(from var(--b3-theme-accent) #{$font-l-dark} #{$font-c-dark} #{$hue});
+        --b3-font-background#{$i}: oklch(from var(--b3-theme-background) #{$background-l-dark} #{$background-c-dark} #{$hue});
+    }
+    --b3-font-color13: oklch(from var(--b3-theme-accent) #{$font-l-dark} 0 h);
+    --b3-font-background13:oklch(from var(--b3-theme-on-background) min(0.5, l) 0 h);
 }

@@ -4,10 +4,12 @@
     padding-left: 4px !important;
     padding-right: 4px !important;
 }
-.av__cell [data-type=block-more],
+.av__cell [data-type=block-more] {
+    @include button-primary;
+}
 .b3-button[data-type="av-add-bottom"] {
     @include button-transparent-outline;
-    @include frostedglass($blur: s, $color: background);
+    padding: 3px 6px;
 }
 .av__gallery-item {
     box-shadow: var(--neo-main-shadow-light);
