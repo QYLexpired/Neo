@@ -201,3 +201,22 @@
 .export-img {
     border: unset;
 }
+// selection
+:root {
+    ::selection {
+        color: currentColor;
+        background-color: oklch(from currentColor l c h / 0.28);
+    }
+    .hljs ::selection {
+        color: currentColor;
+        background-color: oklch(from currentColor l c h / 0.28);
+    }
+    .textLayer ::selection {
+        --b3-pdf-selection: oklch(from var(--b3-theme-accent) l c h / 0.5);
+        background: oklch(from var(--b3-theme-accent) l c h / 0.5);
+    }
+    .xfaLayer .highlight.selected {
+        --b3-pdf-selection: oklch(from var(--b3-theme-accent) l c h / 0.5);
+        background: oklch(from var(--b3-theme-accent) l c h / 0.5);
+    }
+}

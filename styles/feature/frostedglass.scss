@@ -257,3 +257,16 @@
 .protyle-wysiwyg .code-block:not(pre) .protyle-action .protyle-icon {
     @include frostedglass($blur: s, $color: transparent);
 }
+// float-dock
+// float
+.layout__dockl,
+.layout__dockr,
+.layout__dockb {
+    &.layout--float {
+        & > .fn__flex {
+            [data-type="wnd"] {
+                @include frostedglass($blur: l, $color: background);
+            }
+        }
+    }
+}

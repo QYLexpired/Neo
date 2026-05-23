@@ -1,5 +1,6 @@
 @use "sass:list";
 @use "../tools" as *;
+@use "../utils" as *;
 // dock
 .dock__item {
     transition: var(--b3-transition);
@@ -140,4 +141,43 @@
           }
         }
     }
+}
+// float
+.layout__dockl,
+.layout__dockr,
+.layout__dockb {
+    &.layout--float {
+        box-shadow: unset;
+        border-radius: unset;
+        background-color: transparent;
+        & > .fn__flex {
+            [data-type="wnd"] {
+                box-shadow: var(--neo-main-shadow-heavy);
+            }
+        }
+        & > .layout__resize.layout__resize--lr {
+            margin: 0 -3px;
+        }
+        & > .layout__resize:not(.layout__resize--lr) {
+            margin: -3px 0;
+        }
+    }
+}
+.layout__dockl,
+.layout__dockr {
+    &.layout--float {
+        top: 32px;
+        bottom: $layout-gap;
+    }
+}
+.body--toolbar-hide {
+    .layout__dockl,
+.layout__dockr {
+    &.layout--float {
+        top: 45px;
+    }
+}
+}
+.layout__dockb.layout--float {
+    bottom: $layout-gap !important;
 }

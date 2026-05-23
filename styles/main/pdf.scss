@@ -1,7 +1,14 @@
 @use "../utils" as *;
 @use "../tools" as *;
+.pdf__toolbar {
+    margin-top: 4px;
+}
 #sidebarContainer {
+    margin-top: 4px;
     background-color: var(--b3-theme-background);
+}
+#viewerContainer {
+    margin-top: 4px;
 }
 #sidebarResizer {
     right: 0;
@@ -35,9 +42,30 @@
         background-color: var(--b3-border-color-trans);
     }
 }
-:root[data-theme-mode=light] .pdf__outer#outerContainer:not(.pdf__outer--dark) .pdfViewer .textLayer {
+[data-theme-mode="light"] #outerContainer:not(.pdf__outer--dark) .textLayer,
+[data-theme-mode="dark"] #outerContainer.pdf__outer--dark .textLayer {
     background-color: var(--b3-theme-background);
 }
-:root[data-theme-mode=dark] .pdf__outer#outerContainer.pdf__outer--dark .pdfViewer .textLayer{
-    background-color: var(--b3-theme-background);
+// pdf标记
+:root {
+    --b3-pdf-background1: oklch(0.85 0.15 30);
+    --b3-pdf-background2: oklch(0.85 0.15 50);
+    --b3-pdf-background3: oklch(0.85 0.15 90);
+    --b3-pdf-background4: oklch(0.85 0.15 150);
+    --b3-pdf-background5: oklch(0.85 0.15 185);
+    --b3-pdf-background6: oklch(0.85 0.15 250);
+    --b3-pdf-background7: oklch(0.85 0.15 280);
+    .pdf__outer--dark {
+        --b3-pdf-background1: oklch(0.55 0.12 30);
+        --b3-pdf-background2: oklch(0.55 0.12 50);
+        --b3-pdf-background3: oklch(0.55 0.12 90);
+        --b3-pdf-background4: oklch(0.55 0.12 150);
+        --b3-pdf-background5: oklch(0.55 0.12 185);
+        --b3-pdf-background6: oklch(0.55 0.12 250);
+        --b3-pdf-background7: oklch(0.55 0.12 280);
+    }
+}
+.pdf__rect > div:first-child,
+.pdf__rect > div:last-child {
+    border-radius: 0;
 }

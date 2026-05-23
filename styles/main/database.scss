@@ -5,7 +5,11 @@
     padding-right: 4px !important;
 }
 .av__cell [data-type=block-more] {
-    @include button-primary;
+    background-color: var(--b3-theme-surface);
+    color: var(--b3-theme-on-surface);
+    &:hover {
+        color: var(--b3-theme-on-background);
+    }
 }
 .b3-button[data-type="av-add-bottom"] {
     @include button-transparent-outline;
@@ -40,4 +44,22 @@
 }
 .av__gallery-cover {
     border-color: var(--b3-border-color-trans);
+}
+// cell
+.av__celltext--url,
+.av__celltext--ref {
+    border-bottom: 1px solid var(--b3-theme-accent);
+    transition: var(--b3-transition);
+    &:hover {
+        color: var(--b3-theme-accent);
+    }
+}
+.av__celltext--url.b3-chip {
+    background-color: transparent;
+    box-shadow: 0 0 0 1px var(--b3-border-color-trans);
+    transition: var(--b3-transition);
+    &:hover {
+        color: var(--b3-theme-accent);
+        box-shadow: 0 0 0 1px oklch(from var(--b3-theme-accent) l c h / 0.25);
+    }
 }

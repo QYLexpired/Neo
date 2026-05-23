@@ -53,6 +53,7 @@
     --b3-highlight-color: oklch(from var(--b3-highlight-background) clamp(0, calc((0.72 - l) * 10000), 1) 0 0);
     --b3-tooltips-second-color: var(--b3-theme-on-surface);
     --b3-protyle-inline-mark-background: #00ff25;
+    --b3-protyle-inline-blockref-color: var(--b3-theme-accent);
 }
 [data-theme-mode="dark"] {
     // 默认色
@@ -106,6 +107,7 @@
     --b3-highlight-color: oklch(from var(--b3-highlight-background) clamp(0, calc((0.72 - l) * 10000), 1) 0 0);
     --b3-tooltips-second-color: var(--b3-theme-on-surface);
     --b3-protyle-inline-mark-background: #00ff25;
+    --b3-protyle-inline-blockref-color: var(--b3-theme-accent);
 }
 [data-theme-mode="light"] {
     $font-l-light: min(0.55, l);
