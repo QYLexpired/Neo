@@ -1,5 +1,7 @@
 Neo is a minimalist SiYuan theme that refines numerous details on top of the native appearance while introducing modern visual features.
-> Requires the Neo+ plugin for the full experience.
+#### Important Notice
+- To ensure optimal performance, some styles depend on the Neo+ plugin. Therefore, the Neo+ plugin must be installed for the theme to display correctly.
+- The Neo+ plugin provides a wide range of color schemes and style extensions for the Neo theme.
 #### Features
 - Strictly built color system using the OKLCH color space, with full support for custom theme colors and color palette expansion
 - Global glassmorphism effects for a transparent and layered look
@@ -10,6 +12,8 @@ Neo is a minimalist SiYuan theme that refines numerous details on top of the nat
 - Super fusion effect introduced in top bar fusion mode
 - Optimized global typography for enhanced Chinese and English reading experience
 - Refined global component styles for a consistent and elegant interface
+- Excellent performance comparable to the default theme
+> Some features depend on the Neo+ plugin.
 #### Notes
 - Neo utilizes a large number of cutting-edge CSS features; full experience is only guaranteed on desktop and Chromium-based browsers.
 #### Acknowledgements
