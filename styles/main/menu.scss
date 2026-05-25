@@ -29,7 +29,8 @@
 @mixin menu-item-current {
     background-color: var(--neo-menu-item-primary);
     &.b3-menu__item--warning,
-    &[data-type="delete-view"] {
+    &[data-type="delete-view"],
+    &[data-type="remove"] {
         --neo-menu-item-primary: var(--b3-theme-error);
     }
     & > .b3-menu__icon,
