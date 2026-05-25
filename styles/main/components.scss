@@ -259,10 +259,7 @@ $toggle-width: 36px;
     top: 50% !important;
 }
 .b3-form__icon.fn__flex-1,
-.b3-form__icona,
-.label:has( > .b3-text-field),
-.b3-label__text:has( > .b3-text-field),
-.custom-attr .block__icons .fn__flex-1:has( > .b3-text-field) {
+.b3-form__icona {
     overflow: visible !important;
 }
 .b3-text-field {

@@ -5,7 +5,7 @@
 .search__layout:not(.search__layout--row) .search__list {
     border-top: none;
 }
-#searchList:not(:has(>.b3-list-item:not([data-type=search-item]))),
+#searchList:not(.neo-hassearchgroup),
 #searchUnRefList,
 #searchAssetList {
     display: grid;

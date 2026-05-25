@@ -18,7 +18,7 @@ body {
 // center
 .layout:not(.layout__center) .layout__center {
     border-radius: unset;
-    .fn__flex:has( > [data-type="wnd"]) {
+    .neo-haswnd {
         margin: calc($layout-gap / 2);
         overflow: visible;
         [data-type="wnd"] {
@@ -31,7 +31,7 @@ body {
 @mixin layout-dockpanel {
     border-radius: unset;
     background-color: unset;
-    & > .fn__flex {
+    .neo-haswnd {
         margin: calc($layout-gap / 2);
         overflow: visible;
         [data-type="wnd"] {
@@ -144,7 +144,7 @@ body {
         margin-bottom: unset;
     }
     .layout:not(.layout__center) .layout__center {
-        .fn__flex:has( > [data-type="wnd"]) {
+        .neo-haswnd {
             margin: unset;
             [data-type="wnd"] {
                 margin: calc($layout-gap / 2);

@@ -238,7 +238,7 @@ input[type="radio" i] {
     }
 }
 // title
-.protyle-title__input {
+.protyle[data-loading="finished"] .protyle-title__input {
     padding-left: 0.8em;
     &::before {
         content: "";
@@ -255,7 +255,7 @@ input[type="radio" i] {
         transition: 0.25s cubic-bezier(0.18, 0.89, 0.32, 1.28);
     }
 }
-.layout__wnd--active .protyle-title__input {
+.layout__wnd--active .protyle[data-loading="finished"] .protyle-title__input {
     &::before {
             width: 0.8em;
             height: 0.8em;
@@ -334,7 +334,7 @@ input[type="radio" i] {
 // parallax scrolling
 $header-height: 40vh;
 $header-parallax: 5vh;
-.protyle-content {
+.protyle[data-loading="finished"] .protyle-content {
     scroll-timeline-name: --protyle-conten-scroll;
     scroll-timeline-axis: block;
     .protyle-background__img {
