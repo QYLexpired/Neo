@@ -122,7 +122,7 @@
 }
 .layout__dockl,
 .layout__dockr {
-    transition: width 0.2s;
+    transition: width 0.2s cubic-bezier(0, 0, .2, 1) 0s;
     //  给dockpanel设置了margin会导致初始化时宽度跳动，暂时无法解决
     //   & > .fn__flex {
     //        transition: display 0.2s;
@@ -130,7 +130,7 @@
     //    }
 }
 .layout__dockb {
-    transition: height 0.2s;
+    transition: height 0.2s cubic-bezier(0, 0, .2, 1) 0s;
     //   & > .fn__flex {
     //        transition: display 0.2s;
     //        transition-behavior: allow-discrete;
