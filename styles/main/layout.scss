@@ -22,7 +22,8 @@ body {
         margin: calc($layout-gap / 2);
         overflow: visible;
         [data-type="wnd"] {
-            @include superellipse(8px);
+            border-radius: 8px;
+            //@include superellipse(8px);
             box-shadow: var(--neo-main-shadow-light);
         }
     }
@@ -35,7 +36,8 @@ body {
         margin: calc($layout-gap / 2);
         overflow: visible;
         [data-type="wnd"] {
-            @include superellipse(8px);
+            border-radius: 8px;
+            //@include superellipse(8px);
             box-shadow: var(--neo-main-shadow-light);
             background-color: var(--b3-theme-background);
             & > .layout-tab-container {
@@ -158,7 +160,8 @@ body {
                     margin-top: calc($layout-gap * -1);
                 }
                 & > .layout-tab-container {
-                    @include superellipse(8px);
+                    border-radius: 8px;
+                    //@include superellipse(8px);
                     box-shadow: var(--neo-main-shadow-light);
                 }
                 .layout-tab-bar {
@@ -169,8 +172,11 @@ body {
     }
     .layout__dockl,
     .layout__dockr {
-        & > :nth-child(1 of .fn__flex:not(.fn__none), .fn__flex-1:not(.fn__none), .fn__flex-column:not(.fn__none)) {
+        .neo-haswnd {
             margin-top: 0;
+        }
+        .neo-haswnd-notfirst-visible {
+            margin-top: calc($layout-gap / 2);
         }
     }
     #dockLeft,

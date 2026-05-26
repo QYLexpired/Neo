@@ -41,6 +41,9 @@
     .separator {
         background-color: var(--b3-border-color-trans);
     }
+    .row {
+        display: flex;
+    }
 }
 [data-theme-mode="light"] #outerContainer:not(.pdf__outer--dark) .textLayer,
 [data-theme-mode="dark"] #outerContainer.pdf__outer--dark .textLayer {

@@ -128,8 +128,8 @@
         --b3-font-color#{$i}: oklch(from var(--b3-theme-accent) #{$font-l-light} #{$font-c-light} #{$hue});
         --b3-font-background#{$i}: oklch(from var(--b3-theme-background) #{$background-l-light} #{$background-c-light} #{$hue});
     }
-    --b3-font-color13: oklch(from var(--b3-theme-accent) #{$font-l-light} 0 h);
-    --b3-font-background13:oklch(from var(--b3-theme-background) min(0.92, l) 0 h);
+    --b3-font-color13: oklch(from var(--b3-theme-accent) min(0.7, l) 0 h);
+    --b3-font-background13:oklch(from var(--b3-theme-background) min(0.935, l) 0 h);
 }
 [data-theme-mode="dark"] {
     $font-l-dark: max(0.82, l);
@@ -150,6 +150,6 @@
         --b3-font-color#{$i}: oklch(from var(--b3-theme-accent) #{$font-l-dark} #{$font-c-dark} #{$hue});
         --b3-font-background#{$i}: oklch(from var(--b3-theme-background) #{$background-l-dark} #{$background-c-dark} #{$hue});
     }
-    --b3-font-color13: oklch(from var(--b3-theme-accent) #{$font-l-dark} 0 h);
-    --b3-font-background13:oklch(from var(--b3-theme-on-background) min(0.5, l) 0 h);
+    --b3-font-color13: oklch(from var(--b3-theme-accent) clamp(0.6, l, 0.7) 0 h);
+    --b3-font-background13:oklch(from var(--b3-theme-on-background) min(0.45, l) 0 h);
 }

@@ -26,13 +26,7 @@
         color: var(--b3-theme-accent);
     }
 }
-@mixin menu-item-current {
-    background-color: var(--neo-menu-item-primary);
-    &.b3-menu__item--warning,
-    &[data-type="delete-view"],
-    &[data-type="remove"] {
-        --neo-menu-item-primary: var(--b3-theme-error);
-    }
+@mixin menu-item-child {
     & > .b3-menu__icon,
     & > .b3-menu__label,
     & > .b3-menu__accelerator,
@@ -40,6 +34,17 @@
     & > .b3-menu__label > .b3-menu__icon,
     & > .b3-menu__action,
     & > .b3-menu__checked {
+        @content;
+    }
+}
+@mixin menu-item-current {
+    background-color: var(--neo-menu-item-primary);
+    &.b3-menu__item--warning,
+    &[data-type="delete-view"],
+    &[data-type="remove"] {
+        --neo-menu-item-primary: var(--b3-theme-error);
+    }
+    @include menu-item-child {
         @include color-reverse(--neo-menu-item-primary);
     }
     & > .b3-switch {
@@ -75,6 +80,11 @@
     &.pdf__util__hide:hover,
     &.secondaryToolbarButton:hover {
         @include menu-item-current;
+    }
+    &[disabled=disabled] {
+        @include menu-item-child {
+            opacity: 0.38;
+        }
     }
 }
 .b3-menu__separator {

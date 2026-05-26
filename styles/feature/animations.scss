@@ -123,17 +123,17 @@
 .layout__dockl,
 .layout__dockr {
     transition: width 0.2s cubic-bezier(0, 0, .2, 1) 0s;
-    & > .fn__flex {
-        transition: display 0.2s cubic-bezier(0, 0, .2, 1) 0s;
-        transition-behavior: allow-discrete;
-    }
+    //& > .fn__flex {
+    //    transition: display 0.2s cubic-bezier(0, 0, .2, 1) 0s;
+    //    transition-behavior: allow-discrete;
+    //}
 }
 .layout__dockb {
     transition: height 0.2s cubic-bezier(0, 0, .2, 1) 0s;
-    & > .fn__flex {
-        transition: display 0.2s cubic-bezier(0, 0, .2, 1) 0s;
-        transition-behavior: allow-discrete;
-    }
+    //& > .fn__flex {
+    //    transition: display 0.2s cubic-bezier(0, 0, .2, 1) 0s;
+    //    transition-behavior: allow-discrete;
+    //}
 }
 // tooltip
 .tooltip {
