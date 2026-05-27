@@ -1,7 +1,7 @@
 @mixin color-reverse($css-var, $property: color) {
     #{$property}: oklch(from var(#{$css-var}) clamp(0, calc((0.72 - l) * 10000), 1) 0 0);
 }
-[data-theme-mode="light"] {
+@mixin light-color {
     // 默认色
     --neo-default-base-color: #6a85e3;
     --neo-default-primary: #6a85e3;
@@ -55,7 +55,7 @@
     --b3-protyle-inline-mark-background: #00ff25;
     --b3-protyle-inline-blockref-color: var(--b3-theme-accent);
 }
-[data-theme-mode="dark"] {
+@mixin dark-color {
     // 默认色
     --neo-default-base-color: #636de1;
     --neo-default-primary: #636de1;
@@ -109,7 +109,7 @@
     --b3-protyle-inline-mark-background: #00ff25;
     --b3-protyle-inline-blockref-color: var(--b3-theme-accent);
 }
-[data-theme-mode="light"] {
+@mixin light-font-color {
     $font-l-light: min(0.55, l);
     $background-l-light: min(0.96, l);
     $font-c-light: 0.18;
@@ -131,7 +131,7 @@
     --b3-font-color13: oklch(from var(--b3-theme-accent) min(0.7, l) 0 h);
     --b3-font-background13:oklch(from var(--b3-theme-background) min(0.935, l) 0 h);
 }
-[data-theme-mode="dark"] {
+@mixin dark-font-color {
     $font-l-dark: max(0.82, l);
     $background-l-dark: max(0.35, l);
     $font-c-dark: 0.16;
@@ -152,4 +152,18 @@
     }
     --b3-font-color13: oklch(from var(--b3-theme-accent) clamp(0.6, l, 0.7) 0 h);
     --b3-font-background13:oklch(from var(--b3-theme-on-background) min(0.45, l) 0 h);
+}
+[data-theme-mode="light"] {
+    @include light-color;
+    @include light-font-color;
+}
+[data-theme-mode="dark"] {
+    @include dark-color;
+    @include dark-font-color;
+    &.neo-invert {
+        --neo-custom-background: oklch(from var(--neo-custom-primary) 0.2 calc(0.008 * var(--neo-custom-saturation, 1)) h) !important;
+        --neo-custom-surface: oklch(from var(--neo-custom-primary) 0.25 calc(0.012 * var(--neo-custom-saturation, 1)) h) !important;
+        @include dark-color;
+        @include dark-font-color;
+    }
 }

@@ -7,6 +7,25 @@
     --neo-menu-item-primary: oklch(from var(--b3-base-color) clamp(0.4, l, 1) c h);
 }
 // menu
+@mixin menu-item-child { // 菜单项的子元素
+    & > .b3-menu__icon,
+    & > .b3-menu__label,
+    & > .b3-menu__accelerator,
+    & > .fn__flex-center,
+    & > .b3-menu__label > .b3-menu__icon,
+    & > .b3-menu__action,
+    & > .b3-menu__checked {
+        @content;
+    }
+}
+@mixin menu-item-warning { // 警告色菜单项
+    &.b3-menu__item--warning,
+    &[data-type="delete-view"],
+    &[data-type="remove"],
+    &[data-id="close"] {
+        @content;
+    }
+}
 .b3-menu,
 .b3-menu__submenu {
     padding: 6px;
@@ -20,28 +39,26 @@
 }
 .b3-menu__item--selected {
     color: var(--b3-theme-accent);
-    & > .b3-menu__icon,
-    & > .b3-menu__label,
-    & > .b3-menu__accelerator {
+    @include menu-item-child {
         color: var(--b3-theme-accent);
     }
 }
-@mixin menu-item-child {
-    & > .b3-menu__icon,
-    & > .b3-menu__label,
-    & > .b3-menu__accelerator,
-    & > .fn__flex-center,
-    & > .b3-menu__label > .b3-menu__icon,
-    & > .b3-menu__action,
-    & > .b3-menu__checked {
+@mixin menu-item-origin { // 特殊的菜单项需要进行变化
+    .b3-text-field {
+        margin: 4px 0;
+    }
+}
+@mixin menu-item-current { // 当前或悬停的菜单项
+    &.b3-menu__item--current:not(.b3-menu__item--readonly),
+    &.b3-menu__item--show:not(.b3-menu__item--readonly),
+    &.pdf__util__hide:hover,
+    &.secondaryToolbarButton:hover {
         @content;
     }
 }
-@mixin menu-item-current {
+@mixin menu-item-current-style { // 当前或悬停的菜单项样式
     background-color: var(--neo-menu-item-primary);
-    &.b3-menu__item--warning,
-    &[data-type="delete-view"],
-    &[data-type="remove"] {
+    @include menu-item-warning  {
         --neo-menu-item-primary: var(--b3-theme-error);
     }
     @include menu-item-child {
@@ -66,20 +83,12 @@
         }
     }
 }
-@mixin menu-item-origin {
-    .b3-text-field {
-        margin: 4px 0;
-    }
-}
 .b3-menu__item {
     line-height: 24px;
     @include superellipse(6px);
     @include menu-item-origin;
-    &.b3-menu__item--current:not(.b3-menu__item--readonly),
-    &.b3-menu__item--show:not(.b3-menu__item--readonly),
-    &.pdf__util__hide:hover,
-    &.secondaryToolbarButton:hover {
-        @include menu-item-current;
+    @include menu-item-current {
+        @include menu-item-current-style;
     }
     &[disabled=disabled] {
         @include menu-item-child {
