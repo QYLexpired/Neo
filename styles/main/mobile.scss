@@ -1,0 +1,82 @@
+@use "../tools" as *;
+.neo-mobile {
+    .side-mask {
+        background-color: transparent;
+    }
+    // status
+    .status {
+        position: unset;
+        corner-shape: unset;
+        border-radius: unset;
+        box-shadow: unset;
+        height: unset;
+        line-height: unset;
+        border: unset;
+        padding: unset;
+        overflow: unset;
+        z-index: unset;
+        max-width: unset;
+    }
+    // menu
+    .b3-menu--fullscreen {
+        padding: 0;
+        &::before {
+            corner-shape: unset;
+            border-radius: unset;
+        }
+        .b3-menu__title {
+            border-bottom: 1px solid var(--b3-border-color-trans);
+            margin-bottom: -50px;
+            background-color: transparent;
+            backdrop-filter: blur(6px);
+            z-index: 1;
+            box-sizing: border-box;
+            height: 50px;
+        }
+        .b3-menu__items {
+            padding: 50px 0 0 0;
+        }
+        .b3-menu__item {
+            background-color: transparent;
+            border: unset;
+        }
+        .b3-menu__separator {
+            background-color: transparent;
+            border: unset;
+        }
+    }
+    // editor
+    & > .toolbar {
+        border-bottom: 1px solid var(--b3-border-color-trans);
+        margin-bottom: -50px;
+        background-color: transparent;
+        backdrop-filter: blur(6px);
+        z-index: 3;
+        box-sizing: border-box;
+        height: 50px;
+    }
+    #editor {
+        background-color: var(--b3-theme-background);
+        padding-top: 50px;
+        --neo-superfusion-offset: 84px !important;
+    }
+    .protyle-breadcrumb__icon {
+        @include frostedglass($blur: l, $color: surface, $alpha: 0.3);
+        text-shadow: 0 0 0.5px var(--b3-theme-background), 0.5px 0.5px 0.5px var(--b3-theme-background);
+    }
+    .protyle-breadcrumb .block__icon {
+        text-shadow: 0 0 0.5px var(--b3-theme-background), 0 0 1px var(--b3-theme-background), 0 0 1px var(--b3-theme-background);
+    }
+    // sidebar
+    #sidebar {
+        @include frostedglass($blur: l, $color: background);
+        & > .toolbar:first-child {
+            border-bottom: 1px solid var(--b3-border-color-trans);
+            box-sizing: border-box;
+            height: 50px;
+        }
+        .toolbar {
+            background-color: transparent;
+        }
+    }
+}
