@@ -155,6 +155,18 @@
         .item__img {
             @include superellipse(12px);
         }
+        color: var(--b3-theme-on-surface);
+        a {
+            &[title="Creator"],
+            &[title="GitHub Repo"],
+            &[title="Stars"],
+            &[title="Open issues"] {
+                color: var(--b3-theme-on-surface);
+            }
+            &.item__title {
+                color: var(--b3-theme-on-background);
+            }
+        }
     }
     .item__main {
         margin: 0;

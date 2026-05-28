@@ -1,4 +1,4 @@
-@mixin frostedglass($blur: l, $color: background) {
+@mixin frostedglass($blur: l, $color: background, $alpha: 0.6) {
     $blur-value: 20px;
     @if $blur == s {
         $blur-value: 6px;
@@ -15,11 +15,12 @@
     } @else if $color == menu {
         $color-var: --b3-menu-background;
     }
-    background-color: oklch(from var(#{$color-var}) l c h / 0.7) !important;
-    backdrop-filter: blur(#{$blur-value}) saturate(1.8) brightness(1.1);
     @at-root {
         [data-theme-mode="dark"] & {
+            background-color: oklch(from var(#{$color-var}) l c h / 0.7) !important;
             backdrop-filter: blur(#{$blur-value}) saturate(1.8) brightness(0.9);
         }
     }
+    background-color: oklch(from var(#{$color-var}) l c h / #{$alpha}) !important;
+    backdrop-filter: blur(#{$blur-value}) saturate(1.8) brightness(1.1);
 }

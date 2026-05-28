@@ -1,6 +1,5 @@
 @use "../tools" as *;
-[data-type="wnd"] > .layout-tab-container > .protyle,
-.search__preview.protyle {
+.protyle {
     --neo-superfusion-offset: 42px;
     .protyle-scroll {
         top: calc(30px + var(--neo-superfusion-offset));
@@ -35,6 +34,10 @@
     }
     & > .protyle-content {
         margin-top: calc(var(--neo-superfusion-offset) * -1 + 6px);
+        padding-top: var(--neo-superfusion-offset);
+        .protyle-background {
+            margin-top: calc(var(--neo-superfusion-offset) * -1);
+        }
         .protyle-background__img {
             &::after {
                 content: "";

@@ -10,7 +10,7 @@
 }
 // status
 .status {
-    @include frostedglass($blur: s, $color: background);
+    @include frostedglass($blur: s, $color: surface, $alpha: 0.5);
 }
 // menu
 .b3-menu,
@@ -30,7 +30,7 @@
     background-color: transparent;
     &::before {
         @include frostedglass-before;
-        @include frostedglass($blur: s, $color: menu);
+        @include frostedglass($blur: s, $color: surface, $alpha: 0.5);
         box-shadow: var(--b3-menu-shadow);
     }
 }
@@ -59,6 +59,14 @@
 // dialog
 .b3-dialog__scrim {
     background-color: transparent;
+}
+.b3-dialog__loading {
+    background-color: transparent;
+    &::before {
+        @include frostedglass-before;
+        @include frostedglass($blur: l, $color: background);
+        box-shadow: var(--b3-dialog-shadow);
+    }
 }
 .b3-dialog__container {
     background-color: transparent;

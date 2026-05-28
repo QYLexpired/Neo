@@ -65,6 +65,9 @@
         border: none;
     }
 }
+a {
+    --b3-theme-primary: var(--b3-theme-accent);
+}
 // inline-mark
 .b3-typography mark,
 .b3-typography span[data-type~=mark],
