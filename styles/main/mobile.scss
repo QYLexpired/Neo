@@ -1,18 +1,22 @@
 @use "../tools" as *;
+@use "components" as *;
 .neo-mobile {
+    --neo-mobile-toolbar-title-height: 50px;
     .side-mask {
         background-color: transparent;
     }
     // status
     .status {
-        position: unset;
+        position: fixed;
+        top: unset;
+        bottom: 0;
         corner-shape: unset;
         border-radius: unset;
         box-shadow: unset;
-        height: unset;
-        line-height: unset;
+        height: 26px;
+        line-height: 26px;
         border: unset;
-        padding: unset;
+        padding: 0 6px;
         overflow: unset;
         z-index: unset;
         max-width: unset;
@@ -26,15 +30,15 @@
         }
         .b3-menu__title {
             border-bottom: 1px solid var(--b3-border-color-trans);
-            margin-bottom: -50px;
+            margin-bottom: calc(var(--neo-mobile-toolbar-title-height) * -1);
             background-color: transparent;
             backdrop-filter: blur(6px);
             z-index: 1;
             box-sizing: border-box;
-            height: 50px;
+            height: var(--neo-mobile-toolbar-title-height);
         }
         .b3-menu__items {
-            padding: 50px 0 0 0;
+            padding: var(--neo-mobile-toolbar-title-height) 0 0 0;
         }
         .b3-menu__item {
             background-color: transparent;
@@ -48,24 +52,40 @@
     // editor
     & > .toolbar {
         border-bottom: 1px solid var(--b3-border-color-trans);
-        margin-bottom: -50px;
+        margin-bottom: calc(var(--neo-mobile-toolbar-title-height) * -1);
         background-color: transparent;
         backdrop-filter: blur(6px);
         z-index: 3;
         box-sizing: border-box;
-        height: 50px;
+        height: var(--neo-mobile-toolbar-title-height);
     }
     #editor {
         background-color: var(--b3-theme-background);
-        padding-top: 50px;
-        --neo-superfusion-offset: 84px !important;
-    }
-    .protyle-breadcrumb__icon {
-        @include frostedglass($blur: l, $color: surface, $alpha: 0.3);
-        text-shadow: 0 0 0.5px var(--b3-theme-background), 0.5px 0.5px 0.5px var(--b3-theme-background);
-    }
-    .protyle-breadcrumb .block__icon {
-        text-shadow: 0 0 0.5px var(--b3-theme-background), 0 0 1px var(--b3-theme-background), 0 0 1px var(--b3-theme-background);
+        padding-top: var(--neo-superfusion-breadcrumb-padding-offset);
+        & > .protyle-breadcrumb {
+            margin-top: 0;
+            padding-top: calc(var(--neo-superfusion-breadcrumb-height) + var(--neo-superfusion-breadcrumb-padding-offset) * 2);
+            .protyle-breadcrumb__icon {
+                transition: var(--b3-transition);
+                padding: 4px 8px;
+                line-height: 16px;
+                width: max-content;
+                @include button-transparent-outline;
+                color: var(--b3-theme-accent);
+                text-shadow: 0 0 0.5px var(--b3-theme-background), 0.5px 0.5px 0.5px var(--b3-theme-background);
+                &:hover,
+                &:focus {
+                    color: var(--b3-theme-accent);
+                }
+            }
+            .protyle-breadcrumb .block__icon {
+                text-shadow: 0 0 0.5px var(--b3-theme-background), 0 0 1px var(--b3-theme-background), 0 0 1px var(--b3-theme-background);
+            }
+        }
+        & > .protyle-content {
+            margin-top: -84px;
+            padding-top: calc(var(--neo-superfusion-breadcrumb-height) + var(--neo-mobile-toolbar-title-height));
+        }
     }
     // sidebar
     #sidebar {
@@ -73,10 +93,60 @@
         & > .toolbar:first-child {
             border-bottom: 1px solid var(--b3-border-color-trans);
             box-sizing: border-box;
-            height: 50px;
+            height: var(--neo-mobile-toolbar-title-height);
         }
         .toolbar {
             background-color: transparent;
         }
+    }
+    // model
+    #model {
+        background-color: transparent;
+        &::before {
+            @include frostedglass-before;
+            @include frostedglass($blur: l, $color: background);
+        }
+        & > .toolbar--border {
+            border-bottom: 1px solid var(--b3-border-color-trans);
+            margin-bottom: calc(var(--neo-mobile-toolbar-title-height) * -1);
+            background-color: transparent;
+            backdrop-filter: blur(6px);
+            z-index: 99;
+            box-sizing: border-box;
+            height: var(--neo-mobile-toolbar-title-height);
+        }
+        #modelMain {
+            padding: var(--neo-mobile-toolbar-title-height) 0 0 0;
+        }
+    }
+    // keyboard
+    #keyboardToolbar {
+        background-color: var(--b3-theme-surface);
+        border-top: 1px solid var(--b3-border-color-trans);
+    }
+    .keyboard__bar {
+        border-bottom: 1px solid var(--b3-border-color-trans);
+    }
+    .keyboard__split {
+        background-color: var(--b3-border-color-trans);
+    }
+    .keyboard__util {
+        padding: 6px;
+    }
+    .keyboard__slash-item {
+        @include superellipse(12px);
+        background-color: transparent;
+        box-shadow: inset 0 0 0 1px var(--b3-border-color-trans);
+        color: var(--b3-theme-on-surface);
+    }
+    // icon
+    .toolbar__icon {
+        @include superellipse(8px);
+    }
+    .toolbar__icon--active,
+    .toolbar__icon:not(.toolbar__icon-deactivate):focus,
+    .toolbar__icon:not(.toolbar__icon-deactivate):hover {
+        background-color: transparent;
+        box-shadow: var(--neo-main-shadow-heavy);
     }
 }

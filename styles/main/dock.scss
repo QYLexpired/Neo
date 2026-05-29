@@ -44,10 +44,7 @@
     }
 }
 .block__logo {
-    color: var(--b3-theme-on-surface-light);
-    & ~ .block__icon {
-        color: var(--b3-theme-on-surface-light);
-    }
+    color: var(--b3-theme-on-surface);
 }
 // 文档树缩进线
 .file-tree {

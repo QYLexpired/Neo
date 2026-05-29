@@ -134,6 +134,9 @@
         @include superellipse(6px);
     }
 }
+.protyle-toolbar__divider {
+    border-color: var(--b3-border-color-trans);
+}
 // protyle-hint
 .protyle-hint {
     padding: 6px;
@@ -204,10 +207,12 @@
     .emojis__type {
         @include icon;
         @include superellipse(12px);
-        transition: var(--b3-transition);
+        transition: 0.3s cubic-bezier(0.18, 0.89, 0.32, 1.48);
         &:hover {
             filter: saturate(1.5) brightness(1.05);
+            scale: 1.25;
             background-color: transparent;
+            box-shadow: none;
         }
     }
     .emojis__panel + .fn__flex {
@@ -222,6 +227,12 @@
         width: 36px;
         margin: 4px;
         padding: unset;
+        transition: 0.3s cubic-bezier(0.18, 0.89, 0.32, 1.48);
+        &:hover {
+            filter: saturate(1.5) brightness(1.05);
+            scale: 1.25;
+            box-shadow: none;
+        }
     }
 }
 // slash

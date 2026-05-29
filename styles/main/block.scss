@@ -18,9 +18,6 @@
             margin-top: 1.2em;
             line-height: 1.5;
             &[fold="1"] {
-                outline: 1px solid oklch(from currentColor l c h / 0.25);
-                background-color: oklch(from currentColor l c h / 0.15);
-                opacity: 0.5;
                 &::before {
                     opacity: 0;
                 }
@@ -461,4 +458,10 @@ a {
 .protyle-wysiwyg [data-node-id].hr > div::after {
     background-color: oklch(from var(--b3-theme-on-background) l c h / 0.12);
     height: 1.5px;
+}
+// fold
+.protyle-wysiwyg [data-node-id][fold="1"]:not(.li) {
+    outline: 1px solid oklch(from currentColor l c h / 0.25);
+    background-color: oklch(from currentColor l c h / 0.15);
+    opacity: 0.38 !important; // 卷轴动画会覆盖opacity
 }

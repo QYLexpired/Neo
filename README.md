@@ -1,4 +1,4 @@
-Neo is a minimalist SiYuan theme that refines numerous details on top of the native appearance while introducing modern visual features.
+Neo is a minimalist SiYuan theme that refines numerous details on top of the default appearance while introducing modern visual features.
 #### Important Notice
 - To ensure optimal performance, some styles depend on the Neo+ plugin. Therefore, the Neo+ plugin must be installed for the theme to display correctly.
 - The Neo+ plugin provides a wide range of color schemes and style extensions for the Neo theme.
@@ -13,6 +13,7 @@ Neo is a minimalist SiYuan theme that refines numerous details on top of the nat
 - Super fusion effect seamlessly blends breadcrumbs with the main content
 - Optimized global typography for enhanced Chinese and English reading experience
 - Refined global component styles for a consistent and elegant interface
+- Global transparent glass effect on mobile
 - Excellent performance comparable to the default theme
 > Some features depend on the Neo+ plugin.
 #### Acknowledgements

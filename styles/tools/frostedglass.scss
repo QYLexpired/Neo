@@ -1,4 +1,4 @@
-@mixin frostedglass($blur: l, $color: background, $alpha: 0.6) {
+@mixin frostedglass($blur: l, $color: background, $alpha: 0.65) {
     $blur-value: 20px;
     @if $blur == s {
         $blur-value: 6px;
@@ -23,4 +23,13 @@
     }
     background-color: oklch(from var(#{$color-var}) l c h / #{$alpha}) !important;
     backdrop-filter: blur(#{$blur-value}) saturate(1.8) brightness(1.1);
+}
+@mixin frostedglass-before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    border-radius: inherit;
+    corner-shape: inherit;
+    pointer-events: none;
 }

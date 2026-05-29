@@ -1,16 +1,7 @@
 @use "../tools" as *;
-@mixin frostedglass-before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    z-index: -1;
-    border-radius: inherit;
-    corner-shape: inherit;
-    pointer-events: none;
-}
 // status
 .status {
-    @include frostedglass($blur: s, $color: surface, $alpha: 0.5);
+    @include frostedglass($blur: s, $color: surface);
 }
 // menu
 .b3-menu,
@@ -30,7 +21,7 @@
     background-color: transparent;
     &::before {
         @include frostedglass-before;
-        @include frostedglass($blur: s, $color: surface, $alpha: 0.5);
+        @include frostedglass($blur: s, $color: surface);
         box-shadow: var(--b3-menu-shadow);
     }
 }
@@ -110,22 +101,11 @@
         .protyle-breadcrumb {
             background-color: transparent;
         }
-        // 修复部分窗口毛玻璃失效
-        .protyle-wysiwyg [data-node-id] {
-            z-index: 1; 
-        }
-        .protyle-background {
-            z-index: 1;
-        }
     }
     .fullscreen {
         @include frostedglass($blur: l, $color: background);
         .protyle-breadcrumb {
             background-color: transparent;
-        }
-        // 修复部分窗口毛玻璃失效
-        .protyle-wysiwyg [data-node-id] {
-            z-index: 1; 
         }
     }
     .layout-tab-bar + .fn__flex-1 {
@@ -171,10 +151,6 @@
             background-color: transparent;
             .protyle-breadcrumb {
                 background-color: transparent;
-            }
-            // 修复部分窗口毛玻璃失效
-            .protyle-wysiwyg [data-node-id] {
-                z-index: 1; 
             }
         }
     }
