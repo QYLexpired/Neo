@@ -1,8 +1,8 @@
 @mixin color-reverse($var, $property: color, $alpha: 1) {
     #{$property}: oklch(
         from var(#{$var})
-        clamp(0.2, calc(0.5 + (0.72 - l) * 30), 1)
-        calc(c * clamp(0.3, 0.5 + (l - 0.72) * 15, 1.0))
+        clamp(0.18, calc(0.515 - sign(l - 0.72) * 0.455), 1)
+        clamp(0, calc(c * 0.50 + 0.04 + sign(l - 0.72) * (c * 0.55 + 0.12)), 0.30)
         h / #{$alpha}
     );
 }
