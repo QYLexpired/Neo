@@ -172,3 +172,6 @@
         @include dark-font-color;
     }
 }
+:root {
+    accent-color: var(--b3-theme-accent);
+}

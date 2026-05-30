@@ -1,5 +1,6 @@
 Neo 是一款極致簡約的思源筆記主題，在原生外觀基礎上優化大量細節，並引入現代化的視覺特性
 #### 重要提醒
+- 僅適配思源 3.7.0 開發版或更高版本
 - 為保證主題的最佳性能，部分樣式依賴 Neo+ 插件實現，因此必須搭配 Neo+ 插件使用，否則無法正常顯示
 - Neo+ 插件為 Neo 主題提供了大量配色、樣式擴展
 - Neo 主題使用了大量前沿 CSS 特性，僅保證在桌面端與 Chromium 內核瀏覽器上的完整體驗
@@ -13,7 +14,7 @@ Neo 是一款極致簡約的思源筆記主題，在原生外觀基礎上優化�
 - 引入超級融合效果，將麵包屑與正文無縫融合
 - 優化全域文字排版，提升中英文閱讀體驗
 - 重構全域組件樣式，帶來一致且優雅的介面風格
-- 手機端全域通透玻璃效果
+- 為手機端添加全域通透玻璃效果
 - 媲美預設主題的優異性能
 > 部分特性依賴 Neo+ 插件
 #### 致謝
@@ -22,3 +23,4 @@ Neo 是一款極致簡約的思源筆記主題，在原生外觀基礎上優化�
 - [Cupertino](https://github.com/aaaaalexis/obsidian-cupertino)
 - [Border](https://github.com/akifyss/obsidian-border)
 - [Rem Craft](https://github.com/svchord/Rem-Craft)
+- [Savor](https://github.com/royc01/notion-theme)

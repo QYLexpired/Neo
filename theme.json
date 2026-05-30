@@ -2,8 +2,8 @@
   "name": "Neo",
   "author": "QYL",
   "url": "https://github.com/QYLexpired/Neo",
-  "version": "1.0.13",
-  "minAppVersion": "3.7.0",
+  "version": "1.0.14",
+  "minAppVersion": "3.6.5",
   "displayName": {
     "default": "Neo"
   },

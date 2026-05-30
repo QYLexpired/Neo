@@ -240,6 +240,7 @@ $toggle-width: 36px;
     width: max-content;
     min-width: 75px;
     field-sizing: content;
+    transition: var(--b3-transition);
     &:hover {
         background-color: var(--b3-list-hover);
         box-shadow: unset;
@@ -272,6 +273,7 @@ $toggle-width: 36px;
     box-shadow: unset;
     width: max-content;
     min-width: 75px;
+    transition: var(--b3-transition);
     &:hover {
         box-shadow: unset !important;
     }
@@ -292,6 +294,7 @@ textarea.b3-text-field {
     overflow-y: auto;
     height: unset;
     transition-property: box-shadow;
+    transition: var(--b3-transition);
 }
 .search__header .b3-text-field {
     box-shadow: none !important;

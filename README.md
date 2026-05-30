@@ -1,5 +1,6 @@
 Neo is a minimalist SiYuan theme that refines numerous details on top of the default appearance while introducing modern visual features.
 #### Important Notice
+- Only compatible with SiYuan 3.7.0 dev version or higher
 - To ensure optimal performance, some styles depend on the Neo+ plugin. Therefore, the Neo+ plugin must be installed for the theme to display correctly.
 - The Neo+ plugin provides a wide range of color schemes and style extensions for the Neo theme.
 - Neo utilizes a large number of cutting-edge CSS features; full experience is only guaranteed on desktop and Chromium-based browsers.
@@ -13,7 +14,7 @@ Neo is a minimalist SiYuan theme that refines numerous details on top of the def
 - Super fusion effect seamlessly blends breadcrumbs with the main content
 - Optimized global typography for enhanced Chinese and English reading experience
 - Refined global component styles for a consistent and elegant interface
-- Global transparent glass effect on mobile
+- Added global transparent glass effect for mobile
 - Excellent performance comparable to the default theme
 > Some features depend on the Neo+ plugin.
 #### Acknowledgements
@@ -22,3 +23,4 @@ The creation of the Neo theme drew significant inspiration from the following pr
 - [Cupertino](https://github.com/aaaaalexis/obsidian-cupertino)
 - [Border](https://github.com/akifyss/obsidian-border)
 - [Rem Craft](https://github.com/svchord/Rem-Craft)
+- [Savor](https://github.com/royc01/notion-theme)
