@@ -54,12 +54,22 @@
         color: var(--b3-theme-accent);
     }
 }
+.av__cell .b3-chip {
+    outline: 1px solid oklch(from currentColor l c h / 0.2);
+}
 .av__celltext--url.b3-chip {
     background-color: transparent;
-    box-shadow: 0 0 0 1px var(--b3-border-color-trans);
+    outline: 1px solid var(--b3-border-color-trans);
     transition: var(--b3-transition);
     &:hover {
         color: var(--b3-theme-accent);
-        box-shadow: 0 0 0 1px oklch(from var(--b3-theme-accent) l c h / 0.25);
+        outline: 1px solid oklch(from currentColor l c h / 0.2);
     }
+}
+.av__layout-item {
+    @include superellipse(10px);
+    border-color: var(--b3-border-color-trans);
+}
+.av__layout-item--select {
+    color: var(--b3-theme-accent);
 }

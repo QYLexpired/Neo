@@ -28,14 +28,14 @@
 }
 .b3-menu,
 .b3-menu__submenu {
-    padding: 6px;
+    padding: 0;
     border: unset;
     box-shadow: unset;
     overflow: unset;
     @include superellipse(10px);
 }
 .b3-menu__items {
-    padding: 0;
+    padding: 6px;
 }
 .b3-menu__item--selected {
     color: var(--b3-theme-accent);
@@ -49,10 +49,11 @@
     }
 }
 @mixin menu-item-current { // 当前或悬停的菜单项
-    &.b3-menu__item--current:not(.b3-menu__item--readonly),
+    &.b3-menu__item--current:not(.b3-menu__item--readonly):not([data-type=nobg]),
     &.b3-menu__item--show:not(.b3-menu__item--readonly),
     &.pdf__util__hide:hover,
-    &.secondaryToolbarButton:hover {
+    &.secondaryToolbarButton:hover,
+    .av__panel &:not([data-type=nobg]):hover {
         @content;
     }
 }
@@ -65,20 +66,24 @@
         @include color-reverse(--neo-menu-item-primary);
     }
     & > .b3-switch {
-        outline: 1px solid oklch(from var(--neo-menu-item-primary) clamp(0, calc((0.72 - l) * 10000), 1) 0 0/ 0.7);
+        outline: 1px solid;
+        @include color-reverse(--neo-menu-item-primary, outline-color, 0.5);
         transition: none;
     }
     & > .b3-text-field {
-        box-shadow: 0 0 0 2px oklch(from var(--neo-menu-item-primary) clamp(0, calc((0.72 - l) * 10000), 1) 0 0/ 0.5) !important;
+        @include color-reverse(--neo-menu-item-primary, --_b3-text-field-box-shadow-reverse, 0.5);
+        box-shadow: 0 0 0 2px var(--_b3-text-field-box-shadow-reverse) !important;
         @include color-reverse(--neo-menu-item-primary);
     }
     & > .b3-menu__label {
         .b3-switch {
-            outline: 1px solid oklch(from var(--neo-menu-item-primary) clamp(0, calc((0.72 - l) * 10000), 1) 0 0/ 0.7);
+            outline: 1px solid;
+            @include color-reverse(--neo-menu-item-primary, outline-color, 0.5);
             transition: none;
         }
         .b3-text-field {
-            box-shadow: 0 0 0 2px oklch(from var(--neo-menu-item-primary) clamp(0, calc((0.72 - l) * 10000), 1) 0 0/ 0.5) !important;
+            @include color-reverse(--neo-menu-item-primary, --_b3-text-field-box-shadow-reverse, 0.5);
+            box-shadow: 0 0 0 2px var(--_b3-text-field-box-shadow-reverse) !important;
             @include color-reverse(--neo-menu-item-primary);
         }
     }
@@ -139,7 +144,7 @@
 }
 // protyle-hint
 .protyle-hint {
-    padding: 6px;
+    padding: 8px;
     @include superellipse(10px);
     border: unset;
     box-shadow: unset;
@@ -157,7 +162,7 @@
 }
 // protyle-util
 .protyle-util {
-    padding: 6px;
+    padding: 0;
     @include superellipse(10px);
     border: unset;
     box-shadow: unset;
@@ -170,6 +175,9 @@
                 box-shadow: none !important;
             }
         }
+    }
+    & > .fn__flex-column {
+        padding-top: 8px;
     }
 }
 .color__square:hover:not(.color__square--list):not(.color__square--current),
@@ -240,6 +248,7 @@
     .protyle-hint.hint--menu {   
         max-height: min(80vh, 550px);
         max-width: unset;
+        padding: 6px;
         & > div {
             min-width: $min-width;
             column-rule: 1px outset var(--b3-border-color-trans);

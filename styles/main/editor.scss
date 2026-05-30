@@ -9,6 +9,9 @@
 .protyle-breadcrumb {
     background-color: transparent;
 }
+.protyle-breadcrumb__bar {
+    @include overflow-indicator-fadein-mask($fadeout-size-m, "left right");
+}
 .protyle-breadcrumb__arrow {
     color: var(--b3-theme-on-surface);
 }
