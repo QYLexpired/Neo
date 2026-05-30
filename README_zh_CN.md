@@ -22,3 +22,4 @@ Neo是一款极致简约的思源笔记主题，在原生外观基础上优化�
 - [Cupertino](https://github.com/aaaaalexis/obsidian-cupertino)
 - [Border](https://github.com/akifyss/obsidian-border)
 - [Rem Craft](https://github.com/svchord/Rem-Craft)
+- [Savor](https://github.com/royc01/notion-theme)
