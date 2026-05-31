@@ -153,10 +153,10 @@
 }
 // ratio
 input[type="radio" i] {
-    animation: neo-ratio-entrance 0.25s cubic-bezier(0.18, 0.89, 0.32, 1.7);
+    animation: neo-ratio-entrance 0.25s cubic-bezier(0.18, 0.89, 0.32, 1.48);
     transform-origin: center;
     &:checked {
-        animation: neo-ratio-checked-entrance 0.25s cubic-bezier(0.18, 0.89, 0.32, 1.7);
+        animation: neo-ratio-checked-entrance 0.25s cubic-bezier(0.18, 0.89, 0.32, 1.48);
     }
 }
 @keyframes neo-ratio-entrance {
@@ -169,7 +169,7 @@ input[type="radio" i] {
 }
 @keyframes neo-ratio-checked-entrance {
     from {
-        transform: scale(0.8);
+        transform: scale(1.2);
     }
     to {
         transform: scale(1);
@@ -178,13 +178,13 @@ input[type="radio" i] {
 // task
 .protyle-wysiwyg .li[data-subtype=t] > .protyle-action--task {
     &::before {
-        animation: neo-task-entrance 0.15s cubic-bezier(0.18, 0.89, 0.32, 1.7);
+        animation: neo-task-entrance 0.25s cubic-bezier(0.18, 0.89, 0.32, 1.48);
         transform-origin: center;
     }
 }
 .protyle-wysiwyg .li[data-subtype=t].protyle-task--done > .protyle-action--task {
     &::before {
-        animation: neo-task-done-entrance 0.15s cubic-bezier(0.18, 0.89, 0.32, 1.7);
+        animation: neo-task-done-entrance 0.25s cubic-bezier(0.18, 0.89, 0.32, 1.48);
     }
 }
 @keyframes neo-task-entrance {

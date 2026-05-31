@@ -162,7 +162,7 @@ a {
 .protyle-wysiwyg [data-node-id].render-node[data-type=NodeBlockQueryEmbed] {
     border: unset;
     background-color: oklch(from var(--b3-theme-surface) l c h / 0.7);
-    padding: 8px 16px;
+    padding: 10px 16px;
     .protyle-wysiwyg__embed {
         border-color: var(--b3-border-color-trans);
     }
@@ -174,7 +174,7 @@ a {
 .protyle-wysiwyg .bq {
     @include superellipse(8px);
     background-color: oklch(from var(--b3-theme-surface) l c h / 0.7);
-    padding: 8px 16px;
+    padding: 10px 16px;
     margin: 0.4em 0;
     &::before {
         display: none;
@@ -237,7 +237,7 @@ a {
 .b3-typography .callout,
 .protyle-wysiwyg .callout {
     background-color: oklch(from currentColor l c h / 0.1);
-    padding: 8px 16px;
+    padding: 16px 16px 10px 16px;
     margin: 0.4em 0;
     &::before {
         display: none;

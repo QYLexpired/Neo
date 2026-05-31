@@ -31,7 +31,8 @@
 .search__layout--row,
 .block__edit,
 .config__side,
-.search__list {
+.search__list,
+.history__panel {
     --b3-border-color: var(--b3-border-color-trans) !important;
     border-color: var(--b3-border-color-trans) !important;
 }

@@ -64,6 +64,11 @@
     }
     @include menu-item-child {
         @include color-reverse(--neo-menu-item-primary);
+        @include color-reverse(--neo-menu-item-primary, --b3-callout-note);
+        @include color-reverse(--neo-menu-item-primary, --b3-callout-tip);
+        @include color-reverse(--neo-menu-item-primary, --b3-callout-important);
+        @include color-reverse(--neo-menu-item-primary, --b3-callout-warning);
+        @include color-reverse(--neo-menu-item-primary, --b3-callout-caution);
     }
     & > .b3-switch {
         outline: 1px solid;
