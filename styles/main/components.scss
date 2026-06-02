@@ -78,12 +78,12 @@
     &--text {
         padding: 4px 12px;
         line-height: 16px;
-        @include button-primary;
+        @include button-transparent;
     }
     &--cancel {
         padding: 4px 12px;
         line-height: 16px;
-        @include button-transparent-outline;
+        @include button-transparent;
     }
     &--remove,
     &#removeAll,
@@ -96,27 +96,26 @@
         width: 100%;
     }
 }
+.b3-dialog__action {
+    .b3-button--text {
+        @include button-primary;
+    }
+    .b3-button--cancel {
+        @include button-transparent-outline;
+    }
+}
 .config-bazaar__title {
     .b3-button {
         padding: 2px 4px;
-        min-width: unset;;
-        &--outline {
-            color: var(--b3-theme-on-surface);
-            background-color: transparent;
-            &:hover,
-            &:active,
-            &:focus {
-                color: var(--b3-theme-on-background);
-                box-shadow: none;
-            }
-        }
+        min-width: unset;
+        @include button-transparent;
         &:not(.b3-button--outline) {
+            @include button-transparent;
             color: var(--b3-theme-accent);
-            background-color: transparent;
             &:hover,
             &:active,
             &:focus {
-                box-shadow: none;
+                color: var(--b3-theme-accent);
             }
         }
         &[data-type="install-all"] {
