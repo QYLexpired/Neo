@@ -60,8 +60,10 @@
     @include button-transparent-outline;
     color: var(--b3-theme-accent);
     &:hover,
+    &:active,
     &:focus {
-        color: var(--b3-theme-accent);
+        @include button-primary;
+        text-shadow: none !important;
     }
 }
 [data-subtype="unlock"] {
