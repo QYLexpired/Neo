@@ -5,7 +5,7 @@
 .search__layout:not(.search__layout--row) .search__list {
     border-top: none;
 }
-#searchList:not(.neo-hassearchgroup),
+#searchList.neo-notsearchgroup,
 #searchUnRefList,
 #searchAssetList {
     display: grid;

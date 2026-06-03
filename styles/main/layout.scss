@@ -82,6 +82,16 @@ body {
     @include layout-dockpanel;
     overflow: visible !important;
 }
+#dockLeft.fn__none {
+    & + #layouts {
+        & > .fn__flex-1:first-child {
+            margin-bottom: calc($layout-gap / 2) !important;
+        }
+        & > .layout__resize:not(.fn__none) + .layout__dockb {
+            margin: calc($layout-gap / 2) $layout-gap !important;
+        }
+    }
+}
 // resize
 .layout__resize {
     &:not(.layout__resize--lr) {
