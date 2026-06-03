@@ -82,13 +82,19 @@ body {
     @include layout-dockpanel;
     overflow: visible !important;
 }
+.layout__dockl {
+    margin-right: 0 !important;
+}
+.layout__dockr {
+    margin-left: 0 !important;
+}
+.layout__dockb {
+    margin-top: 0 !important;
+}
 #dockLeft.fn__none {
     & + #layouts {
-        & > .fn__flex-1:first-child {
-            margin-bottom: calc($layout-gap / 2) !important;
-        }
         & > .layout__resize:not(.fn__none) + .layout__dockb {
-            margin: calc($layout-gap / 2) $layout-gap !important;
+            margin: 0 $layout-gap !important;
         }
     }
 }
@@ -136,17 +142,17 @@ body {
     }
 }
 .layout__dockl + .layout__resize {
-    margin-left: calc($layout-gap * -1);
+    margin: 0;
     width: calc($layout-gap / 2);
     @include layout-resize-fix;
 }
 .layout__center + .layout__resize {
-    margin-right: calc($layout-gap * -1);
+    margin: 0;
     width: calc($layout-gap / 2);
     @include layout-resize-fix;
 }
 .layout:not(.layout__center) > .layout__resize {
-    margin-bottom: calc($layout-gap * -1);
+    margin: 0;
     height: calc($layout-gap / 2);
     @include layout-resize-fix;
 }
