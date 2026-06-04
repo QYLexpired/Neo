@@ -118,7 +118,14 @@
 .sy__outline {
     .b3-list-item[data-type="NodeHeading"] {
         .b3-list-item__graphic {
-            visibility: hidden;
+            opacity: 0;
+            &:hover {
+                & + .b3-list-item__text {
+                    &::before {
+                        opacity: 1;
+                    }
+                }
+            }
         }
         .b3-list-item__text {
             &::before {
@@ -129,6 +136,7 @@
                 pointer-events: none;
                 font-family: "Segoe UI";
                 color: currentColor;
+                transition: var(--b3-transition);
             }
         }
         $heading-numbers: "❶", "❷", "❸", "❹", "❺", "❻";
