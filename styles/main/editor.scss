@@ -161,13 +161,16 @@
     right: -10px;
     top: 0;
     padding: 2px 6px;
-    color: var(--b3-theme-on-surface);
-    background-color: oklch(from currentColor l c h / 0.1);
+    color: var(--b3-theme-accent);
+    background-color: oklch(from currentColor l c h / 0.12);
     transition: var(--b3-transition);
     &:hover {
         color: var(--b3-theme-accent);
-        background-color: oklch(from currentColor l c h / 0.1);
+        background-color: oklch(from currentColor l c h / 0.18);
     }
+}
+.protyle-attr > div:not(.protyle-attr--refcount) {
+    transition: var(--b3-transition);
 }
 // layout__empty
 .layout__empty {

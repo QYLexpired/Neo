@@ -3,22 +3,24 @@
 .layout__center {
     anchor-name: --anchor-layout-center;
 }
-.status {
-    position: absolute;
-    bottom: calc(anchor(--anchor-layout-center bottom) + $layout-gap * 1.5);
-    right: calc(anchor(--anchor-layout-center right) + $layout-gap * 1.5);
-    @include superellipse(24px);
-    box-shadow: var(--neo-main-shadow-heavy);
-    height: 26px;
-    line-height: 26px;
-    border: unset;
-    padding: 0 2px;
-    overflow: hidden;
-    z-index: 3;
-    max-width: max(anchor-size(--anchor-layout-center) - 16px, 200px);
-    .toolbar__item {
-        &:hover {
-            box-shadow: none;
+@supports (bottom: anchor(--a bottom)) {
+    .status {
+        position: absolute;
+        bottom: calc(anchor(--anchor-layout-center bottom) + $layout-gap * 1.5);
+        right: calc(anchor(--anchor-layout-center right) + $layout-gap * 1.5);
+        @include superellipse(24px);
+        box-shadow: var(--neo-main-shadow-heavy);
+        height: 26px;
+        line-height: 26px;
+        border: unset;
+        padding: 0 2px;
+        overflow: hidden;
+        z-index: 3;
+        max-width: max(anchor-size(--anchor-layout-center) - 16px, 200px);
+        .toolbar__item {
+            &:hover {
+                box-shadow: none;
+            }
         }
     }
 }

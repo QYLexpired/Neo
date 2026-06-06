@@ -1,10 +1,15 @@
+[data-theme-mode="light"] {
+    --_color-reverse-l-limit: clamp(0.12, calc(0.515 - sign(l - 0.72) * 0.455), 1);
+}
+[data-theme-mode="dark"] {
+    --_color-reverse-l-limit: clamp(0, calc(0.515 - sign(l - 0.72) * 0.455), 0.97);
+}
+
 @mixin color-reverse($var, $property: color, $alpha: 1) {
-    #{$property}: oklch(
-        from var(#{$var})
-        clamp(0.12, calc(0.515 - sign(l - 0.72) * 0.455), 1)
-        clamp(0, calc(c * 0.50 + 0.04 + sign(l - 0.72) * (c * 0.55 + 0.12)), 0.30)
-        h / #{$alpha}
-    );
+    #{$property}: oklch(from var(#{$var}) clamp(0, calc((0.72 - l) * 10000), 1) 0 0 / #{$alpha});
+    @supports (color: oklch(from red calc(sign(l - 0.72) * 1%) c h)) {
+        #{$property}: oklch(from var(#{$var}) var(--_color-reverse-l-limit) clamp(0, calc(c * 0.50 + 0.04 + sign(l - 0.72) * (c * 0.55 + 0.12)), 0.30) h / #{$alpha});
+    }
 }
 @mixin light-color {
     // 默认色
