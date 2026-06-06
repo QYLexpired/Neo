@@ -4,7 +4,6 @@
 [data-theme-mode="dark"] {
     --_color-reverse-l-limit: clamp(0, calc(0.515 - sign(l - 0.72) * 0.455), 0.97);
 }
-
 @mixin color-reverse($var, $property: color, $alpha: 1) {
     #{$property}: oklch(from var(#{$var}) clamp(0, calc((0.72 - l) * 10000), 1) 0 0 / #{$alpha});
     @supports (color: oklch(from red calc(sign(l - 0.72) * 1%) c h)) {

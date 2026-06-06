@@ -62,7 +62,8 @@
     &:hover,
     &:active,
     &:focus {
-        @include button-primary;
+        background-color: var(--neo-menu-item-primary);
+        @include color-reverse(--neo-menu-item-primary);
         text-shadow: none !important;
     }
 }

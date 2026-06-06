@@ -34,7 +34,8 @@
     overflow: unset;
     @include superellipse(10px);
 }
-.b3-menu__items {
+.b3-menu__items,
+.pdf__util {
     padding: 6px;
 }
 .b3-menu__item--selected {
@@ -45,7 +46,7 @@
 }
 @mixin menu-item-origin { // 特殊的菜单项需要进行变化
     .b3-text-field {
-        margin: 4px 0;
+        margin: 6px 0;
     }
 }
 @mixin menu-item-current { // 当前或悬停的菜单项

@@ -134,9 +134,10 @@ a {
 .b3-typography span[data-type~=code],
 .b3-typography code:not(.hljs),
 .protyle-wysiwyg span[data-type~=code],
-.protyle-wysiwyg code:not(.hljs) {
+.protyle-wysiwyg code:not(.hljs),
+.fn__code {
     color: var(--neo-inline-code-color);
-    background-color: oklch(from currentColor l c h / 0.12);
+    background-color: oklch(from currentColor l c h / 0.1);
     padding: 2px 4px;
     @include superellipse(6px);
 }

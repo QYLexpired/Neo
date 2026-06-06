@@ -258,10 +258,6 @@ $toggle-width: 36px;
     transform: translateY(-50%);
     top: 50% !important;
 }
-.b3-form__icon.fn__flex-1,
-.b3-form__icona {
-    overflow: visible !important;
-}
 .b3-text-field {
     @include superellipse(7px);
     height: 24px;

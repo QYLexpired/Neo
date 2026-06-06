@@ -1,0 +1,82 @@
+@use "../tools" as *;
+@use "../utils" as *;
+// all tem !!!!!
+.agent-chat__messages {
+    @include overflow-indicator-fadein-mask($fadeout-size-l, "top bottom");
+}
+.agent-welcome__example {
+    @include superellipse(10px);
+    border: unset;
+    background-color: var(--b3-list-hover);
+    &:hover {
+        background-color: var(--b3-list-hover);
+        color: var(--b3-theme-on-background);
+    }
+}
+.agent-chat__thinking-card {
+    @include superellipse(8px);
+    border: 1px solid var(--b3-border-color-trans);
+    color: var(--b3-theme-on-surface);
+}
+.agent-chat__thinking-body {
+    color: var(--b3-theme-on-surface);
+    background-color: transparent;
+    border-top: 1px solid var(--b3-border-color-trans);
+}
+.agent-chat__input-area {
+    @include superellipse(12px);
+    background-color: transparent;
+    border: 1px solid var(--b3-border-color-trans);
+}
+.agent-composer__pm {
+    color: var(--b3-theme-on-background);
+}
+.agent-chat__msg--user .agent-chat__bubble {
+    @include superellipse(10px);
+    border: unset;
+    background-color: var(--b3-list-hover);
+    color: var(--b3-theme-on-background);
+}
+.agent-chat__msg--ai .agent-chat__bubble {
+    @include superellipse(10px);
+    border: unset;
+    background-color: transparent;
+    color: var(--b3-theme-on-background);
+}
+.agent-chat__tool-card {
+    @include superellipse(8px);
+    border: 1px solid var(--b3-border-color-trans);
+}
+.agent-chat__tool-header {
+    color: var(--b3-theme-on-surface);
+    transition: var(--b3-transition);
+    &:hover {
+        background-color: var(--b3-list-hover);
+    }
+}
+.agent-chat__tool-body {
+    color: var(--b3-theme-on-surface);
+    background-color: transparent;
+    border-top: 1px solid var(--b3-border-color-trans);
+}
+.agent-chat__todo-header {
+    padding: 4px 8px;
+    background-color: transparent;
+    border-bottom: 1px solid var(--b3-border-color-trans);
+}
+.agent-chat__confirm-card {
+    @include superellipse(8px);
+    border: 1px solid var(--b3-border-color-trans);
+}
+.agent-chat__confirm-header {
+    padding: 4px 8px;
+    background-color: transparent;
+    color: var(--b3-theme-on-surface);
+}
+.agent-chat__confirm-args {
+    background-color: transparent;
+    border-top: 1px solid var(--b3-border-color-trans);
+}
+.agent-chat__confirm-actions {
+    border-top: 1px solid var(--b3-border-color-trans);
+}
