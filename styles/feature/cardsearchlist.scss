@@ -6,7 +6,7 @@
     border-top: none;
 }
 #searchList.neo-cardsearchlist,
-#searchUnRefList,
+#searchUnRefList.neo-cardsearchlist,
 #searchAssetList.neo-cardsearchlist {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
