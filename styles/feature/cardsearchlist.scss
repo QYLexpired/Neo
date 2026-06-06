@@ -5,9 +5,9 @@
 .search__layout:not(.search__layout--row) .search__list {
     border-top: none;
 }
-#searchList.neo-notsearchgroup,
+#searchList.neo-cardsearchlist,
 #searchUnRefList,
-#searchAssetList {
+#searchAssetList.neo-cardsearchlist {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     grid-auto-rows: max-content;

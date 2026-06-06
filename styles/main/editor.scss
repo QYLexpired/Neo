@@ -99,6 +99,11 @@
         }
     }
 }
+.protyle-background__icon {
+    &:hover {
+        opacity: 1;
+    }
+}
 // protyle-icons
 .protyle-icons,
 .av__gallery-actions {

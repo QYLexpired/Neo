@@ -5,8 +5,8 @@
 }
 .status {
     position: absolute;
-    bottom: calc(anchor(--anchor-layout-center bottom) + $layout-gap);
-    right: calc(anchor(--anchor-layout-center right) + $layout-gap);
+    bottom: calc(anchor(--anchor-layout-center bottom) + $layout-gap * 1.5);
+    right: calc(anchor(--anchor-layout-center right) + $layout-gap * 1.5);
     @include superellipse(24px);
     box-shadow: var(--neo-main-shadow-heavy);
     height: 26px;

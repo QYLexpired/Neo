@@ -225,7 +225,7 @@
         @include superellipse(12px);
         transition: 0.3s cubic-bezier(0.18, 0.89, 0.32, 1.48);
         &:hover {
-            filter: saturate(1.5) brightness(1.05);
+            filter: url(#neo-neon-emoji) saturate(1.5) brightness(1.02);
             scale: 1.25;
             background-color: transparent;
             box-shadow: none;
@@ -245,7 +245,7 @@
         padding: unset;
         transition: 0.3s cubic-bezier(0.18, 0.89, 0.32, 1.48);
         &:hover {
-            filter: saturate(1.5) brightness(1.05);
+            filter: url(#neo-neon-emoji) saturate(1.5) brightness(1.02);
             scale: 1.25;
             box-shadow: none;
         }
