@@ -3,7 +3,7 @@
 @use "../utils" as *;
 .b3-dialog__container {
     border: unset;
-    box-shadow: unset;
+    box-shadow: var(--b3-dialog-shadow-blur);
     @include superellipse(16px);
 }
 .b3-dialog__close {
@@ -265,6 +265,9 @@
         }
     }
 }
+.search__history-icon {
+    transition: var(--b3-transition);
+}
 .search__preview {
     border-top: none;
 }
@@ -312,7 +315,7 @@
 // popover
 .block__popover.block__popover--open {
     border: unset;
-    box-shadow: unset;
+    box-shadow: var(--b3-dialog-shadow-blur);
     @include superellipse(12px);
 }
 // 闪卡

@@ -30,8 +30,7 @@
 .b3-menu__submenu {
     padding: 0;
     border: unset;
-    box-shadow: unset;
-    overflow: unset;
+    box-shadow: var(--b3-menu-shadow-blur);
     @include superellipse(10px);
 }
 .b3-menu__items,
@@ -123,7 +122,7 @@
 .protyle-toolbar {
     @include superellipse(16px);
     border: unset;
-    box-shadow: unset;
+    box-shadow: var(--b3-menu-shadow-blur);
     padding: 6px;
 }
 .protyle-toolbar__item {
@@ -153,8 +152,7 @@
     padding: 8px;
     @include superellipse(10px);
     border: unset;
-    box-shadow: unset;
-    overflow: unset;
+    box-shadow: var(--b3-menu-shadow-blur);
     & > .b3-text-field {
         margin: 0 0 6px 0 !important;
         width: unset;
@@ -171,7 +169,7 @@
     padding: 0;
     @include superellipse(10px);
     border: unset;
-    box-shadow: unset;
+    box-shadow: var(--b3-menu-shadow-blur);
     & .block__icons--menu {
         background-color: transparent;
         & + .b3-text-field {

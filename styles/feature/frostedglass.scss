@@ -10,7 +10,7 @@
     &::before {
         @include frostedglass-before;
         @include frostedglass($blur: l, $color: menu);
-        box-shadow: var(--b3-menu-shadow);
+        box-shadow: var(--b3-menu-shadow-inset);
     }
 }
 .b3-menu__item {
@@ -22,7 +22,7 @@
     &::before {
         @include frostedglass-before;
         @include frostedglass($blur: s, $color: surface);
-        box-shadow: var(--b3-menu-shadow);
+        box-shadow: var(--b3-menu-shadow-inset);
     }
 }
 // protyle-hint
@@ -31,7 +31,7 @@
     &::before {
         @include frostedglass-before;
         @include frostedglass($blur: l, $color: menu);
-        box-shadow: var(--b3-menu-shadow);
+        box-shadow: var(--b3-menu-shadow-inset);
     }
 }
 // protyle-util
@@ -40,7 +40,7 @@
     &::before {
         @include frostedglass-before;
         @include frostedglass($blur: l, $color: menu);
-        box-shadow: var(--b3-menu-shadow);
+        box-shadow: var(--b3-menu-shadow-inset);
     }
 }
 // fullscreen
@@ -56,7 +56,7 @@
     &::before {
         @include frostedglass-before;
         @include frostedglass($blur: l, $color: background);
-        box-shadow: var(--b3-dialog-shadow);
+        box-shadow: var(--b3-dialog-shadow-inset);
     }
 }
 .b3-dialog__container {
@@ -64,7 +64,7 @@
     &::before {
         @include frostedglass-before;
         @include frostedglass($blur: l, $color: background);
-        box-shadow: var(--b3-dialog-shadow);
+        box-shadow: var(--b3-dialog-shadow-inset);
     }
     .b3-dialog__content {
         background-color: transparent !important;
@@ -132,7 +132,7 @@
     &::before {
         @include frostedglass-before;
         @include frostedglass($blur: l, $color: background);
-        box-shadow: var(--b3-dialog-shadow);
+        box-shadow: var(--b3-dialog-shadow-inset);
     }
 }
 // popover
@@ -141,7 +141,7 @@
     &::before {
         @include frostedglass-before;
         @include frostedglass($blur: l, $color: background);
-        box-shadow: var(--b3-dialog-shadow);
+        box-shadow: var(--b3-dialog-shadow-inset);
     }
     .block__icons {
         background-color: transparent;
