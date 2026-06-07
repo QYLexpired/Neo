@@ -280,7 +280,7 @@
     }
     &:hover {
         &::after {
-            background-color: $resize-hl;
+            background-color: var(--_resize-hl);
         }
     }
 }
@@ -298,7 +298,7 @@
     }
     &:hover {
         &::after {
-            background-color: $resize-hl;
+            background-color: var(--_resize-hl);
         }
     }
 }
@@ -306,7 +306,7 @@
 .history__resize {
     transition: var(--b3-transition);
     &:hover {
-        box-shadow: 2px 0 0 0 var(--b3-theme-background) inset, 3px 0 0 0 $resize-hl inset;
+        box-shadow: 2px 0 0 0 var(--b3-theme-background) inset, 3px 0 0 0 var(--_resize-hl) inset;
     }
 }
 // popover

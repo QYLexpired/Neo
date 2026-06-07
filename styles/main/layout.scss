@@ -112,7 +112,7 @@ body {
         }
         &:hover {
             &::after {
-                background-color: $resize-hl;
+                background-color: var(--_resize-hl);
             }
         }
     }
@@ -128,7 +128,7 @@ body {
         }
         &:hover {
             &::after {
-                background-color: $resize-hl;
+                background-color: var(--_resize-hl);
             }
         }
     }
@@ -143,7 +143,7 @@ body {
             }
             &:hover {
                 &::after {
-                    background-color: $resize-hl;
+                    background-color: var(--_resize-hl);
                 } 
             }
         }
@@ -155,7 +155,7 @@ body {
             }
             &:hover {
                 &::after {
-                    background-color: $resize-hl;
+                    background-color: var(--_resize-hl);
                 } 
             }
         }
