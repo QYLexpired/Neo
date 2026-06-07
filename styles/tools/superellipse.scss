@@ -7,6 +7,9 @@ $k: 1.4;
     @each $i in $r {
         $out: list.append($out, $i * $k, space);
     }
-    corner-shape: superellipse($k);
-    border-radius: $out;
+    border-radius: $r;
+    @supports (corner-shape: superellipse(1.4)) {
+        corner-shape: superellipse($k);
+        border-radius: $out;
+    }
 }

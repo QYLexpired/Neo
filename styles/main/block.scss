@@ -76,7 +76,7 @@ a {
 }
 // kbd
 :root {
-    --neo-kbd-color: var(--b3-theme-on-surface);
+    --neo-kbd-color: inherit;
 }
 .search__tip kbd,
 .config-keymap__key,
@@ -129,7 +129,7 @@ a {
 }
 // inline-code
 :root {
-    --neo-inline-code-color: var(--b3-theme-on-surface);
+    --neo-inline-code-color: inherit;
 }
 .b3-typography span[data-type~=code],
 .b3-typography code:not(.hljs),

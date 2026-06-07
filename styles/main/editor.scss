@@ -52,7 +52,7 @@
         }
     }
 }
-[data-type="exit-focus"] {
+.protyle-breadcrumb__icon[data-type="exit-focus"] {
     transition: var(--b3-transition);
     padding: 4px 8px;
     line-height: 16px;
@@ -65,9 +65,10 @@
         background-color: var(--neo-menu-item-primary);
         @include color-reverse(--neo-menu-item-primary);
         text-shadow: none !important;
+        box-shadow: unset;
     }
 }
-[data-subtype="unlock"] {
+.block__icon[data-subtype="unlock"] {
     color: var(--b3-theme-accent) !important;
 }
 // protyle-background
@@ -100,9 +101,12 @@
         }
     }
 }
-.protyle-background__icon {
+.protyle-background--enable .protyle-background__icon {
+    transition: 0.3s cubic-bezier(0.18, 0.89, 0.32, 1.48);
     &:hover {
         opacity: 1;
+        scale: 1.035;
+        filter: saturate(1.5) brightness(1.02);
     }
 }
 // protyle-icons

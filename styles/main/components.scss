@@ -96,7 +96,8 @@
         width: 100%;
     }
 }
-.b3-dialog__action {
+.b3-dialog__action,
+.config-account__center {
     .b3-button--text {
         @include button-primary;
     }

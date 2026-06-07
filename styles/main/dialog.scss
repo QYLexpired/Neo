@@ -127,13 +127,10 @@
         @include superellipse(16px);
         background-color: transparent;
         transition: var(--b3-transition);
-        &:hover,
-        &.b3-card--current {
-            box-shadow: inset 0 0 0 1px oklch(from var(--neo-input-primary) l c h / 0.25);
-            background-color: oklch(from var(--neo-input-primary) l c h / 0.08);
-        }
+        &.b3-card--current,
         &:hover {
-            scale: 1.02;
+            box-shadow: inset 0 0 0 1px oklch(from var(--neo-input-primary) l c h / 0.3);
+            background-color: oklch(from var(--neo-input-primary) l c h / 0.1);
         }
         .b3-card__img {
             margin-left: unset;

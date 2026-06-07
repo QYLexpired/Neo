@@ -104,6 +104,7 @@ body {
         margin: 0;
         height: calc($layout-gap / 2);
         &::after {
+            content: "" !important;
             height: 1px;
             top: 50%;
             transform: translateY(-50%);
@@ -119,6 +120,7 @@ body {
         margin: 0;
         width: calc($layout-gap / 2);
         &::after {
+            content: "" !important;
             width: 1px;
             left: 50%;
             transform: translateX(-50%);
@@ -131,30 +133,45 @@ body {
         }
     }
 }
-@mixin layout-resize-fix {
-    &::after {
-        content: "";
-    }
-    &:hover {
-        &::after {
-            background-color: $resize-hl;
+.body--window .layout__center {
+    .layout__resize {
+        &:not(.layout__resize--lr) {
+            margin: -1.5px 0;
+            height: calc($layout-gap / 2);
+            &::after {
+                background-color: var(--b3-border-color-trans);
+            }
+            &:hover {
+                &::after {
+                    background-color: $resize-hl;
+                } 
+            }
+        }
+        &--lr {
+            margin: 0 -1.5px;
+            width: calc($layout-gap / 2);
+            &::after {
+                background-color: var(--b3-border-color-trans);
+            }
+            &:hover {
+                &::after {
+                    background-color: $resize-hl;
+                } 
+            }
         }
     }
 }
 .layout__dockl + .layout__resize {
     margin: 0;
     width: calc($layout-gap / 2);
-    @include layout-resize-fix;
 }
 .layout__center + .layout__resize {
     margin: 0;
     width: calc($layout-gap / 2);
-    @include layout-resize-fix;
 }
 .layout:not(.layout__center) > .layout__resize {
     margin: 0;
     height: calc($layout-gap / 2);
-    @include layout-resize-fix;
 }
 // toolbar-hide
 .body--toolbar-hide {
@@ -206,6 +223,12 @@ body {
             .dock__item:last-child {
                 margin-bottom: $layout-gap;
             }
+        }
+    }
+    .layout__center .layout__resize {
+        &:not(.layout__resize--lr) {
+            margin-top: calc($layout-gap / -2);
+            height: calc($layout-gap * 2);
         }
     }
     .layout__resize--lr {

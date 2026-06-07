@@ -50,6 +50,8 @@
 // dialog
 .b3-dialog__scrim {
     background-color: transparent;
+    backdrop-filter: blur(2px);
+    z-index: -2;
 }
 .b3-dialog__loading {
     background-color: transparent;
