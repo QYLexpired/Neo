@@ -170,8 +170,13 @@
     @include dark-color;
     @include dark-font-color;
     &.neo-palette-invert {
+        --neo-default-background: #1e2227 !important;
+        --neo-default-surface: #282c34 !important;
+        --neo-default-on-background: #e7eaef !important;
+        --neo-default-on-surface: #b1afb8 !important;
         --neo-custom-background: oklch(from var(--neo-custom-primary) 0.2 calc(0.008 * var(--neo-saturation, 1)) h) !important;
         --neo-custom-surface: oklch(from var(--neo-custom-primary) 0.25 calc(0.012 * var(--neo-saturation, 1)) h) !important;
+        --neo-custom-on-background: oklch(from var(--neo-custom-primary) 0.95 calc(0.008 * var(--neo-saturation, 1)) h) !important;
         @include dark-color;
         @include dark-font-color;
     }

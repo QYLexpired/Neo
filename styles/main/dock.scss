@@ -186,3 +186,9 @@
 .layout__dockb.layout--float {
     bottom: $layout-gap !important;
 }
+// dockpanel
+.dockPanel {
+    & > .block__icons ~ .fn__flex-1 {
+        @include overflow-indicator-fadein-mask($fadeout-size-l, "top bottom");
+    }
+}

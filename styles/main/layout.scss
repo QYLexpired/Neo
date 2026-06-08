@@ -40,13 +40,6 @@ body {
             //@include superellipse(8px);
             box-shadow: var(--neo-main-shadow-light);
             background-color: var(--b3-theme-background);
-            & > .layout-tab-container {
-                .dockPanel {
-                    & > .fn__flex-1 {
-                        @include overflow-indicator-fadein-mask($fadeout-size-l, "top bottom");
-                    }
-                }
-            }
         }
     }
 }
