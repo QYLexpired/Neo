@@ -1,7 +1,9 @@
 @use "../tools" as *;
 // status
-.status {
-    @include frostedglass($blur: s, $color: surface);
+@supports (bottom: anchor(--a bottom)) {
+    .status {
+        @include frostedglass($blur: s, $color: surface);
+    }
 }
 // menu
 .b3-menu,
@@ -72,13 +74,17 @@
         background-color: transparent !important;
     }
     .config__tab-wrap {
-        background-color: transparent;
+        background-color: transparent !important; // 部分插件显式设置背景色
         .config__tab-container {
-            background-color: transparent;
+            background-color: transparent !important;
         }
     }
+    .config__search-wrap {
+        background-color: transparent !important; // 部分插件显式设置背景色  
+        border: none !important;
+    }
     .config__panel {
-        background-color: transparent;
+        background-color: transparent !important; // 部分插件显式设置背景色
     }
     .config__side,
     .config__panel .b3-tab-bar {

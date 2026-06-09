@@ -1,4 +1,8 @@
 Neo is a minimalist SiYuan theme that refines numerous details on top of the default appearance while introducing modern visual features.
+#### Update Notes
+- Fixed Kmind plugin popup not visible issue
+- Added frosted glass effect to some plugin settings pages
+- Improved compatibility with certain plugins
 #### Important Notice
 - Only compatible with SiYuan 3.7.0 dev version or higher
 - To ensure optimal performance, some styles depend on the Neo+ plugin. Therefore, the Neo+ plugin must be installed for the theme to display correctly.

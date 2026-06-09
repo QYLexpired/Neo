@@ -14,6 +14,7 @@
 @mixin button-primary {
     background-color: var(--neo-button-primary);
     @include color-reverse(--neo-button-primary);
+    @include color-reverse(--neo-button-primary-hover, --b3-theme-on-primary); // 兼容插件显式设置的按钮颜色
     box-shadow: none;
     transition: var(--b3-transition);
     &:hover,
@@ -51,6 +52,20 @@
         box-shadow: inset 0 0 0 1px var(--b3-border-color-trans);
     }
 }
+@mixin button-transparent-outline-primary {
+    background-color: transparent;
+    color: var(--b3-theme-on-surface);
+    box-shadow: inset 0 0 0 1px var(--b3-border-color-trans);
+    transition: var(--b3-transition);
+    &:hover,
+    &:active,
+    &:focus {
+        --neo-button-primary-hover: oklch(from var(--neo-button-primary) calc(l + 0.0225 + 0.0575 * sign(0.680000001 - l)) c h);
+        background-color: var(--neo-button-primary-hover);
+        @include color-reverse(--neo-button-primary-hover);
+        box-shadow: none;
+    }
+}
 @mixin button-warning {
     background-color: var(--b3-theme-error);
     @include color-reverse(--b3-theme-error);
@@ -73,7 +88,7 @@
     @include superellipse(7px);
     @include button-primary;
     &--outline {
-        @include button-primary;
+        @include button-transparent-outline-primary;
     }
     &--text {
         padding: 4px 12px;
@@ -92,8 +107,16 @@
         line-height: 16px;
         @include button-warning;
     }
+    &--primary { // 部分插件自定义的按钮种类
+        @include button-primary;
+    }
     &.fn__block {
         width: 100%;
+    }
+}
+.config__tab-wrap {
+    .b3-button--outline {
+        @include button-primary;
     }
 }
 .b3-dialog__action,
@@ -125,7 +148,7 @@
         }
     }
 }
-#criteria {
+.search__header {
     .b3-button--outline {
         @include button-transparent-outline;
     }
