@@ -192,3 +192,16 @@
         @include overflow-indicator-fadein-mask($fadeout-size-l, "top bottom");
     }
 }
+// graph
+.graph__panel {
+    @include frostedglass($blur: m, $color: menu);
+    @include superellipse(8px);
+    border: unset;
+    top: 50px;
+    bottom: 8px;
+    opacity: 1;
+    box-shadow: var(--neo-main-shadow-heavy);
+    &[style*="right"] {
+        right: 8px !important;
+    }
+}

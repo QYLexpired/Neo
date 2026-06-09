@@ -106,6 +106,7 @@
     &:hover {
         opacity: 1;
         scale: 1.035;
+        transform: translateY(-5px);
         filter: saturate(1.5) brightness(1.02);
     }
 }
