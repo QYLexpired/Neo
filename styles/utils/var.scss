@@ -6,10 +6,10 @@
 }
 [data-theme-mode="light"] {
     // shadow
-    --b3-menu-shadow-blur: 0 0 0 1px oklch(from var(--b3-theme-on-background) l c h / 0.075), 0 2px 18px oklch(from var(--b3-theme-on-background) l c h / 0.25);
+    --b3-menu-shadow-blur: 0 0 0 1px oklch(from var(--b3-theme-on-background) l c h / 0.1), 0 2px 18px oklch(from var(--b3-theme-on-background) l c h / 0.25);
     --b3-menu-shadow-inset: 0 0 0 1px rgba(255, 255, 255, 0.35) inset, 1px 2px 1px -1px rgba(255, 255, 255, 0.35) inset,-1px -2px 1px -1px rgba(255, 255, 255, 0.35) inset;
     --b3-menu-shadow: var(--b3-menu-shadow-blur), var(--b3-menu-shadow-inset);
-    --b3-dialog-shadow-blur: 0 0 0 1px oklch(from var(--b3-theme-on-background) l c h / 0.075), 0 2px 30px oklch(from var(--b3-theme-on-background) l c h / 0.45);
+    --b3-dialog-shadow-blur: 0 0 0 1px oklch(from var(--b3-theme-on-background) l c h / 0.1), 0 2px 30px oklch(from var(--b3-theme-on-background) l c h / 0.45);
     --b3-dialog-shadow-inset: 0 0 0 1px oklch(from var(--b3-theme-on-background) l c h / 0.075) inset;
     --b3-dialog-shadow: var(--b3-dialog-shadow-blur), var(--b3-dialog-shadow-inset);
     --neo-main-shadow-light: 0 0 1px oklch(from var(--b3-theme-on-background) l c h / 0.3), 0 0 4px oklch(from var(--b3-theme-on-background) l c h / 0.08);
@@ -17,8 +17,8 @@
 }
 [data-theme-mode="dark"] {
     // shadow
-    --b3-menu-shadow-blur: 0px 8px 25px -2px rgba(0, 0, 0, 0.45), 0px 4px 10px 0px rgba(0, 0, 0, 0.55);
-    --b3-menu-shadow-inset: 0 0 0 1px oklch(from var(--b3-theme-on-background) l c h / 0.08) inset, 1px 2px 1px -1px oklch(from var(--b3-theme-on-background) l c h / 0.2) inset, -1px -2px 1px -1px oklch(from var(--b3-theme-on-background) l c h / 0.2) inset;
+    --b3-menu-shadow-blur: 0 0 0 1px #000, 0px 8px 25px -2px rgba(0, 0, 0, 0.45), 0px 4px 10px 0px rgba(0, 0, 0, 0.55);
+    --b3-menu-shadow-inset: 0 0 0 1px oklch(from var(--b3-theme-on-background) l c h / 0.08) inset, 1px 2px 1px -1px oklch(from var(--b3-theme-on-background) l c h / 0.2) inset, -1px -2px 1px -1px oklch(from var(--b3-theme-on-background) l c h / 0.18) inset;
     --b3-menu-shadow: var(--b3-menu-shadow-blur), var(--b3-menu-shadow-inset);
     --b3-dialog-shadow-blur: 0 0 0 1px #000, 0px 10px 15px -3px rgba(0, 0, 0, 0.45), 0px 15px 30px 10px rgba(0, 0, 0, 0.55);
     --b3-dialog-shadow-inset: 0 0 0 1px oklch(from var(--b3-theme-on-background) l c h / 0.2) inset;

@@ -161,7 +161,7 @@ input[type="radio" i] {
 }
 @keyframes neo-ratio-entrance {
     from {
-        transform: scale(1.2);
+        transform: scale(1.12);
     }
     to {
         transform: scale(1);
@@ -169,7 +169,7 @@ input[type="radio" i] {
 }
 @keyframes neo-ratio-checked-entrance {
     from {
-        transform: scale(1.2);
+        transform: scale(1.12);
     }
     to {
         transform: scale(1);
@@ -237,6 +237,11 @@ input[type="radio" i] {
     }
 }
 // title
+@property --_title-angle {
+    syntax: '<angle>';
+    initial-value: 0deg;
+    inherits: false;
+}
 .protyle[data-loading="finished"] .protyle-title__input {
     padding-left: 0.8em;
     &::before {
@@ -252,32 +257,36 @@ input[type="radio" i] {
         background-color: currentColor;
         border-radius: 0;
         transition: 0.25s cubic-bezier(0.18, 0.89, 0.32, 1.28);
+        transition-property: width, height, background-color, border-radius, border-color, border-width;
+        animation: neo-angle 2.5s linear infinite;
+        animation-play-state: paused;
     }
 }
 .layout__wnd--active .protyle[data-loading="finished"] .protyle-title__input {
     &::before {
-            width: 0.8em;
-            height: 0.8em;
-            background-color: transparent;
-            border: 0.15em solid currentColor;
-            border-top-color: transparent;
-            border-radius: 50%;
-            animation: neo-title-spin 2.5s linear infinite;
-        }
+        width: 0.8em;
+        height: 0.8em;
+        background-color: transparent;
+        border: 0.15em solid currentColor;
+        border-top-color: transparent;
+        border-radius: 50%;
+        transform: translate(-50%, -50%) rotate(var(--_title-angle));
+        animation-play-state: running;
+    }
 }
-@keyframes neo-title-spin {
+@keyframes neo-angle {
     from { 
-        transform: translate(-50%, -50%) rotate(0deg);
+        --_title-angle: 0deg;
     }
     to { 
-        transform: translate(-50%, -50%) rotate(360deg);
+        --_title-angle: 360deg;
     }
 }
 // swicth
 .b3-switch {
-    transition: .5s cubic-bezier(0.01, 1.4, 0.52, 1.48);
+    transition: 0.3s cubic-bezier(0.27, 0.87, 0.23, 1.26);
     &::after {
-        transition: .5s cubic-bezier(0.01, 1.4, 0.52, 1.48);
+        transition: 0.3s cubic-bezier(0.27, 0.87, 0.23, 1.26)
     }
     &:active {
         &::after {
@@ -410,13 +419,13 @@ $header-parallax: 5vh;
         transform: rotate(0deg);
     }
     40% {
-        transform: rotate(-18deg);
+        transform: rotate(-16deg);
     }
     65% {
         transform: rotate(6deg);
     }
     80% {
-        transform: rotate(-3deg);
+        transform: rotate(-6deg);
     }
     100% {
         transform: rotate(0deg);
@@ -427,13 +436,13 @@ $header-parallax: 5vh;
         transform: rotate(0deg);
     }
     40% {
-        transform: rotate(-18deg);
+        transform: rotate(-16deg);
     }
     65% {
         transform: rotate(6deg);
     }
     80% {
-        transform: rotate(-3deg);
+        transform: rotate(-6deg);
     }
     100% {
         transform: rotate(0deg);

@@ -6,6 +6,11 @@
     box-shadow: var(--b3-dialog-shadow-blur);
     @include superellipse(16px);
 }
+.b3-dialog__loading {
+    border: unset;
+    box-shadow: var(--b3-dialog-shadow-blur);
+    @include superellipse(16px);
+}
 .b3-dialog__close {
     display: none;
 }
