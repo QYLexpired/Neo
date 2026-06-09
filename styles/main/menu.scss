@@ -28,14 +28,13 @@
 }
 .b3-menu,
 .b3-menu__submenu {
-    padding: 0;
+    padding: 6px;
     border: unset;
     box-shadow: var(--b3-menu-shadow-blur);
     @include superellipse(10px);
 }
-.b3-menu__items,
-.pdf__util {
-    padding: 6px;
+.b3-menu__items {
+    padding: 2px;
 }
 .b3-menu__item--selected {
     color: var(--b3-theme-accent);
@@ -95,7 +94,7 @@
 }
 .b3-menu__item {
     line-height: 24px;
-    @include superellipse(6px);
+    @include superellipse(7px);
     @include menu-item-origin;
     @include menu-item-current {
         @include menu-item-current-style;
@@ -189,7 +188,10 @@
     box-shadow: var(--neo-main-shadow-light);
 }
 .protyle-font {
-    padding: 8px 6px;
+    padding: 8px;
+    .fn__space--small {
+        width: 0;
+    }
 }
 // av-menu
 .b3-list-item__icon,
@@ -255,7 +257,7 @@
     .protyle-hint.hint--menu {   
         max-height: min(80vh, 550px);
         max-width: unset;
-        padding: 6px;
+        padding: 8px;
         & > div {
             min-width: $min-width;
             column-rule: 1px outset var(--b3-border-color-trans);

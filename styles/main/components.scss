@@ -17,10 +17,10 @@
     @include color-reverse(--neo-button-primary-hover, --b3-theme-on-primary); // 兼容插件显式设置的按钮颜色
     box-shadow: none;
     transition: var(--b3-transition);
+    --neo-button-primary-hover: oklch(from var(--neo-button-primary) calc(l + 0.0225 + 0.0575 * sign(0.680000001 - l)) c h);
     &:hover,
     &:active,
     &:focus {
-        --neo-button-primary-hover: oklch(from var(--neo-button-primary) calc(l + 0.0225 + 0.0575 * sign(0.680000001 - l)) c h);
         background-color: var(--neo-button-primary-hover);
         @include color-reverse(--neo-button-primary-hover);
         box-shadow: none;
@@ -52,29 +52,15 @@
         box-shadow: inset 0 0 0 1px var(--b3-border-color-trans);
     }
 }
-@mixin button-transparent-outline-primary {
-    background-color: transparent;
-    color: var(--b3-theme-on-surface);
-    box-shadow: inset 0 0 0 1px var(--b3-border-color-trans);
-    transition: var(--b3-transition);
-    &:hover,
-    &:active,
-    &:focus {
-        --neo-button-primary-hover: oklch(from var(--neo-button-primary) calc(l + 0.0225 + 0.0575 * sign(0.680000001 - l)) c h);
-        background-color: var(--neo-button-primary-hover);
-        @include color-reverse(--neo-button-primary-hover);
-        box-shadow: none;
-    }
-}
 @mixin button-warning {
     background-color: var(--b3-theme-error);
     @include color-reverse(--b3-theme-error);
     box-shadow: none;
     transition: var(--b3-transition);
+    --neo-button-warning-hover: oklch(from var(--b3-theme-error) calc(l + (0.05 * sign(0.4999999 - l))) c h);
     &:hover,
     &:active,
     &:focus {
-        --neo-button-warning-hover: oklch(from var(--b3-theme-error) calc(l + (0.05 * sign(0.4999999 - l))) c h);
         background-color: var(--neo-button-warning-hover);
         @include color-reverse(--neo-button-warning-hover);
         box-shadow: none;
@@ -88,7 +74,7 @@
     @include superellipse(7px);
     @include button-primary;
     &--outline {
-        @include button-transparent-outline-primary;
+        @include button-transparent-outline;
     }
     &--text {
         padding: 4px 12px;
@@ -254,7 +240,8 @@ $toggle-width: 36px;
 // select
 .b3-select {
     @include superellipse(7px);
-    height: 24px;
+    height: 28px;
+    min-height: 28px;
     line-height: 1.3;
     font-size: 13px;
     color: var(--b3-theme-on-background);
@@ -284,7 +271,8 @@ $toggle-width: 36px;
 }
 .b3-text-field {
     @include superellipse(7px);
-    height: 24px;
+    height: 28px;
+    min-height: 28px;
     line-height: 1.3;
     font-size: 13px;
     color: var(--b3-theme-on-background);
@@ -339,7 +327,8 @@ $slider-track-height: 6px;
 .protyle-scroll__bar .b3-slider {
     padding: 0;
     width: 120px;
-    height: 24px;
+    height: 28px;
+    min-height: 28px;
     -webkit-appearance: none;
     &::-webkit-slider-runnable-track {
         height: $slider-track-height;

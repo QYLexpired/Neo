@@ -29,6 +29,9 @@
     @include icon;
 }
 // dock-panel
+.b3-list--background .b3-list-item {
+    @include superellipse(7px);
+}
 .layout__tab--active .b3-list--background li.b3-list-item--focus {
     background-color: var(--b3-list-active);
 }
