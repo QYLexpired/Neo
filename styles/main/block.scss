@@ -2,9 +2,9 @@
 @use "../utils" as *;
 // block 
 .protyle-wysiwyg [data-node-id] {
-    @include superellipse(8px);
+    @include superellipse(10px);
     &::after {
-        @include superellipse(8px);
+        @include superellipse(10px);
     }
 }
 // heading
@@ -13,7 +13,7 @@
     @for $i from 1 through 6 {
         h#{$i},
         .h#{$i} {
-            @include superellipse(8px);
+            @include superellipse(10px);
             color: var(--b3-theme-primary);
             margin-top: 1.2em;
             line-height: 1.5;
@@ -198,7 +198,7 @@ a {
 .b3-typography .bq,
 .protyle-wysiwyg blockquote,
 .protyle-wysiwyg .bq {
-    @include superellipse(8px);
+    @include superellipse(10px);
     background-color: oklch(from var(--b3-theme-surface) l c h / 0.7);
     padding: 10px 16px;
     margin: 0.4em 0;
@@ -209,7 +209,7 @@ a {
 // code
 .b3-typography .code-block:not(pre),
 .protyle-wysiwyg .code-block:not(pre) {
-    @include superellipse(8px);
+    @include superellipse(10px);
     background-color: oklch(from var(--b3-theme-surface) l c h / 0.7);
     .protyle-action {
         padding: 4px 4px 4px 0;
@@ -321,7 +321,7 @@ a {
 .protyle-wysiwyg table {
     --b3-table-even-background: oklch(from var(--b3-theme-surface) l c h / 0.5);
     border: 1px solid var(--b3-border-color-trans);
-    @include superellipse(8px);
+    @include superellipse(10px);
     td,
     th {
         border: none;

@@ -22,13 +22,14 @@
     &.b3-menu__item--warning,
     &[data-type="delete-view"],
     &[data-type="remove"],
-    &[data-id="close"] {
+    &[data-id="close"],
+    .b3-menu[data-name="search-history"] &:first-child {
         @content;
     }
 }
 .b3-menu,
 .b3-menu__submenu {
-    padding: 6px;
+    padding: 4px;
     border: unset;
     box-shadow: var(--b3-menu-shadow-blur);
     @include superellipse(10px);
@@ -148,7 +149,7 @@
 }
 // protyle-hint
 .protyle-hint {
-    padding: 8px;
+    padding: 6px;
     @include superellipse(10px);
     border: unset;
     box-shadow: var(--b3-menu-shadow-blur);
@@ -188,7 +189,7 @@
     box-shadow: var(--neo-main-shadow-light);
 }
 .protyle-font {
-    padding: 8px;
+    padding: 6px;
     .fn__space--small {
         width: 0;
     }
@@ -257,7 +258,7 @@
     .protyle-hint.hint--menu {   
         max-height: min(80vh, 550px);
         max-width: unset;
-        padding: 8px;
+        padding: 6px;
         & > div {
             min-width: $min-width;
             column-rule: 1px outset var(--b3-border-color-trans);

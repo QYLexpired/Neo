@@ -68,7 +68,7 @@
 }
 .b3-button {
     padding: 4px 12px;
-    line-height: 16px;
+    line-height: 18px;
     width: max-content;
     transition: var(--b3-transition);
     @include superellipse(7px);
@@ -78,19 +78,19 @@
     }
     &--text {
         padding: 4px 12px;
-        line-height: 16px;
+        line-height: 18px;
         @include button-transparent;
     }
     &--cancel {
         padding: 4px 12px;
-        line-height: 16px;
+        line-height: 18px;
         @include button-transparent;
     }
     &--remove,
     &#removeAll,
     &#removeAVAll {
         padding: 4px 12px;
-        line-height: 16px;
+        line-height: 18px;
         @include button-warning;
     }
     &--primary { // 部分插件自定义的按钮种类
@@ -100,7 +100,8 @@
         width: 100%;
     }
 }
-.config__tab-wrap {
+.config__tab-wrap,
+#modelMain { //手机设置页
     .b3-button--outline {
         @include button-primary;
     }
@@ -240,8 +241,8 @@ $toggle-width: 36px;
 // select
 .b3-select {
     @include superellipse(7px);
-    height: 28px;
-    min-height: 28px;
+    height: 26px;
+    min-height: 26px;
     line-height: 1.3;
     font-size: 13px;
     color: var(--b3-theme-on-background);
@@ -271,8 +272,8 @@ $toggle-width: 36px;
 }
 .b3-text-field {
     @include superellipse(7px);
-    height: 28px;
-    min-height: 28px;
+    height: 26px;
+    min-height: 26px;
     line-height: 1.3;
     font-size: 13px;
     color: var(--b3-theme-on-background);
@@ -327,8 +328,8 @@ $slider-track-height: 6px;
 .protyle-scroll__bar .b3-slider {
     padding: 0;
     width: 120px;
-    height: 28px;
-    min-height: 28px;
+    height: 26px;
+    min-height: 26px;
     -webkit-appearance: none;
     &::-webkit-slider-runnable-track {
         height: $slider-track-height;
