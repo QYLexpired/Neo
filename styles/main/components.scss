@@ -135,15 +135,7 @@
         }
     }
 }
-.search__header {
-    .b3-button--outline {
-        @include button-transparent-outline;
-    }
-}
 .pdf__outer .findbar {
-    .b3-button--outline {
-        @include button-transparent-outline;
-    }
     .b3-button:not(.b3-button--outline) {
         @include button-primary;
     }
