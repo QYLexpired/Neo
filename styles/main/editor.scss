@@ -26,29 +26,17 @@
         height: 15.5px;
         width: 15.5px;
         padding: 2px;
+        @include icon;
         @include superellipse(4px);
     }
     &:hover {
         background-color: transparent;
-        color: var(--b3-theme-on-surface);
-        svg {
-            color: var(--b3-theme-on-background);
-            box-shadow: var(--neo-main-shadow-light);
-        }
+        color: var(--b3-theme-on-background);
     }
     &--active {
-        color: var(--b3-theme-on-background);
         background-color: transparent;
         svg {
-            color: var(--b3-theme-on-background);
-            box-shadow: var(--neo-main-shadow-light);
-        }
-        &:hover {
-            color: var(--b3-theme-on-background);
-            svg {
-                color: var(--b3-theme-on-background);
-                box-shadow: var(--neo-main-shadow-light);
-            }
+            box-shadow: var(--neo-main-shadow-heavy);
         }
     }
 }

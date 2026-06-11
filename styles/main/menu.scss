@@ -126,7 +126,6 @@
     padding: 6px;
 }
 .protyle-toolbar__item {
-    transition: var(--b3-transition);
     @include icon;
     @include superellipse(6px);
     padding: 4px;
@@ -204,7 +203,6 @@
     top: 50% !important;
     transform: translateY(-50%);
     @include icon;
-    box-shadow: none !important;
 }
 .av__panel .b3-menu__item:not([data-type=nobg]):hover,
 .av__panel .b3-menu__item--current:not([data-type=nobg]) {

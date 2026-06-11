@@ -3,9 +3,16 @@
     @include superellipse(6px);
     color: var(--b3-theme-on-surface);
     background-color: transparent !important;
+    transition: var(--b3-transition);
+    svg {
+        color: var(--b3-theme-on-surface);
+        transition: var(--b3-transition);
+    }
     &:hover {
-        background-color: transparent !important;
         color: var(--b3-theme-on-background);
-        box-shadow: var(--neo-main-shadow-light);
+        background-color: transparent !important;
+        svg {
+            color: var(--b3-theme-on-background);
+        }
     }
 }

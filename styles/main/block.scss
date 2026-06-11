@@ -271,10 +271,6 @@ a {
     &::before {
         display: none;
     }
-    .callout-icon  {
-        transition: var(--b3-transition);
-        @include icon;
-    }
     &[data-subtype="NOTE"] {
         --b3-callout-note: oklch(from var(--b3-theme-accent) l c 260);
         color: var(--b3-callout-note);
@@ -315,6 +311,9 @@ a {
         --neo-tag-color: var(--b3-callout-caution);
         --neo-inline-memo-color: var(--b3-callout-caution);
     }
+}
+.callout-icon  {
+    @include icon;
 }
 // table
 .b3-typography table,

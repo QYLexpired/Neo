@@ -281,9 +281,6 @@ $toggle-width: 36px;
         &:checked:not(:hover) {
             color: var(--b3-theme-accent);
         }
-        &::checkmark {
-            display: none;
-        }
     }
 }
 // text-field
