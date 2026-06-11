@@ -32,6 +32,9 @@
     &:hover {
         background-color: transparent;
         color: var(--b3-theme-on-background);
+        svg {
+            color: var(--b3-theme-on-background);
+        }
     }
     &--active {
         background-color: transparent;
@@ -57,7 +60,9 @@
     }
 }
 .block__icon[data-subtype="unlock"] {
-    color: var(--b3-theme-accent) !important;
+    svg {
+        color: var(--b3-theme-accent) !important;
+    }
 }
 // protyle-background
 .protyle-background__action {

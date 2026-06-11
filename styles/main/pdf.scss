@@ -3,6 +3,10 @@
 .pdf__toolbar {
     margin-top: 4px;
 }
+.dropdownToolbarButton select {
+    padding-top: 4px;
+    padding-bottom: 4px;
+}
 #sidebarContainer {
     margin-top: 4px;
     background-color: var(--b3-theme-background);
@@ -35,8 +39,7 @@
 }
 #dialogContainer > .dialog {
     border: unset;
-    box-shadow: unset;
-    overflow: visible;
+    box-shadow: var(--b3-dialog-shadow-blur);
     @include superellipse(12px);
     .separator {
         background-color: var(--b3-border-color-trans);

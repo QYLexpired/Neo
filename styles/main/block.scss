@@ -253,7 +253,7 @@ a {
                 color: oklch(from var(--b3-theme-accent) l c h);
                 &::after {    
                     color: oklch(from var(--b3-theme-accent) l c h);
-                    background-color: oklch(from currentColor l c h / 0.12);
+                    background-color: oklch(from currentColor l c h / 0.18);
                 }
             }
         }
@@ -477,10 +477,8 @@ a {
 .protyle-task--done > .protyle-action--task::before {
     border: unset;
 }
-.protyle .protyle-wysiwyg .li[data-subtype=o] > .protyle-action:hover::after,
-.protyle .protyle-wysiwyg .li[data-subtype=u]>.protyle-action:hover::after,
-.protyle .protyle-wysiwyg[data-readonly=false] .li[data-subtype=t]>.protyle-action:hover::after {
-    background-color: transparent;
+.protyle .protyle-wysiwyg .li:not([fold="1"]) > .protyle-action:hover::after {
+    background-color: transparent !important;
 }
 // hr
 .protyle-wysiwyg [data-node-id].hr > div::after {

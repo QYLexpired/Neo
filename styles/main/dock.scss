@@ -187,14 +187,20 @@
 }
 // graph
 .graph__panel {
-    @include frostedglass($blur: m, $color: menu);
+    @include frostedglass($blur: l, $color: menu);
     @include superellipse(8px);
     border: unset;
     top: 50px;
     bottom: 8px;
+    right: -100%;
     opacity: 1;
-    box-shadow: var(--neo-main-shadow-heavy);
+    box-shadow: var(--b3-menu-shadow);
+    width: 250px;
+    height: max-content;
     &[style*="right"] {
         right: 8px !important;
+    }
+    label .b3-slider {
+        width: 80px;
     }
 }

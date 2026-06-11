@@ -2,7 +2,7 @@
 .protyle-gutters button,
 .protyle-title:hover .protyle-title__icon svg {
     transition: color var(--b3-transition);
-    animation: neo-gutters-entrance 0.25s cubic-bezier(0.18, 0.89, 0.32, 1.38);
+    animation: neo-gutters-entrance 0.25s cubic-bezier(0.25, 0.89, 0.32, 1.22);
     animation-delay: calc((sibling-count() - sibling-index()) * 0.03s);
     transform-origin: right bottom;
     animation-fill-mode: both;
