@@ -249,12 +249,41 @@ $toggle-width: 36px;
         box-shadow: unset;
     }
     &:focus {
-        background-color: var(--b3-theme-background);
+        background-color: var(--b3-list-hover);
         box-shadow: 0 0 0 2px var(--neo-input-primary);
     }
     &.fn__block,
     &.fn__flex-shrink {
         width: 100%;
+    }
+    // reference: https://github.com/mustakshif/Asri
+    appearance: base-select;
+    font-weight: normal;
+    text-wrap-mode: nowrap;
+    &::picker-icon {
+        display: none;
+    }
+    &::picker(select) {
+        appearance: base-select;
+        color: var(--b3-theme-on-background);
+        border: none;
+        padding: 6px;
+        @include superellipse(10px);
+        @include frostedglass($blur: l, $color: menu);
+        box-shadow: var(--b3-menu-shadow);
+    }
+    option {
+        @include superellipse(7px);
+        &:hover {
+            background-color: var(--neo-menu-item-primary);
+            @include color-reverse(--neo-menu-item-primary);
+        }
+        &:checked:not(:hover) {
+            color: var(--b3-theme-accent);
+        }
+        &::checkmark {
+            display: none;
+        }
     }
 }
 // text-field
