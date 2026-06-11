@@ -22,8 +22,8 @@
         outline: 1px solid var(--b3-border-color-trans);
         @include superellipse(8px);
         &.b3-list-item--focus {
-            outline-color: oklch(from var(--neo-input-primary) l c h / 0.3);
-            background-color: oklch(from var(--neo-input-primary) l c h / 0.1);
+            outline-color: oklch(from var(--b3-list-active) l c h / 0.35);
+            background-color: var(--b3-list-active);
         }
         & .b3-list-item__graphic {
             align-self: flex-start;
