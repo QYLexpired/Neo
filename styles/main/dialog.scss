@@ -134,7 +134,7 @@
         transition: var(--b3-transition);
         &.b3-card--current,
         &:hover {
-            box-shadow: inset 0 0 0 1px oklch(from var(--b3-list-active) l c h / 0.35);
+            box-shadow: inset 0 0 0 1px oklch(from var(--b3-list-active) l c h / 0.25);
             background-color: var(--b3-list-active);
         }
         .b3-card__img {

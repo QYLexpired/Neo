@@ -262,7 +262,7 @@ input[type="radio" i] {
         animation-play-state: paused;
     }
 }
-.layout__wnd--active .protyle[data-loading="finished"] .protyle-title__input {
+/*.layout__wnd--active .protyle[data-loading="finished"] .protyle-title__input {
     &::before {
         width: 0.8em;
         height: 0.8em;
@@ -281,7 +281,7 @@ input[type="radio" i] {
     to { 
         --_title-angle: 360deg;
     }
-}
+}*/
 // swicth
 .b3-switch {
     transition: 0.3s cubic-bezier(0.27, 0.87, 0.23, 1.26);
