@@ -7,6 +7,10 @@
         @include superellipse(10px);
     }
 }
+.protyle-wysiwyg--select::after,
+.protyle-wysiwyg--hl::after {
+    background-color: oklch(from var(--b3-theme-primary) l c h / 0.15);
+}
 // heading
 .b3-typography,
 .protyle-wysiwyg {

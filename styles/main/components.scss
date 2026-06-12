@@ -121,7 +121,8 @@
     }
 }
 .b3-dialog__action,
-.config-account__center {
+.config-account__center,
+#action {
     .b3-button--text {
         @include button-primary;
     }

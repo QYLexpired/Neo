@@ -12,7 +12,7 @@
     & > .b3-menu__label,
     & > .b3-menu__accelerator,
     & > .fn__flex-center,
-    & > .b3-menu__label > .b3-menu__icon,
+    & > .b3-menu__label .b3-menu__icon,
     & > .b3-menu__action,
     & > .b3-menu__checked,
     & > .block__icon svg {
@@ -119,6 +119,15 @@
 .b3-menu__checked,
 .b3-menu__action {
     @include icon;
+}
+.neo-menu-item-second-icon {
+    margin-right: 0;
+    margin-left: 16px;
+    opacity: 0.5;
+    transition: opacity var(--b3-transition);
+    &:hover {
+        opacity: 1;
+    }
 }
 // protyle-toolbar
 .protyle-toolbar {

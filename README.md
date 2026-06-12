@@ -1,10 +1,17 @@
 Neo is a minimalist SiYuan theme that refines numerous details on top of the default appearance while introducing modern visual features.
 #### Update Notes
 ##### v1.1.4
+- Introduced super fusion effect for non-topbar fusion states as well (experimental)
+- Super fusion is disabled by default, must be enabled via Neo+
+- Added smooth transition for color scheme switching
 - Removed active document title animation
 - Redesigned Select form styles
 - Fixed an issue where the top bar could not be dragged in some cases
 - Fixed an issue where breadcrumb buttons were unclickable when viewing documents in fullscreen
+- Texture-custom image supports setting image fill mode (proportional scaling, tiling)
+- Fixed issue where shortcuts were repeatedly registered when switching back to Neo from other themes
+- Improved robustness of menu item styles
+- Optimized export interface styles
 #### Important Notice
 - Only compatible with SiYuan 3.7.0 dev version or higher
 - To ensure optimal performance, some styles depend on the Neo+ plugin. Therefore, the Neo+ plugin **MUST** be installed for the theme to display correctly.
