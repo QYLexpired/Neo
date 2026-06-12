@@ -52,6 +52,19 @@
         box-shadow: inset 0 0 0 1px var(--b3-border-color-trans);
     }
 }
+@mixin button-transparent-outline-no-hover {
+    background-color: transparent;
+    color: var(--b3-theme-on-surface);
+    box-shadow: inset 0 0 0 1px var(--b3-border-color-trans);
+    transition: var(--b3-transition);
+    &:hover,
+    &:active,
+    &:focus {
+        background-color: transparent;
+        color: var(--b3-theme-on-surface);
+        box-shadow: inset 0 0 0 1px var(--b3-border-color-trans);
+    }
+}
 @mixin button-warning {
     background-color: var(--b3-theme-error);
     @include color-reverse(--b3-theme-error);
@@ -101,6 +114,7 @@
     }
 }
 .config__tab-wrap,
+.config__item,
 #modelMain { //手机设置页
     .b3-button--outline {
         @include button-primary;

@@ -1,12 +1,13 @@
 Neo is a minimalist SiYuan theme that refines numerous details on top of the default appearance while introducing modern visual features.
 #### Update Notes
-- Fixed Kmind plugin popup not visible issue
-- Added frosted glass effect to some plugin settings pages
-- Improved compatibility with certain plugins
+##### v1.1.4
+- Removed active document title animation
+- Redesigned Select form styles
+- Fixed an issue where the top bar could not be dragged in some cases
+- Fixed an issue where breadcrumb buttons were unclickable when viewing documents in fullscreen
 #### Important Notice
 - Only compatible with SiYuan 3.7.0 dev version or higher
-- To ensure optimal performance, some styles depend on the Neo+ plugin. Therefore, the Neo+ plugin must be installed for the theme to display correctly.
-- The Neo+ plugin provides a wide range of color schemes and style extensions for the Neo theme.
+- To ensure optimal performance, some styles depend on the Neo+ plugin. Therefore, the Neo+ plugin **MUST** be installed for the theme to display correctly.
 - Neo utilizes a large number of cutting-edge CSS features; full experience is only guaranteed on desktop and Chromium-based browsers.
 #### Features
 - Strictly built color system using the OKLCH color space, with full support for custom theme colors and color palette expansion
@@ -28,3 +29,10 @@ The creation of the Neo theme drew significant inspiration from the following pr
 - [Border](https://github.com/akifyss/obsidian-border)
 - [Rem Craft](https://github.com/svchord/Rem-Craft)
 - [Savor](https://github.com/royc01/notion-theme)
+#### Update History
+##### v1.1.3
+- Fixed Kmind plugin popup not visible issue
+- Added frosted glass effect to some plugin settings pages: Yegui, Task Note Management, STtools
+- Improved compatibility with certain plugins
+- Fixed conflict with Kmind plugin
+- All dark mode color schemes now support the "Invert" function

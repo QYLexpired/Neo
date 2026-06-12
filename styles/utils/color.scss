@@ -68,11 +68,11 @@
     // 默认色
     --neo-default-base-color: #636de1;
     --neo-default-primary: #636de1;
-    --neo-default-accent: #636de1;
+    --neo-default-accent: #8a93ff;
     --neo-default-background: #282c34;
     --neo-default-surface: #1e2227;
-    --neo-default-on-background: #d7dae0;
-    --neo-default-on-surface: #a3a2a8;
+    --neo-default-on-background: #e1e4ec;
+    --neo-default-on-surface: #bfbec8;
     // 自定义色
     --neo-custom-primary: oklch(from var(--neo-custom-base-color) clamp(0.55, l, 0.95) c h);
     --neo-custom-accent: oklch(from var(--neo-custom-primary) l max(c, 0.2) h);

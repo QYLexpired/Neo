@@ -134,8 +134,8 @@
         transition: var(--b3-transition);
         &.b3-card--current,
         &:hover {
-            box-shadow: inset 0 0 0 1px oklch(from var(--b3-list-active) l c h / 0.25);
-            background-color: var(--b3-list-active);
+            box-shadow: inset 0 0 0 1px oklch(from var(--neo-input-primary) l c h / 0.3);
+            background-color: oklch(from var(--neo-input-primary) l c h / 0.12);
         }
         .b3-card__img {
             margin-left: unset;
@@ -212,13 +212,13 @@
         width: max-content;
         transition: var(--b3-transition);
         @include superellipse(7px);
-        @include button-transparent-outline;
+        @include button-transparent-outline-no-hover;
     }
 }
 .config-account__center.config-account__center--text {
     margin: auto 20px;
     #activationCode {
-        display: none;
+        @include button-transparent;  
     }
     .fn__hr--b {
         height: 16px;
@@ -230,7 +230,10 @@
         width: max-content;
         transition: var(--b3-transition);
         @include superellipse(7px);
-        @include button-transparent-outline;  
+        @include button-transparent-outline-no-hover;
+        &.b3-chip--hover {
+            @include button-transparent-outline;    
+        }
     }
     .b3-button {
         @include button-transparent-outline;

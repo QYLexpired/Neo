@@ -246,6 +246,9 @@ body {
 }
 .body--toolbar-hide,
 .body--window {
+    #drag {
+        app-region: drag;
+    }
     .layout__center [data-type="wnd"] > .fn__flex:first-child {
         & > .layout-tab-bar:not(.layout-tab-bar--readonly) {
             app-region: drag;
@@ -259,5 +262,10 @@ body {
                 app-region: no-drag;
             }
         }
+    }
+    .protyle-breadcrumb__bar,
+    .protyle-breadcrumb__space,
+    .protyle-breadcrumb__space ~ button {
+        app-region: no-drag;        
     }
 }
