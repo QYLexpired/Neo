@@ -491,7 +491,7 @@ a {
 }
 // fold
 .protyle-wysiwyg [data-node-id][fold="1"]:not(.li) {
-    outline: 1px solid oklch(from currentColor l c h / 0.25);
-    background-color: oklch(from currentColor l c h / 0.15);
+    outline: 1px solid oklch(from currentColor l c h / 0.3);
+    background-color: oklch(from currentColor l c h / 0.12);
     opacity: 0.38 !important; // 卷轴动画会覆盖opacity
 }

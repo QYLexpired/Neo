@@ -122,18 +122,18 @@
 }
 .layout__dockl,
 .layout__dockr {
-    transition: width 0.2s cubic-bezier(0, 0, .2, 1) 0s;
-    //& > .fn__flex {
-    //    transition: display 0.2s cubic-bezier(0, 0, .2, 1) 0s;
-    //    transition-behavior: allow-discrete;
-    //}
+    transition: width 0.15s cubic-bezier(0.7, 0, 0.3, 1);
+    & > .fn__flex {
+        transition: display 0.15s;
+        transition-behavior: allow-discrete;
+    }
 }
 .layout__dockb {
-    transition: height 0.2s cubic-bezier(0, 0, .2, 1) 0s;
-    //& > .fn__flex {
-    //    transition: display 0.2s cubic-bezier(0, 0, .2, 1) 0s;
-    //    transition-behavior: allow-discrete;
-    //}
+    transition: height 0.15s cubic-bezier(0.7, 0, 0.3, 1);
+    & > .fn__flex {
+        transition: display 0.15s;
+        transition-behavior: allow-discrete;
+    }
 }
 // tooltip
 .tooltip {
@@ -396,7 +396,8 @@ $header-parallax: 5vh;
 }
 // block fold
 .protyle-wysiwyg [data-node-id][fold="1"] {
-    animation: neo-block-fold 0.2s cubic-bezier(0.18, 0.89, 0.32, 1.38);
+    animation: neo-block-fold 0.25s cubic-bezier(0.25, 0.89, 0.32, 1.18) !important;
+    animation-timeline: unset !important; // 覆盖卷轴效果
     transform-origin: top;
 }
 @keyframes neo-block-fold {
