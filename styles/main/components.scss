@@ -245,6 +245,9 @@ $toggle-width: 36px;
 }
 [data-theme-mode="dark"] .b3-switch {
     box-shadow: inset 0 0 0 1px oklch(from var(--b3-theme-on-background) l c h / 0.12);
+    &:checked {
+        box-shadow: 0 4px 8px -3px rgba(0, 0, 0, 0.5) inset;
+    }
 }
 // select
 .b3-select {

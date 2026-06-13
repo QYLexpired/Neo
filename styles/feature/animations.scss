@@ -493,3 +493,26 @@ $header-parallax: 5vh;
         transform: scale(1);
     } 
 }
+// loading
+/*div:has(>img[src="/stage/loading-pure.svg"]) {
+    img {
+        display: none;
+    }
+    &::before {
+        content: "";
+        position: absolute;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        border: 5px solid oklch(from var(--neo-switch-primary) l c h / 0.12);
+        border-top-color: var(--neo-switch-primary);
+        border-right-color: var(--neo-switch-primary);
+        border-bottom-color: var(--neo-switch-primary);
+        animation: neo-loading 1.5s linear infinite;
+    }
+}
+@keyframes neo-loading {
+    to {
+        transform: rotate(360deg);
+    }
+}*/ // has影响性能
