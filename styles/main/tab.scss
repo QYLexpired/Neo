@@ -31,6 +31,7 @@ body:not(.body--toolbar-hide) [data-type="wnd"] > .fn__flex:first-child {
                 &:hover {
                     svg {
                         color: var(--b3-theme-error);
+                        background-color: transparent;
                     }
                 }
             }

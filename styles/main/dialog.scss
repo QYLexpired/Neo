@@ -72,6 +72,14 @@
     @include superellipse(16px);
     margin: 16px 64px 0 64px;
 }
+.config__tab-container {
+    & > .config-group__title:first-child {
+        padding-top: 0;
+    }
+    & > .config-group:first-child {
+        margin-top: 0;
+    }
+}
 .config__side,
 .b3-dialog__container .config__panel .b3-tab-bar {
     @include superellipse(12px);

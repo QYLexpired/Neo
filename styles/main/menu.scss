@@ -145,8 +145,14 @@
     height: 24px;
     &--current {
         color: var(--b3-theme-accent);
+        svg {
+            color: var(--b3-theme-accent);
+        }
         &:hover {
             color: var(--b3-theme-accent);
+            svg {
+                color: var(--b3-theme-accent);
+            }
         }
     }
     &:first-child,
