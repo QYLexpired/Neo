@@ -128,11 +128,7 @@
                 grid-area: buttons;
                 padding: 3px 11px 11px;
                 align-self: flex-end;
-                & > [target="_blank"],
-                & > [target="_blank"].fn__none ~ [data-type="setting"],
-                & > [data-type="setting"]:first-child.fn__none ~ [data-type="uninstall"],
-                & > [target="_blank"].fn__none ~ [data-type="setting"].fn__none ~ [data-type="uninstall"],
-                & > [data-type=open]:first-child {
+                & > :nth-child(1 of .block__icon:not(.fn__none)) {
                     margin-left: auto;
                 }
             }

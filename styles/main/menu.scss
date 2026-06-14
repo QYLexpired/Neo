@@ -122,12 +122,15 @@
 }
 .neo-menu-item-second-icon {
     margin-right: 0;
-    margin-left: 16px;
+    margin-left: auto;
     opacity: 0.5;
     transition: opacity var(--b3-transition);
     &:hover {
         opacity: 1;
     }
+}
+.neo-menu-item-second-icon-space {
+    width: 16px;
 }
 // protyle-toolbar
 .protyle-toolbar {
