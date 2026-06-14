@@ -128,7 +128,7 @@
     @include frostedglass($blur: m, $color: menu);
 }
 .b3-snackbar__content {
-    @include frostedglass($blur: s, $color: menu, $alpha: 0.5);
+    @include frostedglass($blur: s, $color: surface, $alpha: 0.5);
 }
 // .protyle-icons
 .protyle-icons {

@@ -47,6 +47,7 @@
     background-position: 0 100%;
     background-repeat: repeat-x;
     padding-bottom: 2px;
+    will-change: transform;
     &:hover {
         color: var(--b3-theme-accent);
     }
@@ -60,6 +61,7 @@
     background-position: 0% 100%;
     background-repeat: repeat-x;
     padding-bottom: 2px;
+    will-change: transform;
     &:hover {
         color: var(--b3-theme-accent);
         text-decoration: none;
