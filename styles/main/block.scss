@@ -40,17 +40,22 @@
 }
 // block ref
 .protyle-wysiwyg [data-node-id] span[data-type~=block-ref]:not(.av__celltext),
-.protyle-wysiwyg [data-node-id] span[data-type~=file-annotation-ref] {
+.protyle-wysiwyg [data-node-id] span[data-type~=file-annotation-ref],
+.protyle-wysiwyg [data-node-id] span[data-type=virtual-block-ref] {
     color: inherit;
     background-image: repeating-linear-gradient(90deg, var(--b3-theme-accent) 0px, var(--b3-theme-accent) 3px, transparent 3px, transparent 6px);
     background-size: 8px 1px;
     background-position: 0 100%;
     background-repeat: repeat-x;
     padding-bottom: 2px;
+    border: unset;
     will-change: transform;
     &:hover {
         color: var(--b3-theme-accent);
     }
+}
+.protyle-wysiwyg [data-node-id] span[data-type=virtual-block-ref] {
+    --b3-theme-accent: var(--b3-theme-on-background);
 }
 // link
 .protyle-wysiwyg [data-node-id] span[data-type~=a] {

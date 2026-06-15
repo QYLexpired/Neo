@@ -205,7 +205,8 @@ input[type="radio" i] {
 }
 // block ref
 .protyle-wysiwyg [data-node-id] span[data-type~=block-ref]:not(.av__celltext),
-.protyle-wysiwyg [data-node-id] span[data-type~=file-annotation-ref] {
+.protyle-wysiwyg [data-node-id] span[data-type~=file-annotation-ref],
+.protyle-wysiwyg [data-node-id] span[data-type=virtual-block-ref] {
     animation: neo-blockref-flow 1s linear infinite;
     animation-play-state: paused;
     &:hover {
