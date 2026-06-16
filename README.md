@@ -1,11 +1,9 @@
 Neo is a minimalist SiYuan theme that refines numerous details on top of the default appearance while introducing modern visual features.
 #### Update Notes
-##### v1.1.5
-- Significantly optimized theme performance
-- Vertical tabs support configurable application mode
-- Immersive mode supports toggling typewriter mode and highlight effects independently
-- Smooth cursor supports configurable display state
-- Focused block indicator supports configurable specific effects
+##### v1.1.6
+- Added pinned toolbar feature
+- Added multi-column slash menu layout
+- Improved mobile display performance
 #### Important Notice
 - Only compatible with SiYuan 3.7.0 dev version or higher
 - To ensure optimal performance, some styles depend on the Neo+ plugin. Therefore, the Neo+ plugin **MUST** be installed for the theme to display correctly.
@@ -31,6 +29,12 @@ The creation of the Neo theme drew significant inspiration from the following pr
 - [Rem Craft](https://github.com/svchord/Rem-Craft)
 - [Savor](https://github.com/royc01/notion-theme)
 #### Update History
+##### v1.1.5
+- Significantly optimized theme performance
+- Vertical tabs support configurable application mode
+- Immersive mode supports toggling typewriter mode and highlight effects independently
+- Smooth cursor supports configurable display state
+- Focused block indicator supports configurable specific effects
 ##### v1.1.4
 - Introduced super fusion effect for non-topbar fusion states as well (experimental)
 - Super fusion is disabled by default, must be enabled via Neo+
