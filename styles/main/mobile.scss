@@ -1,7 +1,11 @@
 @use "../tools" as *;
 @use "components" as *;
+$mobile-toolbar-height: 50px;
+$breadcrumb-height: 42px;
+$breadcrumb-offset: 6px;
+$text-shadow: 0 0 1px var(--b3-theme-background), 0 0 2px var(--b3-theme-background), 0 0 1px var(--b3-theme-background),0 0 1px var(--b3-theme-background);
+$svg-shadow: drop-shadow(0 0 0.5px var(--b3-theme-background)) drop-shadow(0 0 0.5px var(--b3-theme-background)) drop-shadow(0 0 0.5px var(--b3-theme-background));
 .neo-mobile {
-    --neo-mobile-toolbar-title-height: 50px;
     .side-mask {
         background-color: transparent;
     }
@@ -30,15 +34,21 @@
         }
         .b3-menu__title {
             border-bottom: 1px solid var(--b3-border-color-trans);
-            margin-bottom: calc(var(--neo-mobile-toolbar-title-height) * -1);
+            margin-bottom: calc($mobile-toolbar-height * -1);
             background-color: transparent;
             backdrop-filter: blur(6px);
             z-index: 1;
             box-sizing: border-box;
-            height: var(--neo-mobile-toolbar-title-height);
+            height: $mobile-toolbar-height;
+            .b3-menu__icon {
+                filter: $svg-shadow; 
+            }
+            .b3-menu__label {
+                text-shadow: $text-shadow;
+            }
         }
         .b3-menu__items {
-            padding: var(--neo-mobile-toolbar-title-height) 0 0 0;
+            padding: $mobile-toolbar-height 0 0 0;
         }
         .b3-menu__item {
             background-color: transparent;
@@ -52,19 +62,26 @@
     // editor
     & > .toolbar {
         border-bottom: 1px solid var(--b3-border-color-trans);
-        margin-bottom: calc(var(--neo-mobile-toolbar-title-height) * -1);
+        margin-bottom: calc($mobile-toolbar-height * -1);
         background-color: transparent;
         backdrop-filter: blur(6px);
         z-index: 3;
         box-sizing: border-box;
-        height: var(--neo-mobile-toolbar-title-height);
+        height: $mobile-toolbar-height;
+        .toolbar__icon {
+            filter: $svg-shadow; 
+        }
+        .toolbar__title,
+        .toolbar__text {
+            text-shadow: $text-shadow;
+        }
     }
     #editor {
         background-color: var(--b3-theme-background);
-        padding-top: var(--neo-superfusion-breadcrumb-padding-offset);
+        padding-top: $breadcrumb-offset;
         & > .protyle-breadcrumb {
             margin-top: 0;
-            padding-top: calc(var(--neo-superfusion-breadcrumb-height) + var(--neo-superfusion-breadcrumb-padding-offset) * 2);
+            padding-top: calc($breadcrumb-height + $breadcrumb-offset * 2);
             .protyle-breadcrumb__icon {
                 transition: var(--b3-transition);
                 padding: 4px 8px;
@@ -72,19 +89,21 @@
                 width: max-content;
                 @include button-transparent-outline;
                 color: var(--b3-theme-accent);
-                text-shadow: 0 0 0.5px var(--b3-theme-background), 0.5px 0.5px 0.5px var(--b3-theme-background);
+                text-shadow: $text-shadow;
                 &:hover,
                 &:focus {
                     color: var(--b3-theme-accent);
                 }
             }
-            .protyle-breadcrumb .block__icon {
-                text-shadow: 0 0 0.5px var(--b3-theme-background), 0 0 1px var(--b3-theme-background), 0 0 1px var(--b3-theme-background);
+            .block__icon {
+                svg {
+                    filter: $svg-shadow;
+                }
             }
         }
         & > .protyle-content {
             margin-top: -84px;
-            padding-top: calc(var(--neo-superfusion-breadcrumb-height) + var(--neo-mobile-toolbar-title-height));
+            padding-top: calc($breadcrumb-height + $mobile-toolbar-height);
         }
     }
     // sidebar
@@ -93,7 +112,7 @@
         & > .toolbar:first-child {
             border-bottom: 1px solid var(--b3-border-color-trans);
             box-sizing: border-box;
-            height: var(--neo-mobile-toolbar-title-height);
+            height: $mobile-toolbar-height;
         }
         .toolbar {
             background-color: transparent;
@@ -108,15 +127,22 @@
         }
         & > .toolbar--border {
             border-bottom: 1px solid var(--b3-border-color-trans);
-            margin-bottom: calc(var(--neo-mobile-toolbar-title-height) * -1);
+            margin-bottom: calc($mobile-toolbar-height * -1);
             background-color: transparent;
             backdrop-filter: blur(6px);
             z-index: 99;
             box-sizing: border-box;
-            height: var(--neo-mobile-toolbar-title-height);
+            height: $mobile-toolbar-height;
+            .toolbar__icon {
+                filter: $svg-shadow; 
+            }
+            .toolbar__title,
+            .toolbar__text {
+                text-shadow: $text-shadow;
+            }
         }
         #modelMain {
-            padding: var(--neo-mobile-toolbar-title-height) 0 0 0;
+            padding: $mobile-toolbar-height 0 0 0;
         }
     }
     // keyboard

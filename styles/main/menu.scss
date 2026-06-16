@@ -202,6 +202,17 @@
     & > .fn__flex-column {
         padding-top: 8px;
     }
+    & .fn__flex[style="margin: 0 8px 4px 8px"] {
+        margin: 6px !important;
+    }
+    .toolbarResize {
+        box-shadow: unset !important;
+        border-left: 1px solid var(--b3-border-color-trans);
+        transition: var(--b3-transition);
+        &:hover {
+            border-color: var(--_resize-hl);
+        }
+    }
 }
 .color__square:hover:not(.color__square--list):not(.color__square--current),
 .protyle-font__style:hover {
@@ -270,36 +281,6 @@
             box-shadow: none;
         }
     }
-}
-// slash
-@mixin multicol-menu($min-width, $column-width) {
-    .protyle-hint.hint--menu {   
-        max-height: min(80vh, 550px);
-        max-width: unset;
-        padding: 6px;
-        & > div {
-            min-width: $min-width;
-            column-rule: 1px outset var(--b3-border-color-trans);
-            column-width: $column-width;
-            & > .b3-menu__separator { 
-                margin: 5px 6px;
-                width: calc(100% - 12px);
-            }
-            & > .b3-list-item { 
-                margin: 1px auto;
-                width: 100% !important;
-                &:first-child {
-                    margin-top: 0;
-                }
-                &:last-child {
-                    margin-bottom: 0;
-                }
-            }
-        }
-    }
-}
-@media screen and (min-width: 1000px) { 
-    @include multicol-menu(800px, 150px); 
 }
 // list-mark
 .b3-list mark {

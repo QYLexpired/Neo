@@ -128,9 +128,12 @@
                 opacity: 0.58;
                 font-size: 0.95em;
                 pointer-events: none;
-                font-family: "Segoe UI";
+                font-family: "SF Pro";
                 color: currentColor;
                 transition: var(--b3-transition);
+            }
+            &:empty {
+                min-height: 28px;
             }
         }
         $heading-numbers: "❶", "❷", "❸", "❹", "❺", "❻";
