@@ -1,0 +1,19 @@
+.b3-dialog__header,
+.search__header,
+.search__tip,
+.history__action,
+.switch-doc .b3-list:last-child,
+.switch-doc__path,
+.history__resize,
+.b3-dialog__action,
+.block__icons,
+.config__side,
+.b3-label,
+.search__layout--row,
+.block__edit,
+.config__side,
+.search__list,
+.history__panel {
+    --b3-border-color: var(--b3-border-color-trans) !important;
+    border-color: var(--b3-border-color-trans) !important;
+}

@@ -1,46 +1,4 @@
-@use "../tools" as *;
-@use "components" as *;
-@use "../utils" as *;
-.b3-dialog__container {
-    border: unset;
-    box-shadow: var(--b3-dialog-shadow-blur);
-    @include superellipse(16px);
-}
-.b3-dialog__loading {
-    border: unset;
-    box-shadow: var(--b3-dialog-shadow-blur);
-    @include superellipse(16px);
-}
-.b3-dialog__close {
-    display: none;
-}
-.b3-dialog__header {
-    text-align: center;
-    border: unset;
-}
-.b3-dialog__action {
-    border: unset;
-}
-// border-color
-.b3-dialog__header,
-.search__header,
-.search__tip,
-.history__action,
-.switch-doc .b3-list:last-child,
-.switch-doc__path,
-.history__resize,
-.b3-dialog__action,
-.block__icons,
-.config__side,
-.b3-label,
-.search__layout--row,
-.block__edit,
-.config__side,
-.search__list,
-.history__panel {
-    --b3-border-color: var(--b3-border-color-trans) !important;
-    border-color: var(--b3-border-color-trans) !important;
-}
+
 // settings
 .config__tab-container .b3-label:not(.b3-label--inner).config__item {
     & > .config__item-line.fn__flex-center {
@@ -60,7 +18,7 @@
     }
 }
 .config__tab-container {
-    padding: $layout-gap 64px;
+    padding: var(--_layout-gap) 64px;
     .layout-tab-bar {
         padding-top: 16px;
     }
@@ -76,20 +34,20 @@
     }
     &[data-name="bazaar"],
     &[data-name="account"] {
-        padding: $layout-gap 0;
+        padding: var(--_layout-gap) 0;
     }
 }
 .config__side,
 .config__panel .b3-tab-bar {
     @include superellipse(12px);
-    margin: $layout-gap;
-    padding: $layout-gap 0;
+    margin: var(--_layout-gap);
+    padding: var(--_layout-gap) 0;
     border: unset;
     box-shadow: var(--neo-main-shadow-heavy);
     .b3-list-item {
         @include superellipse(7px);
         line-height: 26px;
-        margin: calc($layout-gap / 2) $layout-gap;
+        margin: calc(var(--_layout-gap) / 2) var(--_layout-gap);
         &:first-child {
             margin-top: 0;
         }
@@ -102,7 +60,7 @@
     margin: 0 8px 16px 8px;
 }
 .config__side .config__tab-title {
-    margin: calc(var(--b3-layout-space) / 2) var(--b3-layout-space);
+    margin: calc(var(--_layout-gap) / 2) var(--_layout-gap);
     padding: 0 4px;
 }
 // bazaar
@@ -158,9 +116,9 @@
     padding: unset;
     @include superellipse(16px);
     .item__side {
-        padding: $layout-gap;
-        margin: $layout-gap;
-        height: calc(100% - $layout-gap * 4);
+        padding: var(--_layout-gap);
+        margin: var(--_layout-gap);
+        height: calc(100% - var(--_layout-gap) * 4);
         @include superellipse(12px);
         box-shadow: var(--neo-main-shadow-heavy);
         .item__img {
@@ -181,10 +139,10 @@
     }
     .item__main {
         margin: 0;
-        padding: $layout-gap 0;
+        padding: var(--_layout-gap) 0;
         .item__preview {
-            margin: 0 $layout-gap 0 0;
-            width: calc(100% - $layout-gap);
+            margin: 0 var(--_layout-gap) 0 0;
+            width: calc(100% - var(--_layout-gap));
             @include superellipse(12px);
         }
         .b3-typography {
@@ -287,7 +245,7 @@
 .search__drag {
     transition: var(--b3-transition);
     margin: 0;
-    height: calc($layout-gap / 2);
+    height: calc(var(--_layout-gap) / 2);
     &::after {
         height: 1px;
         top: 50%;
@@ -303,7 +261,7 @@
 .search__layout--row .search__drag {
     transition: var(--b3-transition);
     margin: 0;
-    width: calc($layout-gap / 2);
+    width: calc(var(--_layout-gap) / 2);
     height: 100%;
     &::after {
         width: 1px;

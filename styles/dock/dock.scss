@@ -1,0 +1,83 @@
+@use "../utils" as *;
+.dock__item {
+    @include icon;
+    transition-property: box-shadow, background-color;
+}
+.dock__item--active,
+.dock__item--activefocus {
+    box-shadow: var(--neo-main-shadow-heavy) !important;
+    background-color: oklch(from var(--b3-theme-background) l c h / 0.7) !important;
+    &:hover {
+        box-shadow: var(--neo-main-shadow-heavy) !important;
+        background-color: oklch(from var(--b3-theme-background) l c h / 0.7) !important;
+    }
+}
+.dock__split::after {
+    background-color: var(--b3-border-color-trans);
+    width: 24px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+$dock-shrink-transition: 0.6s var(--neo-ease-spring-3);
+#dockLeft,
+#dockRight {
+    transition: display $dock-shrink-transition;
+    transition-behavior: allow-discrete;
+    width: 42px;
+}
+#dockLeft {
+    &:not(.fn__none) {
+        animation: neo-dockLeft-expand $dock-shrink-transition;
+    }
+    &.fn__none {
+        animation: neo-dockLeft-collapse $dock-shrink-transition;
+    }
+}
+#dockRight {
+    &:not(.fn__none) {
+        animation: neo-dockRight-expand $dock-shrink-transition;
+    }
+    &.fn__none {
+        animation: neo-dockRight-collapse $dock-shrink-transition;
+    }
+}
+@keyframes neo-dockLeft-expand {
+    from {
+        width: 0px;
+        margin-right: var(--_layout-gap);
+    }
+    to {
+        width: 42px;
+        margin-right: calc(var(--_layout-gap) / -2);
+    }
+}
+@keyframes neo-dockLeft-collapse {
+    from {
+        width: 42px;
+        margin-right: calc(var(--_layout-gap) * -1.5);
+    }
+    to {
+        width: 0px;
+        margin-right: 0;
+    }
+}
+@keyframes neo-dockRight-expand {
+    from {
+        width: 0px;
+        margin-left: var(--_layout-gap);
+    }
+    to {
+        width: 42px;
+        margin-left: calc(var(--_layout-gap) / -2);
+    }
+}
+@keyframes neo-dockRight-collapse {
+    from {
+        width: 42px;
+        margin-left: calc(var(--_layout-gap) * -1.5);
+    }
+    to {
+        width: 0px;
+        margin-left: 0;
+    }
+}

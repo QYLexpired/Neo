@@ -1,0 +1,5 @@
+@use "../utils" as *;
+body {
+    background-color: var(--b3-theme-surface);
+    background-image: unset;
+}

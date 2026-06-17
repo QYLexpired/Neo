@@ -1,0 +1,36 @@
+@use "sass:list";
+.sy__outline {
+    .b3-list-item[data-type="NodeHeading"] {
+        .b3-list-item__graphic {
+            opacity: 0;
+            &:hover {
+                & + .b3-list-item__text {
+                    &::before {
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+        .b3-list-item__text {
+            &::before {
+                position: absolute;
+                margin-inline-start: -18px;
+                opacity: 0.58;
+                font-size: 0.95em;
+                pointer-events: none;
+                font-family: "SF Pro";
+                color: currentColor;
+                transition: var(--b3-transition);
+            }
+            &:empty {
+                min-height: 28px;
+            }
+        }
+        $heading-numbers: "❶", "❷", "❸", "❹", "❺", "❻";
+        @for $i from 1 through 6 {
+          &[data-subtype="h#{$i}"] > .b3-list-item__text::before {
+            content: list.nth($heading-numbers, $i);
+          }
+        }
+    }
+}

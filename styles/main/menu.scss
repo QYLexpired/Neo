@@ -1,118 +1,14 @@
-@use "../tools" as *;
-@use "../utils" as *;
-[data-theme-mode="light"] {
-    --neo-menu-item-primary: oklch(from var(--b3-base-color) clamp(0, l, 0.9) c h);
-}
-[data-theme-mode="dark"] {
-    --neo-menu-item-primary: oklch(from var(--b3-base-color) clamp(0.4, l, 1) c h);
-}
+
+
 // menu
-@mixin menu-item-child { // 菜单项的子元素
-    & > .b3-menu__icon,
-    & > .b3-menu__label,
-    & > .b3-menu__accelerator,
-    & > .fn__flex-center,
-    & > .b3-menu__label .b3-menu__icon,
-    & > .b3-menu__action,
-    & > .b3-menu__checked,
-    & > .block__icon svg {
-        @content;
-    }
-}
-@mixin menu-item-warning { // 警告色菜单项
-    &.b3-menu__item--warning,
-    &[data-type="delete-view"],
-    &[data-type="remove"],
-    &[data-id="close"],
-    .b3-menu[data-name="search-history"] &:first-child {
-        @content;
-    }
-}
-.b3-menu,
-.b3-menu__submenu {
-    padding: 4px;
-    border: unset;
-    box-shadow: var(--b3-menu-shadow-blur);
-    @include superellipse(10px);
-}
-.b3-menu__items {
-    padding: 2px;
-}
-.b3-menu__item--selected {
-    color: var(--b3-theme-accent);
-    @include menu-item-child {
-        color: var(--b3-theme-accent);
-    }
-}
-@mixin menu-item-origin { // 特殊的菜单项需要进行变化
-    .b3-text-field {
-        margin: 6px 0;
-    }
-}
-@mixin menu-item-current { // 当前或悬停的菜单项
-    &.b3-menu__item--current:not(.b3-menu__item--readonly):not([data-type=nobg]),
-    &.b3-menu__item--show:not(.b3-menu__item--readonly),
-    &.pdf__util__hide:hover,
-    &.secondaryToolbarButton:hover,
-    .av__panel &:not([data-type=nobg]):hover {
-        @content;
-    }
-}
-@mixin menu-item-current-style { // 当前或悬停的菜单项样式
-    background-color: var(--neo-menu-item-primary);
-    @include color-reverse(--neo-menu-item-primary);
-    @include menu-item-warning  {
-        --neo-menu-item-primary: var(--b3-theme-error);
-    }
-    @include menu-item-child {
-        @include color-reverse(--neo-menu-item-primary);
-        @include color-reverse(--neo-menu-item-primary, --b3-callout-note);
-        @include color-reverse(--neo-menu-item-primary, --b3-callout-tip);
-        @include color-reverse(--neo-menu-item-primary, --b3-callout-important);
-        @include color-reverse(--neo-menu-item-primary, --b3-callout-warning);
-        @include color-reverse(--neo-menu-item-primary, --b3-callout-caution);
-    }
-    & > .b3-switch {
-        outline: 1px solid;
-        @include color-reverse(--neo-menu-item-primary, outline-color, 0.5);
-        transition: none;
-    }
-    & > .b3-text-field {
-        @include color-reverse(--neo-menu-item-primary, --_b3-text-field-box-shadow-reverse, 0.5);
-        box-shadow: 0 0 0 2px var(--_b3-text-field-box-shadow-reverse) !important;
-        @include color-reverse(--neo-menu-item-primary);
-    }
-    & > .b3-menu__label {
-        .b3-switch {
-            outline: 1px solid;
-            @include color-reverse(--neo-menu-item-primary, outline-color, 0.5);
-            transition: none;
-        }
-        .b3-text-field {
-            @include color-reverse(--neo-menu-item-primary, --_b3-text-field-box-shadow-reverse, 0.5);
-            box-shadow: 0 0 0 2px var(--_b3-text-field-box-shadow-reverse) !important;
-            @include color-reverse(--neo-menu-item-primary);
-        }
-    }
-}
-.b3-menu__item {
-    line-height: 24px;
-    @include superellipse(7px);
-    @include menu-item-origin;
-    @include menu-item-current {
-        @include menu-item-current-style;
-    }
-    &[disabled=disabled] {
-        @include menu-item-child {
-            opacity: 0.38;
-        }
-    }
-}
-.b3-menu__separator {
-    background-color: var(--b3-border-color-trans);
-    width: calc(100% - 16px);
-    margin: 4px 8px;
-}
+
+
+
+
+
+
+
+
 .b3-list--background .b3-list-item--focus {
     background-color: var(--b3-list-active);
 }
@@ -120,110 +16,8 @@
 .b3-menu__action {
     @include icon;
 }
-.neo-menu-item-second-icon {
-    margin-right: 0;
-    margin-left: auto;
-    opacity: 0.5;
-    transition: opacity var(--b3-transition);
-    &:hover {
-        opacity: 1;
-    }
-}
-.neo-menu-item-second-icon-space {
-    width: 16px;
-}
-// protyle-toolbar
-.protyle-toolbar {
-    @include superellipse(16px);
-    border: unset;
-    box-shadow: var(--b3-menu-shadow-blur);
-    padding: 6px;
-}
-.protyle-toolbar__item {
-    @include icon;
-    @include superellipse(6px);
-    padding: 4px;
-    margin: 0 2px;
-    font-size: 8px;
-    height: 24px;
-    &--current {
-        color: var(--b3-theme-accent);
-        svg {
-            color: var(--b3-theme-accent);
-        }
-        &:hover {
-            color: var(--b3-theme-accent);
-            svg {
-                color: var(--b3-theme-accent);
-            }
-        }
-    }
-    &:first-child,
-    &:last-child {
-        @include superellipse(6px);
-    }
-}
-.protyle-toolbar__divider {
-    border-color: var(--b3-border-color-trans);
-}
-// protyle-hint
-.protyle-hint {
-    padding: 6px;
-    @include superellipse(10px);
-    border: unset;
-    box-shadow: var(--b3-menu-shadow-blur);
-    & > .b3-text-field {
-        margin: 0 0 6px 0 !important;
-        width: unset;
-    }
-    & > div {
-        .b3-list-item {
-            margin: 2px auto;
-            width: 100% !important;
-        }
-    }
-}
-// protyle-util
-.protyle-util {
-    padding: 0;
-    @include superellipse(10px);
-    border: unset;
-    box-shadow: var(--b3-menu-shadow-blur);
-    & .block__icons--menu {
-        background-color: transparent;
-        & + .b3-text-field {
-            background-color: transparent;
-            &:hover,
-            &:focus {
-                box-shadow: none !important;
-            }
-        }
-    }
-    & > .fn__flex-column {
-        padding-top: 8px;
-    }
-    & .fn__flex[style="margin: 0 8px 4px 8px"] {
-        margin: 6px !important;
-    }
-    .toolbarResize {
-        box-shadow: unset !important;
-        border-left: 1px solid var(--b3-border-color-trans);
-        transition: var(--b3-transition);
-        &:hover {
-            border-color: var(--_resize-hl);
-        }
-    }
-}
-.color__square:hover:not(.color__square--list):not(.color__square--current),
-.protyle-font__style:hover {
-    box-shadow: var(--neo-main-shadow-light);
-}
-.protyle-font {
-    padding: 6px;
-    .fn__space--small {
-        width: 0;
-    }
-}
+
+
 // av-menu
 .b3-list-item__icon,
 .b3-menu__avemoji,
@@ -246,42 +40,7 @@
     padding: 4px !important;
 }
 // emoji
-.emojis {
-    .emojis__tabheader {
-        padding-bottom: 0;
-        border-bottom: unset;
-    }
-    .emojis__type {
-        @include icon;
-        @include superellipse(12px);
-        transition: 0.3s cubic-bezier(0.18, 0.89, 0.32, 1.48);
-        &:hover {
-            filter: url(#neo-neon-emoji) saturate(1.5) brightness(1.02);
-            scale: 1.25;
-            background-color: transparent;
-            box-shadow: none;
-        }
-    }
-    .emojis__panel + .fn__flex {
-        padding: 8px 8px 0 8px;
-    }
-    .emojis__item {
-        @include icon;
-        @include superellipse(12px);
-        color: unset;
-        font-size: 24px;
-        height: 36px;
-        width: 36px;
-        margin: 4px;
-        padding: unset;
-        transition: 0.3s cubic-bezier(0.18, 0.89, 0.32, 1.48);
-        &:hover {
-            filter: url(#neo-neon-emoji) saturate(1.5) brightness(1.02);
-            scale: 1.25;
-            box-shadow: none;
-        }
-    }
-}
+
 // list-mark
 .b3-list mark {
     color: var(--b3-highlight-color);

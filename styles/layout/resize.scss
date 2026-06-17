@@ -1,0 +1,90 @@
+@use "../utils" as *;
+.layout__resize {
+    &:not(.layout__resize--lr) {
+        margin: 0;
+        height: calc(var(--_layout-gap) / 2);
+        &::after {
+            content: "" !important;
+            height: 1px;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: transparent;
+        }
+        &:hover {
+            &::after {
+                background-color: var(--_resize-hl);
+            }
+        }
+    }
+    &--lr {
+        margin: 0;
+        width: calc(var(--_layout-gap) / 2);
+        &::after {
+            content: "" !important;
+            width: 1px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: transparent;
+        }
+        &:hover {
+            &::after {
+                background-color: var(--_resize-hl);
+            }
+        }
+    }
+}
+
+.body--window .layout__center {
+    .layout__resize {
+        &:not(.layout__resize--lr) {
+            margin: -1.5px 0;
+            height: calc(var(--_layout-gap) / 2);
+            &::after {
+                background-color: var(--b3-border-color-trans);
+            }
+            &:hover {
+                &::after {
+                    background-color: var(--_resize-hl);
+                } 
+            }
+        }
+        &--lr {
+            margin: 0 -1.5px;
+            width: calc(var(--_layout-gap) / 2);
+            &::after {
+                background-color: var(--b3-border-color-trans);
+            }
+            &:hover {
+                &::after {
+                    background-color: var(--_resize-hl);
+                } 
+            }
+        }
+    }
+}
+.layout__dockl + .layout__resize {
+    margin-left: calc(var(--_layout-gap) * -1);
+    width: calc(var(--_layout-gap) / 2);
+}
+.layout__center + .layout__resize {
+    margin-right: calc(var(--_layout-gap) * -1);
+    width: calc(var(--_layout-gap) / 2);
+}
+.layout:not(.layout__center) > .layout__resize {
+    margin-bottom: calc(var(--_layout-gap) * -1);
+    height: calc(var(--_layout-gap) / 2);
+}
+.body--toolbar-hide {
+    .layout__resize--lr {
+        &::after {
+            top: 42px;
+            height: calc(100% - 42px);
+        }
+    }
+    .layout__dockb > .layout__resize--lr {
+        &::after {
+            top: 0;
+            height: 100%;
+        }
+    }
+}

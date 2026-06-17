@@ -1,0 +1,41 @@
+@use "../utils" as *;
+.b3-dialog__scrim {
+    background-color: transparent;
+    backdrop-filter: blur(2px);
+    z-index: -2;
+}
+.b3-dialog__container {
+    border: unset;
+    box-shadow: var(--b3-dialog-shadow-blur);
+    @include superellipse(16px);
+    background-color: transparent;
+    &::before {
+        @include frostedglass-before;
+        @include frostedglass($blur: l, $color: background);
+        box-shadow: var(--b3-dialog-shadow-inset);
+    }
+    .b3-dialog__content {
+        background-color: transparent !important; // 覆盖内联
+    }
+}
+.b3-dialog__loading {
+    border: unset;
+    box-shadow: var(--b3-dialog-shadow-blur);
+    @include superellipse(16px);
+    background-color: transparent;
+    &::before {
+        @include frostedglass-before;
+        @include frostedglass($blur: l, $color: background);
+        box-shadow: var(--b3-dialog-shadow-inset);
+    }
+}
+.b3-dialog__close {
+    display: none;
+}
+.b3-dialog__header {
+    text-align: center;
+    border: unset;
+}
+.b3-dialog__action {
+    border: unset;
+}

@@ -1,0 +1,27 @@
+@use "../utils" as *;
+.protyle-toolbar {
+    @include superellipse(16px);
+    border: unset;
+    box-shadow: var(--b3-menu-shadow-blur);
+    padding: 6px;
+    background-color: transparent;
+    &::before {
+        @include frostedglass-before;
+        @include frostedglass($blur: s, $color: surface, $alpha: 0.5);
+        box-shadow: var(--b3-menu-shadow-inset);
+    }
+}
+.protyle-toolbar__item {
+    @include icon;
+    @include superellipse(6px);
+    padding: 4px;
+    margin: 0 2px;
+    font-size: 8px;
+    height: 24px;
+    &--current {
+        @include icon-current;
+    }
+}
+.protyle-toolbar__divider {
+    border-color: var(--b3-border-color-trans);
+}

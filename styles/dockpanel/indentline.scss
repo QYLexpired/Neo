@@ -1,0 +1,68 @@
+@use "../utils" as *;
+.file-tree {
+    & > .fn__flex-1 {
+        & > ul {
+            & > .b3-list-item {
+                margin-inline-start: 6px;
+                margin-inline-end: 6px;
+                .b3-list-item__toggle {
+                    padding-left: 2px !important;
+                }
+            }
+            & ul {
+                position: relative;
+                &::before {
+                    content: "";
+                    position: absolute;
+                    left: var(--neo-indent-offset);
+                    top: 0;
+                    width: 0.75px;
+                    height: 100%;
+                    background-color: var(--b3-border-color-trans);
+                }
+                .b3-list-item__toggle {
+                    position: relative;
+                    &::before {
+                        content: "";
+                        position: absolute;
+                        border-bottom-left-radius: 8px;
+                        border-left: 0.76px solid var(--b3-border-color-trans);
+                        border-bottom: 0.75px solid var(--b3-border-color-trans);
+                        left: unset;
+                        top: 0;
+                        height: 10.5px;
+                        width: 8px;
+                        margin-inline-start: var(--neo-dock-indent-fork-left, -11px);
+                        background-color: transparent;
+                        visibility: visible;
+                    }
+                    &.fn__hidden {
+                        &::before {
+                            border-bottom-left-radius: 12px;
+                            width: 16px;
+                        }
+                        &::after {
+                            content: "";
+                            position: absolute;
+                            top: 50%;
+                            right: 8px;
+                            transform: translateY(-50%);
+                            width: 3px;
+                            height: 3px;
+                            border-radius: 50%;
+                            background-color: var(--b3-border-color-trans);
+                            visibility: visible;
+                        }
+                    }
+                }
+            }
+            $selector: "& > ul";
+            @for $i from 1 through 16 {
+              #{$selector} {
+                --neo-indent-offset: #{$i * 18}px;
+              }
+              $selector: "#{$selector} > ul";
+            }
+        }
+    }
+}

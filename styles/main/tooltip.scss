@@ -1,4 +1,4 @@
-@use "../tools" as *;
+
 .tooltip {
     @include superellipse(6px);
     box-shadow: var(--b3-menu-shadow);

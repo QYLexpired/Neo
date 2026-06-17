@@ -1,9 +1,3 @@
-:root {
-    --b3-layout-space: 6px;
-    --b3-transition: 0.3s;
-    --b3-button-shadow: none;
-    --_resize-hl: var(--b3-theme-primary);
-}
 [data-theme-mode="light"] {
     // shadow
     --b3-menu-shadow-blur: 0 0 0 1px oklch(from var(--b3-theme-on-background) l c h / 0.1), 0 2px 18px oklch(from var(--b3-theme-on-background) l c h / 0.25);
@@ -26,4 +20,3 @@
     --neo-main-shadow-light: 0 0 1px oklch(from var(--b3-theme-on-background) l c h / 0.55), 0 1px 4px rgba(0, 0, 0, 0.2);
     --neo-main-shadow-heavy: 0 0 1px oklch(from var(--b3-theme-on-background) l c h / 0.65), 0 2px 6px rgba(0, 0, 0, 0.35);
 }
-$layout-gap: var(--b3-layout-space);

@@ -1,0 +1,11 @@
+@use "../utils" as *;
+.b3-list-item__action,
+.b3-list-item .counter,
+.b3-list-item__toggle {
+    @include icon;
+}
+.dockPanel {
+    & > .block__icons ~ .fn__flex-1 {
+        @include overflow-indicator-fadein-mask($fadeout-size-l, "top bottom");
+    }
+}

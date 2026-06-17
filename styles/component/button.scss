@@ -1,0 +1,195 @@
+@use "../utils" as *;
+[data-theme-mode="light"] {
+    --neo-button-primary: oklch(from var(--b3-base-color) clamp(0, l, 0.92) c h);
+}
+[data-theme-mode="dark"] {
+    --neo-button-primary: oklch(from var(--b3-base-color) clamp(0.4, l, 1) c h);
+}
+@mixin button-common {
+    padding: 4px 12px;
+    line-height: 18px;
+    @include superellipse(7px);
+    box-shadow: none;
+    transition: var(--b3-transition);
+    &:hover,
+    &:active,
+    &:focus {
+        box-shadow: none;
+    }
+}
+@mixin button-primary {
+    @include button-common;
+    background-color: var(--neo-button-primary);
+    @include color-reverse(--neo-button-primary);
+    @include color-reverse(--neo-button-primary-hover, --b3-theme-on-primary); // 兼容插件显式设置的按钮颜色
+    --neo-button-primary-hover: oklch(from var(--neo-button-primary) calc(l + 0.0225 + 0.0575 * sign(0.680000001 - l)) c h);
+    &:hover,
+    &:active,
+    &:focus {
+        background-color: var(--neo-button-primary-hover);
+        @include color-reverse(--neo-button-primary-hover);
+    }
+}
+@mixin button-transparent {
+    @include button-common;
+    background-color: transparent;
+    color: var(--b3-theme-on-surface);
+    &:hover,
+    &:active,
+    &:focus {
+        background-color: transparent;
+        color: var(--b3-theme-on-background);
+    }
+}
+@mixin button-transparent-outline {
+    @include button-common;
+    background-color: transparent;
+    color: var(--b3-theme-on-surface);
+    box-shadow: inset 0 0 0 1px var(--b3-border-color-trans);
+    &:hover,
+    &:active,
+    &:focus {
+        background-color: var(--b3-list-hover);
+        color: var(--b3-theme-on-surface);
+        box-shadow: inset 0 0 0 1px var(--b3-border-color-trans);
+    }
+}
+@mixin button-transparent-outline-no-hover {
+    @include button-common;
+    background-color: transparent;
+    color: var(--b3-theme-on-surface);
+    box-shadow: inset 0 0 0 1px var(--b3-border-color-trans);
+    &:hover,
+    &:active,
+    &:focus {
+        background-color: transparent;
+        color: var(--b3-theme-on-surface);
+        box-shadow: inset 0 0 0 1px var(--b3-border-color-trans);
+    }
+}
+@mixin button-warning {
+    @include button-common;
+    background-color: var(--b3-theme-error);
+    @include color-reverse(--b3-theme-error);
+    --neo-button-warning-hover: oklch(from var(--b3-theme-error) calc(l + (0.05 * sign(0.4999999 - l))) c h);
+    &:hover,
+    &:active,
+    &:focus {
+        background-color: var(--neo-button-warning-hover);
+        @include color-reverse(--neo-button-warning-hover);
+    }
+}
+.b3-button {
+    @include button-primary;
+    &--outline {
+        @include button-transparent-outline;
+    }
+    &--text {
+        @include button-transparent;
+    }
+    &--cancel {
+        @include button-transparent;
+    }
+    &--remove,
+    &#removeAll,
+    &#removeAVAll {
+        @include button-warning;
+    }
+    &--primary {
+        @include button-primary;
+    }
+}
+// 设置页按钮
+.config__tab-wrap,
+.config__item,
+#modelMain {
+    .b3-button--outline {
+        @include button-primary;
+    }
+}
+// action按钮
+.b3-dialog__action,
+.config-account__center,
+#action {
+    .b3-button--text {
+        @include button-primary;
+    }
+    .b3-button--cancel {
+        @include button-transparent-outline;
+    }
+}
+// 集市按钮
+.config-bazaar__title {
+    .b3-button {
+        @include button-transparent;
+        padding: 0 8px;
+        &:not(.b3-button--outline) {
+            @include button-transparent;
+            padding: 0 8px;
+            color: var(--b3-theme-accent);
+            &:hover,
+            &:active,
+            &:focus {
+                color: var(--b3-theme-accent);
+            }
+        }
+        &[data-type="install-all"] {
+            @include button-primary;
+        }
+    }
+}
+.config-bazaar__readme .item__side {
+    .b3-button {
+        @include button-primary;
+        &[data-type="feedback"] {
+            @include button-warning;
+        }
+    }
+}
+// pdf搜索栏
+.pdf__outer .findbar {
+    .b3-button:not(.b3-button--outline) {
+        @include button-primary;
+    }
+    #findResultsCount, #findMsg {
+        @include button-transparent;
+    }
+}
+// 闪卡按钮
+.card__action .b3-button {
+    line-height: 32px;
+    @include superellipse(16px);
+    .card__icon {
+        display: none
+    }
+    &[data-type="-3"] {
+        @include button-transparent-outline;
+    }
+    &[data-type="-2"] {
+        @include button-transparent-outline;
+    }
+    &[data-type="-1"] {
+        @include button-primary;
+    }
+    &[data-type="1"],
+    &[data-type="2"],
+    &[data-type="3"],
+    &[data-type="4"] {
+        background-color: oklch(from currentColor l c h / 0.15);
+        &:hover {
+            background-color: oklch(from currentColor calc(l + 0.08) c h / 0.25);
+        }
+    }
+    &[data-type="1"] {
+        color: var(--b3-card-error-color);
+    }
+    &[data-type="2"] {
+        color: var(--b3-card-warning-color);
+    }
+    &[data-type="3"] {
+        color: var(--b3-card-info-color);
+    }
+    &[data-type="4"] {
+        color: var(--b3-card-success-color);
+    }
+}

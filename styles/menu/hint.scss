@@ -1,0 +1,12 @@
+@use "../utils" as *;
+.protyle-hint {
+    @include superellipse(10px);
+    border: unset;
+    box-shadow: var(--b3-menu-shadow-blur);
+    background-color: transparent;
+    &::before {
+        @include frostedglass-before;
+        @include frostedglass($blur: l, $color: menu);
+        box-shadow: var(--b3-menu-shadow-inset);
+    }
+}

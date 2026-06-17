@@ -1,78 +1,20 @@
-@use "../tools" as *;
+
 // status
 @supports (bottom: anchor(--a bottom)) {
     .status {
         @include frostedglass($blur: s, $color: surface, $alpha: 0.5);
     }
 }
-// menu
-.b3-menu,
-.b3-menu__submenu {
-    background-color: transparent;
-    &::before {
-        @include frostedglass-before;
-        @include frostedglass($blur: l, $color: menu);
-        box-shadow: var(--b3-menu-shadow-inset);
-    }
-}
-.b3-menu__item {
-    background-color: transparent;
-}
-// protyle-toolbar
-.protyle-toolbar {
-    background-color: transparent;
-    &::before {
-        @include frostedglass-before;
-        @include frostedglass($blur: s, $color: surface, $alpha: 0.5);
-        box-shadow: var(--b3-menu-shadow-inset);
-    }
-}
-// protyle-hint
-.protyle-hint {
-    background-color: transparent;
-    &::before {
-        @include frostedglass-before;
-        @include frostedglass($blur: l, $color: menu);
-        box-shadow: var(--b3-menu-shadow-inset);
-    }
-}
-// protyle-util
-.protyle-util {
-    background-color: transparent;
-    &::before {
-        @include frostedglass-before;
-        @include frostedglass($blur: l, $color: menu);
-        box-shadow: var(--b3-menu-shadow-inset);
-    }
-}
+
 // fullscreen
 .fullscreen {
     @include frostedglass($blur: l, $color: background);
 }
 // dialog
-.b3-dialog__scrim {
-    background-color: transparent;
-    backdrop-filter: blur(2px);
-    z-index: -2;
-}
-.b3-dialog__loading {
-    background-color: transparent;
-    &::before {
-        @include frostedglass-before;
-        @include frostedglass($blur: l, $color: background);
-        box-shadow: var(--b3-dialog-shadow-inset);
-    }
-}
+
+
 .b3-dialog__container {
-    background-color: transparent;
-    &::before {
-        @include frostedglass-before;
-        @include frostedglass($blur: l, $color: background);
-        box-shadow: var(--b3-dialog-shadow-inset);
-    }
-    .b3-dialog__content {
-        background-color: transparent !important;
-    }
+
     .config__tab-wrap {
         background-color: transparent !important; // 部分插件显式设置背景色
         .config__tab-container {

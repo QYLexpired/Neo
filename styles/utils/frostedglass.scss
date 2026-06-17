@@ -17,11 +17,11 @@
     }
     @at-root {
         [data-theme-mode="dark"] & {
-            background-color: oklch(from var(#{$color-var}) l c h / 0.7) !important;
+            background-color: oklch(from var(#{$color-var}) l c h / 0.7);
             backdrop-filter: blur(#{$blur-value}) saturate(1.8) brightness(0.9);
         }
     }
-    background-color: oklch(from var(#{$color-var}) l c h / #{$alpha}) !important;
+    background-color: oklch(from var(#{$color-var}) l c h / #{$alpha});
     backdrop-filter: blur(#{$blur-value}) saturate(1.8) brightness(1.1);
 }
 @mixin frostedglass-before {

@@ -1,0 +1,35 @@
+@use "../utils" as *;
+.protyle-util {
+    @include superellipse(10px);
+    border: unset;
+    box-shadow: var(--b3-menu-shadow-blur);
+    background-color: transparent;
+    &::before {
+        @include frostedglass-before;
+        @include frostedglass($blur: l, $color: menu);
+        box-shadow: var(--b3-menu-shadow-inset);
+    }
+    & .block__icons--menu {
+        background-color: transparent;
+        & + .b3-text-field {
+            background-color: transparent;
+        }
+    }
+    .toolbarResize {
+        box-shadow: unset !important; // 覆盖内联
+        border-left: 1px solid var(--b3-border-color-trans);
+        transition: var(--b3-transition);
+        &:hover {
+            border-color: var(--_resize-hl);
+        }
+    }
+}
+.color__square,
+.protyle-font__style {
+    transition: var(--b3-transition);
+    box-shadow: 0 0 0 1px var(--b3-border-color-trans);
+}
+.color__square:hover:not(.color__square--list):not(.color__square--current),
+.protyle-font__style:hover {
+    box-shadow: 0 0 0 1px var(--b3-border-color-trans);
+}

@@ -1,0 +1,141 @@
+@use "../utils" as *;
+// center tab
+body:not(.body--toolbar-hide) [data-type="wnd"] > .fn__flex:first-child {
+    // 修正渐隐颜色
+    background-color: var(--b3-theme-background);
+}
+.layout-tab-bar {
+    border-bottom: unset;
+    &:not(.layout-tab-bar--readonly) {
+        @include overflow-indicator-fadein-mask($fadeout-size-l, "left right");
+        padding: 0;
+        .item {
+            @include superellipse(7px);
+            margin: 6px 3px;
+            background-color: transparent;
+            .item__graphic {
+                padding: 4px 0 4px 8px;
+            }
+            .item__icon,
+            .item__graphic,
+            .item__text {
+                transition: var(--b3-transition);
+                transform: translateX(11px);
+            }
+            .item__close {
+                transition: var(--b3-transition);
+                opacity: 0;
+                svg {
+                    color: var(--b3-theme-on-surface);
+                }
+                &:hover {
+                    svg {
+                        color: var(--b3-theme-error);
+                        background-color: transparent;
+                    }
+                }
+            }
+            &:first-child {
+                margin-left: 6px;
+            }
+            &:last-child {
+                margin-right: 6px;
+            }
+            &:hover {
+                background-color: transparent !important;
+                .item__icon,
+                .item__graphic,
+                .item__text {
+                    transform: translateX(0px);
+                }
+                .item__close {
+                    opacity: 1;
+                }
+            }
+            &.item--focus {
+                background-color: oklch(from var(--b3-theme-background) l c h / 0.7) !important;
+                box-shadow: var(--neo-main-shadow-heavy);
+                color: var(--b3-theme-on-background);
+                &::before {
+                    opacity: 0;
+                }
+                & + .item::before {
+                    opacity: 0;
+                }
+                & ~ .item.fn__none + .item::before {
+                    // 有时.item--focus后面可能紧接.fn__none.item，需排除
+                    opacity: 0;
+                }
+            }
+            &.item--pin {
+                .item__icon,
+                .item__graphic,
+                .item__text {
+                    transform: translateX(0px);
+                }
+                .item__text {
+                    color: var(--b3-theme-on-surface);
+                }
+                &:hover {
+                    .item__text {
+                        color: var(--b3-theme-on-background);
+                    }
+                }
+            }
+            overflow: visible;
+            &:not(:first-child)::before {
+                content: "";
+                position: absolute;
+                left: -3.5px;
+                top: 50%;
+                transform: translateY(-50%);
+                background-color: var(--b3-border-color-trans);
+                height: calc(100% - 8px);
+                width: 1px;
+                pointer-events: none;
+                transition: var(--b3-transition);
+            }
+        }
+        &:empty {
+            & + .layout-tab-bar--readonly {
+                .block__icon {
+                    display: none;
+                }
+            }
+        }
+    }
+    &--readonly {
+        margin-left: unset;
+        .item--readonly {
+            padding: 0 3px;
+            .block__icon {
+                margin: 0 6px;
+            }
+            .fn__flex-1 {
+                display: none;
+            }
+        }
+    }
+}
+// other-tab
+.layout-tab-bar:not(.layout__center .layout-tab-bar) {
+    max-width: max-content;
+    margin: 3px auto;
+    background-color: transparent;
+    .item {
+        max-width: max-content;
+        .item__text {
+            padding: 0 16px;
+            transform: none;
+        }
+    }
+}
+.av__views .layout-tab-bar {
+    .item {
+        .item__icon,
+        .item__graphic,
+        .item__text {
+            transform: none;
+        }
+    }
+}

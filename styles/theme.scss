@@ -1,4 +1,12 @@
-@use "main";
+@use "layout";
+@use "status";
+@use "menu";
+@use "dialog";
+@use "component";
+@use "dock";
+@use "dockpanel";
+@use "tab";
+
 @use "utils";
-@use "feature";
+
 @use "plugins";

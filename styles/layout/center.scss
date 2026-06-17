@@ -1,0 +1,39 @@
+@use "../utils" as *;
+.layout:not(.layout__center) {
+    margin-bottom: calc(var(--_layout-gap) / 2);
+    margin-top: calc(var(--_layout-gap) / -2);
+    min-height: 0.1px;
+    .layout__center {
+        border-radius: unset;
+        .neo-haswnd {
+            padding: calc(var(--_layout-gap) / 2);
+            & > [data-type="wnd"] {
+                border-radius: 8px;
+                //@include superellipse(8px);
+                box-shadow: var(--neo-main-shadow-light);
+            }
+        }
+    }
+}
+.body--toolbar-hide {
+    .layout:not(.layout__center) .layout__center {
+        .neo-haswnd {
+            padding: unset;
+            & > [data-type="wnd"] {
+                padding: calc(var(--_layout-gap) / 2);
+                min-height: 0.1px;
+                corner-shape: unset;
+                border-radius: unset;
+                box-shadow: unset;
+                & > .layout-tab-container {
+                    border-radius: 8px;
+                    //@include superellipse(8px);
+                    box-shadow: var(--neo-main-shadow-light);
+                }
+                .layout-tab-bar {
+                    background-color: transparent;
+                }
+            }
+        }
+    }
+}

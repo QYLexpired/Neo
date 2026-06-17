@@ -1,0 +1,40 @@
+@use "../utils" as *;
+:root {
+    --_emoji-transiton: 0.15s var(--neo-ease-elastic-out-5);
+}
+.emojis {
+    .emojis__tabheader {
+        padding-bottom: 0;
+        border-bottom: unset;
+    }
+    .emojis__type {
+        @include icon;
+        @include superellipse(12px);
+        transition: var(--_emoji-transiton);
+        &:hover {
+            filter: url(#neo-neon-emoji) saturate(1.5) brightness(1.02);
+            scale: 1.25;
+            background-color: transparent;
+            box-shadow: none;
+        }
+    }
+    .emojis__panel + .fn__flex {
+        padding: 8px 8px 0 8px;
+    }
+    .emojis__item {
+        @include icon;
+        @include superellipse(12px);
+        color: unset;
+        font-size: 24px;
+        height: 36px;
+        width: 36px;
+        margin: 4px;
+        padding: unset;
+        transition: var(--_emoji-transiton);
+        &:hover {
+            filter: url(#neo-neon-emoji) saturate(1.5) brightness(1.02);
+            scale: 1.25;
+            box-shadow: none;
+        }
+    }
+}

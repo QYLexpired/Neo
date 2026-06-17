@@ -1,4 +1,4 @@
-@use "../tools" as *;
+
 .toolbar__item {
     @include icon;
     @include superellipse(6px);

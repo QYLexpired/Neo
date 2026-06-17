@@ -1,0 +1,139 @@
+@use "../utils" as *;
+[data-theme-mode="light"] {
+    --neo-menu-item-primary: oklch(from var(--b3-base-color) clamp(0, l, 0.9) c h);
+}
+[data-theme-mode="dark"] {
+    --neo-menu-item-primary: oklch(from var(--b3-base-color) clamp(0.4, l, 1) c h);
+}
+@mixin menu-item-child {
+    // 菜单项的子元素
+    & > .b3-menu__icon,
+    & > .b3-menu__label,
+    & > .b3-menu__accelerator,
+    & > .fn__flex-center,
+    & > .b3-menu__label .b3-menu__icon,
+    & > .b3-menu__action,
+    & > .b3-menu__checked,
+    & > .block__icon svg {
+        @content;
+    }
+}
+@mixin menu-item-child-trans-origin {
+    // 特殊的菜单项子元素需要变化
+    .b3-text-field {
+        margin: 4px 0;
+    }
+}
+@mixin menu-item-child-trans-current {
+    // 特殊的菜单项子元素在悬停时需要变化
+    & > .b3-switch {
+        outline: 1px solid;
+        @include color-reverse(--neo-menu-item-primary, outline-color, 0.5);
+        transition: none;
+    }
+    & > .b3-text-field {
+        @include color-reverse(--neo-menu-item-primary, --_b3-text-field-box-shadow-reverse, 0.5);
+        box-shadow: 0 0 0 2px var(--_b3-text-field-box-shadow-reverse);
+        @include color-reverse(--neo-menu-item-primary);
+    }
+    & > .b3-menu__label {
+        .b3-switch {
+            outline: 1px solid;
+            @include color-reverse(--neo-menu-item-primary, outline-color, 0.5);
+            transition: none;
+        }
+        .b3-text-field {
+            @include color-reverse(--neo-menu-item-primary, --_b3-text-field-box-shadow-reverse, 0.5);
+            box-shadow: 0 0 0 2px var(--_b3-text-field-box-shadow-reverse);
+            @include color-reverse(--neo-menu-item-primary);
+        }
+    }
+}
+@mixin menu-item-warning {
+    // 警告色菜单项
+    &.b3-menu__item--warning,
+    &[data-type="delete-view"],
+    &[data-type="remove"],
+    &[data-id="close"],
+    .b3-menu[data-name="search-history"] &:first-child {
+        @content;
+    }
+}
+.b3-menu,
+.b3-menu__submenu {
+    border: unset;
+    box-shadow: var(--b3-menu-shadow-blur);
+    background-color: transparent;
+    @include superellipse(10px);
+    &::before {
+        @include frostedglass-before;
+        @include frostedglass($blur: l, $color: menu);
+        box-shadow: var(--b3-menu-shadow-inset);
+    }
+}
+.b3-menu__item {
+    background-color: transparent;
+}
+.b3-menu__item--selected {
+    color: var(--b3-theme-accent);
+    @include menu-item-child {
+        color: var(--b3-theme-accent);
+    }
+}
+@mixin menu-item-current {
+    // 当前或悬停的菜单项
+    &.b3-menu__item--current:not(.b3-menu__item--readonly):not([data-type=nobg]),
+    &.b3-menu__item--show:not(.b3-menu__item--readonly),
+    &.pdf__util__hide:hover,
+    &.secondaryToolbarButton:hover,
+    .av__panel &:not([data-type=nobg]):hover {
+        @content;
+    }
+}
+@mixin menu-item-current-style {
+    // 当前或悬停的菜单项样式
+    background-color: var(--neo-menu-item-primary);
+    @include color-reverse(--neo-menu-item-primary);
+    @include menu-item-warning {
+        --neo-menu-item-primary: var(--b3-theme-error);
+    }
+    @include menu-item-child {
+        @include color-reverse(--neo-menu-item-primary);
+        @include color-reverse(--neo-menu-item-primary, --b3-callout-note);
+        @include color-reverse(--neo-menu-item-primary, --b3-callout-tip);
+        @include color-reverse(--neo-menu-item-primary, --b3-callout-important);
+        @include color-reverse(--neo-menu-item-primary, --b3-callout-warning);
+        @include color-reverse(--neo-menu-item-primary, --b3-callout-caution);
+    }
+    @include menu-item-child-trans-current;
+}
+.b3-menu__item {
+    line-height: 24px;
+    @include superellipse(7px);
+    @include menu-item-child-trans-origin;
+    @include menu-item-current {
+        @include menu-item-current-style;
+    }
+    &[disabled=disabled] {
+        @include menu-item-child {
+            opacity: 0.38;
+        }
+    }
+}
+.b3-menu__separator {
+    background-color: var(--b3-border-color-trans);
+    width: calc(100% - 16px);
+    margin: 4px 8px;
+}
+.neo-menu-item-second-icon {
+    margin-right: 0;
+    margin-left: auto;
+    opacity: 0.5;
+    transition: opacity var(--b3-transition);
+    &:hover {
+        opacity: 1;
+    }
+}
+.neo-menu-item-second-icon-space {
+    width: 16px;
+}
