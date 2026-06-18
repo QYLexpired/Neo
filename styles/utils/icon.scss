@@ -1,39 +1,47 @@
 @use "superellipse" as *;
-@mixin icon-common {
+// 辅助：根据 $important 决定是否输出 !important
+@mixin _maybe-important($prop, $value, $important: false) {
+    @if $important {
+        #{$prop}: $value !important;
+    } @else {
+        #{$prop}: $value;
+    }
+}
+@mixin icon-common($important: false) {
     @include superellipse(6px);
     --b3-toolbar-hover: transparent;
-    background-color: transparent;
     transition: var(--b3-transition);
     svg {
         transition: var(--b3-transition);
     }
+    @include _maybe-important(background-color, transparent, $important);
     &:hover {
-        background-color: transparent;
+        @include _maybe-important(background-color, transparent, $important);
     }
 }
-@mixin icon {
-    @include icon-common;
-    color: var(--b3-theme-on-surface);
+@mixin icon($important: false) {
+    @include icon-common($important);
+    @include _maybe-important(color, var(--b3-theme-on-surface), $important);
     svg {
-        color: var(--b3-theme-on-surface);
+        @include _maybe-important(color, var(--b3-theme-on-surface), $important);
     }
     &:hover {
-        color: var(--b3-theme-on-background);
+        @include _maybe-important(color, var(--b3-theme-on-background), $important);
         svg {
-            color: var(--b3-theme-on-background);
+            @include _maybe-important(color, var(--b3-theme-on-background), $important);
         }
     }
 }
-@mixin icon-accent {
-    @include icon-common;
-    color: var(--b3-theme-accent);
+@mixin icon-accent($important: false) {
+    @include icon-common($important);
+    @include _maybe-important(color, var(--b3-theme-accent), $important);
     svg {
-        color: var(--b3-theme-accent);
+        @include _maybe-important(color, var(--b3-theme-accent), $important);
     }
     &:hover {
-        color: var(--b3-theme-accent);
+        @include _maybe-important(color, var(--b3-theme-accent), $important);
         svg {
-            color: var(--b3-theme-accent);
+            @include _maybe-important(color, var(--b3-theme-accent), $important);
         }
     }
 }

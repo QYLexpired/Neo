@@ -1,5 +1,5 @@
-
-@use "components" as *;
+@use "../utils" as *;
+@use "../component" as *;
 $mobile-toolbar-height: 50px;
 $breadcrumb-height: 42px;
 $breadcrumb-offset: 6px;

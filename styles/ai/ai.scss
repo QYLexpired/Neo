@@ -1,6 +1,4 @@
-
 @use "../utils" as *;
-// all tem !!!!!
 .agent-chat__messages {
     @include overflow-indicator-fadein-mask($fadeout-size-l, "top bottom");
 }

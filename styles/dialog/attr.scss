@@ -1,9 +1,4 @@
-
-// 闪卡
-.layout__center .card__main {
-    background-color: transparent;
-}
-// attr
+@use "../component" as *;
 .custom-attr__avheader .block__logo {
     color: var(--b3-theme-accent);
 }
@@ -20,15 +15,15 @@
     background-color: var(--b3-list-hover);
 }
 .custom-attr {
-.av__mask .b3-text-field,
-.block__icons .b3-text-field {
-    background-color: transparent;
-    transition: var(--b3-transition);
-    &:hover {
-        background-color: var(--b3-list-hover);
+    .av__mask .b3-text-field,
+    .block__icons .b3-text-field {
+        background-color: transparent;
+        transition: var(--b3-transition);
+        &:hover {
+            background-color: var(--b3-list-hover);
+        }
+        &:focus {
+            background-color: var(--b3-list-hover);
+        }
     }
-    &:focus {
-        background-color: var(--b3-list-hover);
-    }
-}
 }

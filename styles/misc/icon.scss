@@ -1,0 +1,19 @@
+@use "../utils" as *;
+.block__icon {
+    @include icon($important: true);
+}
+.b3-menu__checked,
+.b3-menu__action {
+    @include icon;
+}
+.b3-list-item__icon,
+.b3-menu__avemoji,
+.b3-list-item__switch {
+    @include icon;
+}
+.b3-form__icona-icon,
+.b3-form__icon-icon {
+    top: 50% !important; // 覆盖内联
+    transform: translateY(-50%);
+    @include icon;
+}

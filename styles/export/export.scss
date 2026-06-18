@@ -1,7 +1,7 @@
 :root {
     --b3-body-background: white;
 }
-#preview {
+body > #preview {
     box-shadow: none !important;
     background-color: white !important;
 }

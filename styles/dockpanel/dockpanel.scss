@@ -8,6 +8,9 @@
     & > .block__icons ~ .fn__flex-1 {
         @include overflow-indicator-fadein-mask($fadeout-size-l, "top bottom");
     }
+    .block__logo {
+        color: var(--b3-theme-on-surface);
+    }
 }
 .layout__dockl,
 .layout__dockr {
