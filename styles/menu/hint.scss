@@ -1,12 +1,25 @@
 @use "../utils" as *;
 .protyle-hint {
     @include superellipse(10px);
+    @include frostedglass($blur: l, $color: menu);
     border: unset;
-    box-shadow: var(--b3-menu-shadow-blur);
+    box-shadow: var(--b3-menu-shadow);
     background-color: transparent;
-    &::before {
-        @include frostedglass-before;
-        @include frostedglass($blur: l, $color: menu);
-        box-shadow: var(--b3-menu-shadow-inset);
+    animation: neo-hint-menu-entrance 0.45s var(--neo-ease-spring-2);
+    transform-origin: center;
+    will-change: transform;
+    transition: none;
+}
+@keyframes neo-hint-menu-entrance {
+    0% {
+        opacity: 0;
+        transform: none;
+    }
+    10% {
+        transform: scale(0.95);
+    }
+    90%,
+    100% {
+        opacity: 1;
     }
 }

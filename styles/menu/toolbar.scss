@@ -1,25 +1,27 @@
 @use "../utils" as *;
 .protyle-toolbar {
     @include superellipse(16px);
+    @include frostedglass($blur: s, $color: surface, $alpha: 0.5);
     border: unset;
-    box-shadow: var(--b3-menu-shadow-blur);
+    box-shadow: var(--b3-menu-shadow);
     padding: 6px;
     background-color: transparent;
-    animation: neo-toolbar-entrance 0.6s var(--neo-ease-spring-3);
-    transform-origin: center;
+    animation: neo-toolbar-entrance 0.45s var(--neo-ease-spring-2);
+    transform-origin: 50% 150%;
     will-change: transform;
-    &::before {
-        @include frostedglass-before;
-        @include frostedglass($blur: s, $color: surface, $alpha: 0.5);
-        box-shadow: var(--b3-menu-shadow-inset);
-    }
+    transition: none;
 }
 @keyframes neo-toolbar-entrance {
-    from {
-        transform: scale(0.97);
+    0% {
+        opacity: 0;
+        transform: none;
     }
-    to {
-        transform: scale(1);
+    10% {
+        transform: scale(0.92);
+    }
+    90%,
+    100% {
+        opacity: 1;
     }
 }
 .protyle-toolbar__item {
