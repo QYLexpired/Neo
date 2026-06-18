@@ -24,7 +24,7 @@
         }
     }
 }
-@mixin icon-current {
+@mixin icon-accent {
     @include icon-common;
     color: var(--b3-theme-accent);
     svg {

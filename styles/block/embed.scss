@@ -1,0 +1,10 @@
+@use "../utils" as *;
+.protyle-wysiwyg [data-node-id].render-node[data-type=NodeBlockQueryEmbed] {
+    border: unset;
+    background-color: oklch(from var(--b3-theme-surface) l c h / 0.7);
+    padding: 10px 16px;
+    @include superellipse(10px);
+    .protyle-wysiwyg__embed {
+        border-color: var(--b3-border-color-trans);
+    }
+}

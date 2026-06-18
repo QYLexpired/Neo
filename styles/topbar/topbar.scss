@@ -1,0 +1,20 @@
+@use "../utils" as *;
+.toolbar__item {
+    @include icon;
+}
+#barWorkspace {
+    .toolbar__text {
+        font-size: 14px;
+    }
+    .toolbar__svg {
+        display: none;
+    }
+    &:hover {
+        background-color: oklch(from var(--b3-theme-background) l c h / 0.7);
+        box-shadow: var(--neo-main-shadow-heavy);
+    }
+    .body--toolbar-hide & {
+        line-height: 20px;
+        height: unset;
+    }
+}

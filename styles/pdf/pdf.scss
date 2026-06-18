@@ -1,5 +1,4 @@
 @use "../utils" as *;
-
 .pdf__toolbar {
     margin-top: 4px;
 }
@@ -41,6 +40,12 @@
     border: unset;
     box-shadow: var(--b3-dialog-shadow-blur);
     @include superellipse(12px);
+    background-color: transparent;
+    &::before {
+        @include frostedglass-before;
+        @include frostedglass($blur: l, $color: background);
+        box-shadow: var(--b3-dialog-shadow-inset);
+    }
     .separator {
         background-color: var(--b3-border-color-trans);
     }

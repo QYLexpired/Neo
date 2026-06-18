@@ -1,3 +1,32 @@
+@use "../utils" as *;
+.protyle-wysiwyg [data-node-id] {
+    @include superellipse(10px);
+    &::after {
+        @include superellipse(10px);
+    }
+}
+.protyle-wysiwyg--select::after,
+.protyle-wysiwyg--hl::after {
+    background-color: oklch(from var(--b3-theme-primary) l c h / 0.15);
+}
+.protyle-wysiwyg [data-node-id][fold="1"] {
+    animation: neo-block-fold 0.6s var(--neo-ease-spring-3) !important;
+    animation-timeline: unset !important; // 卷轴动画会覆盖动画
+    transform-origin: top;
+    &:not(.li) {
+        outline: 1px solid oklch(from currentColor l c h / 0.3);
+        background-color: oklch(from currentColor l c h / 0.12);
+        opacity: 0.38 !important; // 卷轴动画会覆盖opacity
+    }
+}
+@keyframes neo-block-fold {
+    0% {
+        transform: scaleY(1.65);
+    }
+    100% {
+        transform: scaleY(1);
+    }
+}
 :root {
     --b3-font-family: system-ui, ui-sans-serif, -apple-system, "Emojis Additional", "Emojis Reset",
     BlinkMacSystemFont, "SF Pro Text", "SF Pro Icons", "Helvetica Neue",

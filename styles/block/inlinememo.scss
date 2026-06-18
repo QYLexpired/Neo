@@ -1,0 +1,18 @@
+@use "../utils" as *;
+:root {
+    --neo-inline-memo-color: var(--b3-theme-accent);
+}
+.b3-typography span[data-type~=inline-memo],
+.protyle-wysiwyg span[data-type~=inline-memo] {
+    background-color: oklch(from currentColor l c h / 0.12);
+    color: var(--neo-inline-memo-color);
+    border-bottom: 1.5px solid;
+    transition: var(--b3-transition);
+    &:hover {
+        @include superellipse(1px);
+        background-color: var(--neo-inline-memo-color);
+        box-shadow: 0 0 0 4px var(--neo-inline-memo-color);
+        @include color-reverse(--neo-inline-memo-color);
+        border-color: transparent;
+    }
+}

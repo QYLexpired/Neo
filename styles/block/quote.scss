@@ -1,0 +1,13 @@
+@use "../utils" as *;
+.b3-typography blockquote,
+.b3-typography .bq,
+.protyle-wysiwyg blockquote,
+.protyle-wysiwyg .bq {
+    background-color: oklch(from var(--b3-theme-surface) l c h / 0.7);
+    padding: 10px 16px;
+    margin: 0.4em 0;
+    @include superellipse(10px);
+    &::before {
+        display: none;
+    }
+}

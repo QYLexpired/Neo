@@ -1,0 +1,25 @@
+@use "../utils" as *;
+:root {
+    --neo-kbd-color: inherit;
+}
+.search__tip kbd,
+.config-keymap__key,
+.protyle-wysiwyg span[data-type~=kbd],
+.b3-typography kbd,
+.b3-typography span[data-type~=kbd] {
+    color: var(--neo-kbd-color);
+    border: 0.5px solid;
+    border-color: oklch(from currentColor l c h / 0.25);
+    line-height: 1.625;
+    background-color: oklch(from currentColor l c h / 0.12);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.8), inset 0 -0.5px 0 rgba(255, 255, 255, 0.56);
+    text-shadow: 0 1px rgba(255, 255, 255, 0.67);
+    @include superellipse(6px);
+    vertical-align: 1px;
+    font-size: 0.75em;
+    [data-theme-mode="dark"] & {
+        border-color: oklch(from currentColor l c h / 0.1);
+        box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.3), inset 0 -0.5px 0 rgba(255, 255, 255, 0.2);
+        text-shadow: 0 -1px rgba(0, 0, 0, 0.73);
+    }
+}

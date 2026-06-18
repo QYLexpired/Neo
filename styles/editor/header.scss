@@ -1,0 +1,95 @@
+@use "../utils" as *;
+@use "../component" as *;
+.protyle-background__action {
+    .b3-button {
+        @include button-transparent-outline;
+    }
+}
+.b3-chips__doctag .b3-chip {
+    @include superellipse(6px);
+    @include button-transparent-outline;
+    $offset: 16px;
+    padding: 4px 14px;
+    background-color: oklch(from currentColor l c h / 0.12);
+    color: var(--neo-tag-color);
+    box-shadow: inset 0 0 0 1px oklch(from currentColor l c h / 0.18);
+    &::before {
+        content: "#";
+        display: inline-block;
+        margin-inline-end: 4px;
+    }
+    .b3-chip__close {
+        opacity: 0;
+        margin-right: -$offset;
+        margin-left: 0;
+        padding-right: 0;
+        transition: var(--b3-transition);
+        &:hover {
+            background-color: transparent;
+            color: var(--b3-theme-error);
+        }
+    }
+    &:hover {
+        padding: 4px 6px;
+        background-color: oklch(from currentColor l c h / 0.18);
+        color: var(--neo-tag-color);
+        box-shadow: inset 0 0 0 1px oklch(from currentColor l c h / 0.18);
+        .b3-chip__close {
+            opacity: 1;
+            margin-right: 0;
+        }
+    }
+}
+.protyle-background--enable .protyle-background__icon {
+    transition: var(--_emoji-transiton);
+    &:hover {
+        opacity: 1;
+        scale: 1.035;
+        transform: translateY(-2px);
+        filter: saturate(1.5) brightness(1.02);
+    }
+}
+.protyle-attr--refcount {
+    @include superellipse(6px);
+    right: -10px;
+    top: 0;
+    padding: 2px 6px;
+    color: var(--b3-theme-accent);
+    background-color: oklch(from currentColor l c h / 0.12);
+    transition: var(--b3-transition);
+    &:hover {
+        color: var(--b3-theme-accent);
+        background-color: oklch(from currentColor l c h / 0.18);
+    }
+}
+.protyle-attr > div:not(.protyle-attr--refcount) {
+    transition: var(--b3-transition);
+}
+.layout__empty {
+    .b3-list-item {
+        transition: var(--b3-transition);
+    }
+}
+$header-height: 40vh;
+$header-parallax: 5vh;
+.protyle[data-loading="finished"] .protyle-content {
+    scroll-timeline-name: --protyle-conten-scroll;
+    scroll-timeline-axis: block;
+    .protyle-background__img {
+        height: $header-height;
+        transform-origin: center;
+        animation: header-parallax ease-out;
+        animation-timeline: --protyle-conten-scroll;
+        animation-range: 0 $header-height;
+        img,video {
+            height: $header-height;
+        }
+    }
+}
+@keyframes header-parallax {
+    to {
+        transform: scale(1.375) translateY($header-parallax);
+        filter: blur(1px);
+        opacity: 0;
+    }
+}

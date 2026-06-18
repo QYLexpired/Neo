@@ -12,33 +12,47 @@
         background-color: oklch(from var(--b3-theme-background) l c h / 0.7) !important;
     }
 }
+.dock__item--active {
+    animation: neo-dock-active 0.3s var(--neo-ease-out-3);
+}
+@keyframes neo-dock-active {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.06);
+    }
+    100% {
+        transform: scale(1);
+    } 
+}
 .dock__split::after {
     background-color: var(--b3-border-color-trans);
     width: 24px;
     left: 50%;
     transform: translateX(-50%);
 }
-$dock-shrink-transition: 0.6s var(--neo-ease-spring-3);
+$dock-transition: 0.6s var(--neo-ease-spring-3);
 #dockLeft,
 #dockRight {
-    transition: display $dock-shrink-transition;
+    transition: display $dock-transition;
     transition-behavior: allow-discrete;
     width: 42px;
 }
 #dockLeft {
     &:not(.fn__none) {
-        animation: neo-dockLeft-expand $dock-shrink-transition;
+        animation: neo-dockLeft-expand $dock-transition;
     }
     &.fn__none {
-        animation: neo-dockLeft-collapse $dock-shrink-transition;
+        animation: neo-dockLeft-collapse $dock-transition;
     }
 }
 #dockRight {
     &:not(.fn__none) {
-        animation: neo-dockRight-expand $dock-shrink-transition;
+        animation: neo-dockRight-expand $dock-transition;
     }
     &.fn__none {
-        animation: neo-dockRight-collapse $dock-shrink-transition;
+        animation: neo-dockLeft-collapse $dock-transition;
     }
 }
 @keyframes neo-dockLeft-expand {

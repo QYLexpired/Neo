@@ -1,0 +1,23 @@
+@use "../utils" as *;
+.block__popover.block__popover--open {
+    border: unset;
+    box-shadow: var(--b3-dialog-shadow-blur);
+    @include superellipse(12px);
+    background-color: transparent;
+    &::before {
+        @include frostedglass-before;
+        @include frostedglass($blur: l, $color: background);
+        box-shadow: var(--b3-dialog-shadow-inset);
+    }
+    .block__icons {
+        background-color: transparent;
+    }
+    .block__content {
+        .protyle:not(.fullscreen) {
+            background-color: transparent;
+            .protyle-breadcrumb {
+                background-color: transparent;
+            }
+        }
+    }
+}

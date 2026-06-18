@@ -4,11 +4,26 @@
     backdrop-filter: blur(2px);
     z-index: -2;
 }
+@mixin dialog-transparent {
+    .search__header,
+    .search__header .b3-text-field,
+    .search__preview:not(.fullscreen),
+    .search__list,
+    .protyle:not(.fullscreen),
+    .protyle-breadcrumb,
+    .layout-tab-bar + .fn__flex-1,
+    .card__main,
+    .card__empty {
+        @content;
+    }
+}
 .b3-dialog__container {
     border: unset;
     box-shadow: var(--b3-dialog-shadow-blur);
     @include superellipse(16px);
     background-color: transparent;
+    transform: translateY(-3%);
+    transition: transform 0.2s var(--neo-ease-elastic-out-2);
     &::before {
         @include frostedglass-before;
         @include frostedglass($blur: l, $color: background);
@@ -16,6 +31,9 @@
     }
     .b3-dialog__content {
         background-color: transparent !important; // 覆盖内联
+    }
+    @include dialog-transparent {
+        background-color: transparent;
     }
 }
 .b3-dialog__loading {

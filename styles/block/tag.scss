@@ -1,0 +1,22 @@
+@use "../utils" as *;
+:root {
+    --neo-tag-color: var(--b3-theme-accent);
+}
+.protyle-wysiwyg [data-node-id] span[data-type~=tag] {
+    padding: 2px 4px;
+    @include superellipse(6px);
+    background-color: oklch(from currentColor l c h / 0.12);
+    color: var(--neo-tag-color);
+    border: 0.5px solid oklch(from currentColor l c h / 0.18);
+    padding: 2px 4px;
+    font-size: 0.85em;
+    margin: 0 0.35em;
+    &::before {
+        content: "#";
+        display: inline-block;
+        margin-inline-end: 4px;
+    }
+    &:hover {
+        background-color: oklch(from currentColor l c h / 0.18);
+    }
+}

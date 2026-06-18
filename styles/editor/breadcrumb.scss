@@ -1,0 +1,90 @@
+@use "../utils" as *;
+@use "../component" as *;
+.protyle-breadcrumb {
+    background-color: transparent;
+}
+.protyle-breadcrumb__bar {
+    @include overflow-indicator-fadein-mask($fadeout-size-m, "left right");
+}
+.protyle-breadcrumb__arrow {
+    color: var(--b3-theme-on-surface);
+}
+.protyle-breadcrumb__item {
+    transition: var(--b3-transition);
+    padding: 0;
+    margin: 2px;
+    height: auto;
+    color: var(--b3-theme-on-surface);
+    @include icon;
+    svg {
+        height: 15.5px;
+        width: 15.5px;
+        padding: 2px;
+        @include superellipse(4px);
+    }
+    &--active {
+        background-color: transparent;
+        svg {
+            box-shadow: var(--neo-main-shadow-heavy);
+        }
+    }
+}
+.protyle-breadcrumb__icon[data-type="exit-focus"] {
+    transition: var(--b3-transition);
+    padding: 4px 8px;
+    line-height: 16px;
+    width: max-content;
+    @include button-transparent-outline;
+    color: var(--b3-theme-accent);
+    &:hover,
+    &:active,
+    &:focus {
+        background-color: var(--neo-menu-item-primary);
+        @include color-reverse(--neo-menu-item-primary);
+        text-shadow: none !important;
+        box-shadow: unset;
+    }
+}
+.block__icon[data-subtype="unlock"] {
+    @include icon-accent;
+}
+.block__icon[data-subtype="lock"] svg {
+    animation: neo-lock 0.45s var(--neo-ease-elastic-out-3);
+}
+.block__icon[data-subtype="unlock"] svg {
+    animation: neo-unlock 0.45s var(--neo-ease-elastic-out-3);
+}
+@keyframes neo-lock {
+    0% {
+        transform: rotate(0deg);
+    }
+    40% {
+        transform: rotate(-16deg);
+    }
+    65% {
+        transform: rotate(6deg);
+    }
+    80% {
+        transform: rotate(-6deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+@keyframes neo-unlock {
+    0% {
+        transform: rotate(0deg);
+    }
+    40% {
+        transform: rotate(-16deg);
+    }
+    65% {
+        transform: rotate(6deg);
+    }
+    80% {
+        transform: rotate(-6deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}

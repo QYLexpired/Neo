@@ -1,0 +1,8 @@
+.b3-dialog--open[data-key="dialog-opencard"],
+.b3-dialog--open[data-key="dialog-viewcards"] {
+    .b3-dialog {
+        .b3-dialog__scrim {
+            background-color: transparent !important;
+        }
+    }
+}

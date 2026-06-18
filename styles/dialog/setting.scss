@@ -1,0 +1,59 @@
+@use "../utils" as *;
+.config__panel {
+    background-color: transparent;
+}
+.config__side,
+.b3-tab-bar {
+    @include superellipse(12px);
+    margin: var(--_sidebar-gap);
+    padding: var(--_sidebar-gap) 0;
+    border: unset;
+    box-shadow: var(--neo-main-shadow-heavy);
+    background-color: oklch(from var(--b3-theme-surface) l c h / 0.5) !important; // 覆盖内联
+    .b3-list-item {
+        @include superellipse(7px);
+        line-height: 26px;
+        padding: 0 4px; // default
+        margin: 1px 8px; // default
+        &:first-child {
+            margin-top: 0;
+        }
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}
+.config__tab-wrap {
+    background-color: transparent !important; // 覆盖内联
+    padding: 0;
+    .fn__hr--b:first-child,
+    .fn__hr--b:last-child {
+        display: none;
+    }
+}
+.config__tab-container {
+    background-color: transparent;
+    border: unset;
+    padding: var(--_sidebar-gap) 64px;
+    .layout-tab-bar {
+        padding-top: 16px !important;
+    }
+    .config-group {
+        @include superellipse(16px);
+        margin: 0;
+        background-color: oklch(from var(--b3-theme-surface) l c h / 0.5);
+        & > .b3-label {
+            border: unset;
+        }
+    }
+    .config-group__title {
+        padding: 24px 0 12px 12px;
+    }
+    & > .config-group__title:first-child {
+        padding-top: 0;
+    }
+    &[data-name="bazaar"],
+    &[data-name="account"] {
+        padding: var(--_sidebar-gap) 0;
+    }
+}

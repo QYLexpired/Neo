@@ -1,0 +1,31 @@
+@use "../utils" as *;
+.protyle-wysiwyg [data-node-id] span[data-type~=block-ref]:not(.av__celltext),
+.protyle-wysiwyg [data-node-id] span[data-type~=file-annotation-ref],
+.protyle-wysiwyg [data-node-id] span[data-type=virtual-block-ref] {
+    color: inherit;
+    transition: var(--b3-transition);
+    background-image: repeating-linear-gradient(90deg, var(--b3-theme-accent) 0px, var(--b3-theme-accent) 3px, transparent 3px, transparent 6px);
+    background-size: 8px 1px;
+    background-position: 0 100%;
+    background-repeat: repeat-x;
+    padding-bottom: 2px;
+    border: unset;
+    will-change: transform;
+    animation: neo-blockref-flow 1s linear infinite;
+    animation-play-state: paused;
+    &:hover {
+        color: var(--b3-theme-accent);
+        animation-play-state: running;
+    }
+}
+@keyframes neo-blockref-flow {
+    0% {
+        background-position: 0 100%;
+}
+    100% {
+        background-position: 8px 100%;
+    }
+}
+.protyle-wysiwyg [data-node-id] span[data-type=virtual-block-ref] {
+    --b3-theme-accent: var(--b3-theme-on-background);
+}

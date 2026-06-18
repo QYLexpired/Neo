@@ -1,3 +1,4 @@
+@use "../utils" as *;
 .layout__dockl,
 .layout__dockr,
 .layout__dockb {
@@ -8,6 +9,7 @@
         & > .fn__flex {
             [data-type="wnd"] {
                 box-shadow: var(--neo-main-shadow-heavy);
+                @include frostedglass($blur: l, $color: background);
             }
         }
         & > .layout__resize.layout__resize--lr {

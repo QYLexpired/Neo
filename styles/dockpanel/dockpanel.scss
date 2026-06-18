@@ -9,3 +9,52 @@
         @include overflow-indicator-fadein-mask($fadeout-size-l, "top bottom");
     }
 }
+.layout__dockl,
+.layout__dockr {
+    transition: width 0.15s var(--neo-ease-in-3);
+    & > .fn__flex {
+        transition: display 0.15s;
+        transition-behavior: allow-discrete;
+    }
+}
+.layout__dockb {
+    transition: height 0.15s var(--neo-ease-in-3);
+    & > .fn__flex {
+        transition: display 0.15s;
+        transition-behavior: allow-discrete;
+    }
+}
+.file-tree:hover .block__icons .block__icon,
+.file-tree:not(.fullscreen):hover .block__icons .fn__space {
+    animation: neo-filetree-icon-entrance 0.6s var(--neo-ease-spring-3);
+    animation-delay: calc((sibling-index() - 1) * 0.02s);
+    transform-origin: left;
+    animation-fill-mode: both;
+}
+.file-tree:not(:hover) .block__icons .block__icon,
+.file-tree:not(.fullscreen):not(:hover) .block__icons .fn__space {
+    opacity: 1;
+    animation: neo-filetree-icon-exit 0.6s var(--neo-ease-spring-3);
+    animation-delay: calc((sibling-count() - sibling-index()) * 0.02s);
+    transform-origin: right;
+    animation-fill-mode: both;
+}
+@keyframes neo-filetree-icon-entrance {
+    from {
+        transform: scale(0.75);
+        opacity: 1;
+    }
+    to {
+        transform: scale(1);
+    }
+}
+@keyframes neo-filetree-icon-exit {
+    from {
+        transform: scale(1);
+        opacity: 1;
+    }
+    to {
+        transform: scale(0.75);
+        opacity: 0;
+    }
+}

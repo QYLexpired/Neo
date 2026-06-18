@@ -1,6 +1,6 @@
 @use "../utils" as *;
 :root {
-    --_emoji-transiton: 0.15s var(--neo-ease-elastic-out-5);
+    --_emoji-transiton: 0.6s var(--neo-ease-spring-3);
 }
 .emojis {
     .emojis__tabheader {
@@ -13,7 +13,7 @@
         transition: var(--_emoji-transiton);
         &:hover {
             filter: url(#neo-neon-emoji) saturate(1.5) brightness(1.02);
-            scale: 1.25;
+            scale: 1.35;
             background-color: transparent;
             box-shadow: none;
         }
@@ -33,7 +33,7 @@
         transition: var(--_emoji-transiton);
         &:hover {
             filter: url(#neo-neon-emoji) saturate(1.5) brightness(1.02);
-            scale: 1.25;
+            scale: 1.35;
             box-shadow: none;
         }
     }

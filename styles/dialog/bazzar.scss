@@ -1,0 +1,121 @@
+@use "../utils" as *;
+.config-bazaar__panel {
+    .config-bazaar__title {
+        background-color: transparent;
+        backdrop-filter: none;
+        input,
+        select,
+        button {
+            backdrop-filter: blur(20px);
+        }
+        .counter--bg {
+            background-color: transparent;
+        }
+        .b3-form__icon-icon {
+            z-index: 1;
+        }
+    }
+    .b3-cards {
+        grid-template-columns: repeat(auto-fill, minmax(min(100%, 320px), 1fr));
+    }
+    &[data-type=downloaded] {
+        .b3-card {
+            display: grid;
+            grid-template-areas:
+            "img info"
+            "img buttons";
+            grid-template-columns: 90px 1fr;
+            & > .b3-card__img {
+                grid-area: img;
+                & + div {
+                    grid-area: info;
+                }
+            }
+            & > .b3-card__actions {
+                grid-area: buttons;
+                padding: 3px 11px 11px;
+                align-self: flex-end;
+                & > :nth-child(1 of .block__icon:not(.fn__none)) {
+                    margin-left: auto;
+                }
+            }
+        }
+    }
+    .b3-card {
+        border: unset;
+        box-shadow: inset 0 0 0 1px var(--b3-border-color-trans);
+        @include superellipse(16px);
+        background-color: transparent;
+        transition: var(--b3-transition);
+        &.b3-card--current,
+        &:hover {
+            box-shadow: inset 0 0 0 1px oklch(from var(--b3-base-color) clamp(0, l, 0.8) c h / 0.3);
+            background-color: oklch(from var(--b3-base-color) clamp(0, l, 0.8) c h / 0.12);
+        }
+        [data-theme-mode="dark"] & {
+            &.b3-card--current,
+            &:hover {
+                box-shadow: inset 0 0 0 1px oklch(from var(--b3-base-color) clamp(0.4, l, 1) c h / 0.3);
+                background-color: oklch(from var(--b3-base-color) clamp(0.4, l, 1) c h / 0.12);
+            }
+        }
+        .b3-card__img {
+            margin-left: unset;
+            margin-inline-start: 16px;
+            img {
+                @include superellipse(12px);
+            }
+        }
+    }
+}
+.config-bazaar__readme {
+    padding: unset;
+    @include superellipse(16px);
+    @include frostedglass($blur: l, $color: background);
+    .item__side {
+        padding: var(--_sidebar-gap);
+        margin: var(--_sidebar-gap);
+        height: calc(100% - var(--_sidebar-gap) * 4);
+        @include superellipse(12px);
+        box-shadow: var(--neo-main-shadow-heavy);
+        background-color: oklch(from var(--b3-theme-surface) l c h / 0.5);
+        .item__img {
+            @include superellipse(12px);
+        }
+        color: var(--b3-theme-on-surface);
+        a {
+            &[title="Creator"],
+            &[title="GitHub Repo"],
+            &[title="Stars"],
+            &[title="Open issues"] {
+                color: var(--b3-theme-on-surface);
+            }
+            &.item__title {
+                color: var(--b3-theme-on-background);
+            }
+        }
+    }
+    .item__main {
+        margin: 0;
+        padding: var(--_sidebar-gap) 0;
+        background-color: transparent;
+        .item__preview {
+            margin: 0 var(--_sidebar-gap) 0 0;
+            width: calc(100% - var(--_sidebar-gap));
+            @include superellipse(12px);
+        }
+        .b3-typography {
+            padding: 0 64px;
+            & > blockquote:first-child {
+                margin: 12px 0 32px 0;
+                padding: 0;
+                background-color: transparent;
+                font-size: 1.2em;
+                font-weight: bold;
+            }
+        }
+        .item__readme {
+            margin-top: 0;
+        }
+    }
+}

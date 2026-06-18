@@ -1,0 +1,33 @@
+@use "../utils" as *;
+.tooltip {
+    @include superellipse(6px);
+    box-shadow: var(--b3-menu-shadow);
+    color: var(--b3-theme-on-background);
+    @include frostedglass($blur: m, $color: menu);
+    animation: neo-tooltip-entrance 0.6s var(--neo-ease-spring-3);
+    transform-origin: center;
+    animation-delay: 0.3s;
+    animation-fill-mode: both;
+}
+@keyframes neo-tooltip-entrance {
+    from {
+        transform: scale(0.9);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+    }
+}
+.b3-tooltips {
+    &:not(:hover) {
+        &::after {
+            transition: none;
+        }
+    }
+    &::after {
+        @include superellipse(6px);
+        box-shadow: var(--b3-menu-shadow);
+        color: var(--b3-theme-on-background);
+        @include frostedglass($blur: m, $color: menu);
+    }
+}

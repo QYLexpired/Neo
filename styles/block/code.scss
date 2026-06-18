@@ -1,0 +1,9 @@
+@use "../utils" as *;
+.b3-typography .code-block:not(pre),
+.protyle-wysiwyg .code-block:not(pre) {
+    background-color: oklch(from var(--b3-theme-surface) l c h / 0.7);
+    @include superellipse(10px);
+    .protyle-action {
+        padding: 4px 4px 4px 0;
+    }
+}

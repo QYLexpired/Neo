@@ -1,0 +1,43 @@
+@use "../utils" as *;
+.protyle-wysiwyg [data-node-id] .img--select {
+    filter: unset;
+    img {
+        transition: var(--b3-transition);
+        box-shadow: var(--neo-main-shadow-light);
+    }
+}
+.viewer-backdrop {
+    @include frostedglass($blur: l, $color: background);
+}
+.viewer-navbar {
+    background-color: oklch(from var(--b3-theme-surface) l c h / 0.7);
+    .viewer-list {
+        transition: var(--b3-transition);
+    }
+}
+.viewer-title {
+    color: var(--b3-theme-on-surface);
+    &:hover {
+        color: var(--b3-theme-on-surface);
+    }
+}
+.viewer-toolbar > ul > li {
+    background-color: transparent;
+    transition: var(--b3-transition);
+    svg {
+        color: var(--b3-theme-on-surface);
+        transition: var(--b3-transition);
+    }
+    &:hover {
+        svg {
+            color: var(--b3-theme-on-background);
+        }
+    }
+}
+.viewer-tooltip {
+    background-color: transparent;
+    color: var(--b3-theme-on-surface);
+    &:hover {
+        color: var(--b3-theme-on-surface);
+    }
+}

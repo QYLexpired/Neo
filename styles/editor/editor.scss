@@ -1,0 +1,121 @@
+@use "../utils" as *;
+@use "../component" as *;
+.protyle {
+    background-color: transparent;
+}
+.protyle:not(.fn__none) .protyle-content {
+    animation: neo-protyle-entrance 0.3s var(--neo-ease-out-3);
+}
+@keyframes neo-protyle-entrance {
+    0% {
+        opacity: 0;
+        transform: translateY(-1%);
+    }
+    100% {
+        opacity: 1;
+        transform: none;
+    }
+}
+.fullscreen {
+    @include frostedglass($blur: l, $color: background);
+}
+.protyle-icons,
+.av__gallery-actions {
+    max-width: max-content;
+    transition: var(--b3-transition);
+    @include superellipse($layout-border-radius);
+    box-shadow: var(--neo-main-shadow-light);
+    .protyle-icon {
+        background-color: transparent;
+        color: var(--b3-theme-on-surface);
+        &:hover {
+            background-color: transparent;
+            color: var(--b3-theme-on-background);
+        }
+    }
+}
+.protyle-icons,
+.av__gallery-actions,
+.b3-typography .code-block:not(pre) .protyle-action .protyle-icon,
+.protyle-wysiwyg .code-block:not(pre) .protyle-action .protyle-icon {
+    @include frostedglass($blur: s, $color: transparent);
+}
+.av__gallery-item:hover .av__gallery-actions,
+.protyle-wysiwyg[data-readonly=false] .img:hover .protyle-icons,
+.protyle-wysiwyg [data-node-id].render-node:hover > .protyle-icons,
+.b3-typography .code-block:not(pre):hover .protyle-icon,
+.b3-typography .code-block:not(pre):hover .protyle-action__language,
+.protyle-wysiwyg .code-block:not(pre):hover .protyle-icon,
+.protyle-wysiwyg .code-block:not(pre):hover .protyle-action__language {
+    opacity: 1;
+}
+.protyle-background__img .protyle-icons {
+    .protyle-icon {
+        transition: var(--b3-transition);
+        padding: 6px;
+        height: unset;
+    }
+}
+.b3-typography .code-block:not(pre) .protyle-action .protyle-icon,
+.protyle-wysiwyg .code-block:not(pre) .protyle-action .protyle-icon {
+    transition: var(--b3-transition);
+    background-color: var(--b3-theme-background);
+    color: var(--b3-theme-on-surface);
+    &:hover {
+        color: var(--b3-theme-on-background);
+    }
+    &.protyle-icon--first {
+        @include superellipse($layout-border-radius);
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+    }
+    &.protyle-icon--last {
+        @include superellipse($layout-border-radius);
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+    }
+}
+.protyle-wysiwyg [data-node-id] .def--mark {
+    color: var(--b3-highlight-color);
+    background-color: var(--b3-highlight-background);
+}
+// 导出预览
+.protyle-preview__action {
+    background-color: transparent;
+    button {
+        @include button-transparent;
+        &.protyle-preview__action--current {
+            background-color: transparent;
+            color: var(--b3-theme-accent);
+        }
+    }
+}
+// 导出
+.export-img {
+    border: unset;
+}
+// 块标
+.protyle-gutters button,
+.protyle-title:hover .protyle-title__icon svg {
+    transition: color var(--b3-transition);
+    animation: neo-gutters-entrance 0.45s var(--neo-ease-spring-2);
+    animation-delay: calc((sibling-count() - sibling-index()) * 0.03s);
+    transform-origin: right bottom;
+    animation-fill-mode: both;
+    & svg {
+        transition: color var(--b3-transition);
+    }
+}
+.protyle-gutters button:hover svg,
+.protyle-title:hover .protyle-title__icon:hover svg {
+    color: var(--b3-theme-accent);
+}
+@keyframes neo-gutters-entrance {
+    from {
+        transform: scale(0.35) translateX(10px);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+    }
+}

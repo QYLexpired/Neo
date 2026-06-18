@@ -1,0 +1,17 @@
+@use "../utils" as *;
+.history__resize {
+    transition: var(--b3-transition);
+    &:hover {
+        box-shadow: 2px 0 0 0 var(--b3-theme-background) inset, 3px 0 0 0 var(--_resize-hl) inset;
+    }
+}
+.b3-dialog--open[data-key="dialog-history"],
+.b3-dialog--open[data-key="dialog-historycompare"] {
+    .b3-dialog {
+        .history__panel>.b3-list,
+        .history__panel>.history__diff,
+        .history__text {
+            background-color: transparent;
+        }
+    }
+}

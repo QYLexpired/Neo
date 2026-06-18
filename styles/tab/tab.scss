@@ -139,3 +139,18 @@ body:not(.body--toolbar-hide) [data-type="wnd"] > .fn__flex:first-child {
         }
     }
 }
+// tab focus
+.layout-tab-bar .item--focus {
+    animation: neo-tab-focus 0.3s var(--neo-ease-out-3);
+}
+@keyframes neo-tab-focus {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(0.96);
+    }
+    100% {
+        transform: scale(1);
+    } 
+}

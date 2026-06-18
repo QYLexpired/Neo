@@ -1,0 +1,32 @@
+@use "../utils" as *;
+.b3-typography table,
+.protyle-wysiwyg table {
+    --b3-table-even-background: oklch(from var(--b3-theme-surface) l c h / 0.5);
+    border: 1px solid var(--b3-border-color-trans);
+    @include superellipse(10px);
+    td,
+    th {
+        border: none;
+    }
+    thead th,
+    thead td {
+        background-color: var(--b3-table-even-background);
+    }
+    th {
+        border-bottom: 1px solid var(--b3-border-color-trans);
+        &:not(:last-child) {
+            border-right: 1px solid var(--b3-border-color-trans);
+        }
+    }
+    td {
+        border-bottom: 1px solid var(--b3-border-color-trans);
+        &:not(:last-child) {
+            border-right: 1px solid var(--b3-border-color-trans);
+        }
+    }
+    tr:last-child {
+        td {
+            border-bottom: none;
+        }
+    }
+}
