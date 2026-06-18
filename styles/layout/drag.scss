@@ -4,12 +4,12 @@
         app-region: no-drag;
     }
 }
-.body--toolbar-hide,
-.body--window {
+body.body--toolbar-hide,
+body.body--window {
     #drag {
         app-region: drag;
     }
-    .layout__center [data-type="wnd"] > .fn__flex:first-child {
+    .layout__wnd--center > [data-type="wnd"] > .fn__flex:first-child {
         & > .layout-tab-bar:not(.layout-tab-bar--readonly) {
             app-region: drag;
             .item {

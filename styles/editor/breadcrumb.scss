@@ -31,10 +31,10 @@
 }
 .protyle-breadcrumb__icon[data-type="exit-focus"] {
     transition: var(--b3-transition);
-    padding: 4px 8px;
-    line-height: 16px;
     width: max-content;
     @include button-transparent-outline;
+    padding: 4px 8px;
+    line-height: 16px;
     color: var(--b3-theme-accent);
     &:hover,
     &:active,

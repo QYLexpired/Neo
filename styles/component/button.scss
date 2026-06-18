@@ -159,23 +159,31 @@
 .card__action .b3-button {
     line-height: 32px;
     @include superellipse(16px);
+    padding: 8px 0;
     .card__icon {
         display: none
     }
-    &[data-type="-3"] {
-        @include button-transparent-outline;
-    }
+    &[data-type="-3"],
     &[data-type="-2"] {
         @include button-transparent-outline;
+        line-height: 32px;
+        @include superellipse(16px);
+        padding: 8px 0;
     }
     &[data-type="-1"] {
         @include button-primary;
+        line-height: 32px;
+        @include superellipse(16px);
+        padding: 8px 0;
     }
     &[data-type="1"],
     &[data-type="2"],
     &[data-type="3"],
     &[data-type="4"] {
         background-color: oklch(from currentColor l c h / 0.15);
+        line-height: 32px;
+        @include superellipse(16px);
+        padding: 8px 0;
         &:hover {
             background-color: oklch(from currentColor calc(l + 0.08) c h / 0.25);
         }
