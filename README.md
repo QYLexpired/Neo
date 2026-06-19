@@ -1,26 +1,33 @@
-Neo is a minimalist SiYuan theme that refines numerous details on top of the default appearance while introducing modern visual features.
 #### Update Notes
-##### v1.1.6
-- Added pinned toolbar feature
-- Added multi-column slash menu layout
-- Improved mobile display performance
-#### Important Notice
-- Only compatible with SiYuan 3.7.0 dev version or higher
+##### v1.1.7
+- Refactored code structure
+- Visual - Colored folders added new style: Simple
+#### About the Theme
+- Neo is only compatible with SiYuan 3.7.0 dev version or higher. It **will not display correctly** on lower versions.
 - To ensure optimal performance, some styles depend on the Neo+ plugin. Therefore, the Neo+ plugin **MUST** be installed for the theme to display correctly.
 - Neo utilizes a large number of cutting-edge CSS features; full experience is only guaranteed on desktop and Chromium-based browsers.
 #### Features
-- Strictly built color system using the OKLCH color space, with full support for custom theme colors and color palette expansion
+> Some of the following features depend on the Neo+ plugin.
+- Excellent performance comparable to the default theme
+- Strictly built color system using the OKLCH color space, with a wide range of preset color schemes and support for custom theme colors
+- Theme color can follow time, banner image, or system accent color
 - Global glassmorphism effects for a transparent and layered look
 - Non-linear animations added to enhance interactive delight
-- Cinematic parallax effects for cover images and scroll animations for the editor, delivering stunning visual tension
+- Introduces parallax scrolling effect for cover images and scroll effect for the editor body, offering extreme visual tension
 - Smooth rounded corners and fade-out effects applied globally to eliminate visual fragmentation
 - Card-style layout for search results to improve reading efficiency
 - Super fusion effect seamlessly blends breadcrumbs with the main content
 - Optimized global typography for enhanced Chinese and English reading experience
 - Refined global component styles for a consistent and elegant interface
 - Added global transparent glass effect for mobile
-- Excellent performance comparable to the default theme
-> Some features depend on the Neo+ plugin.
+- Preset a large variety of textures, with support for custom image backgrounds
+- Supports vertical tabs for arranging window tabs vertically, making it easier to view and switch
+- Supports expanding the slash menu into multiple columns, navigable with keyboard arrow keys
+- Supports smooth cursor and fluid cursor
+- Configurable colored headings and colored lists for better differentiation
+- Introduces immersive mode, automatically highlighting the focused line and scrolling it to the center of the editor
+- Pinnable formatting toolbar
+- And more features
 #### Acknowledgements
 The creation of the Neo theme drew significant inspiration from the following projects. Thanks to their creators:
 - [Asri](https://github.com/mustakshif/Asri)
@@ -29,6 +36,10 @@ The creation of the Neo theme drew significant inspiration from the following pr
 - [Rem Craft](https://github.com/svchord/Rem-Craft)
 - [Savor](https://github.com/royc01/notion-theme)
 #### Update History
+##### v1.1.6
+- Added pinned toolbar feature
+- Added multi-column slash menu layout
+- Improved mobile display performance
 ##### v1.1.5
 - Significantly optimized theme performance
 - Vertical tabs support configurable application mode
@@ -43,7 +54,7 @@ The creation of the Neo theme drew significant inspiration from the following pr
 - Redesigned Select form styles
 - Fixed an issue where the top bar could not be dragged in some cases
 - Fixed an issue where breadcrumb buttons were unclickable when viewing documents in fullscreen
-- Texture-custom image supports setting image fill mode (proportional scaling, tiling)
+- Custom image texture supports setting image fill mode (proportional scaling, tiling)
 - Fixed issue where shortcuts were repeatedly registered when switching back to Neo from other themes
 - Improved robustness of menu item styles
 - Optimized export interface styles
