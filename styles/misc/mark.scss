@@ -2,3 +2,8 @@
     color: var(--b3-highlight-color);
     background-color: var(--b3-highlight-background);
 }
+.protyle-wysiwyg [data-node-id] .def--mark {
+    color: var(--b3-highlight-color) !important;
+    background-color: var(--b3-highlight-background);
+    background-image: unset !important;
+}

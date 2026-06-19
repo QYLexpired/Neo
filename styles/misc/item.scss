@@ -4,4 +4,7 @@
 }
 .b3-list--background li.b3-list-item--focus {
     background-color: var(--b3-list-active);
+    .layout__tab--active & {
+        background-color: var(--b3-list-active);
+    }
 }

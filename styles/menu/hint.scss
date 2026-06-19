@@ -4,7 +4,6 @@
     @include frostedglass($blur: l, $color: menu);
     border: unset;
     box-shadow: var(--b3-menu-shadow);
-    background-color: transparent;
     animation: neo-hint-menu-entrance 0.45s var(--neo-ease-spring-2);
     transform-origin: center;
     will-change: transform;
