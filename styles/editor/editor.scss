@@ -24,7 +24,7 @@
     max-width: max-content;
     transition: var(--b3-transition);
     @include superellipse($layout-border-radius);
-    box-shadow: var(--neo-main-shadow-light);
+    box-shadow: var(--neo-main-shadow-heavy);
     .protyle-icon {
         background-color: transparent;
         color: var(--b3-theme-on-surface);

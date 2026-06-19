@@ -54,6 +54,18 @@
         box-shadow: inset 0 0 0 1px var(--b3-border-color-trans);
     }
 }
+@mixin button-transparent-hover-outline {
+    @include button-common;
+    background-color: transparent;
+    color: var(--b3-theme-on-surface);
+    &:hover,
+    &:active,
+    &:focus {
+        background-color: var(--b3-list-hover);
+        color: var(--b3-theme-on-surface);
+        box-shadow: inset 0 0 0 1px var(--b3-border-color-trans);
+    }
+}
 @mixin button-transparent-outline-no-hover {
     @include button-common;
     background-color: transparent;

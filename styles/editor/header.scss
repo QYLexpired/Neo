@@ -2,7 +2,7 @@
 @use "../component" as *;
 .protyle-background__action {
     .b3-button {
-        @include button-transparent-outline;
+        @include button-transparent-hover-outline;
     }
 }
 .b3-chips__doctag .b3-chip {

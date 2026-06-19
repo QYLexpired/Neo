@@ -1,5 +1,8 @@
 @use "../utils" as *;
 @use "../component" as *;
+.av__cell {
+    border-color: var(--b3-border-color);
+}
 .av__cell [data-type=block-more] {
     background-color: var(--b3-theme-background);
     color: var(--b3-theme-on-surface);
@@ -9,7 +12,7 @@
     }
 }
 .b3-button[data-type="av-add-bottom"] {
-    @include button-transparent-outline;
+    @include button-transparent-hover-outline;
     padding: 3px 6px;
 }
 .av__gallery-item {
@@ -32,8 +35,7 @@
     top: 4px;
 }
 .av__gallery-add {
-    box-shadow: 0 0 0 1px var(--b3-border-color-trans);
-    @include button-transparent-outline;
+    @include button-transparent-hover-outline;
     @include superellipse(10px);
 }
 .av__group-icon {
