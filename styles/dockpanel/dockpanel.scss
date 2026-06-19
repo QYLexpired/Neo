@@ -30,7 +30,7 @@
 .file-tree:hover .block__icons .block__icon,
 .file-tree:not(.fullscreen):hover .block__icons .fn__space {
     animation: neo-filetree-icon-entrance 0.6s var(--neo-ease-spring-3);
-    animation-delay: calc((sibling-index() - 1) * 0.02s);
+    animation-delay: calc((sibling-index() - 1) * 0.02s + 0.2s);
     transform-origin: left;
     animation-fill-mode: both;
 }

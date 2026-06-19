@@ -98,8 +98,13 @@
     animation-delay: calc((sibling-count() - sibling-index()) * 0.03s);
     transform-origin: right bottom;
     animation-fill-mode: both;
-    & svg {
+    svg {
         transition: color var(--b3-transition);
+    }
+    &[data-type="fold"] {
+        svg {
+            transition: color var(--b3-transition), transform var(--_rotate-transition);
+        }
     }
 }
 .protyle-gutters button:hover svg,
