@@ -1,4 +1,7 @@
 @use "../utils" as *;
+:root {
+    --_indentline-color: var(--b3-border-color-trans);
+}
 .file-tree {
     & > .fn__flex-1 {
         & > ul {
@@ -18,7 +21,7 @@
                     top: -6px;
                     width: 1px;
                     height: calc(100% - 15.5px);
-                    background-color: var(--b3-border-color-trans);
+                    background-color: var(--_indentline-color);
                 }
                 .b3-list-item__toggle {
                     position: relative;
@@ -26,8 +29,8 @@
                         content: "";
                         position: absolute;
                         border-bottom-left-radius: 6px;
-                        border-left: 1px solid var(--b3-border-color-trans);
-                        border-bottom: 1px solid var(--b3-border-color-trans);
+                        border-left: 1px solid var(--_indentline-color);
+                        border-bottom: 1px solid var(--_indentline-color);
                         left: unset;
                         top: 3.5px;
                         height: 7px;
@@ -50,7 +53,7 @@
                             width: 4px;
                             height: 4px;
                             border-radius: 50%;
-                            background-color: var(--b3-border-color-trans);
+                            background-color: var(--_indentline-color);
                             visibility: visible;
                         }
                     }
