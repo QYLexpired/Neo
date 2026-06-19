@@ -21,7 +21,7 @@
     box-shadow: var(--b3-menu-shadow);
     color: var(--b3-theme-on-background);
     @include frostedglass($blur: s, $color: surface, $alpha: 0.5);
-    padding: 15px !important; // 覆盖内联
+    padding: 15px 30px !important; // 覆盖内联
     .b3-snackbar--error & {
         &::after {
             content: none;

@@ -14,16 +14,16 @@
 }
 .layout__dockl,
 .layout__dockr {
-    transition: width 0.15s var(--neo-ease-in-3);
+    transition: width 0.1s var(--neo-ease-in-3);
     & > .fn__flex {
-        transition: display 0.15s;
+        transition: display 0.1s;
         transition-behavior: allow-discrete;
     }
 }
 .layout__dockb {
-    transition: height 0.15s var(--neo-ease-in-3);
+    transition: height 0.1s var(--neo-ease-in-3);
     & > .fn__flex {
-        transition: display 0.15s;
+        transition: display 0.1s;
         transition-behavior: allow-discrete;
     }
 }

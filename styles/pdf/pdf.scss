@@ -1,17 +1,6 @@
 @use "../utils" as *;
-.pdf__toolbar {
-    margin-top: 4px;
-}
-.dropdownToolbarButton select {
-    padding-top: 4px;
-    padding-bottom: 4px;
-}
-#sidebarContainer {
-    margin-top: 4px;
+#sidebarContainer { 
     background-color: var(--b3-theme-background);
-}
-#viewerContainer {
-    margin-top: 4px;
 }
 #sidebarResizer {
     right: 0;
@@ -23,6 +12,9 @@
             background-color: var(--_resize-hl);
         }
     }
+}
+.findbar {
+    padding: 8px;
 }
 .pdf__outer {
     .toolbarButton {

@@ -175,9 +175,14 @@
     .card__icon {
         display: none
     }
-    &[data-type="-3"],
-    &[data-type="-2"] {
+    &[data-type="-3"] {
         @include button-transparent-outline;
+        line-height: 32px;
+        @include superellipse(16px);
+        padding: 8px 0;
+    }
+    &[data-type="-2"] {
+        @include button-transparent-hover-outline;
         line-height: 32px;
         @include superellipse(16px);
         padding: 8px 0;
