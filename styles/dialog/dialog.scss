@@ -22,8 +22,8 @@
     box-shadow: var(--b3-dialog-shadow-blur);
     @include superellipse(16px);
     background-color: transparent;
-    transform: translateY(-3%);
-    transition: transform 0.25s var(--neo-ease-elastic-out-4);
+    transform: translateY(-5%);
+    transition: transform 0.25s var(--neo-ease-out-3);
     &::before {
         @include frostedglass-before;
         @include frostedglass($blur: l, $color: background);

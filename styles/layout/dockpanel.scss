@@ -6,7 +6,7 @@
     background-color: unset;
     .neo-haswnd {
         padding: calc(var(--_layout-gap) / 2);
-        [data-type="wnd"] {
+        & > [data-type="wnd"] {
             border-radius: 8px;
             //@include superellipse(8px);
             box-shadow: var(--neo-main-shadow-light);

@@ -42,7 +42,7 @@
     --b3-theme-surface-light: oklch(from var(--b3-theme-surface) l c h / 0.5);
     --b3-theme-surface-lighter: oklch(from var(--b3-theme-surface) 0.9 c h);
     --b3-theme-on-primary: oklch(from var(--b3-theme-primary) 0.99 0.01 h);
-    --b3-menu-background: oklch(from var(--b3-theme-background) 0.965 c h);
+    --b3-menu-background: oklch(from var(--b3-theme-background) calc(l - 0.02) c h);
     --b3-theme-on-surface-light: oklch(from var(--b3-theme-on-surface) 0.65 c h / 0.68);
     --b3-border-color: oklch(from var(--b3-theme-on-background) l c h / 0.3);
     --b3-border-color-trans: oklch(from var(--b3-theme-on-background) l c h / 0.15);
@@ -96,7 +96,7 @@
     --b3-theme-surface-light: oklch(from var(--b3-theme-surface) l c h / 0.5);
     --b3-theme-surface-lighter: var(--b3-border-color);
     --b3-theme-on-primary: oklch(from var(--b3-theme-primary) 0.99 0.01 h);
-    --b3-menu-background: oklch(from var(--b3-theme-background) 0.25 c h);
+    --b3-menu-background: oklch(from var(--b3-theme-background) calc(l - 0.02) c h);
     --b3-theme-on-surface-light: oklch(from var(--b3-theme-on-surface) 0.6 c h / 0.68);
     --b3-border-color: oklch(from var(--b3-theme-on-background) l c h / 0.25);
     --b3-border-color-trans: oklch(from var(--b3-theme-on-background) l c h / 0.15);
@@ -170,6 +170,8 @@
     @include dark-color;
     @include dark-font-color;
     &.neo-palette-invert {
+        @include dark-color;
+        @include dark-font-color;
         --neo-default-background: #1e2227 !important;
         --neo-default-surface: #282c34 !important;
         --neo-default-on-background: #e7eaef !important;
@@ -177,8 +179,6 @@
         --neo-custom-background: oklch(from var(--neo-custom-primary) 0.2 calc(0.008 * var(--neo-saturation, 1)) h) !important;
         --neo-custom-surface: oklch(from var(--neo-custom-primary) 0.25 calc(0.012 * var(--neo-saturation, 1)) h) !important;
         --neo-custom-on-background: oklch(from var(--neo-custom-primary) 0.95 calc(0.008 * var(--neo-saturation, 1)) h) !important;
-        @include dark-color;
-        @include dark-font-color;
     }
 }
 :root {
