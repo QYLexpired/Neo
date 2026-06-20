@@ -1,12 +1,4 @@
 @use "../utils" as *;
-[data-theme-mode="light"] {
-    --neo-input-primary: oklch(from var(--b3-base-color) clamp(0, l, 0.8) c h / 0.7);
-    --neo-input-background: var(--b3-list-hover);
-}
-[data-theme-mode="dark"] {
-    --neo-input-primary: oklch(from var(--b3-base-color) clamp(0.4, l, 1) c h / 0.7);
-    --neo-input-background: var(--b3-list-hover);
-}
 @mixin input-common {
     @include superellipse(7px);
     height: 26px;
@@ -103,7 +95,7 @@ $slider-track-height: 6px;
         box-shadow: var(--neo-main-shadow-light);
         transition: 0.8s var(--neo-ease-spring-4);
     }
-    [data-theme-mode="dark"] &::-webkit-slider-thumb {
+    .neo-mode-dark &::-webkit-slider-thumb {
         background-color: #e0e0e0 !important;
     }
     &:hover {

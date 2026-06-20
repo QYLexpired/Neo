@@ -1,10 +1,4 @@
 @use "../utils" as *;
-[data-theme-mode="light"] {
-    --neo-menu-item-primary: oklch(from var(--b3-base-color) clamp(0, l, 0.9) c h);
-}
-[data-theme-mode="dark"] {
-    --neo-menu-item-primary: oklch(from var(--b3-base-color) clamp(0.4, l, 1) c h);
-}
 @mixin menu-item-child {
     // 菜单项的子元素
     & > .b3-menu__icon,

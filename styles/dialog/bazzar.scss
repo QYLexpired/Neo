@@ -52,7 +52,7 @@
             box-shadow: inset 0 0 0 1px oklch(from var(--b3-base-color) clamp(0, l, 0.8) c h / 0.3);
             background-color: oklch(from var(--b3-base-color) clamp(0, l, 0.8) c h / 0.12);
         }
-        [data-theme-mode="dark"] & {
+        .neo-mode-dark & {
             &.b3-card--current,
             &:hover {
                 box-shadow: inset 0 0 0 1px oklch(from var(--b3-base-color) clamp(0.4, l, 1) c h / 0.3);

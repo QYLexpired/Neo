@@ -16,7 +16,7 @@
         $color-var: --b3-menu-background;
     }
     @at-root {
-        [data-theme-mode="dark"] & {
+        .neo-mode-dark & {
             background-color: oklch(from var(#{$color-var}) l c h / 0.7);
             backdrop-filter: blur(#{$blur-value}) saturate(1.8) brightness(0.9);
         }

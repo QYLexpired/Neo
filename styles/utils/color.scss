@@ -63,6 +63,13 @@
     --b3-tooltips-second-color: var(--b3-theme-on-surface);
     --b3-protyle-inline-mark-background: #00ff25;
     --b3-protyle-inline-blockref-color: var(--b3-theme-accent);
+    --b3-protyle-inline-link-color: var(--b3-theme-accent);
+    // neo
+    --neo-input-primary: oklch(from var(--b3-base-color) clamp(0, l, 0.8) c h / 0.7);
+    --neo-input-background: var(--b3-list-hover);
+    --neo-button-primary: oklch(from var(--b3-base-color) clamp(0, l, 0.92) c h);
+    --neo-switch-primary: oklch(from var(--b3-base-color) clamp(0, l, 0.9) c h);
+    --neo-menu-item-primary: oklch(from var(--b3-base-color) clamp(0, l, 0.9) c h);
 }
 @mixin dark-color {
     // 默认色
@@ -117,6 +124,13 @@
     --b3-tooltips-second-color: var(--b3-theme-on-surface);
     --b3-protyle-inline-mark-background: #00ff25;
     --b3-protyle-inline-blockref-color: var(--b3-theme-accent);
+    --b3-protyle-inline-link-color: var(--b3-theme-accent);
+    // neo
+    --neo-input-primary: oklch(from var(--b3-base-color) clamp(0.4, l, 1) c h / 0.7);
+    --neo-input-background: var(--b3-list-hover);
+    --neo-button-primary: oklch(from var(--b3-base-color) clamp(0.4, l, 1) c h);
+    --neo-switch-primary: oklch(from var(--b3-base-color) clamp(0.38, l, 0.8) c h);
+    --neo-menu-item-primary: oklch(from var(--b3-base-color) clamp(0.4, l, 1) c h);
 }
 @mixin light-font-color {
     $font-l-light: min(0.55, l);

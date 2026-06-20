@@ -1,10 +1,4 @@
 @use "../utils" as *;
-[data-theme-mode="light"] {
-    --neo-button-primary: oklch(from var(--b3-base-color) clamp(0, l, 0.92) c h);
-}
-[data-theme-mode="dark"] {
-    --neo-button-primary: oklch(from var(--b3-base-color) clamp(0.4, l, 1) c h);
-}
 @mixin button-common {
     padding: 4px 12px;
     line-height: 18px;

@@ -32,7 +32,7 @@
     left: 50%;
     transform: translateX(-50%);
 }
-$dock-transition: 0.4s var(--neo-ease-spring-2);
+$dock-transition: 0.45s var(--neo-ease-spring-3);
 #dockLeft,
 #dockRight {
     transition: display $dock-transition;

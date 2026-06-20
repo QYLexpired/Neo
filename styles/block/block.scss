@@ -57,10 +57,10 @@
     text-autospace: normal;
     font-variant-ligatures: normal;
 }
-[data-theme-mode="light"] body {
+.neo-mode-light body {
     -webkit-font-smoothing: auto;
 }
-[data-theme-mode="dark"] body {
+.neo-mode-dark body {
     -webkit-font-smoothing: antialiased;
 }
 table,
@@ -83,13 +83,14 @@ table,
         }
     }
     @if $i < 6 {
-        $sel: "h1";
-        @for $j from 2 through $i {
-            $sel: $sel + ", h#{$j}";
-        }
-        .b3-typography, .protyle-wysiwyg {
-            :is(#{$sel}) + h#{($i + 1)} {
-            margin-top: 0;
+        @each $container in ".b3-typography", ".protyle-wysiwyg" {
+            @for $j from 1 through $i {
+                #{$container} h#{$j} + h#{($i + 1)} {
+                    margin-top: 0;
+                }
+                #{$container} .h#{$j} + .h#{($i + 1)} {
+                    margin-top: 0;
+                }
             }
         }
     }

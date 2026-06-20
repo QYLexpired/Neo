@@ -45,8 +45,8 @@
         display: flex;
     }
 }
-[data-theme-mode="light"] #outerContainer:not(.pdf__outer--dark) .textLayer,
-[data-theme-mode="dark"] #outerContainer.pdf__outer--dark .textLayer {
+.neo-mode-light #outerContainer:not(.pdf__outer--dark) .textLayer,
+.neo-mode-dark #outerContainer.pdf__outer--dark .textLayer {
     background-color: var(--b3-theme-background);
 }
 // pdf标记
