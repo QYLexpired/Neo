@@ -3,6 +3,7 @@
 .protyle-wysiwyg [data-node-id] span[data-type~=file-annotation-ref],
 .protyle-wysiwyg [data-node-id] span[data-type=virtual-block-ref] {
     color: inherit;
+    opacity: 1;
     transition: var(--b3-transition);
     background-image: repeating-linear-gradient(90deg, var(--b3-theme-accent) 0px, var(--b3-theme-accent) 3px, transparent 3px, transparent 6px);
     background-size: 8px 1px;
@@ -15,6 +16,10 @@
     animation-play-state: paused;
     &:hover {
         color: var(--b3-theme-accent);
+        animation-play-state: running;
+    }
+    // 动态锚文本
+    &[data-subtype="d"] {
         animation-play-state: running;
     }
 }

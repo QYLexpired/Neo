@@ -8,6 +8,10 @@
     transform-origin: center;
     animation-delay: 0.3s;
     animation-fill-mode: both;
+    &.tooltip--memo {
+        padding: 8px 16px;
+        font-size: 14px;
+    }
 }
 @keyframes neo-tooltip-entrance {
     from {

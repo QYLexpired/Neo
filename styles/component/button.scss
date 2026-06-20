@@ -218,3 +218,7 @@
         color: var(--b3-card-success-color);
     }
 }
+// misc
+.b3-button[data-action="addCustom"] {
+    @include button-transparent-hover-outline;   
+}
