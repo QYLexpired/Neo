@@ -120,3 +120,8 @@
         transform: scale(1);
     }
 }
+.protyle-scroll {
+    top: 50%;
+    transform: translateY(-50%);
+    bottom: auto;
+}
