@@ -1,6 +1,6 @@
 >Important: Neo is only compatible with SiYuan 3.7.0 dev version or higher. It **will not display correctly** on lower versions (e.g. 3.6.5).
 #### Update Notes
-##### v1.1.7
+##### v1.1.7 ~ v1.1.8
 - Refactored code structure
 - Visual - Colored folders added new style: Simple
 - New feature: Visual - Sidebar mute

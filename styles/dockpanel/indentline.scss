@@ -28,10 +28,20 @@
                         height: 29.5px;
                         background-color: var(--_indentline-color);
                     }
+                    &:first-child {
+                        &::before {
+                            height: 34.5px;
+                        }
+                    }
                     &:last-of-type {
                         &::before {
                             bottom: 20.5px;
                             height: 8.5px;
+                        }
+                        &:first-child {
+                            &::before {
+                                height: 13.5px;
+                            }
                         }
                     }
                 }
