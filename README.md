@@ -1,11 +1,14 @@
+>Important: Neo is only compatible with SiYuan 3.7.0 dev version or higher. It **will not display correctly** on lower versions (e.g. 3.6.5).
 #### Update Notes
 ##### v1.1.7
 - Refactored code structure
 - Visual - Colored folders added new style: Simple
+- New feature: Visual - Sidebar mute
+- Redesigned folder indent line styles
+- Optimized theme performance
 #### About the Theme
-- Neo is only compatible with SiYuan 3.7.0 dev version or higher. It **will not display correctly** on lower versions.
-- To ensure optimal performance, some styles depend on the Neo+ plugin. Therefore, the Neo+ plugin **MUST** be installed for the theme to display correctly.
-- Neo utilizes a large number of cutting-edge CSS features; full experience is only guaranteed on desktop and Chromium-based browsers.
+- **Neo+ plugin is required**: To ensure optimal performance, theme styles depend on the Neo+ plugin. Therefore, the Neo+ plugin **MUST** be installed for the theme to display correctly.
+- **Compatibility note**: The theme utilizes a large number of cutting-edge CSS features; full experience is only guaranteed on desktop and Chromium-based browsers.
 #### Features
 > Some of the following features depend on the Neo+ plugin.
 - Excellent performance comparable to the default theme

@@ -124,4 +124,41 @@
     top: 50%;
     transform: translateY(-50%);
     bottom: auto;
+    height: 300px;
+}
+.protyle-scroll__up,
+.protyle-scroll__down {
+    @include icon;
+    &:hover {
+        scale: 1.25;
+        transition: 0.6s var(--neo-ease-spring-3);
+    }
+}
+.protyle-scroll:hover {
+    .protyle-scroll__up {
+        animation: neo-protyle-scroll-up-entrance 0.6s var(--neo-ease-spring-3);
+        transform-origin: bottom;
+        animation-fill-mode: both;
+    }
+    .protyle-scroll__down {
+        animation: neo-protyle-scroll-down-entrance 0.6s var(--neo-ease-spring-3);
+        transform-origin: top;
+        animation-fill-mode: both;
+    }
+}
+@keyframes neo-protyle-scroll-up-entrance {
+    from {
+        transform: scale(0.55) translateY(5px);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+@keyframes neo-protyle-scroll-down-entrance {
+    from {
+        transform: scale(0.55) translateY(-5px);
+    }
+    to {
+        transform: scale(1);
+    }
 }
