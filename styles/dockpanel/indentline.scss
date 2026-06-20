@@ -13,15 +13,27 @@
                 }
             }
             & ul {
-                position: relative;
-                &::before {
-                    content: "";
-                    position: absolute;
-                    left: var(--neo-indent-offset);
-                    top: -6px;
-                    width: 1px;
-                    height: calc(100% - 15.5px);
-                    background-color: var(--_indentline-color);
+                background: linear-gradient(var(--_indentline-color), var(--_indentline-color)) calc(var(--neo-indent-offset) - var(--_indentline-ul-trans, 18px)) 0 / 1px no-repeat;
+                &:last-child {
+                    background: unset;
+                }
+                & > li {
+                    position: relative;
+                    &::before {
+                        content: "";
+                        position: absolute;
+                        left: calc(var(--neo-indent-offset) - var(--_indentline-li-trans, 8px));
+                        bottom: -1px;
+                        width: 1px;
+                        height: 29.5px;
+                        background-color: var(--_indentline-color);
+                    }
+                    &:last-of-type {
+                        &::before {
+                            bottom: 20.5px;
+                            height: 8.5px;
+                        }
+                    }
                 }
                 .b3-list-item__toggle {
                     position: relative;
@@ -32,10 +44,10 @@
                         border-left: 1px solid var(--_indentline-color);
                         border-bottom: 1px solid var(--_indentline-color);
                         left: unset;
-                        top: 3.5px;
-                        height: 7px;
+                        bottom: 10.5px;
+                        height: 6px;
                         width: 8px;
-                        margin-inline-start: var(--neo-dock-indent-fork-left, -12px);
+                        margin-inline-start: var(--_indentline-dot-trans, -12px);
                         background-color: transparent;
                         visibility: visible;
                     }
