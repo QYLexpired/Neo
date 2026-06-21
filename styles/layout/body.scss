@@ -2,6 +2,10 @@
 body {
     background-color: var(--b3-theme-surface);
     background-image: unset;
+    &.body--window,
+    &.neo-mobile {
+        background-color: var(--b3-theme-background);
+    }
     &:not(.body--window):not(.neo-mobile) {
         & > .fn__flex-1 {
             margin-top: calc(var(--_layout-gap) / -2);

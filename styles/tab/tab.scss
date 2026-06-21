@@ -11,7 +11,7 @@ body:not(.body--toolbar-hide) [data-type="wnd"] > .fn__flex:first-child {
         padding: 0;
         .item {
             @include superellipse(7px);
-            margin: 6px 3px;
+            margin: 6px 3px !important;
             background-color: transparent;
             .item__graphic {
                 padding: 4px 0 4px 8px;
@@ -36,10 +36,10 @@ body:not(.body--toolbar-hide) [data-type="wnd"] > .fn__flex:first-child {
                 }
             }
             &:first-child {
-                margin-left: 6px;
+                margin-left: 6px !important;
             }
             &:last-child {
-                margin-right: 6px;
+                margin-right: 6px !important;
             }
             &:hover {
                 background-color: transparent !important;

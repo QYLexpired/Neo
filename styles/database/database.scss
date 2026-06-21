@@ -1,19 +1,15 @@
 @use "../utils" as *;
 @use "../component" as *;
-.av__cell {
+.av__cell,
+.av__row {
     border-color: var(--b3-border-color);
 }
-.av__cell [data-type=block-more] {
-    background-color: var(--b3-theme-background);
-    color: var(--b3-theme-on-surface);
-    box-shadow: 0 0 0 1px var(--b3-border-color-trans);
-    &:hover {
-        color: var(--b3-theme-on-background);
-    }
+.av__cell--header {
+    border-color: transparent;
 }
-.b3-button[data-type="av-add-bottom"] {
-    @include button-transparent-hover-background;
-    padding: 3px 6px;
+.av__cell--select::after {
+    @include superellipse(4px);
+    box-shadow: 0 0 0 2px var(--neo-input-primary);
 }
 .av__gallery-item {
     box-shadow: var(--neo-main-shadow-light);
@@ -56,17 +52,25 @@
         color: var(--b3-theme-accent);
     }
 }
-.av__cell .b3-chip {
-    outline: 1px solid oklch(from currentColor l c h / 0.2);
+.av__cell .b3-chip,
+.av__panel .b3-menu__item .b3-chip,
+.av__panel .b3-chips .b3-chip {
+    box-shadow: inset 0 0 0 1px oklch(from currentColor l c h / 0.25);
+    @include superellipse(4px);
+    line-height: 18px;
+    padding: 2px 6px;
 }
 .av__celltext--url.b3-chip {
+    color: var(--b3-theme-on-surface);
     background-color: transparent;
-    outline: 1px solid var(--b3-border-color-trans);
+    box-shadow: inset 0 0 0 1px oklch(from currentColor l c h / 0.25);
     transition: var(--b3-transition);
+    line-height: 18px;
+    padding: 2px 6px;
     &:hover {
         color: var(--b3-theme-accent);
-        background-color: oklch(from currentColor l c h / 0.05);
-        outline: 1px solid oklch(from currentColor l c h / 0.2);
+        background-color: oklch(from currentColor l c h / 0.1);
+        box-shadow: inset 0 0 0 1px oklch(from currentColor l c h / 0.25);
     }
 }
 .av__layout-item {
@@ -75,4 +79,19 @@
 }
 .av__layout-item--select {
     color: var(--b3-theme-accent);
+}
+// button
+.av__cell [data-type=block-more] {
+    background-color: var(--b3-theme-background);
+    color: var(--b3-theme-on-surface);
+    box-shadow: 0 0 0 1px var(--b3-border-color-trans);
+    @include superellipse(5px);
+    line-height: 16px;
+    &:hover {
+        color: var(--b3-theme-on-background);
+    }
+}
+.b3-button[data-type="av-add-bottom"] {
+    @include button-transparent-hover-background;
+    padding: 3px 6px;
 }

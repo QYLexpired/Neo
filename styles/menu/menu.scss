@@ -20,26 +20,22 @@
 }
 @mixin menu-item-child-trans-current {
     // 特殊的菜单项子元素在悬停时需要变化
-    & > .b3-switch {
+    & > .b3-switch,
+    & > .b3-menu__label .b3-switch {
         outline: 1px solid;
-        @include color-reverse(--neo-menu-item-primary, outline-color, 0.5);
+        @include color-reverse(--neo-menu-item-primary, outline-color, 0.3);
         transition: none;
     }
-    & > .b3-text-field {
-        @include color-reverse(--neo-menu-item-primary, --_b3-text-field-box-shadow-reverse, 0.5);
+    & > .b3-text-field,
+    & > .b3-menu__label .b3-text-field,
+    & > .b3-select,
+    & > .b3-menu__label .b3-select {
+        @include color-reverse(--neo-menu-item-primary, --_b3-text-field-box-shadow-reverse, 0.3);
         box-shadow: 0 0 0 2px var(--_b3-text-field-box-shadow-reverse);
         @include color-reverse(--neo-menu-item-primary);
-    }
-    & > .b3-menu__label {
-        .b3-switch {
-            outline: 1px solid;
-            @include color-reverse(--neo-menu-item-primary, outline-color, 0.5);
-            transition: none;
-        }
-        .b3-text-field {
-            @include color-reverse(--neo-menu-item-primary, --_b3-text-field-box-shadow-reverse, 0.5);
-            box-shadow: 0 0 0 2px var(--_b3-text-field-box-shadow-reverse);
-            @include color-reverse(--neo-menu-item-primary);
+        &:focus,
+        &:hover {
+            box-shadow: 0 0 0 2px var(--_b3-text-field-box-shadow-reverse) !important;
         }
     }
 }

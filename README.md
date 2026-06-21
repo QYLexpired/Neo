@@ -1,11 +1,9 @@
 >Important: Neo is only compatible with SiYuan 3.7.0 dev version or higher. It **will not display correctly** on lower versions (e.g. 3.6.5).
 #### Update Notes
-##### v1.1.7 ~ v1.1.8
-- Refactored code structure
-- Visual - Colored folders added new style: Simple
-- New feature: Visual - Sidebar mute
-- Redesigned folder indent line styles
-- Optimized theme performance
+##### v1.2.0
+- New interface style: IDE (inspired by Asri theme)
+- Adapted settings page
+- Optimized layout
 #### About the Theme
 - **Neo+ plugin is required**: To ensure optimal performance, theme styles depend on the Neo+ plugin. Therefore, the Neo+ plugin **MUST** be installed for the theme to display correctly.
 - **Compatibility note**: The theme utilizes a large number of cutting-edge CSS features; full experience is only guaranteed on desktop and Chromium-based browsers.
@@ -39,6 +37,12 @@ The creation of the Neo theme drew significant inspiration from the following pr
 - [Rem Craft](https://github.com/svchord/Rem-Craft)
 - [Savor](https://github.com/royc01/notion-theme)
 #### Update History
+##### v1.1.7 ~ v1.1.8
+- Refactored code structure
+- Visual - Colored folders added new style: Simple
+- New feature: Visual - Sidebar mute
+- Redesigned folder indent line styles
+- Optimized theme performance
 ##### v1.1.6
 - Added pinned toolbar feature
 - Added multi-column slash menu layout

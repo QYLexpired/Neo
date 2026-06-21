@@ -7,7 +7,7 @@
 body.body--toolbar-hide,
 body.body--window {
     #drag {
-        app-region: drag;
+        app-region: drag !important;
     }
     .layout__wnd--center > [data-type="wnd"] > .fn__flex:first-child {
         & > .layout-tab-bar:not(.layout-tab-bar--readonly) {
