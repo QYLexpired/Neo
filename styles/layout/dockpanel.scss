@@ -19,6 +19,9 @@
     & + #layouts {
         & > .layout__resize:not(.fn__none) + .layout__dockb {
             margin: 0 var(--_layout-gap);
+            .neo-ide & {
+                margin: 0;
+            }
         }
     }
 }

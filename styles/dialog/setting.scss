@@ -42,7 +42,7 @@
 }
 .config-group {
     @include superellipse(16px);
-    margin: 24px 64px;
+    margin: 24px 96px;
     &:first-child {
         margin-top: 12px;
     }
