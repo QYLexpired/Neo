@@ -36,12 +36,18 @@
     }
     option {
         @include superellipse(7px);
+        display: flex;
+        align-items: center;
         &:hover {
             background-color: var(--neo-menu-item-primary);
             @include color-reverse(--neo-menu-item-primary);
         }
         &:checked:not(:hover) {
             color: var(--b3-theme-accent);
+        }    
+        &::checkmark {
+            margin-left: auto;
+            order: 1;
         }
     }
     &:hover {
@@ -122,7 +128,7 @@ input[type="checkbox"]:not(.b3-switch) {
     flex-shrink: 0;
     background-color: var(--b3-theme-on-surface);
     animation: neo-ratio-entrance 0.6s var(--neo-ease-spring-3);
-    transform-origin: center;
+    transform-origin: 30% 70%;
     mask-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024"><path d="M512 903.110656c216.004608 0 391.110656-175.106048 391.110656-391.110656S728.004608 120.889344 512 120.889344 120.889344 295.995392 120.889344 512 295.995392 903.110656 512 903.110656z m0 64C260.64896 967.110656 56.889344 763.35104 56.889344 512S260.64896 56.889344 512 56.889344 967.110656 260.64896 967.110656 512 763.35104 967.110656 512 967.110656z"/></svg>');
     &:checked {
         background-color: var(--b3-theme-primary);
@@ -136,7 +142,7 @@ input[type="checkbox"]:not(.b3-switch) {
 }
 @keyframes neo-ratio-entrance {
     from {
-        transform: scale(1.12);
+        transform: scale(1.2);
     }
     to {
         transform: scale(1);
@@ -144,7 +150,7 @@ input[type="checkbox"]:not(.b3-switch) {
 }
 @keyframes neo-ratio-checked-entrance {
     from {
-        transform: scale(1.12);
+        transform: scale(1.2);
     }
     to {
         transform: scale(1);

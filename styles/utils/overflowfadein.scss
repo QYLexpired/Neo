@@ -172,10 +172,6 @@
         animation-timeline: scroll(self y);
     } @else {
         animation-timeline: scroll(self x);
-        :where(:lang(ar_SA), :lang(he_IL)) & {
-            animation-range: #{reverse-list($anim-range)};
-            animation-direction: #{reverse-list($anim-dir)};
-        }
     }
     @keyframes maskAppear-mask-start-#{$this-id} {
         0% {

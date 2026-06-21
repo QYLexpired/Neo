@@ -2,7 +2,7 @@
 @use "../component" as *;
 .protyle-background__action {
     .b3-button {
-        @include button-transparent-hover-outline;
+        @include button-transparent-hover-background;
     }
 }
 .b3-chips__doctag .b3-chip {
@@ -68,28 +68,5 @@
 .layout__empty {
     .b3-list-item {
         transition: var(--b3-transition);
-    }
-}
-$header-height: 40vh;
-$header-parallax: 5vh;
-.protyle[data-loading="finished"] .protyle-content {
-    scroll-timeline-name: --protyle-conten-scroll;
-    scroll-timeline-axis: block;
-    .protyle-background__img {
-        height: $header-height;
-        transform-origin: center;
-        animation: header-parallax ease-out;
-        animation-timeline: --protyle-conten-scroll;
-        animation-range: 0 $header-height;
-        img,video {
-            height: $header-height;
-        }
-    }
-}
-@keyframes header-parallax {
-    to {
-        transform: scale(1.375) translateY($header-parallax);
-        filter: blur(1px);
-        opacity: 0;
     }
 }

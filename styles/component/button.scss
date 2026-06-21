@@ -24,6 +24,18 @@
         @include color-reverse(--neo-button-primary-hover);
     }
 }
+@mixin button-warning {
+    @include button-common;
+    background-color: var(--b3-theme-error);
+    @include color-reverse(--b3-theme-error);
+    --neo-button-warning-hover: oklch(from var(--b3-theme-error) calc(l + (0.05 * sign(0.4999999 - l))) c h);
+    &:hover,
+    &:active,
+    &:focus {
+        background-color: var(--neo-button-warning-hover);
+        @include color-reverse(--neo-button-warning-hover);
+    }
+}
 @mixin button-transparent {
     @include button-common;
     background-color: transparent;
@@ -48,7 +60,7 @@
         box-shadow: inset 0 0 0 1px var(--b3-border-color-trans);
     }
 }
-@mixin button-transparent-hover-outline {
+@mixin button-transparent-hover-background {
     @include button-common;
     background-color: transparent;
     color: var(--b3-theme-on-surface);
@@ -57,10 +69,9 @@
     &:focus {
         background-color: var(--b3-list-hover);
         color: var(--b3-theme-on-surface);
-        box-shadow: inset 0 0 0 1px var(--b3-border-color-trans);
     }
 }
-@mixin button-transparent-outline-no-hover {
+@mixin button-transparent-outline-hover-primary {
     @include button-common;
     background-color: transparent;
     color: var(--b3-theme-on-surface);
@@ -68,22 +79,24 @@
     &:hover,
     &:active,
     &:focus {
-        background-color: transparent;
-        color: var(--b3-theme-on-surface);
-        box-shadow: inset 0 0 0 1px var(--b3-border-color-trans);
+        background-color: var(--neo-button-primary);
+        @include color-reverse(--neo-button-primary);
     }
 }
-@mixin button-warning {
+@mixin button-transparent-outline-hover-warning {
     @include button-common;
-    background-color: var(--b3-theme-error);
-    @include color-reverse(--b3-theme-error);
-    --neo-button-warning-hover: oklch(from var(--b3-theme-error) calc(l + (0.05 * sign(0.4999999 - l))) c h);
+    background-color: transparent;
+    color: var(--b3-theme-on-surface);
+    box-shadow: inset 0 0 0 1px var(--b3-border-color-trans);
     &:hover,
     &:active,
     &:focus {
-        background-color: var(--neo-button-warning-hover);
-        @include color-reverse(--neo-button-warning-hover);
+        background-color: var(--b3-theme-error);
+        @include color-reverse(--b3-theme-error);
     }
+}
+.b3-chip {
+    @include superellipse(7px);
 }
 .b3-button {
     @include button-primary;
@@ -91,10 +104,10 @@
         @include button-transparent-outline;
     }
     &--text {
-        @include button-transparent;
+        @include button-transparent-hover-background;
     }
     &--cancel {
-        @include button-transparent;
+        @include button-transparent-hover-background;
     }
     &--remove,
     &#removeAll,
@@ -110,7 +123,7 @@
 .config__item,
 #modelMain {
     .b3-button--outline {
-        @include button-primary;
+        @include button-transparent-outline-hover-primary;
     }
 }
 // action按钮
@@ -146,9 +159,9 @@
 }
 .config-bazaar__readme .item__side {
     .b3-button {
-        @include button-primary;
+        @include button-transparent-outline-hover-primary;
         &[data-type="feedback"] {
-            @include button-warning;
+            @include button-transparent-outline-hover-warning;
         }
     }
 }
@@ -176,7 +189,7 @@
         padding: 8px 0;
     }
     &[data-type="-2"] {
-        @include button-transparent-hover-outline;
+        @include button-transparent-hover-background;
         line-height: 32px;
         @include superellipse(16px);
         padding: 8px 0;
@@ -214,5 +227,5 @@
 }
 // misc
 .b3-button[data-action="addCustom"] {
-    @include button-transparent-hover-outline;   
+    @include button-transparent-hover-background;   
 }

@@ -1,8 +1,5 @@
 @use "../utils" as *;
-.layout:not(.layout__center) {
-    margin-bottom: calc(var(--_layout-gap) / 2);
-    margin-top: calc(var(--_layout-gap) / -2);
-    min-height: 0.1px;
+body:not(.body--window) {
     .layout__center {
         border-radius: unset;
         .neo-haswnd {
@@ -15,8 +12,8 @@
         }
     }
 }
-.body--toolbar-hide {
-    .layout:not(.layout__center) .layout__center {
+.body--toolbar-hide:not(.body--window) {
+    .layout__center {
         .neo-haswnd {
             padding: unset;
             & > [data-type="wnd"] {

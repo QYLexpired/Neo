@@ -9,13 +9,13 @@
   },
   "description": {
     "default": "An ultra-minimalist theme for SiYuan",
-    "zh_CN": "一款极致简约的思源笔记主题",
-    "zh_CHT": "一款极致簡約的思源筆記主題"
+    "zh-CN": "一款极致简约的思源笔记主题",
+    "zh-TW": "一款极致簡約的思源筆記主題"
   },
   "readme": {
     "default": "README.md",
-    "zh_CN": "README_zh_CN.md",
-    "zh_CHT": "README_zh_CHT.md"
+    "zh-CN": "README.zh-CN.md",
+    "zh-TW": "README.zh-TW.md"
   },
   "funding": {
     "custom": ["https://ifdian.net/a/QYLexpired"]

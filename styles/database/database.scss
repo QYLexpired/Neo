@@ -12,7 +12,7 @@
     }
 }
 .b3-button[data-type="av-add-bottom"] {
-    @include button-transparent-hover-outline;
+    @include button-transparent-hover-background;
     padding: 3px 6px;
 }
 .av__gallery-item {
@@ -35,7 +35,7 @@
     top: 4px;
 }
 .av__gallery-add {
-    @include button-transparent-hover-outline;
+    @include button-transparent-hover-background;
     @include superellipse(10px);
 }
 .av__group-icon {

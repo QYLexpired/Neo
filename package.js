@@ -14,8 +14,8 @@ const files = [
   'theme.css',
   'theme.json',
   'README.md',
-  'README_zh_CN.md',
-  'README_zh_CHT.md',
+  'README.zh-CN.md',
+  'README.zh-TW.md',
   'icon.png',
   'preview.png'
 ];

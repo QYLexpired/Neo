@@ -2,7 +2,6 @@
 .layout__resize {
     &:not(.layout__resize--lr) {
         margin: 0;
-        height: calc(var(--_layout-gap) / 2);
         &::after {
             content: "" !important;
             height: 1px;
@@ -18,7 +17,6 @@
     }
     &--lr {
         margin: 0;
-        width: calc(var(--_layout-gap) / 2);
         &::after {
             content: "" !important;
             width: 1px;
@@ -63,15 +61,12 @@
 }
 .layout__dockl + .layout__resize {
     margin-left: calc(var(--_layout-gap) * -1);
-    width: calc(var(--_layout-gap) / 2);
 }
 .layout__center + .layout__resize {
     margin-right: calc(var(--_layout-gap) * -1);
-    width: calc(var(--_layout-gap) / 2);
 }
-.layout:not(.layout__center) > .layout__resize {
+body:not(.body--window) .layout > .layout__resize {
     margin-bottom: calc(var(--_layout-gap) * -1);
-    height: calc(var(--_layout-gap) / 2);
 }
 .body--toolbar-hide {
     .layout__resize--lr {

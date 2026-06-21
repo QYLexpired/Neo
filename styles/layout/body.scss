@@ -1,0 +1,12 @@
+@use "../utils" as *;
+body {
+    background-color: var(--b3-theme-surface);
+    background-image: unset;
+    &:not(.body--window):not(.neo-mobile) {
+        & > .fn__flex-1 {
+            margin-top: calc(var(--_layout-gap) / -2);
+            margin-bottom: calc(var(--_layout-gap) / 2);
+            min-height: 0.1px;
+        }
+    }
+}

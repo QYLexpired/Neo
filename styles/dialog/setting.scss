@@ -2,7 +2,7 @@
 .config__panel {
     background-color: transparent;
 }
-.config__side,
+.config__panel .config__side,
 .b3-tab-bar {
     @include superellipse(12px);
     margin: var(--_sidebar-gap);
@@ -34,26 +34,28 @@
 .config__tab-container {
     background-color: transparent;
     border: unset;
-    padding: var(--_sidebar-gap) 64px;
-    .layout-tab-bar {
-        padding-top: 16px !important;
-    }
-    .config-group {
-        @include superellipse(16px);
-        margin: 0;
-        background-color: oklch(from var(--b3-theme-surface) l c h / 0.5);
-        & > .b3-label {
-            border: unset;
-        }
-    }
-    .config-group__title {
-        padding: 24px 0 12px 12px;
-    }
-    & > .config-group__title:first-child {
-        padding-top: 0;
-    }
+    padding: var(--_sidebar-gap) 0;
     &[data-name="bazaar"],
     &[data-name="account"] {
         padding: var(--_sidebar-gap) 0;
     }
+}
+.config-group {
+    @include superellipse(16px);
+    margin: 24px 64px;
+    &:first-child {
+        margin-top: 12px;
+    }
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+.config-items {
+    background-color: oklch(from var(--b3-theme-surface) l c h / 0.5);
+    .b3-label {
+        border-bottom: unset;
+    }
+}
+.config-title {
+    margin: 0 12px 12px 12px;
 }

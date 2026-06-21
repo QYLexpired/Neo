@@ -1,10 +1,5 @@
 @use "../utils" as *;
 @use "../component" as *;
-$mobile-toolbar-height: 50px;
-$breadcrumb-height: 42px;
-$breadcrumb-offset: 6px;
-$text-shadow: 0 0 1px var(--b3-theme-background), 0 0 2px var(--b3-theme-background), 0 0 1px var(--b3-theme-background),0 0 1px var(--b3-theme-background);
-$svg-shadow: drop-shadow(0 0 0.5px var(--b3-theme-background)) drop-shadow(0 0 0.5px var(--b3-theme-background)) drop-shadow(0 0 0.5px var(--b3-theme-background));
 .neo-mobile {
     .side-mask {
         background-color: transparent;
@@ -13,7 +8,7 @@ $svg-shadow: drop-shadow(0 0 0.5px var(--b3-theme-background)) drop-shadow(0 0 0
     .status {
         position: fixed;
         top: unset;
-        bottom: 0;
+        bottom: -26px;
         corner-shape: unset;
         border-radius: unset;
         box-shadow: unset;
@@ -34,21 +29,8 @@ $svg-shadow: drop-shadow(0 0 0.5px var(--b3-theme-background)) drop-shadow(0 0 0
         }
         .b3-menu__title {
             border-bottom: 1px solid var(--b3-border-color-trans);
-            margin-bottom: calc($mobile-toolbar-height * -1);
             background-color: transparent;
-            backdrop-filter: blur(6px);
-            z-index: 1;
             box-sizing: border-box;
-            height: $mobile-toolbar-height;
-            .b3-menu__icon {
-                filter: $svg-shadow; 
-            }
-            .b3-menu__label {
-                text-shadow: $text-shadow;
-            }
-        }
-        .b3-menu__items {
-            padding: $mobile-toolbar-height 0 0 0;
         }
         .b3-menu__item {
             background-color: transparent;
@@ -62,26 +44,12 @@ $svg-shadow: drop-shadow(0 0 0.5px var(--b3-theme-background)) drop-shadow(0 0 0
     // editor
     & > .toolbar {
         border-bottom: 1px solid var(--b3-border-color-trans);
-        margin-bottom: calc($mobile-toolbar-height * -1);
-        background-color: transparent;
-        backdrop-filter: blur(6px);
-        z-index: 3;
+        background-color: var(--b3-theme-background);
         box-sizing: border-box;
-        height: $mobile-toolbar-height;
-        .toolbar__icon {
-            filter: $svg-shadow; 
-        }
-        .toolbar__title,
-        .toolbar__text {
-            text-shadow: $text-shadow;
-        }
     }
     #editor {
         background-color: var(--b3-theme-background);
-        padding-top: $breadcrumb-offset;
         & > .protyle-breadcrumb {
-            margin-top: 0;
-            padding-top: calc($breadcrumb-height + $breadcrumb-offset * 2);
             .protyle-breadcrumb__icon {
                 transition: var(--b3-transition);
                 padding: 4px 8px;
@@ -89,21 +57,11 @@ $svg-shadow: drop-shadow(0 0 0.5px var(--b3-theme-background)) drop-shadow(0 0 0
                 width: max-content;
                 @include button-transparent-outline;
                 color: var(--b3-theme-accent);
-                text-shadow: $text-shadow;
                 &:hover,
                 &:focus {
                     color: var(--b3-theme-accent);
                 }
             }
-            .block__icon {
-                svg {
-                    filter: $svg-shadow;
-                }
-            }
-        }
-        & > .protyle-content {
-            margin-top: -84px;
-            padding-top: calc($breadcrumb-height + $mobile-toolbar-height);
         }
     }
     // sidebar
@@ -112,7 +70,6 @@ $svg-shadow: drop-shadow(0 0 0.5px var(--b3-theme-background)) drop-shadow(0 0 0
         & > .toolbar:first-child {
             border-bottom: 1px solid var(--b3-border-color-trans);
             box-sizing: border-box;
-            height: $mobile-toolbar-height;
         }
         .toolbar {
             background-color: transparent;
@@ -127,23 +84,12 @@ $svg-shadow: drop-shadow(0 0 0.5px var(--b3-theme-background)) drop-shadow(0 0 0
         }
         & > .toolbar--border {
             border-bottom: 1px solid var(--b3-border-color-trans);
-            margin-bottom: calc($mobile-toolbar-height * -1);
             background-color: transparent;
-            backdrop-filter: blur(6px);
-            z-index: 99;
             box-sizing: border-box;
-            height: $mobile-toolbar-height;
-            .toolbar__icon {
-                filter: $svg-shadow; 
-            }
-            .toolbar__title,
-            .toolbar__text {
-                text-shadow: $text-shadow;
-            }
         }
-        #modelMain {
-            padding: $mobile-toolbar-height 0 0 0;
-        }
+    }
+    #model .config-group {
+        margin: 24px 12px;
     }
     // keyboard
     #keyboardToolbar {
