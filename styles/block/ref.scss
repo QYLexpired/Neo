@@ -12,15 +12,18 @@
     padding-bottom: 2px;
     border: unset;
     will-change: transform;
-    animation: neo-blockref-flow 1s linear infinite;
-    animation-play-state: paused;
     &:hover {
         color: var(--b3-theme-accent);
         animation-play-state: running;
     }
     // 动态锚文本
     &[data-subtype="d"] {
-        animation-play-state: running;
+        animation: neo-blockref-flow 1s linear infinite;
+        animation-play-state: paused;
+        &:hover {
+            animation-play-state: running;
+        }
+        
     }
 }
 @keyframes neo-blockref-flow {

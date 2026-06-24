@@ -12,6 +12,9 @@
                     padding-left: 2px !important;
                 }
             }
+            & > ul {
+                background: unset !important;
+            }
             & ul {
                 background: linear-gradient(var(--_indentline-color), var(--_indentline-color)) calc(var(--neo-indent-offset) - var(--_indentline-ul-trans, 18px)) 0 / 1px no-repeat;
                 &:last-child {

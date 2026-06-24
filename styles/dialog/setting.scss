@@ -26,10 +26,6 @@
 .config__tab-wrap {
     background-color: transparent !important; // 覆盖内联
     padding: 0;
-    .fn__hr--b:first-child,
-    .fn__hr--b:last-child {
-        display: none;
-    }
 }
 .config__tab-container {
     background-color: transparent;

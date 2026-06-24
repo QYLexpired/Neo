@@ -108,11 +108,9 @@ body:not(.body--toolbar-hide) [data-type="wnd"] > .fn__flex:first-child {
         margin-left: unset;
         .item--readonly {
             padding: 0 3px;
-            .block__icon {
-                margin: 0 6px;
-            }
             .fn__flex-1 {
-                display: none;
+                max-width: 12px;
+                min-width: 3px;
             }
         }
     }
