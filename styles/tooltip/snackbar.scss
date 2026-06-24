@@ -20,7 +20,7 @@
     @include superellipse(14px);
     box-shadow: var(--b3-menu-shadow);
     color: var(--b3-theme-on-background);
-    @include frostedglass($blur: s, $color: surface, $alpha: 0.5);
+    @include frostedglass($blur: s, $color: surface, $alpha: 0.6);
     padding: 12px 18px !important; // 覆盖内联
     .b3-snackbar--error & {
         &::after {

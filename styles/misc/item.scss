@@ -11,3 +11,6 @@
 .b3-list-item svg.b3-list-item__arrow {
     transition: color var(--b3-transition), transform var(--_rotate-transition);
 }
+.ft__error {
+    color: var(--b3-theme-error-text) !important;
+}
