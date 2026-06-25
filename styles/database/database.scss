@@ -1,7 +1,8 @@
 @use "../utils" as *;
 @use "../component" as *;
 .av__cell,
-.av__row {
+.av__row,
+.av__row--footer {
     border-color: var(--b3-border-color);
 }
 .av__cell--header {
@@ -86,7 +87,6 @@
 .av__cell [data-type=block-more] {
     background-color: var(--b3-theme-background);
     color: var(--b3-theme-on-surface);
-    box-shadow: 0 0 0 1px var(--b3-border-color-trans);
     @include superellipse(5px);
     line-height: 16px;
     &:hover {
@@ -96,4 +96,26 @@
 .b3-button[data-type="av-add-bottom"] {
     @include button-transparent-hover-background;
     padding: 3px 6px;
+}
+// filter
+.av__panel .b3-menu {
+    .av__filter-rowinner {
+        overflow: visible;
+    }
+    .b3-menu__icon {
+        @include icon;
+    }
+    .av__field-wrapper {
+        border: unset;
+        background-color: unset;
+        gap: 6px;
+        padding: 0;
+    }
+    .av__filter-group-children {
+        border: unset;
+        background-color: unset;
+        outline: 1px solid var(--b3-border-color-trans);
+        outline-offset: -1px;
+        @include superellipse(10px);
+    }
 }

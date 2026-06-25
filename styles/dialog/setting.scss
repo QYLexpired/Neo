@@ -2,6 +2,9 @@
 .config__panel {
     background-color: transparent;
 }
+.config__tab-head {
+    margin-bottom: 8px;
+}
 .config__panel .config__side,
 .b3-tab-bar {
     @include superellipse(12px);

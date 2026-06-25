@@ -59,6 +59,24 @@
         box-shadow: 0 0 0 2px var(--neo-input-primary);
     }
 }
+.av__panel .b3-menu .av__filter-row,
+.av__panel .b3-menu .av__filter-group-left {
+    .b3-select,
+    .b3-text-field--text {
+        background-color: var(--neo-input-background);
+        box-shadow: unset;
+        border: unset;
+        @include superellipse(7px);
+        &:hover {
+            background-color: var(--neo-input-background);
+            box-shadow: unset;
+        }
+        &:focus {
+            background-color: var(--neo-input-background);
+            box-shadow: 0 0 0 2px var(--neo-input-primary);
+        }
+    }
+}
 .b3-text-field {
     @include input-common;
     .search__header & {

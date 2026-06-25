@@ -11,6 +11,7 @@
 #### Features
 > Some of the following features depend on the Neo+ plugin.
 - Excellent performance comparable to the default theme
+- Rich interface styles freely mix and match, like having a theme library
 - Strictly built color system using the OKLCH color space, with a wide range of preset color schemes and support for custom theme colors
 - Theme color can follow time, banner image, or system accent color
 - Global glassmorphism effects for a transparent and layered look
