@@ -15,7 +15,7 @@
         border: unset;
         padding: 0 2px;
         overflow: hidden;
-        z-index: 3;
+        z-index: 5;
         max-width: max(anchor-size(--anchor-layout-center) - 16px, 200px);
         .toolbar__item {
             &:hover {
