@@ -1,0 +1,34 @@
+@use "../utils" as *;
+.protyle-wysiwyg [data-node-id].sb {
+    &[data-sb-layout=col] {
+        & > .sb__resize {
+            width: 16px;
+            background-color: transparent;
+            margin-right: 0;
+            transition: var(--b3-transition);
+            z-index: 1;
+            &::before {
+                background-color: transparent;
+                width: 1px;
+                left: 50%;
+                transform: translateX(-50%);
+                top: 0;
+                transition: var(--b3-transition);
+            }
+            &:hover {
+                &::before {
+                    background-color: var(--_resize-hl);
+                }
+            }
+        }
+        & > [data-node-id] {
+            .sb__resize-tip {
+                color: var(--b3-theme-on-surface);
+                @include superellipse(6px);
+                @include frostedglass($blur: s, $color: transparent);
+                box-shadow: var(--neo-main-shadow-heavy);
+                line-height: 16px;
+            }
+        }
+    }
+}

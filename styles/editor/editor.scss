@@ -125,7 +125,7 @@
         }
     }
     &.protyle-gutters__line {
-        @include gutters-svg-common;
+        background-color: oklch(from var(--b3-theme-on-surface) l c h / 0.5);
         animation-name: neo-gutters-top-entrance;
         transform-origin: top;
         & ~ .protyle-gutters__line {

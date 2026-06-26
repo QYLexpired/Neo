@@ -6,13 +6,14 @@
     margin-bottom: 8px;
 }
 .config__panel .config__side,
-.b3-tab-bar {
+.config__panel .b3-tab-bar {
     @include superellipse(12px);
     margin: var(--_sidebar-gap);
     padding: var(--_sidebar-gap) 0;
     border: unset;
     box-shadow: var(--neo-main-shadow-heavy);
     background-color: oklch(from var(--b3-theme-surface) l c h / 0.5) !important; // 覆盖内联
+    overflow: auto;
     .b3-list-item {
         @include superellipse(7px);
         line-height: 26px;
