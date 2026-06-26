@@ -64,7 +64,8 @@
 .b3-menu__item {
     background-color: transparent;
 }
-.b3-menu__item--selected {
+.b3-menu__item--selected,
+.secondaryToolbarButton.toggled {
     color: var(--b3-theme-accent);
     @include menu-item-child {
         color: var(--b3-theme-accent);

@@ -6,6 +6,7 @@
     right: 0;
     &::after {
         background-color: var(--b3-border-color-trans);
+        transition: var(--b3-transition);
     }
     &:hover {
         &::after {
@@ -19,11 +20,18 @@
 .pdf__outer {
     .toolbarButton {
         transition: var(--b3-transition);
+        background-color: transparent !important;
         @include icon;
         &.toggled {
             color: var(--b3-theme-accent);
+            svg {
+                color: var(--b3-theme-accent);
+            }
             &:hover {
                 color: var(--b3-theme-accent);
+                svg {
+                    color: var(--b3-theme-accent);
+                }
             }
         }
     }
@@ -71,4 +79,8 @@
 .pdf__rect > div:first-child,
 .pdf__rect > div:last-child {
     border-radius: 0;
+}
+// 搜索
+.textLayer .highlight.selected {
+    background-color: var(--b3-highlight-background);
 }
