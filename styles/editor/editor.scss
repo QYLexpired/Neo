@@ -91,29 +91,84 @@
     border: unset;
 }
 // 块标
-.protyle-gutters button,
-.protyle-title:hover .protyle-title__icon svg {
-    transition: color var(--b3-transition);
-    animation: neo-gutters-entrance 0.45s var(--neo-ease-spring-2);
-    animation-delay: calc((sibling-count() - sibling-index()) * 0.03s);
+@mixin gutters-ani-common {
+    transition: var(--b3-transition);
+    animation: neo-gutters-entrance 0.5s var(--neo-ease-spring-3);
+    animation-delay: calc((sibling-count() - sibling-index()) * 0.02s);
     transform-origin: right bottom;
     animation-fill-mode: both;
+}
+@mixin gutters-svg-common {
+    transition: var(--b3-transition);
     svg {
-        transition: color var(--b3-transition);
+        color: var(--b3-theme-on-surface);
+    }
+    &:hover {
+        svg {
+            color: var(--b3-theme-accent);
+        }
+    }
+}
+.protyle-title:hover .protyle-title__icon {
+    @include gutters-ani-common;
+    @include gutters-svg-common;
+}
+.protyle-gutters button {
+    @include gutters-ani-common;
+    @include gutters-svg-common;
+    &::before {
+        opacity: 0 !important;
     }
     &[data-type="fold"] {
         svg {
             transition: color var(--b3-transition), transform var(--_rotate-transition);
         }
     }
-}
-.protyle-gutters button:hover svg,
-.protyle-title:hover .protyle-title__icon:hover svg {
-    color: var(--b3-theme-accent);
+    &.protyle-gutters__line {
+        @include gutters-svg-common;
+        animation-name: neo-gutters-top-entrance;
+        transform-origin: top;
+        & ~ .protyle-gutters__line {
+            animation-name: neo-gutters-bottom-entrance;
+            transform-origin: bottom;
+        }
+    }
+    &.protyle-gutters__plus {
+        @include gutters-svg-common;
+        animation-name: neo-gutters-center-entrance;
+        transform-origin: center;
+    }
 }
 @keyframes neo-gutters-entrance {
     from {
-        transform: scale(0.35) translateX(10px);
+        transform: scale(0.75) translateX(5px);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1) translateX(0);
+    }
+}
+@keyframes neo-gutters-top-entrance {
+    from {
+        transform: scale(0.75) translateY(5px);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1) translateY(0);
+    }
+}
+@keyframes neo-gutters-bottom-entrance {
+    from {
+        transform: scale(0.75) translateY(-5px);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1) translateY(0);
+    }
+}
+@keyframes neo-gutters-center-entrance {
+    from {
+        transform: scale(0.2);
         opacity: 0;
     }
     to {

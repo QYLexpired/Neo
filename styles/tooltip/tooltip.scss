@@ -1,6 +1,6 @@
 @use "../utils" as *;
 .tooltip {
-    @include superellipse(6px);
+    @include superellipse(8px);
     box-shadow: var(--b3-menu-shadow);
     color: var(--b3-theme-on-background);
     @include frostedglass($blur: m, $color: menu);
@@ -29,7 +29,7 @@
         }
     }
     &::after {
-        @include superellipse(6px);
+        @include superellipse(8px);
         box-shadow: var(--b3-menu-shadow);
         color: var(--b3-theme-on-background);
         @include frostedglass($blur: m, $color: menu);
