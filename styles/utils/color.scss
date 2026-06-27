@@ -58,7 +58,7 @@
     // other
     --b3-theme-error: oklch(from var(--b3-base-color) max(l, 0.58) max(c, 0.2) 30);
     --b3-theme-error-text: oklch(from var(--b3-theme-error) clamp(0.55, l, 0.75) c h);
-    --b3-highlight-background: oklch(from var(--b3-base-color) 0.88 0.25 calc(h + 90) / 0.7);
+    --b3-highlight-background: oklch(from var(--b3-base-color) 0.95 0.2 calc(h + 90));
     --b3-highlight-current-background: oklch(from var(--b3-highlight-background) l c calc(h + 10));
     @include color-reverse(--b3-highlight-background, --b3-highlight-color);
     --b3-tooltips-second-color: var(--b3-theme-on-surface);
@@ -120,7 +120,7 @@
     // other
     --b3-theme-error: oklch(from var(--b3-base-color) max(l, 0.58) max(c, 0.2) 30);
     --b3-theme-error-text: oklch(from var(--b3-theme-error) clamp(0.55, l, 0.95) c h);
-    --b3-highlight-background: oklch(from var(--b3-base-color) 0.98 0.2 calc(h + 90) / 0.7);
+    --b3-highlight-background: oklch(from var(--b3-base-color) 0.95 0.2 calc(h + 90));
     --b3-highlight-current-background: oklch(from var(--b3-highlight-background) l c calc(h + 10));
     @include color-reverse(--b3-highlight-background, --b3-highlight-color);
     --b3-tooltips-second-color: var(--b3-theme-on-surface);

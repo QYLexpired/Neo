@@ -1,6 +1,7 @@
 @use "../utils" as *;
 @use "../component" as *;
 .neo-mobile {
+    background-color: var(--b3-theme-background);
     .side-mask {
         background-color: transparent;
     }

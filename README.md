@@ -3,7 +3,9 @@
 ##### v1.2.2
 - New color schemes: Titaniumspace, Firefly, Songyan
 - New element: Colorful selection
-- Adapted for SiYuan v3.7.0-beta.2
+- Adapted for SiYuan v3.7.0-beta.3
+- Super fusion supports configurable fusion effects
+- IDE style supports dockpanl background color configuration
 - Optimized numerous details
 ##### v1.2.0 ~ v1.2.1
 - New interface style: IDE (inspired by Asri theme)

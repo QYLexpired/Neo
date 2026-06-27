@@ -1,5 +1,11 @@
 @use "../utils" as *;
 @use "../component" as *;
+.av__row--header,
+.av__row--footer,
+.av__colsticky {
+    background-color: transparent;
+    backdrop-filter: blur(12px);
+}
 .av__cell,
 .av__row,
 .av__row--footer {

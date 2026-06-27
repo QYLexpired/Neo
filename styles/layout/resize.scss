@@ -37,7 +37,7 @@
 .layout__center + .layout__resize {
     margin-right: calc(var(--_layout-gap) * -1);
 }
-body:not(.body--window) .layout > .layout__resize {
+.layout:not(.layout__center) > .layout__resize {
     margin-bottom: calc(var(--_layout-gap) * -1);
 }
 .body--window {
