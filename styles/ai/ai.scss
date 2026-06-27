@@ -1,4 +1,90 @@
 @use "../utils" as *;
+.agent-chat__preview-notice {
+    background-color: transparent;
+    color: var(--b3-theme-error-text);
+}
+.agent-welcome__example {
+    background-color: var(--b3-list-hover);
+    border: unset;
+    @include superellipse(12px);
+    &:hover {
+        background-color: var(--b3-list-hover);
+        border: unset;        
+    }
+}
+// 主页面
 .agent-chat__messages {
     @include overflow-indicator-fadein-mask($fadeout-size-l, "top bottom");
+    padding: 32px;
+}
+// 滚动至底部
+.agent-chat__scroll-bottom {
+    background-color: transparent;
+    backdrop-filter: blur(6px);
+    border: unset;
+    box-shadow: var(--neo-main-shadow-heavy);
+}
+// 输入框
+.agent-chat__input-area {
+    background-color: transparent;
+    border: unset;
+    box-shadow: 0 0 0 1px var(--b3-border-color-trans);
+    margin: 0 24px;
+    @include superellipse(12px);
+}
+.agent-mention-chip {
+    background-color: transparent;
+    outline: 1px solid var(--b3-border-color-trans);
+    @include superellipse(4px);
+    font-weight: normal;
+    color: var(--b3-theme-accent);
+}
+// 思考
+.agent-chat__thinking-header,
+.agent-chat__thinking-arrow {
+    color: var(--b3-theme-on-background);
+}
+.agent-chat__thinking-body {
+    display: none;
+    border: unset;
+    padding-left: 18px;
+    transition: none;
+    @include overflow-indicator-fadein-mask($fadeout-size-l, "top bottom");
+    &--expanded {
+        display: block;
+        border: unset;
+        max-height: 500px;
+        overflow: auto;
+    }
+}
+// 对话气泡
+.agent-chat__msg--user .agent-chat__body {
+    background-color: var(--b3-list-hover);
+    @include superellipse(12px);
+}
+// 交互框
+.agent-chat__question-card,
+.agent-chat__tool-card,
+.agent-chat__confirm-card {
+    background-color: transparent;
+    outline: 1px solid var(--b3-border-color-trans);
+    border: unset;
+    @include superellipse(12px);
+}
+.agent-chat__question-item,
+.agent-chat__todo-header,
+.agent-chat__question-submit,
+.agent-chat__confirm-header,
+.agent-chat__confirm-args,
+.agent-chat__confirm-actions {
+    border-color: var(--b3-border-color-trans);
+    background-color: transparent;
+}
+.agent-chat__question-option {
+    @include superellipse(7px);
+    &:hover,
+    &:focus,
+    &:focus-visible {
+        background-color: var(--b3-list-hover);
+    }
 }

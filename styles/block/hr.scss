@@ -2,3 +2,8 @@
     background-color: oklch(from var(--b3-theme-on-background) l c h / 0.12);
     height: 1.5px;
 }
+.b3-typography hr {
+    border-color: oklch(from var(--b3-theme-on-background) l c h / 0.12);
+    border-width: 1.5px;
+    margin: 8px 0;
+}

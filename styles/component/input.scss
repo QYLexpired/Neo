@@ -158,6 +158,14 @@ input[type="checkbox"]:not(.b3-switch) {
         opacity: 0.5;
     }
 }
+input[type="checkbox"]:not(.b3-switch) {
+    top: 50%;
+    transform: translateY(-50%);
+    animation-name: neo-checkbox-entrance;
+    &:checked {
+        animation-name: neo-checkbox-checked-entrance;
+    }
+}
 @keyframes neo-ratio-entrance {
     from {
         transform: scale(1.2);
@@ -172,5 +180,21 @@ input[type="checkbox"]:not(.b3-switch) {
     }
     to {
         transform: scale(1);
+    }
+}
+@keyframes neo-checkbox-entrance {
+    from {
+        transform: scale(1.2) translateY(-50%);
+    }
+    to {
+        transform: scale(1) translateY(-50%);
+    }
+}
+@keyframes neo-checkbox-checked-entrance {
+    from {
+        transform: scale(1.2) translateY(-50%);
+    }
+    to {
+        transform: scale(1) translateY(-50%);
     }
 }
