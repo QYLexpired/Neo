@@ -10,8 +10,4 @@
     &::before {
         display: none;
     }
-    .neo-visual-sidebarmute .dockPanel &,
-    .neo-ide-dockpanel-bg-surface .dockPanel & {
-        background-color: oklch(from var(--b3-theme-background) l c h / 0.7);
-    }
 }

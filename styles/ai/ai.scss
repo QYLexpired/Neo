@@ -2,6 +2,7 @@
 .agent-chat__preview-notice {
     background-color: transparent;
     color: var(--b3-theme-error-text);
+    transform: translateY(-12px);
 }
 .agent-welcome__example {
     background-color: var(--b3-list-hover);
@@ -28,8 +29,8 @@
 .agent-chat__input-area {
     background-color: transparent;
     border: unset;
-    box-shadow: 0 0 0 1px var(--b3-border-color-trans);
-    margin: 0 24px;
+    box-shadow: 0 0 0 1.5px var(--b3-border-color-trans);
+    margin: 0 24px 24px 24px;
     @include superellipse(12px);
 }
 .agent-mention-chip {

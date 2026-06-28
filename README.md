@@ -1,11 +1,12 @@
 >Important: Neo is only compatible with SiYuan 3.7.0 dev version or higher. It **will not display correctly** on lower versions (e.g. 3.6.5).
 #### Update Notes
-##### v1.2.2
+##### v1.2.2 ~ v1.2.3
 - New color schemes: Titaniumspace, Firefly, Songyan
+- Adapted for SiYuan AI Agent
 - New element: Colorful selection
 - Adapted for SiYuan v3.7.0-beta.3
 - Super fusion supports configurable fusion effects
-- IDE style supports dockpanl background color configuration
+- IDE style supports sidebar mute
 - Optimized numerous details
 ##### v1.2.0 ~ v1.2.1
 - New interface style: IDE (inspired by Asri theme)

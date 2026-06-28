@@ -2,10 +2,17 @@
 .b3-typography table,
 .protyle-wysiwyg table {
     --b3-table-even-background: oklch(from var(--b3-theme-surface) l c h / 0.5);
-    outline: 1px solid var(--b3-border-color-trans);
+    outline: 1px solid var(--b3-border-color-trans) !important; // 覆盖.protyle-wysiwyg [data-node-id] [spellcheck]:focus { outline: none; }
     outline-offset: -1px;
     padding: 1px;
     @include superellipse(10px);
+    caption {
+        border-bottom: 1px solid var(--b3-border-color-trans);
+        &[style*="caption-side: bottom"] {
+            border-bottom: unset;
+            border-top: 1px solid var(--b3-border-color-trans);
+        }
+    }
     td,
     th {
         border: none;
@@ -30,9 +37,5 @@
         td {
             border-bottom: none;
         }
-    }
-    .neo-visual-sidebarmute .dockPanel &,
-    .neo-ide-dockpanel-bg-surface .dockPanel & {
-        --b3-table-even-background: oklch(from var(--b3-theme-background) l c h / 0.5);
     }
 }
