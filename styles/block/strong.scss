@@ -1,0 +1,11 @@
+.b3-typography,
+.protyle-wysiwyg {
+    strong,
+    a[data-type~=strong],
+    span[data-type~=strong] {
+        color: oklch(from currentcolor calc(-0.15 + l) calc(c + 0.05) h);
+        .neo-mode-dark & {
+            color: oklch(from currentColor calc(l + 0.15) calc(c + 0.05) h);
+        }
+    }
+}

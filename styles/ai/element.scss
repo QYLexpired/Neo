@@ -1,0 +1,44 @@
+@use "../block" as *;
+@use "../utils" as *;
+$ai-block-type-selectors: p, h1, h2, h3, h4, h5, h6, ul, ol, blockquote, pre, table;
+@mixin ai-block-type($prefix: null) {
+    @each $sel in $ai-block-type-selectors {
+        @if $prefix {
+            #{"#{$prefix} #{$sel}"} {
+                @content;
+            }
+        } @else {
+            #{$sel} {
+                @content;
+            }
+        }
+    }
+}
+@mixin ai-block-type-direct {
+    @include ai-block-type("& >") {
+        @content;
+    }
+}
+.agent-chat__body {
+    @include ai-block-type {
+        margin-top: 4px;
+        margin-bottom: 4px;
+        @include superellipse(10px);
+    }
+}
+// 链接
+.agent-chat__body a {
+    @include neo-link-common;
+}
+// 列表
+.agent-chat__body {
+    li {
+        @include ai-block-type-direct {
+            margin-top: 2px;
+            margin-bottom: 2px;
+        }
+    }
+    ol, ul {
+        padding-inline-start: 24px;
+    }
+}

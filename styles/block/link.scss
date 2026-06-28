@@ -1,5 +1,5 @@
 @use "../utils" as *;
-.protyle-wysiwyg [data-node-id] span[data-type~=a] {
+@mixin neo-link-common {
     color: inherit;
     transition: var(--b3-transition);
     text-decoration: none;
@@ -17,6 +17,9 @@
         border: none;
         animation-play-state: running;
     }
+}
+.protyle-wysiwyg [data-node-id] span[data-type~=a] {
+    @include neo-link-common;
 }
 a {
     --b3-theme-primary: var(--b3-theme-accent);

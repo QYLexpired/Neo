@@ -49,6 +49,9 @@
             margin-left: auto;
             order: 1;
         }
+        &:focus-visible {
+            outline: unset;
+        }
     }
     &:hover {
         background-color: var(--neo-input-background);
