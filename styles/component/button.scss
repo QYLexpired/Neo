@@ -14,26 +14,26 @@
 @mixin button-primary {
     @include button-common;
     background-color: var(--neo-button-primary);
-    @include color-reverse(--neo-button-primary);
-    @include color-reverse(--neo-button-primary-hover, --b3-theme-on-primary); // 兼容插件显式设置的按钮颜色
+    @include contrast-color(--neo-button-primary);
+    @include contrast-color(--neo-button-primary-hover, --b3-theme-on-primary); // 兼容插件显式设置的按钮颜色
     --neo-button-primary-hover: oklch(from var(--neo-button-primary) calc(l + 0.0225 + 0.0575 * sign(0.680000001 - l)) c h);
     &:hover,
     &:active,
     &:focus {
         background-color: var(--neo-button-primary-hover);
-        @include color-reverse(--neo-button-primary-hover);
+        @include contrast-color(--neo-button-primary-hover);
     }
 }
 @mixin button-warning {
     @include button-common;
     background-color: var(--b3-theme-error);
-    @include color-reverse(--b3-theme-error);
+    @include contrast-color(--b3-theme-error);
     --neo-button-warning-hover: oklch(from var(--b3-theme-error) calc(l + (0.05 * sign(0.4999999 - l))) c h);
     &:hover,
     &:active,
     &:focus {
         background-color: var(--neo-button-warning-hover);
-        @include color-reverse(--neo-button-warning-hover);
+        @include contrast-color(--neo-button-warning-hover);
     }
 }
 @mixin button-transparent {
@@ -80,7 +80,7 @@
     &:active,
     &:focus {
         background-color: var(--neo-button-primary);
-        @include color-reverse(--neo-button-primary);
+        @include contrast-color(--neo-button-primary);
     }
 }
 @mixin button-transparent-outline-hover-warning {
@@ -92,7 +92,7 @@
     &:active,
     &:focus {
         background-color: var(--b3-theme-error);
-        @include color-reverse(--b3-theme-error);
+        @include contrast-color(--b3-theme-error);
     }
 }
 .b3-chip {

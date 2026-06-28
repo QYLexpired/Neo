@@ -12,7 +12,7 @@
         @include superellipse(1px);
         background-color: var(--neo-inline-memo-color);
         box-shadow: 0 0 0 4px var(--neo-inline-memo-color);
-        @include color-reverse(--neo-inline-memo-color);
+        @include contrast-color(--neo-inline-memo-color);
         border-color: transparent;
     }
 }

@@ -40,7 +40,7 @@
         align-items: center;
         &:hover {
             background-color: var(--neo-menu-item-primary);
-            @include color-reverse(--neo-menu-item-primary);
+            @include contrast-color(--neo-menu-item-primary);
         }
         &:checked:not(:hover) {
             color: var(--b3-theme-accent);

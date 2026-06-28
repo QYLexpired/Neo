@@ -23,16 +23,16 @@
     & > .b3-switch,
     & > .b3-menu__label .b3-switch {
         outline: 1px solid;
-        @include color-reverse(--neo-menu-item-primary, outline-color, 0.3);
+        @include contrast-color(--neo-menu-item-primary, outline-color, 0.3);
         transition: none;
     }
     & > .b3-text-field,
     & > .b3-menu__label .b3-text-field,
     & > .b3-select,
     & > .b3-menu__label .b3-select {
-        @include color-reverse(--neo-menu-item-primary, --_b3-text-field-box-shadow-reverse, 0.3);
+        @include contrast-color(--neo-menu-item-primary, --_b3-text-field-box-shadow-reverse, 0.3);
         box-shadow: 0 0 0 2px var(--_b3-text-field-box-shadow-reverse);
-        @include color-reverse(--neo-menu-item-primary);
+        @include contrast-color(--neo-menu-item-primary);
         &:focus,
         &:hover {
             box-shadow: 0 0 0 2px var(--_b3-text-field-box-shadow-reverse) !important;
@@ -84,17 +84,17 @@
 @mixin menu-item-current-style {
     // 当前或悬停的菜单项样式
     background-color: var(--neo-menu-item-primary);
-    @include color-reverse(--neo-menu-item-primary);
+    @include contrast-color(--neo-menu-item-primary);
     @include menu-item-warning {
         --neo-menu-item-primary: var(--b3-theme-error);
     }
     @include menu-item-child {
-        @include color-reverse(--neo-menu-item-primary);
-        @include color-reverse(--neo-menu-item-primary, --b3-callout-note);
-        @include color-reverse(--neo-menu-item-primary, --b3-callout-tip);
-        @include color-reverse(--neo-menu-item-primary, --b3-callout-important);
-        @include color-reverse(--neo-menu-item-primary, --b3-callout-warning);
-        @include color-reverse(--neo-menu-item-primary, --b3-callout-caution);
+        @include contrast-color(--neo-menu-item-primary);
+        @include contrast-color(--neo-menu-item-primary, --b3-callout-note);
+        @include contrast-color(--neo-menu-item-primary, --b3-callout-tip);
+        @include contrast-color(--neo-menu-item-primary, --b3-callout-important);
+        @include contrast-color(--neo-menu-item-primary, --b3-callout-warning);
+        @include contrast-color(--neo-menu-item-primary, --b3-callout-caution);
     }
     @include menu-item-child-trans-current;
 }
