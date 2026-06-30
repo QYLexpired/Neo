@@ -42,13 +42,7 @@
 }
 .config-group {
     @include superellipse(16px);
-    margin: 24px 96px;
-    &:first-child {
-        margin-top: 12px;
-    }
-    &:last-child {
-        margin-bottom: 0;
-    }
+    margin: 24px;
 }
 .config-items {
     background-color: oklch(from var(--b3-theme-surface) l c h / 0.5);
