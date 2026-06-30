@@ -6,6 +6,7 @@
         box-shadow: unset;
         border-radius: unset;
         background-color: transparent;
+        transition: none;
         & > .fn__flex {
             [data-type="wnd"] {
                 box-shadow: var(--neo-main-shadow-heavy);
