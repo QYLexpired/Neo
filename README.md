@@ -1,19 +1,3 @@
->Important: Neo is only compatible with SiYuan 3.7.0 dev version or higher. It **will not display correctly** on lower versions (e.g. 3.6.5).
-#### Update Notes
-##### v1.2.2 ~ v1.2.4
-- New color schemes: Titaniumspace, Firefly, Songyan
-- Adapted for SiYuan AI Agent
-- New element: Colorful selection
-- Adapted for SiYuan v3.7.0-beta.3
-- Super fusion supports configurable fusion effects
-- IDE style supports sidebar mute
-- Optimized numerous details
-- Improved stability of some features
-##### v1.2.0 ~ v1.2.1
-- New interface style: IDE (inspired by Asri theme)
-- Adapted settings page
-- Greatly optimized super fusion performance
-- Optimized layout
 #### About the Theme
 - **Neo+ plugin is required**: To ensure optimal performance, theme styles depend on the Neo+ plugin. Therefore, the Neo+ plugin **MUST** be installed for the theme to display correctly.
 - **Compatibility note**: The theme utilizes a large number of cutting-edge CSS features; full experience is only guaranteed on desktop and Chromium-based browsers.
@@ -47,16 +31,30 @@ The creation of the Neo theme drew significant inspiration from the following pr
 - [Border](https://github.com/akifyss/obsidian-border)
 - [Rem Craft](https://github.com/svchord/Rem-Craft)
 - [Savor](https://github.com/royc01/notion-theme)
-#### Update History
+#### Update Notes
+##### v1.2.2 ~ v1.2.5
+- New color schemes: Titaniumspace, Firefly, Songyan
+- Adapted for SiYuan AI Agent
+- New element: Colorful selection
+- Adapted for SiYuan v3.7.0-beta.3
+- Super fusion supports configurable fusion effects
+- IDE style supports sidebar mute
+- Optimized numerous details
+- Improved stability of some features
+##### v1.2.0 ~ v1.2.1
+- New interface style: IDE (inspired by Asri theme)
+- Adapted settings page
+- Greatly optimized super fusion performance
+- Optimized layout
 ##### v1.1.7 ~ v1.1.8
 - Refactored code structure
-- Visual - Colored folders added new style: Simple
+- Visual - Colored document tree added new style: Simple
 - New feature: Visual - Sidebar mute
-- Redesigned folder indent line styles
+- Redesigned document tree indent line styles
 - Optimized theme performance
 ##### v1.1.6
-- Added pinned toolbar feature
-- Added multi-column slash menu layout
+- Added extension - Pinnable toolbar
+- Added layout - Multi-column slash menu
 - Improved mobile display performance
 ##### v1.1.5
 - Significantly optimized theme performance
