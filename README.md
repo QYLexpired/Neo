@@ -1,6 +1,14 @@
 #### About the Theme
 - **Neo+ plugin is required**: To ensure optimal performance, theme styles depend on the Neo+ plugin. Therefore, the Neo+ plugin **MUST** be installed for the theme to display correctly.
 - **Compatibility note**: The theme utilizes a large number of cutting-edge CSS features; full experience is only guaranteed on desktop and Chromium-based browsers.
+##### What's New
+**v1.2.6**
+- Changed card-style search list to optional (located in Visual module)
+- Added animation to message bubbles
+- Fixed checkbox offset issue
+- New styles for colored document tree: Card
+- Removed dock collapse/expand animation (to prevent top tab position errors)
+- Fixed potential crash when toggling AI agent
 #### Features
 > Some of the following features depend on the Neo+ plugin.
 - Excellent performance comparable to the default theme
