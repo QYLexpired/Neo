@@ -1,22 +1,27 @@
 @use "../utils" as *;
-.block__popover.block__popover--open {
-    border: unset;
-    box-shadow: var(--b3-dialog-shadow-blur);
-    @include superellipse(12px);
-    background-color: transparent;
-    &::before {
-        @include frostedglass-before;
-        @include frostedglass($blur: l, $color: background);
-        box-shadow: var(--b3-dialog-shadow-inset);
-    }
-    .block__icons {
+.block__popover {
+    transform: translateY(-3%);
+    transition: transform 0.25s var(--neo-ease-elastic-out-2);
+    &.block__popover--open {
+        border: unset;
+        box-shadow: var(--b3-menu-shadow-blur);
+        @include superellipse(12px);
         background-color: transparent;
-    }
-    .block__content {
-        .protyle:not(.fullscreen) {
+        transform: none;
+        &::before {
+            @include frostedglass-before;
+            @include frostedglass($blur: l, $color: background);
+            box-shadow: var(--b3-menu-shadow-inset);
+        }
+        .block__icons {
             background-color: transparent;
-            .protyle-breadcrumb {
+        }
+        .block__content {
+            .protyle:not(.fullscreen) {
                 background-color: transparent;
+                .protyle-breadcrumb {
+                    background-color: transparent;
+                }
             }
         }
     }
