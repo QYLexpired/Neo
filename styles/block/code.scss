@@ -6,6 +6,9 @@
     color: var(--b3-theme-on-background);
     background-color: oklch(from var(--b3-theme-surface) l c h / 0.7);
     @include superellipse(10px);
+    .neo-sidebar-mute .dockPanel & {
+        background-color: oklch(from var(--b3-theme-background) l c h / 0.5);
+    }
     .protyle-action {
         padding: 4px 4px 4px 0;
     }

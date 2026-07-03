@@ -160,6 +160,10 @@ input[type="checkbox"]:not(.b3-switch) {
         background-color: var(--b3-theme-on-surface);
         opacity: 0.5;
     }
+    .protyle-task & {
+        top: 50%;
+        transform: translateY(-50%);
+    }
 }
 @keyframes neo-ratio-entrance {
     from {

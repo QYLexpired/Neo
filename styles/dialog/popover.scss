@@ -1,6 +1,6 @@
 @use "../utils" as *;
 .block__popover {
-    transform: translateY(-3%);
+    transform: translateX(1.5%);
     transition: transform 0.25s var(--neo-ease-elastic-out-2);
     &.block__popover--open {
         border: unset;

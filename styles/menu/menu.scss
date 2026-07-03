@@ -77,7 +77,7 @@
     &.b3-menu__item--show:not(.b3-menu__item--readonly),
     &.pdf__util__hide:hover,
     &.secondaryToolbarButton:hover,
-    .av__panel &:not([data-type=nobg]):hover {
+    .av__panel &:not([data-type=nobg]):not(.av__filter-row):hover {
         @content;
     }
 }
@@ -104,6 +104,9 @@
     @include menu-item-child-trans-origin;
     @include menu-item-current {
         @include menu-item-current-style;
+    }
+    @include menu-item-child {
+        transition: none !important;
     }
     &[disabled=disabled] {
         @include menu-item-child {
