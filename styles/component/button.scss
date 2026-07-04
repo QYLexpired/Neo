@@ -26,9 +26,9 @@
 }
 @mixin button-warning {
     @include button-common;
-    background-color: var(--b3-theme-error);
-    @include contrast-color(--b3-theme-error);
-    --neo-button-warning-hover: oklch(from var(--b3-theme-error) calc(l + (0.05 * sign(0.4999999 - l))) c h);
+    background-color: var(--b3-theme-error-bg);
+    @include contrast-color(--b3-theme-error-bg);
+    --neo-button-warning-hover: oklch(from var(--b3-theme-error-bg) calc(l + (0.05 * sign(0.4999999 - l))) c h);
     &:hover,
     &:active,
     &:focus {
@@ -91,8 +91,8 @@
     &:hover,
     &:active,
     &:focus {
-        background-color: var(--b3-theme-error);
-        @include contrast-color(--b3-theme-error);
+        background-color: var(--b3-theme-error-bg);
+        @include contrast-color(--b3-theme-error-bg);
     }
 }
 .b3-chip {
@@ -122,9 +122,18 @@
 .config__tab-wrap,
 .config__item,
 #modelMain {
+    .b3-button {
+        @include button-transparent-hover-background;
+    }
     .b3-button--outline {
         @include button-transparent-outline-hover-primary;
     }
+}
+// 消息按钮
+.b3-snackbars {
+    .b3-button {
+        @include button-transparent-outline;
+    }   
 }
 // action按钮
 .b3-dialog__action,

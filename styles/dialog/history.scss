@@ -1,8 +1,9 @@
 @use "../utils" as *;
 .history__resize {
     transition: var(--b3-transition);
+    box-shadow: 1px 0 0 0 var(--b3-border-color-trans) inset;
     &:hover {
-        box-shadow: 2px 0 0 0 var(--b3-theme-background) inset, 3px 0 0 0 var(--_resize-hl) inset;
+        box-shadow: 1px 0 0 0 var(--_resize-hl) inset;
     }
 }
 .b3-dialog--open[data-key="dialog-history"],
@@ -14,4 +15,9 @@
             background-color: transparent;
         }
     }
+}
+.history__date {
+    color: var(--b3-theme-on-surface);
+    background-color: transparent;
+    font-weight: bold;
 }

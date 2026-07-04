@@ -56,8 +56,8 @@
     --b3-protyle-code-background: oklch(from var(--b3-theme-surface) 0.9 c h / 0.5);
     --b3-empty-color: oklch(from var(--b3-theme-on-background) l c h / 0.45);
     // other
-    --b3-theme-error: oklch(from var(--b3-base-color) max(l, 0.58) max(c, 0.2) 30);
-    --b3-theme-error-text: oklch(from var(--b3-theme-error) clamp(0.55, l, 0.75) c h);
+    --b3-theme-error-bg: oklch(from var(--b3-base-color) max(l, 0.58) max(c, 0.2) 30);
+    --b3-theme-error: oklch(from var(--b3-theme-error-bg) clamp(0.55, l, 0.75) c h);
     --b3-highlight-background: oklch(from var(--b3-base-color) 0.95 0.2 calc(h + 90));
     --b3-highlight-current-background: oklch(from var(--b3-highlight-background) l c calc(h + 10));
     @include contrast-color(--b3-highlight-background, --b3-highlight-color);
@@ -65,6 +65,7 @@
     --b3-protyle-inline-mark-background: #00ff25;
     --b3-protyle-inline-blockref-color: var(--b3-theme-accent);
     --b3-protyle-inline-link-color: var(--b3-theme-accent);
+    --b3-menu-icon-color: var(--b3-theme-on-surface);
     // neo
     --neo-input-primary: oklch(from var(--b3-base-color) clamp(0, l, 0.8) c h / 0.7);
     --neo-input-background: var(--b3-list-hover);
@@ -118,8 +119,8 @@
     --b3-protyle-code-background: oklch(from var(--b3-theme-surface) 0.4 c h / 0.6);
     --b3-empty-color: oklch(from var(--b3-theme-on-background) l c h / 0.45);
     // other
-    --b3-theme-error: oklch(from var(--b3-base-color) max(l, 0.58) max(c, 0.2) 30);
-    --b3-theme-error-text: oklch(from var(--b3-theme-error) clamp(0.55, l, 0.95) c h);
+    --b3-theme-error-bg: oklch(from var(--b3-base-color) max(l, 0.58) max(c, 0.2) 30);
+    --b3-theme-error: oklch(from var(--b3-theme-error-bg) clamp(0.55, l, 0.95) c h);
     --b3-highlight-background: oklch(from var(--b3-base-color) 0.95 0.2 calc(h + 90));
     --b3-highlight-current-background: oklch(from var(--b3-highlight-background) l c calc(h + 10));
     @include contrast-color(--b3-highlight-background, --b3-highlight-color);
@@ -127,6 +128,7 @@
     --b3-protyle-inline-mark-background: #00ff25;
     --b3-protyle-inline-blockref-color: var(--b3-theme-accent);
     --b3-protyle-inline-link-color: var(--b3-theme-accent);
+    --b3-menu-icon-color: var(--b3-theme-on-surface);
     // neo
     --neo-input-primary: oklch(from var(--b3-base-color) clamp(0.4, l, 1) c h / 0.7);
     --neo-input-background: var(--b3-list-hover);

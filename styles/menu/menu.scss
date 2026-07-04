@@ -86,7 +86,7 @@
     background-color: var(--neo-menu-item-primary);
     @include contrast-color(--neo-menu-item-primary);
     @include menu-item-warning {
-        --neo-menu-item-primary: var(--b3-theme-error);
+        --neo-menu-item-primary: var(--b3-theme-error-bg);
     }
     @include menu-item-child {
         @include contrast-color(--neo-menu-item-primary);

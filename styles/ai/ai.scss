@@ -1,7 +1,7 @@
 @use "../utils" as *;
 .agent-chat__preview-notice {
     background-color: transparent;
-    color: var(--b3-theme-error-text);
+    color: var(--b3-theme-error);
     transform: translateY(-12px);
 }
 .agent-welcome__example {

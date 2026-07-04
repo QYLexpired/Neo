@@ -18,3 +18,11 @@
         height: unset;
     }
 }
+// windows
+#closeWindow {
+    &:hover {
+        svg {
+            color: var(--b3-theme-error);
+        }
+    }
+}
