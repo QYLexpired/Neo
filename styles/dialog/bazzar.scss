@@ -83,7 +83,7 @@
         height: calc(100% - var(--_sidebar-gap) * 4);
         @include superellipse(12px);
         box-shadow: var(--neo-main-shadow-heavy);
-        background-color: oklch(from var(--b3-theme-surface) l c h / 0.5);
+        background-color: transparent;
         .item__img {
             @include superellipse(12px);
         }

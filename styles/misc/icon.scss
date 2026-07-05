@@ -5,6 +5,9 @@
 .b3-menu__checked,
 .b3-menu__action {
     @include icon;
+    .b3-menu__item & {
+        transition: none !important
+    }
 }
 .b3-list-item__icon,
 .b3-menu__avemoji,
