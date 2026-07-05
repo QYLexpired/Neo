@@ -1,14 +1,14 @@
 #### About the Theme
 - **Neo+ plugin is required**: To ensure optimal performance, theme styles depend on the Neo+ plugin. Therefore, the Neo+ plugin **MUST** be installed for the theme to display correctly.
 - **Compatibility note**: The theme utilizes a large number of cutting-edge CSS features; full experience is only guaranteed on desktop and Chromium-based browsers.
-##### What's New
-**v1.2.6**
-- Changed card-style search list to optional (located in Visual module)
-- Added animation to message bubbles
-- Fixed checkbox offset issue
-- New styles for colored document tree: Card
-- Removed dock collapse/expand animation (to prevent top tab position errors)
-- Fixed potential crash when toggling AI agent
+#### What's New
+##### v1.2.7
+- New preset color scheme: Classic
+- Redesigned floating sidebar style
+- Simplified settings page styles
+- Made blockquote, Callout block, and table block follow block styles
+- Fixed the issue where IDE-style floating sidebar width could not be adjusted in some cases
+- Fixed conflict with the Siyue plugin
 #### Features
 > Some of the following features depend on the Neo+ plugin.
 - Excellent performance comparable to the default theme
@@ -40,6 +40,13 @@ The creation of the Neo theme drew significant inspiration from the following pr
 - [Rem Craft](https://github.com/svchord/Rem-Craft)
 - [Savor](https://github.com/royc01/notion-theme)
 #### Update Notes
+##### v1.2.6
+- Changed card-style search list to optional (located in Visual module)
+- Added animation to message bubbles
+- Fixed checkbox offset issue
+- New styles for colored document tree: Card
+- Removed dock collapse/expand animation (to prevent top tab position errors)
+- Fixed potential crash when toggling AI agent
 ##### v1.2.2 ~ v1.2.5
 - New color schemes: Titaniumspace, Firefly, Songyan
 - Adapted for SiYuan AI Agent

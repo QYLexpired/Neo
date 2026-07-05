@@ -7,9 +7,9 @@
     background-color: oklch(from currentColor l c h / 0.12);
     color: var(--neo-inline-memo-color);
     border-bottom: 1.5px solid;
-    transition: var(--b3-transition);
+    transition: 0.45s;
     &:hover {
-        @include superellipse(1px);
+        @include superellipse(2px);
         background-color: var(--neo-inline-memo-color);
         box-shadow: 0 0 0 4px var(--neo-inline-memo-color);
         @include contrast-color(--neo-inline-memo-color);

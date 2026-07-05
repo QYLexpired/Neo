@@ -25,7 +25,19 @@
     &--active {
         background-color: transparent;
         svg {
-            box-shadow: var(--neo-main-shadow-heavy);
+            @include icon-accent;
+            color: var(--b3-theme-accent);
+        }
+        &:hover {
+            svg {
+                @include icon-accent;
+                color: var(--b3-theme-accent);
+            }            
+        }
+        &:first-child {
+            svg {
+                @include icon;
+            }            
         }
     }
 }
@@ -41,7 +53,6 @@
     &:focus {
         background-color: var(--neo-menu-item-primary);
         @include contrast-color(--neo-menu-item-primary);
-        text-shadow: none !important;
         box-shadow: unset;
     }
 }

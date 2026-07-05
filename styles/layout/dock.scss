@@ -9,12 +9,12 @@
 #dockRight {
     & > .dock__items:first-child {
         .dock__item:first-child {
-            margin-top: calc(var(--_layout-gap) / 2);
+            margin-top: 10px;
         }
     }
     & > .dock__item--space + .dock__items {
         .dock__item:last-child {
-            margin-bottom: calc(var(--_layout-gap) / 2);
+            margin-bottom: 10px;
         }
     }
 }
