@@ -8,6 +8,10 @@
 }
 .viewer-backdrop {
     @include frostedglass($blur: l, $color: background);
+    .neo-performance-mode & {
+        background-color: var(--b3-theme-background) !important;
+        backdrop-filter: none !important;
+    }
 }
 .viewer-navbar {
     background-color: oklch(from var(--b3-theme-surface) l c h / 0.7);

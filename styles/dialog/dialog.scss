@@ -3,6 +3,13 @@
     background-color: transparent;
     backdrop-filter: blur(2px);
     z-index: -2;
+    .neo-performance-mode & {
+        backdrop-filter: brightness(0.75) saturate(0.5);
+        transition: opacity 0.25s 0s,backdrop-filter 0.3s 0s;
+    }
+    .neo-mode-dark.neo-performance-mode & {
+        backdrop-filter: brightness(0.5) saturate(0.5);        
+    }
 }
 @mixin dialog-transparent {
     .search__header,
@@ -24,10 +31,18 @@
     background-color: transparent;
     transform: translateY(-3%);
     transition: transform 0.25s var(--neo-ease-elastic-out-2);
+    .neo-performance-mode & {
+        background-color: var(--b3-theme-background) !important;
+        backdrop-filter: none !important;
+        box-shadow: var(--b3-dialog-shadow);
+    }
     &::before {
         @include frostedglass-before;
         @include frostedglass($blur: l, $color: background);
         box-shadow: var(--b3-dialog-shadow-inset);
+        .neo-performance-mode & {
+            display: none;
+        }
     }
     .b3-dialog__content {
         background-color: transparent !important; // 覆盖内联
@@ -41,10 +56,18 @@
     box-shadow: var(--b3-dialog-shadow-blur);
     @include superellipse(16px);
     background-color: transparent;
+    .neo-performance-mode & {
+        background-color: var(--b3-theme-background) !important;
+        backdrop-filter: none !important;
+        box-shadow: var(--b3-dialog-shadow);
+    }
     &::before {
         @include frostedglass-before;
         @include frostedglass($blur: l, $color: background);
         box-shadow: var(--b3-dialog-shadow-inset);
+        .neo-performance-mode & {
+            display: none;
+        }
     }
 }
 .b3-dialog__close {

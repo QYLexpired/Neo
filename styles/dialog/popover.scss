@@ -8,10 +8,18 @@
         @include superellipse(12px);
         background-color: transparent;
         transform: none;
+        .neo-performance-mode & {
+            background-color: var(--b3-theme-background) !important;
+            backdrop-filter: none !important;
+            box-shadow: var(--b3-menu-shadow);
+        }
         &::before {
             @include frostedglass-before;
             @include frostedglass($blur: l, $color: background);
             box-shadow: var(--b3-menu-shadow-inset);
+            .neo-performance-mode & {
+                display: none;
+            }
         }
         .block__icons {
             background-color: transparent;

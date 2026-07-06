@@ -12,4 +12,8 @@ $k: 1.4;
         corner-shape: superellipse($k);
         border-radius: $out;
     }
+    .neo-performance-mode & {
+        corner-shape: unset;
+        border-radius: #{$r};
+    }
 }

@@ -77,6 +77,10 @@
     @include superellipse(16px);
     @include frostedglass($blur: l, $color: background);
     box-shadow: var(--b3-dialog-shadow-inset);
+    .neo-performance-mode & {
+        background-color: var(--b3-theme-background) !important;
+        backdrop-filter: none !important;
+    }
     .item__side {
         padding: var(--_sidebar-gap);
         margin: var(--_sidebar-gap);
