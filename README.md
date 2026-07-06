@@ -2,7 +2,7 @@
 - **Neo+ plugin is required**: To ensure optimal performance, theme styles depend on the Neo+ plugin. Therefore, the Neo+ plugin **MUST** be installed for the theme to display correctly.
 - **Compatibility note**: The theme utilizes a large number of cutting-edge CSS features; full experience is only guaranteed on desktop and Chromium-based browsers.
 #### What's New
-##### v1.2.8
+##### v1.2.8 ~ v1.2.9
 - New feature - Performance mode: When enabled, improves theme performance through the following:
     - Disables some frosted glass effects
     - Disables some animations

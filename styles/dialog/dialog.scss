@@ -29,8 +29,8 @@
     box-shadow: var(--b3-dialog-shadow-blur);
     @include superellipse(16px);
     background-color: transparent;
-    transform: translateY(-3%);
-    transition: transform 0.25s var(--neo-ease-elastic-out-2);
+    transform: translateY(-3.5%);
+    transition: transform 0.3s;
     .neo-performance-mode & {
         background-color: var(--b3-theme-background) !important;
         backdrop-filter: none !important;

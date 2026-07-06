@@ -29,13 +29,13 @@
     color: var(--b3-theme-primary);
     font-size: 2.4em;
     line-height: 1.4;
-    padding-left: 0.8em;
+    padding-inline-start: 0.8em;
     position: relative;
     .protyle-title &::before {
         content: "";
         pointer-events: none;
         position: absolute;
-        left: 0.3em;
+        inset-inline-start: 0.3em;
         top: 50%;
         width: 0.3em;
         height: calc(100% - 0.5em);

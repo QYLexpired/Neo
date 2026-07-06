@@ -26,13 +26,13 @@ $table-border-color: oklch(from currentColor l c h / 0.15);
     th {
         border-bottom: 1px solid $table-border-color;
         &:not(:last-child) {
-            border-right: 1px solid $table-border-color;
+            border-inline-end: 1px solid $table-border-color;
         }
     }
     td {
         border-bottom: 1px solid $table-border-color;
         &:not(:last-child) {
-            border-right: 1px solid $table-border-color;
+            border-inline-end: 1px solid $table-border-color;
         }
     }
     tr:last-child {

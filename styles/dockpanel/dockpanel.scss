@@ -22,20 +22,20 @@
         transition: display 0.15s;
         transition-behavior: allow-discrete;
         .neo-performance-mode & {
-            transition: width 0.15s;
+            transition: none;
         }
     }
 }
 .layout__dockb {
     transition: height 0.15s var(--neo-ease-in-out-4);
     .neo-performance-mode & {
-        transition: width 0.15s;
+        transition: height 0.15s;
     }
     & > .fn__flex {
         transition: display 0.15s;
         transition-behavior: allow-discrete;
         .neo-performance-mode & {
-            transition: width 0.15s;
+            transition: none;
         }
     }
 }
