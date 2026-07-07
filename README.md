@@ -2,11 +2,11 @@
 - **Neo+ plugin is required**: To ensure optimal performance, theme styles depend on the Neo+ plugin. Therefore, the Neo+ plugin **MUST** be installed for the theme to display correctly.
 - **Compatibility note**: The theme utilizes a large number of cutting-edge CSS features; full experience is only guaranteed on desktop and Chromium-based browsers.
 #### What's New
-##### v1.2.8 ~ v1.2.9
+##### v1.2.8 ~ v1.2.10
 - New feature - Performance mode: When enabled, improves theme performance through the following:
     - Disables some frosted glass effects
     - Disables some animations
-    - Disables smooth rounded corners
+- Temporarily removed smooth rounded corners feature to improve theme performance and stability
 - Multi-level unordered and ordered lists use different numbering markers
 - List bullet lines and focused block indicator now support RTL
 #### Features
