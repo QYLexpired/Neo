@@ -3,17 +3,16 @@
 $layout-border-radius: 8px;
 $k: 1.4;
 @mixin superellipse($r: ()) {
-    $out: ();
+    $out-plus: ();
+    $out-mul: ();
     @each $i in $r {
-        $out: list.append($out, $i * $k, space);
+        $out-plus: list.append($out-plus, $i + 1px, space);
+        $out-mul: list.append($out-mul, $i * $k, space);
     }
-    border-radius: $r;
-    @supports (corner-shape: superellipse(1.4)) {
-        corner-shape: superellipse($k);
-        border-radius: $out;
-    }
-    .neo-performance-mode & {
-        corner-shape: unset;
-        border-radius: #{$r};
-    }
+    border-radius: $out-plus;
+//    superellipse尚不稳定
+//    @supports (corner-shape: superellipse(1.4)) {
+//        corner-shape: superellipse($k);
+//        border-radius: $out-mul;
+//    }
 }

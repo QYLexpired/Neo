@@ -18,7 +18,7 @@
 - Global glassmorphism effects for a transparent and layered look
 - Non-linear animations added to enhance interactive delight
 - Introduces parallax scrolling effect for cover images and scroll effect for the editor body, offering extreme visual tension
-- Smooth rounded corners and fade-out effects applied globally to eliminate visual fragmentation
+- Fade-out effects applied globally to eliminate visual fragmentation
 - Card-style layout for search results to improve reading efficiency
 - Super fusion effect seamlessly blends breadcrumbs with the main content
 - Optimized global typography for enhanced Chinese and English reading experience
