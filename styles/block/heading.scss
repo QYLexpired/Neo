@@ -31,21 +31,23 @@
     line-height: 1.4;
     padding-inline-start: 0.8em;
     position: relative;
-    .protyle-title &::before {
-        content: "";
-        pointer-events: none;
-        position: absolute;
-        inset-inline-start: 0.3em;
-        top: 50%;
-        width: 0.3em;
-        height: calc(100% - 0.5em);
-        background-color: currentColor;
-        border-radius: 0;
-        transition: 0.6s var(--neo-ease-spring-3);
-        transform: translate(-50%, -50%) rotate(0deg);
-        //box-sizing: border-box;
-        //animation: neo-angle 2.5s linear infinite;
-        //animation-play-state: paused;
+    .protyle[data-loading="finished"] & {
+        &::before {
+            content: "";
+            pointer-events: none;
+            position: absolute;
+            inset-inline-start: 0.3em;
+            top: 50%;
+            width: 0.3em;
+            height: calc(100% - 0.5em);
+            background-color: currentColor;
+            border-radius: 0;
+            transition: 0.6s var(--neo-ease-spring-3);
+            transform: translate(-50%, -50%) rotate(0deg);
+            //box-sizing: border-box;
+            //animation: neo-angle 2.5s linear infinite;
+            //animation-play-state: paused;
+        }
     }
 }
 /*.layout__wnd--active .protyle-title__input {

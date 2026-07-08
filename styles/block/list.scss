@@ -72,11 +72,12 @@
     & > .protyle-action {
         &::before {
             content: "";
-            display: inline-block;
+            display: flex;
+            position: absolute;
             width: 0.45em;
             height: 0.45em;
-            vertical-align: middle;
-            position: absolute;
+            justify-content: center;
+            align-items: center;
             border-radius: 50%;
             transform: rotate(0deg);
         }
@@ -137,12 +138,14 @@
     & > .protyle-action {
         &::before {
             content: counter(o-counter-1) ".";
-            display: inline-block;
+            display: flex;
+            position: absolute;
             width: 1em;
             height: 1em;
-            vertical-align: middle;
-            position: absolute;
             line-height: 1em;
+            justify-content: center;
+            align-items: center;
+            word-break: keep-all;
         }
     }
     &[fold="1"] > .protyle-action {

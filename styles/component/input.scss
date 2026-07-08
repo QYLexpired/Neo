@@ -2,6 +2,7 @@
 @mixin input-common {
     @include superellipse(7px);
     height: 26px;
+    min-height: 26px;
     line-height: 18px;
     font-size: 13px;
     color: var(--b3-theme-on-background);
