@@ -74,8 +74,8 @@
             content: "";
             display: flex;
             position: absolute;
-            width: 0.45em;
-            height: 0.45em;
+            width: 0.4em;
+            height: 0.4em;
             justify-content: center;
             align-items: center;
             border-radius: 50%;
@@ -88,18 +88,18 @@
         #{$selector} {
             & > .protyle-action::before {
                 @if $i % 3 == 1 {
-                    width: 0.4em;
-                    height: 0.4em;
+                    width: 0.35em;
+                    height: 0.35em;
                     border-radius: 0;
                     transform: rotate(0deg);
                 } @else if $i % 3 == 2 {
-                    width: 0.4em;
-                    height: 0.4em;
+                    width: 0.35em;
+                    height: 0.35em;
                     border-radius: 0;
                     transform: rotate(45deg);
                 } @else {
-                    width: 0.45em;
-                    height: 0.45em;
+                    width: 0.4em;
+                    height: 0.4em;
                     border-radius: 50%;
                     transform: rotate(0deg);
                 }
