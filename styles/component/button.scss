@@ -111,7 +111,8 @@
     }
     &--remove,
     &#removeAll,
-    &#removeAVAll {
+    &#removeAVAll,
+    &#clearSearchBtn {
         @include button-warning;
     }
     &--primary {
@@ -128,8 +129,10 @@
     .b3-button--outline {
         @include button-transparent-outline-hover-primary;
     }
+    .b3-button--remove,
     #removeAll,
-    #removeAVAll {
+    #removeAVAll,
+    #clearSearchBtn {
         @include button-transparent-outline-hover-warning;  
     }
 }

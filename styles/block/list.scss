@@ -110,34 +110,27 @@
 }
 // 有序列表
 .protyle-wysiwyg [data-node-id].li[data-subtype="o"] {
+    // 第一层
     & > .protyle-action {
-        color: transparent;
-        &::before {
-            color: var(--_list-action-color);
-        }
+        color: var(--_list-action-color);
         &:hover {
-            color: transparent;
-            &::before {
-                color: var(--_list-fold-color);
-            }
+            color: var(--_list-fold-color);
             &::after {
                 background-color: transparent;
             }
         }
     }
     &[fold="1"] > .protyle-action {
-        &::before {
-            color: var(--_list-action-color);
-        }
+        color: var(--_list-fold-color) !important; // 覆盖hover
         &::after {
             background-color: var(--_list-fold-bg);
         }
     }
     // 多级序号
-    counter-increment: o-counter-1;
+    // counter-increment: o-counter-1; 第一层不参与
     & > .protyle-action {
         &::before {
-            content: counter(o-counter-1) ".";
+            // content: counter(o-counter-1) "."; 第一层不参与
             display: flex;
             position: absolute;
             width: 1em;
@@ -146,12 +139,6 @@
             justify-content: center;
             align-items: center;
             word-break: keep-all;
-        }
-    }
-    &[fold="1"] > .protyle-action {
-        color: transparent !important; // 覆盖hover
-        &::before {
-            color: var(--_list-fold-color);
         }
     }
     $base: ".li[data-subtype=\"o\"]";
@@ -165,6 +152,30 @@
         }
         #{$selector} {
             counter-increment: o-counter-#{$i};
+            & > .protyle-action {
+                color: transparent;
+                &::before {
+                    color: var(--_list-action-color);
+                }
+                &:hover {
+                    color: transparent;
+                    &::before {
+                        color: var(--_list-fold-color);
+                    }
+                    &::after {
+                        background-color: transparent;
+                    }
+                }
+            }
+            &[fold="1"] > .protyle-action {
+                color: transparent !important; // 覆盖hover
+                &::before {
+                    color: var(--_list-fold-color);
+                }
+                &::after {
+                    background-color: var(--_list-fold-bg);
+                }
+            }
             & > .protyle-action {
                 &::before {
                     content: counter(o-counter-#{$i}#{$style}) ".";
