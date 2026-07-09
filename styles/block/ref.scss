@@ -11,7 +11,6 @@
     background-repeat: repeat-x;
     padding-bottom: 2px;
     border: unset;
-    will-change: transform;
     &:hover {
         color: var(--b3-theme-accent);
         animation-play-state: running;

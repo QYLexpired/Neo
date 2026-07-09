@@ -18,6 +18,10 @@
 }
 .fullscreen {
     @include frostedglass($blur: l, $color: background);
+    .neo-performance-mode & {
+        background-color: var(--b3-theme-background) !important;
+        backdrop-filter: none !important;
+    }
 }
 .protyle-icons,
 .av__gallery-actions {
