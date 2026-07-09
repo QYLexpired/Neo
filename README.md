@@ -2,13 +2,14 @@
 - **Neo+ plugin is required**: To ensure optimal performance, theme styles depend on the Neo+ plugin. Therefore, the Neo+ plugin **MUST** be installed for the theme to display correctly.
 - **Compatibility note**: The theme utilizes a large number of cutting-edge CSS features; full experience is only guaranteed on desktop and Chromium-based browsers.
 #### What's New
-##### v1.2.8 ~ v1.2.10
-- New feature - Performance mode: When enabled, improves theme performance through the following:
-    - Disables some frosted glass effects
-    - Disables some animations
-- Temporarily removed smooth rounded corners feature to improve theme performance and stability
-- Multi-level unordered and ordered lists use different numbering markers
-- List bullet lines and focused block indicator now support RTL
+##### v1.2.11
+- Fixed ordered list numbering style issue
+- Smooth cursor now supports configurable easing parameters for movement
+- Smooth cursor new styles: Block, Underline
+- Smooth cursor new motion: Stretch
+- Redesigned scroll effect for better flow and adaptation to larger elements
+- Decoupled multi-line search results display from card-style search list
+- Optimized text color for some dark preset color schemes under invert effect
 #### Features
 > Some of the following features depend on the Neo+ plugin.
 - Excellent performance comparable to the default theme
@@ -40,6 +41,13 @@ The creation of the Neo theme drew significant inspiration from the following pr
 - [Rem Craft](https://github.com/svchord/Rem-Craft)
 - [Savor](https://github.com/royc01/notion-theme)
 #### Update Notes
+##### v1.2.8 ~ v1.2.10
+- New feature - Performance mode: When enabled, improves theme performance through the following:
+    - Disables some frosted glass effects
+    - Disables some animations
+- Temporarily removed smooth rounded corners feature to improve theme performance and stability
+- Multi-level unordered and ordered lists use different numbering markers
+- List bullet lines and focused block indicator now support RTL
 ##### v1.2.7
 - New preset color scheme: Classic
 - Redesigned floating sidebar style
