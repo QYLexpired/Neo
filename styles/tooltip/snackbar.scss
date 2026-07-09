@@ -7,9 +7,9 @@
         animation: neo-message-entrance 0.45s var(--neo-ease-spring-2);
     }
     &--hide {
-        animation: neo-message-out 0.9s var(--neo-ease-spring-2);
+        animation: neo-message-out 0.75s var(--neo-ease-spring-2);
         transform: none;
-        transition: display 0.9s;
+        transition: display 0.75s;
         transition-behavior: allow-discrete;
     }
 }
@@ -54,12 +54,15 @@
     display: none;
 }
 .b3-snackbar__content {
-    @include superellipse(14px);
-    box-shadow: var(--b3-menu-shadow);
+    @include superellipse(16px);
+    box-shadow: 0 0 0 1px hsla(0,0%,100%,.3) inset,1px 2px 1px -1px hsla(0,0%,100%,.3) inset,-1px -2px 1px -1px hsla(0,0%,100%,.3) inset,0 0 0 1px oklch(from var(--b3-theme-on-background) l c h/0.08),0 2px 18px oklch(from var(--b3-theme-on-background) l c h/0.15);
     color: var(--b3-theme-on-background);
-    @include frostedglass($blur: s, $color: surface, $alpha: 0.6);
+    @include frostedglass($blur: s, $color: surface, $alpha: 0.7);
     padding: 12px 18px !important; // 覆盖内联
     transition: none;
+    .neo-mode-dark & {
+        box-shadow: 0 0 0 1px oklch(from var(--b3-theme-on-background) l c h/0.08) inset,1px 2px 1px -1px oklch(from var(--b3-theme-on-background) l c h/0.15) inset,-1px -2px 1px -1px oklch(from var(--b3-theme-on-background) l c h/0.12) inset,0 0 0 1px rgba(0,0,0,.6),0px 8px 25px -2px rgba(0,0,0,.25),0px 4px 10px 0px rgba(0,0,0,.35);
+    }
     .b3-snackbar--error & {
         &::after {
             content: none;

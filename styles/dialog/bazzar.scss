@@ -35,8 +35,11 @@
                 grid-area: buttons;
                 padding: 3px 11px 11px;
                 align-self: flex-end;
-                & > :nth-child(1 of .block__icon:not(.fn__none)) {
+                & > .block__icon:not(.fn__none) {
                     margin-left: auto;
+                }
+                & > .block__icon:not(.fn__none) ~ .block__icon:not(.fn__none) {
+                    margin-left: 8px;
                 }
             }
         }
