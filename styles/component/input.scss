@@ -11,12 +11,23 @@
     transition: box-shadow var(--b3-transition);
     &:hover {
         background-color: var(--neo-input-background);
-        box-shadow: unset !important;
+        --b3-border-color: transparent !important; // 取消阴影
     }
     &:focus {
+        animation: neo-input-focus-ring 0.3s ease-out forwards;
         background-color: var(--neo-input-background);
-        box-shadow: 0 0 0 2px var(--neo-input-primary) !important;
     } 
+}
+@keyframes neo-input-focus-ring {
+    0% {
+        box-shadow: 0 0 15px 20px oklch(from var(--neo-input-primary) l c h / 0);
+    }
+    20% {
+        box-shadow: 0 0 5px 10px oklch(from var(--neo-input-primary) l c h / 0.15);
+    }
+    100% {
+        box-shadow: 0 0 0 2px var(--neo-input-primary);
+    }
 }
 .b3-select {
     @include input-common;

@@ -4,6 +4,7 @@
 - **问题反馈**：[Neo 主题介绍及反馈综合帖](https://ld246.com/article/1783158376401)、[github](https://github.com/QYLexpired/Neo/issues)
 #### 更新说明
 ##### v1.2.12
+- 为输入框聚焦环添加动效
 - 区分动态锚文本和静态锚文本
 #### 特性
 > 以下部分特性依赖Neo+插件
