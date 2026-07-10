@@ -55,6 +55,7 @@
     --b3-scroll-color-hover: oklch(from var(--b3-theme-on-background) l c h / 0.18);
     --b3-protyle-code-background: oklch(from var(--b3-theme-surface) 0.9 c h / 0.5);
     --b3-empty-color: oklch(from var(--b3-theme-on-background) l c h / 0.45);
+    --b3-body-background: var(--b3-theme-background);
     // other
     --b3-theme-error-bg: oklch(from var(--b3-base-color) max(l, 0.58) max(c, 0.2) 30);
     --b3-theme-error: oklch(from var(--b3-theme-error-bg) clamp(0.55, l, 0.75) c h);
@@ -118,6 +119,7 @@
     --b3-scroll-color-hover: oklch(from var(--b3-theme-on-background) l c h / 0.18);
     --b3-protyle-code-background: oklch(from var(--b3-theme-surface) 0.4 c h / 0.6);
     --b3-empty-color: oklch(from var(--b3-theme-on-background) l c h / 0.45);
+    --b3-body-background: var(--b3-theme-background);
     // other
     --b3-theme-error-bg: oklch(from var(--b3-base-color) max(l, 0.58) max(c, 0.2) 30);
     --b3-theme-error: oklch(from var(--b3-theme-error-bg) clamp(0.55, l, 0.95) c h);
