@@ -2,36 +2,23 @@
 .protyle-wysiwyg [data-node-id] span[data-type~=block-ref]:not(.av__celltext),
 .protyle-wysiwyg [data-node-id] span[data-type~=file-annotation-ref],
 .protyle-wysiwyg [data-node-id] span[data-type=virtual-block-ref] {
+    --_ref-underline-color: var(--b3-theme-accent);
     color: inherit;
     opacity: 1;
     transition: var(--b3-transition);
-    background-image: repeating-linear-gradient(90deg, var(--b3-theme-accent) 0px, var(--b3-theme-accent) 3px, transparent 3px, transparent 6px);
+    background-image: repeating-linear-gradient(90deg, var(--_ref-underline-color) 0px, var(--_ref-underline-color) 3px, transparent 3px, transparent 6px);
     background-size: 8px 1px;
     background-position: 0 100%;
     background-repeat: repeat-x;
     padding-bottom: 2px;
     border: unset;
     &:hover {
-        color: var(--b3-theme-accent);
-        animation-play-state: running;
+        color: var(--_ref-underline-color);
     }
-    // 动态锚文本
-    &[data-subtype="d"] {
-        animation: neo-blockref-flow 1s linear infinite;
-        animation-play-state: paused;
-        &:hover {
-            animation-play-state: running;
-        }
-    }
-}
-@keyframes neo-blockref-flow {
-    0% {
-        background-position: 0 100%;
-}
-    100% {
-        background-position: 8px 100%;
+    &[data-subtype="s"] { // 静态锚文本
+        --_ref-underline-color: oklch(from var(--b3-theme-accent) l c calc(h + 180))
     }
 }
 .protyle-wysiwyg [data-node-id] span[data-type=virtual-block-ref] {
-    --b3-theme-accent: var(--b3-theme-on-background);
+    --_ref-underline-color: var(--b3-theme-on-background);
 }
