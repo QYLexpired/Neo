@@ -1,7 +1,7 @@
 @use "../utils" as *;
 .protyle-toolbar {
-    @include superellipse(16px);
-    @include frostedglass($blur: s, $color: surface, $alpha: 0.5);
+    @include superellipse(18px);
+    @include frostedglass($blur: s, $color: surface);
     border: unset;
     box-shadow: var(--b3-menu-shadow);
     padding: 6px;

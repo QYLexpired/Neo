@@ -57,7 +57,7 @@
     @include superellipse(10px);
     &::before {
         @include frostedglass-before;
-        @include frostedglass($blur: l, $color: menu);
+        @include frostedglass($blur: m, $color: menu);
         box-shadow: var(--b3-menu-shadow-inset);
     }
 }

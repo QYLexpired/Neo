@@ -7,8 +7,8 @@
         position: absolute;
         bottom: calc(anchor(--anchor-layout-center bottom) + calc(var(--_layout-gap) * 1.5));
         right: calc(anchor(--anchor-layout-center right) + calc(var(--_layout-gap) * 1.5));
-        @include superellipse(24px);
-        @include frostedglass($blur: s, $color: background);
+        @include superellipse(18px);
+        @include frostedglass($blur: s, $color: surface);
         box-shadow: var(--neo-main-shadow-heavy);
         height: 26px;
         line-height: 26px;
