@@ -16,4 +16,8 @@
         @include contrast-color(--neo-inline-memo-color);
         border-color: var(--neo-inline-memo-color);
     }
+    .neo-sidememo-protyle &:hover,
+    &[neo-sidememo-highlight] {
+        --neo-inline-memo-color: var(--b3-theme-accent);
+    }
 }
