@@ -3,7 +3,7 @@
     @include superellipse(8px);
     box-shadow: var(--b3-menu-shadow);
     color: var(--b3-theme-on-background);
-    @include frostedglass($blur: m, $color: menu);
+    @include frostedglass($blur: s, $color: menu);
     animation: neo-tooltip-entrance 0.6s var(--neo-ease-spring-3);
     transform-origin: center;
     animation-delay: 0.3s;
@@ -32,6 +32,6 @@
         @include superellipse(8px);
         box-shadow: var(--b3-menu-shadow);
         color: var(--b3-theme-on-background);
-        @include frostedglass($blur: m, $color: menu);
+        @include frostedglass($blur: s, $color: menu);
     }
 }
