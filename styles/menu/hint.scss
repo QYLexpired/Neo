@@ -1,7 +1,7 @@
 @use "../utils" as *;
 .protyle-hint {
     @include superellipse(10px);
-    @include frostedglass($blur: m, $color: menu);
+    @include frostedglass($blur: s, $color: menu);
     border: unset;
     box-shadow: var(--b3-menu-shadow);
     animation: neo-hint-menu-entrance 0.45s var(--neo-ease-spring-2);

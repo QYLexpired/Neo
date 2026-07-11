@@ -7,12 +7,13 @@
     background-color: oklch(from currentColor l c h / 0.12);
     color: var(--neo-inline-memo-color);
     border-bottom: 1.5px solid;
-    transition: 0.45s;
-    &:hover {
-        @include superellipse(2px);
+    transition: 0.15s;
+    &:hover,
+    &[neo-sidememo-highlight] {
+        @include superellipse(0px);
         background-color: var(--neo-inline-memo-color);
-        box-shadow: 0 0 0 4px var(--neo-inline-memo-color);
+        box-shadow: 0 0 0 8px var(--neo-inline-memo-color);
         @include contrast-color(--neo-inline-memo-color);
-        border-color: transparent;
+        border-color: var(--neo-inline-memo-color);
     }
 }

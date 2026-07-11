@@ -2,7 +2,8 @@
 :root {
     --neo-tag-color: var(--b3-theme-accent);
 }
-.protyle-wysiwyg [data-node-id] span[data-type~=tag] {
+.protyle-wysiwyg [data-node-id] span[data-type~=tag],
+.b3-typography span[data-type~=tag] {
     padding: 2px 4px;
     @include superellipse(6px);
     background-color: oklch(from currentColor l c h / 0.12);

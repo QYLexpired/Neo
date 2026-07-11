@@ -1,0 +1,58 @@
+@use "../utils" as *;
+@use "link" as *;
+$block-type-selectors: p, h1, h2, h3, h4, h5, h6, ul, ol, blockquote, pre, table;
+@mixin block-type($prefix: null) {
+    @each $sel in $block-type-selectors {
+        @if $prefix {
+            #{"#{$prefix} #{$sel}"} {
+                @content;
+            }
+        } @else {
+            #{$sel} {
+                @content;
+            }
+        }
+    }
+}
+@mixin block-type-direct {
+    @include block-type("& >") {
+        @content;
+    }
+}
+.agent-chat__body,
+.neo-sidememo-container {
+    @include block-type {
+        margin-top: 2px;
+        margin-bottom: 2px;
+        padding: 2px 0;
+        @include superellipse(10px);
+    }
+}
+// 链接
+.agent-chat__body,
+.neo-sidememo-container {
+    a {
+        @include neo-link-common;
+    }
+}
+// 列表
+.agent-chat__body,
+.neo-sidememo-container {
+    li {
+        @include block-type-direct {
+            margin-top: 2px;
+            margin-bottom: 2px;
+            padding: 2px 0;
+        }
+    }
+    ol, ul {
+        padding-inline-start: 24px;
+    }
+}
+// 公式
+.agent-chat__body,
+.neo-sidememo-container {
+    .katex-html {
+        justify-self: center;
+    }
+}

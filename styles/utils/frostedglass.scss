@@ -1,4 +1,4 @@
-@mixin frostedglass($blur: l, $color: background, $alpha: 0.65) {
+@mixin frostedglass($blur: l, $color: background, $alpha: null) {
     $blur-value: 20px;
     @if $blur == s {
         $blur-value: 6px;
@@ -17,14 +17,20 @@
     } @else if $color == menu {
         $color-var: --b3-menu-background;
     }
+    $alpha-light: 0.65;
+    $alpha-dark: 0.7;
+    @if $alpha != null {
+        $alpha-light: $alpha;
+        $alpha-dark: $alpha;
+    }
     @at-root {
         .neo-mode-dark & {
-            background-color: oklch(from var(#{$color-var}) l c h / 0.7);
-            backdrop-filter: blur(#{$blur-value}) saturate(1.8) brightness(0.9);
+            background-color: oklch(from var(#{$color-var}) l c h / #{$alpha-dark});
+            backdrop-filter: blur(#{$blur-value}) saturate(1.5) brightness(0.9);
         }
     }
-    background-color: oklch(from var(#{$color-var}) l c h / #{$alpha});
-    backdrop-filter: blur(#{$blur-value}) saturate(1.8) brightness(1.1);
+    background-color: oklch(from var(#{$color-var}) l c h / #{$alpha-light});
+    backdrop-filter: blur(#{$blur-value}) saturate(1.5) brightness(1.05);
 }
 @mixin frostedglass-before {
     content: "";

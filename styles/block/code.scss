@@ -2,7 +2,8 @@
 .b3-typography .code-block:not(pre),
 .protyle-wysiwyg .code-block:not(pre),
 .b3-typography pre.code-block,
-.protyle-wysiwyg pre.code-block {
+.protyle-wysiwyg pre.code-block,
+.b3-typography pre {
     color: var(--b3-theme-on-background);
     background-color: oklch(from var(--b3-theme-surface) l c h / 0.32);
     outline: 0.5px solid oklch(from var(--b3-theme-on-background) l c h / 0.12);
