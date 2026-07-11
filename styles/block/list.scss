@@ -199,6 +199,7 @@
         --_list-action-color: var(--_list-fold-color);
         &::after {
             background-color: var(--_list-fold-bg) !important;
+            border-radius: 50%;
         }
     }
 }
