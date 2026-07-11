@@ -6,6 +6,8 @@
         $blur-value: 12px;
     } @else if $blur == l {
         $blur-value: 20px;
+    } @else if $blur == g {
+        $blur-value: 32px;
     } @else {
         $blur-value: $blur;
     }

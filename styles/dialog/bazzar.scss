@@ -78,7 +78,7 @@
 .config-bazaar__readme {
     padding: unset;
     @include superellipse(16px);
-    @include frostedglass($blur: l, $color: background);
+    @include frostedglass($blur: g, $color: background);
     box-shadow: var(--b3-dialog-shadow-inset);
     .neo-performance-mode & {
         background-color: var(--b3-theme-background) !important;

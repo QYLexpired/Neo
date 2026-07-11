@@ -62,8 +62,8 @@
 .av__cell .b3-chip,
 .av__panel .b3-menu__item .b3-chip,
 .av__panel .b3-chips .b3-chip {
-    outline: 1px solid oklch(from currentColor l c h / 0.15);
-    outline-offset: -1px;
+    outline: 0.5px solid oklch(from currentColor l c h / 0.15);
+    outline-offset: -0.5px;
     @include superellipse(4px);
     line-height: 18px;
     padding: 2px 6px;
@@ -71,8 +71,8 @@
 .av__celltext--url.b3-chip {
     color: var(--b3-theme-on-surface);
     background-color: transparent;
-    outline: 1px solid oklch(from currentColor l c h / 0.15);
-    outline-offset: -1px;
+    outline: 0.5px solid oklch(from currentColor l c h / 0.32);
+    outline-offset: -0.5px;
     transition: var(--b3-transition);
     line-height: 18px;
     padding: 2px 6px;

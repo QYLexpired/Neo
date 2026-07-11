@@ -4,10 +4,12 @@
 .b3-typography pre.code-block,
 .protyle-wysiwyg pre.code-block {
     color: var(--b3-theme-on-background);
-    background-color: oklch(from var(--b3-theme-surface) l c h / 0.7);
+    background-color: oklch(from var(--b3-theme-surface) l c h / 0.32);
+    outline: 0.5px solid oklch(from var(--b3-theme-on-background) l c h / 0.12);
+    outline-offset: -0.5px;
     @include superellipse(10px);
     .neo-sidebar-mute .dockPanel & {
-        background-color: oklch(from var(--b3-theme-background) l c h / 0.5);
+        background-color: oklch(from var(--b3-theme-background) l c h / 0.32);
     }
     .protyle-action {
         padding: 4px 4px 4px 0;

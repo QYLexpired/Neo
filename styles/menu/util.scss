@@ -38,9 +38,13 @@
 .color__square,
 .protyle-font__style {
     transition: var(--b3-transition);
-    box-shadow: 0 0 0 1px var(--b3-border-color-trans);
+    box-shadow: unset;
+    outline: 0.5px solid var(--b3-border-color-trans);
+    outline-offset: -0.5px;
+    transition: var(--_emoji-transiton);
 }
 .color__square:hover:not(.color__square--list):not(.color__square--current),
 .protyle-font__style:hover {
-    box-shadow: 0 0 0 1px var(--b3-border-color-trans);
+    box-shadow: unset;
+    scale: 1.15;
 }
