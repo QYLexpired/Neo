@@ -38,7 +38,7 @@
     }
     &::before {
         @include frostedglass-before;
-        @include frostedglass($blur: l, $color: background);
+        @include frostedglass($blur: 16px, $color: background);
         box-shadow: var(--b3-dialog-shadow-inset);
         .neo-performance-mode & {
             display: none;
@@ -63,7 +63,7 @@
     }
     &::before {
         @include frostedglass-before;
-        @include frostedglass($blur: l, $color: background);
+        @include frostedglass($blur: 16px, $color: background);
         box-shadow: var(--b3-dialog-shadow-inset);
         .neo-performance-mode & {
             display: none;

@@ -39,15 +39,20 @@
         }
     }
 }
-.file-tree:hover .block__icons .block__icon,
-.file-tree:not(.fullscreen):hover .block__icons .fn__space {
+.file-tree .block__icons:hover .block__icon,
+.file-tree:not(.fullscreen) .block__icons:hover .fn__space {
     animation: neo-filetree-icon-entrance 0.6s var(--neo-ease-spring-3);
     animation-delay: calc((sibling-index() - 1) * 0.02s + 0.2s);
     transform-origin: left;
     animation-fill-mode: both;
 }
-.file-tree:not(:hover) .block__icons .block__icon,
-.file-tree:not(.fullscreen):not(:hover) .block__icons .fn__space {
+.file-tree:hover .block__icons:not(:hover) .block__icon,
+.file-tree:not(.fullscreen):hover .block__icons:not(:hover) .fn__space {
+    opacity: 0;
+    animation: unset;
+}
+.file-tree .block__icons:not(:hover) .block__icon,
+.file-tree:not(.fullscreen) .block__icons:not(:hover) .fn__space {
     opacity: 1;
     animation: neo-filetree-icon-exit 0.6s var(--neo-ease-spring-3);
     animation-delay: calc((sibling-count() - sibling-index()) * 0.02s);

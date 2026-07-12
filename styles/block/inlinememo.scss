@@ -11,7 +11,7 @@
     &:hover,
     &[neo-sidememo-highlight] {
         @include superellipse(0px);
-        background-color: var(--neo-inline-memo-color);
+        background-color: var(--neo-inline-memo-color) !important; // 覆盖内联
         box-shadow: 0 0 0 8px var(--neo-inline-memo-color);
         @include contrast-color(--neo-inline-memo-color);
         border-color: var(--neo-inline-memo-color);
