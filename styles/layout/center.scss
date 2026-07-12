@@ -5,7 +5,7 @@ body:not(.body--window) {
         .neo-haswnd {
             padding: calc(var(--_layout-gap) / 2);
             & > [data-type="wnd"] {
-                @include superellipse(8px);
+                @include superellipse(10px);
                 box-shadow: var(--neo-main-shadow-light);
             }
         }
@@ -22,7 +22,7 @@ body:not(.body--window) {
                 border-radius: unset;
                 box-shadow: unset;
                 & > .layout-tab-container {
-                    @include superellipse(8px);
+                    @include superellipse(10px);
                     box-shadow: var(--neo-main-shadow-light);
                 }
                 .layout-tab-bar {

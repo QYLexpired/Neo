@@ -88,7 +88,7 @@
         padding: var(--_sidebar-gap);
         margin: var(--_sidebar-gap);
         height: calc(100% - var(--_sidebar-gap) * 4);
-        @include superellipse(12px);
+        @include superellipse(14px);
         box-shadow: var(--neo-main-shadow-heavy);
         background-color: transparent;
         .item__img {

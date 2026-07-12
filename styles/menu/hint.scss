@@ -1,6 +1,6 @@
 @use "../utils" as *;
 .protyle-hint {
-    @include superellipse(10px);
+    @include superellipse(12px);
     @include frostedglass($blur: s, $color: menu);
     border: unset;
     box-shadow: var(--b3-menu-shadow);

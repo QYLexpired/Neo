@@ -54,7 +54,7 @@
     border: unset;
     box-shadow: var(--b3-menu-shadow-blur);
     background-color: transparent;
-    @include superellipse(10px);
+    @include superellipse(12px);
     &::before {
         @include frostedglass-before;
         @include frostedglass($blur: s, $color: menu);
@@ -100,7 +100,7 @@
 }
 .b3-menu__item {
     line-height: 24px;
-    @include superellipse(7px);
+    @include superellipse(8px);
     @include menu-item-child-trans-origin;
     @include menu-item-current {
         @include menu-item-current-style;

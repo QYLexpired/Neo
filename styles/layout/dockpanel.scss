@@ -7,7 +7,7 @@
     .neo-haswnd {
         padding: calc(var(--_layout-gap) / 2);
         & > [data-type="wnd"] {
-            @include superellipse(8px);
+            @include superellipse(10px);
             box-shadow: var(--neo-main-shadow-light);
             background-color: var(--b3-theme-background);
         }

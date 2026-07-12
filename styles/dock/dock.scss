@@ -2,6 +2,7 @@
 .dock__item {
     @include icon;
     transition-property: box-shadow, background-color;
+    @include superellipse(8px);
 }
 .dock__item--active,
 .dock__item--activefocus {

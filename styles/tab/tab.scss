@@ -10,7 +10,7 @@ body:not(.body--toolbar-hide) [data-type="wnd"] > .fn__flex:first-child {
         @include overflow-indicator-fadein-mask($fadeout-size-l, "left right");
         padding: 0;
         .item {
-            @include superellipse(7px);
+            @include superellipse(8px);
             margin: 6px 3px !important;
             background-color: transparent;
             .item__graphic {

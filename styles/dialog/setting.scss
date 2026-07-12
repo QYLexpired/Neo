@@ -4,7 +4,7 @@
 }
 .config__panel .config__side,
 .config__panel .b3-tab-bar {
-    @include superellipse(12px);
+    @include superellipse(14px);
     margin: var(--_sidebar-gap);
     padding: var(--_sidebar-gap) 0;
     border: unset;
