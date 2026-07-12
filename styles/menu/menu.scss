@@ -100,7 +100,7 @@
 }
 .b3-menu__item {
     line-height: 24px;
-    @include superellipse(8px);
+    @include superellipse(7px);
     @include menu-item-child-trans-origin;
     @include menu-item-current {
         @include menu-item-current-style;

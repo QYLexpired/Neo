@@ -1,26 +1,20 @@
 #### About the Theme
 - **Neo+ plugin is required**: To ensure optimal performance, theme styles depend on the Neo+ plugin. Therefore, the Neo+ plugin **MUST** be installed for the theme to display correctly.
 - **Compatibility note**: The theme utilizes a large number of cutting-edge CSS features; full experience is only guaranteed on desktop and Chromium-based browsers.
+- **Feedback**: [Neo Theme Introduction & Feedback Thread](https://ld246.com/article/1783158376401), [GitHub](https://github.com/QYLexpired/Neo/issues)
 #### What's New
-##### v1.2.12
-- Added topbar fusion button in Neo+ menu for quickly toggling SiYuan's tab fusion to topbar
-- Added animation for input focus ring
-- Differentiated dynamic anchor text from static anchor text
-- Fixed positioning offset caused by collapsed selection in smooth cursor
-- Changed block/underline smooth cursor to extend to the right
-##### v1.2.11
-- Fixed ordered list numbering style issue
-- Smooth cursor now supports configurable easing parameters for movement
-- Smooth cursor new styles: Block, Underline
-- Smooth cursor new motion: Stretch
-- Redesigned scroll effect for better flow and adaptation to larger elements
-- Decoupled multi-line search results display from card-style search list
-- Optimized text color for some dark preset color schemes under invert effect
+##### v1.3.0
+- Support using SiYuan AI Agent to automatically generate interface color schemes via natural language
+- New extended feature: Side notes
+- Redesigned menu and dialog shadows and frosted glass effects
+- Redesigned code block styles
+- Increased interface border radius
 #### Features
 > Some of the following features depend on the Neo+ plugin.
 - Excellent performance comparable to the default theme
 - Rich interface styles freely mix and match, like having a theme library
 - Strictly built color system using the OKLCH color space, with a wide range of preset color schemes and support for custom theme colors
+- Can use SiYuan AI Agent to automatically generate interface color schemes via natural language
 - Theme color can follow time, banner image, or system accent color
 - Global glassmorphism effects for a transparent and layered look
 - Non-linear animations added to enhance interactive delight
@@ -47,6 +41,12 @@ The creation of the Neo theme drew significant inspiration from the following pr
 - [Rem Craft](https://github.com/svchord/Rem-Craft)
 - [Savor](https://github.com/royc01/notion-theme)
 #### Update Notes
+##### v1.3.0
+- Support using SiYuan AI Agent to automatically generate interface color schemes via natural language
+- New extended feature: Side notes
+- Redesigned menu and dialog shadows and frosted glass effects
+- Redesigned code block styles
+- Increased interface border radius
 ##### v1.2.12
 - Added topbar fusion button in Neo+ menu for quickly toggling SiYuan's tab fusion to topbar
 - Added animation for input focus ring
