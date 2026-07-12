@@ -45,7 +45,9 @@
     margin: 24px;
 }
 .config-items {
-    background-color: oklch(from var(--b3-theme-surface) l c h / 0.7);
+    background-color: oklch(from var(--b3-theme-surface) l c h / 0.32);
+    outline: .5px solid oklch(from var(--b3-theme-on-background) l c h / 0.12);
+    outline-offset: -0.5px;
     .b3-label {
         border-bottom: unset;
     }

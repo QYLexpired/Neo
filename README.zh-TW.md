@@ -3,7 +3,7 @@
 - **相容性提醒**：主題使用了大量前沿 CSS 特性，僅保證在桌面端和 Chromium 內核瀏覽器上的完整體驗
 - **問題回饋**：[Neo 主題介紹及回饋綜合帖](https://ld246.com/article/1783158376401)、[GitHub](https://github.com/QYLexpired/Neo/issues)
 #### 更新說明
-##### v1.3.0
+##### v1.3.0 ~ v1.3.1
 - 支援利用思源智能體透過自然語言自動生成介面配色
 - 新增擴展特性：側邊備註
 - 重做選單和對話框陰影及毛玻璃效果
@@ -41,7 +41,7 @@
 - [Rem Craft](https://github.com/svchord/Rem-Craft)
 - [Savor](https://github.com/royc01/notion-theme)
 #### 更新日誌
-##### v1.3.0
+##### v1.3.0 ~ v1.3.1
 - 支援利用思源智能體透過自然語言自動生成介面配色
 - 新增擴展特性：側邊備註
 - 重做選單和對話框陰影及毛玻璃效果
