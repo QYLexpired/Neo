@@ -3,7 +3,7 @@
 - **Compatibility note**: The theme utilizes a large number of cutting-edge CSS features; full experience is only guaranteed on desktop and Chromium-based browsers.
 - **Feedback**: [Neo Theme Introduction & Feedback Thread](https://ld246.com/article/1783158376401), [GitHub](https://github.com/QYLexpired/Neo/issues)
 #### What's New
-##### v1.3.0 ~ v1.3.1
+##### v1.3.0 ~ v1.3.2
 - Support using SiYuan AI Agent to automatically generate interface color schemes via natural language
 - New extended feature: Side notes
 - Redesigned menu and dialog shadows and frosted glass effects
@@ -41,7 +41,7 @@ The creation of the Neo theme drew significant inspiration from the following pr
 - [Rem Craft](https://github.com/svchord/Rem-Craft)
 - [Savor](https://github.com/royc01/notion-theme)
 #### Update Notes
-##### v1.3.0 ~ v1.3.1
+##### v1.3.0 ~ v1.3.2
 - Support using SiYuan AI Agent to automatically generate interface color schemes via natural language
 - New extended feature: Side notes
 - Redesigned menu and dialog shadows and frosted glass effects

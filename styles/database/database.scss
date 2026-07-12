@@ -1,15 +1,13 @@
 @use "../utils" as *;
 @use "../component" as *;
-.av__row--header,
-.av__row--footer,
-.av__colsticky {
-    background-color: transparent;
-    backdrop-filter: blur(12px);
-}
 .av__cell,
 .av__row,
 .av__row--footer {
     border-color: var(--b3-border-color);
+}
+.av__title {
+    padding-left: 12px;
+    color: var(--b3-theme-primary);
 }
 .av__cell--header {
     border-color: transparent;
@@ -123,5 +121,11 @@
         outline: 1px solid var(--b3-border-color-trans);
         outline-offset: -1px;
         @include superellipse(10px);
+    }
+}
+// 复选框
+.av__gallery-field .av__checkbox {
+    & + .fn__space {
+        min-width: 1.5em;
     }
 }

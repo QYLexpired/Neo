@@ -3,7 +3,7 @@
 - **兼容性提醒**：主题使用了大量前沿CSS特性，仅保证在桌面端和Chromium内核浏览器上的完整体验
 - **问题反馈**：[Neo 主题介绍及反馈综合帖](https://ld246.com/article/1783158376401)、[github](https://github.com/QYLexpired/Neo/issues)
 #### 更新说明
-##### v1.3.0 ~ v1.3.1
+##### v1.3.0 ~ v1.3.2
 - 支持利用思源智能体通过自然语言自动生成界面配色
 - 新增扩展特性：侧边备注
 - 重做菜单和对话框阴影及毛玻璃效果
@@ -41,7 +41,7 @@
 - [Rem Craft](https://github.com/svchord/Rem-Craft)
 - [Savor](https://github.com/royc01/notion-theme)
 #### 更新日志
-##### v1.3.0 ~ v1.3.1
+##### v1.3.0 ~ v1.3.2
 - 支持利用思源智能体通过自然语言自动生成界面配色
 - 新增扩展特性：侧边备注
 - 重做菜单和对话框阴影及毛玻璃效果

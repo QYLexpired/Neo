@@ -70,7 +70,7 @@
     }
     // sidebar
     #sidebar {
-        @include frostedglass($blur: l, $color: background);
+        @include frostedglass($blur: s, $color: background);
         & > .toolbar:first-child {
             border-bottom: 1px solid var(--b3-border-color-trans);
             box-sizing: border-box;
@@ -84,7 +84,7 @@
         background-color: transparent;
         &::before {
             @include frostedglass-before;
-            @include frostedglass($blur: l, $color: background);
+            @include frostedglass($blur: s, $color: background);
         }
         & > .toolbar--border {
             border-bottom: 1px solid var(--b3-border-color-trans);
