@@ -24,9 +24,11 @@
     // menu
     .b3-menu--fullscreen {
         padding: 0;
+        box-shadow: unset;
         &::before {
             corner-shape: unset;
             border-radius: unset;
+            box-shadow: unset;
         }
         .b3-menu__title {
             border-bottom: 1px solid var(--b3-border-color-trans);
@@ -47,7 +49,7 @@
     }
     // editor
     & > .toolbar {
-        border-bottom: 1px solid var(--b3-border-color-trans);
+        border-bottom: unset;
         background-color: var(--b3-theme-background);
         box-sizing: border-box;
     }
@@ -123,6 +125,5 @@
     .toolbar__icon:not(.toolbar__icon-deactivate):focus,
     .toolbar__icon:not(.toolbar__icon-deactivate):hover {
         background-color: transparent;
-        box-shadow: var(--neo-main-shadow-heavy);
     }
 }

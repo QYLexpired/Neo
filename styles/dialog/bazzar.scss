@@ -50,7 +50,7 @@
         outline: 1px solid var(--b3-border-color-trans);
         outline-offset: -1px;
         background-color: transparent;
-        @include superellipse(16px);
+        @include superellipse(18px);
         transition: var(--b3-transition);
         &.b3-card--current,
         &:hover {
@@ -70,14 +70,14 @@
             margin-left: unset;
             margin-inline-start: 16px;
             img {
-                @include superellipse(12px);
+                @include superellipse(14px);
             }
         }
     }
 }
 .config-bazaar__readme {
     padding: unset;
-    @include superellipse(16px);
+    @include superellipse(18px);
     @include frostedglass($blur: g, $color: background);
     box-shadow: var(--b3-dialog-shadow-inset);
     .neo-performance-mode & {
@@ -92,7 +92,7 @@
         box-shadow: var(--neo-main-shadow-heavy);
         background-color: transparent;
         .item__img {
-            @include superellipse(12px);
+            @include superellipse(14px);
         }
         color: var(--b3-theme-on-surface);
         a {
@@ -114,7 +114,7 @@
         .item__preview {
             margin: 0 var(--_sidebar-gap) 0 0;
             width: calc(100% - var(--_sidebar-gap));
-            @include superellipse(12px);
+            @include superellipse(14px);
         }
         .b3-typography {
             padding: 0 32px;
