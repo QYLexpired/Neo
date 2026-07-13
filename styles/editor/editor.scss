@@ -17,11 +17,8 @@
     }
 }
 .fullscreen {
-    @include frostedglass($blur: l, $color: background);
-    .neo-performance-mode & {
-        background-color: var(--b3-theme-background) !important;
-        backdrop-filter: none !important;
-    }
+    background-color: var(--b3-theme-background);
+    @include frostedglass($blur: g, $color: background);
 }
 .protyle-icons,
 .av__gallery-actions {
@@ -42,6 +39,7 @@
 .av__gallery-actions,
 .b3-typography .code-block:not(pre) .protyle-action .protyle-icon,
 .protyle-wysiwyg .code-block:not(pre) .protyle-action .protyle-icon {
+    background-color: var(--b3-theme-background);
     @include frostedglass($blur: s, $color: transparent);
 }
 .av__gallery-item:hover .av__gallery-actions,

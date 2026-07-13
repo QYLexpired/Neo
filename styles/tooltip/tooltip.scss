@@ -3,7 +3,8 @@
     @include superellipse(8px);
     box-shadow: var(--b3-menu-shadow);
     color: var(--b3-theme-on-background);
-    @include frostedglass($blur: s, $color: menu);
+    background-color: var(--b3-menu-background);
+    @include frostedglass($blur: s, $color: menu, $alpha: 0.6);
     animation: neo-tooltip-entrance 0.6s var(--neo-ease-spring-3);
     transform-origin: center;
     animation-delay: 0.3s;
@@ -32,6 +33,7 @@
         @include superellipse(8px);
         box-shadow: var(--b3-menu-shadow);
         color: var(--b3-theme-on-background);
-        @include frostedglass($blur: s, $color: menu);
+        background-color: var(--b3-menu-background);
+        @include frostedglass($blur: s, $color: menu, $alpha: 0.6);
     }
 }

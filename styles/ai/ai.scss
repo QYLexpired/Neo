@@ -20,10 +20,13 @@
 }
 // 滚动至底部
 .agent-chat__scroll-bottom {
-    background-color: transparent;
-    backdrop-filter: blur(6px);
     border: unset;
     box-shadow: var(--neo-main-shadow-heavy);
+    background-color: var(--b3-theme-background);
+    .neo-visual-frostedglass & {
+        background-color: transparent;
+        backdrop-filter: blur(6px);
+    }
 }
 // 输入框
 .agent-chat__input-area {

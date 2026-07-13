@@ -1,14 +1,15 @@
 @use "../utils" as *;
 .b3-dialog__scrim {
     background-color: transparent;
-    backdrop-filter: blur(2px);
-    z-index: -2;
-    .neo-performance-mode & {
-        backdrop-filter: brightness(0.75) saturate(0.5);
-        transition: opacity 0.25s 0s,backdrop-filter 0.3s 0s;
-    }
-    .neo-mode-dark.neo-performance-mode & {
+    backdrop-filter: brightness(0.75) saturate(0.5);
+    transition: opacity 0.25s 0s,backdrop-filter 0.3s 0s;
+    .neo-mode-dark & {
         backdrop-filter: brightness(0.5) saturate(0.5);        
+    }
+    .neo-visual-frostedglass & {
+        z-index: -2;
+        backdrop-filter: blur(2px);
+        transition: backdrop-filter 0.3s 0s;
     }
 }
 @mixin dialog-transparent {
@@ -26,23 +27,19 @@
 }
 .b3-dialog__container {
     border: unset;
-    box-shadow: var(--b3-dialog-shadow-blur);
+    box-shadow: var(--b3-dialog-shadow);
     @include superellipse(18px);
-    background-color: transparent;
+    background-color: var(--b3-theme-background);
     transform: translateY(-3.5%);
     transition: transform 0.3s;
-    .neo-performance-mode & {
-        background-color: var(--b3-theme-background) !important;
-        backdrop-filter: none !important;
-        box-shadow: var(--b3-dialog-shadow);
+    .neo-visual-frostedglass & {
+        background-color: transparent;
+        box-shadow: var(--b3-dialog-shadow-blur);
     }
     &::before {
         @include frostedglass-before;
         @include frostedglass($blur: 16px, $color: background);
         box-shadow: var(--b3-dialog-shadow-inset);
-        .neo-performance-mode & {
-            display: none;
-        }
     }
     .b3-dialog__content {
         background-color: transparent !important; // 覆盖内联
@@ -53,21 +50,17 @@
 }
 .b3-dialog__loading {
     border: unset;
-    box-shadow: var(--b3-dialog-shadow-blur);
+    box-shadow: var(--b3-dialog-shadow);
     @include superellipse(16px);
     background-color: transparent;
-    .neo-performance-mode & {
-        background-color: var(--b3-theme-background) !important;
-        backdrop-filter: none !important;
-        box-shadow: var(--b3-dialog-shadow);
+    .neo-visual-frostedglass & {
+        background-color: var(--b3-theme-background);
+        box-shadow: var(--b3-dialog-shadow-blur);
     }
     &::before {
         @include frostedglass-before;
         @include frostedglass($blur: 16px, $color: background);
         box-shadow: var(--b3-dialog-shadow-inset);
-        .neo-performance-mode & {
-            display: none;
-        }
     }
 }
 .b3-dialog__close {

@@ -72,6 +72,7 @@
     }
     // sidebar
     #sidebar {
+        background-color: var(--b3-theme-background);
         @include frostedglass($blur: s, $color: background);
         & > .toolbar:first-child {
             border-bottom: 1px solid var(--b3-border-color-trans);
@@ -83,7 +84,10 @@
     }
     // model
     #model {
-        background-color: transparent;
+        background-color: var(--b3-theme-background);
+        .neo-visual-frostedglass & {
+            background-color: transparent;
+        }
         &::before {
             @include frostedglass-before;
             @include frostedglass($blur: s, $color: background);

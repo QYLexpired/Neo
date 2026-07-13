@@ -8,9 +8,9 @@
 }
 .viewer-backdrop {
     @include frostedglass($blur: l, $color: background);
-    .neo-performance-mode & {
-        background-color: var(--b3-theme-background) !important;
-        backdrop-filter: none !important;
+    background-color: var(--b3-theme-background);
+    .neo-visual-frostedglass & {
+        background-color: transparent;
     }
 }
 .viewer-navbar {

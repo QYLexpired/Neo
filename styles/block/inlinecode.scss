@@ -9,6 +9,8 @@
 .fn__code {
     color: var(--neo-inline-code-color);
     background-color: oklch(from currentColor l c h / 0.1);
+    outline: .5px solid oklch(from currentColor l c h / 0.12);
+    outline-offset: -0.5px;
     padding: 2px 4px;
     @include superellipse(6px);
 }

@@ -1,18 +1,21 @@
 @use "../utils" as *;
 .config-bazaar__panel {
     .config-bazaar__title {
-        background-color: transparent;
+        background-color: var(--b3-theme-background);
         backdrop-filter: none;
-        input,
-        select,
-        button {
-            backdrop-filter: blur(12px);
-        }
-        .counter--bg {
+        .neo-visual-frostedglass & {
             background-color: transparent;
-        }
-        .b3-form__icon-icon {
-            z-index: 1;
+            input,
+            select,
+            button {
+                backdrop-filter: blur(12px);
+            }
+            .counter--bg {
+                background-color: transparent;
+            }
+            .b3-form__icon-icon {
+                z-index: 1;
+            }
         }
     }
     .b3-cards {
@@ -78,15 +81,13 @@
 .config-bazaar__readme {
     padding: unset;
     @include superellipse(18px);
+    background-color: var(--b3-theme-background);
     @include frostedglass($blur: g, $color: background);
     box-shadow: var(--b3-dialog-shadow-inset);
-    .neo-performance-mode & {
-        background-color: var(--b3-theme-background) !important;
-        backdrop-filter: none !important;
-    }
     .item__side {
         padding: var(--_sidebar-gap);
         margin: var(--_sidebar-gap);
+        margin-right: 0;
         height: calc(100% - var(--_sidebar-gap) * 4);
         @include superellipse(14px);
         box-shadow: var(--neo-main-shadow-heavy);
@@ -112,8 +113,8 @@
         padding: var(--_sidebar-gap) 0;
         background-color: transparent;
         .item__preview {
-            margin: 0 var(--_sidebar-gap) 0 0;
-            width: calc(100% - var(--_sidebar-gap));
+            margin: 0 var(--_sidebar-gap);
+            width: calc(100% - var(--_sidebar-gap) * 2);
             @include superellipse(14px);
         }
         .b3-typography {

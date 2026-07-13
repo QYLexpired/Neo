@@ -6,6 +6,7 @@
 .config__panel .b3-tab-bar {
     @include superellipse(14px);
     margin: var(--_sidebar-gap);
+    margin-right: 0;
     padding: var(--_sidebar-gap) 0;
     border: unset;
     box-shadow: var(--neo-main-shadow-heavy);
