@@ -29,7 +29,9 @@
         box-shadow: 0 0 0 2px var(--neo-input-primary);
     }
 }
-.b3-select {
+.b3-select,
+body.body--win32 .b3-select,
+body.body--win32-browser .b3-select { // body用来覆盖思源样式
     @include input-common;
     appearance: base-select;
     font-weight: normal;
@@ -51,6 +53,8 @@
         @include superellipse(7px);
         display: flex;
         align-items: center;
+        padding: 0 8px;
+        line-height: 24px;
         &:hover {
             background-color: var(--neo-menu-item-primary);
             @include contrast-color(--neo-menu-item-primary);

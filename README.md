@@ -3,8 +3,20 @@
 - **Compatibility note**: The theme utilizes a large number of cutting-edge CSS features; full experience is only guaranteed on desktop and Chromium-based browsers.
 - **Feedback**: [Neo Theme Introduction & Feedback Thread](https://ld246.com/article/1783158376401), [GitHub](https://github.com/QYLexpired/Neo/issues)
 #### What's New
+##### v1.3.3
+- Adapted for SiYuan 3.7.2
+    - Fixed document tree guide line styles
+    - Optimized banner image dialog styles
+    - Fixed note input field styles
+- Added Visual - Frosted Glass; the theme will no longer enable frosted glass by default, must be manually enabled
+- Optimized fluid cursor path to prevent jaggedness when the mouse moves in large arcs
+- Fluid cursor now supports configurable mouse click effect
+- New preset color scheme: Lakeside
+- Overridden Windows select input styles
+- Optimized Windows top-right control bar styles
+- Removed Performance mode
+- Removed AI color scheme feature
 ##### v1.3.0 ~ v1.3.2
-- Support using SiYuan AI Agent to automatically generate interface color schemes via natural language
 - New extended feature: Side notes
 - Redesigned menu and dialog shadows and frosted glass effects
 - Redesigned code block styles
@@ -14,7 +26,6 @@
 - Excellent performance comparable to the default theme
 - Rich interface styles freely mix and match, like having a theme library
 - Strictly built color system using the OKLCH color space, with a wide range of preset color schemes and support for custom theme colors
-- Can use SiYuan AI Agent to automatically generate interface color schemes via natural language
 - Theme color can follow time, banner image, or system accent color
 - Global glassmorphism effects for a transparent and layered look
 - Non-linear animations added to enhance interactive delight
@@ -41,8 +52,20 @@ The creation of the Neo theme drew significant inspiration from the following pr
 - [Rem Craft](https://github.com/svchord/Rem-Craft)
 - [Savor](https://github.com/royc01/notion-theme)
 #### Update Notes
+##### v1.3.3
+- Adapted for SiYuan 3.7.2
+    - Fixed document tree guide line styles
+    - Optimized banner image dialog styles
+    - Fixed note input field styles
+- Added Visual - Frosted Glass; the theme will no longer enable frosted glass by default, must be manually enabled
+- Optimized fluid cursor path to prevent jaggedness when the mouse moves in large arcs
+- Fluid cursor now supports configurable mouse click effect
+- New preset color scheme: Lakeside
+- Overridden Windows select input styles
+- Optimized Windows top-right control bar styles
+- Removed Performance mode
+- Removed AI color scheme feature
 ##### v1.3.0 ~ v1.3.2
-- Support using SiYuan AI Agent to automatically generate interface color schemes via natural language
 - New extended feature: Side notes
 - Redesigned menu and dialog shadows and frosted glass effects
 - Redesigned code block styles

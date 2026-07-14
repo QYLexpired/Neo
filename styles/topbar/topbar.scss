@@ -18,10 +18,29 @@
     }
 }
 // windows
-#closeWindow {
+.toolbar__item--win {
+    padding: 9px;
+    body.body--toolbar-hide & {
+        padding: 13.25px 9px;
+    }
+}
+.toolbar__item--close {
+    padding: 9px;
+    padding-right: 14px;
     &:hover {
         svg {
             color: var(--b3-theme-error);
         }
     }
+    body.body--toolbar-hide & {
+        padding: 13.25px 9px;
+        padding-right: 14px;
+    }
+}
+#windowControls {
+    z-index: 5 !important;
+}
+body.body--win32 .fullscreen > .protyle-breadcrumb,
+body.body--win32 .fullscreen > .block__icons {
+    padding-right: 8px;
 }

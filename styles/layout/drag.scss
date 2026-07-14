@@ -4,6 +4,11 @@
         app-region: no-drag;
     }
 }
+.protyle-breadcrumb__bar,
+.protyle-breadcrumb__space,
+.protyle-breadcrumb__space ~ button {
+    app-region: no-drag;        
+}
 body.body--toolbar-hide,
 body.body--window {
     #drag {
@@ -22,10 +27,5 @@ body.body--window {
                 app-region: no-drag;
             }
         }
-    }
-    .protyle-breadcrumb__bar,
-    .protyle-breadcrumb__space,
-    .protyle-breadcrumb__space ~ button {
-        app-region: no-drag;        
     }
 }
