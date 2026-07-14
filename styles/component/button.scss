@@ -241,6 +241,17 @@
         color: var(--b3-card-success-color);
     }
 }
+// 题头图
+.b3-cover__tabs {
+    padding: 0 16px;
+    .b3-chip {
+        @include button-transparent;
+        padding: 0 8px;
+        &.b3-chip--current {
+            color: var(--b3-theme-accent);
+        }
+    }
+}
 // misc
 .b3-button[data-action="addCustom"] {
     @include button-transparent-hover-background;   

@@ -10,8 +10,7 @@
         display: none;
     }
     &:hover {
-        background-color: oklch(from var(--b3-theme-background) l c h / 0.7);
-        box-shadow: var(--neo-main-shadow-heavy);
+        color: var(--b3-theme-on-background);
     }
     .body--toolbar-hide & {
         line-height: 20px;

@@ -8,10 +8,17 @@
     animation: neo-util-menu-entrance 0.45s var(--neo-ease-spring-2);
     transform-origin: center;
     will-change: transform;
-    & .block__icons--menu {
+    .block__icons--menu {
         background-color: transparent;
-        & + .b3-text-field {
+    }
+    textarea {
+        background-color: transparent;
+        height: unset;
+        min-height: unset;
+        &:focus,
+        &:hover {
             background-color: transparent;
+            box-shadow: unset !important;
         }
     }
     .toolbarResize {

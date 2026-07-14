@@ -66,4 +66,12 @@
             content: none;
         }
     }
+    a {
+        color: var(--b3-theme-on-background);
+        text-decoration-color: var(--b3-theme-accent);
+        transition: var(--b3-transition);
+        &:hover {
+            color: var(--b3-theme-accent);  
+        }
+    }
 }

@@ -1,0 +1,9 @@
+@use "../utils" as *;
+.b3-cover__cards {
+    .b3-card {
+        @include superellipse(12px);
+        &:hover {
+            opacity: 1;
+        }
+    }
+}
