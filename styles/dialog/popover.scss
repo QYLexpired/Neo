@@ -1,7 +1,7 @@
 @use "../utils" as *;
 .block__popover {
-    transform: translateX(1.5%);
-    transition: transform 0.3s;
+    transform: translateX(3%);
+    transition: transform 0.2s var(--neo-ease-out-3);
     &.block__popover--open {
         border: unset;
         box-shadow: var(--b3-menu-shadow);

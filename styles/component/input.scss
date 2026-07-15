@@ -163,6 +163,7 @@ input[type="checkbox"]:not(.b3-switch) {
     width: 1.2em;
     height: 1.2em;
     align-self: center;
+    mask-repeat: no-repeat;
     flex-shrink: 0;
     background-color: var(--b3-theme-on-surface);
     animation: neo-ratio-entrance 0.6s var(--neo-ease-spring-3);
@@ -178,8 +179,11 @@ input[type="checkbox"]:not(.b3-switch) {
         opacity: 0.5;
     }
     .protyle-task & {
-        top: 50%;
-        transform: translateY(-50%);
+        top: 0.4em;
+        &:checked {
+            background-color: var(--b3-theme-primary);
+            opacity: 1;
+        }
     }
 }
 @keyframes neo-ratio-entrance {

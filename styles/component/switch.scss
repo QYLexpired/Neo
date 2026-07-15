@@ -23,7 +23,7 @@ $swicth-width: 36px;
         transform: translateY(-50%);
         left: $swicth-border-width;
         background-color: #ffffff;
-        transition: 0.8s var(--neo-ease-spring-3);
+        transition: 1.2s var(--neo-ease-spring-4);
     }
     &:checked {
         background-color: var(--neo-switch-primary);

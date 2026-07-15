@@ -30,8 +30,8 @@
     box-shadow: var(--b3-dialog-shadow);
     @include superellipse(18px);
     background-color: var(--b3-theme-background);
-    transform: translateY(-3.5%);
-    transition: transform 0.3s;
+    transform: translateY(-5%);
+    transition: transform 0.3s var(--neo-ease-out-3);
     .neo-visual-frostedglass & {
         background-color: transparent;
         box-shadow: var(--b3-dialog-shadow-blur);

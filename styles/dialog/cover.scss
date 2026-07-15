@@ -2,8 +2,16 @@
 .b3-cover__cards {
     .b3-card {
         @include superellipse(12px);
+        img {
+            transition: 0.3s var(--neo-ease-in-2);
+        }
         &:hover {
             opacity: 1;
+            img {
+                scale: 1.5;
+                transition: 0.3s var(--neo-ease-in-2);
+                transition-delay: 0.15s;
+            }
         }
     }
 }

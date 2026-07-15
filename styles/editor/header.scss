@@ -51,11 +51,13 @@
 }
 .protyle-attr--refcount {
     @include superellipse(6px);
-    right: -10px;
-    top: 0;
-    padding: 2px 6px;
+    right: -40px;
+    top: 0px;
+    padding: 2px 7px;
     color: var(--b3-theme-accent);
-    background-color: oklch(from currentColor l c h / 0.12);
+    background-color: oklch(from currentColor l c h / 0.1);
+    outline: 0.5px solid oklch(from currentColor l c h / 0.12);
+    outline-offset: -0.5px;
     transition: var(--b3-transition);
     &:hover {
         color: var(--b3-theme-accent);
@@ -64,6 +66,11 @@
 }
 .protyle-attr > div:not(.protyle-attr--refcount) {
     transition: var(--b3-transition);
+    svg {
+        height: 16px;
+        width: 16px;
+        margin: 0 2px 0 0;
+    }
 }
 .layout__empty {
     .b3-list-item {
