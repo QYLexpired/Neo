@@ -109,10 +109,7 @@
     &--cancel {
         @include button-transparent-hover-background;
     }
-    &--remove,
-    &#removeAll,
-    &#removeAVAll,
-    &#clearSearchBtn {
+    &--remove {
         @include button-warning;
     }
     &--primary {
@@ -132,7 +129,15 @@
     .b3-button--remove,
     #removeAll,
     #removeAVAll,
-    #clearSearchBtn {
+    #clearSearchBtn,
+    #clearHistory,
+    #clearTempFiles,
+    #resetLayout,
+    #pandocBinReset,
+    #keymapResetBtn,
+    #purgeCloudData,
+    #resetRepo,
+    #purgeRepo {
         @include button-transparent-outline-hover-warning;  
     }
 }

@@ -52,9 +52,9 @@
     border: unset;
     box-shadow: var(--b3-dialog-shadow);
     @include superellipse(16px);
-    background-color: transparent;
+    background-color: var(--b3-theme-background);
     .neo-visual-frostedglass & {
-        background-color: var(--b3-theme-background);
+        background-color: transparent;
         box-shadow: var(--b3-dialog-shadow-blur);
     }
     &::before {

@@ -1,8 +1,11 @@
 @use "../utils" as *;
 .protyle-wysiwyg [data-node-id] {
     @include superellipse(10px);
-    &::after {
-        @include superellipse(10px);
+    &.protyle-wysiwyg--select,
+    &.protyle-wysiwyg--hl {
+        &::after {
+            @include superellipse(10px);
+        }
     }
 }
 .protyle-wysiwyg--select::after,
