@@ -18,3 +18,27 @@
         width: 80px;
     }
 }
+:root {
+    // line
+    --b3-graph-line: var(--b3-border-color-trans);
+    --b3-graph-hl-line: var(--b3-theme-accent);
+    --b3-graph-ref-line: oklch(from var(--b3-theme-accent) l c h / 0.18);
+    --b3-graph-tag-line: oklch(from var(--b3-theme-accent) l 0.3 300 / 0.18);
+    --b3-graph-asset-line: oklch(from var(--b3-theme-accent) l 0.3 330 / 0.18);
+    // point
+    --b3-graph-doc-point: var(--b3-theme-on-background);
+    --b3-graph-hl-point: var(--b3-theme-accent);
+    --b3-graph-heading-point: oklch(from var(--b3-theme-accent) l 0.3 0);
+    --b3-graph-list-point: oklch(from var(--b3-theme-accent) l 0.3 30);
+    --b3-graph-todo-point: oklch(from var(--b3-theme-accent) l 0.3 40)
+    --b3-graph-olist-point: boklch(from var(--b3-theme-accent) l 0.3 50);
+    --b3-graph-listitem-point: oklch(from var(--b3-theme-accent) l 0.3 60);
+    --b3-graph-bq-point: oklch(from var(--b3-theme-accent) l 0.3 90);
+    --b3-graph-callout-point: oklch(from var(--b3-theme-accent) l 0.3 120);
+    --b3-graph-super-point: oklch(from var(--b3-theme-accent) l 0.3 150);
+    --b3-graph-table-point: oklch(from var(--b3-theme-accent) l 0.3 180);
+    --b3-graph-math-point: oklch(from var(--b3-theme-accent) l 0.3 210);
+    --b3-graph-code-point: oklch(from var(--b3-theme-accent) l 0.3 240);
+    --b3-graph-p-point: oklch(from var(--b3-theme-accent) l 0.3 270);
+    --b3-graph-tag-point: oklch(from var(--b3-theme-accent) l 0.3 300);
+}

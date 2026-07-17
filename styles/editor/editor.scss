@@ -24,15 +24,27 @@
 .av__gallery-actions {
     max-width: max-content;
     transition: var(--b3-transition);
-    @include superellipse(8px);
+    @include superellipse(18px);
     box-shadow: var(--neo-main-shadow-heavy);
-    .protyle-icon {
+}
+.protyle-icon {
+    padding: 6px;
+    height: auto;
+    background-color: transparent;
+    color: var(--b3-theme-on-surface);
+    &:hover {
         background-color: transparent;
-        color: var(--b3-theme-on-surface);
-        &:hover {
-            background-color: transparent;
-            color: var(--b3-theme-on-background);
-        }
+        color: var(--b3-theme-on-background);
+    }
+    &:first-child {
+        margin-left: 4px;
+    }
+    &:last-child {
+        margin-right: 4px;
+    }
+    &:only-child {
+        margin-left: 0;
+        margin-right: 0;
     }
 }
 .protyle-icons,
@@ -67,14 +79,18 @@
         color: var(--b3-theme-on-background);
     }
     &.protyle-icon--first {
-        @include superellipse(8px);
+        @include superellipse(18px);
         border-top-right-radius: 0;
         border-bottom-right-radius: 0;
+        padding-left: 10px;
+        margin-left: 0;
     }
     &.protyle-icon--last {
-        @include superellipse(8px);
+        @include superellipse(18px);
         border-top-left-radius: 0;
         border-bottom-left-radius: 0;
+        padding-right: 10px;
+        margin-right: 0;
     }
 }
 // 导出预览

@@ -52,8 +52,8 @@
     @include superellipse(7px);
     transition: var(--_emoji-transiton);
 }
-.color__square:hover:not(.color__square--list):not(.color__square--current),
+.color__square:hover,
 .protyle-font__style:hover {
-    box-shadow: unset;
+    box-shadow: unset !important;
     scale: 1.15;
 }

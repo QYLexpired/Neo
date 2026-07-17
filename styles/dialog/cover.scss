@@ -3,13 +3,13 @@
     .b3-card {
         @include superellipse(12px);
         img {
-            transition: 0.3s var(--neo-ease-in-2);
+            transition: 0.25s var(--neo-ease-in-3);
         }
         &:hover {
             opacity: 1;
             img {
                 scale: 1.5;
-                transition: 0.3s var(--neo-ease-in-2);
+                transition: 0.25s var(--neo-ease-in-3);
                 transition-delay: 0.15s;
             }
         }
