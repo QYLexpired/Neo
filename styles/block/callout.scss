@@ -2,6 +2,13 @@
 .protyle-wysiwyg[data-readonly] .callout-icon {
     @include icon;
 }
+:root {
+    --b3-callout-note: oklch(from var(--b3-theme-accent) l max(c, 0.2) 260);
+    --b3-callout-tip: oklch(from var(--b3-theme-accent) l max(c, 0.2) 140);
+    --b3-callout-important: oklch(from var(--b3-theme-accent) l max(c, 0.2) 285);
+    --b3-callout-warning: oklch(from var(--b3-theme-accent) l max(c, 0.2) 90);
+    --b3-callout-caution: oklch(from var(--b3-theme-accent) l max(c, 0.2) 30);
+}
 .b3-typography .callout,
 .protyle-wysiwyg .callout {
     background-color: oklch(from currentColor l c h / 0.05);
