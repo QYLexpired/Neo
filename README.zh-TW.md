@@ -2,7 +2,7 @@
 - **Neo 主題**：Neo 是專為思源筆記設計的第三方主題，透過簡約、精緻的設計，讓每次筆記體驗都賞心悅目
 - **必須搭配 Neo+ 插件**：為保證最佳性能，主題樣式依賴 Neo+ 插件實現，因此**必須**搭配 Neo+ 插件使用，否則無法正常顯示
 - **問題回饋**：使用過程中有任何問題或回饋，可透過 [Neo 主題介紹及回饋綜合帖](https://ld246.com/article/1783158376401) 或 [GitHub](https://github.com/QYLexpired/Neo/issues) 進行回饋
-- **支持我**：Neo 主題是完全免費的，如果喜歡這個主題，歡迎在 [GitHub](https://github.com/QYLexpired/Neo) 為我點亮小星星，也可以[請我喝杯咖啡](https://ifdian.net/a/QYLexpired)
+- **支持我**：Neo 主題是完全免費的，如果喜歡這個主題，歡迎在 [GitHub](https://github.com/QYLexpired/Neo) 為我點亮小星星，也可以[請我喝杯咖啡](https://icnmjy02sv9g.feishu.cn/wiki/FekNwrtB7ia1WckYelRckwzZnig?from=from_copylink)
 #### 更新說明
 ##### v1.3.4
 - 新增紋理：壓紋紙
