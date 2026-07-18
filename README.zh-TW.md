@@ -4,7 +4,7 @@
 - **問題回饋**：使用過程中有任何問題或回饋，可透過 [Neo 主題介紹及回饋綜合帖](https://ld246.com/article/1783158376401) 或 [GitHub](https://github.com/QYLexpired/Neo/issues) 進行回饋
 - **支持我**：Neo 主題是完全免費的，如果喜歡這個主題，歡迎在 [GitHub](https://github.com/QYLexpired/Neo) 為我點亮小星星，也可以[請我喝杯咖啡](https://icnmjy02sv9g.feishu.cn/wiki/FekNwrtB7ia1WckYelRckwzZnig?from=from_copylink)
 #### 更新說明
-##### v1.3.4
+##### v1.3.4 ~ v1.3.5
 - 新增紋理：壓紋紙
 - 優化關係圖顏色
 - 優化搜尋介面
@@ -57,7 +57,7 @@
 - [Rem Craft](https://github.com/svchord/Rem-Craft)
 - [Savor](https://github.com/royc01/notion-theme)
 #### 更新日誌
-##### v1.3.4
+##### v1.3.4 ~ v1.3.5
 - 新增紋理：壓紋紙
 - 優化關係圖顏色
 - 優化搜尋介面
