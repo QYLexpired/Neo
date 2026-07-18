@@ -1,10 +1,11 @@
 #### About the Theme
 - **Neo Theme**: Neo is a third-party theme designed specifically for SiYuan Notes, delivering a delightful note-taking experience through its minimalist and refined design.
 - **Neo+ plugin is required**: To ensure optimal performance, theme styles depend on the Neo+ plugin. Therefore, the Neo+ plugin **MUST** be installed for the theme to display correctly.
-- **Feedback**: For any questions or feedback during use, please visit the [Neo Theme Introduction & Feedback Thread](https://ld246.com/article/1783158376401) or [GitHub](https://github.com/QYLexpired/Neo/issues)
+- **Feedback**: For any questions or suggestions during use, please visit the [Neo Theme Introduction & Feedback Thread](https://ld246.com/article/1783158376401) or [GitHub](https://github.com/QYLexpired/Neo/issues)
 - **Support Me**: The Neo theme is completely free. If you enjoy this theme, feel free to star it on [GitHub](https://github.com/QYLexpired/Neo) or [buy me a coffee](https://icnmjy02sv9g.feishu.cn/wiki/FekNwrtB7ia1WckYelRckwzZnig?from=from_copylink)
 #### What's New
-##### v1.3.4 ~ v1.3.5
+##### v1.3.4 ~ v1.3.6
+- Removed some overflow fade-out effects, completely resolving the rendering process crash (CTD) issue
 - New texture: Embossed Paper
 - Optimized graph colors
 - Optimized search interface
@@ -57,7 +58,8 @@ The creation of the Neo theme drew significant inspiration from the following pr
 - [Rem Craft](https://github.com/svchord/Rem-Craft)
 - [Savor](https://github.com/royc01/notion-theme)
 #### Update Notes
-##### v1.3.4 ~ v1.3.5
+##### v1.3.4 ~ v1.3.6
+- Removed some overflow fade-out effects, completely resolving the rendering process crash (CTD) issue
 - New texture: Embossed Paper
 - Optimized graph colors
 - Optimized search interface

@@ -15,7 +15,7 @@
 }
 // 主页面
 .agent-chat__messages {
-    @include overflow-indicator-fadein-mask($fadeout-size-l, "top bottom");
+    // 导致闪退 @include overflow-indicator-fadein-mask($fadeout-size-l, "top bottom");
     padding: 32px;
 }
 // 滚动至底部
@@ -49,7 +49,6 @@
     border: unset;
     padding-left: 18px;
     transition: none;
-    @include overflow-indicator-fadein-mask($fadeout-size-l, "top bottom");
     &--expanded {
         display: block;
         border: unset;

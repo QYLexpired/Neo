@@ -1,10 +1,11 @@
 #### 关于主题
 - **Neo主题**：Neo是专为思源笔记设计的第三方主题，通过简约、精致的设计，让每次笔记体验都赏心悦目
 - **必须搭配Neo+插件**：为保证最佳性能，主题样式依赖Neo+插件实现，因此**必须**搭配Neo+插件使用，否则无法正常显示
-- **问题反馈**：使用过程中有任何问题或反馈，可通过[Neo 主题介绍及反馈综合帖](https://ld246.com/article/1783158376401)或[github](https://github.com/QYLexpired/Neo/issues)进行反馈
+- **问题反馈**：使用过程中有任何问题或建议，可通过[Neo 主题介绍及反馈综合帖](https://ld246.com/article/1783158376401)或[github](https://github.com/QYLexpired/Neo/issues)进行反馈
 - **支持我**：Neo主题是完全免费的，如果喜欢这个主题，欢迎在[github](https://github.com/QYLexpired/Neo)为我点亮小星星，也可以[请我喝杯咖啡](https://icnmjy02sv9g.feishu.cn/wiki/FekNwrtB7ia1WckYelRckwzZnig?from=from_copylink)
 #### 更新说明
-##### v1.3.4 ~ v1.3.5
+##### v1.3.4 ~ v1.3.6
+- 移除部分溢出渐隐效果，彻底解决渲染进程崩溃（闪退）的问题
 - 新增纹理：压纹纸
 - 优化关系图颜色
 - 优化搜索界面
@@ -57,7 +58,8 @@
 - [Rem Craft](https://github.com/svchord/Rem-Craft)
 - [Savor](https://github.com/royc01/notion-theme)
 #### 更新日志
-##### v1.3.4 ~ v1.3.5
+##### v1.3.4 ~ v1.3.6
+- 移除部分溢出渐隐效果，彻底解决渲染进程崩溃（闪退）的问题
 - 新增纹理：压纹纸
 - 优化关系图颜色
 - 优化搜索界面

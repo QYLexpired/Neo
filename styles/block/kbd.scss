@@ -3,6 +3,7 @@
     --neo-kbd-color: inherit;
 }
 .search__tip kbd,
+.fn__kbd,
 .config-keymap__key,
 .protyle-wysiwyg span[data-type~=kbd],
 .b3-typography kbd,
@@ -22,4 +23,8 @@
         box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.3), inset 0 -0.5px 0 rgba(255, 255, 255, 0.2);
         text-shadow: 0 -1px rgba(0, 0, 0, 0.73);
     }
+}
+.fn__kbd {
+    @include superellipse(4px);
+    line-height: 1;
 }

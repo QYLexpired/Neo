@@ -11,3 +11,9 @@
 .b3-list-item svg.b3-list-item__arrow {
     transition: color var(--b3-transition), transform var(--_rotate-transition);
 }
+.counter {
+    @include superellipse(7px);
+    &--bg {
+        background-color: var(--b3-list-hover);
+    }
+}

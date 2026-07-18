@@ -75,7 +75,7 @@
 #searchList,
 #searchUnRefList,
 #searchAssetList {
-    @include overflow-indicator-fadein-mask($fadeout-size-l, "top bottom");
+    // 导致闪退 @include overflow-indicator-fadein-mask($fadeout-size-l, "top bottom");
     & > .b3-list-item[data-type=search-item] {
         flex-wrap: wrap;
         justify-content: flex-end;

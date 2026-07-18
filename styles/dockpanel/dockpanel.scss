@@ -6,7 +6,7 @@
 }
 .dockPanel {
     & > .block__icons ~ .fn__flex-1 {
-        @include overflow-indicator-fadein-mask($fadeout-size-l, "top bottom");
+        // 导致闪退 @include overflow-indicator-fadein-mask($fadeout-size-l, "top bottom");
     }
     .block__logo {
         color: var(--b3-theme-on-surface);

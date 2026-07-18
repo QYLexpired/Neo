@@ -7,3 +7,9 @@
     box-shadow: 0 -0.5em 0 0 inset oklch(from var(--b3-protyle-inline-mark-background) l c h / 0.5), 0 .1em 0 0 oklch(from var(--b3-protyle-inline-mark-background) l c h / 0.5);
     color: inherit;
 }
+.protyle-wysiwyg [data-node-id][custom-riff-decks] {
+    box-shadow: 3px 0 0 0 #15e433 inset;
+    .neo-mode-dark & {
+        box-shadow: 3px 0 0 0 #07a01d inset;
+    }
+}
