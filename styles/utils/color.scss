@@ -1,13 +1,15 @@
 [data-theme-mode="light"] {
-    --_contrast-color-l-limit: clamp(0.12, calc(0.515 - sign(l - 0.72) * 0.455), 1);
+    --_contrast-color-l-threshold: 0.765;
+    --_contrast-color-l-limit: clamp(0.12, calc(0.515 - sign(l - var(--_contrast-color-l-threshold)) * 0.455), 1);
 }
 [data-theme-mode="dark"] {
-    --_contrast-color-l-limit: clamp(0, calc(0.515 - sign(l - 0.72) * 0.455), 0.97);
+    --_contrast-color-l-threshold: 0.675;
+    --_contrast-color-l-limit: clamp(0, calc(0.515 - sign(l - var(--_contrast-color-l-threshold)) * 0.455), 0.97);
 }
 @mixin contrast-color($var, $property: color, $alpha: 1) {
-    #{$property}: oklch(from var(#{$var}) clamp(0, calc((0.72 - l) * 10000), 1) 0 0 / #{$alpha});
-    @supports (color: oklch(from red calc(sign(l - 0.72) * 1%) c h)) {
-        #{$property}: oklch(from var(#{$var}) var(--_contrast-color-l-limit) clamp(0, calc(c * 0.5 + 0.04 + sign(l - 0.72) * (c * 0.55 + 0.12)), 0.5) h / #{$alpha});
+    #{$property}: oklch(from var(#{$var}) clamp(0, calc((var(--_contrast-color-l-threshold) - l) * 10000), 1) 0 0 / #{$alpha});
+    @supports (color: oklch(from red calc(sign(l - var(--_contrast-color-l-threshold)) * 1%) c h)) {
+        #{$property}: oklch(from var(#{$var}) var(--_contrast-color-l-limit) clamp(0, calc(c * 0.5 + 0.04 + sign(l - var(--_contrast-color-l-threshold)) * (c * 0.55 + 0.12)), 0.5) h / #{$alpha});
     }
 }
 @mixin light-color {
@@ -20,7 +22,7 @@
     --neo-default-on-background: #181051;
     --neo-default-on-surface: #6b668d;
     // 自定义色
-    --neo-custom-primary: oklch(from var(--neo-custom-base-color) clamp(0.6, l, 0.7) c h);
+    --neo-custom-primary: oklch(from var(--neo-custom-base-color) clamp(0.6, l, 0.68) c h);
     --neo-custom-accent: oklch(from var(--neo-custom-primary) l max(c, 0.3) h);
     --neo-custom-background: oklch(from var(--neo-custom-primary) 0.99 calc(0.005 * var(--neo-saturation, 1)) h);
     --neo-custom-surface: oklch(from var(--neo-custom-primary) 0.96 calc(0.015 * var(--neo-saturation, 1)) h);

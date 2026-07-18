@@ -69,6 +69,9 @@
 .b3-dialog__header {
     text-align: center;
     border: unset;
+    & > .fn__flex {
+        justify-content: center;
+    }
 }
 .b3-dialog__action {
     border: unset;

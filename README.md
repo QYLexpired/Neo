@@ -1,8 +1,18 @@
 #### About the Theme
+- **Neo Theme**: Neo is a third-party theme designed specifically for SiYuan Notes, delivering a delightful note-taking experience through its minimalist and refined design.
 - **Neo+ plugin is required**: To ensure optimal performance, theme styles depend on the Neo+ plugin. Therefore, the Neo+ plugin **MUST** be installed for the theme to display correctly.
-- **Compatibility note**: The theme utilizes a large number of cutting-edge CSS features; full experience is only guaranteed on desktop and Chromium-based browsers.
-- **Feedback**: [Neo Theme Introduction & Feedback Thread](https://ld246.com/article/1783158376401), [GitHub](https://github.com/QYLexpired/Neo/issues)
+- **Feedback**: For any questions or feedback during use, please visit the [Neo Theme Introduction & Feedback Thread](https://ld246.com/article/1783158376401) or [GitHub](https://github.com/QYLexpired/Neo/issues)
+- **Support Me**: The Neo theme is completely free. If you enjoy this theme, feel free to star it on [GitHub](https://github.com/QYLexpired/Neo) or [buy me a coffee](https://ifdian.net/a/QYLexpired)
 #### What's New
+##### v1.3.4
+- New texture: Embossed Paper
+- Optimized graph colors
+- Optimized search interface
+- Optimized contrast-color threshold
+- Optimized scroll effect, and fixed the issue where it caused abnormal styles in the AI agent input field
+- Fixed some errors with side notes
+- Reduced saturation of colored headings and colored lists
+- Optimized readability of colored headings and colored lists under some preset color schemes
 ##### v1.3.3
 - Adapted for SiYuan 3.7.2
     - Fixed document tree guide line styles
@@ -16,11 +26,6 @@
 - Optimized Windows top-right control bar styles
 - Removed Performance mode
 - Removed AI color scheme feature
-##### v1.3.0 ~ v1.3.2
-- New extended feature: Side notes
-- Redesigned menu and dialog shadows and frosted glass effects
-- Redesigned code block styles
-- Increased interface border radius
 #### Features
 > Some of the following features depend on the Neo+ plugin.
 - Excellent performance comparable to the default theme
@@ -52,6 +57,15 @@ The creation of the Neo theme drew significant inspiration from the following pr
 - [Rem Craft](https://github.com/svchord/Rem-Craft)
 - [Savor](https://github.com/royc01/notion-theme)
 #### Update Notes
+##### v1.3.4
+- New texture: Embossed Paper
+- Optimized graph colors
+- Optimized search interface
+- Optimized contrast-color threshold
+- Optimized scroll effect, and fixed the issue where it caused abnormal styles in the AI agent input field
+- Fixed some errors with side notes
+- Reduced saturation of colored headings and colored lists
+- Optimized readability of colored headings and colored lists under some preset color schemes
 ##### v1.3.3
 - Adapted for SiYuan 3.7.2
     - Fixed document tree guide line styles

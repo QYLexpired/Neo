@@ -59,6 +59,9 @@
     outline: 0.5px solid oklch(from currentColor l c h / 0.12);
     outline-offset: -0.5px;
     transition: var(--b3-transition);
+    .protyle-title & {
+        right: 0;
+    }
     &:hover {
         color: var(--b3-theme-accent);
         background-color: oklch(from currentColor l c h / 0.18);
