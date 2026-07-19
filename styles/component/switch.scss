@@ -1,12 +1,12 @@
 @use "../utils" as *;
 // switch
-$swicth-border-width: 2px;
-$swicth-thumb-height: 13px;
-$swicth-thumb-width: 21px;
-$swicth-width: 36px;
+$switch-border-width: 2px;
+$switch-thumb-height: 13px;
+$switch-thumb-width: 21px;
+$switch-width: 36px;
 .b3-switch {
-    width: $swicth-width;
-    height: calc($swicth-thumb-height + $swicth-border-width * 2);
+    width: $switch-width;
+    height: calc($switch-thumb-height + $switch-border-width * 2);
     border-radius: 24px;
     border: none;
     background-color: oklch(from var(--b3-theme-on-background) 0.65 0.01 h / 0.4);
@@ -16,25 +16,25 @@ $swicth-width: 36px;
         display: none !important;
     }
     &::after {
-        width: $swicth-thumb-width !important;
-        height: $swicth-thumb-height !important;
+        width: $switch-thumb-width !important;
+        height: $switch-thumb-height !important;
         border-radius: 24px;
         top: 50%;
         transform: translateY(-50%);
-        left: $swicth-border-width;
+        left: $switch-border-width;
         background-color: #ffffff;
         transition: 1.2s var(--neo-ease-spring-4);
     }
     &:checked {
         background-color: var(--neo-switch-primary);
         &::after {
-            width: $swicth-thumb-width;
-            height: $swicth-thumb-height;
+            width: $switch-thumb-width;
+            height: $switch-thumb-height;
             border-radius: 24px;
             top: 50%;
             transform: translateY(-50%);
             left: 13px;
-            right: $swicth-border-width;
+            right: $switch-border-width;
             background-color: #ffffff !important;
         }
     }

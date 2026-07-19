@@ -1,13 +1,19 @@
+@use "sass:string";
 @use "../utils" as *;
 .protyle-wysiwyg[data-readonly] .callout-icon {
     @include icon;
 }
 :root {
-    --b3-callout-note: oklch(from var(--b3-theme-accent) l max(c, 0.2) 260);
-    --b3-callout-tip: oklch(from var(--b3-theme-accent) l max(c, 0.2) 140);
-    --b3-callout-important: oklch(from var(--b3-theme-accent) l max(c, 0.2) 285);
-    --b3-callout-warning: oklch(from var(--b3-theme-accent) l max(c, 0.2) 90);
-    --b3-callout-caution: oklch(from var(--b3-theme-accent) l max(c, 0.2) 30);
+    $callout-subtypes: (
+        "note":      260,
+        "tip":       140,
+        "important": 285,
+        "warning":   90,
+        "caution":   30,
+    );
+    @each $name, $hue in $callout-subtypes {
+        --b3-callout-#{$name}: oklch(from var(--b3-theme-accent) l max(c, 0.2) #{$hue});
+    }
 }
 .b3-typography .callout,
 .protyle-wysiwyg .callout {
@@ -23,44 +29,15 @@
     &::before {
         display: none;
     }
-    &[data-subtype="NOTE"] {
-        --b3-callout-note: oklch(from var(--b3-theme-accent) l max(c, 0.2) 260);
-        color: var(--b3-callout-note);
-        --neo-kbd-color: var(--b3-callout-note);
-        --neo-inline-code-color: var(--b3-callout-note);
-        --neo-tag-color: var(--b3-callout-note);
-        --neo-inline-memo-color: var(--b3-callout-note);
-    }
-    &[data-subtype="TIP"] {
-        --b3-callout-tip: oklch(from var(--b3-theme-accent) l max(c, 0.2) 140);
-        color: var(--b3-callout-tip);
-        --neo-kbd-color: var(--b3-callout-tip);
-        --neo-inline-code-color: var(--b3-callout-tip);
-        --neo-tag-color: var(--b3-callout-tip);
-        --neo-inline-memo-color: var(--b3-callout-tip);
-    }
-    &[data-subtype="IMPORTANT"] {
-        --b3-callout-important: oklch(from var(--b3-theme-accent) l max(c, 0.2) 285);
-        color: var(--b3-callout-important);
-        --neo-kbd-color: var(--b3-callout-important);
-        --neo-inline-code-color: var(--b3-callout-important);
-        --neo-tag-color: var(--b3-callout-important);
-        --neo-inline-memo-color: var(--b3-callout-important);
-    }
-    &[data-subtype="WARNING"] {
-        --b3-callout-warning: oklch(from var(--b3-theme-accent) l max(c, 0.2) 90);
-        color: var(--b3-callout-warning);
-        --neo-kbd-color: var(--b3-callout-warning);
-        --neo-inline-code-color: var(--b3-callout-warning);
-        --neo-tag-color: var(--b3-callout-warning);
-        --neo-inline-memo-color: var(--b3-callout-warning);
-    }
-    &[data-subtype="CAUTION"] {
-        --b3-callout-caution: oklch(from var(--b3-theme-accent) l max(c, 0.2) 30);
-        color: var(--b3-callout-caution);
-        --neo-kbd-color: var(--b3-callout-caution);
-        --neo-inline-code-color: var(--b3-callout-caution);
-        --neo-tag-color: var(--b3-callout-caution);
-        --neo-inline-memo-color: var(--b3-callout-caution);
+    $callout-subtypes: "NOTE", "TIP", "IMPORTANT", "WARNING", "CAUTION";
+    @each $name in $callout-subtypes {
+        &[data-subtype="#{$name}"] {
+            $var: --b3-callout-#{string.to-lower-case($name)};
+            color: var(#{$var});
+            --neo-kbd-color: var(#{$var});
+            --neo-inline-code-color: var(#{$var});
+            --neo-tag-color: var(#{$var});
+            --neo-inline-memo-color: var(#{$var});
+        }
     }
 }
