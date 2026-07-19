@@ -61,6 +61,7 @@
     transition: var(--b3-transition);
     .protyle-title & {
         right: 0;
+        top: -24px;
     }
     &:hover {
         color: var(--b3-theme-accent);

@@ -4,6 +4,7 @@
 }
 .b3-menu__checked,
 .b3-menu__action {
+    --b3-transition: none;
     @include icon;
 }
 .b3-list-item__icon,

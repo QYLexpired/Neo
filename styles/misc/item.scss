@@ -17,3 +17,10 @@
         background-color: var(--b3-list-hover);
     }
 }
+.b3-label__text.fn__pointer {
+    color: var(--b3-theme-on-surface);
+    transition: var(--b3-transition);
+    &:hover {
+        color: var(--b3-theme-on-background);
+    }
+}

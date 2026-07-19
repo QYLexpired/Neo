@@ -6,6 +6,7 @@
 #### What's New
 ##### v1.3.6
 - Removed some overflow fade-out effects, completely resolving the rendering process crash (CTD) issue
+- Adapted for SiYuan 3.7.3-beta.1
 ##### v1.3.4 ~ v1.3.5
 - New texture: Embossed Paper
 - Optimized graph colors
@@ -61,6 +62,7 @@ The creation of the Neo theme drew significant inspiration from the following pr
 #### Update Notes
 ##### v1.3.6
 - Removed some overflow fade-out effects, completely resolving the rendering process crash (CTD) issue
+- Adapted for SiYuan 3.7.3-beta.1
 ##### v1.3.4 ~ v1.3.5
 - New texture: Embossed Paper
 - Optimized graph colors

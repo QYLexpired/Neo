@@ -86,10 +86,14 @@
 }
 .av__layout-item {
     @include superellipse(10px);
-    border-color: var(--b3-border-color-trans);
-}
-.av__layout-item--select {
-    color: var(--b3-theme-accent);
+    border: unset;
+    outline: 1px solid var(--b3-border-color-trans);
+    outline-offset: -1px;
+    &--select {
+        color: var(--b3-theme-accent);
+        background-color: oklch(from currentColor l c h / 0.1);
+        outline-color: oklch(from currentColor l c h / 0.15);
+    }
 }
 // button
 .av__cell [data-type=block-more] {
@@ -111,6 +115,7 @@
         overflow: visible;
     }
     .b3-menu__icon {
+        --b3-transition: none;
         @include icon;
     }
     .av__field-wrapper {
