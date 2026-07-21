@@ -46,6 +46,9 @@
 .av__group-icon {
     @include icon;
 }
+.av__row-actions .av__row-action {
+    @include icon;
+}
 .av__gallery-cover {
     border-bottom: 0.75px solid var(--b3-border-color-trans);
     @include superellipse(10px);
