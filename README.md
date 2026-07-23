@@ -4,6 +4,13 @@
 - **Feedback**: For any questions or suggestions during use, please visit the [Neo Theme Introduction & Feedback Thread](https://ld246.com/article/1783158376401) or [GitHub](https://github.com/QYLexpired/Neo/issues)
 - **Support Me**: The Neo theme is completely free. If you enjoy this theme, feel free to star it on [GitHub](https://github.com/QYLexpired/Neo) or [buy me a coffee](https://icnmjy02sv9g.feishu.cn/wiki/FekNwrtB7ia1WckYelRckwzZnig?from=from_copylink)
 #### What's New
+##### v1.3.7
+- Adapted for SiYuan 3.7.3
+- Adjusted menu and dialog shadows
+- Adjusted main interface shadows
+- Optimized fluid cursor ripple effect
+- Side memo support temporary hiding
+- Fixed conflict between scroll effect and side memo
 ##### v1.3.6
 - Removed some overflow fade-out effects, completely resolving the rendering process crash (CTD) issue
 - Adapted for SiYuan 3.7.3-beta.1
@@ -13,7 +20,7 @@
 - Optimized search interface
 - Optimized contrast-color threshold
 - Optimized scroll effect, and fixed the issue where it caused abnormal styles in the AI agent input field
-- Fixed some errors with side notes
+- Fixed some errors with side memo
 - Reduced saturation of colored headings and colored lists
 - Optimized readability of colored headings and colored lists under some preset color schemes
 ##### v1.3.3
@@ -60,6 +67,13 @@ The creation of the Neo theme drew significant inspiration from the following pr
 - [Rem Craft](https://github.com/svchord/Rem-Craft)
 - [Savor](https://github.com/royc01/notion-theme)
 #### Update Notes
+##### v1.3.7
+- Adapted for SiYuan 3.7.3
+- Adjusted menu and dialog shadows
+- Adjusted main interface shadows
+- Optimized fluid cursor ripple effect
+- Side memo support temporary hiding
+- Fixed conflict between scroll effect and side memo
 ##### v1.3.6
 - Removed some overflow fade-out effects, completely resolving the rendering process crash (CTD) issue
 - Adapted for SiYuan 3.7.3-beta.1
@@ -69,7 +83,7 @@ The creation of the Neo theme drew significant inspiration from the following pr
 - Optimized search interface
 - Optimized contrast-color threshold
 - Optimized scroll effect, and fixed the issue where it caused abnormal styles in the AI agent input field
-- Fixed some errors with side notes
+- Fixed some errors with side memo
 - Reduced saturation of colored headings and colored lists
 - Optimized readability of colored headings and colored lists under some preset color schemes
 ##### v1.3.3
@@ -86,7 +100,7 @@ The creation of the Neo theme drew significant inspiration from the following pr
 - Removed Performance mode
 - Removed AI color scheme feature
 ##### v1.3.0 ~ v1.3.2
-- New extended feature: Side notes
+- New extended feature: Side memo
 - Redesigned menu and dialog shadows and frosted glass effects
 - Redesigned code block styles
 - Increased interface border radius

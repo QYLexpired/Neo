@@ -4,6 +4,13 @@
 - **問題回饋**：使用過程中有任何問題或建議，可透過 [Neo 主題介紹及回饋綜合帖](https://ld246.com/article/1783158376401) 或 [GitHub](https://github.com/QYLexpired/Neo/issues) 進行回饋
 - **支持我**：Neo 主題是完全免費的，如果喜歡這個主題，歡迎在 [GitHub](https://github.com/QYLexpired/Neo) 為我點亮小星星，也可以[請我喝杯咖啡](https://icnmjy02sv9g.feishu.cn/wiki/FekNwrtB7ia1WckYelRckwzZnig?from=from_copylink)
 #### 更新說明
+##### v1.3.7
+- 適配思源 3.7.3
+- 調整選單和對話框陰影
+- 調整主介面陰影
+- 優化流體游標的波紋效果
+- 側邊備註支援暫時隱藏
+- 修復捲軸效果與側邊備註的衝突
 ##### v1.3.6
 - 移除部分溢出漸隱效果，徹底解決渲染處理程序崩潰（閃退）的問題
 - 適配思源 3.7.3-beta.1
@@ -60,6 +67,13 @@
 - [Rem Craft](https://github.com/svchord/Rem-Craft)
 - [Savor](https://github.com/royc01/notion-theme)
 #### 更新日誌
+##### v1.3.7
+- 適配思源 3.7.3
+- 調整選單和對話框陰影
+- 調整主介面陰影
+- 優化流體游標的波紋效果
+- 側邊備註支援暫時隱藏
+- 修復捲軸效果與側邊備註的衝突
 ##### v1.3.6
 - 移除部分溢出漸隱效果，徹底解決渲染處理程序崩潰（閃退）的問題
 - 適配思源 3.7.3-beta.1

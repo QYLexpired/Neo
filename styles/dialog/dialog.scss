@@ -16,6 +16,9 @@
     .neo-visual-frostedglass & {
         transition: backdrop-filter 0.15s 0s;
     }
+    .b3-dialog--open[data-key="dialog-emojis"] & {
+        opacity: 0;
+    }
 }
 @mixin dialog-transparent {
     .search__header,
