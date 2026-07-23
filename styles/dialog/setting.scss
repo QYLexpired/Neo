@@ -9,14 +9,14 @@
     margin-right: 0;
     padding: var(--_sidebar-gap) 0;
     border: unset;
-    box-shadow: var(--neo-main-shadow-heavy);
+    box-shadow: var(--neo-main-shadow);
     background-color: transparent !important; // 覆盖内联
     overflow: auto;
     .b3-list-item {
         @include superellipse(7px);
         line-height: 26px;
         padding: 0 4px; // default
-        margin: 1px 8px; // default
+        margin: 4px 8px;
         &:first-child {
             margin-top: 0;
         }

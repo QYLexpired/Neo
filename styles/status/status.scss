@@ -10,7 +10,7 @@
         @include superellipse(18px);
         background-color: var(--b3-theme-surface);
         @include frostedglass($blur: s, $color: surface, $alpha: 0.6);
-        box-shadow: var(--neo-main-shadow-heavy);
+        box-shadow: var(--neo-main-shadow);
         height: 26px;
         line-height: 26px;
         border: unset;

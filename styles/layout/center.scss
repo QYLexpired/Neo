@@ -6,7 +6,7 @@ body:not(.body--window) {
             padding: calc(var(--_layout-gap) / 2);
             & > [data-type="wnd"] {
                 @include superellipse(10px);
-                box-shadow: var(--neo-main-shadow-light);
+                box-shadow: var(--neo-main-shadow);
             }
         }
     }
@@ -23,7 +23,7 @@ body:not(.body--window) {
                 box-shadow: unset;
                 & > .layout-tab-container {
                     @include superellipse(10px);
-                    box-shadow: var(--neo-main-shadow-light);
+                    box-shadow: var(--neo-main-shadow);
                 }
                 .layout-tab-bar {
                     background-color: transparent;

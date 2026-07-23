@@ -25,7 +25,7 @@
     max-width: max-content;
     transition: var(--b3-transition);
     @include superellipse(18px);
-    box-shadow: var(--neo-main-shadow-heavy);
+    box-shadow: var(--neo-main-shadow);
 }
 .protyle-icon {
     padding: 6px;

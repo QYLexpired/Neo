@@ -26,7 +26,7 @@
                 color: var(--b3-theme-on-surface);
                 @include superellipse(6px);
                 @include frostedglass($blur: s, $color: transparent);
-                box-shadow: var(--neo-main-shadow-heavy);
+                box-shadow: var(--neo-main-shadow);
                 line-height: 16px;
                 animation: neo-tooltip-entrance 0.6s var(--neo-ease-spring-3);
             }

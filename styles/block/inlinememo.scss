@@ -10,14 +10,15 @@
     transition: 0.15s;
     &:hover,
     &[neo-sidememo-highlight] {
+        --neo-inline-memo-color: var(--b3-base-color);
         @include superellipse(0px);
         background-color: var(--neo-inline-memo-color) !important; // 覆盖内联
-        box-shadow: 0 0 0 8px var(--neo-inline-memo-color);
+        box-shadow: 0 0 0 6px var(--neo-inline-memo-color);
         @include contrast-color(--neo-inline-memo-color);
         border-color: var(--neo-inline-memo-color);
     }
     .neo-sidememo-protyle &:hover,
     &[neo-sidememo-highlight] {
-        --neo-inline-memo-color: var(--b3-theme-accent);
+        --neo-inline-memo-color: var(--b3-base-color);
     }
 }

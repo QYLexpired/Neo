@@ -11,7 +11,7 @@
         margin: calc(var(--_layout-gap) / -2);
         & > .fn__flex {
             [data-type="wnd"] {
-                box-shadow: var(--neo-main-shadow-heavy);
+                box-shadow: var(--neo-main-shadow);
                 background-color: var(--b3-theme-background);
                 @include frostedglass($blur: l, $color: background);
             }

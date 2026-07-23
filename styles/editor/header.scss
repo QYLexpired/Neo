@@ -44,7 +44,7 @@
     transition: var(--_emoji-transiton);
     &:hover {
         opacity: 1;
-        scale: 1.035;
+        scale: 1.05;
         transform: translateY(-2px);
         filter: saturate(1.5) brightness(1.02);
     }

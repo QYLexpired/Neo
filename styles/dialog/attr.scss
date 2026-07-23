@@ -3,7 +3,8 @@
     color: var(--b3-theme-accent);
 }
 .custom-attr .b3-button[data-type=addColumn] {
-    @include button-transparent-outline;
+    @include button-transparent-hover-background;
+    margin-left: 32px;
 }
 .custom-attr__avvalue,
 .custom-attr .block__logo:not(.popover__block) {
@@ -25,5 +26,8 @@
         &:focus {
             background-color: var(--b3-list-hover);
         }
+    }
+    .custom-attr__avvalue {
+        max-height: 150px;
     }
 }

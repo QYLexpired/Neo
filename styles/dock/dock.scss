@@ -6,10 +6,10 @@
 }
 .dock__item--active,
 .dock__item--activefocus {
-    box-shadow: var(--neo-main-shadow-heavy) !important;
+    box-shadow: var(--neo-main-shadow) !important;
     background-color: oklch(from var(--b3-theme-background) l c h / 0.7) !important;
     &:hover {
-        box-shadow: var(--neo-main-shadow-heavy) !important;
+        box-shadow: var(--neo-main-shadow) !important;
         background-color: oklch(from var(--b3-theme-background) l c h / 0.7) !important;
     }
 }

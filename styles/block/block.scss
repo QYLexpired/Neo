@@ -37,10 +37,10 @@
 }
 @keyframes neo-block-fold-li {
     0% {
-        transform: scaleX(1.45);
+        transform: scaleX(1.45) scaleY(1.2);
     }
     100% {
-        transform: scaleX(1);
+        transform: scaleX(1) scaleY(1);
     }
 }
 :root {

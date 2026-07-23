@@ -4,6 +4,10 @@
 - **问题反馈**：使用过程中有任何问题或建议，可通过[Neo 主题介绍及反馈综合帖](https://ld246.com/article/1783158376401)或[github](https://github.com/QYLexpired/Neo/issues)进行反馈
 - **支持我**：Neo主题是完全免费的，如果喜欢这个主题，欢迎在[github](https://github.com/QYLexpired/Neo)为我点亮小星星，也可以[请我喝杯咖啡](https://icnmjy02sv9g.feishu.cn/wiki/FekNwrtB7ia1WckYelRckwzZnig?from=from_copylink)
 #### 更新说明
+##### v1.3.7
+- 适配思源3.7.3
+- 调整菜单样式
+- 调整主界面阴影
 ##### v1.3.6
 - 移除部分溢出渐隐效果，彻底解决渲染进程崩溃（闪退）的问题
 - 适配思源3.7.3-beta.1

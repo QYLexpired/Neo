@@ -1,4 +1,5 @@
 @use "../utils" as *;
+@use "../component" as *;
 .protyle-db-attr__header {
     @include superellipse(7px);
     .block__logo {
@@ -8,10 +9,5 @@
     }
     &:hover {
         background-color: var(--b3-list-hover);
-    }
-}
-.protyle-db-attr__body {
-    .custom-attr__avvalue {
-        max-height: 150px;
     }
 }

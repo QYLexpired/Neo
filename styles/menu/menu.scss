@@ -99,6 +99,7 @@
         @include contrast-color(--neo-menu-item-primary, --b3-callout-important);
         @include contrast-color(--neo-menu-item-primary, --b3-callout-warning);
         @include contrast-color(--neo-menu-item-primary, --b3-callout-caution);
+        @include contrast-color(--neo-menu-item-primary, --b3-protyle-inline-blockref-color);
     }
     @include menu-item-child-trans-current;
 }

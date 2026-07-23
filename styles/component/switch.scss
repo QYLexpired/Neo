@@ -42,7 +42,7 @@ $switch-width: 36px;
         &::after {
             transition: 0.8s var(--neo-ease-spring-4);
             transform: translateY(-50%) scale(1.35);
-            box-shadow: var(--neo-main-shadow-light);
+            box-shadow: var(--neo-main-shadow);
         }
     }
     .neo-mode-dark & {

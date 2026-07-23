@@ -8,7 +8,7 @@
         padding: calc(var(--_layout-gap) / 2);
         & > [data-type="wnd"] {
             @include superellipse(10px);
-            box-shadow: var(--neo-main-shadow-light);
+            box-shadow: var(--neo-main-shadow);
             background-color: var(--b3-theme-background);
         }
     }

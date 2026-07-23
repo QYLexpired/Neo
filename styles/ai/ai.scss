@@ -21,7 +21,7 @@
 // 滚动至底部
 .agent-chat__scroll-bottom {
     border: unset;
-    box-shadow: var(--neo-main-shadow-heavy);
+    box-shadow: var(--neo-main-shadow);
     background-color: var(--b3-theme-background);
     .neo-visual-frostedglass & {
         background-color: transparent;

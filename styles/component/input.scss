@@ -136,7 +136,7 @@ $slider-track-height: 6px;
         width: $slider-thumb-width;
         border-radius: 24px;
         background: #ffffff;
-        box-shadow: var(--neo-main-shadow-light);
+        box-shadow: var(--neo-main-shadow);
         transition: 0.8s var(--neo-ease-spring-4);
     }
     .neo-mode-dark &::-webkit-slider-thumb {

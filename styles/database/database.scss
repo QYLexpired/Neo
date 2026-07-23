@@ -17,7 +17,7 @@
     box-shadow: 0 0 0 2px var(--neo-input-primary);
 }
 .av__gallery-item {
-    box-shadow: var(--neo-main-shadow-light);
+    box-shadow: var(--neo-main-shadow);
     @include superellipse(10px);
     &::before {
         background-color: transparent;
