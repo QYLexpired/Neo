@@ -6,6 +6,7 @@ body:not(.body--toolbar-hide) [data-type="wnd"] > .fn__flex:first-child {
 }
 .layout-tab-bar {
     border-bottom: unset;
+    scrollbar-width: none;
     &:not(.layout-tab-bar--readonly) {
         @include overflow-indicator-fadein-mask($fadeout-size-l, "left right");
         padding: 0;
