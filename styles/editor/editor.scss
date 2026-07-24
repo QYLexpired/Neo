@@ -4,12 +4,12 @@
     background-color: transparent;
 }
 .protyle:not(.fn__none) .protyle-content {
-    animation: neo-protyle-entrance 0.3s var(--neo-ease-out-3);
+    animation: neo-protyle-entrance 0.45s var(--neo-ease-out-3);
 }
 @keyframes neo-protyle-entrance {
     0% {
         opacity: 0;
-        transform: translateY(-1%);
+        transform: translateY(-1.5%);
     }
     100% {
         opacity: 1;
@@ -118,7 +118,7 @@
     transition: var(--b3-transition);
     animation: neo-gutters-entrance 0.5s var(--neo-ease-spring-3);
     animation-delay: calc((sibling-count() - sibling-index()) * 0.02s);
-    transform-origin: right bottom;
+    transform-origin: right;
     animation-fill-mode: both;
 }
 @mixin gutters-svg-common {
@@ -169,7 +169,7 @@
 }
 @keyframes neo-gutters-entrance {
     from {
-        transform: scale(0.75) translateX(5px);
+        transform: scale(0.75) translateX(2px);
         opacity: 0;
     }
     to {

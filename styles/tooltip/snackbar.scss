@@ -4,7 +4,10 @@
     will-change: transform;
     transition: none;
     .b3-snackbars--show & {
-        animation: neo-message-entrance 0.45s var(--neo-ease-spring-2);
+        animation: neo-message-entrance 0.35s var(--neo-ease-spring-2);
+        &.b3-snackbar--hide:not(:only-child) {
+            animation: neo-message-out 0.75s var(--neo-ease-spring-2);
+        }
     }
     &--hide {
         animation: neo-message-out 0.75s var(--neo-ease-spring-2);
@@ -15,7 +18,7 @@
 }
 @keyframes neo-message-entrance {
     0% {
-        transform: scale(0.88);
+        transform: scale(0.85) translateX(10px);
     }
     100% {
         transform: none;
@@ -28,7 +31,7 @@
     }
     100% {
         opacity: 0;
-        transform: scale(0.7);
+        transform: scale(0.55) translateX(10px);
     }
 }
 .b3-snackbars {
