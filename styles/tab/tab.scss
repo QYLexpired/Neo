@@ -10,6 +10,7 @@ body:not(.body--toolbar-hide) [data-type="wnd"] > .fn__flex:first-child {
     &:not(.layout-tab-bar--readonly) {
         @include overflow-indicator-fadein-mask($fadeout-size-l, "left right");
         padding: 0;
+        min-height: 42px;
         .item {
             @include superellipse(8px);
             margin: 6px 3px !important;
