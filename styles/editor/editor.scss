@@ -258,9 +258,15 @@
     background-color: oklch(from var(--b3-theme-accent) l c h / 0.12);
 }
 // 拖拽
-.protyle-wysiwyg [data-node-id] {
+.protyle-wysiwyg [data-node-id],
+.av__gallery-item,
+.av__gallery-add,
+.av__row,
+.b3-list--background .b3-list-item {
     &.dragover {
         border-radius: 0 !important;
+        outline: 1px solid oklch(from var(--b3-theme-accent) l c calc(h + 90) / 0.12);
+        outline-offset: -1px;
         background-color: oklch(from var(--b3-theme-accent) l c calc(h + 90) / 0.12) !important;
     }
     &.dragover__left,

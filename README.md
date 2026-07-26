@@ -4,6 +4,15 @@
 - **Feedback**: For any questions or suggestions during use, please visit the [Neo Theme Introduction & Feedback Thread](https://ld246.com/article/1783158376401) or [GitHub](https://github.com/QYLexpired/Neo/issues)
 - **Support Me**: The Neo theme is completely free. If you enjoy this theme, feel free to star it on [GitHub](https://github.com/QYLexpired/Neo) or [buy me a coffee](https://icnmjy02sv9g.feishu.cn/wiki/FekNwrtB7ia1WckYelRckwzZnig?from=from_copylink)
 #### What's New
+##### v1.3.8
+- Adapted for SiYuan 3.7.4-alpha.1
+    - Adapted heading auto-numbering
+    - Adapted document top database properties
+    - Adapted document bottom backlinks
+- Redesigned message bubble animation
+- Redesigned bazaar animation
+- Optimized cross-block selection effect
+- Optimized block drag hint effect
 ##### v1.3.7
 - Adapted for SiYuan 3.7.3
 - Adjusted menu and dialog shadows
@@ -11,31 +20,6 @@
 - Optimized fluid cursor ripple effect
 - Side memo support temporary hiding
 - Fixed conflict between scroll effect and side memo
-##### v1.3.6
-- Removed some overflow fade-out effects, completely resolving the rendering process crash (CTD) issue
-- Adapted for SiYuan 3.7.3-beta.1
-##### v1.3.4 ~ v1.3.5
-- New texture: Embossed Paper
-- Optimized graph colors
-- Optimized search interface
-- Optimized contrast-color threshold
-- Optimized scroll effect, and fixed the issue where it caused abnormal styles in the AI agent input field
-- Fixed some errors with side memo
-- Reduced saturation of colored headings and colored lists
-- Optimized readability of colored headings and colored lists under some preset color schemes
-##### v1.3.3
-- Adapted for SiYuan 3.7.2
-    - Fixed document tree guide line styles
-    - Optimized banner image dialog styles
-    - Fixed note input field styles
-- Added Visual - Frosted Glass; the theme will no longer enable frosted glass by default, must be manually enabled
-- Optimized fluid cursor path to prevent jaggedness when the mouse moves in large arcs
-- Fluid cursor now supports configurable mouse click effect
-- New preset color scheme: Lakeside
-- Overridden Windows select input styles
-- Optimized Windows top-right control bar styles
-- Removed Performance mode
-- Removed AI color scheme feature
 #### Features
 > Some of the following features depend on the Neo+ plugin.
 - Excellent performance comparable to the default theme
@@ -67,6 +51,15 @@ The creation of the Neo theme drew significant inspiration from the following pr
 - [Rem Craft](https://github.com/svchord/Rem-Craft)
 - [Savor](https://github.com/royc01/notion-theme)
 #### Update Notes
+##### v1.3.8
+- Adapted for SiYuan 3.7.4-alpha.1
+    - Adapted heading auto-numbering
+    - Adapted document top database properties
+    - Adapted document bottom backlinks
+- Redesigned message bubble animation
+- Redesigned bazaar animation
+- Optimized cross-block selection effect
+- Optimized block drag hint effect
 ##### v1.3.7
 - Adapted for SiYuan 3.7.3
 - Adjusted menu and dialog shadows

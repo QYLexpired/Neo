@@ -51,6 +51,15 @@
 - [Rem Craft](https://github.com/svchord/Rem-Craft)
 - [Savor](https://github.com/royc01/notion-theme)
 #### 更新日志
+##### v1.3.8
+- 适配思源3.7.4-alpha.1
+    - 适配标题自动编号
+    - 适配文档顶部数据库属性
+    - 适配文档底部双链
+- 重做消息气泡动效
+- 重做集市动效
+- 优化跨块选区效果
+- 优化块拖拽提示效果
 ##### v1.3.7
 - 适配思源3.7.3
 - 调整菜单和对话框阴影
