@@ -1,13 +1,18 @@
 @use "../utils" as *;
 @use "../component" as *;
+.protyle-db-attr {
+    border-bottom: unset;
+    padding-bottom: unset;
+}
 .protyle-db-attr__header {
-    @include superellipse(7px);
     .block__logo {
         color: var(--b3-theme-on-surface);
-        font-size: unset;
+        font-size: 1.05em;
         transition: var(--b3-transition);
     }
     &:hover {
-        background-color: var(--b3-list-hover);
+        .block__logo {
+            color: var(--b3-theme-on-background);
+        }
     }
 }

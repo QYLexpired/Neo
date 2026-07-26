@@ -11,5 +11,34 @@
     }
     .b3-list--background .b3-list-item {
         background-color: var(--b3-list-hover);
+        margin-bottom: 4px;
+        &:last-child {
+            margin-bottom: 0;
+        }
+        &--focus {
+            background-color: var(--b3-list-active);
+        }
+    }
+}
+.sy__backlink--bottom {
+    margin-top: 2em;
+    & > .block__icons {
+        border-top: unset;
+        .block__icon,
+        .fn__space {
+            opacity: 1 !important;
+            animation: none !important;
+            display: flex !important;
+        }
+    }
+    .block__logo {
+        color: var(--b3-theme-on-surface);
+        font-size: 1.05em;
+        transition: var(--b3-transition);
+    }
+    &:hover {
+        .block__logo {
+            color: var(--b3-theme-on-background);
+        }
     }
 }

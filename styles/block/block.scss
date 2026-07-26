@@ -8,16 +8,13 @@
         }
     }
 }
-.protyle-wysiwyg--select::after,
-.protyle-wysiwyg--hl::after {
-    background-color: oklch(from var(--b3-theme-primary) l c h / 0.15);
-}
 .protyle-wysiwyg [data-node-id][fold="1"] {
     animation: neo-block-fold 0.5s var(--neo-ease-spring-3) !important;
     animation-timeline: unset !important; // 卷轴动画会覆盖动画
     transform-origin: top;
     &:not(.li) {
         outline: 1px solid oklch(from currentColor l c h / 0.3);
+        outline-offset: -1px;
         background-color: oklch(from currentColor l c h / 0.12);
         opacity: 0.38 !important; // 卷轴动画会覆盖opacity
     }

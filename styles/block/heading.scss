@@ -13,6 +13,9 @@
                     opacity: 0;
                 }
             }
+            & > :first-child[contenteditable]::before {
+                color: inherit !important; // 自动编号
+            }
         }
         & > h#{$i}:first-child,
         & > .h#{$i}:first-child {

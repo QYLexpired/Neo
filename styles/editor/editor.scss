@@ -245,3 +245,37 @@
         transform: scale(1);
     }
 }
+// 选区
+.protyle-select {
+    outline: 1px solid oklch(from var(--b3-theme-accent) l c calc(h + 90) / 0.3);
+    outline-offset: -1px;
+    background-color: oklch(from var(--b3-theme-accent) l c calc(h + 90) / 0.12);
+}
+.protyle-wysiwyg--select::after,
+.protyle-wysiwyg--hl::after {
+    outline: 1px solid oklch(from var(--b3-theme-accent) l c h / 0.12);
+    outline-offset: -1px;
+    background-color: oklch(from var(--b3-theme-accent) l c h / 0.12);
+}
+// 拖拽
+.protyle-wysiwyg [data-node-id] {
+    &.dragover {
+        border-radius: 0 !important;
+        background-color: oklch(from var(--b3-theme-accent) l c calc(h + 90) / 0.12) !important;
+    }
+    &.dragover__left,
+    &.dragover__right,
+    &.dragover__top,
+    &.dragover__bottom,
+    &.dragover__top--sibling,
+    &.dragover__bottom--sibling,
+    &.dragover__top--child,
+    &.dragover__bottom--child {
+        &::before {
+            display: none;
+        }
+        &::after {
+            background-color: oklch(from var(--b3-theme-accent) l c calc(h + 90));
+        }
+    }
+}

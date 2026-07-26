@@ -63,3 +63,22 @@
 .config-about__motto {
     color: oklch(from var(--b3-theme-surface) l c h / 0.32);
 }
+// ai
+.config-ai-provider__card.b3-card {
+    @include superellipse(12px);
+    outline: unset;
+    border: unset;
+    transition: var(--b3-transition);
+    &:hover {
+        background-color: var(--b3-list-hover);
+    }
+}
+.config-ai-provider__card--add {
+    color: var(--b3-theme-on-surface);
+}
+.config-ai-provider__avatar {
+    @include superellipse(12px);
+}
+.config-ai-provider__view-head {
+    border: unset;
+}

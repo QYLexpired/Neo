@@ -4,14 +4,16 @@
         .b3-list-item__graphic {
             opacity: 0;
             &:hover {
-                & + .b3-list-item__text {
+                & + .b3-list-item__text,
+                & + .b3-list-item__number {
                     &::before {
                         opacity: 1;
                     }
                 }
             }
         }
-        .b3-list-item__text {
+        .b3-list-item__text,
+        .b3-list-item__number {
             &::before {
                 position: absolute;
                 margin-inline-start: -18px;
@@ -19,7 +21,7 @@
                 font-size: 0.95em;
                 pointer-events: none;
                 font-family: "SF Pro";
-                color: currentColor;
+                color: inherit;
                 transition: var(--b3-transition);
             }
             &:empty {
@@ -28,9 +30,10 @@
         }
         $heading-numbers: "❶", "❷", "❸", "❹", "❺", "❻";
         @for $i from 1 through 6 {
-          &[data-subtype="h#{$i}"] > .b3-list-item__text::before {
-            content: list.nth($heading-numbers, $i);
-          }
+            &[data-subtype="h#{$i}"] > .b3-list-item__graphic + .b3-list-item__text::before,
+            &[data-subtype="h#{$i}"] > .b3-list-item__graphic + .b3-list-item__number::before {
+                content: list.nth($heading-numbers, $i);
+            }
         }
     }
 }

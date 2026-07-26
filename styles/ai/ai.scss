@@ -4,7 +4,8 @@
     color: var(--b3-theme-error);
     transform: translateY(-12px);
 }
-.agent-welcome__example {
+.agent-welcome__example,
+.agent-welcome__no-model {
     background-color: var(--b3-list-hover);
     border: unset;
     @include superellipse(12px);

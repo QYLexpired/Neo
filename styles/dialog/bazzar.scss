@@ -85,6 +85,19 @@
     background-color: var(--b3-theme-background);
     @include frostedglass($blur: g, $color: background);
     box-shadow: var(--b3-dialog-shadow-inset);
+    opacity: 0;
+    transform: scale(1.2);
+    filter: blur(32px);
+    inset: 0;
+    pointer-events: none;
+    transition: 1.2s var(--neo-ease-spring-2);
+    &--show {
+        opacity: 1;
+        transform: scale(1);
+        filter: none;
+        pointer-events: all;
+        transition: 0.65s var(--neo-ease-spring-2);
+    }
     .item__side {
         padding: var(--_sidebar-gap);
         margin: var(--_sidebar-gap);

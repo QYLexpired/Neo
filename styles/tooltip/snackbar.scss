@@ -1,38 +1,7 @@
 @use "../utils" as *;
 .b3-snackbar {
-    transform-origin: 80% 50%;
-    will-change: transform;
-    transition: none;
-    .b3-snackbars--show & {
-        animation: neo-message-entrance 0.35s var(--neo-ease-spring-2);
-        &.b3-snackbar--hide:not(:only-child) {
-            animation: neo-message-out 0.75s var(--neo-ease-spring-2);
-        }
-    }
-    &--hide {
-        animation: neo-message-out 0.75s var(--neo-ease-spring-2);
-        transform: none;
-        transition: display 0.75s;
-        transition-behavior: allow-discrete;
-    }
-}
-@keyframes neo-message-entrance {
-    0% {
-        transform: scale(0.85) translateX(10px);
-    }
-    100% {
-        transform: none;
-    }
-}
-@keyframes neo-message-out {
-    0% {
-        opacity: 1;
-        transform: none;
-    }
-    100% {
-        opacity: 0;
-        transform: scale(0.55) translateX(10px);
-    }
+    transition: none !important;
+    transform: none !important;
 }
 .b3-snackbars {
     top: 8px;
@@ -64,6 +33,18 @@
     @include frostedglass($blur: s, $color: surface, $alpha: 0.6);
     padding: 12px 24px !important; // 覆盖内联
     transition: none;
+    transform: none;
+    transform-origin: center;
+    will-change: transform;
+    .b3-snackbar--hide &,
+    .b3-snackbar--hide:not(:only-child) & {
+        animation: neo-message-out 1.2s var(--neo-ease-spring-2);
+        transition: display 1.2s;
+        transition-behavior: allow-discrete;
+    }
+    .b3-snackbars--show & {
+        animation: neo-message-entrance 0.65s var(--neo-ease-spring-2);
+    }
     .b3-snackbar--error & {
         &::after {
             content: none;
@@ -76,5 +57,29 @@
         &:hover {
             color: var(--b3-theme-accent);  
         }
+    }
+}
+@keyframes neo-message-entrance {
+    0% {
+        opacity: 0;
+        filter: blur(32px);
+        transform: scale(1.2);
+    }
+    100% {
+        opacity: 1;
+        filter: none;
+        transform: none;
+    }
+}
+@keyframes neo-message-out {
+    0% {
+        opacity: 1;
+        filter: none;
+        transform: none;
+    }
+    100% {
+        opacity: 0;
+        filter: blur(12px);
+        transform: scale(1.2);
     }
 }

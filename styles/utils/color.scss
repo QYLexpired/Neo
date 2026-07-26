@@ -66,6 +66,7 @@
     --b3-highlight-background: oklch(from var(--b3-base-color) 0.95 0.2 calc(h + 90));
     --b3-highlight-current-background: oklch(from var(--b3-highlight-background) l c calc(h + 10));
     @include contrast-color(--b3-highlight-background, --b3-highlight-color);
+    --b3-tooltips-color: var(--b3-theme-on-background);
     --b3-tooltips-second-color: var(--b3-theme-on-surface);
     --b3-protyle-inline-mark-background: #00ff25;
     --b3-protyle-inline-blockref-color: var(--b3-theme-accent);
@@ -132,6 +133,7 @@
     --b3-highlight-background: oklch(from var(--b3-base-color) 0.95 0.2 calc(h + 90));
     --b3-highlight-current-background: oklch(from var(--b3-highlight-background) l c calc(h + 10));
     @include contrast-color(--b3-highlight-background, --b3-highlight-color);
+    --b3-tooltips-color: var(--b3-theme-on-background);
     --b3-tooltips-second-color: var(--b3-theme-on-surface);
     --b3-protyle-inline-mark-background: #00ff25;
     --b3-protyle-inline-blockref-color: var(--b3-theme-accent);

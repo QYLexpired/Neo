@@ -119,24 +119,33 @@ body:not(.body--toolbar-hide) [data-type="wnd"] > .fn__flex:first-child {
     }
 }
 // other-tab
-.layout-tab-bar:not(.layout__center .layout-tab-bar) {
+.layout-tab-bar:not([data-type="wnd"] > .fn__flex > .layout-tab-bar) {
     max-width: max-content;
-    margin: 3px auto;
+    margin: 0 auto;
     background-color: transparent;
     .item {
         max-width: max-content;
-        .item__text {
-            padding: 0 16px;
-            transform: none;
-        }
-    }
-}
-.av__views .layout-tab-bar {
-    .item {
         .item__icon,
         .item__graphic,
         .item__text {
             transform: none;
+        }
+        .item__text {
+            padding: 0 16px;
+        }
+    }
+    .av__views & {
+        margin: unset;
+        .item {
+            .item__text {
+                padding: 0 8px;
+            }
+        }
+    }
+    &.protyle-db-attr__tabs {
+        margin: unset;
+        .item {
+            padding: unset;
         }
     }
 }
