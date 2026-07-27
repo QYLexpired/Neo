@@ -7,7 +7,8 @@
 .config-keymap__key,
 .protyle-wysiwyg span[data-type~=kbd],
 .b3-typography kbd,
-.b3-typography span[data-type~=kbd] {
+.b3-typography span[data-type~=kbd],
+.b3-list-item[data-treetype=outline] > .b3-list-item__text span[data-type~=kbd] {
     color: var(--neo-kbd-color);
     border: 0.5px solid;
     border-color: oklch(from currentColor l c h / 0.25);

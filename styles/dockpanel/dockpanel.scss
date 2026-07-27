@@ -40,8 +40,7 @@
 }
 .file-tree:hover .block__icons:not(:hover) .block__icon,
 .file-tree:not(.fullscreen):hover .block__icons:not(:hover) .fn__space {
-    opacity: 0;
-    animation: unset;
+    display: none;
 }
 .file-tree .block__icons:not(:hover) .block__icon,
 .file-tree:not(.fullscreen) .block__icons:not(:hover) .fn__space {

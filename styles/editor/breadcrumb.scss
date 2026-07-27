@@ -7,7 +7,14 @@
     @include overflow-indicator-fadein-mask($fadeout-size-m, "left right");
 }
 .protyle-breadcrumb__arrow {
-    color: var(--b3-theme-on-surface);
+    color: rgba(0, 0, 0, 0);
+    margin: 0 8px;
+    background-color: var(--b3-theme-on-surface);
+    width: 1.5px;
+    height: 1em;
+    border-radius: 2px;
+    transform: rotate(27deg);
+    opacity: 0.85;
 }
 .protyle-breadcrumb__item {
     transition: var(--b3-transition);
