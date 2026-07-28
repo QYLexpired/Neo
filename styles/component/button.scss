@@ -4,11 +4,13 @@
     line-height: 18px;
     @include superellipse(7px);
     box-shadow: none;
+    outline: none;
     transition: var(--b3-transition);
     &:hover,
     &:active,
     &:focus {
-        box-shadow: none;
+        box-shadow: none; // 覆写思源的按钮阴影
+        // outline: none; 设置此属性会导致hover时按钮outline被覆写
     }
 }
 @mixin button-primary {
