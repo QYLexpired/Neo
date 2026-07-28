@@ -51,13 +51,13 @@
     @include button-common;
     background-color: transparent;
     color: var(--b3-theme-on-surface);
-    box-shadow: inset 0 0 0 1px var(--b3-border-color-trans);
+    outline: 1px solid var(--b3-border-color-trans);
+    outline-offset: -1px;
     &:hover,
     &:active,
     &:focus {
         background-color: var(--b3-list-hover);
         color: var(--b3-theme-on-surface);
-        box-shadow: inset 0 0 0 1px var(--b3-border-color-trans);
     }
 }
 @mixin button-transparent-hover-background {
@@ -75,11 +75,13 @@
     @include button-common;
     background-color: transparent;
     color: var(--b3-theme-on-surface);
-    box-shadow: inset 0 0 0 1px var(--b3-border-color-trans);
+    outline: 1px solid var(--b3-border-color-trans);
+    outline-offset: -1px;
     &:hover,
     &:active,
     &:focus {
         background-color: var(--neo-button-primary);
+        outline-color: var(--neo-button-primary);
         @include contrast-color(--neo-button-primary);
     }
 }
@@ -87,11 +89,13 @@
     @include button-common;
     background-color: transparent;
     color: var(--b3-theme-on-surface);
-    box-shadow: inset 0 0 0 1px var(--b3-border-color-trans);
+    outline: 1px solid var(--b3-border-color-trans);
+    outline-offset: -1px;
     &:hover,
     &:active,
     &:focus {
         background-color: var(--b3-theme-error-bg);
+        outline-color: var(--b3-theme-error-bg);
         @include contrast-color(--b3-theme-error-bg);
     }
 }

@@ -1,6 +1,6 @@
 [data-theme-mode="light"] {
     --b3-menu-shadow-blur: 0 2px 10px oklch(from var(--b3-theme-on-background) l c h / 0.15);
-    --b3-menu-shadow-inset: 0 0 0 0.5px oklch(from var(--b3-theme-on-background) l c h / 0.15) inset;
+    --b3-menu-shadow-inset: 0 0 0 0.5px oklch(from var(--b3-theme-on-background) l c h / 0.18) inset;
     --b3-menu-shadow: var(--b3-menu-shadow-blur), var(--b3-menu-shadow-inset);
     --b3-dialog-shadow-blur: 0 3px 16px oklch(from var(--b3-theme-on-background) l c h / 0.18);
     --b3-dialog-shadow-inset: 0 0 0 0.5px oklch(from var(--b3-theme-on-background) l c h / 0.2) inset;
@@ -10,7 +10,7 @@
 }
 [data-theme-mode="dark"] {
     --b3-menu-shadow-blur: 0 0 0 0.5px rgba(0, 0, 0, 0.5), 0 2px 10px rgba(0, 0, 0, 0.45);
-    --b3-menu-shadow-inset: 0 0 0 0.5px oklch(from var(--b3-theme-on-background) l c h / 0.1) inset, 1px 1px 1px -1px oklch(from var(--b3-theme-on-background) l c h / 0.32) inset, -1px -1px 1px -1px oklch(from var(--b3-theme-on-background) l c h / 0.32) inset;
+    --b3-menu-shadow-inset: 0 0 0 0.5px oklch(from var(--b3-theme-on-background) l c h / 0.15) inset, 1px 1px 1px -1px oklch(from var(--b3-theme-on-background) l c h / 0.32) inset, -1px -1px 1px -1px oklch(from var(--b3-theme-on-background) l c h / 0.32) inset;
     --b3-menu-shadow: var(--b3-menu-shadow-blur), var(--b3-menu-shadow-inset);
     --b3-dialog-shadow-blur: 0 0 0 0.5px rgba(0, 0, 0, 0.5), 0 3px 16px rgba(0, 0, 0, 0.5);
     --b3-dialog-shadow-inset: 0 0 0 0.5px oklch(from var(--b3-theme-on-background) l c h / 0.1) inset, 1px 1px 1px -1px oklch(from var(--b3-theme-on-background) l c h / 0.32) inset, -1px -1px 1px -1px oklch(from var(--b3-theme-on-background) l c h / 0.32) inset;

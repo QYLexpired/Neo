@@ -35,9 +35,7 @@
         color: var(--b3-theme-on-surface);
         font-size: 1.05em;
         transition: var(--b3-transition);
-    }
-    &:hover {
-        .block__logo {
+        &:hover {
             color: var(--b3-theme-on-background);
         }
     }

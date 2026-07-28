@@ -11,22 +11,3 @@
 .b3-list-item svg.b3-list-item__arrow {
     transition: color var(--b3-transition), transform var(--_rotate-transition);
 }
-.counter {
-    @include superellipse(7px);
-    &--bg {
-        background-color: var(--b3-list-hover);
-    }
-}
-.b3-label__text.fn__pointer {
-    color: var(--b3-theme-on-surface);
-    transition: var(--b3-transition);
-    &:hover {
-        color: var(--b3-theme-on-background);
-    }
-}
-.b3-card {
-    box-shadow: unset;
-    outline: 1px solid var(--b3-border-color-trans);
-    outline-offset: -1px;
-    background-color: transparent;
-}

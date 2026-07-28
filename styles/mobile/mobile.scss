@@ -118,7 +118,8 @@
     .keyboard__slash-item {
         @include superellipse(12px);
         background-color: transparent;
-        box-shadow: inset 0 0 0 1px var(--b3-border-color-trans);
+        outline: 1px solid var(--b3-border-color-trans);
+        outline-offset: -1px;
         color: var(--b3-theme-on-surface);
     }
     // icon

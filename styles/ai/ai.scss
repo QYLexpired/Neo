@@ -33,7 +33,7 @@
 .agent-chat__input-area {
     background-color: transparent;
     border: unset;
-    box-shadow: 0 0 0 1.5px var(--b3-border-color-trans);
+    outline: 1.5px solid var(--b3-border-color-trans);
     margin: 0 24px 24px 24px;
     @include superellipse(12px);
 }

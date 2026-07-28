@@ -34,6 +34,10 @@
     &--current {
         @include icon-accent;
     }
+    &:hover,
+    &:hover:not(:disabled) {
+        background-color: transparent;
+    }
 }
 .protyle-toolbar__divider {
     border-color: var(--b3-border-color-trans);
