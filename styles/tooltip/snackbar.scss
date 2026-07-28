@@ -43,7 +43,7 @@
         transition-behavior: allow-discrete;
     }
     .b3-snackbars--show & {
-        animation: neo-message-entrance 0.65s var(--neo-ease-spring-2);
+        animation: neo-message-entrance 0.25s var(--neo-ease-out-3);
     }
     .b3-snackbar--error & {
         &::after {
@@ -62,7 +62,7 @@
 @keyframes neo-message-entrance {
     0% {
         opacity: 0;
-        filter: blur(32px);
+        filter: blur(16px);
         transform: scale(1.2);
     }
     100% {
