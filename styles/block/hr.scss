@@ -1,14 +1,18 @@
-.protyle-wysiwyg [data-node-id].hr > div::after {
-    background-color: oklch(from var(--b3-theme-on-background) l c h / 0.12);
-    height: 1.5px;
+.protyle-wysiwyg [data-node-id].hr {
+    color: var(--b3-theme-on-background);
+    & > div::after {
+        background-color: oklch(from currentColor l c h / 0.18);
+        height: 1.5px;
+    }
 }
 .b3-typography hr {
-    border-color: oklch(from var(--b3-theme-on-background) l c h / 0.12);
+    color: var(--b3-theme-on-background);
+    background-color: oklch(from currentColor l c h / 0.18);
     border-width: 1.5px;
     margin: 8px 0;
 }
 hr {
     border: none;
     border-top: 1.5px solid;
-    border-color: oklch(from var(--b3-theme-on-background) l c h / 0.12);
+    border-color: oklch(from var(--b3-theme-on-background) l c h / 0.18);
 }

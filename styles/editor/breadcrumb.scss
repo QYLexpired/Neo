@@ -60,7 +60,7 @@
     &:focus {
         background-color: var(--neo-menu-item-primary);
         @include contrast-color(--neo-menu-item-primary);
-        box-shadow: unset;
+        outline-color: var(--neo-menu-item-primary);
     }
 }
 .block__icon[data-subtype="unlock"] {

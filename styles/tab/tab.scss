@@ -121,7 +121,7 @@ body:not(.body--toolbar-hide) [data-type="wnd"] > .fn__flex:first-child {
 // other-tab
 .layout-tab-bar:not([data-type="wnd"] > .fn__flex > .layout-tab-bar) {
     max-width: max-content;
-    margin: 0 auto;
+    margin: 6px auto;
     background-color: transparent;
     .item {
         max-width: max-content;

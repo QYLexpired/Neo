@@ -5,7 +5,7 @@
     @include superellipse(7px);
     box-shadow: none;
     outline: none;
-    transition: var(--b3-transition);
+    transition: 0.25s ease;
     &:hover,
     &:active,
     &:focus {
@@ -105,9 +105,9 @@
     @include superellipse(7px);
 }
 .b3-button {
-    @include button-primary;
+    @include button-transparent-outline;
     &--outline {
-        @include button-transparent-outline;
+        @include button-transparent-outline-hover-primary;
     }
     &--text {
         @include button-transparent-hover-background;
@@ -116,7 +116,7 @@
         @include button-transparent-hover-background;
     }
     &--remove {
-        @include button-warning;
+        @include button-transparent-outline-hover-warning;
     }
     &--primary {
         @include button-primary;
@@ -194,6 +194,9 @@
 }
 // pdf搜索栏
 .pdf__outer .findbar {
+    .b3-button--outline {
+        @include button-transparent-outline;
+    }
     .b3-button:not(.b3-button--outline) {
         @include button-primary;
     }

@@ -58,11 +58,9 @@
         & > .protyle-breadcrumb {
             .protyle-breadcrumb__icon {
                 transition: var(--b3-transition);
-                padding: 4px 8px;
-                line-height: 16px;
                 width: max-content;
-                @include button-transparent-outline;
-                color: var(--b3-theme-accent);
+                @include button-transparent;
+                color: var(--b3-theme-on-surface);
                 &:hover,
                 &:focus {
                     color: var(--b3-theme-accent);
@@ -115,20 +113,36 @@
     .keyboard__util {
         padding: 6px;
     }
+    .protyle-toolbar__item--current svg {
+        background-color: transparent;
+    }
     .keyboard__slash-item {
         @include superellipse(12px);
         background-color: transparent;
         outline: 1px solid var(--b3-border-color-trans);
         outline-offset: -1px;
+        box-shadow: unset;
         color: var(--b3-theme-on-surface);
     }
     // icon
     .toolbar__icon {
         @include superellipse(8px);
-    }
-    .toolbar__icon--active,
-    .toolbar__icon:not(.toolbar__icon-deactivate):focus,
-    .toolbar__icon:not(.toolbar__icon-deactivate):hover {
-        background-color: transparent;
+        color: var(--b3-theme-on-surface);
+        transition: var(--b3-transition);
+        &:not(.toolbar__icon--active) {
+            &:hover,
+            &:focus {
+                background-color: transparent;
+                color: var(--b3-theme-on-background);
+            }
+        }
+        &.toolbar__icon--active {
+            background-color: transparent;
+            color: var(--b3-theme-accent);
+            &:hover,
+            &:focus {
+                color: var(--b3-theme-accent);
+            }
+        }
     }
 }
