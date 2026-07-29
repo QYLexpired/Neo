@@ -1,4 +1,5 @@
 @use "../utils" as *;
+@use "../component" as *;
 .agent-chat__preview-notice {
     background-color: transparent;
     color: var(--b3-theme-error);
@@ -33,8 +34,8 @@
 .agent-chat__input-area {
     background-color: transparent;
     border: unset;
-    outline: 1.5px solid var(--b3-border-color-trans);
-    margin: 0 24px 24px 24px;
+    box-shadow: var(--neo-main-shadow);
+    margin: 0 12px 24px 12px;
     @include superellipse(12px);
 }
 .agent-mention-chip {
@@ -48,7 +49,7 @@
 .agent-chat__thinking-body {
     display: none;
     border: unset;
-    padding-left: 18px;
+    padding: 4px;
     transition: none;
     &--expanded {
         display: block;
@@ -60,23 +61,29 @@
 // 对话气泡
 .agent-chat__msg--user .agent-chat__body {
     background-color: var(--b3-list-hover);
+    padding: 0px 12px;
     @include superellipse(12px);
+}
+.agent-chat__msg--editing .agent-chat__body {
+    padding: 12px;
 }
 // 交互框
 .agent-chat__question-card,
 .agent-chat__tool-card,
 .agent-chat__confirm-card {
     background-color: transparent;
-    outline: 1px solid var(--b3-border-color-trans);
+    outline: 0.5px solid var(--b3-border-color-trans);
+    outline-offset: -0.5px;
     border: unset;
     @include superellipse(12px);
 }
 .agent-chat__question-item,
-.agent-chat__todo-header,
 .agent-chat__question-submit,
 .agent-chat__confirm-header,
 .agent-chat__confirm-args,
-.agent-chat__confirm-actions {
+.agent-chat__confirm-actions,
+.agent-chat__todo-header,
+.agent-chat__todo-items {
     border-color: transparent;
     background-color: transparent;
 }
@@ -86,5 +93,55 @@
     &:focus,
     &:focus-visible {
         background-color: var(--b3-list-hover);
+    }
+}
+.agent-chat__question {
+    &-item {
+        padding: 12px;
+    }
+    &-submit {
+        padding: 0 12px 12px 12px;
+    }
+}
+.agent-chat__confirm {
+    &-header {
+        padding: 12px 12px 0 12px;
+    }
+    &-args {
+        padding: 12px;
+    }
+    &-actions {
+        padding: 0 12px 12px 12px;
+    }
+}
+.agent-chat__todo {
+    &-header {
+        padding: 12px 12px 0 12px;
+    }
+    &-items {
+        padding: 6px 0px;
+    }
+}
+.agent-chat__question-custom {
+    @include input-common;
+    border: unset;
+}
+// 跳转菜单
+.agent-chat__nav-rail {
+    border: unset;
+}
+.agent-chat__nav-rail--expanded {
+    border: unset;
+    box-shadow: var(--b3-menu-shadow);
+    background-color: var(--b3-menu-background);
+    @include superellipse(12px);
+    .neo-visual-frostedglass & {
+        background-color: transparent;
+        box-shadow: var(--b3-menu-shadow-blur);
+    }
+    &::before {
+        @include frostedglass-before;
+        @include frostedglass($blur: s, $color: menu);
+        box-shadow: var(--b3-menu-shadow-inset);
     }
 }
