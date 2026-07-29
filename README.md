@@ -4,6 +4,14 @@
 - **Feedback**: For any questions or suggestions during use, please visit the [Neo Theme Introduction & Feedback Thread](https://ld246.com/article/1783158376401) or [GitHub](https://github.com/QYLexpired/Neo/issues)
 - **Support Me**: The Neo theme is completely free. If you enjoy this theme, feel free to star it on [GitHub](https://github.com/QYLexpired/Neo) or [buy me a coffee](https://icnmjy02sv9g.feishu.cn/wiki/FekNwrtB7ia1WckYelRckwzZnig?from=from_copylink)
 #### What's New
+##### v1.3.9
+- Added smooth transition for light/dark mode switching
+- Dividers can now be set to different colors via block styles
+- Adjusted some button styles
+- Fixed side memo errors
+- Optimized AI agent styles
+- Changed the color extraction algorithm for theme color following banner images
+- Adjusted block reference popup animation
 ##### v1.3.8
 - Adapted for SiYuan 3.7.4-alpha.1
     - Adapted heading auto-numbering
@@ -13,13 +21,6 @@
 - Redesigned bazaar animation
 - Optimized cross-block selection effect
 - Optimized block drag hint effect
-##### v1.3.7
-- Adapted for SiYuan 3.7.3
-- Adjusted menu and dialog shadows
-- Adjusted main interface shadows
-- Optimized fluid cursor ripple effect
-- Side memo support temporary hiding
-- Fixed conflict between scroll effect and side memo
 #### Features
 > Some of the following features depend on the Neo+ plugin.
 - Excellent performance comparable to the default theme
@@ -51,6 +52,14 @@ The creation of the Neo theme drew significant inspiration from the following pr
 - [Rem Craft](https://github.com/svchord/Rem-Craft)
 - [Savor](https://github.com/royc01/notion-theme)
 #### Update Notes
+##### v1.3.9
+- Added smooth transition for light/dark mode switching
+- Dividers can now be set to different colors via block styles
+- Adjusted some button styles
+- Fixed side memo errors
+- Optimized AI agent styles
+- Changed the color extraction algorithm for theme color following banner images
+- Adjusted block reference popup animation
 ##### v1.3.8
 - Adapted for SiYuan 3.7.4-alpha.1
     - Adapted heading auto-numbering

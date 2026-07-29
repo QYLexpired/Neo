@@ -5,6 +5,7 @@
 }
 .protyle-breadcrumb__bar {
     @include overflow-indicator-fadein-mask($fadeout-size-m, "left right");
+    scrollbar-width: none;
 }
 .protyle-breadcrumb__arrow {
     color: rgba(0, 0, 0, 0);

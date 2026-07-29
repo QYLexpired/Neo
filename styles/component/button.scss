@@ -163,6 +163,9 @@
     .b3-button--cancel {
         @include button-transparent-outline;
     }
+    .b3-button--remove {
+        @include button-warning;
+    }
 }
 // 集市按钮
 .config-bazaar__title {

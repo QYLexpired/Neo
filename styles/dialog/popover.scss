@@ -1,13 +1,15 @@
 @use "../utils" as *;
 .block__popover {
-    transform: translateX(max(3%, 20px));
-    transition: transform 0.2s var(--neo-ease-out-3);
+    transform: translateY(min(-5%, -30px));
+    transition: transform 0.3s var(--neo-ease-out-3);
     &.block__popover--open {
         border: unset;
         box-shadow: var(--b3-menu-shadow);
         @include superellipse(12px);
         background-color: var(--b3-theme-background);
         transform: none;
+        pointer-events: none;
+        animation: neo-popover-enable-click 0.01s 0.35s forwards; // 防止抽搐
         .neo-visual-frostedglass & {
             background-color: transparent;
             box-shadow: var(--b3-menu-shadow-blur);
@@ -28,5 +30,10 @@
                 }
             }
         }
+    }
+}
+@keyframes neo-popover-enable-click {
+    to {
+        pointer-events: auto;
     }
 }
