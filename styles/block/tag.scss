@@ -8,13 +8,14 @@
     @include superellipse(6px);
     background-color: oklch(from currentColor l c h / 0.12);
     color: var(--neo-tag-color);
-    border: 0.5px solid oklch(from currentColor l c h / 0.18);
+    outline: 0.5px solid oklch(from currentColor l c h / 0.25);
+    outline-offset: -0.5px;
+    border: unset;
     padding: 2px 4px;
     font-size: 0.85em;
     margin: 0 0.35em;
     &::before {
         content: "#";
-        display: inline-block;
         margin-inline-end: 4px;
     }
     &:hover {

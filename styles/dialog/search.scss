@@ -9,7 +9,7 @@
             margin-right: -$offset;
             margin-left: 0;
             padding-right: 0;
-            transition: var(--b3-transition);
+            transition: inherit;
             &:hover {
                 background-color: transparent;
                 color: var(--b3-theme-error);

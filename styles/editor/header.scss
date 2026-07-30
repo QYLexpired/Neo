@@ -12,8 +12,8 @@
     padding: 4px 14px;
     background-color: oklch(from currentColor l c h / 0.12);
     color: var(--neo-tag-color);
-    outline: 1px solid oklch(from currentColor l c h / 0.18);
-    outline-offset: -1px;
+    outline: 0.5px solid oklch(from currentColor l c h / 0.25);
+    outline-offset: -0.5px;
     &::before {
         content: "#";
         display: inline-block;
@@ -24,7 +24,7 @@
         margin-right: -$offset;
         margin-left: 0;
         padding-right: 0;
-        transition: var(--b3-transition);
+        transition: inherit;
         &:hover {
             background-color: transparent;
             color: var(--b3-theme-error);
