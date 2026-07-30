@@ -91,7 +91,7 @@
     inset: 0;
     pointer-events: none;
     transition: 1.2s var(--neo-ease-spring-2);
-    &--show {
+    &.config__view--show {
         opacity: 1;
         transform: scale(1);
         filter: none;

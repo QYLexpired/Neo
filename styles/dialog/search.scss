@@ -2,14 +2,8 @@
 @use "../component" as *;
 #criteria {
     .b3-chips .b3-chip {
-        @include superellipse(6px);
-        @include button-transparent-outline;
         $offset: 16px;
         padding: 4px 14px;
-        background-color: oklch(from currentColor l c h / 0.12);
-        color: var(--neo-tag-color);
-        outline: 1px solid oklch(from currentColor l c h / 0.18);
-        outline-offset: -1px;
         .b3-chip__close {
             opacity: 0;
             margin-right: -$offset;
@@ -23,8 +17,6 @@
         }
         &:hover {
             padding: 4px 6px;
-            background-color: oklch(from currentColor l c h / 0.18);
-            color: var(--neo-tag-color);
             .b3-chip__close {
                 opacity: 1;
                 margin-right: 0;

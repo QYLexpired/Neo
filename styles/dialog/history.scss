@@ -21,3 +21,19 @@
     background-color: transparent;
     font-weight: bold;
 }
+.history__diff-filters {
+    border-bottom: unset;
+}
+.history__action {
+    border-bottom: unset;    
+}
+.history__compare-panel {
+    background-color: transparent;    
+}
+.history__compare-label {
+    border-bottom: unset;   
+}
+// diff
+.history__diff-filter-row--kind {
+    padding-left: unset;
+}

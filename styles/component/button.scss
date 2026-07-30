@@ -5,7 +5,7 @@
     @include superellipse(7px);
     box-shadow: none;
     outline: none;
-    transition: 0.25s ease;
+    transition: var(--b3-transition);
     &:hover,
     &:active,
     &:focus {
@@ -103,6 +103,23 @@
 }
 .b3-chip {
     @include superellipse(7px);
+    color: var(--b3-theme-on-surface);
+    background-color: var(--b3-list-hover);
+    transition: var(--b3-transition);
+    opacity: 1;
+    .b3-chips & {
+        transition: var(--b3-transition);
+    }
+    &:hover {
+        color: var(--b3-theme-on-surface);
+        background-color: var(--b3-list-active);
+        opacity: 1;
+    }
+    &.b3-chip--primary,
+    &.b3-chip--current {
+        background-color: var(--neo-button-primary);
+        @include contrast-color(--neo-button-primary);        
+    }
 }
 .b3-button {
     @include button-transparent-outline;
