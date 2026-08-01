@@ -5,9 +5,10 @@
 - **支持我**：Neo主题是完全免费的，如果喜欢这个主题，欢迎在[GitHub](https://github.com/QYLexpired/Neo)为我点亮小星星，也可以[请我喝杯咖啡](https://icnmjy02sv9g.feishu.cn/wiki/FekNwrtB7ia1WckYelRckwzZnig?from=from_copylink)
 #### 更新说明
 ##### 1.3.10
-- 适配思源3.7.4-alpha.3
+- 适配思源3.7.4-alpha.5
 - 支持通过CSS代码片段自定义彩色标题/彩色列表/彩色文档树的亮度、饱和度
 - 重做全局阴影
+- 优化大量细节
 ##### v1.3.9
 - 为明亮/暗黑模式切换添加平滑过渡
 - 分隔线可通过块样式设置不同颜色
@@ -56,6 +57,11 @@
 - [Rem Craft](https://github.com/svchord/Rem-Craft)
 - [Savor](https://github.com/royc01/notion-theme)
 #### 更新日志
+##### 1.3.10
+- 适配思源3.7.4-alpha.5
+- 支持通过CSS代码片段自定义彩色标题/彩色列表/彩色文档树的亮度、饱和度
+- 重做全局阴影
+- 优化大量细节
 ##### v1.3.9
 - 为明亮/暗黑模式切换添加平滑过渡
 - 分隔线可通过块样式设置不同颜色

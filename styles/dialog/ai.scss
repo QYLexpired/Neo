@@ -1,0 +1,8 @@
+@use "../utils" as *;
+#aiProviderCards,
+.config-ai-provider__view  {
+    .b3-card {
+        @include superellipse(10px);
+        outline: unset;
+    }
+}

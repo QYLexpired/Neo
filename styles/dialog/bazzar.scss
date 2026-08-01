@@ -80,31 +80,13 @@
     }
 }
 .config-bazaar__readme {
-    padding: unset;
-    @include superellipse(18px);
-    background-color: var(--b3-theme-background);
-    @include frostedglass($blur: g, $color: background);
-    box-shadow: var(--b3-dialog-shadow-inset);
-    opacity: 0;
-    transform: scale(1.2);
-    filter: blur(32px);
-    inset: 0;
-    pointer-events: none;
-    transition: 1.2s var(--neo-ease-spring-2);
-    &.config__view--show {
-        opacity: 1;
-        transform: scale(1);
-        filter: none;
-        pointer-events: all;
-        transition: 0.3s var(--neo-ease-out-3);
-    }
     .item__side {
         padding: var(--_sidebar-gap);
         margin: var(--_sidebar-gap);
         margin-right: 0;
         height: calc(100% - var(--_sidebar-gap) * 4);
         @include superellipse(14px);
-        box-shadow: var(--neo-main-shadow-heavy);
+        box-shadow: var(--neo-main-shadow);
         background-color: transparent;
         .item__img {
             @include superellipse(14px);
@@ -112,14 +94,13 @@
         color: var(--b3-theme-on-surface);
         a {
             &[title="Creator"],
-            &[title="GitHub Repo"],
             &[title="Stars"],
             &[title="Open issues"] {
                 color: var(--b3-theme-on-surface);
             }
-            &.item__title {
-                color: var(--b3-theme-on-background);
-            }
+        }
+        &.item__meta-title {
+            color: var(--b3-theme-on-background);
         }
     }
     .item__main {

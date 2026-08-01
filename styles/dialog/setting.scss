@@ -57,3 +57,43 @@
 .config-about__motto {
     color: oklch(from var(--b3-theme-surface) l c h / 0.32);
 }
+.config__view {
+    padding: unset;
+    @include superellipse(18px);
+    background-color: var(--b3-theme-background);
+    @include frostedglass($blur: g, $color: background);
+    box-shadow: var(--b3-dialog-shadow-inset);
+    opacity: 0;
+    transform: scale(1.2);
+    filter: blur(32px);
+    inset: 0;
+    pointer-events: none;
+    transition: 1.2s var(--neo-ease-spring-2);
+    &.config__view--show {
+        opacity: 1;
+        transform: scale(1);
+        filter: none;
+        pointer-events: all;
+        transition: 0.3s var(--neo-ease-out-3);
+    }
+}
+.config__view {
+    padding: unset;
+    @include superellipse(18px);
+    background-color: var(--b3-theme-background);
+    @include frostedglass($blur: g, $color: background);
+    box-shadow: var(--b3-dialog-shadow-inset);
+    opacity: 0;
+    transform: scale(1.2);
+    filter: blur(32px);
+    inset: 0;
+    pointer-events: none;
+    transition: 1.2s var(--neo-ease-spring-2), opacity 0.8s;
+    &.config__view--show {
+        opacity: 1;
+        transform: scale(1);
+        filter: none;
+        pointer-events: all;
+        transition: 0.3s var(--neo-ease-out-3);
+    }
+}

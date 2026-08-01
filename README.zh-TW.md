@@ -4,6 +4,11 @@
 - **問題回饋**：使用過程中有任何問題或建議，可透過 [Neo 主題介紹及回饋綜合帖](https://ld246.com/article/1783158376401) 或 [GitHub](https://github.com/QYLexpired/Neo/issues) 進行回饋
 - **支持我**：Neo 主題是完全免費的，如果喜歡這個主題，歡迎在 [GitHub](https://github.com/QYLexpired/Neo) 為我點亮小星星，也可以[請我喝杯咖啡](https://icnmjy02sv9g.feishu.cn/wiki/FekNwrtB7ia1WckYelRckwzZnig?from=from_copylink)
 #### 更新說明
+##### v1.3.10
+- 適配思源 3.7.4-alpha.5
+- 支援透過 CSS 程式碼片段自訂彩色標題/彩色列表/彩色文件樹的亮度、飽和度
+- 重做全域陰影
+- 優化大量細節
 ##### v1.3.9
 - 為明亮/暗黑模式切換添加平滑過渡
 - 分隔線可透過塊樣式設定不同顏色
@@ -52,6 +57,11 @@
 - [Rem Craft](https://github.com/svchord/Rem-Craft)
 - [Savor](https://github.com/royc01/notion-theme)
 #### 更新日誌
+##### v1.3.10
+- 適配思源 3.7.4-alpha.5
+- 支援透過 CSS 程式碼片段自訂彩色標題/彩色列表/彩色文件樹的亮度、飽和度
+- 重做全域陰影
+- 優化大量細節
 ##### v1.3.9
 - 為明亮/暗黑模式切換添加平滑過渡
 - 分隔線可透過塊樣式設定不同顏色

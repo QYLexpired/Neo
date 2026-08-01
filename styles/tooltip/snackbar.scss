@@ -4,22 +4,26 @@
     transform: none !important;
 }
 .b3-snackbars {
-    top: 8px;
-    right: 18px;
+    top: 20px;
+    right: 30px;
     transition: none;
     transform: none;
     & > .fn__flex-1 {
         padding: 30px;
     }
     .body--toolbar-hide & {
-        top: 18px;
+        top: 30px;
+    }
+    .body--toolbar-hide.neo-ide-body & {
+        top: 20px;
     }
     .body--window & {
         top: 0;
         right: 0;
     }
     .neo-mobile & {
-        right: 0;
+        top: 30px;
+        right: -15px;
     }
 }
 .b3-snackbar__close {

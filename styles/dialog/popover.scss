@@ -4,7 +4,7 @@
     transition: transform 0.3s var(--neo-ease-out-3);
     &.block__popover--open {
         border: unset;
-        box-shadow: var(--b3-menu-shadow);
+        box-shadow: var(--b3-dialog-shadow);
         @include superellipse(12px);
         background-color: var(--b3-theme-background);
         transform: none;
@@ -12,12 +12,12 @@
         animation: neo-popover-enable-click 0.01s 0.35s forwards; // 防止抽搐
         .neo-visual-frostedglass & {
             background-color: transparent;
-            box-shadow: var(--b3-menu-shadow-blur);
+            box-shadow: var(--b3-dialog-shadow-blur);
         }
         &::before {
             @include frostedglass-before;
             @include frostedglass($blur: l, $color: background);
-            box-shadow: var(--b3-menu-shadow-inset);
+            box-shadow: var(--b3-dialog-shadow-inset);
         }
         .block__icons {
             background-color: transparent;

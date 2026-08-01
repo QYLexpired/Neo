@@ -4,6 +4,11 @@
 - **Feedback**: For any questions or suggestions during use, please visit the [Neo Theme Introduction & Feedback Thread](https://ld246.com/article/1783158376401) or [GitHub](https://github.com/QYLexpired/Neo/issues)
 - **Support Me**: The Neo theme is completely free. If you enjoy this theme, feel free to star it on [GitHub](https://github.com/QYLexpired/Neo) or [buy me a coffee](https://icnmjy02sv9g.feishu.cn/wiki/FekNwrtB7ia1WckYelRckwzZnig?from=from_copylink)
 #### What's New
+##### v1.3.10
+- Adapted for SiYuan 3.7.4-alpha.5
+- Support customizing the brightness and saturation of colored headings, colored lists, and colored document tree via CSS snippets
+- Redesigned global shadows
+- Optimized numerous details
 ##### v1.3.9
 - Added smooth transition for light/dark mode switching
 - Dividers can now be set to different colors via block styles
@@ -52,6 +57,11 @@ The creation of the Neo theme drew significant inspiration from the following pr
 - [Rem Craft](https://github.com/svchord/Rem-Craft)
 - [Savor](https://github.com/royc01/notion-theme)
 #### Update Notes
+##### v1.3.10
+- Adapted for SiYuan 3.7.4-alpha.5
+- Support customizing the brightness and saturation of colored headings, colored lists, and colored document tree via CSS snippets
+- Redesigned global shadows
+- Optimized numerous details
 ##### v1.3.9
 - Added smooth transition for light/dark mode switching
 - Dividers can now be set to different colors via block styles

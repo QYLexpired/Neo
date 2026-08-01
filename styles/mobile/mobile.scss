@@ -99,6 +99,9 @@
     #model .config-group {
         margin: 24px;
     }
+    #model .config-assets__preview {
+        background-color: transparent;
+    }
     // keyboard
     #keyboardToolbar {
         background-color: var(--b3-theme-surface);
@@ -124,6 +127,16 @@
         box-shadow: unset;
         color: var(--b3-theme-on-surface);
     }
+    .protyle-util--mobile {
+        @include superellipse(30px);
+    }
+    .keyboard__action {
+        color: var(--b3-theme-on-surface);
+        transition: var(--b3-transition);
+        &:hover {
+            color: var(--b3-theme-on-background);
+        }
+    }
     // icon
     .toolbar__icon {
         @include superellipse(8px);
@@ -144,5 +157,31 @@
                 color: var(--b3-theme-accent);
             }
         }
+    }
+    #toolbarTabs {
+        @include superellipse(8px);
+        color: var(--b3-theme-on-surface);
+        transition: var(--b3-transition);
+        &:hover,
+        &:focus {
+            background-color: transparent;
+            color: var(--b3-theme-on-background);
+        }
+    }
+    // tab
+    .mobile-tabs__item {
+        @include superellipse(14px);
+        border: unset;
+        outline: 1px solid var(--b3-border-color-trans);
+        outline-offset: -1px;
+        background-color: transparent;
+        &.mobile-tabs__item--active {
+            outline-color: oklch(from var(--b3-base-color) clamp(0.4, l, 1) c h / 0.3);
+            background-color: oklch(from var(--b3-base-color) clamp(0.4, l, 1) c h / 0.12);
+            box-shadow: none;
+        }
+    }
+    .mobile-tabs__actions {
+        border-color: var(--b3-border-color-trans);
     }
 }

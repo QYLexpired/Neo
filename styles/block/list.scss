@@ -204,11 +204,13 @@
     }
 }
 .protyle-wysiwyg .li[data-subtype=t] .protyle-action--task,
-.av__checkbox {
+.av__cell-check .av__checkbox,
+.av__cell-uncheck .av__checkbox {
     color: transparent !important;
 }
 .protyle-wysiwyg .li[data-subtype=t] > .protyle-action--task::before,
-.av__checkbox {
+.av__cell-check .av__checkbox,
+.av__cell-uncheck .av__checkbox {
     content: "" !important;
     position: absolute;
     width: 1.2em;

@@ -173,7 +173,8 @@
 // action按钮
 .b3-dialog__action,
 .config-account__center,
-#action {
+#action,
+.emojis__link-footer {
     .b3-button--text {
         @include button-primary;
     }
@@ -207,7 +208,8 @@
 .config-bazaar__readme .item__side {
     .b3-button {
         @include button-transparent-outline-hover-primary;
-        &[data-type="feedback"] {
+        &[data-type="uninstall"],
+        &[data-type="package-disable"] {
             @include button-transparent-outline-hover-warning;
         }
     }
@@ -255,6 +257,7 @@
     &[data-type="3"],
     &[data-type="4"] {
         background-color: oklch(from currentColor l c h / 0.15);
+        outline-color: oklch(from currentColor l c h / 0.12);
         line-height: 32px;
         @include superellipse(16px);
         padding: 8px 0;
