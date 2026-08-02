@@ -37,3 +37,32 @@
 .history__diff-filter-row--kind {
     padding-left: unset;
 }
+.history__compare-filter--modified>span {
+    background-color: var(--b3-theme-accent);
+}
+.history__diff--focus {
+    animation: neo-diff-focus 0.55s ease-in-out 3;
+}
+@keyframes neo-diff-focus {
+    0%   { opacity: 1; }
+    50%  { opacity: 1; }
+    80%  { opacity: 0; }
+    100% { opacity: 1; }
+}
+.history__compare-panel [data-history-diff~=modified] {
+    border-radius: 11px !important;
+    box-shadow: none;
+    background-color: oklch(from var(--b3-theme-accent) l c h / 0.2) !important;
+    animation: neo-diff-focus 0.7s ease-in-out 3;
+    &.protyle-title__input {
+        border-radius: 0 !important;
+    }
+}
+.history__compare-panel:last-child [data-history-diff~=only],
+.history__compare-panel:last-child [data-history-diff=inline] {
+    background-color: oklch(from var(--b3-theme-success) l c h / 0.2) !important;
+}
+.history__compare-panel:first-child [data-history-diff~="only"],
+.history__compare-panel:first-child [data-history-diff="inline"] {
+    background-color: oklch(from var(--b3-theme-error) l c h / 0.2) !important;
+}

@@ -118,7 +118,13 @@
     &.b3-chip--primary,
     &.b3-chip--current {
         background-color: var(--neo-button-primary);
-        @include contrast-color(--neo-button-primary);        
+        @include contrast-color(--neo-button-primary);
+        &.history__compare-filter {
+            & > span {
+                outline: 1px solid;
+                @include contrast-color(--neo-button-primary, outline-color, 0.8);
+            }
+        }
     }
 }
 .b3-button {
@@ -200,8 +206,7 @@
                 color: var(--b3-theme-accent);
             }
         }
-        &[data-type="install-all"],
-        &[data-type="myUpdate"] {
+        &[data-type="install-all"] {
             @include button-transparent-outline-hover-primary;
         }
     }
