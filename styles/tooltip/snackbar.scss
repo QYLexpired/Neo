@@ -10,6 +10,7 @@
     transform: none;
     & > .fn__flex-1 {
         padding: 30px;
+        overflow: visible;
     }
     .body--toolbar-hide & {
         top: 30px;

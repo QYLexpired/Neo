@@ -200,8 +200,9 @@
                 color: var(--b3-theme-accent);
             }
         }
-        &[data-type="install-all"] {
-            @include button-primary;
+        &[data-type="install-all"],
+        &[data-type="myUpdate"] {
+            @include button-transparent-outline-hover-primary;
         }
     }
 }

@@ -4,7 +4,7 @@
     background-color: var(--b3-theme-surface);
     @include frostedglass($blur: s, $color: surface);
     border: unset;
-    box-shadow: var(--b3-menu-shadow);
+    box-shadow: var(--neo-main-shadow);
     padding: 6px;
     animation: neo-toolbar-entrance 0.45s var(--neo-ease-spring-2);
     transform-origin: 50% 150%;

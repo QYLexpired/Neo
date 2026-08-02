@@ -31,7 +31,7 @@
             box-shadow: unset;
         }
         .b3-menu__title {
-            border-bottom: 1px solid var(--b3-border-color-trans);
+            border-bottom: unset;
             background-color: transparent;
             box-sizing: border-box;
         }
@@ -47,12 +47,24 @@
             border: unset;
         }
     }
-    // editor
-    & > .toolbar {
+    .b3-menu__group-items {
+        background-color: oklch(from var(--b3-theme-surface) l c h / 0.32);
+        outline: .5px solid oklch(from var(--b3-theme-on-background) l c h / 0.12);
+        outline-offset: -0.5px;
+        & > .b3-menu__item {
+            background-color: transparent;
+            border: none !important;
+        }
+    }
+    .b3-menu__groups {
+        background-color: transparent;
+    }
+    .toolbar {
         border-bottom: unset;
-        background-color: var(--b3-theme-background);
+        background-color: transparent;
         box-sizing: border-box;
     }
+    // editor
     #editor {
         background-color: var(--b3-theme-background);
         & > .protyle-breadcrumb {
@@ -72,13 +84,6 @@
     #sidebar {
         background-color: var(--b3-theme-background);
         @include frostedglass($blur: s, $color: background);
-        & > .toolbar:first-child {
-            border-bottom: 1px solid var(--b3-border-color-trans);
-            box-sizing: border-box;
-        }
-        .toolbar {
-            background-color: transparent;
-        }
     }
     // model
     #model {
@@ -90,17 +95,18 @@
             @include frostedglass-before;
             @include frostedglass($blur: s, $color: background);
         }
-        & > .toolbar--border {
-            border-bottom: 1px solid var(--b3-border-color-trans);
-            background-color: transparent;
-            box-sizing: border-box;
-        }
     }
     #model .config-group {
-        margin: 24px;
+        margin: 0;
     }
     #model .config-assets__preview {
         background-color: transparent;
+    }
+    #model .config-items {
+        background-color: oklch(from var(--b3-theme-surface) l c h / 0.32);
+    }
+    .config--mobile {
+        background-color: transparent !important;
     }
     // keyboard
     #keyboardToolbar {
@@ -136,6 +142,9 @@
         &:hover {
             color: var(--b3-theme-on-background);
         }
+    }
+    .protyle-util--mobile {
+        box-shadow: var(--neo-main-shadow);
     }
     // icon
     .toolbar__icon {

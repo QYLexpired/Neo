@@ -6,9 +6,11 @@
     background-color: unset;
     .neo-haswnd {
         padding: calc(var(--_layout-gap) / 2);
+        min-height: 0;
+        min-width: 0;
         & > [data-type="wnd"] {
             @include superellipse(10px);
-            box-shadow: var(--neo-main-shadow);
+            box-shadow: var(--neo-layout-shadow);
             background-color: var(--b3-theme-background);
         }
     }

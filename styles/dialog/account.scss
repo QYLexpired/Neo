@@ -1,0 +1,14 @@
+@use "../utils" as *;
+.config-account__profile {
+    overflow: visible
+}
+.config-account__profile-avatar {
+    @include superellipse(9px);
+    border: none;
+    background-color: transparent;
+    margin-right: 8px;
+    transition: 0.65s var(--neo-ease-spring-4);
+    &:hover {
+        scale: 1.12;
+    }
+}
