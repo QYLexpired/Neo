@@ -20,10 +20,10 @@ $switch-width: 36px;
         height: $switch-thumb-height !important;
         border-radius: 24px;
         top: 50%;
-        transform: translateY(-50%);
-        left: $switch-border-width;
+        left: 0;
+        transform: translateX(2px) translateY(-50%);
         background-color: #ffffff;
-        transition: 1.2s var(--neo-ease-spring-4);
+        transition: 0.6s var(--neo-ease-spring-3);
     }
     &:checked {
         background-color: var(--neo-switch-primary);
@@ -32,17 +32,20 @@ $switch-width: 36px;
             height: $switch-thumb-height;
             border-radius: 24px;
             top: 50%;
-            transform: translateY(-50%);
-            left: 13px;
-            right: $switch-border-width;
+            left: 0;
+            transform: translateX(13px) translateY(-50%);
             background-color: #ffffff !important;
         }
     }
     &:active {
         &::after {
-            transition: 0.8s var(--neo-ease-spring-4);
-            transform: translateY(-50%) scale(1.35);
+            transform: translateX(2px) translateY(-50%) scale(1.35);
             box-shadow: var(--neo-main-shadow);
+        }
+        &:checked {
+            &::after {
+                transform: translateX(12px) translateY(-50%) scale(1.35);
+            }
         }
     }
     .neo-mode-dark & {

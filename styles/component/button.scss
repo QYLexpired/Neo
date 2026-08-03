@@ -5,12 +5,16 @@
     @include superellipse(7px);
     box-shadow: none;
     outline: none;
-    transition: var(--b3-transition);
+    transition: var(--b3-transition), transform 0.45s var(--neo-ease-spring-3);
     &:hover,
     &:active,
     &:focus {
         box-shadow: none; // 覆写思源的按钮阴影
         // outline: none; 设置此属性会导致hover时按钮outline被覆写
+    }
+    &:active {
+        transform: scale(0.975);
+        transition: var(--b3-transition), transform 0.15s var(--neo-ease-out-3);
     }
 }
 @mixin button-primary {

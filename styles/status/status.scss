@@ -8,8 +8,8 @@
         bottom: calc(anchor(--anchor-layout-center bottom) + calc(var(--_layout-gap) * 1.5));
         right: calc(anchor(--anchor-layout-center right) + calc(var(--_layout-gap) * 1.5));
         @include superellipse(18px);
-        background-color: var(--b3-theme-surface);
-        @include frostedglass($blur: s, $color: surface, $alpha: 0.6);
+        background-color: var(--b3-menu-background);
+        @include frostedglass($blur: s, $color: menu, $alpha: 0.6);
         box-shadow: var(--neo-main-shadow);
         height: 26px;
         line-height: 26px;
