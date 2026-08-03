@@ -8,6 +8,20 @@ $table-border-color: oklch(from currentColor l c h / 0.15);
     padding: 1px;
     overflow: hidden;
     @include superellipse(10px);
+    @at-root {
+        .b3-typography table.protyle-table-control__table--add-column,
+        .protyle-wysiwyg table.protyle-table-control__table--add-column,
+        .b3-typography table.protyle-table-control__table--add-row,
+        .protyle-wysiwyg table.protyle-table-control__table--add-row,
+        .b3-typography table.protyle-table-control__table--handle-column-start,
+        .protyle-wysiwyg table.protyle-table-control__table--handle-column-start,
+        .b3-typography table.protyle-table-control__table--handle-column-end,
+        .protyle-wysiwyg table.protyle-table-control__table--handle-column-end,
+        .b3-typography table.protyle-table-control__table--handle-row-end,
+        .protyle-wysiwyg table.protyle-table-control__table--handle-row-end {
+            border-radius: 11px !important;
+        }
+    }
     caption {
         border-bottom: 1px solid $table-border-color;
         &[style*="caption-side: bottom"] {
@@ -44,17 +58,26 @@ $table-border-color: oklch(from currentColor l c h / 0.15);
 .protyle-table-control__add,
 .protyle-table-control__handle {
     background-color: transparent;
+    background-image: unset;
     box-shadow: unset;
     border: unset;
     color: var(--b3-theme-on-surface);
-    transition: var(--b3-transition);
+    transition: color var(--b3-transition);
     &:hover {
         background-color: transparent;
+        background-image: unset;
         color: var(--b3-theme-accent);
     }
     svg {
         transition: var(--b3-transition);
         animation: neo-table-control 0.5s var(--neo-ease-spring-3);
+    }
+    @at-root {
+        .protyle-table-control__handle--column {
+            svg {
+                animation: neo-table-control-column 0.5s var(--neo-ease-spring-3);
+            }
+        }
     }
 }
 .protyle-table-control__handle--cell {
@@ -78,17 +101,21 @@ $table-border-color: oklch(from currentColor l c h / 0.15);
         transform: scale(1);
     }
 }
+@keyframes neo-table-control-column {
+    from {
+        transform: rotate(90deg) scale(0.15);
+        opacity: 0;
+    }
+    to {
+        transform: rotate(90deg) scale(1);
+    }
+}
 .protyle-table-control__selection {
     border: unset;
-    outline: 1px solid oklch(from var(--b3-theme-accent) l c calc(h + 90) / 0.3);
+    outline: 1px solid oklch(from var(--b3-theme-secondary) l c h / 0.3);
     outline-offset: -1px;
-    background-color: oklch(from var(--b3-theme-accent) l c calc(h + 90) / 0.12);
+    background-color: oklch(from var(--b3-theme-secondary) l c h / 0.12);
 }
 .protyle-table-control__drop {
-    background-color: oklch(from var(--b3-theme-accent) l c calc(h + 90));
-}
-.protyle-table-control__color {
-    border: unset;
-    outline: 0.5px solid oklch(from currentColor l c h / 0.18);
-    outline-offset: -0.5px;
+    background-color: var(--b3-theme-secondary);
 }

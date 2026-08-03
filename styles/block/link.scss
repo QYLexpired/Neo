@@ -23,10 +23,10 @@ a {
     color: var(--b3-theme-accent);
     transition: var(--b3-transition);
     &:hover {
-        color: oklch(from var(--b3-theme-accent) l c calc(h + 90));
+        color: var(--b3-theme-secondary);
         text-decoration: none;
     }
     &.fn__a:hover {
-        color: oklch(from var(--b3-theme-accent) l c calc(h + 90));
+        color: var(--b3-theme-secondary);
     }
 }

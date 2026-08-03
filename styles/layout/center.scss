@@ -6,7 +6,19 @@ body:not(.body--window) {
             padding: calc(var(--_layout-gap) / 2);
             & > [data-type="wnd"] {
                 @include superellipse(10px);
-                box-shadow: var(--neo-layout-shadow);
+                box-shadow: var(--neo-layout-shadow-blur);
+                position: relative;
+                &::before {
+                    content: "";
+                    position: absolute;
+                    inset: 0;
+                    border-radius: inherit;
+                    corner-shape: inherit;
+                    background-color: transparent;
+                    box-shadow: var(--neo-layout-shadow-inset);
+                    pointer-events: none;
+                    z-index: 10;
+                }
             }
         }
     }
@@ -21,9 +33,24 @@ body:not(.body--window) {
                 corner-shape: unset;
                 border-radius: unset;
                 box-shadow: unset;
+                &::before {
+                    display: none;
+                }
                 & > .layout-tab-container {
                     @include superellipse(10px);
-                    box-shadow: var(--neo-layout-shadow);
+                    box-shadow: var(--neo-layout-shadow-blur);
+                    position: relative;
+                    &::before {
+                        content: "";
+                        position: absolute;
+                        inset: 0;
+                        border-radius: inherit;
+                        corner-shape: inherit;
+                        background-color: transparent;
+                        box-shadow: var(--neo-layout-shadow-inset);
+                        pointer-events: none;
+                        z-index: 10;
+                    }
                 }
                 .layout-tab-bar {
                     background-color: transparent;

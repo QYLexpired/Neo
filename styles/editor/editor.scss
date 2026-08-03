@@ -247,9 +247,9 @@
 }
 // 选区
 .protyle-select {
-    outline: 1px solid oklch(from var(--b3-theme-accent) l c calc(h + 90) / 0.3);
+    outline: 1px solid oklch(from var(--b3-theme-secondary) l c h / 0.3);
     outline-offset: -1px;
-    background-color: oklch(from var(--b3-theme-accent) l c calc(h + 90) / 0.12);
+    background-color: oklch(from var(--b3-theme-secondary) l c h / 0.12);
 }
 .protyle-wysiwyg--select::after,
 .protyle-wysiwyg--hl::after {
@@ -265,9 +265,9 @@
 .b3-list--background .b3-list-item {
     &.dragover {
         border-radius: 0 !important;
-        outline: 1px solid oklch(from var(--b3-theme-accent) l c calc(h + 90) / 0.12);
+        outline: 1px solid oklch(from var(--b3-theme-secondary) l c h / 0.12);
         outline-offset: -1px;
-        background-color: oklch(from var(--b3-theme-accent) l c calc(h + 90) / 0.12) !important;
+        background-color: oklch(from var(--b3-theme-secondary) l c h / 0.12) !important;
     }
     &.dragover__left,
     &.dragover__right,
@@ -281,7 +281,7 @@
             display: none;
         }
         &::after {
-            background-color: oklch(from var(--b3-theme-accent) l c calc(h + 90));
+            background-color: oklch(from var(--b3-theme-secondary) l c h);
         }
     }
 }

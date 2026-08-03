@@ -10,8 +10,20 @@
         min-width: 0;
         & > [data-type="wnd"] {
             @include superellipse(10px);
-            box-shadow: var(--neo-layout-shadow);
             background-color: var(--b3-theme-background);
+            box-shadow: var(--neo-layout-shadow-blur);
+            position: relative;
+            &::before {
+                content: "";
+                position: absolute;
+                inset: 0;
+                border-radius: inherit;
+                corner-shape: inherit;
+                background-color: transparent;
+                box-shadow: var(--neo-layout-shadow-inset);
+                pointer-events: none;
+                z-index: 10;
+            }
         }
     }
 }

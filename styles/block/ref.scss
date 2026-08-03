@@ -18,7 +18,7 @@
         color: var(--_ref-underline-color);
     }
     &[data-subtype="s"] { // 静态锚文本
-        --_ref-underline-color: oklch(from var(--b3-theme-accent) l c calc(h + 90));
+        --_ref-underline-color: var(--b3-theme-secondary);
     }
 }
 .protyle-wysiwyg [data-node-id] span[data-type=virtual-block-ref] {

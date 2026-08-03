@@ -5,6 +5,7 @@
 - **支持我**：Neo主题是完全免费的，如果喜欢这个主题，欢迎在[GitHub](https://github.com/QYLexpired/Neo)为我点亮小星星，也可以[请我喝杯咖啡](https://icnmjy02sv9g.feishu.cn/wiki/FekNwrtB7ia1WckYelRckwzZnig?from=from_copylink)
 #### 更新说明
 ##### 1.4.0
+- 优化全局界面通透度
 #### 特性
 > 以下部分特性依赖Neo+插件
 - 媲美默认主题的优异性能
