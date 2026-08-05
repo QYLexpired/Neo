@@ -3,7 +3,7 @@
   "author": "QYL",
   "url": "https://github.com/QYLexpired/Neo",
   "version": "1.4.0",
-  "minAppVersion": "3.7.4-alpha.5",
+  "minAppVersion": "3.8.0-alpha.1",
   "displayName": {
     "default": "Neo"
   },
@@ -23,6 +23,9 @@
   "modes": [
     "light",
     "dark"
+  ],
+  "frontends": [
+    "all"
   ],
   "keywords": [
   ]

@@ -20,12 +20,7 @@
     box-shadow: var(--neo-main-shadow);
     @include superellipse(10px);
     &::before {
-        background-color: transparent;
-    }
-    &:hover:not(.av__gallery-item--select) {
-        &::before {
-            background-color: transparent;
-        }
+        background-color: transparent !important;
     }
 }
 .av__gallery-fields:hover .b3-chip[data-type=block-more] {
@@ -70,6 +65,11 @@
         @include button-transparent-hover-background;
         border-color: var(--b3-border-color-trans) !important;
     }
+}
+.av__relation-panel .av__relation-table-row[data-relation-type=selected],
+.av__relation-panel .av__relation-table-row[data-relation-type=selected]:hover,
+.av__relation-panel .av__relation-table-row[data-relation-type=selected].b3-menu__item--current {
+    background-color: var(--b3-list-active);
 }
 // cell
 .av__celltext--url,

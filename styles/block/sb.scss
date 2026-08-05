@@ -24,7 +24,7 @@
         & > [data-node-id] {
             .sb__resize-tip {
                 color: var(--b3-theme-on-surface);
-                @include superellipse(6px);
+                @include superellipse(8px);
                 @include frostedglass($blur: s, $color: transparent);
                 box-shadow: var(--b3-message-shadow);
                 line-height: 16px;
