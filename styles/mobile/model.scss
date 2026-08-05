@@ -1,0 +1,20 @@
+@use "../utils" as *;
+#model {
+    background-color: var(--b3-theme-background);
+    @include frostedglass($blur: s, $color: background);
+    .config-group {
+        margin: 0;
+    }
+    .config-items {
+        background-color: oklch(from var(--b3-theme-surface) l c h / 0.32);
+    }
+    .config--mobile {
+        background-color: transparent !important;
+    }
+    .config-title {
+        font-weight: bold;
+    }
+    .config-assets__preview {
+        background-color: transparent;
+    }
+}

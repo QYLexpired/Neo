@@ -15,6 +15,9 @@
         border: unset;        
     }
 }
+.sy__agentChat--mobile .block__icons {
+    border: none;
+}
 // 主页面
 .agent-chat__messages {
     // 导致闪退 @include overflow-indicator-fadein-mask($fadeout-size-l, "top bottom");
@@ -36,6 +39,7 @@
     border: unset;
     box-shadow: var(--neo-main-shadow);
     margin: 0 12px 24px 12px;
+    caret-color: currentColor;
     @include superellipse(12px);
 }
 .agent-mention-chip {

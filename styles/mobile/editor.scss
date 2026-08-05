@@ -1,0 +1,17 @@
+@use "../utils" as *;
+@use "../component" as *;
+#editor {
+    background-color: var(--b3-theme-background);
+    & > .protyle-breadcrumb {
+        .protyle-breadcrumb__icon {
+            transition: var(--b3-transition);
+            width: max-content;
+            @include button-transparent;
+            color: var(--b3-theme-on-surface);
+            &:hover,
+            &:focus {
+                color: var(--b3-theme-accent);
+            }
+        }
+    }
+}

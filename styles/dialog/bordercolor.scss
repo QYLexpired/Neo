@@ -14,7 +14,12 @@
 .config__side,
 .search__list,
 .history__panel,
-.av__template-list {
+.av__template-list,
+.config-entry-visibility__column-title,
+.config-entry-visibility__location,
+.config-entry-visibility__row,
+.config-entry-visibility__column,
+.config-entry-visibility__browser {
     --b3-border-color: var(--b3-border-color-trans) !important;
     border-color: var(--b3-border-color-trans) !important;
 }

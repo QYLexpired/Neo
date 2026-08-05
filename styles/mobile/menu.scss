@@ -1,0 +1,79 @@
+@use "../utils" as *;
+.b3-menu__scrim {
+    opacity: 0 !important;
+}
+.b3-menu--fullscreen {
+    background-color: var(--b3-theme-background);
+    border-radius: 0;
+    corner-shape: unset;
+    box-shadow: unset;
+    .neo-visual-frostedglass & {
+        background-color: transparent;
+    }
+    &::before {
+        @include frostedglass-before;
+        @include frostedglass($blur: s, $color: background);
+        border-radius: 0;
+        corner-shape: unset;
+        box-shadow: unset;
+    }
+    &.b3-menu--sheet {
+        background-color: var(--b3-menu-background);
+        @include superellipse(16px 16px 0 0);
+        box-shadow: var(--b3-menu-shadow);
+        .neo-visual-frostedglass & {
+            background-color: transparent;
+            box-shadow: var(--b3-menu-shadow-blur);
+        }
+        &::before {
+            @include frostedglass-before;
+            @include frostedglass($blur: s, $color: menu);
+            box-shadow: var(--b3-menu-shadow-inset);
+        }
+        .b3-menu__title {
+            &::before {
+                background-color: oklch(from var(--b3-theme-on-background) l c h / 0.5);
+            }
+        }
+        .b3-menu__submenu {
+            box-shadow: none;
+            &::before {
+                box-shadow: none;
+            }
+        }
+    }
+    .b3-menu__title {
+        border-bottom: unset;
+        background-color: transparent;
+    }
+    .b3-menu__items {
+        background-color: transparent;
+    }
+    .b3-menu__item {
+        background-color: transparent;
+        border: unset;
+        &--current {
+            border-radius: 8px !important;
+        }
+    }
+    .b3-menu__separator {
+        background-color: transparent;
+        border: unset;
+    }
+}
+.b3-menu__groups {
+    background-color: transparent;
+}
+.b3-menu__group-title {
+    font-weight: bold;
+}
+.b3-menu__group-items {
+    background-color: oklch(from var(--b3-theme-surface) l c h / 0.32);
+    outline: .5px solid oklch(from var(--b3-theme-on-background) l c h / 0.12);
+    outline-offset: -0.5px;
+    @include superellipse(16px);
+    & .b3-menu__item {
+        background-color: transparent;
+        border: none !important;
+    }
+}

@@ -1,0 +1,39 @@
+@use "../utils" as *;
+#keyboardToolbar {
+    background-color: var(--b3-menu-background);
+    border-top: 1px solid var(--b3-border-color-trans);
+}
+.keyboard__bar {
+    border-bottom: 1px solid var(--b3-border-color-trans);
+}
+.keyboard__split {
+    background-color: var(--b3-border-color-trans);
+}
+.keyboard__util {
+    padding: 6px;
+    background-color: var(--b3-menu-background);
+}
+.keyboard__action.protyle-toolbar__item--current svg {
+    background-color: transparent;
+}
+.keyboard__slash-item {
+    @include superellipse(12px);
+    background-color: transparent;
+    outline: 1px solid var(--b3-border-color-trans);
+    outline-offset: -1px;
+    box-shadow: unset;
+    color: var(--b3-theme-on-surface);
+}
+.protyle-util--mobile {
+    @include superellipse(30px);
+}
+.keyboard__action {
+    color: var(--b3-theme-on-surface);
+    transition: var(--b3-transition);
+    &:hover {
+        color: var(--b3-theme-on-background);
+    }
+}
+.protyle-util--mobile {
+    box-shadow: var(--neo-main-shadow);
+}

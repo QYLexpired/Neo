@@ -37,10 +37,17 @@
     animation-delay: calc((sibling-index() - 1) * 0.02s + 0.2s);
     transform-origin: left;
     animation-fill-mode: both;
+    .neo-mobile & {
+        animation: none;
+    }
 }
 .file-tree:hover .block__icons:not(:hover) .block__icon,
 .file-tree:not(.fullscreen):hover .block__icons:not(:hover) .fn__space {
     display: none;
+    .neo-mobile & {
+        display: flex;
+        animation: none;
+    }
 }
 .file-tree .block__icons:not(:hover) .block__icon,
 .file-tree:not(.fullscreen) .block__icons:not(:hover) .fn__space {
@@ -49,6 +56,9 @@
     animation-delay: calc((sibling-count() - sibling-index()) * 0.02s);
     transform-origin: right;
     animation-fill-mode: both;
+    .neo-mobile & {
+        animation: none;
+    }
 }
 @keyframes neo-filetree-icon-entrance {
     from {

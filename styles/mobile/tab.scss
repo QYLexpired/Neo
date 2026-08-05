@@ -1,0 +1,16 @@
+@use "../utils" as *;
+.mobile-tabs__item {
+    @include superellipse(14px);
+    border: unset;
+    outline: 1px solid var(--b3-border-color-trans);
+    outline-offset: -1px;
+    background-color: transparent;
+    &.mobile-tabs__item--active {
+        outline-color: oklch(from var(--b3-base-color) clamp(0.4, l, 1) c h / 0.3);
+        background-color: oklch(from var(--b3-base-color) clamp(0.4, l, 1) c h / 0.12);
+        box-shadow: none;
+    }
+}
+.mobile-tabs__actions {
+    border-color: var(--b3-border-color-trans);
+}

@@ -1,0 +1,13 @@
+.config-entry-visibility__location {
+    border: none;
+    &:hover {
+        background-color: var(--b3-list-hover);
+    }
+    &.config-entry-visibility__location--current {
+        color: var(--b3-theme-on-background);
+        background-color: var(--b3-list-active);
+    }
+}
+.config-entry-visibility__row {
+    border: none;
+}

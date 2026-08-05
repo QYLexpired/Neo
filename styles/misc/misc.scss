@@ -20,4 +20,7 @@
     &:hover {
         background-color: var(--b3-list-hover);
     }
+    &--current {
+        color: var(--b3-theme-accent);
+    }
 }

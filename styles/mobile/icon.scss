@@ -1,0 +1,32 @@
+@use "../utils" as *;
+.toolbar__icon {
+    @include superellipse(8px);
+    color: var(--b3-theme-on-surface);
+    transition: var(--b3-transition);
+    &:not(.toolbar__icon--active) {
+        &:hover,
+        &:focus {
+            background-color: transparent;
+            color: var(--b3-theme-on-background);
+        }
+    }
+    &.toolbar__icon--active {
+        background-color: transparent;
+        color: var(--b3-theme-accent);
+        &:hover,
+        &:focus {
+            background-color: transparent;
+            color: var(--b3-theme-accent);
+        }
+    }
+}
+#toolbarTabs {
+    @include superellipse(8px);
+    color: var(--b3-theme-on-surface);
+    transition: var(--b3-transition);
+    &:hover,
+    &:focus {
+        background-color: transparent;
+        color: var(--b3-theme-on-background);
+    }
+}

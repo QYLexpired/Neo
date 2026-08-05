@@ -1,0 +1,13 @@
+.side-mask {
+    opacity: 0 !important;
+}
+.neo-mobile {
+    .toolbar {
+        border-bottom: unset;
+        background-color: transparent;
+    }
+    .b3-dialog__container {
+        max-width: 98vw !important;
+        max-height: 98vh !important;
+    }
+}

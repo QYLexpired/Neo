@@ -29,7 +29,9 @@
     .protyle-breadcrumb,
     .layout-tab-bar + .fn__flex-1,
     .card__main:not(.fullscreen),
-    .card__empty {
+    .card__empty,
+    .config-entry-visibility__browser,
+    .config-entry-visibility__column {
         @content;
     }
 }

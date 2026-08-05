@@ -17,10 +17,12 @@
         outline: unset;
     }
     &:focus {
-        animation: neo-input-focus-ring 0.3s ease-out forwards;
+        animation: neo-input-focus-ring 0.25s var(--neo-ease-out-3) forwards;
+        animation-delay: 0.05s;
         background-color: var(--neo-input-background);
+        --b3-theme-primary-lighter: transparent !important; // 取消阴影
         outline: unset;
-    } 
+    }
 }
 @keyframes neo-input-focus-ring {
     0% {

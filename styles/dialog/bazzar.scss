@@ -92,13 +92,6 @@
             @include superellipse(14px);
         }
         color: var(--b3-theme-on-surface);
-        a {
-            &[title="Creator"],
-            &[title="Stars"],
-            &[title="Open issues"] {
-                color: var(--b3-theme-on-surface);
-            }
-        }
         &.item__meta-title {
             color: var(--b3-theme-on-background);
         }
