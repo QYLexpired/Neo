@@ -59,6 +59,10 @@
     outline: 0.5px solid oklch(from currentColor l c h / 0.12);
     outline-offset: -0.5px;
     transition: var(--b3-transition);
+    .backlinkList &,
+    .backlinkMList & {
+        right: -25px;
+    }
     .protyle-title & {
         right: 0;
         top: -24px;

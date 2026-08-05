@@ -83,7 +83,7 @@ $table-border-color: oklch(from currentColor l c h / 0.15);
     color: var(--b3-theme-on-surface);
     @include superellipse(8px);
     @include frostedglass($blur: s, $color: transparent);
-    box-shadow: var(--b3-message-shadow);
+    box-shadow: var(--neo-main-shadow);
     line-height: 16px;
     animation: neo-tooltip-entrance 0.6s var(--neo-ease-spring-3);
 }

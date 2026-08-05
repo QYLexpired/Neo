@@ -9,14 +9,17 @@
     color: var(--b3-theme-on-background);
     background-color: var(--neo-input-background);
     box-shadow: unset;
+    outline: unset;
     transition: box-shadow var(--b3-transition);
     &:hover {
         background-color: var(--neo-input-background);
         --b3-border-color: transparent !important; // 取消阴影
+        outline: unset;
     }
     &:focus {
         animation: neo-input-focus-ring 0.3s ease-out forwards;
         background-color: var(--neo-input-background);
+        outline: unset;
     } 
 }
 @keyframes neo-input-focus-ring {
