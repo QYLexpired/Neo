@@ -1,0 +1,19 @@
+@use "../utils" as *;
+.agent-chat__messages {
+    padding: 24px;
+    // 导致闪退 @include overflow-indicator-fadein-mask($fadeout-size-l, "top bottom");
+}
+.agent-welcome__example,
+.agent-welcome__no-model {
+    background-color: var(--b3-list-hover);
+    border: unset;
+    transition: var(--b3-transition);
+    @include superellipse(12px);
+    &:hover {
+        background-color: var(--b3-list-active);
+        border: unset;        
+    }
+}
+.sy__agentChat--mobile .block__icons {
+    border: none;
+}

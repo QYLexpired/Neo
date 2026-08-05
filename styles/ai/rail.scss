@@ -1,0 +1,28 @@
+@use "../utils" as *;
+.agent-chat__nav-rail {
+    border: unset;
+}
+.agent-chat__nav-rail-marker--active {
+    background-color: var(--b3-theme-accent);
+    .agent-chat__nav-rail--expanded & {
+        background-color: var(--b3-list-active);
+        &:hover {
+            background-color: var(--b3-list-active);
+        }
+    }
+}
+.agent-chat__nav-rail--expanded {
+    border: unset;
+    box-shadow: var(--b3-menu-shadow);
+    background-color: var(--b3-menu-background);
+    @include superellipse(12px);
+    .neo-visual-frostedglass & {
+        background-color: transparent;
+        box-shadow: var(--b3-menu-shadow-blur);
+    }
+    &::before {
+        @include frostedglass-before;
+        @include frostedglass($blur: s, $color: menu);
+        box-shadow: var(--b3-menu-shadow-inset);
+    }
+}

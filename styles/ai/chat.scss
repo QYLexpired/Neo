@@ -1,0 +1,112 @@
+@use "../utils" as *;
+@use "../component" as *;
+// 输入框
+.agent-chat__input-area {
+    background-color: var(--b3-theme-background);
+    border: unset;
+    box-shadow: var(--neo-main-shadow);
+    margin: 0 12px 12px 12px;
+    caret-color: currentColor;
+    @include superellipse(12px);
+    padding: 0;
+    .protyle-wysiwyg {
+        padding: 4px 8px;
+    }
+}
+.agent-chat__buttons {
+    margin: 6px;
+}
+// 对话气泡
+.agent-chat__msg--user .agent-chat__body {
+    background-color: var(--b3-list-hover);
+    @include superellipse(12px);
+    padding: 0;
+    &.protyle-wysiwyg {
+        padding: 4px 12px;
+    }
+    .protyle-wysiwyg {
+        padding: 4px 12px;
+    }
+}
+// 交互框
+.agent-chat__question-card,
+.agent-chat__tool-card,
+.agent-chat__confirm-card {
+    background-color: transparent;
+    outline: 0.5px solid var(--b3-border-color-trans);
+    outline-offset: -0.5px;
+    border: unset;
+    @include superellipse(12px);
+}
+.agent-chat__question-item,
+.agent-chat__question-submit,
+.agent-chat__confirm-header,
+.agent-chat__confirm-args,
+.agent-chat__confirm-actions,
+.agent-chat__todo-header,
+.agent-chat__todo-items {
+    border-color: transparent;
+    background-color: transparent;
+}
+.agent-chat__question-option {
+    @include superellipse(7px);
+    &:hover,
+    &:focus,
+    &:focus-visible {
+        background-color: var(--b3-list-hover);
+    }
+}
+.agent-chat__question {
+    &-item {
+        padding: 12px;
+    }
+    &-submit {
+        padding: 0 12px 12px 12px;
+    }
+}
+.agent-chat__confirm {
+    &-header {
+        padding: 12px 12px 0 12px;
+    }
+    &-args {
+        padding: 12px;
+    }
+    &-actions {
+        padding: 0 12px 12px 12px;
+    }
+}
+.agent-chat__todo {
+    &-header {
+        padding: 12px 12px 0 12px;
+    }
+    &-items {
+        padding: 6px 0px;
+    }
+}
+.agent-chat__question-custom {
+    @include input-common;
+    border: unset;
+}
+// 思考
+.agent-chat__thinking-body {
+    display: none;
+    border: unset;
+    padding: 4px 6px;
+    transition: none;
+    &--expanded {
+        display: block;
+        border: unset;
+        max-height: 500px;
+        overflow: auto;
+    }
+}
+// 滚动至底部
+.agent-chat__scroll-bottom {
+    border: unset;
+    box-shadow: var(--neo-main-shadow);
+    background-color: var(--b3-theme-background);
+    .neo-visual-frostedglass & {
+        background-color: transparent;
+        backdrop-filter: blur(6px);
+    }
+}
