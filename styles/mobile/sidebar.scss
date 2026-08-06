@@ -2,4 +2,5 @@
 #sidebar {
     background-color: var(--b3-theme-background);
     @include frostedglass($blur: s, $color: background);
+    transition: 0.15s var(--neo-ease-out-3);
 }
