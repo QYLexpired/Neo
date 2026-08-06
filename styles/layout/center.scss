@@ -17,7 +17,7 @@ body:not(.body--window) {
                     background-color: transparent;
                     box-shadow: var(--neo-layout-shadow-inset);
                     pointer-events: none;
-                    z-index: 10;
+                    z-index: 5;
                 }
             }
         }
@@ -49,7 +49,7 @@ body:not(.body--window) {
                         background-color: transparent;
                         box-shadow: var(--neo-layout-shadow-inset);
                         pointer-events: none;
-                        z-index: 10;
+                        z-index: 5
                     }
                 }
                 .layout-tab-bar {

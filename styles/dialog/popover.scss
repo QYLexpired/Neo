@@ -10,13 +10,13 @@
         transform: none;
         pointer-events: none;
         animation: neo-popover-enable-click 0.01s 0.35s forwards; // 防止抽搐
-        .neo-visual-frostedglass & {
+        .neo-visual-frostedglass-global & {
             background-color: transparent;
             box-shadow: var(--b3-dialog-shadow-blur);
         }
         &::before {
-            @include frostedglass-before;
-            @include frostedglass($blur: l, $color: background);
+            @include frostedglass-before($scope: global);
+            @include frostedglass($blur: l, $color: background, $scope: global);
             box-shadow: var(--b3-dialog-shadow-inset);
         }
         .block__icons {

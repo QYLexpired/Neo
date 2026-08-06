@@ -7,9 +7,9 @@
     }
 }
 .viewer-backdrop {
-    @include frostedglass($blur: g, $color: background, $alpha: 0.9);
+    @include frostedglass($blur: g, $color: background, $alpha: 0.9, $scope: global);
     background-color: var(--b3-theme-background);
-    .neo-visual-frostedglass & {
+    .neo-visual-frostedglass-global & {
         background-color: transparent;
     }
 }

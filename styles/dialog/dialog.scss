@@ -8,12 +8,12 @@
         .neo-mode-dark & {
             backdrop-filter: brightness(0.5) saturate(0.5);
         }
-        .neo-visual-frostedglass & {
+        .neo-visual-frostedglass-global & {
             z-index: -2;
             backdrop-filter: blur(2px);
         }
     }
-    .neo-visual-frostedglass & {
+    .neo-visual-frostedglass-global & {
         transition: backdrop-filter 0.15s 0s;
     }
     .b3-dialog--open[data-key="dialog-emojis"] & {
@@ -42,13 +42,13 @@
     background-color: var(--b3-theme-background);
     transform: translateY(min(-5%, -30px));
     transition: transform 0.3s var(--neo-ease-out-3);
-    .neo-visual-frostedglass & {
+    .neo-visual-frostedglass-global & {
         background-color: transparent;
         box-shadow: var(--b3-dialog-shadow-blur);
     }
     &::before {
-        @include frostedglass-before;
-        @include frostedglass($blur: 16px, $color: background);
+        @include frostedglass-before($scope: global);
+        @include frostedglass($blur: 16px, $color: background, $scope: global);
         box-shadow: var(--b3-dialog-shadow-inset);
     }
     .b3-dialog__content {
@@ -63,13 +63,13 @@
     box-shadow: var(--b3-dialog-shadow);
     @include superellipse(16px);
     background-color: var(--b3-theme-background);
-    .neo-visual-frostedglass & {
+    .neo-visual-frostedglass-global & {
         background-color: transparent;
         box-shadow: var(--b3-dialog-shadow-blur);
     }
     &::before {
-        @include frostedglass-before;
-        @include frostedglass($blur: 16px, $color: background);
+        @include frostedglass-before($scope: global);
+        @include frostedglass($blur: 16px, $color: background, $scope: global);
         box-shadow: var(--b3-dialog-shadow-inset);
     }
 }

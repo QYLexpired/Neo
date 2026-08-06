@@ -18,7 +18,7 @@
 }
 .fullscreen {
     background-color: var(--b3-theme-background);
-    @include frostedglass($blur: g, $color: background);
+    @include frostedglass($blur: g, $color: background, $scope: global);
 }
 .protyle-icons,
 .av__gallery-actions {
