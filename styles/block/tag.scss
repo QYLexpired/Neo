@@ -5,13 +5,13 @@
 .protyle-wysiwyg [data-node-id] span[data-type~=tag],
 .b3-typography span[data-type~=tag],
 .b3-list-item[data-treetype=outline] > .b3-list-item__text span[data-type~=tag] {
-    @include superellipse(6px);
+    @include superellipse(24px);
     background-color: oklch(from currentColor l c h / 0.12);
     color: var(--neo-tag-color);
     outline: 0.5px solid oklch(from currentColor l c h / 0.25);
     outline-offset: -0.5px;
     border: unset;
-    padding: 2px 4px;
+    padding: 2px 8px;
     font-size: 0.85em;
     margin: 0 0.35em;
     &::before {

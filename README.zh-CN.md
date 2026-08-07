@@ -5,11 +5,12 @@
 - **支持我**：Neo主题是完全免费的，如果喜欢这个主题，欢迎在[GitHub](https://github.com/QYLexpired/Neo)为我点亮小星星，也可以[请我喝杯咖啡](https://icnmjy02sv9g.feishu.cn/wiki/FekNwrtB7ia1WckYelRckwzZnig?from=from_copylink)
 #### 更新说明
 ##### 1.4.0 ~ 1.4.1
+- 手机端支持使用超级融合
 - 优化全局界面通透度
 - 适配思源3.8.0-alpha.2
 - 毛玻璃效果支持选择档位：轻量、全局
+- 全面适配手机端样式
 - 修复超级融合与伪文档面包屑插件的冲突
-- 适配手机端样式
 #### 特性
 > 以下部分特性依赖Neo+插件
 - 媲美默认主题的优异性能

@@ -41,7 +41,7 @@
         background-color: var(--b3-menu-background);
         @include superellipse(16px 16px 0 0);
         box-shadow: var(--b3-menu-shadow);
-        margin-bottom: -2px;
+        margin: 0 2px -2px 2px;
         transition: 0.15s var(--neo-ease-out-3);
         .neo-visual-frostedglass & {
             background-color: transparent;
