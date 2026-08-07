@@ -4,28 +4,13 @@
 - **Feedback**: For any questions or suggestions during use, please visit the [Neo Theme Introduction & Feedback Thread](https://ld246.com/article/1783158376401) or [GitHub](https://github.com/QYLexpired/Neo/issues)
 - **Support Me**: The Neo theme is completely free. If you enjoy this theme, feel free to star it on [GitHub](https://github.com/QYLexpired/Neo) or [buy me a coffee](https://icnmjy02sv9g.feishu.cn/wiki/FekNwrtB7ia1WckYelRckwzZnig?from=from_copylink)
 #### What's New
-##### v1.3.10
-- Adapted for SiYuan 3.7.4-alpha.5
-- Support customizing the brightness and saturation of colored headings, colored lists, and colored document tree via CSS snippets
-- Redesigned global shadows
-- Optimized numerous details
-##### v1.3.9
-- Added smooth transition for light/dark mode switching
-- Dividers can now be set to different colors via block styles
-- Adjusted some button styles
-- Fixed side memo errors
-- Optimized AI agent styles
-- Changed the color extraction algorithm for theme color following banner images
-- Adjusted block reference popup animation
-##### v1.3.8
-- Adapted for SiYuan 3.7.4-alpha.1
-    - Adapted heading auto-numbering
-    - Adapted document top database properties
-    - Adapted document bottom backlinks
-- Redesigned message bubble animation
-- Redesigned bazaar animation
-- Optimized cross-block selection effect
-- Optimized block drag hint effect
+##### v1.4.0 ~ v1.4.1
+- Mobile now supports Super Fusion
+- Optimized global interface translucency
+- Adapted for SiYuan 3.8.0-alpha.2
+- Frosted glass effect now supports level selection: Light, Global
+- Fully adapted mobile styles
+- Fixed conflict between Super Fusion and the Pseudo Document Breadcrumb plugin
 #### Features
 > Some of the following features depend on the Neo+ plugin.
 - Excellent performance comparable to the default theme
@@ -57,6 +42,13 @@ The creation of the Neo theme drew significant inspiration from the following pr
 - [Rem Craft](https://github.com/svchord/Rem-Craft)
 - [Savor](https://github.com/royc01/notion-theme)
 #### Update Notes
+##### v1.4.0 ~ v1.4.1
+- Mobile now supports Super Fusion
+- Optimized global interface translucency
+- Adapted for SiYuan 3.8.0-alpha.2
+- Frosted glass effect now supports level selection: Light, Global
+- Fully adapted mobile styles
+- Fixed conflict between Super Fusion and the Pseudo Document Breadcrumb plugin
 ##### v1.3.10
 - Adapted for SiYuan 3.7.4-alpha.5
 - Support customizing the brightness and saturation of colored headings, colored lists, and colored document tree via CSS snippets
