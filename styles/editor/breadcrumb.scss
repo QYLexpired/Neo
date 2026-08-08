@@ -7,7 +7,7 @@
     @include overflow-indicator-fadein-mask($fadeout-size-m, "left right");
     scrollbar-width: none;
 }
-.protyle-breadcrumb__arrow {
+button.protyle-breadcrumb__arrow {
     color: transparent;
     margin: 0;
     &::before {
@@ -29,6 +29,22 @@
             background-color: var(--b3-theme-on-background);
             opacity: 1;
         }
+    }
+}
+// 某些情况下是svg不支持伪元素（如反链面包屑）
+svg.protyle-breadcrumb__arrow {
+    color: transparent;
+    background-color: var(--b3-theme-on-surface);
+    width: 1px;
+    height: 1em;
+    opacity: 0.85;
+    border-radius: 2px;
+    transform: rotate(27deg);
+    margin: 0 8px;
+    transition: var(--b3-transition);
+    &:hover {
+        background-color: var(--b3-theme-on-background);
+        opacity: 1;
     }
 }
 .protyle-breadcrumb__item {
