@@ -2,11 +2,11 @@
 @use "../component" as *;
 .protyle-background__action {
     .b3-button {
-        @include button-transparent-hover-background;
+        @include button-transparent-hover-gray;
     }
 }
 .b3-chips__doctag .b3-chip {
-    @include button-transparent-outline;
+    @include button-outline;
     @include superellipse(24px);
     $offset: 16px;
     padding: 4px 14px;

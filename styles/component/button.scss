@@ -42,6 +42,17 @@
         @include contrast-color(--neo-button-warning-hover);
     }
 }
+@mixin button-gray {
+    @include button-common;
+    background-color: var(--b3-list-hover);
+    color: var(--b3-theme-on-surface);
+    &:hover,
+    &:active,
+    &:focus {
+        background-color: oklch(from var(--b3-list-hover) l c h / 0.12);
+        color: var(--b3-theme-on-surface);
+    }
+}
 @mixin button-transparent {
     @include button-common;
     background-color: transparent;
@@ -53,7 +64,7 @@
         color: var(--b3-theme-on-background);
     }
 }
-@mixin button-transparent-outline {
+@mixin button-outline {
     @include button-common;
     background-color: transparent;
     color: var(--b3-theme-on-surface);
@@ -66,7 +77,7 @@
         color: var(--b3-theme-on-surface);
     }
 }
-@mixin button-transparent-hover-background {
+@mixin button-transparent-hover-gray {
     @include button-common;
     background-color: transparent;
     color: var(--b3-theme-on-surface);
@@ -77,7 +88,7 @@
         color: var(--b3-theme-on-surface);
     }
 }
-@mixin button-transparent-outline-hover-primary {
+@mixin button-outline-hover-primary {
     @include button-common;
     background-color: transparent;
     color: var(--b3-theme-on-surface);
@@ -91,7 +102,7 @@
         @include contrast-color(--neo-button-primary);
     }
 }
-@mixin button-transparent-outline-hover-warning {
+@mixin button-outline-hover-warning {
     @include button-common;
     background-color: transparent;
     color: var(--b3-theme-on-surface);
@@ -132,18 +143,18 @@
     }
 }
 .b3-button {
-    @include button-transparent-outline;
+    @include button-outline;
     &--outline {
-        @include button-transparent-outline-hover-primary;
+        @include button-outline-hover-primary;
     }
     &--text {
-        @include button-transparent-hover-background;
+        @include button-transparent-hover-gray;
     }
     &--cancel {
-        @include button-transparent-hover-background;
+        @include button-transparent-hover-gray;
     }
     &--remove {
-        @include button-transparent-outline-hover-warning;
+        @include button-outline-hover-warning;
     }
     &--primary {
         @include button-primary;
@@ -154,10 +165,10 @@
 .config__item,
 #modelMain {
     .b3-button {
-        @include button-transparent-hover-background;
+        @include button-transparent-hover-gray;
     }
     .b3-button--outline {
-        @include button-transparent-outline-hover-primary;
+        @include button-outline-hover-primary;
     }
     .b3-button--remove,
     #removeAll,
@@ -171,13 +182,13 @@
     #purgeCloudData,
     #resetRepo,
     #purgeRepo {
-        @include button-transparent-outline-hover-warning;  
+        @include button-outline-hover-warning;  
     }
 }
 // 消息按钮
 .b3-snackbars {
     .b3-button {
-        @include button-transparent-outline;
+        @include button-outline;
     }   
 }
 // action按钮
@@ -185,11 +196,14 @@
 .config-account__center,
 #action,
 .emojis__link-footer {
+    .b3-button {
+        @include button-gray;
+    }
     .b3-button--text {
         @include button-primary;
     }
     .b3-button--cancel {
-        @include button-transparent-outline;
+        @include button-gray;
     }
     .b3-button--remove {
         @include button-warning;
@@ -211,23 +225,23 @@
             }
         }
         &[data-type="install-all"] {
-            @include button-transparent-outline-hover-primary;
+            @include button-outline-hover-primary;
         }
     }
 }
 .config-bazaar__readme .item__side {
     .b3-button {
-        @include button-transparent-outline-hover-primary;
+        @include button-outline-hover-primary;
         &[data-type="uninstall"],
         &[data-type="package-disable"] {
-            @include button-transparent-outline-hover-warning;
+            @include button-outline-hover-warning;
         }
     }
 }
 // pdf搜索栏
 .pdf__outer .findbar {
     .b3-button--outline {
-        @include button-transparent-outline;
+        @include button-outline;
     }
     .b3-button:not(.b3-button--outline) {
         @include button-primary;
@@ -245,13 +259,13 @@
         display: none
     }
     &[data-type="-3"] {
-        @include button-transparent-outline;
+        @include button-outline;
         line-height: 32px;
         @include superellipse(16px);
         padding: 8px 0;
     }
     &[data-type="-2"] {
-        @include button-transparent-hover-background;
+        @include button-transparent-hover-gray;
         line-height: 32px;
         @include superellipse(16px);
         padding: 8px 0;
@@ -301,5 +315,5 @@
 }
 // misc
 .b3-button[data-action="addCustom"] {
-    @include button-transparent-hover-background;   
+    @include button-transparent-hover-gray;   
 }

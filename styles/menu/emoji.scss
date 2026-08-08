@@ -47,7 +47,7 @@
     justify-content: center;
 }
 .emojis__link-upload {
-    @include button-transparent-hover-background;
+    @include button-transparent-hover-gray;
     height: auto;
     display: inline-flex;
     margin: 0 auto;

@@ -3,7 +3,7 @@
     color: var(--b3-theme-accent);
 }
 .custom-attr .b3-button[data-type=addColumn] {
-    @include button-transparent-hover-background;
+    @include button-transparent-hover-gray;
     margin-left: 32px;
 }
 .custom-attr__avvalue,
