@@ -75,6 +75,11 @@ svg.protyle-breadcrumb__arrow {
         &:first-child {
             svg {
                 @include icon;
+            }
+            &:hover {
+                svg {
+                    color: var(--b3-theme-on-background);
+                }
             }            
         }
     }
