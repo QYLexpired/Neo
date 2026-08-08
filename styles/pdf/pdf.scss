@@ -62,7 +62,7 @@
     background-color: var(--b3-theme-background);
 }
 // pdf标记
-:root {
+.pdf__outer {
     --b3-pdf-background1: oklch(0.85 0.15 30);
     --b3-pdf-background2: oklch(0.85 0.15 50);
     --b3-pdf-background3: oklch(0.85 0.15 90);
@@ -83,6 +83,22 @@
 .pdf__rect > div:first-child,
 .pdf__rect > div:last-child {
     border-radius: 0;
+}
+.pdf__resize {
+    border-radius: 0;
+    border: unset;
+    outline: 1px solid oklch(from var(--b3-theme-secondary) l c h / 0.12);
+    outline-offset: -1px;
+    background-color: oklch(from var(--b3-theme-secondary) l c h / 0.12);
+}
+.pdf__rect > div {
+    border: unset;
+    outline: 2px solid var(--pdf-annotation-color);
+    outline-offset: -2px;
+}
+.pdf__rect:not([data-type=border]) > div {
+    outline: unset;
+    background-color: oklch(from var(--pdf-annotation-color) l c h / 0.35);
 }
 // 搜索
 .textLayer .highlight.selected {

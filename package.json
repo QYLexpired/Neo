@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "type": "module",
   "scripts": {
-    "build": "node build.js",
-    "package": "node package.js"
+    "build": "node scripts/build.js",
+    "package": "node scripts/package.js"
   },
   "devDependencies": {
     "archiver": "^7.0.1",

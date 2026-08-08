@@ -4,12 +4,15 @@
 - **Feedback**: For any questions or suggestions during use, please visit the [Neo Theme Introduction & Feedback Thread](https://ld246.com/article/1783158376401) or [GitHub](https://github.com/QYLexpired/Neo/issues)
 - **Support Me**: The Neo theme is completely free. If you enjoy this theme, feel free to star it on [GitHub](https://github.com/QYLexpired/Neo) or [buy me a coffee](https://icnmjy02sv9g.feishu.cn/wiki/FekNwrtB7ia1WckYelRckwzZnig?from=from_copylink)
 #### What's New
-##### v1.4.0 ~ v1.4.1
+##### v1.4.0 ~ v1.4.2
 - Mobile now supports Super Fusion
 - Optimized global interface translucency
-- Adapted for SiYuan 3.8.0-alpha.2
+- Adapted for SiYuan 3.8.0-beta.1
 - Frosted glass effect now supports level selection: Light, Global
 - Fully adapted mobile styles
+- Re-introduced the smooth rounded corners effect
+- Optimized PDF annotation effects
+- Fixed the issue where the pinned toolbar incorrectly took effect in the AI agent interface
 - Fixed conflict between Super Fusion and the Pseudo Document Breadcrumb plugin
 #### Features
 > Some of the following features depend on the Neo+ plugin.
@@ -42,12 +45,15 @@ The creation of the Neo theme drew significant inspiration from the following pr
 - [Rem Craft](https://github.com/svchord/Rem-Craft)
 - [Savor](https://github.com/royc01/notion-theme)
 #### Update Notes
-##### v1.4.0 ~ v1.4.1
+##### v1.4.0 ~ v1.4.2
 - Mobile now supports Super Fusion
 - Optimized global interface translucency
-- Adapted for SiYuan 3.8.0-alpha.2
+- Adapted for SiYuan 3.8.0-beta.1
 - Frosted glass effect now supports level selection: Light, Global
 - Fully adapted mobile styles
+- Re-introduced the smooth rounded corners effect
+- Optimized PDF annotation effects
+- Fixed the issue where the pinned toolbar incorrectly took effect in the AI agent interface
 - Fixed conflict between Super Fusion and the Pseudo Document Breadcrumb plugin
 ##### v1.3.10
 - Adapted for SiYuan 3.7.4-alpha.5

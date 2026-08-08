@@ -1,10 +1,11 @@
 import { compile } from 'sass';
-import { writeFileSync, mkdirSync } from 'fs';
+import { writeFileSync } from 'fs';
 import { dirname, resolve } from 'path';
 import { fileURLToPath } from 'url';
 const __dirname = dirname(fileURLToPath(import.meta.url));
-const scssPath = resolve(__dirname, 'styles/theme.scss');
-const cssPath = resolve(__dirname, 'theme.css');
+const root = resolve(__dirname, '..');
+const scssPath = resolve(root, 'styles/theme.scss');
+const cssPath = resolve(root, 'theme.css');
 const result = compile(scssPath, { style: 'compressed' });
 writeFileSync(cssPath, result.css);
 console.log('Build complete: theme.css');

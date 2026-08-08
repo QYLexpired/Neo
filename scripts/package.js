@@ -1,7 +1,10 @@
 import archiver from 'archiver';
 import fs from 'fs';
-import path from 'path';
-const output = fs.createWriteStream('package.zip');
+import { dirname, resolve } from 'path';
+import { fileURLToPath } from 'url';
+const __dirname = dirname(fileURLToPath(import.meta.url));
+const root = resolve(__dirname, '..');
+const output = fs.createWriteStream(resolve(root, 'package.zip'));
 const archive = archiver('zip', { zlib: { level: 9 } });
 output.on('close', () => {
   console.log(`Created package.zip (${archive.pointer()} bytes)`);
@@ -20,8 +23,9 @@ const files = [
   'preview.png'
 ];
 for (const file of files) {
-  if (fs.existsSync(file)) {
-    archive.file(file, { name: file });
+  const fullPath = resolve(root, file);
+  if (fs.existsSync(fullPath)) {
+    archive.file(fullPath, { name: file });
     console.log(`Added: ${file}`);
   } else {
     console.warn(`Warning: ${file} not found, skipping.`);

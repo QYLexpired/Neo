@@ -4,12 +4,15 @@
 - **問題回饋**：使用過程中有任何問題或建議，可透過 [Neo 主題介紹及回饋綜合帖](https://ld246.com/article/1783158376401) 或 [GitHub](https://github.com/QYLexpired/Neo/issues) 進行回饋
 - **支持我**：Neo 主題是完全免費的，如果喜歡這個主題，歡迎在 [GitHub](https://github.com/QYLexpired/Neo) 為我點亮小星星，也可以[請我喝杯咖啡](https://icnmjy02sv9g.feishu.cn/wiki/FekNwrtB7ia1WckYelRckwzZnig?from=from_copylink)
 #### 更新說明
-##### v1.4.0 ~ v1.4.1
+##### v1.4.0 ~ v1.4.2
 - 手機端支援使用超級融合
 - 優化全域介面通透度
-- 適配思源 3.8.0-alpha.2
+- 適配思源 3.8.0-beta.1
 - 毛玻璃效果支援選擇檔位：輕量、全域
 - 全面適配手機端樣式
+- 重新引入平滑圓角效果
+- 優化 PDF 標註效果
+- 修復釘住工具欄在智能體介面錯誤生效的問題
 - 修復超級融合與偽文檔麵包屑插件的衝突
 #### 特性
 > 以下部分特性依賴 Neo+ 插件
@@ -42,12 +45,15 @@
 - [Rem Craft](https://github.com/svchord/Rem-Craft)
 - [Savor](https://github.com/royc01/notion-theme)
 #### 更新日誌
-##### v1.4.0 ~ v1.4.1
+##### v1.4.0 ~ v1.4.2
 - 手機端支援使用超級融合
 - 優化全域介面通透度
-- 適配思源 3.8.0-alpha.2
+- 適配思源 3.8.0-beta.1
 - 毛玻璃效果支援選擇檔位：輕量、全域
 - 全面適配手機端樣式
+- 重新引入平滑圓角效果
+- 優化 PDF 標註效果
+- 修復釘住工具欄在智能體介面錯誤生效的問題
 - 修復超級融合與偽文檔麵包屑插件的衝突
 ##### v1.3.10
 - 適配思源 3.7.4-alpha.5
