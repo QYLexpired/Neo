@@ -1,15 +1,16 @@
 @use "../utils" as *;
 #keyboardToolbar {
     background-color: var(--b3-menu-background);
-    border-top: 1px solid var(--b3-border-color-trans);
+    border-top: unset;
     @include frostedglass($blur: s, $color: menu, $scope: global);
     @include superellipse-use(16px 16px 0 0);
     box-shadow: var(--b3-menu-shadow);
     margin: 0 2px -2px 2px;
     width: calc(100% - 4px);
+    transform: translateY(4px); // 遮挡下阴影
 }
 .keyboard__bar {
-    border-bottom: 1px solid var(--b3-border-color-trans);
+    border-bottom: unset;
 }
 .keyboard__split {
     background-color: var(--b3-border-color-trans);

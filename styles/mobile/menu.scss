@@ -22,17 +22,17 @@
         transition: backdrop-filter 0.15s 0s;
     }
 }
-.b3-menu--fullscreen {
+.b3-menu.b3-menu--fullscreen {
     background-color: var(--b3-theme-background);
     border-radius: 0;
     corner-shape: unset;
     box-shadow: unset;
-    .neo-visual-frostedglass & {
+    .neo-visual-frostedglass-global & {
         background-color: transparent;
     }
     &::before {
-        @include frostedglass-before;
-        @include frostedglass($blur: s, $color: background);
+        @include frostedglass-before($scope: global);
+        @include frostedglass($blur: s, $color: background, $scope: global);
         border-radius: 0;
         corner-shape: unset;
         box-shadow: unset;
@@ -56,11 +56,19 @@
             &::before {
                 background-color: oklch(from var(--b3-theme-on-background) l c h / 0.5);
             }
+            &:not(.b3-menu__title--root) {
+                border-radius: inherit;
+                corner-shape: inherit;
+                background-color: transparent;
+            }
         }
         .b3-menu__submenu {
+            background-color: var(--b3-menu-background);
+            @include frostedglass($blur: s, $color: menu);
+            transition: none;
             box-shadow: none;
             &::before {
-                box-shadow: none;
+                display: none;
             }
         }
     }
