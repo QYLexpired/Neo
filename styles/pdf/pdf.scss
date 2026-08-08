@@ -39,7 +39,7 @@
 #dialogContainer > .dialog {
     border: unset;
     box-shadow: var(--b3-dialog-shadow);
-    @include superellipse(12px);
+    @include superellipse-use(14px);
     background-color: var(--b3-theme-background);
     .neo-visual-frostedglass & {
         background-color: transparent;

@@ -4,7 +4,7 @@
 }
 .config__panel .config__side,
 .config__panel .b3-tab-bar {
-    @include superellipse(14px);
+    @include superellipse-use(14px);
     margin: var(--_sidebar-gap);
     margin-right: 0;
     padding: var(--_sidebar-gap) 0;
@@ -13,7 +13,7 @@
     background-color: transparent !important; // 覆盖内联
     overflow: auto;
     .b3-list-item {
-        @include superellipse(7px);
+        @include superellipse-use(7px);
         line-height: 26px;
         padding: 0 4px; // default
         margin: 4px 8px;
@@ -40,7 +40,7 @@
     background-color: transparent;
 }
 .config-group {
-    @include superellipse(16px);
+    @include superellipse-use(16px);
     margin: 24px;
 }
 .config-items {
@@ -59,7 +59,7 @@
 }
 .config__view {
     padding: unset;
-    @include superellipse(18px);
+    @include superellipse-use(18px);
     background-color: var(--b3-theme-background);
     @include frostedglass($blur: g, $color: background, $scope: global);
     box-shadow: var(--b3-dialog-shadow-inset);

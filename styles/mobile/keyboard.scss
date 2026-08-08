@@ -2,6 +2,11 @@
 #keyboardToolbar {
     background-color: var(--b3-menu-background);
     border-top: 1px solid var(--b3-border-color-trans);
+    @include frostedglass($blur: s, $color: menu, $scope: global);
+    @include superellipse-use(16px 16px 0 0);
+    box-shadow: var(--b3-menu-shadow);
+    margin: 0 2px -2px 2px;
+    width: calc(100% - 4px);
 }
 .keyboard__bar {
     border-bottom: 1px solid var(--b3-border-color-trans);
@@ -11,13 +16,13 @@
 }
 .keyboard__util {
     padding: 6px;
-    background-color: var(--b3-menu-background);
+    background-color: transparent;
 }
 .keyboard__action.protyle-toolbar__item--current svg {
     background-color: transparent;
 }
 .keyboard__slash-item {
-    @include superellipse(12px);
+    @include superellipse-use(12px);
     background-color: transparent;
     outline: 1px solid var(--b3-border-color-trans);
     outline-offset: -1px;
@@ -25,7 +30,8 @@
     color: var(--b3-theme-on-surface);
 }
 .protyle-util--mobile {
-    @include superellipse(30px);
+    border-radius: 30px !important;
+    corner-shape: unset !important;
 }
 .keyboard__action {
     color: var(--b3-theme-on-surface);

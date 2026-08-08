@@ -14,4 +14,12 @@
             }
         }
     }
+    .neo-visual-frostedglass-global & {
+        min-height: 100%;
+    }
+    @at-root {
+        .neo-visual-frostedglass-global .neo-mobile {
+            padding-bottom: 0 !important;
+        }
+    }
 }

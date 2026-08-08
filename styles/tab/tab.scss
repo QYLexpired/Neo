@@ -12,7 +12,7 @@ body:not(.body--toolbar-hide) [data-type="wnd"] > .fn__flex:first-child {
         padding: 0;
         min-height: 42px;
         .item {
-            @include superellipse(9px);
+            @include superellipse-use(8px);
             margin: 6px 3px !important;
             background-color: transparent;
             min-height: 30px;

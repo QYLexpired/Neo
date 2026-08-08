@@ -18,7 +18,7 @@
     }
     &:focus {
         animation: neo-input-focus-ring 0.25s var(--neo-ease-out-3) forwards;
-        animation-delay: 0.05s;
+        animation-delay: 0.02s;
         background-color: var(--neo-input-background);
         --b3-theme-primary-lighter: transparent !important; // 取消阴影
         outline: unset;
@@ -51,7 +51,7 @@ body.body--win32-browser .b3-select { // body用来覆盖思源样式
         border: none;
         padding: 8px;
         background-color: var(--b3-theme-background);
-        @include superellipse(10px);
+        @include superellipse-use(12px);
         @include frostedglass($blur: l, $color: menu);
         box-shadow: var(--b3-menu-shadow);
     }

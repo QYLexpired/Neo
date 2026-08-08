@@ -5,7 +5,7 @@
     &.block__popover--open {
         border: unset;
         box-shadow: var(--b3-dialog-shadow);
-        @include superellipse(12px);
+        @include superellipse-use(12px);
         background-color: var(--b3-theme-background);
         transform: none;
         pointer-events: none;

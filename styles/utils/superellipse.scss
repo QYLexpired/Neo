@@ -16,3 +16,16 @@ $k: 1.4;
 //        border-radius: $out-mul;
 //    }
 }
+@mixin superellipse-use($r: ()) {
+    $out-plus: ();
+    $out-mul: ();
+    @each $i in $r {
+        $out-plus: list.append($out-plus, $i + 1px, space);
+        $out-mul: list.append($out-mul, $i * $k, space);
+    }
+    border-radius: $out-plus;
+    @supports (corner-shape: superellipse(1.4)) {
+        corner-shape: superellipse($k);
+        border-radius: $out-mul;
+    }
+}

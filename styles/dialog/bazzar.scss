@@ -85,7 +85,7 @@
         margin: var(--_sidebar-gap);
         margin-right: 0;
         height: calc(100% - var(--_sidebar-gap) * 4);
-        @include superellipse(14px);
+        @include superellipse-use(14px);
         box-shadow: var(--neo-main-shadow);
         background-color: transparent;
         .item__img {
@@ -103,7 +103,7 @@
         .item__preview {
             margin: 0 var(--_sidebar-gap);
             width: calc(100% - var(--_sidebar-gap) * 2);
-            @include superellipse(14px);
+            @include superellipse-use(14px);
         }
         .b3-typography {
             padding: 0 32px;

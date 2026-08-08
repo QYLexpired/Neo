@@ -3,7 +3,7 @@
     overflow: visible
 }
 .config-account__profile-avatar {
-    @include superellipse(9px);
+    @include superellipse-use(9px);
     border: none;
     background-color: transparent;
     margin-right: 8px;

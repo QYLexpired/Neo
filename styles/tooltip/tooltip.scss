@@ -1,6 +1,6 @@
 @use "../utils" as *;
 .tooltip {
-    @include superellipse(8px);
+    @include superellipse-use(8px);
     box-shadow: var(--neo-main-shadow);
     color: var(--b3-theme-on-background);
     background-color: var(--b3-menu-background);
@@ -30,7 +30,7 @@
         }
     }
     &::after {
-        @include superellipse(8px);
+        @include superellipse-use(8px);
         box-shadow: var(--neo-main-shadow);
         color: var(--b3-theme-on-background);
         background-color: var(--b3-menu-background);

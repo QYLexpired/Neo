@@ -54,7 +54,7 @@
     border: unset;
     box-shadow: var(--b3-menu-shadow);
     background-color: var(--b3-menu-background);
-    @include superellipse(12px);
+    @include superellipse-use(12px);
     .neo-visual-frostedglass & {
         background-color: transparent;
         box-shadow: var(--b3-menu-shadow-blur);
@@ -105,7 +105,7 @@
 }
 .b3-menu__item {
     line-height: 24px;
-    @include superellipse(7px);
+    @include superellipse-use(7px);
     @include menu-item-child-trans-origin;
     @include menu-item-current {
         @include menu-item-current-style;

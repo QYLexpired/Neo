@@ -38,7 +38,7 @@
 .b3-dialog__container {
     border: unset;
     box-shadow: var(--b3-dialog-shadow);
-    @include superellipse(18px);
+    @include superellipse-use(18px);
     background-color: var(--b3-theme-background);
     transform: translateY(min(-5%, -30px));
     transition: transform 0.3s var(--neo-ease-out-3);
@@ -61,7 +61,7 @@
 .b3-dialog__loading {
     border: unset;
     box-shadow: var(--b3-dialog-shadow);
-    @include superellipse(16px);
+    @include superellipse-use(16px);
     background-color: var(--b3-theme-background);
     .neo-visual-frostedglass-global & {
         background-color: transparent;

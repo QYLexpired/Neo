@@ -81,7 +81,7 @@ $table-border-color: oklch(from currentColor l c h / 0.15);
 }
 .protyle-table-control__size {
     color: var(--b3-theme-on-surface);
-    @include superellipse(8px);
+    @include superellipse-use(8px);
     @include frostedglass($blur: s, $color: transparent);
     box-shadow: var(--neo-main-shadow);
     line-height: 16px;

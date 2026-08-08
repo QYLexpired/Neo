@@ -15,7 +15,7 @@
     border: unset;
     box-shadow: var(--b3-menu-shadow);
     background-color: var(--b3-menu-background);
-    @include superellipse(12px);
+    @include superellipse-use(12px);
     .neo-visual-frostedglass & {
         background-color: transparent;
         box-shadow: var(--b3-menu-shadow-blur);
