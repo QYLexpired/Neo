@@ -32,7 +32,7 @@
     }
     &::before {
         @include frostedglass-before($scope: global);
-        @include frostedglass($blur: s, $color: background, $scope: global);
+        @include frostedglass-menu($scope: global);
         border-radius: 0;
         corner-shape: unset;
         box-shadow: unset;
@@ -49,7 +49,7 @@
         }
         &::before {
             @include frostedglass-before;
-            @include frostedglass($blur: s, $color: menu);
+            @include frostedglass-menu;
             box-shadow: var(--b3-menu-shadow-inset);
         }
         .b3-menu__title {
@@ -64,7 +64,7 @@
         }
         .b3-menu__submenu {
             background-color: var(--b3-menu-background);
-            @include frostedglass($blur: s, $color: menu);
+            @include frostedglass-menu;
             transition: none;
             box-shadow: none;
             &::before {

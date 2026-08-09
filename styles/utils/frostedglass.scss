@@ -1,35 +1,22 @@
-@mixin frostedglass($blur: l, $color: background, $alpha: null, $scope: null) {
-    $blur-value: 20px;
-    @if $blur == s {
-        $blur-value: 6px;
-    } @else if $blur == m {
-        $blur-value: 12px;
-    } @else if $blur == l {
-        $blur-value: 20px;
-    } @else if $blur == g {
-        $blur-value: 32px;
-    } @else {
+@use "sass:map";
+@mixin frostedglass($blur: s, $color: background, $alpha: 0.8, $scope: null) {
+    $blur-map: (t: 3px, s: 6px, m: 12px, l: 20px, g: 32px);
+    $color-map: (background: --b3-theme-background, surface: --b3-theme-surface, menu: --b3-menu-background);
+    $blur-value: map.get($blur-map, $blur);
+    @if $blur-value == null {
         $blur-value: $blur;
     }
-    $color-var: --b3-theme-background;
-    @if $color == surface {
-        $color-var: --b3-theme-surface;
-    } @else if $color == menu {
-        $color-var: --b3-menu-background;
-    }
-    $alpha-light: 0.65;
-    $alpha-dark: 0.7;
-    @if $alpha != null {
-        $alpha-light: $alpha;
-        $alpha-dark: $alpha;
+    $color-var: map.get($color-map, $color);
+    @if $color-var == null {
+        $color-var: --b3-theme-background;
     }
     $glass-selector: ".neo-visual-frostedglass#{if(sass($scope == global): '-global'; else: '')}";
     #{$glass-selector} & {
-        background-color: oklch(from var(#{$color-var}) l c h / #{$alpha-light});
+        background-color: oklch(from var(#{$color-var}) l c h / #{$alpha});
         backdrop-filter: blur(#{$blur-value}) saturate(1.5) brightness(1.05);
     }
     .neo-mode-dark#{$glass-selector} & {
-        background-color: oklch(from var(#{$color-var}) l c h / #{$alpha-dark});
+        background-color: oklch(from var(#{$color-var}) l c h / #{$alpha});
         backdrop-filter: blur(#{$blur-value}) saturate(1.5) brightness(0.9);
     }
 }
@@ -43,4 +30,13 @@
     .neo-visual-frostedglass#{if(sass($scope == global): "-global"; else: "")} & {
         content: "";
     }
+}
+@mixin frostedglass-menu($scope: null) {
+    @include frostedglass($blur: t, $color: menu, $scope: $scope);
+}
+@mixin frostedglass-dialog($scope: null) {
+    @include frostedglass($blur: s, $color: background, $scope: $scope);
+}
+@mixin frostedglass-tooltip($scope: null) {
+    @include frostedglass($blur: t, $color: menu, $scope: $scope);
 }

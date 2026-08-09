@@ -16,7 +16,7 @@
         }
         &::before {
             @include frostedglass-before($scope: global);
-            @include frostedglass($blur: l, $color: background, $scope: global);
+            @include frostedglass-dialog($scope: global);
             box-shadow: var(--b3-dialog-shadow-inset);
         }
         .block__icons {

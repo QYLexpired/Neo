@@ -4,7 +4,7 @@
     box-shadow: var(--neo-main-shadow);
     color: var(--b3-theme-on-background);
     background-color: var(--b3-menu-background);
-    @include frostedglass($blur: s, $color: menu, $alpha: 0.6);
+    @include frostedglass-tooltip;
     animation: neo-tooltip-entrance 0.45s var(--neo-ease-spring-2);
     transform-origin: center;
     animation-delay: 0.3s;
@@ -34,6 +34,6 @@
         box-shadow: var(--neo-main-shadow);
         color: var(--b3-theme-on-background);
         background-color: var(--b3-menu-background);
-        @include frostedglass($blur: s, $color: menu, $alpha: 0.6);
+        @include frostedglass-tooltip;
     }
 }

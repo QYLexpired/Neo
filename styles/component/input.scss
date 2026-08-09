@@ -52,7 +52,7 @@ body.body--win32-browser .b3-select { // body用来覆盖思源样式
         padding: 8px;
         background-color: var(--b3-theme-background);
         @include superellipse-use(12px);
-        @include frostedglass($blur: l, $color: menu);
+        @include frostedglass-menu;
         box-shadow: var(--b3-menu-shadow);
     }
     option {

@@ -52,7 +52,7 @@
 .b3-typography .code-block:not(pre) .protyle-action .protyle-icon,
 .protyle-wysiwyg .code-block:not(pre) .protyle-action .protyle-icon {
     background-color: var(--b3-theme-background);
-    @include frostedglass($blur: s, $color: transparent, $alpha: 0.6);
+    @include frostedglass-tooltip;
 }
 .protyle-top:hover .protyle-background--enable .protyle-background__action,
 .protyle-top:hover .protyle-background--enable .protyle-background__img .protyle-icons,

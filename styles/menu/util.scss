@@ -2,7 +2,7 @@
 .protyle-util {
     @include superellipse-use(12px);
     background-color: var(--b3-menu-background);
-    @include frostedglass($blur: s, $color: menu);
+    @include frostedglass-menu;
     border: unset;
     box-shadow: var(--b3-menu-shadow);
     animation: neo-util-menu-entrance 0.45s var(--neo-ease-spring-2);

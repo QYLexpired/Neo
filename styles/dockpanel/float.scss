@@ -13,7 +13,7 @@
             [data-type="wnd"] {
                 box-shadow: var(--neo-main-shadow);
                 background-color: var(--b3-theme-background);
-                @include frostedglass($blur: l, $color: background, $scope: global);
+                @include frostedglass-dialog($scope: global);
             }
         }
         & > .layout__resize.layout__resize--lr {

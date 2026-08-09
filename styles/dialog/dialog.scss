@@ -48,7 +48,7 @@
     }
     &::before {
         @include frostedglass-before($scope: global);
-        @include frostedglass($blur: 16px, $color: background, $scope: global);
+        @include frostedglass-dialog($scope: global);
         box-shadow: var(--b3-dialog-shadow-inset);
     }
     .b3-dialog__content {
@@ -69,7 +69,7 @@
     }
     &::before {
         @include frostedglass-before($scope: global);
-        @include frostedglass($blur: 16px, $color: background, $scope: global);
+        @include frostedglass-dialog($scope: global);
         box-shadow: var(--b3-dialog-shadow-inset);
     }
 }

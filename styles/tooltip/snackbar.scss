@@ -35,7 +35,7 @@
     box-shadow: var(--b3-message-shadow);
     color: var(--b3-theme-on-background);
     background-color: var(--b3-theme-surface);
-    @include frostedglass($blur: s, $color: surface, $alpha: 0.6);
+    @include frostedglass($blur: t, $color: surface);
     padding: 12px 24px !important; // 覆盖内联
     transition: none;
     transform: none;

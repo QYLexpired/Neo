@@ -24,8 +24,9 @@
         & > [data-node-id] {
             .sb__resize-tip {
                 color: var(--b3-theme-on-surface);
+                background-color: var(--b3-menu-background);
                 @include superellipse-use(8px);
-                @include frostedglass($blur: s, $color: transparent);
+                @include frostedglass-tooltip;
                 box-shadow: var(--neo-main-shadow);
                 line-height: 16px;
                 animation: neo-tooltip-entrance 0.6s var(--neo-ease-spring-3);

@@ -81,8 +81,9 @@ $table-border-color: oklch(from currentColor l c h / 0.15);
 }
 .protyle-table-control__size {
     color: var(--b3-theme-on-surface);
+    background-color: var(--b3-menu-background);
     @include superellipse-use(8px);
-    @include frostedglass($blur: s, $color: transparent);
+    @include frostedglass-tooltip;
     box-shadow: var(--neo-main-shadow);
     line-height: 16px;
     animation: neo-tooltip-entrance 0.6s var(--neo-ease-spring-3);
@@ -94,7 +95,7 @@ $table-border-color: oklch(from currentColor l c h / 0.15);
         @include superellipse(10px);
     }
     svg {
-        @include frostedglass($blur: s, $color: transparent);
+        @include frostedglass-tooltip;
         @include superellipse(10px);
         box-shadow: none;
         color: var(--b3-theme-on-surface);

@@ -1,7 +1,7 @@
 @use "../utils" as *;
 .graph__panel {
     background-color: var(--b3-menu-background);
-    @include frostedglass($blur: l, $color: menu);
+    @include frostedglass-menu;
     @include superellipse(8px);
     border: unset;
     top: 50px;

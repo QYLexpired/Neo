@@ -61,7 +61,7 @@
     padding: unset;
     @include superellipse-use(18px);
     background-color: var(--b3-theme-background);
-    @include frostedglass($blur: g, $color: background, $scope: global);
+    @include frostedglass-dialog($scope: global);
     box-shadow: var(--b3-dialog-shadow-inset);
     opacity: 0;
     transform: scale(1.2);

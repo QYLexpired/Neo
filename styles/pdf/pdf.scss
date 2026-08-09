@@ -47,7 +47,7 @@
     }
     &::before {
         @include frostedglass-before;
-        @include frostedglass($blur: l, $color: background);
+        @include frostedglass-dialog;
         box-shadow: var(--b3-dialog-shadow-inset);
     }
     .separator {
@@ -83,6 +83,49 @@
 .pdf__rect > div:first-child,
 .pdf__rect > div:last-child {
     border-radius: 0;
+}
+.pdf__rect-resize {
+    height: 8px;
+    width: 8px;
+    background-color: var(--pdf-annotation-color);
+    opacity: 0.5;
+    transition: 0.6s var(--neo-ease-spring-3);
+    border: none;
+    mask-image: url(data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIzNDEuMzMzMzMzIDM0MS4zMzMzMzMgNDI2LjY2NjY2NyA0MjYuNjY2NjY3IiBmaWxsPSJjdXJyZW50Q29sb3IiIHdpZHRoPSI4My4zMzMzMzMiIGhlaWdodD0iODMuMzMzMzMzIiBjbGFzcz0iaWNvbiIgcC1pZD0iMzk5OTUiIHQ9IjE3Nzk1NDMyMzg2ODAiIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI+CiAgPHBhdGggZD0iTTY4Mi42NjY3IDU1NC42NjY3bDAtMjEzLjMzMzQgODUuMzMzMyAwdjIxMy4zMzM0QTIxMy4zMzMzIDIxMy4zMzMzIDAgMCAxIDU1NC42NjY3IDc2OEgzNDEuMzMzM2wwLTg1LjMzMzMgMjEzLjMzMzQgMGExMjggMTI4IDAgMCAwIDEyOC0xMjh6IiBwLWlkPSIzOTk5NiIgLz4KPC9zdmc+);
+    mask-size: cover;
+    mask-repeat: no-repeat;
+    border-radius: 0;
+    &:hover {
+        opacity: 1;
+        scale: 1.2;
+    }
+    &--nw {
+        transform: rotate(180deg);
+        top: -4px;
+        bottom: auto;
+        left: -4px;
+        right: auto;
+    }
+    &--ne {
+        transform: rotate(-90deg);
+        top: -4px;
+        bottom: auto;
+        left: auto;
+        right: -4px;
+    }
+    &--se {
+        top: auto;
+        bottom: 0;
+        left: auto;
+        right: 0;
+    }
+    &--sw {
+        transform: rotate(90deg);
+        top: auto;
+        bottom: -4px;
+        left: -4px;
+        right: auto;
+    }
 }
 .pdf__resize {
     border-radius: 0;

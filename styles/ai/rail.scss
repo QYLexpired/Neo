@@ -22,7 +22,7 @@
     }
     &::before {
         @include frostedglass-before;
-        @include frostedglass($blur: s, $color: menu);
+        @include frostedglass-menu;
         box-shadow: var(--b3-menu-shadow-inset);
     }
 }
