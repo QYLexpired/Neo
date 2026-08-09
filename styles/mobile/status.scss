@@ -1,19 +1,12 @@
 @use "../utils" as *;
 .neo-mobile {
     .status {
-        position: fixed;
-        top: unset;
         bottom: -26px;
-        box-shadow: unset;
         height: 26px;
         line-height: 26px;
-        border: unset;
         padding: 0 12px;
-        overflow: unset;
-        z-index: unset;
-        max-width: unset;
         @include superellipse-use(12px 12px 0 0);
-        box-shadow: var(--b3-menu-shadow);
+        box-shadow: var(--neo-main-shadow);
         margin: 0 2px -2px 2px;
         width: calc(100% - 4px);
     }

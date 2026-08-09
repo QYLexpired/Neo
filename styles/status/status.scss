@@ -3,7 +3,7 @@
     anchor-name: --anchor-layout-center;
 }
 @supports (bottom: anchor(--a bottom)) {
-    .status {
+    body:not(.neo-mobile) .status {
         position: absolute;
         bottom: calc(anchor(--anchor-layout-center bottom) + calc(var(--_layout-gap) * 1.5));
         right: calc(anchor(--anchor-layout-center right) + calc(var(--_layout-gap) * 1.5));
