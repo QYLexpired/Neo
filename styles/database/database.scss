@@ -44,10 +44,10 @@
 .av__row-actions .av__row-action {
     @include icon;
     transition: var(--b3-transition);
-    background-color: oklch(from var(--b3-theme-background) l c h / 0.7);
+    background-color: oklch(from var(--b3-theme-background) l c h / 0.8);
     backdrop-filter: blur(3px);
     &:hover {
-        background-color: oklch(from var(--b3-theme-background) l c h / 0.7);
+        background-color: oklch(from var(--b3-theme-background) l c h / 0.8);
         background-image: unset;
     }
 }
