@@ -23,6 +23,12 @@
         &:last-child {
             margin-bottom: 0;
         }
+        &:not(.b3-list-item--focus) {
+            .b3-list-item__graphic,
+            .b3-list-item__text {
+                color: var(--b3-theme-on-surface);
+            }
+        }
     }
     .config__tab-head {
         margin-bottom: 16px;
