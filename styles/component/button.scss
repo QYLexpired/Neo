@@ -213,10 +213,10 @@
 .config-bazaar__title {
     .b3-button {
         @include button-transparent;
-        padding: 0 8px;
+        padding: 0 4px;
         &:not(.b3-button--outline) {
             @include button-transparent;
-            padding: 0 8px;
+            padding: 0 4px;
             color: var(--b3-theme-accent);
             &:hover,
             &:active,

@@ -19,7 +19,7 @@
 // 对话气泡
 .agent-chat__msg--user .agent-chat__body {
     background-color: var(--b3-list-hover);
-    @include superellipse(12px);
+    @include superellipse-use(12px);
     padding: 0;
     &.protyle-wysiwyg {
         padding: 4px 12px;
@@ -97,6 +97,25 @@
 // 思考
 .agent-chat__msg--thinking {
     opacity: 0.6;
+    &:not(.agent-chat__msg--thinking-done) {
+        .agent-chat__thinking-text {
+            max-width: fit-content;
+            background-clip: text;
+            background-size: 200% 100%;
+            background-image: linear-gradient(120deg, var(--b3-theme-on-surface) 30%, white 50%, var(--b3-theme-on-surface) 70%);
+            -webkit-text-fill-color: transparent;
+            color: transparent;
+            animation: neo-agent-thinking 0.65s linear infinite;
+        }
+    }
+}
+@keyframes neo-agent-thinking {
+    0% {
+        background-position: 100%
+    }
+    100% {
+        background-position: -100%
+    }
 }
 .agent-chat__thinking-header {
     color: var(--b3-theme-on-background);

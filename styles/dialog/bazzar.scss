@@ -3,7 +3,7 @@
     .config-bazaar__title {
         background-color: var(--b3-theme-background);
         backdrop-filter: none;
-        margin: 0 2px;
+        padding: 8px 16px;
         .neo-visual-frostedglass & {
             background-color: transparent;
             input,
