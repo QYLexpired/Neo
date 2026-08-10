@@ -14,3 +14,22 @@ body {
         }
     }
 }
+// neo+提示
+html:not(.neo-enabled) body {
+    &::after {
+        content: "Neo+ plugin is not installed or enabled, the theme cannot be displayed properly";
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        pointer-events: none;
+        font-size: 1.5em;
+        z-index: 3;
+        @include superellipse(12px);
+        padding: 4px 16px;
+        background-color: var(--b3-theme-surface);
+    }
+}
+html[lang="zh-CN"]:not(.neo-enabled) body::after {
+    content: "未安装或启用Neo+插件，主题无法正常显示";
+}
