@@ -2,7 +2,6 @@
 .block__popover {
     transform: translateY(min(-5%, -30px));
     transition: transform 0.3s var(--neo-ease-out-3);
-    overflow: hidden;
     &.block__popover--open {
         border: unset;
         box-shadow: var(--b3-dialog-shadow);
