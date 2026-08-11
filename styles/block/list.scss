@@ -1,3 +1,8 @@
+:root {
+    --_list-action-color: var(--b3-theme-on-surface);
+    --_list-fold-color: var(--b3-theme-accent);
+    --_list-fold-bg: oklch(from var(--_list-fold-color) l c h / 0.18);
+}
 @mixin list-common {
     --b3-list-icon-hover: transparent;
     &::before {
@@ -14,27 +19,30 @@
         }
     }
     & > .protyle-action {
-        &::before {
-            transition: var(--b3-transition);
+        color: var(--_list-action-color);
+        &:hover {
+            color: var(--_list-fold-color);
         }
         &::after {
             transition: var(--b3-transition);
         }
     }
     &[fold="1"] > .protyle-action {
+        color: var(--_list-fold-color);
         &::after {
             width: 1.5em;
             height: 1.5em;
             transform: translate(-50%, -50%);
             margin: unset;
             border-radius: 50%;
+            background-color: var(--_list-fold-bg);
+        }
+        &:hover {
+            &::after {
+                background-color: var(--_list-fold-bg);
+            }
         }
     }
-}
-:root {
-    --_list-action-color: var(--b3-theme-on-surface);
-    --_list-fold-color: var(--b3-theme-accent);
-    --_list-fold-bg: oklch(from var(--_list-fold-color) l c h / 0.18);
 }
 .protyle-wysiwyg [data-node-id] {
     &.li[data-subtype="u"],
@@ -42,164 +50,19 @@
     &.li[data-subtype="t"] {
         @include list-common;
     }
-}
-// 无序列表
-.protyle-wysiwyg [data-node-id].li[data-subtype="u"] {
-    & > .protyle-action {
-        color: transparent;
-        &::before {
-            background-color: var(--_list-action-color);
-        }
-        &:hover {
-            color: transparent;
+    &.li[data-subtype="t"] {
+        & > .protyle-action {
             &::before {
-                background-color: var(--_list-fold-color);
+                transition: var(--b3-transition);
             }
-            &::after {
-                background-color: transparent;
-            }
-        }
-    }
-    &[fold="1"] > .protyle-action {
-        &::before {
-            background-color: var(--_list-fold-color);
-        }
-        &::after {
-            background-color: var(--_list-fold-bg);
-        }
-    }
-    // 多级序号
-    & > .protyle-action {
-        &::before {
-            content: "";
-            display: flex;
-            position: absolute;
-            width: 0.4em;
-            height: 0.4em;
-            justify-content: center;
-            align-items: center;
-            border-radius: 50%;
-            transform: rotate(0deg);
-        }
-    }
-    $base: ".li[data-subtype=\"u\"]";
-    $selector: $base;
-    @for $i from 1 through 9 {
-        #{$selector} {
-            & > .protyle-action::before {
-                @if $i % 3 == 1 {
-                    width: 0.35em;
-                    height: 0.35em;
-                    border-radius: 0;
-                    transform: rotate(0deg);
-                } @else if $i % 3 == 2 {
-                    width: 0.35em;
-                    height: 0.35em;
-                    border-radius: 0;
-                    transform: rotate(45deg);
-                } @else {
-                    width: 0.4em;
-                    height: 0.4em;
-                    border-radius: 50%;
-                    transform: rotate(0deg);
-                }
-            }
-        }
-        $selector: $selector + " " + $base;
-    }
-}
-// 有序列表
-.protyle-wysiwyg [data-node-id].li[data-subtype="o"] {
-    // 第一层
-    & > .protyle-action {
-        color: var(--_list-action-color);
-        &:hover {
-            color: var(--_list-fold-color);
-            &::after {
-                background-color: transparent;
-            }
-        }
-    }
-    &[fold="1"] > .protyle-action {
-        color: var(--_list-fold-color) !important; // 覆盖hover
-        &::after {
-            background-color: var(--_list-fold-bg);
-        }
-    }
-    // 多级序号
-    // counter-increment: o-counter-1; 第一层不参与
-    & > .protyle-action {
-        &::before {
-            // content: counter(o-counter-1) "."; 第一层不参与
-            display: flex;
-            position: absolute;
-            width: 1em;
-            height: 1em;
-            line-height: 1em;
-            justify-content: center;
-            align-items: center;
-            word-break: keep-all;
-        }
-    }
-    $base: ".li[data-subtype=\"o\"]";
-    $selector: $base;
-    @for $i from 2 through 9 {
-        $style: "";
-        @if $i % 3 == 2 {
-            $style: ", lower-alpha";
-        } @else if $i % 3 == 0 {
-            $style: ", lower-roman";
-        }
-        #{$selector} {
-            counter-increment: o-counter-#{$i};
-            & > .protyle-action {
-                color: transparent;
+            &:hover {
                 &::before {
-                    color: var(--_list-action-color);
-                }
-                &:hover {
-                    color: transparent;
-                    &::before {
-                        color: var(--_list-fold-color);
-                    }
-                    &::after {
-                        background-color: transparent;
-                    }
-                }
-            }
-            &[fold="1"] > .protyle-action {
-                color: transparent !important; // 覆盖hover
-                &::before {
-                    color: var(--_list-fold-color);
-                }
-                &::after {
-                    background-color: var(--_list-fold-bg);
-                }
-            }
-            & > .protyle-action {
-                &::before {
-                    content: counter(o-counter-#{$i}#{$style}) ".";
+                    background-color: var(--_list-fold-color);
                 }
             }
         }
-        $selector: $selector + " " + $base;
-    }
-}
-// 任务列表
-.protyle-wysiwyg [data-node-id].li[data-subtype="t"] {
-    & > .protyle-action {
-        &:hover {
+        &[fold="1"] > .protyle-action {
             --_list-action-color: var(--_list-fold-color);
-            &::after {
-                background-color: transparent;
-            }
-        }
-    }
-    &[fold="1"] > .protyle-action {
-        --_list-action-color: var(--_list-fold-color);
-        &::after {
-            background-color: var(--_list-fold-bg) !important;
-            border-radius: 50%;
         }
     }
 }
