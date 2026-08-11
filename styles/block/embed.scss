@@ -4,7 +4,7 @@
     background-color: transparent;
     padding: 10px 16px;
     box-shadow: var(--neo-main-shadow);
-    @include superellipse(10px);
+    @include superellipse-use(10px);
     .protyle-wysiwyg__embed {
         border-color: var(--b3-border-color-trans);
     }

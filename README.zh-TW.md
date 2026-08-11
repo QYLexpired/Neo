@@ -1,16 +1,15 @@
 #### 關於主題
 - **Neo 主題**：Neo 是專為思源筆記設計的第三方主題，設計風格高度參考 Apple HIG（macOS/iOS），以全域統一、細緻打磨的介面語言，讓每次筆記體驗都賞心悅目
-- **依賴 Neo+ 插件**：主題的部分樣式和功能無法僅透過 CSS 實現，因此必須安裝並啟用主題的配套插件：Neo+
+- **依賴 Neo+ 插件**：主題的部分樣式和功能無法僅透過 CSS 實現，因此必須安裝並啟用主題的配套插件：[Neo+](https://github.com/QYLexpired/Neo-Plus)
 - **問題回饋**：使用過程中有任何問題或建議，可透過 [Neo 主題介紹及回饋綜合帖](https://ld246.com/article/1783158376401) 或 [GitHub](https://github.com/QYLexpired/Neo/issues) 進行回饋
 - **支持我**：Neo 主題是完全免費的，如果喜歡這個主題，歡迎在 [GitHub](https://github.com/QYLexpired/Neo) 為我點亮小星星，也可以[請我喝杯咖啡](https://icnmjy02sv9g.feishu.cn/wiki/FekNwrtB7ia1WckYelRckwzZnig?from=from_copylink)
 #### 更新說明
 ##### v1.4.0 ~ v1.4.2
+- 適配思源 3.8.0-beta.3
 - 手機端支援使用超級融合
 - 優化全域介面通透度
 - 重做毛玻璃效果：提高可讀性並增加層次感
-- 適配思源 3.8.0-beta.1
 - 毛玻璃效果支援選擇檔位：輕量、全域
-- 全面適配手機端樣式
 - 重新引入平滑圓角效果
 - 優化 PDF 標註效果
 - 修復釘住工具欄在智能體介面錯誤生效的問題

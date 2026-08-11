@@ -8,7 +8,7 @@
     background-color: oklch(from var(--b3-theme-surface) l c h / 0.32);
     outline: 0.5px solid oklch(from var(--b3-theme-on-background) l c h / 0.12);
     outline-offset: -0.5px;
-    @include superellipse(10px);
+    @include superellipse-use(10px);
     .neo-sidebar-mute .dockPanel & {
         background-color: oklch(from var(--b3-theme-background) l c h / 0.32);
     }

@@ -8,7 +8,7 @@
     outline-offset: -0.5px;
     padding: 10px 16px;
     margin: 0.4em 0;
-    @include superellipse(10px);
+    @include superellipse-use(10px);
     &::before {
         display: none;
     }

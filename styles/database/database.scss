@@ -18,7 +18,7 @@
 }
 .av__gallery-item {
     box-shadow: var(--neo-main-shadow);
-    @include superellipse(10px);
+    @include superellipse-use(10px);
     &::before {
         background-color: transparent !important;
     }

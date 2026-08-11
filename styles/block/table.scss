@@ -7,7 +7,7 @@ $table-border-color: oklch(from currentColor l c h / 0.15);
     outline-offset: -1px;
     padding: 1px;
     overflow: hidden;
-    @include superellipse(10px);
+    @include superellipse-use(10px);
     caption {
         border-bottom: 1px solid $table-border-color;
         &[style*="caption-side: bottom"] {

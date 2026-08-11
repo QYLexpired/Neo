@@ -1,17 +1,16 @@
 #### 关于主题
 - **Neo主题**：Neo是专为思源笔记设计的第三方主题，设计风格高度参考Apple HIG（macOS/iOS），以全局统一、细致打磨的界面语言，让每次笔记体验都赏心悦目
-- **依赖Neo+插件**：主题的部分样式和功能无法仅通过CSS实现，因此必须安装并启用主题的配套插件：Neo+
+- **依赖Neo+插件**：主题的部分样式和功能无法仅通过CSS实现，因此必须安装并启用主题的配套插件：[Neo+](https://github.com/QYLexpired/Neo-Plus)
 - **问题反馈**：使用过程中有任何问题或建议，可通过[Neo 主题介绍及反馈综合帖](https://ld246.com/article/1783158376401)或[GitHub](https://github.com/QYLexpired/Neo/issues)进行反馈
 - **支持我**：Neo主题是完全免费的，如果喜欢这个主题，欢迎在[GitHub](https://github.com/QYLexpired/Neo)为我点亮小星星，也可以[请我喝杯咖啡](https://icnmjy02sv9g.feishu.cn/wiki/FekNwrtB7ia1WckYelRckwzZnig?from=from_copylink)
 #### 更新说明
 ##### 1.4.0 ~ 1.4.2
+- 适配思源3.8.0-beta.3
 - 手机端支持使用超级融合
-- 浮窗支持使用超级融合
+- 全面适配手机端样式
 - 优化全局界面通透度
 - 重做毛玻璃效果：提高可读性并增加层次感
-- 适配思源3.8.0-beta.1
 - 毛玻璃效果支持选择档位：轻量、全局
-- 全面适配手机端样式
 - 重新引入平滑圆角效果
 - 优化PDF标注效果
 - 修复钉住工具栏在智能体界面错误生效的问题

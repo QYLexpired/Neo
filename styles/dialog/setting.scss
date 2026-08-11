@@ -2,6 +2,9 @@
 .config__panel {
     background-color: transparent;
 }
+.config__tab-title {
+    font-weight: bold;
+}
 .config__panel .config__side,
 .config__panel .b3-tab-bar {
     @include superellipse-use(14px);

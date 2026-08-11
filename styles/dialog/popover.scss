@@ -32,6 +32,21 @@
         }
     }
 }
+.block__edit {
+    border-bottom: unset;
+}
+.block__edit-resize {
+    &::after {
+        height: 1px;
+        background-color: var(--b3-border-color-trans);
+        transition: var(--b3-transition);
+    }
+    &:hover {
+        &::after {
+            background-color: var(--_resize-hl);
+        }
+    }
+}
 @keyframes neo-popover-enable-click {
     to {
         pointer-events: auto;

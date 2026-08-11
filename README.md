@@ -1,16 +1,15 @@
-#### About the Theme
+#### About Neo Theme
 - **Neo Theme**: Neo is a third-party theme designed specifically for SiYuan Notes, with a design language highly inspired by Apple HIG (macOS/iOS). Its globally unified, meticulously polished interface makes every note-taking experience a pleasure.
-- **Depends on the Neo+ plugin**: Some of the theme's styles and features cannot be implemented with CSS alone, so the companion plugin Neo+ **MUST** be installed and enabled.
+- **Depends on the Neo+ plugin**: Some of the theme's styles and features cannot be implemented with CSS alone, so the companion plugin [Neo+](https://github.com/QYLexpired/Neo-Plus) **MUST** be installed and enabled.
 - **Feedback**: For any questions or suggestions during use, please visit the [Neo Theme Introduction & Feedback Thread](https://ld246.com/article/1783158376401) or [GitHub](https://github.com/QYLexpired/Neo/issues)
 - **Support Me**: The Neo theme is completely free. If you enjoy this theme, feel free to star it on [GitHub](https://github.com/QYLexpired/Neo) or [buy me a coffee](https://icnmjy02sv9g.feishu.cn/wiki/FekNwrtB7ia1WckYelRckwzZnig?from=from_copylink)
 #### What's New
 ##### v1.4.0 ~ v1.4.2
+- Adapted for SiYuan 3.8.0-beta.3
 - Mobile now supports Super Fusion
 - Optimized global interface translucency
 - Redesigned the frosted glass effect to improve readability and add a sense of layering
-- Adapted for SiYuan 3.8.0-beta.1
 - Frosted glass effect now supports level selection: Light, Global
-- Fully adapted mobile styles
 - Re-introduced the smooth rounded corners effect
 - Optimized PDF annotation effects
 - Fixed the issue where the pinned toolbar incorrectly took effect in the AI agent interface

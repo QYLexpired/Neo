@@ -92,12 +92,17 @@
         @include superellipse-use(14px);
         box-shadow: var(--neo-main-shadow);
         background-color: transparent;
+        color: var(--b3-theme-on-surface);
         .item__img {
+            margin: 16px auto 8px auto;
             @include superellipse(14px);
         }
-        color: var(--b3-theme-on-surface);
-        &.item__meta-title {
+        .item__meta-title {
             color: var(--b3-theme-on-background);
+            font-weight: normal;
+        }
+        .item__title {
+            font-weight: bold;
         }
     }
     .item__main {
