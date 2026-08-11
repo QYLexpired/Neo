@@ -124,6 +124,7 @@
 @mixin gutters-svg-common {
     transition: var(--b3-transition);
     svg {
+        transition: var(--b3-transition);
         color: var(--b3-theme-on-surface);
     }
     &:hover {
