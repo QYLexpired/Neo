@@ -158,3 +158,33 @@
         min-width: 1.5em;
     }
 }
+// 拖拽
+.av__widthdrag {
+    &:hover,
+    &:active {
+        right: -3px;
+        background-color: transparent;
+        &::after {
+            background-color: var(--_resize-hl);
+        }
+    }
+    &::after {
+        content: "";
+        position: absolute;
+        height: 100%;
+        width: 1px;
+        left: 50%;
+        transform: translateX(-50%);
+        top: 0;
+        transition: var(--b3-transition);
+        background-color: transparent;
+    }
+}
+.av__width-tip {
+    color: var(--b3-theme-on-surface);
+    background-color: var(--b3-menu-background);
+    @include superellipse-use(8px);
+    @include frostedglass-tooltip;
+    box-shadow: var(--neo-main-shadow);
+    line-height: 16px;
+}
