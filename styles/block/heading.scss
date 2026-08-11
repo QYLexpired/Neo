@@ -51,6 +51,11 @@
             //animation: neo-angle 2.5s linear infinite;
             //animation-play-state: paused;
         }
+        &:empty {
+            &::before {
+                background-color: var(--b3-empty-color);
+            }
+        }
     }
 }
 /*.layout__wnd--active .protyle-title__input {

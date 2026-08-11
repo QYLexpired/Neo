@@ -15,8 +15,8 @@ body {
     }
 }
 // neo+提示
-html:not(.neo-enabled) body {
-    &::after {
+html:not(.neo-enabled) {
+    body::after {
         content: "Neo+ plugin is not installed or enabled, the theme cannot be displayed properly";
         position: fixed;
         top: 50%;
@@ -26,8 +26,16 @@ html:not(.neo-enabled) body {
         font-size: 1.5em;
         z-index: 3;
         @include superellipse(12px);
-        padding: 4px 16px;
-        background-color: var(--b3-theme-surface);
+        padding: 8px 32px;
+        line-height: 1.625;
+        background-color: oklch(from var(--b3-theme-surface) l c h / 0.8);
+        box-shadow: var(--b3-message-shadow);
+        backdrop-filter: blur(3px) saturate(1.5) brightness(1.05);
+    }
+    &[data-theme-mode="dark"] {
+        body::after {
+            backdrop-filter: blur(3px) saturate(1.5) brightness(0.9);
+        }
     }
 }
 html[lang="zh-CN"]:not(.neo-enabled) body::after {
