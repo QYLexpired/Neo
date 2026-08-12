@@ -1,6 +1,6 @@
-## Neo：精心打磨的介面，靈動自由的思維
+# Neo：精心打磨的介面，靈動自由的思維
 Neo 是專為思源筆記設計的第三方主題，以 Apple（macOS/iOS）設計語言為靈感，建構全域統一的精緻介面，讓每次筆記體驗都賞心悅目
-### 更新日誌
+## 更新日誌
 完整更新紀錄可於 [CHANGELOG](https://github.com/QYLexpired/Neo/blob/main/CHANGELOG.md) 查看
 - 支援思源 3.8.0-beta.4
 - 手機端支援使用超級融合
@@ -14,12 +14,12 @@ Neo 是專為思源筆記設計的第三方主題，以 Apple（macOS/iOS）設�
 - 移除液態玻璃的色散效果以提升效能
 - 修復釘選工具列在 AI 代理介面錯誤生效的問題
 - 修復超級融合與偽文件麵包屑外掛的衝突
-### 說明
+## 說明
 - 主題的部分樣式和功能無法僅透過 CSS 實現，因此必須安裝並啟用主題的配套外掛：[Neo+](https://github.com/QYLexpired/Neo-Plus)
 - 使用過程中有任何問題或建議，可透過 [Neo 主題介紹及回饋討論串](https://ld246.com/article/1783158376401) 或 [GitHub](https://github.com/QYLexpired/Neo/issues) 提出回饋
-### 贊助我
+## 贊助我
 Neo 主題完全免費，如果喜歡這個主題，歡迎在 [GitHub](https://github.com/QYLexpired/Neo) 幫我按顆星星，也可以[請我喝杯咖啡](https://icnmjy02sv9g.feishu.cn/wiki/FekNwrtB7ia1WckYelRckwzZnig?from=from_copylink)
-### 特性
+## 特性
 #### 豐富嚴謹的配色
 - 內建數十種風格各異的預設配色方案
 - 自訂主題色：可透過選取主題色與飽和度自訂介面顏色
@@ -50,7 +50,7 @@ Neo 主題完全免費，如果喜歡這個主題，歡迎在 [GitHub](https://g
 - 支援列表引導線，讓列表層級更加清晰
 - 支援聚焦區塊指示效果
 - 支援側邊註記，以所見即所得形式呈現於編輯器側邊
-#### 致謝
+## 致謝
 製作 Neo 主題時，從以下專案獲得大量靈感，感謝這些專案的製作者
 - [Asri](https://github.com/mustakshif/Asri)
 - [Cupertino](https://github.com/aaaaalexis/obsidian-cupertino)

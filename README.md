@@ -1,8 +1,8 @@
-## Neo: Refined Interface, Fluid and Free Thinking
+# Neo: Refined Interface, Fluid and Free Thinking
 Neo is a third-party theme designed specifically for SiYuan Notes, with a design language inspired by Apple (macOS/iOS). Its globally unified, meticulously polished interface makes every note-taking experience a delight.
-### Changelog
+## Changelog
 See the [CHANGELOG](https://github.com/QYLexpired/Neo/blob/main/CHANGELOG.md) for the full update history.
-- Updated for SiYuan 3.8.0-beta.4
+- Updated for SiYuan 3.8.0
 - Mobile now supports Super Fusion
 - Fully overhauled mobile styles
 - Improved overall interface translucency
@@ -14,12 +14,12 @@ See the [CHANGELOG](https://github.com/QYLexpired/Neo/blob/main/CHANGELOG.md) fo
 - Removed the chromatic dispersion effect of liquid glass to improve performance
 - Fixed the pinned toolbar incorrectly applying in the AI agent interface
 - Fixed a conflict between Super Fusion and the Pseudo Document Breadcrumb plugin
-### Notes
+## Notes
 - Some of the theme's styles and features cannot be implemented with CSS alone, so the companion plugin [Neo+](https://github.com/QYLexpired/Neo-Plus) **MUST** be installed and enabled.
 - For any questions or suggestions during use, please visit the [Neo Theme Introduction & Feedback Thread](https://ld246.com/article/1783158376401) or [GitHub](https://github.com/QYLexpired/Neo/issues)
-### Support Me
+## Support Me
 The Neo theme is completely free. If you enjoy this theme, feel free to star it on [GitHub](https://github.com/QYLexpired/Neo) or [buy me a coffee](https://icnmjy02sv9g.feishu.cn/wiki/FekNwrtB7ia1WckYelRckwzZnig?from=from_copylink)
-### Features
+## Features
 #### Rich, Rigorous Color Schemes
 - Dozens of built-in preset color schemes, each with its own distinct style
 - Custom Theme Color: pick an accent color and adjust its saturation to customize the interface
@@ -50,7 +50,7 @@ The Neo theme is completely free. If you enjoy this theme, feel free to star it 
 - List Bullet Line: guide lines for a clearer list hierarchy
 - Focus Block Indicator effect
 - Side Memo: renders memo content in a WYSIWYG fashion right beside the editor
-#### Acknowledgements
+## Acknowledgements
 The creation of the Neo theme drew significant inspiration from the following projects. Thanks to their creators:
 - [Asri](https://github.com/mustakshif/Asri)
 - [Cupertino](https://github.com/aaaaalexis/obsidian-cupertino)
