@@ -2,7 +2,7 @@
 Neo 是專為思源筆記設計的第三方主題，以 Apple（macOS/iOS）設計語言為靈感，建構全域統一的精緻介面，讓每次筆記體驗都賞心悅目
 ## 更新日誌
 完整更新紀錄可於 [CHANGELOG](https://github.com/QYLexpired/Neo/blob/main/CHANGELOG.md) 查看
-- 支援思源 3.8.0-beta.4
+- 支援思源3.8.0
 - 手機端支援使用超級融合
 - 全面支援手機端樣式
 - 優化全域介面的通透感
