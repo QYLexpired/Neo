@@ -15,7 +15,7 @@ body {
     }
 }
 // neo+提示
-html:not(.neo-enabled) {
+html[data-frontend]:not(.neo-enabled) {
     body::after {
         content: "Neo+ plugin is not installed or enabled, the theme cannot be displayed properly";
         position: fixed;
@@ -38,6 +38,6 @@ html:not(.neo-enabled) {
         }
     }
 }
-html[lang="zh-CN"]:not(.neo-enabled) body::after {
+html[data-frontend][lang="zh-CN"]:not(.neo-enabled) body::after {
     content: "未安装或启用Neo+插件，主题无法正常显示";
 }

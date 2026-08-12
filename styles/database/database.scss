@@ -175,13 +175,17 @@
         background-color: transparent;
     }
 }
-.av__width-tip {
+.av__width-tip,
+.av__gallery-cover-position-tip {
     color: var(--b3-theme-on-surface);
     background-color: var(--b3-menu-background);
     @include superellipse-use(8px);
     @include frostedglass-tooltip;
     box-shadow: var(--neo-main-shadow);
     line-height: 16px;
+}
+.av__gallery-cover-position-tip {
+    padding: 4px 12px;
 }
 // 关联字段
 .av__relation .b3-menu__item .b3-form__icona ~ .popover__block.fn__ellipsis {
@@ -208,4 +212,30 @@
 }
 .av__relation-panel .av__relation-table-row:last-child {
     border-bottom: none;
+}
+// 卡片字段合并为单行
+.av__gallery-item {
+    container-type: inline-size;
+    container-name: gallery-item;
+}
+@container gallery-item (min-width: 250px) {
+    .av__gallery-field.av__gallery-field--name {
+        display: flex;
+        flex-direction: row;
+        & .av__gallery-name {
+            flex-shrink: 0;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            min-width: 68px;
+            max-width: 68px;
+        }
+        & .av__cell {
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            min-width: calc(100% - 68px);
+            max-width: calc(100% - 68px);
+        }
+    }
 }
