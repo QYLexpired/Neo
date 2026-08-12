@@ -5,17 +5,22 @@
 .b3-typography span[data-type~=inline-memo],
 .protyle-wysiwyg span[data-type~=inline-memo],
 .b3-list-item[data-treetype=outline] > .b3-list-item__text span[data-type~=inline-memo] {
-    background-color: oklch(from currentColor l c h / 0.12);
-    color: var(--neo-inline-memo-color);
-    border-bottom: 1.5px solid;
-    transition: 0.15s;
+    background-color: oklch(from currentColor l c h / 0.12) !important;
+    color: var(--neo-inline-memo-color) !important;
+    border-bottom: 1.5px solid !important;
+    transition: 0.15s !important;
+    background-image: unset !important;
+    padding: 0 !important;
+    // important以覆盖其他行内元素叠加的效果
     &:hover,
     &[neo-sidememo-highlight] {
         --neo-inline-memo-color: var(--b3-base-color);
         @include superellipse(0px);
-        background-color: var(--neo-inline-memo-color) !important; // 覆盖内联
+        background-color: var(--neo-inline-memo-color) !important;
         box-shadow: 0 0 0 6px var(--neo-inline-memo-color);
         @include contrast-color(--neo-inline-memo-color);
+        @include contrast-color(--neo-inline-memo-color, --_inlime-memo-color);
+        color: var(--_inlime-memo-color) !important;
         border-color: var(--neo-inline-memo-color);
     }
     .neo-sidememo-protyle &:hover,
