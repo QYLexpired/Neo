@@ -2,15 +2,15 @@
   "name": "Neo",
   "author": "QYL",
   "url": "https://github.com/QYLexpired/Neo",
-  "version": "1.4.2",
-  "minAppVersion": "3.8.0-beta.1",
+  "version": "1.4.3",
+  "minAppVersion": "3.8.0-beta.4",
   "displayName": {
     "default": "Neo"
   },
   "description": {
-    "default": "A meticulously crafted, production-grade theme",
-    "zh-CN": "精心打磨的毕业级主题",
-    "zh-TW": "精心打磨的畢業級主題"
+    "default": "An Apple-inspired, meticulously crafted, production-grade theme",
+    "zh-CN": "以 Apple 设计语言为灵感，精心打磨的毕业级主题",
+    "zh-TW": "以 Apple 設計語言為靈感，精心打磨的畢業級主題"
   },
   "readme": {
     "default": "README.md",

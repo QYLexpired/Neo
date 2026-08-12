@@ -66,11 +66,6 @@
         border-color: var(--b3-border-color-trans) !important;
     }
 }
-.av__relation-panel .av__relation-table-row[data-relation-type=selected],
-.av__relation-panel .av__relation-table-row[data-relation-type=selected]:hover,
-.av__relation-panel .av__relation-table-row[data-relation-type=selected].b3-menu__item--current {
-    background-color: var(--b3-list-active);
-}
 // cell
 .av__celltext--url,
 .av__celltext--ref {
@@ -187,4 +182,30 @@
     @include frostedglass-tooltip;
     box-shadow: var(--neo-main-shadow);
     line-height: 16px;
+}
+// 关联字段
+.av__relation .b3-menu__item .b3-form__icona ~ .popover__block.fn__ellipsis {
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-break: break-all;
+    transition: var(--b3-transition);
+    &:hover {
+        color: var(--b3-theme-secondary) !important;
+    }
+}
+.av__relation-panel .av__relation-table-primary,
+.av__relation-panel .av__relation-table-check {
+    background-color: transparent;
+    box-shadow: none !important;
+}
+.av__relation-panel .av__relation-table-row[data-relation-type=selected],
+.av__relation-panel .av__relation-table-row[data-relation-type=selected]:hover,
+.av__relation-panel .av__relation-table-row[data-relation-type=selected].b3-menu__item--current {
+    background-color: var(--b3-list-active);
+}
+.av__relation-panel .av__relation-table-row:last-child {
+    border-bottom: none;
 }
