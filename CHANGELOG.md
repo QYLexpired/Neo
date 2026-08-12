@@ -7,6 +7,7 @@
 - 毛玻璃效果支持选择档位：轻量、全局
 - 重新引入平滑圆角效果
 - 优化PDF标注效果
+- 数据库卡片支持字段名和字段值并排显示
 - 移除列表多级序号特性
 - 移除液态玻璃的色散效果以提升性能
 - 修复钉住工具栏在智能体界面错误生效的问题
@@ -19,6 +20,7 @@
 - Frosted glass effect now supports level selection: Light, Global
 - Re-introduced the smooth rounded corners effect
 - Optimized PDF annotation effects
+- Database cards now support displaying field names and field values side by side
 - Removed the multi-level numbering feature for lists
 - Removed the chromatic dispersion effect of liquid glass to improve performance
 - Fixed the issue where the pinned toolbar incorrectly took effect in the AI agent interface

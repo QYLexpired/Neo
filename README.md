@@ -10,6 +10,7 @@ See the [CHANGELOG](https://github.com/QYLexpired/Neo/blob/main/CHANGELOG.md) fo
 - The frosted glass effect now offers two levels: Light and Global
 - Re-introduced the smooth rounded corners effect
 - Improved PDF annotation effects
+- Database cards now support displaying field names and field values side by side
 - Removed the multi-level numbering feature for lists
 - Removed the chromatic dispersion effect of liquid glass to improve performance
 - Fixed the pinned toolbar incorrectly applying in the AI agent interface
