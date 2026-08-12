@@ -1,0 +1,289 @@
+##### v1.4.0 ~ v1.4.3
+- 适配思源3.8.0-beta.4
+- 手机端支持使用超级融合
+- 全面适配手机端样式
+- 优化全局界面通透度
+- 重做毛玻璃效果：提高可读性并增加层次感
+- 毛玻璃效果支持选择档位：轻量、全局
+- 重新引入平滑圆角效果
+- 优化PDF标注效果
+- 移除列表多级序号特性
+- 移除液态玻璃的色散效果以提升性能
+- 修复钉住工具栏在智能体界面错误生效的问题
+- 修复超级融合与伪文档面包屑插件的冲突
+- Adapted for SiYuan 3.8.0-beta.4
+- Mobile now supports Super Fusion
+- Fully adapted mobile styles
+- Optimized global interface translucency
+- Redesigned the frosted glass effect to improve readability and add a sense of layering
+- Frosted glass effect now supports level selection: Light, Global
+- Re-introduced the smooth rounded corners effect
+- Optimized PDF annotation effects
+- Removed the multi-level numbering feature for lists
+- Removed the chromatic dispersion effect of liquid glass to improve performance
+- Fixed the issue where the pinned toolbar incorrectly took effect in the AI agent interface
+- Fixed conflict between Super Fusion and the Pseudo Document Breadcrumb plugin
+##### v1.3.10
+- 适配思源3.7.4-alpha.5
+- 支持通过CSS代码片段自定义彩色标题/彩色列表/彩色文档树的亮度、饱和度
+- 重做全局阴影
+- 优化大量细节
+- Adapted for SiYuan 3.7.4-alpha.5
+- Support customizing the brightness and saturation of colored headings, colored lists, and colored document tree via CSS snippets
+- Redesigned global shadows
+- Optimized numerous details
+##### v1.3.9
+- 为明亮/暗黑模式切换添加平滑过渡
+- 分隔线可通过块样式设置不同颜色
+- 调整部分按钮样式
+- 修复侧边备注的错误
+- 优化智能体样式
+- 更换主题色跟随题头图的取色算法
+- 调整块引弹窗动效
+- Added smooth transition for light/dark mode switching
+- Dividers can now be set to different colors via block styles
+- Adjusted some button styles
+- Fixed side memo errors
+- Optimized AI agent styles
+- Changed the color extraction algorithm for theme color following banner images
+- Adjusted block reference popup animation
+##### v1.3.8
+- 适配思源3.7.4-alpha.1
+    - 适配标题自动编号
+    - 适配文档顶部数据库属性
+    - 适配文档底部双链
+- 重做消息气泡动效
+- 重做集市动效
+- 优化跨块选区效果
+- 优化块拖拽提示效果
+- Adapted for SiYuan 3.7.4-alpha.1
+    - Adapted heading auto-numbering
+    - Adapted document top database properties
+    - Adapted document bottom backlinks
+- Redesigned message bubble animation
+- Redesigned bazaar animation
+- Optimized cross-block selection effect
+- Optimized block drag hint effect
+##### v1.3.7
+- 适配思源3.7.3
+- 调整菜单和对话框阴影
+- 调整主界面阴影
+- 优化流体光标的波纹效果
+- 侧边备注支持临时隐藏
+- 修复卷轴效果与侧边备注的冲突
+- Adapted for SiYuan 3.7.3
+- Adjusted menu and dialog shadows
+- Adjusted main interface shadows
+- Optimized fluid cursor ripple effect
+- Side memo support temporary hiding
+- Fixed conflict between scroll effect and side memo
+##### v1.3.6
+- 移除部分溢出渐隐效果，彻底解决渲染进程崩溃（闪退）的问题
+- 适配思源3.7.3-beta.1
+- Removed some overflow fade-out effects, completely resolving the rendering process crash (CTD) issue
+- Adapted for SiYuan 3.7.3-beta.1
+##### v1.3.4 ~ v1.3.5
+- 新增纹理：压纹纸
+- 优化关系图颜色
+- 优化搜索界面
+- 优化contrast-color颜色阈值
+- 优化卷轴效果，并修复其导致智能体输入框样式异常的问题
+- 修复侧边备注的部分错误
+- 降低彩色标题和彩色列表的饱和度
+- 优化部分预设配色下彩色标题和彩色列表的可读性
+- New texture: Embossed Paper
+- Optimized graph colors
+- Optimized search interface
+- Optimized contrast-color threshold
+- Optimized scroll effect, and fixed the issue where it caused abnormal styles in the AI agent input field
+- Fixed some errors with side memo
+- Reduced saturation of colored headings and colored lists
+- Optimized readability of colored headings and colored lists under some preset color schemes
+##### v1.3.3
+- 适配思源3.7.2
+    - 修正文档树引导线样式
+    - 优化题头图对话框样式
+    - 修正备注输入框样式
+- 新增视觉-毛玻璃，主题将不再默认开启毛玻璃效果，需手动开启
+- 优化流体光标路径，防止鼠标移动弧度过大时出现锯齿感
+- 流体光标支持配置鼠标点击效果
+- 新增预设配色：湖畔
+- 覆写Windows端选单样式
+- 优化Windows端右上角控制栏样式
+- 移除性能模式
+- 移除AI配色功能
+- Adapted for SiYuan 3.7.2
+    - Fixed document tree guide line styles
+    - Optimized banner image dialog styles
+    - Fixed note input field styles
+- Added Visual - Frosted Glass; the theme will no longer enable frosted glass by default, must be manually enabled
+- Optimized fluid cursor path to prevent jaggedness when the mouse moves in large arcs
+- Fluid cursor now supports configurable mouse click effect
+- New preset color scheme: Lakeside
+- Overridden Windows select input styles
+- Optimized Windows top-right control bar styles
+- Removed Performance mode
+- Removed AI color scheme feature
+##### v1.3.0 ~ v1.3.2
+- 新增扩展特性：侧边备注
+- 重做菜单和对话框阴影及毛玻璃效果
+- 重做代码块样式
+- 增大界面圆角弧度
+- New extended feature: Side memo
+- Redesigned menu and dialog shadows and frosted glass effects
+- Redesigned code block styles
+- Increased interface border radius
+##### v1.2.12
+- 在Neo+菜单中添加顶栏融合按钮，方便快速开关思源的页签融合至顶栏
+- 为输入框聚焦环添加动效
+- 区分动态锚文本和静态锚文本
+- 修复平滑光标选区时未折叠导致定位偏移的问题
+- 矩形/下划线平滑光标更改为向右延伸
+- Added topbar fusion button in Neo+ menu for quickly toggling SiYuan's tab fusion to topbar
+- Added animation for input focus ring
+- Differentiated dynamic anchor text from static anchor text
+- Fixed positioning offset caused by collapsed selection in smooth cursor
+- Changed block/underline smooth cursor to extend to the right
+##### v1.2.11
+- 修复有序列表序号样式异常的问题
+- 平滑光标支持设置移动的缓动参数
+- 平滑光标新增样式：矩形、下划线
+- 平滑光标新增动效：伸缩
+- 重做卷轴效果，提升流动感并适应大尺寸元素
+- 将搜索结果多行展示与卡片式搜索列表解耦
+- 优化部分暗色预设配色在反转效果下的文字颜色
+- Fixed ordered list numbering style issue
+- Smooth cursor now supports configurable easing parameters for movement
+- Smooth cursor new styles: Block, Underline
+- Smooth cursor new motion: Stretch
+- Redesigned scroll effect for better flow and adaptation to larger elements
+- Decoupled multi-line search results display from card-style search list
+- Optimized text color for some dark preset color schemes under invert effect
+##### v1.2.8 ~ v1.2.10
+- 新增特性-性能模式：启用后将通过以下方式提升主题性能
+    - 关闭部分毛玻璃效果
+    - 关闭部分动效
+- 暂时移除平滑圆角特性以提升主题性能和稳定性
+- 多层无序列表和有序列表采用不同序标
+- 列表子弹线、聚焦块指示适配RTL
+- New feature - Performance mode: When enabled, improves theme performance through the following:
+    - Disables some frosted glass effects
+    - Disables some animations
+- Temporarily removed smooth rounded corners feature to improve theme performance and stability
+- Multi-level unordered and ordered lists use different numbering markers
+- List bullet lines and focused block indicator now support RTL
+##### v1.2.7
+- 新增预设配色：经典
+- 重做浮动侧栏样式
+- 简化设置页面样式
+- 使引述块、Callout块、表格块可跟随块样式
+- 修复部分情况IDE风格浮动侧栏无法调整宽度的问题
+- 修复与思阅插件的冲突
+- New preset color scheme: Classic
+- Redesigned floating sidebar style
+- Simplified settings page styles
+- Made blockquote, Callout block, and table block follow block styles
+- Fixed the issue where IDE-style floating sidebar width could not be adjusted in some cases
+- Fixed conflict with the Siyue plugin
+##### v1.2.6
+- 将卡片式搜索列表改为可选项（位于视觉模块）
+- 为消息气泡添加动效
+- 修复复选框偏移的问题
+- 彩色文档树新增风格：卡片
+- 移除停靠栏收起/展开动效（防止顶部页签位置错误）
+- 修复开关智能体可能闪退的问题
+- Changed card-style search list to optional (located in Visual module)
+- Added animation to message bubbles
+- Fixed checkbox offset issue
+- New styles for colored document tree: Card
+- Removed dock collapse/expand animation (to prevent top tab position errors)
+- Fixed potential crash when toggling AI agent
+##### v1.2.2 ~ v1.2.5
+- 新增配色：钛空、萤火、松烟
+- 适配智能体
+- 新增元素-彩色选区
+- 适配思源v3.7.0-beta.3
+- 超级融合支持配置融合效果
+- IDE风格支持使用侧栏静音
+- 优化大量细节
+- 提升部分特性的稳定性
+- New color schemes: Titaniumspace, Firefly, Songyan
+- Adapted for SiYuan AI Agent
+- New element: Colorful selection
+- Adapted for SiYuan v3.7.0-beta.3
+- Super fusion supports configurable fusion effects
+- IDE style supports sidebar mute
+- Optimized numerous details
+- Improved stability of some features
+##### v1.2.0 ~ v1.2.1
+- 新增界面风格：IDE（参考Asri主题）
+- 适配设置页
+- 大幅优化超级融合的性能
+- 优化布局
+- New interface style: IDE (inspired by Asri theme)
+- Adapted settings page
+- Greatly optimized super fusion performance
+- Optimized layout
+##### v1.1.7 ~ v1.1.8
+- 重构代码结构
+- 视觉-彩色文档树新增风格：简约
+- 新增特性：视觉-侧栏静音
+- 重做文档树缩进线样式
+- 优化主题性能
+- Refactored code structure
+- Visual - Colored document tree added new style: Simple
+- New feature: Visual - Sidebar mute
+- Redesigned document tree indent line styles
+- Optimized theme performance
+##### v1.1.6
+- 新增扩展-钉住工具栏
+- 新增布局-多列斜杠菜单
+- 优化手机端显示效果
+- Added extension - Pinnable toolbar
+- Added layout - Multi-column slash menu
+- Improved mobile display performance
+##### v1.1.5
+- 大幅优化主题性能
+- 垂直页签支持配置应用模式
+- 沉浸模式支持分别开关打字机模式和高亮效果
+- 平滑光标支持配置显示状态
+- 聚焦块指示支持配置具体效果
+- Significantly optimized theme performance
+- Vertical tabs support configurable application mode
+- Immersive mode supports toggling typewriter mode and highlight effects independently
+- Smooth cursor supports configurable display state
+- Focused block indicator supports configurable specific effects
+##### v1.1.4
+- 为非顶栏融合状态也引入超级融合效果（实验性）
+- 超级融合默认关闭，须通过Neo+开启
+- 为配色切换增加平滑过渡
+- 移除活跃文档标题动效
+- 重做Select表单样式
+- 修复部分情况下顶栏无法拖动的问题
+- 修复全屏查看文档时面包屑按钮无法点击的问题
+- 纹理-自定义图片支持设置图片填充模式（等比缩放、平铺）
+- 修复从其他主题切换回Neo时快捷键被重复注册的问题
+- 提升菜单项样式的健壮性
+- 优化导出界面样式
+- Introduced super fusion effect for non-topbar fusion states as well (experimental)
+- Super fusion is disabled by default, must be enabled via Neo+
+- Added smooth transition for color scheme switching
+- Removed active document title animation
+- Redesigned Select form styles
+- Fixed an issue where the top bar could not be dragged in some cases
+- Fixed an issue where breadcrumb buttons were unclickable when viewing documents in fullscreen
+- Custom image texture supports setting image fill mode (proportional scaling, tiling)
+- Fixed issue where shortcuts were repeatedly registered when switching back to Neo from other themes
+- Improved robustness of menu item styles
+- Optimized export interface styles
+##### v1.1.3
+- 修复Kmind插件弹窗不可见的问题
+- 为部分插件设置页添加毛玻璃效果：叶归、任务笔记管理、STtools
+- 提升与部分插件的兼容性
+- 修复与Kmind插件的冲突
+- 使暗黑模式的全部配色均可使用"反转"
+- Fixed Kmind plugin popup not visible issue
+- Added frosted glass effect to some plugin settings pages: Yegui, Task Note Management, STtools
+- Improved compatibility with certain plugins
+- Fixed conflict with Kmind plugin
+- All dark mode color schemes now support the "Invert" function
