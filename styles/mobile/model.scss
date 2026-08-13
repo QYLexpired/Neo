@@ -3,11 +3,15 @@
     background-color: var(--b3-theme-background);
     @include frostedglass-menu($scope: global);
     transition: 0.15s var(--neo-ease-out-3);
+    #modelMain > .fn__flex-column {
+        background-color: transparent !important;
+    }
     .config-group {
         margin: 0;
     }
     .config-items {
         background-color: oklch(from var(--b3-theme-surface) l c h / 0.32);
+        margin-bottom: 8px;
     }
     .config--mobile {
         background-color: transparent !important;
@@ -20,5 +24,13 @@
     }
     .mobile-setting-menu__search {
         background-color: transparent;
+    }
+    .sy__agentChat--mobile {
+        background-color: transparent;
+    }
+    .config__view {
+        .b3-dialog__content {
+            padding: 8px 16px !important;
+        }
     }
 }

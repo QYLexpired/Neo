@@ -75,6 +75,9 @@
     .b3-menu__title {
         border-bottom: unset;
         background-color: transparent;
+        & > .b3-menu__label {
+            line-height: 36px;
+        }
     }
     .b3-menu__items {
         background-color: transparent;

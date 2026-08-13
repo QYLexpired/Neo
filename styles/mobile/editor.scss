@@ -1,19 +1,10 @@
 @use "../utils" as *;
 @use "../component" as *;
+.neo-mobile .protyle-breadcrumb__icon {
+    padding: 2px 6px;
+}
 #editor {
     background-color: var(--b3-theme-background);
-    & > .protyle-breadcrumb {
-        .protyle-breadcrumb__icon {
-            transition: var(--b3-transition);
-            width: max-content;
-            @include button-transparent;
-            color: var(--b3-theme-on-surface);
-            &:hover,
-            &:focus {
-                color: var(--b3-theme-accent);
-            }
-        }
-    }
     .neo-visual-frostedglass-global & {
         min-height: 100%;
     }

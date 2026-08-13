@@ -84,19 +84,17 @@ svg.protyle-breadcrumb__arrow {
         }
     }
 }
-.protyle-breadcrumb__icon[data-type="exit-focus"] {
+.protyle-breadcrumb__icon {
     transition: var(--b3-transition);
     width: max-content;
-    @include button-outline;
+    @include button-gray;
     padding: 4px 8px;
     line-height: 16px;
-    color: var(--b3-theme-accent);
     &:hover,
     &:active,
     &:focus {
-        background-color: var(--neo-menu-item-primary);
-        @include contrast-color(--neo-menu-item-primary);
-        outline-color: var(--neo-menu-item-primary);
+        color: var(--b3-theme-accent);
+        background-color: var(--b3-list-active);
     }
 }
 .block__icon[data-subtype="unlock"] {

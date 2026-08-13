@@ -12,4 +12,15 @@
         max-height: 95vh !important;
         min-width: 300px !important;
     }
+    .b3-dialog--open[data-key="dialog-opencard"] .b3-dialog__container,
+    .config__view  {
+        max-width: 100vw !important;
+        max-height: 100vh !important;
+        box-shadow: none;
+        border-radius: 0;
+        corner-shape: unset;
+        &::before {
+            box-shadow: none;
+        }
+    }
 }
