@@ -289,3 +289,168 @@
 - Improved compatibility with certain plugins
 - Fixed conflict with Kmind plugin
 - All dark mode color schemes now support the "Invert" function
+### v1.1.2
+- 重构按钮样式体系，统一按钮悬浮色变量
+- 优化菜单项高度与内边距
+- 优化列表项圆角
+- Refactored button style system with unified button hover color variables
+- Optimized menu item heights and padding
+- Optimized list item border radius
+### v1.1.1
+- 适配SY插件增强插件
+- 提升与部分插件的兼容性
+- 优化文档标题加载动效
+- Adapted for the SY Plugin Enhance plugin
+- Improved compatibility with certain plugins
+- Optimized document title loading animation
+### v1.1.0
+- 适配思源AI智能体界面：欢迎页示例、思考卡片、输入区域、消息气泡、工具卡片等
+- 卡片式搜索列表改为通过Neo+插件启用
+- 重做菜单和对话框阴影，改为内阴影风格
+- 优化题头图视差效果
+- Adapted for SiYuan AI Agent interface: welcome page examples, thinking cards, input area, message bubbles, tool cards, etc.
+- Card-style search list now enabled via the Neo+ plugin
+- Redesigned menu and dialog shadows to inset style
+- Optimized hero image parallax effect
+### v1.0.16
+- 优化搜索分组样式
+- 优化对话框操作按钮样式
+- 优化列表项悬浮交互效果
+- 修复停靠栏左右边距的问题
+- Optimized search group styles
+- Optimized dialog action button styles
+- Optimized list item hover interaction
+- Fixed left/right margin issues of the dock
+### v1.0.15
+- 优化单选按钮、复选框的动效与图标
+- 优化按钮内边距
+- 优化搜索列表、历史面板样式
+- 优化Callout块的颜色反转效果
+- Optimized radio button and checkbox animations and icons
+- Optimized button padding
+- Optimized search list and history panel styles
+- Optimized color invert effect for Callout blocks
+### v1.0.14
+- 新增块折叠动效
+- 新增文档锁定/解锁图标动效
+- 优化contrast-color颜色反转算法
+- 完善超级融合效果
+- 适配思源3.7.0开发版，调整最低应用版本至3.6.5
+- Added block fold animation
+- Added document lock/unlock icon animations
+- Optimized contrast-color invert algorithm
+- Refined super fusion effect
+- Adapted for SiYuan 3.7.0 dev version, adjusted minimum app version to 3.6.5
+### v1.0.13
+- 新增手机端样式适配：工具栏、菜单、状态栏等
+- 手机端支持全局通透玻璃效果
+- 重构毛玻璃效果，统一使用surface色系
+- 重构超级融合布局变量
+- Added mobile styles: toolbar, menu, status bar, etc.
+- Mobile now supports global transparent glass effect
+- Refactored frosted glass effect to unify the surface color scheme
+- Refactored super fusion layout variables
+### v1.0.12
+- 优化停靠栏动效，修复页签位置异常的问题
+- 调整部分界面圆角
+- Optimized dock animations, fixed abnormal tab positioning
+- Adjusted some interface border radii
+### v1.0.11
+- 大幅优化主题性能（媲美默认主题）
+- 为停靠栏展开/收起添加动效
+- 优化菜单、组件过渡动效
+- Significantly optimized theme performance (comparable to the default theme)
+- Added dock expand/collapse animations
+- Optimized menu and component transition animations
+### v1.0.10
+- 重做PDF标注配色，适配明亮/暗黑模式
+- 新增卡片语义色（错误/警告/信息/成功）与文字色系，跟随主题色自动生成
+- 优化浮动停靠栏毛玻璃效果
+- 移除内容滚动浮现动效
+- 优化代码块、kbd样式
+- Redesigned PDF annotation colors for light/dark modes
+- Added card semantic colors (error/warning/info/success) and text color palette generated from theme color
+- Optimized floating dock frosted glass effect
+- Removed content scroll reveal animation
+- Optimized code block and kbd styles
+### v1.0.9
+- 完善超级融合：面包屑栏毛玻璃、滚动区域位置调整
+- 优化搜索界面布局
+- 优化卡片式搜索列表间距
+- 优化内容滚动浮现动效
+- Refined super fusion: frosted glass breadcrumb bar, scroll area position adjustments
+- Optimized search interface layout
+- Optimized card-style search list spacing
+- Optimized content scroll reveal animation
+### v1.0.8
+- 新增浅/重阴影变量
+- 优化列表项、任务复选框样式
+- 优化卡片布局样式
+- Added light/heavy shadow variables
+- Optimized list items and task checkbox styles
+- Optimized card layout styles
+### v1.0.7
+- 新增特性：卡片式搜索列表
+- 新增特性：全局排版优化，提升中英文阅读体验
+- New feature: Card-style search list
+- New feature: Global typography optimization for better Chinese and English reading experience
+### v1.0.6
+- 新增特性：超级融合（顶栏融合模式下将面包屑与正文无缝融合）
+- 升级题头图视差效果
+- 优化内容滚动浮现动效
+- New feature: Super Fusion (seamlessly blends breadcrumbs with content in topbar fusion mode)
+- Upgraded hero image parallax effect
+- Optimized content scroll reveal animation
+### v1.0.4 ~ v1.0.5
+- 重构配色系统：引入基础色变量，默认色与自定义色分离，支持饱和度调节
+- 错误色、高亮色跟随主题色自动生成
+- 新增停靠栏展开/收起动效
+- 优化状态栏、页签样式
+- 调整布局圆角
+- Refactored color system: introduced base color variables, separated default and custom colors, added saturation adjustment
+- Error and highlight colors now auto-generate from the theme color
+- Added dock expand/collapse animations
+- Optimized status bar and tab styles
+- Adjusted layout border radius
+### v1.0.3
+- 支持自定义主题色与饱和度调节
+- 重做动画系统：块标、格式化工具栏、斜杠菜单入场动效
+- 新增题头图视差效果
+- 新增编辑器卷轴动效
+- 全局平滑圆角
+- 优化高亮色生成逻辑
+- Support for custom theme color and saturation adjustment
+- Redesigned animation system: block handle, formatting toolbar, and slash menu entrance animations
+- Added hero image parallax effect
+- Added editor scroll-driven animations
+- Global smooth rounded corners
+- Optimized highlight color generation logic
+### v1.0.2
+- 新增动画特性：块标、格式化工具栏入场动效
+- 新增数据库样式：画廊卡片、属性按钮等
+- 支持多列斜杠菜单
+- 优化菜单、对话框、顶栏、页签样式
+- New animation feature: block handle and formatting toolbar entrance animations
+- Added database styles: gallery cards, attribute buttons, etc.
+- Support for multi-column slash menu
+- Optimized menu, dialog, topbar, and tab styles
+### v1.0.1
+- 优化设置页样式，设置分组毛玻璃化
+- 优化账户页样式
+- 优化卡片操作按钮样式
+- 优化标题、引用块、代码块、列表等块级元素样式
+- Optimized settings page styles with frosted glass for setting groups
+- Optimized account page styles
+- Optimized card action button styles
+- Optimized block-level element styles: headings, blockquotes, code blocks, lists, etc.
+### v1.0.0
+- 主题发布
+    - 全局毛玻璃效果
+    - 全局平滑圆角与溢出渐隐效果
+    - 完备的块级元素与组件样式：对话框、停靠栏、编辑器、菜单、PDF、状态栏、页签、顶栏等
+    - 基于OKLCH色彩空间的配色体系，支持明亮/暗黑模式
+- Theme release
+    - Global frosted glass effect
+    - Global smooth rounded corners and overflow fade-out effects
+    - Complete block-level element and component styles: dialog, dock, editor, menu, PDF, status bar, tab, topbar, etc.
+    - OKLCH color space based color system with light/dark mode support
