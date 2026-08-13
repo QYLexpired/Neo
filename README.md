@@ -55,15 +55,21 @@ The Neo theme is completely free. If you enjoy this theme, feel free to star it 
 Some features heavily rework SiYuan's native styles, so there are compatibility issues that cannot be fixed. Please disable them promptly if they affect your usage. Additionally, some features are quite performance-intensive and should be enabled with caution.
 - Super Fusion
     - The document's dynamically loaded scrollbar cannot correctly indicate the current reading position
-    - Database table headers may fail to stick to the top or end up in the wrong position
+    - Causes database table headers to fail to stick to the top or end up in the wrong position
     - May conflict with some plugins
     - This feature adds blur and refraction effects, which may cause lag
+- Cinematic Scroll
+    - May cause the top or bottom of short documents to not display correctly
+    - Causes database table headers to fail to stick to the top or end up in the wrong position
+    - May cause performance degradation or scroll lag
 - Theme Color Following Time
     - This feature constantly changes the theme color over time, causing heavy repainting that may lead to lag
 - Frosted Glass
     - Increases rendering load; if you perceive lag, turn it off or switch to the Light level
-- Cinematic Scroll, Fluid Cursor, Colored Selection
-    - Can significantly degrade performance; enable with caution
+- Fluid Cursor
+    - The cursor trail animation can significantly degrade performance; enable with caution
+- Colored Selection
+    - The related CSS selectors have poor performance; enable with caution
 - Immersive Mode
     - The focused-line highlight effect within it can significantly degrade performance; enable with caution
 ## Acknowledgements
