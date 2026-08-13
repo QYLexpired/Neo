@@ -1,3 +1,6 @@
+### v1.4.4
+- Neo+的CSS改为按需加载以显著提升性能
+- Neo+ CSS is now loaded on demand to significantly improve performance
 ### v1.4.0 ~ v1.4.3
 - 适配思源3.8.0
 - 手机端支持使用超级融合
