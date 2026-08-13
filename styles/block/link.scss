@@ -3,13 +3,9 @@
     color: inherit;
     transition: var(--b3-transition);
     text-decoration: none;
-    background-image: linear-gradient(var(--b3-theme-accent), var(--b3-theme-accent));
-    background-size: 100% 1px;
-    background-position: 0 100%;
-    background-repeat: no-repeat;
-    padding-bottom: 2px;
+    border-bottom: 1px solid var(--b3-theme-accent);
+    padding-bottom: 1px;
     &:hover {
-        border-bottom: unset;
         color: var(--b3-theme-accent);
         text-decoration: none;
     }

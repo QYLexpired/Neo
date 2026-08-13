@@ -8,12 +8,8 @@
     color: inherit;
     opacity: 1;
     transition: var(--b3-transition);
-    background-image: repeating-linear-gradient(90deg, var(--_ref-underline-color) 0px, var(--_ref-underline-color) 3px, transparent 3px, transparent 6px);
-    background-size: 8px 1px;
-    background-position: 0 100%;
-    background-repeat: repeat-x;
-    padding-bottom: 2px;
-    border: unset;
+    border-bottom: 1px dashed var(--_ref-underline-color);
+    padding-bottom: 1px;
     &:hover {
         color: var(--_ref-underline-color);
     }
