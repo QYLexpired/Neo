@@ -51,6 +51,21 @@ The Neo theme is completely free. If you enjoy this theme, feel free to star it 
 - List Bullet Line: guide lines for a clearer list hierarchy
 - Focus Block Indicator effect
 - Side Memo: renders memo content in a WYSIWYG fashion right beside the editor
+## Cautions
+Some features heavily rework SiYuan's native styles, so there are compatibility issues that cannot be fixed. Please disable them promptly if they affect your usage. Additionally, some features are quite performance-intensive and should be enabled with caution.
+- Super Fusion
+    - The document's dynamically loaded scrollbar cannot correctly indicate the current reading position
+    - Database table headers may fail to stick to the top or end up in the wrong position
+    - May conflict with some plugins
+    - This feature adds blur and refraction effects, which may cause lag
+- Theme Color Following Time
+    - This feature constantly changes the theme color over time, causing heavy repainting that may lead to lag
+- Frosted Glass
+    - Increases rendering load; if you perceive lag, turn it off or switch to the Light level
+- Cinematic Scroll, Fluid Cursor, Colored Selection
+    - Can significantly degrade performance; enable with caution
+- Immersive Mode
+    - The focused-line highlight effect within it can significantly degrade performance; enable with caution
 ## Acknowledgements
 The creation of the Neo theme drew significant inspiration from the following projects. Thanks to their creators:
 - [Asri](https://github.com/mustakshif/Asri)
