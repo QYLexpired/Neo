@@ -3,6 +3,8 @@ Neo是专为思源笔记设计的第三方主题，以 Apple（macOS/iOS）设�
 ## 更新日志
 完整更新历史可查看[CHANGELOG](https://github.com/QYLexpired/Neo/blob/main/CHANGELOG.md)
 - Neo+的CSS改为按需加载以显著提升性能
+- 优化流体光标性能
+- 优化沉浸模式性能
 ## 说明
 - 主题的部分样式和功能无法仅通过CSS实现，因此必须安装并启用主题的配套插件：[Neo+](https://github.com/QYLexpired/Neo-Plus)
 - 使用过程中有任何问题或建议，可通过[Neo 主题介绍及反馈综合帖](https://ld246.com/article/1783158376401)或[GitHub](https://github.com/QYLexpired/Neo/issues)进行反馈

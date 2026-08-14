@@ -227,18 +227,18 @@
         flex-direction: row;
         & .av__gallery-name {
             flex-shrink: 0;
+            flex-basis: 33.3%;
             white-space: nowrap;
             overflow: hidden;
             text-overflow: ellipsis;
-            min-width: 68px;
-            max-width: 68px;
+            max-width: 10em;
         }
         & .av__cell {
             white-space: nowrap;
             overflow: hidden;
             text-overflow: ellipsis;
-            min-width: calc(100% - 68px);
-            max-width: calc(100% - 68px);
+            flex-shrink: 1;
+            flex-basis: 100%
         }
     }
 }
