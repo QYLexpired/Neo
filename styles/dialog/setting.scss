@@ -4,6 +4,11 @@
 }
 .config__tab-title {
     font-weight: bold;
+    font-size: 16px;
+    .b3-list-item__graphic {
+        width: 18px;
+        height: 18px;
+    }
 }
 .config__panel .config__side,
 .config__panel .b3-tab-bar {
@@ -87,5 +92,9 @@
     }
     .b3-dialog__header .block__logo {
         margin: 8px 0 0 0;
+        .block__logoicon {
+            width: 18px;
+            height: 18px;
+        }
     }
 }

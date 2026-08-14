@@ -85,6 +85,11 @@
 .config-bazaar__readme {
     .item__header {
         margin: 0;
+        font-size: 16px;
+        .b3-list-item__graphic {
+            width: 18px;
+            height: 18px;
+        }
     }
     .item__side {
         padding: var(--_sidebar-gap);
@@ -95,6 +100,7 @@
         box-shadow: var(--neo-main-shadow);
         background-color: transparent;
         color: var(--b3-theme-on-surface);
+        font-size: 13px;
         .item__img {
             margin: 16px auto 8px auto;
             @include superellipse(14px);
@@ -102,6 +108,7 @@
         .item__meta-title {
             color: var(--b3-theme-on-background);
             font-weight: normal;
+            font-size: 14px;
         }
         .item__title {
             font-weight: bold;
