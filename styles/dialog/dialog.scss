@@ -2,7 +2,7 @@
 .b3-dialog__scrim {
     background-color: transparent;
     backdrop-filter: none;
-    transition: backdrop-filter 0.3s 0s;
+    transition: backdrop-filter 0.45s 0s;
     .b3-dialog--open & {
         backdrop-filter: brightness(0.75) saturate(0.5);
         .neo-mode-dark & {
@@ -14,7 +14,7 @@
         }
     }
     .neo-visual-frostedglass-global & {
-        transition: backdrop-filter 0.15s 0s;
+        transition: backdrop-filter 0.45s 0s;
     }
     .b3-dialog--open[data-key="dialog-emojis"] & {
         opacity: 0;
@@ -41,7 +41,7 @@
     @include superellipse-use(18px);
     background-color: var(--b3-theme-background);
     transform: translateY(min(-5%, -30px));
-    transition: transform 0.3s var(--neo-ease-out-3);
+    transition: transform 0.45s var(--neo-ease-spring-1);
     .neo-visual-frostedglass-global & {
         background-color: transparent;
         box-shadow: var(--b3-dialog-shadow-blur);

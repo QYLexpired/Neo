@@ -208,3 +208,24 @@ input[type="checkbox"]:not(.b3-switch) {
         transform: scale(1);
     }
 }
+// 颜色选择器
+input[type="color"] {
+    appearance: none;
+    border: none;
+    padding: 0 !important; // 覆盖部分插件内联样式
+    width: 20px !important;
+    height: 20px !important;
+    min-height: unset !important;
+    min-width: unset !important;
+    flex: unset !important;
+    border-radius: 50%;
+    overflow: hidden;
+    cursor: pointer;
+    &::-webkit-color-swatch-wrapper {
+        padding: 0;
+    }
+    &::-webkit-color-swatch {
+        border: none;
+        border-radius: 50%;
+    }
+}
