@@ -187,6 +187,9 @@
 .av__gallery-cover-position-tip {
     padding: 4px 12px;
 }
+.av__panel .b3-menu .b3-chips input {
+    background-color: transparent;
+}
 // 关联字段
 .av__relation .b3-menu__item .b3-form__icona ~ .popover__block.fn__ellipsis {
     display: flex;
@@ -218,7 +221,7 @@
     container-type: inline-size;
     container-name: gallery-item;
 }
-@container gallery-item (min-width: 250px) {
+@container gallery-item (min-width: 200px) {
     .av__gallery-field.av__gallery-field--name {
         display: flex;
         flex-direction: row;
