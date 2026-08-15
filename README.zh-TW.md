@@ -1,8 +1,10 @@
 # Neo：精心打磨的介面，靈動自由的思維
-Neo 是專為思源筆記設計的第三方主題，以 Apple（macOS/iOS）設計語言為靈感，建構全域統一的精緻介面，讓每次筆記體驗都賞心悅目
+- Neo 是專為思源筆記設計的第三方主題，以 Apple（macOS/iOS）設計語言為靈感，建構全域統一的精緻介面，讓每次筆記體驗都賞心悅目
+- Neo 主題大量參考了 [Asri 主題](https://github.com/mustakshif/Asri) 的設計和創意，非常感謝 [mustakshif](https://github.com/mustakshif)，沒有你超強的審美、技術力和令人驚嘆的創意，就不會有 Neo 的出現
 ## 更新日誌
 完整更新紀錄可於 [CHANGELOG](https://github.com/QYLexpired/Neo/blob/main/CHANGELOG.md) 查看
-- Neo+ 的 CSS 改為按需載入以顯著提升效能
+- 優化流體游標效能
+- 優化沉浸模式效能
 ## 說明
 - 主題的部分樣式和功能無法僅透過 CSS 實現，因此必須安裝並啟用主題的配套外掛：[Neo+](https://github.com/QYLexpired/Neo-Plus)
 - 使用過程中有任何問題或建議，可透過 [Neo 主題介紹及回饋討論串](https://ld246.com/article/1783158376401) 或 [GitHub](https://github.com/QYLexpired/Neo/issues) 提出回饋
@@ -60,6 +62,10 @@ Neo 主題完全免費，如果喜歡這個主題，歡迎在 [GitHub](https://g
     - 相關 CSS 選擇器效能較差，需謹慎開啟
 - 沉浸模式
     - 其中聚焦行高亮效果會導致效能顯著降低，需謹慎開啟
+## 寫在最後
+- Neo 主題適合誰：適合追求更現代化的設計、偏愛簡潔整潔的筆記介面、願意為了美觀而犧牲部分效能的使用者
+- Neo 主題不適合誰：不適合追求極致效能的朋友，如果你期望使用一個和預設主題流暢度相同的主題，那 Neo 不適合你。Neo 主題對整個思源進行了極大幅度的改造（這實際上耗費了我大量的精力），不是簡單的換色和零散 CSS 的堆砌，為了追求全域的精緻效果，對效能有更多的消耗是必然的。實際上主題已盡力最佳化效能，且絕大部分特性是可選項，所以在抱怨 Neo 主題讓你的思源筆記變得卡頓之前，先了解這一點
+- 再次感謝 [Asri 主題](https://github.com/mustakshif/Asri) 和其作者 [mustakshif](https://github.com/mustakshif)
 ## 致謝
 製作 Neo 主題時，從以下專案獲得大量靈感，感謝這些專案的製作者
 - [Asri](https://github.com/mustakshif/Asri)

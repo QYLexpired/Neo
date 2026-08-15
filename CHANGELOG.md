@@ -1,3 +1,8 @@
+### v1.4.5
+- 优化流体光标性能
+- 优化沉浸模式性能
+- Optimized fluid cursor performance
+- Optimized immersive mode performance
 ### v1.4.4
 - Neo+的CSS改为按需加载以显著提升性能
 - Neo+ CSS is now loaded on demand to significantly improve performance

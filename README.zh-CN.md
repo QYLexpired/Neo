@@ -1,8 +1,8 @@
 # Neo：精心打磨的界面，灵动自由的思维
-Neo是专为思源笔记设计的第三方主题，以 Apple（macOS/iOS）设计语言为灵感，构建全局统一的精致界面，让每次笔记体验都赏心悦目
+- Neo是专为思源笔记设计的第三方主题，以 Apple（macOS/iOS）设计语言为灵感，构建全局统一的精致界面，让每次笔记体验都赏心悦目
+- Neo主题大量参考了[Asri主题](https://github.com/mustakshif/Asri)的设计和创意，非常感谢[mustakshif](https://github.com/mustakshif)，没有你超强的审美、技术力和让人惊叹的创意，就不会有Neo的出现
 ## 更新日志
 完整更新历史可查看[CHANGELOG](https://github.com/QYLexpired/Neo/blob/main/CHANGELOG.md)
-- Neo+的CSS改为按需加载以显著提升性能
 - 优化流体光标性能
 - 优化沉浸模式性能
 ## 说明
@@ -62,6 +62,10 @@ Neo主题是完全免费的，如果喜欢这个主题，欢迎在[GitHub](https
     - 相关CSS选择器性能较差，需谨慎开启
 - 沉浸模式
     - 其中聚焦行高亮效果会导致性能显著降低，需谨慎开启
+## 写在最后
+- Neo主题适合谁：适合追求更加现代的设计、偏爱简约整洁的笔记界面、愿意为了美观而牺牲部分性能的用户
+- Neo主题不适合谁：不适合追求极致性能的朋友，如果你期望使用一个和默认主题流畅度相同的主题，那Neo不适合你。Neo主题对整个思源进行了极大幅度的改造（这实际上耗费了我大量的精力），不是简单的换色和零散CSS的堆砌，为了追求全局的精致效果，对性能有更多的消耗是必然的。实际上主题已经尽力优化性能，且绝大部分特性是可选项，所以在抱怨Neo主题让你的思源笔记变得卡顿之前，先了解这一点
+- 再次感谢[Asri主题](https://github.com/mustakshif/Asri)和其作者[mustakshif](https://github.com/mustakshif)
 ## 致谢
 制作Neo主题时，从以下项目汲取了大量灵感，感谢这些项目的制作者
 - [Asri](https://github.com/mustakshif/Asri)

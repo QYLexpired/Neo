@@ -1,8 +1,10 @@
 # Neo: Refined Interface, Fluid and Free Thinking
-Neo is a third-party theme designed specifically for SiYuan Notes, with a design language inspired by Apple (macOS/iOS). Its globally unified, meticulously polished interface makes every note-taking experience a delight.
+- Neo is a third-party theme designed specifically for SiYuan Notes, with a design language inspired by Apple (macOS/iOS). Its globally unified, meticulously polished interface makes every note-taking experience a delight.
+- Neo draws heavily on the design and ideas of the [Asri theme](https://github.com/mustakshif/Asri). A huge thank you to [mustakshif](https://github.com/mustakshif) — without your impeccable taste, technical skill, and astonishing creativity, Neo would never have come to be.
 ## Changelog
 See the [CHANGELOG](https://github.com/QYLexpired/Neo/blob/main/CHANGELOG.md) for the full update history.
-- Neo+ CSS is now loaded on demand to significantly improve performance
+- Optimized fluid cursor performance
+- Optimized immersive mode performance
 ## Notes
 - Some of the theme's styles and features cannot be implemented with CSS alone, so the companion plugin [Neo+](https://github.com/QYLexpired/Neo-Plus) **MUST** be installed and enabled.
 - For any questions or suggestions during use, please visit the [Neo Theme Introduction & Feedback Thread](https://ld246.com/article/1783158376401) or [GitHub](https://github.com/QYLexpired/Neo/issues)
@@ -60,6 +62,10 @@ Some features heavily rework SiYuan's native styles, so there are compatibility 
     - The related CSS selectors have poor performance; enable with caution
 - Immersive Mode
     - The focused-line highlight effect within it can significantly degrade performance; enable with caution
+## A Final Word
+- Who Neo is for: users who crave a more modern design, prefer a clean and minimal note-taking interface, and are willing to trade some performance for aesthetics
+- Who Neo is NOT for: not for those who demand the absolute best performance. If you expect Neo to feel as smooth as the default theme, it isn't for you. Neo reworks SiYuan on a massive scale (which actually took a huge amount of my effort) — it's not a simple recolor or a pile of scattered CSS tweaks. In the pursuit of a refined look across the entire interface, a higher performance cost is inevitable. That said, the theme is already optimized to the best of its ability, and most features are optional. So before you complain that Neo makes your SiYuan notes laggy, keep this in mind.
+- Once again, thanks to the [Asri theme](https://github.com/mustakshif/Asri) and its author, [mustakshif](https://github.com/mustakshif)
 ## Acknowledgements
 The creation of the Neo theme drew significant inspiration from the following projects. Thanks to their creators:
 - [Asri](https://github.com/mustakshif/Asri)
