@@ -100,8 +100,11 @@
         background-color: transparent;
         color: var(--b3-theme-on-surface);
         font-size: 13px;
+        & > .fn__flex-1 {
+            margin-top: 8px;
+        }
         .item__img {
-            margin: 16px auto 8px auto;
+            margin: 8px auto;
             @include superellipse(14px);
         }
         .item__meta-title {
