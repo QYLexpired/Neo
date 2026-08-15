@@ -46,6 +46,22 @@ $table-border-color: oklch(from currentColor l c h / 0.15);
         border: unset;
     }
 }
+// 转置
+.b3-typography,
+.protyle-wysiwyg  {
+    [data-type=NodeTable][custom-sy-table-header-column=true] table {
+        thead th,
+        tbody tr {
+            background-color: transparent;
+        }
+        tr > th,
+        tr > td {
+            &:nth-child(2n+1) {
+                background-color: var(--b3-table-even-background);
+            }
+        }
+    }
+}
 // 选区拖动
 .protyle-table-control__selection {
     border: unset;

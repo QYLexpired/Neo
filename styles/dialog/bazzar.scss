@@ -154,7 +154,7 @@
     transition: var(--b3-transition);
     .config-bazaar__rating-picker--active &,
     .config-bazaar__rating-stars--active & {
-        color: var(--b3-theme-secondary);
+        color: var(--b3-theme-accent);
     }
     .config-bazaar__rating-row > & {
         color: oklch(from var(--b3-theme-on-background) l c h / 0.3);
@@ -163,6 +163,6 @@
 .config-bazaar__rating-track {
     background-color: var(--b3-list-hover);
     & > span {
-        background-color: oklch(from var(--b3-theme-secondary) l c h / 0.3);
+        background-color: oklch(from var(--b3-theme-accent) l c h / 0.3);
     }
 }
