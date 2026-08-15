@@ -1,4 +1,5 @@
 @use "../utils" as *;
+@use "../component" as *;
 .config-bazaar__panel {
     .config-bazaar__title {
         background-color: var(--b3-theme-background);
@@ -11,11 +12,9 @@
             background-color: transparent;
             input,
             select,
-            button {
-                backdrop-filter: blur(3px);
-            }
+            button,
             .counter--bg {
-                background-color: transparent;
+                backdrop-filter: blur(3px);
             }
             .b3-form__icon-icon {
                 z-index: 1;
@@ -137,5 +136,30 @@
         .item__readme {
             margin-top: 0;
         }
+    }
+}
+.config-bazaar__rating-summary {
+    color: var(--b3-theme-on-surface);
+    font-weight: normal;
+}
+.config-bazaar__rating-action {
+    @include button-transparent-hover-gray;
+    border: unset;
+}
+.config-bazaar__rating-star {
+    color: oklch(from var(--b3-theme-on-background) l c h / 0.3);
+    transition: var(--b3-transition);
+    .config-bazaar__rating-picker--active &,
+    .config-bazaar__rating-stars--active & {
+        color: var(--b3-theme-secondary);
+    }
+    .config-bazaar__rating-row > & {
+        color: oklch(from var(--b3-theme-on-background) l c h / 0.3);
+    }
+}
+.config-bazaar__rating-track {
+    background-color: var(--b3-list-hover);
+    & > span {
+        background-color: oklch(from var(--b3-theme-secondary) l c h / 0.3);
     }
 }
