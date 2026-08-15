@@ -40,7 +40,6 @@
     transition: none;
     transform: none;
     transform-origin: center;
-    will-change: transform;
     .b3-snackbar--hide &,
     .b3-snackbar--hide:not(:only-child) & {
         animation: neo-message-out 1.2s var(--neo-ease-spring-2);

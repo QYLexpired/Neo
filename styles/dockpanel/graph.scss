@@ -1,14 +1,11 @@
 @use "../utils" as *;
+@use "../menu" as *;
 .graph__panel {
-    background-color: var(--b3-menu-background);
-    @include frostedglass-menu;
-    @include superellipse(8px);
-    border: unset;
+    @include menu-container-common-simple;
     top: 50px;
     bottom: 8px;
     right: -200%;
     opacity: 1;
-    box-shadow: var(--b3-menu-shadow);
     width: 250px;
     height: max-content;
     &[style*="right"] {

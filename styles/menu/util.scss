@@ -1,13 +1,9 @@
 @use "../utils" as *;
+@use "menu" as *;
 .protyle-util {
-    @include superellipse-use(12px);
-    background-color: var(--b3-menu-background);
-    @include frostedglass-menu;
-    border: unset;
-    box-shadow: var(--b3-menu-shadow);
+    @include menu-container-common-simple;
     animation: neo-util-menu-entrance 0.45s var(--neo-ease-spring-2);
     transform-origin: center;
-    will-change: transform;
     .block__icons--menu {
         background-color: transparent;
     }

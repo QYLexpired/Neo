@@ -21,6 +21,7 @@
     }
 }
 @mixin dialog-transparent {
+    .b3-dialog__content,
     .search__header,
     .search__header .b3-text-field,
     .search__preview:not(.fullscreen),
@@ -35,13 +36,11 @@
         @content;
     }
 }
-.b3-dialog__container {
+@mixin dialog-container-common {
     border: unset;
     box-shadow: var(--b3-dialog-shadow);
-    @include superellipse-use(18px);
     background-color: var(--b3-theme-background);
-    transform: translateY(min(-5%, -30px));
-    transition: transform 0.45s var(--neo-ease-spring-1);
+    @include superellipse-use(18px);
     .neo-visual-frostedglass-global & {
         background-color: transparent;
         box-shadow: var(--b3-dialog-shadow-blur);
@@ -51,27 +50,17 @@
         @include frostedglass-dialog($scope: global);
         box-shadow: var(--b3-dialog-shadow-inset);
     }
-    .b3-dialog__content {
-        background-color: transparent !important; // 覆盖内联
-    }
+}
+.b3-dialog__container {
+    @include dialog-container-common;
+    transform: translateY(min(-5%, -30px));
+    transition: transform 0.45s var(--neo-ease-spring-1);
     @include dialog-transparent {
-        background-color: transparent;
+        background-color: transparent !important;
     }
 }
 .b3-dialog__loading {
-    border: unset;
-    box-shadow: var(--b3-dialog-shadow);
-    @include superellipse-use(16px);
-    background-color: var(--b3-theme-background);
-    .neo-visual-frostedglass-global & {
-        background-color: transparent;
-        box-shadow: var(--b3-dialog-shadow-blur);
-    }
-    &::before {
-        @include frostedglass-before($scope: global);
-        @include frostedglass-dialog($scope: global);
-        box-shadow: var(--b3-dialog-shadow-inset);
-    }
+    @include dialog-container-common;
 }
 .b3-dialog__close {
     display: none;

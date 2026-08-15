@@ -1,0 +1,11 @@
+@use "../utils" as *;
+@use "../menu/menu" as *;
+.ai-editor-panel {
+    @include menu-container-common;
+}
+.ai-editor-panel__header {
+    border-bottom: unset;
+}
+.ai-editor-panel__actions {
+    border-top: unset;
+}

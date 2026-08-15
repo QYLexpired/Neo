@@ -1,14 +1,13 @@
 @use "../utils" as *;
+@use "menu" as *;
 .protyle-toolbar {
-    @include superellipse(18px);
-    background-color: var(--b3-menu-background);
-    @include frostedglass-menu;
-    border: unset;
+    @include menu-container-common-simple;
     box-shadow: var(--neo-main-shadow);
+    @include superellipse(18px);
+    corner-shape: unset;
     padding: 6px;
     animation: neo-toolbar-entrance 0.45s var(--neo-ease-spring-2);
     transform-origin: 50% 150%;
-    will-change: transform;
     transition: none;
 }
 @keyframes neo-toolbar-entrance {

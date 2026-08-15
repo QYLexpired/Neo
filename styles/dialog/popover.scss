@@ -1,24 +1,13 @@
 @use "../utils" as *;
+@use "dialog" as *;
 .block__popover {
     transform: translateY(min(-2%, -10px));
     transition: transform 0.45s var(--neo-ease-spring-1);;
     &.block__popover--open {
-        border: unset;
-        box-shadow: var(--b3-dialog-shadow);
-        @include superellipse-use(12px);
-        background-color: var(--b3-theme-background);
+        @include dialog-container-common;
         transform: none;
         pointer-events: none;
         animation: neo-popover-enable-click 0.01s 0.35s forwards; // 防止抽搐
-        .neo-visual-frostedglass-global & {
-            background-color: transparent;
-            box-shadow: var(--b3-dialog-shadow-blur);
-        }
-        &::before {
-            @include frostedglass-before($scope: global);
-            @include frostedglass-dialog($scope: global);
-            box-shadow: var(--b3-dialog-shadow-inset);
-        }
         .block__icons {
             background-color: transparent;
         }

@@ -1,13 +1,9 @@
 @use "../utils" as *;
+@use "menu" as *;
 .protyle-hint {
-    @include superellipse-use(12px);
-    background-color: var(--b3-menu-background);
-    @include frostedglass-menu;
-    border: unset;
-    box-shadow: var(--b3-menu-shadow);
+    @include menu-container-common-simple;
     animation: neo-hint-menu-entrance 0.45s var(--neo-ease-spring-2);
     transform-origin: center;
-    will-change: transform;
     transition: none;
 }
 @keyframes neo-hint-menu-entrance {

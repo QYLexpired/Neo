@@ -49,8 +49,7 @@
         @content;
     }
 }
-.b3-menu,
-.b3-menu__submenu {
+@mixin menu-container-common {
     border: unset;
     box-shadow: var(--b3-menu-shadow);
     background-color: var(--b3-menu-background);
@@ -64,6 +63,17 @@
         @include frostedglass-menu;
         box-shadow: var(--b3-menu-shadow-inset);
     }
+}
+@mixin menu-container-common-simple {
+    @include superellipse-use(12px);
+    background-color: var(--b3-menu-background);
+    @include frostedglass-menu;
+    border: unset;
+    box-shadow: var(--b3-menu-shadow);
+}
+.b3-menu,
+.b3-menu__submenu {
+    @include menu-container-common;
 }
 .b3-menu__item {
     background-color: transparent;

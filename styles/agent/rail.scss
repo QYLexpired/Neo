@@ -1,4 +1,5 @@
 @use "../utils" as *;
+@use "../menu/menu" as *;
 .agent-chat__nav-rail {
     border: unset;
 }
@@ -12,17 +13,5 @@
     }
 }
 .agent-chat__nav-rail--expanded {
-    border: unset;
-    box-shadow: var(--b3-menu-shadow);
-    background-color: var(--b3-menu-background);
-    @include superellipse-use(12px);
-    .neo-visual-frostedglass & {
-        background-color: transparent;
-        box-shadow: var(--b3-menu-shadow-blur);
-    }
-    &::before {
-        @include frostedglass-before;
-        @include frostedglass-menu;
-        box-shadow: var(--b3-menu-shadow-inset);
-    }
+    @include menu-container-common;
 }

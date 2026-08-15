@@ -53,6 +53,17 @@
         color: var(--b3-theme-on-surface);
     }
 }
+@mixin button-gray-warning {
+    @include button-common;
+    background-color: oklch(from var(--b3-theme-error) l c h / 0.1);
+    color: var(--b3-theme-error);
+    &:hover,
+    &:active,
+    &:focus {
+        background-color: oklch(from var(--b3-theme-error) l c h / 0.12);
+        color: var(--b3-theme-error);
+    }
+}
 @mixin button-transparent {
     @include button-common;
     background-color: transparent;
@@ -195,7 +206,8 @@
 .b3-dialog__action,
 .config-account__center,
 #action,
-.emojis__link-footer {
+.emojis__link-footer,
+.ai-editor-panel__actions {
     .b3-button {
         @include button-gray;
     }
@@ -206,7 +218,7 @@
         @include button-gray;
     }
     .b3-button--remove {
-        @include button-warning;
+        @include button-gray-warning;
     }
 }
 // 集市按钮

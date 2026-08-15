@@ -1,10 +1,14 @@
 @use "../utils" as *;
-.tooltip {
-    @include superellipse-use(8px);
-    box-shadow: var(--neo-main-shadow);
+@mixin tooltip-common {
     color: var(--b3-theme-on-background);
     background-color: var(--b3-menu-background);
+    @include superellipse-use(8px);
     @include frostedglass-tooltip;
+    box-shadow: var(--neo-main-shadow);
+    line-height: 16px;
+}
+.tooltip {
+    @include tooltip-common;
     animation: neo-tooltip-entrance 0.45s var(--neo-ease-spring-2);
     transform-origin: center;
     animation-delay: 0.3s;
@@ -30,10 +34,6 @@
         }
     }
     &::after {
-        @include superellipse-use(8px);
-        box-shadow: var(--neo-main-shadow);
-        color: var(--b3-theme-on-background);
-        background-color: var(--b3-menu-background);
-        @include frostedglass-tooltip;
+        @include tooltip-common;
     }
 }
