@@ -22,6 +22,7 @@
     $colors: (
         primary: "--neo-button-primary",
         error: "--b3-theme-error-bg",
+        success: "--b3-theme-success-bg",
     );
     $var: map.get($colors, $color);
     $hover-var: #{$var}-hover;
@@ -94,6 +95,7 @@
     $colors: (
         primary: "--neo-button-primary",
         error: "--b3-theme-error-bg",
+        success: "--b3-theme-success-bg",
     );
     $var: map.get($colors, $color);
     @include button-common;

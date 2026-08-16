@@ -186,12 +186,19 @@
         }
     }
 }
+.config-bazaar__update-count {
+    background-color: var(--b3-theme-accent);
+    @include contrast-color(--b3-theme-accent);
+}
 .config-bazaar__readme .item__side {
     .b3-button {
         @include button-outline-hover-solid(primary);
         &[data-type="uninstall"],
         &[data-type="package-disable"] {
             @include button-outline-hover-solid(error);
+        }
+        &[data-type="package-enable"] {
+            @include button-outline-hover-solid(success);
         }
     }
 }
