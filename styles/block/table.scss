@@ -87,7 +87,8 @@ table + .protyle-action__table .table__resize {
 }
 // 添加
 .protyle-table-control__add--row,
-.protyle-table-control__add--column {
+.protyle-table-control__add--column,
+.protyle-table-control__add--both {
     border: unset;
     box-shadow: none;
     @include superellipse(10px);

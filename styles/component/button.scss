@@ -1,4 +1,5 @@
 @use "../utils" as *;
+@use "sass:map";
 @mixin button-common {
     padding: 4px 12px;
     line-height: 18px;
@@ -17,51 +18,41 @@
         transition: var(--b3-transition), transform 0.15s var(--neo-ease-out-3);
     }
 }
-@mixin button-primary {
+@mixin button-solid($color: primary) {
+    $colors: (
+        primary: "--neo-button-primary",
+        error: "--b3-theme-error-bg",
+    );
+    $var: map.get($colors, $color);
+    $hover-var: #{$var}-hover;
     @include button-common;
-    background-color: var(--neo-button-primary);
-    @include contrast-color(--neo-button-primary);
-    @include contrast-color(--neo-button-primary-hover, --b3-theme-on-primary); // 兼容插件显式设置的按钮颜色
-    --neo-button-primary-hover: oklch(from var(--neo-button-primary) calc(l + 0.0225 + 0.0575 * sign(0.680000001 - l)) c h);
+    background-color: var(#{$var});
+    @include contrast-color($var);
+    #{$hover-var}: oklch(from var(#{$var}) calc(l + 0.0225 + 0.0575 * sign(0.680000001 - l)) c h);
     &:hover,
     &:active,
     &:focus {
-        background-color: var(--neo-button-primary-hover);
-        @include contrast-color(--neo-button-primary-hover);
+        background-color: var(#{$hover-var});
+        @include contrast-color($hover-var);
     }
 }
-@mixin button-warning {
-    @include button-common;
-    background-color: var(--b3-theme-error-bg);
-    @include contrast-color(--b3-theme-error-bg);
-    --neo-button-warning-hover: oklch(from var(--b3-theme-error-bg) calc(l + (0.05 * sign(0.4999999 - l))) c h);
-    &:hover,
-    &:active,
-    &:focus {
-        background-color: var(--neo-button-warning-hover);
-        @include contrast-color(--neo-button-warning-hover);
+@mixin button-translucent($color: on-surface) {
+    $colors: (
+        on-surface: "--b3-theme-on-surface",
+        error: "--b3-theme-error",
+        accent: "--b3-theme-accent",
+    );
+    @if map.has-key($colors, $color) {
+        $color: var(#{map.get($colors, $color)});
     }
-}
-@mixin button-gray {
     @include button-common;
-    background-color: var(--b3-list-hover);
-    color: var(--b3-theme-on-surface);
+    background-color: oklch(from currentColor l c h / 0.08);
+    color: $color;
     &:hover,
     &:active,
     &:focus {
-        background-color: oklch(from var(--b3-list-hover) l c h / 0.12);
-        color: var(--b3-theme-on-surface);
-    }
-}
-@mixin button-gray-warning {
-    @include button-common;
-    background-color: oklch(from var(--b3-theme-error) l c h / 0.1);
-    color: var(--b3-theme-error);
-    &:hover,
-    &:active,
-    &:focus {
-        background-color: oklch(from var(--b3-theme-error) l c h / 0.12);
-        color: var(--b3-theme-error);
+        background-color: oklch(from currentColor l c h / 0.12);
+        color: $color;
     }
 }
 @mixin button-transparent {
@@ -75,6 +66,17 @@
         color: var(--b3-theme-on-background);
     }
 }
+@mixin button-transparent-hover-translucent {
+    @include button-common;
+    background-color: transparent;
+    color: var(--b3-theme-on-surface);
+    &:hover,
+    &:active,
+    &:focus {
+        background-color: oklch(from currentColor l c h / 0.08);
+        color: var(--b3-theme-on-surface);
+    }
+}
 @mixin button-outline {
     @include button-common;
     background-color: transparent;
@@ -84,22 +86,16 @@
     &:hover,
     &:active,
     &:focus {
-        background-color: var(--b3-list-hover);
+        background-color: oklch(from currentColor l c h / 0.08);
         color: var(--b3-theme-on-surface);
     }
 }
-@mixin button-transparent-hover-gray {
-    @include button-common;
-    background-color: transparent;
-    color: var(--b3-theme-on-surface);
-    &:hover,
-    &:active,
-    &:focus {
-        background-color: var(--b3-list-hover);
-        color: var(--b3-theme-on-surface);
-    }
-}
-@mixin button-outline-hover-primary {
+@mixin button-outline-hover-solid($color: primary) {
+    $colors: (
+        primary: "--neo-button-primary",
+        error: "--b3-theme-error-bg",
+    );
+    $var: map.get($colors, $color);
     @include button-common;
     background-color: transparent;
     color: var(--b3-theme-on-surface);
@@ -108,29 +104,16 @@
     &:hover,
     &:active,
     &:focus {
-        background-color: var(--neo-button-primary);
-        outline-color: var(--neo-button-primary);
-        @include contrast-color(--neo-button-primary);
+        background-color: var(#{$var});
+        outline-color: var(#{$var});
+        @include contrast-color($var);
     }
 }
-@mixin button-outline-hover-warning {
-    @include button-common;
-    background-color: transparent;
-    color: var(--b3-theme-on-surface);
-    outline: 1px solid var(--b3-border-color-trans);
-    outline-offset: -1px;
-    &:hover,
-    &:active,
-    &:focus {
-        background-color: var(--b3-theme-error-bg);
-        outline-color: var(--b3-theme-error-bg);
-        @include contrast-color(--b3-theme-error-bg);
-    }
-}
+// chip
 .b3-chip {
     @include superellipse(7px);
     color: var(--b3-theme-on-surface);
-    background-color: var(--b3-list-hover);
+    background-color: oklch(from currentColor l c h / 0.08);
     transition: var(--b3-transition);
     opacity: 1;
     .b3-chips & {
@@ -138,7 +121,7 @@
     }
     &:hover {
         color: var(--b3-theme-on-surface);
-        background-color: var(--b3-list-active);
+        background-color: oklch(from currentColor l c h / 0.12);
         opacity: 1;
     }
     &.b3-chip--primary,
@@ -153,22 +136,23 @@
         }
     }
 }
+// 通用
 .b3-button {
     @include button-outline;
     &--outline {
-        @include button-outline-hover-primary;
+        @include button-outline-hover-solid(primary);
     }
     &--text {
-        @include button-transparent-hover-gray;
+        @include button-transparent-hover-translucent;
     }
     &--cancel {
-        @include button-transparent-hover-gray;
+        @include button-transparent-hover-translucent;
     }
     &--remove {
-        @include button-outline-hover-warning;
+        @include button-outline-hover-solid(error);
     }
     &--primary {
-        @include button-primary;
+        @include button-solid(primary);
     }
 }
 // 设置页按钮
@@ -176,10 +160,10 @@
 .config__item,
 #modelMain {
     .b3-button {
-        @include button-transparent-hover-gray;
+        @include button-transparent-hover-translucent;
     }
     .b3-button--outline {
-        @include button-outline-hover-primary;
+        @include button-outline-hover-solid(primary);
     }
     .b3-button--remove,
     #removeAll,
@@ -193,14 +177,8 @@
     #purgeCloudData,
     #resetRepo,
     #purgeRepo {
-        @include button-outline-hover-warning;  
+        @include button-outline-hover-solid(error);  
     }
-}
-// 消息按钮
-.b3-snackbars {
-    .b3-button {
-        @include button-outline;
-    }   
 }
 // action按钮
 .b3-dialog__action,
@@ -209,123 +187,19 @@
 .emojis__link-footer,
 .ai-editor-panel__actions {
     .b3-button {
-        @include button-gray;
+        @include button-translucent(on-surface);
     }
     .b3-button--text {
-        @include button-primary;
+        @include button-solid(primary);
     }
     .b3-button--cancel {
-        @include button-gray;
+        @include button-translucent(on-surface);
     }
     .b3-button--remove {
-        @include button-gray-warning;
-    }
-}
-// 集市按钮
-.config-bazaar__title {
-    .b3-button {
-        @include button-transparent;
-        padding: 0 4px;
-        &:not(.b3-button--outline) {
-            @include button-transparent;
-            padding: 0 4px;
-            color: var(--b3-theme-accent);
-            &:hover,
-            &:active,
-            &:focus {
-                color: var(--b3-theme-accent);
-            }
-        }
-        &[data-type="install-all"] {
-            @include button-outline-hover-primary;
-        }
-    }
-}
-.config-bazaar__readme .item__side {
-    .b3-button {
-        @include button-outline-hover-primary;
-        &[data-type="uninstall"],
-        &[data-type="package-disable"] {
-            @include button-outline-hover-warning;
-        }
-    }
-}
-// pdf搜索栏
-.pdf__outer .findbar {
-    .b3-button--outline {
-        @include button-outline;
-    }
-    .b3-button:not(.b3-button--outline) {
-        @include button-primary;
-    }
-    #findResultsCount, #findMsg {
-        @include button-transparent;
-    }
-}
-// 闪卡按钮
-.card__action .b3-button {
-    line-height: 32px;
-    @include superellipse(16px);
-    padding: 8px 0;
-    .card__icon {
-        display: none
-    }
-    &[data-type="-3"] {
-        @include button-outline;
-        line-height: 32px;
-        @include superellipse(16px);
-        padding: 8px 0;
-    }
-    &[data-type="-2"] {
-        @include button-transparent-hover-gray;
-        line-height: 32px;
-        @include superellipse(16px);
-        padding: 8px 0;
-    }
-    &[data-type="-1"] {
-        @include button-primary;
-        line-height: 32px;
-        @include superellipse(16px);
-        padding: 8px 0;
-    }
-    &[data-type="1"],
-    &[data-type="2"],
-    &[data-type="3"],
-    &[data-type="4"] {
-        background-color: oklch(from currentColor l c h / 0.15);
-        outline-color: oklch(from currentColor l c h / 0.12);
-        line-height: 32px;
-        @include superellipse(16px);
-        padding: 8px 0;
-        &:hover {
-            background-color: oklch(from currentColor calc(l + 0.08) c h / 0.25);
-        }
-    }
-    &[data-type="1"] {
-        color: var(--b3-card-error-color);
-    }
-    &[data-type="2"] {
-        color: var(--b3-card-warning-color);
-    }
-    &[data-type="3"] {
-        color: var(--b3-card-info-color);
-    }
-    &[data-type="4"] {
-        color: var(--b3-card-success-color);
-    }
-}
-// 题头图
-.b3-cover__tabs {
-    padding: 0 16px;
-    .b3-chip {
-        @include button-transparent;
-        padding: 0 8px;
-        &.b3-chip--current {
-            color: var(--b3-theme-accent);
-        }
+        @include button-translucent(error);
     }
 }
 // misc
 .b3-button[data-action="addCustom"] {
-    @include button-transparent-hover-gray;   
+    @include button-transparent-hover-translucent;   
 }

@@ -1,4 +1,5 @@
 @use "../utils" as *;
+@use "../component" as *;
 .b3-cover__cards {
     .b3-card {
         @include superellipse(12px);
@@ -11,6 +12,16 @@
                 scale: 1.5;
                 transition: 0.3s;
             }
+        }
+    }
+}
+.b3-cover__tabs {
+    padding: 0 16px;
+    .b3-chip {
+        @include button-transparent;
+        padding: 0 8px;
+        &.b3-chip--current {
+            color: var(--b3-theme-accent);
         }
     }
 }

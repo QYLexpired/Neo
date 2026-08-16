@@ -146,7 +146,7 @@
     font-weight: normal;
 }
 .config-bazaar__rating-action {
-    @include button-transparent-hover-gray;
+    @include button-transparent-hover-translucent;
     border: unset;
 }
 .config-bazaar__rating-star {
@@ -164,5 +164,34 @@
     background-color: var(--b3-list-hover);
     & > span {
         background-color: oklch(from var(--b3-theme-accent) l c h / 0.3);
+    }
+}
+// 集市按钮
+.config-bazaar__title {
+    .b3-button {
+        @include button-transparent;
+        padding: 0 4px;
+        &:not(.b3-button--outline) {
+            @include button-transparent;
+            padding: 0 4px;
+            color: var(--b3-theme-accent);
+            &:hover,
+            &:active,
+            &:focus {
+                color: var(--b3-theme-accent);
+            }
+        }
+        &[data-type="install-all"] {
+            @include button-outline-hover-solid(primary);
+        }
+    }
+}
+.config-bazaar__readme .item__side {
+    .b3-button {
+        @include button-outline-hover-solid(primary);
+        &[data-type="uninstall"],
+        &[data-type="package-disable"] {
+            @include button-outline-hover-solid(error);
+        }
     }
 }

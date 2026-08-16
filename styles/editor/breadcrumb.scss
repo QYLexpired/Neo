@@ -87,15 +87,9 @@ svg.protyle-breadcrumb__arrow {
 .protyle-breadcrumb__icon {
     transition: var(--b3-transition);
     width: max-content;
-    @include button-gray;
+    @include button-translucent(accent);
     padding: 4px 8px;
     line-height: 16px;
-    &:hover,
-    &:active,
-    &:focus {
-        color: var(--b3-theme-accent);
-        background-color: var(--b3-list-active);
-    }
 }
 .block__icon[data-subtype="unlock"] {
     @include icon-accent($important: true);

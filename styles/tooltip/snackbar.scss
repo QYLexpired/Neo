@@ -1,4 +1,5 @@
 @use "../utils" as *;
+@use "../component" as *;
 .b3-snackbar {
     transition: none !important;
     transform: none !important;
@@ -82,4 +83,9 @@
         filter: blur(12px);
         transform: scale(1.2);
     }
+}
+.b3-snackbars {
+    .b3-button {
+        @include button-outline;
+    }   
 }

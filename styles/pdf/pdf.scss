@@ -1,5 +1,17 @@
 @use "../utils" as *;
+@use "../component" as *;
 @use "../dialog" as *;
+.pdf__outer .findbar {
+    .b3-button--outline {
+        @include button-outline;
+    }
+    .b3-button:not(.b3-button--outline) {
+        @include button-solid(primary);
+    }
+    #findResultsCount, #findMsg {
+        @include button-transparent;
+    }
+}
 #sidebarContainer { 
     background-color: var(--b3-theme-background);
 }

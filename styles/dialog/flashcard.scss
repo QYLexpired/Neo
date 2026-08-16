@@ -1,3 +1,5 @@
+@use "../utils" as *;
+@use "../component" as *;
 .b3-dialog--open[data-key="dialog-opencard"],
 .b3-dialog--open[data-key="dialog-viewcards"] {
     .b3-dialog {
@@ -8,4 +10,56 @@
 }
 .layout__center .card__main {
     background-color: transparent;
+}
+// 闪卡按钮
+.card__action .b3-button {
+    line-height: 32px;
+    @include superellipse(16px);
+    padding: 8px 0;
+    .card__icon {
+        display: none
+    }
+    &[data-type="-3"] {
+        @include button-outline;
+        line-height: 32px;
+        @include superellipse(16px);
+        padding: 8px 0;
+    }
+    &[data-type="-2"] {
+        @include button-transparent-hover-translucent;
+        line-height: 32px;
+        @include superellipse(16px);
+        padding: 8px 0;
+    }
+    &[data-type="-1"] {
+        @include button-solid(primary);
+        line-height: 32px;
+        @include superellipse(16px);
+        padding: 8px 0;
+    }
+    &[data-type="1"],
+    &[data-type="2"],
+    &[data-type="3"],
+    &[data-type="4"] {
+        background-color: oklch(from currentColor l c h / 0.15);
+        outline-color: oklch(from currentColor l c h / 0.12);
+        line-height: 32px;
+        @include superellipse(16px);
+        padding: 8px 0;
+        &:hover {
+            background-color: oklch(from currentColor calc(l + 0.08) c h / 0.25);
+        }
+    }
+    &[data-type="1"] {
+        color: var(--b3-card-error-color);
+    }
+    &[data-type="2"] {
+        color: var(--b3-card-warning-color);
+    }
+    &[data-type="3"] {
+        color: var(--b3-card-info-color);
+    }
+    &[data-type="4"] {
+        color: var(--b3-card-success-color);
+    }
 }

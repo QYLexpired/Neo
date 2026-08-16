@@ -36,7 +36,7 @@
     top: 4px;
 }
 .av__gallery-add {
-    @include button-transparent-hover-gray;
+    @include button-transparent-hover-translucent;
     @include superellipse(10px);
 }
 .av__group-icon {
@@ -63,7 +63,7 @@
     outline: 1px solid var(--b3-border-color-trans);
     outline-offset: -1px;
     .b3-button {
-        @include button-transparent-hover-gray;
+        @include button-transparent-hover-translucent;
         border-color: var(--b3-border-color-trans) !important;
     }
 }
@@ -122,7 +122,7 @@
     }
 }
 .b3-button[data-type="av-add-bottom"] {
-    @include button-transparent-hover-gray;
+    @include button-transparent-hover-translucent;
     padding: 3px 6px;
 }
 // filter
