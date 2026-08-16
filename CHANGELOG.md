@@ -1,3 +1,8 @@
+### v1.4.6 / 2026-08-16
+- 适配思源3.8.1-beta.4
+- 优化部分细节
+- Adapted for SiYuan 3.8.1-beta.4
+- Optimized some details
 ### v1.4.5 / 2026-08-15
 - 优化流体光标性能
 - 优化沉浸模式性能
