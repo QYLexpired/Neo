@@ -128,12 +128,12 @@
     --b3-empty-color: oklch(from var(--b3-theme-on-background) l c h / 0.45);
     --b3-body-background: var(--b3-theme-background);
     // other
-    --b3-theme-error-bg: oklch(from var(--b3-base-color) max(l, 0.58) max(c, 0.2) 30);
-    --b3-theme-error: oklch(from var(--b3-theme-error-bg) clamp(0.55, l, 0.95) c h);
-    --b3-theme-secondary-bg: oklch(from var(--b3-base-color) max(l, 0.58) max(c, 0.2) calc(h + 90));
-    --b3-theme-secondary: oklch(from var(--b3-theme-secondary-bg) clamp(0.55, l, 0.95) c h);
-    --b3-theme-success-bg: oklch(from var(--b3-base-color) max(l, 0.58) max(c, 0.2) 140);
-    --b3-theme-success: oklch(from var(--b3-theme-success-bg) clamp(0.55, l, 0.95) c h);
+    --b3-theme-error-bg: oklch(from var(--b3-base-color) max(l, 0.6) max(c, 0.18) 30);
+    --b3-theme-error: oklch(from var(--b3-theme-error-bg) clamp(0.65, l, 0.95) c h);
+    --b3-theme-secondary-bg: oklch(from var(--b3-base-color) max(l, 0.6) max(c, 0.18) calc(h + 90));
+    --b3-theme-secondary: oklch(from var(--b3-theme-secondary-bg) clamp(0.65, l, 0.95) c h);
+    --b3-theme-success-bg: oklch(from var(--b3-base-color) max(l, 0.6) max(c, 0.18) 140);
+    --b3-theme-success: oklch(from var(--b3-theme-success-bg) clamp(0.65, l, 0.95) c h);
     --b3-highlight-background: oklch(from var(--b3-base-color) 0.95 0.2 calc(h + 90));
     --b3-highlight-current-background: oklch(from var(--b3-highlight-background) l c calc(h + 10));
     @include contrast-color(--b3-highlight-background, --b3-highlight-color);
