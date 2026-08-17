@@ -6,12 +6,12 @@
     opacity: 0 !important;
     background-color: transparent;
     backdrop-filter: none;
-    transition: backdrop-filter 0.45s 0s;
+    transition: backdrop-filter 0.45s;
     &.b3-menu__scrim--open {
         opacity: 1 !important;
-        backdrop-filter: brightness(0.75) saturate(0.5);
+        backdrop-filter: brightness(0.75);
         .neo-mode-dark & {
-            backdrop-filter: brightness(0.5) saturate(0.5);
+            backdrop-filter: brightness(0.5);
         }
         .neo-visual-frostedglass & {
             z-index: -2;
@@ -19,7 +19,7 @@
         }
     }
     .neo-visual-frostedglass & {
-        transition: backdrop-filter 0.45s 0s;
+        transition: backdrop-filter 0.45s;
     }
 }
 .b3-menu.b3-menu--fullscreen {
