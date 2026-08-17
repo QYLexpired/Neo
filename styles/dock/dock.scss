@@ -14,19 +14,19 @@
     }
 }
 .dock__item--active {
-    animation: neo-dock-active 0.3s var(--neo-ease-out-3);
+    animation: neo-dock-active 0.2s var(--neo-ease-out-2);
 }
 #dockMoveItem {
     background-color: transparent !important; // 覆盖内联
     box-shadow: var(--neo-main-shadow);
-    animation: neo-dock-move 0.45s var(--neo-ease-spring-3);
+    animation: neo-dock-move 0.2s var(--neo-ease-out-2);
 }
 @keyframes neo-dock-active {
     0% {
         transform: scale(1);
     }
     50% {
-        transform: scale(1.06);
+        transform: scale(0.96);
     }
     100% {
         transform: scale(1);

@@ -56,7 +56,7 @@
     @include dialog-container-common;
     transform: translateY(min(-3%, -20px));
     opacity: 0;
-    transition: transform 0.45s var(--neo-ease-spring-1), opacity 0.25s;
+    transition: transform 0.3s var(--neo-ease-spring-1), opacity 0.25s;
     .b3-dialog--open & {
         transform: none;
         opacity: 1;

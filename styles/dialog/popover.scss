@@ -3,7 +3,7 @@
 .block__popover {
     transform: translateY(min(-1.5%, -10px));
     opacity: 0;
-    transition: transform 0.45s var(--neo-ease-spring-1), opacity 0.25s;
+    transition: transform 0.3s var(--neo-ease-spring-1), opacity 0.25s;
     &.block__popover--open {
         @include dialog-container-common;
         transform: none;

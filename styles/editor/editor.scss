@@ -4,7 +4,7 @@
     background-color: transparent;
 }
 .protyle:not(.fn__none) .protyle-content {
-    animation: neo-protyle-entrance 0.45s var(--neo-ease-out-3);
+    animation: neo-protyle-entrance 0.3s var(--neo-ease-out-3);
 }
 @keyframes neo-protyle-entrance {
     0% {

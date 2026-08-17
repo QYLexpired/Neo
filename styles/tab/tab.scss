@@ -151,7 +151,7 @@ body:not(.body--toolbar-hide) [data-type="wnd"] > .fn__flex:first-child {
 }
 // tab focus
 .layout-tab-bar .item--focus {
-    animation: neo-tab-focus 0.3s var(--neo-ease-out-3);
+    animation: neo-tab-focus 0.2s var(--neo-ease-out-2);
 }
 @keyframes neo-tab-focus {
     0% {

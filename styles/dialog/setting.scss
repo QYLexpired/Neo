@@ -74,20 +74,20 @@
 }
 .config__view {
     @include dialog-container-common;
-    box-shadow: var(--b3-dialog-shadow-inset);
+    box-shadow: var(--b3-dialog-shadow-inset) !important;
     padding: unset;
     opacity: 0;
     transform: scale(1.2);
     filter: blur(32px);
     inset: 0;
     pointer-events: none;
-    transition: 0.6s ease;
+    transition: 0.4s ease;
     &.config__view--show {
         opacity: 1;
         transform: scale(1);
         filter: none;
         pointer-events: all;
-        transition: 0.3s var(--neo-ease-out-3);
+        transition: 0.2s var(--neo-ease-out-3);
     }
     .b3-dialog__header .block__logo {
         .block__logoicon {

@@ -95,10 +95,10 @@ svg.protyle-breadcrumb__arrow {
     @include icon-accent($important: true);
 }
 .block__icon[data-subtype="lock"] svg {
-    animation: neo-lock 0.45s var(--neo-ease-elastic-out-3);
+    animation: neo-lock 0.3s var(--neo-ease-elastic-out-3);
 }
 .block__icon[data-subtype="unlock"] svg {
-    animation: neo-unlock 0.45s var(--neo-ease-elastic-out-3);
+    animation: neo-unlock 0.3s var(--neo-ease-elastic-out-3);
 }
 @keyframes neo-lock {
     0% {

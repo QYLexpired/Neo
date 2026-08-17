@@ -9,7 +9,7 @@
     }
 }
 .protyle-wysiwyg [data-node-id][fold="1"] {
-    animation: neo-block-fold 0.5s var(--neo-ease-spring-3) !important;
+    animation: neo-block-fold 0.4s var(--neo-ease-spring-3) !important;
     animation-timeline: unset !important; // 卷轴动画会覆盖动画
     transform-origin: top;
     &:not(.li) {
@@ -19,7 +19,7 @@
         opacity: 0.38 !important; // 卷轴动画会覆盖opacity
     }
     &.li {
-        animation: neo-block-fold-li 0.5s var(--neo-ease-spring-3) !important;
+        animation: neo-block-fold-li 0.4s var(--neo-ease-spring-3) !important;
         animation-timeline: unset !important;
         transform-origin: top left;
     }
@@ -34,7 +34,7 @@
 }
 @keyframes neo-block-fold-li {
     0% {
-        transform: scaleX(1.45) scaleY(1.2);
+        transform: scaleX(1.25) scaleY(1.2);
     }
     100% {
         transform: scaleX(1) scaleY(1);
