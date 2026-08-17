@@ -18,7 +18,7 @@
         transition: backdrop-filter 0.25s, opacity 0.25s;
     }
     .b3-dialog--open[data-key="dialog-emojis"] & {
-        opacity: 0;
+        opacity: 0 !important;
     }
 }
 @mixin dialog-transparent {
