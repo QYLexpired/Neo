@@ -53,8 +53,9 @@
 }
 .b3-dialog__container {
     @include dialog-container-common;
-    transform: translateY(min(-5%, -30px));
-    transition: transform 0.45s var(--neo-ease-spring-1);
+    transform: translateY(min(-3%, -20px));
+    opacity: 0;
+    transition: transform 0.45s var(--neo-ease-spring-1), opacity 0.25s;
     @include dialog-transparent {
         background-color: transparent !important;
     }
