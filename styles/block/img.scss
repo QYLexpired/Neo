@@ -7,7 +7,7 @@
     }
 }
 .viewer-backdrop {
-    @include frostedglass($blur: g, $color: background, $alpha: 0.9, $scope: global);
+    @include frostedglass($blur: l, $color: background, $alpha: 0.9, $scope: global);
     background-color: var(--b3-theme-background);
 }
 .viewer-navbar {

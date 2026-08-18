@@ -18,7 +18,7 @@
 }
 .fullscreen {
     background-color: var(--b3-theme-background);
-    @include frostedglass($blur: g, $color: background, $scope: global);
+    @include frostedglass($blur: l, $color: background, $scope: global);
 }
 .protyle-icons,
 .av__gallery-actions {
@@ -274,6 +274,11 @@
         outline: 1px solid oklch(from var(--b3-theme-secondary) l c h / 0.12);
         outline-offset: -1px;
         background-color: oklch(from var(--b3-theme-secondary) l c h / 0.12) !important;
+        @at-root {
+            .b3-list--background .b3-list-item.dragover::after {
+                opacity: 0;
+            }
+        }
     }
     &.dragover__left,
     &.dragover__right,
