@@ -3,6 +3,9 @@
 :root {
     --_emoji-transiton: 0.65s var(--neo-ease-spring-4);
 }
+[data-key="dialog-emojis"] .b3-dialog__scrim {
+    opacity: 0 !important;
+}
 .emojis {
     .emojis__tabheader {
         padding-bottom: 0;

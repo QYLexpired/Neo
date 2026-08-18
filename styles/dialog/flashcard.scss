@@ -1,11 +1,9 @@
 @use "../utils" as *;
 @use "../component" as *;
-.b3-dialog--open[data-key="dialog-opencard"],
-.b3-dialog--open[data-key="dialog-viewcards"] {
-    .b3-dialog {
-        .b3-dialog__scrim {
-            background-color: transparent !important;
-        }
+[data-key="dialog-opencard"],
+[data-key="dialog-viewcards"] {
+    .b3-dialog__scrim {
+        background-color: transparent !important;
     }
 }
 .layout__center .card__main {

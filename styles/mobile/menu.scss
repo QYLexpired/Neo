@@ -39,7 +39,7 @@
     }
     &.b3-menu--sheet {
         background-color: var(--b3-menu-background);
-        @include superellipse-use(16px 16px 0 0);
+        @include superellipse-use(22px 22px 0 0);
         box-shadow: var(--b3-menu-shadow);
         margin: 0 2px -2px 2px;
         transition: 0.15s var(--neo-ease-out-3);
@@ -75,9 +75,6 @@
     .b3-menu__title {
         border-bottom: unset;
         background-color: transparent;
-        & > .b3-menu__label {
-            line-height: 36px;
-        }
     }
     .b3-menu__items {
         background-color: transparent;

@@ -17,8 +17,7 @@
         outline: unset;
     }
     &:focus {
-        animation: neo-input-focus-ring 0.25s var(--neo-ease-out-3) forwards;
-        animation-delay: 0.02s;
+        animation: neo-input-focus-ring 0.2s var(--neo-ease-out-3) forwards;
         background-color: var(--neo-input-background);
         --b3-theme-primary-lighter: transparent !important; // 取消阴影
         outline: unset;
@@ -26,10 +25,10 @@
 }
 @keyframes neo-input-focus-ring {
     0% {
-        box-shadow: 0 0 15px 20px oklch(from var(--neo-input-primary) l c h / 0);
+        box-shadow: 0 0 20px 20px oklch(from var(--neo-input-primary) l c h / 0);
     }
     20% {
-        box-shadow: 0 0 5px 10px oklch(from var(--neo-input-primary) l c h / 0.15);
+        box-shadow: 0 0 10px 10px oklch(from var(--neo-input-primary) l c h / 0.15);
     }
     100% {
         box-shadow: 0 0 0 2px var(--neo-input-primary);

@@ -1,7 +1,7 @@
 @use "../utils" as *;
 @use "sass:map";
 @mixin button-common {
-    padding: 4px 12px;
+    padding: 4px 16px;
     line-height: 18px;
     @include superellipse(7px);
     box-shadow: none;
