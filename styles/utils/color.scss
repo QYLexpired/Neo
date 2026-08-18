@@ -153,8 +153,8 @@
 @mixin light-font-color {
     $font-l-light: min(0.55, l);
     $background-l-light: min(0.96, l);
-    $font-c-light: 0.18;
-    $background-c-light: 0.08;
+    $font-c-light: 0.15;
+    $background-c-light: 0.05;
     // 文字颜色
     --b3-card-error-color: oklch(from var(--b3-theme-accent) #{$font-l-light} #{$font-c-light} 30);
     --b3-card-error-background: oklch(from var(--b3-theme-background) #{$background-l-light} #{$background-c-light} 30);
@@ -174,9 +174,9 @@
 }
 @mixin dark-font-color {
     $font-l-dark: max(0.82, l);
-    $background-l-dark: max(0.35, l);
-    $font-c-dark: 0.16;
-    $background-c-dark: 0.05;
+    $background-l-dark: max(0.4, l);
+    $font-c-dark: 0.1;
+    $background-c-dark: 0.035;
     // 文字颜色
     --b3-card-error-color: oklch(from var(--b3-theme-accent) #{$font-l-dark} #{$font-c-dark} 30);
     --b3-card-error-background: oklch(from var(--b3-theme-background) #{$background-l-dark} #{$background-c-dark} 30);

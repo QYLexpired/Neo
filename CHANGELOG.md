@@ -1,3 +1,8 @@
+### v1.4.7 / 2026-08-18
+- 适配思源3.8.1
+- 调整部分动效的响应速度，提升流畅度
+- Adapted for SiYuan 3.8.1
+- Adjusted the response speed of some animations to improve smoothness
 ### v1.4.6 / 2026-08-16
 - 适配思源3.8.1-beta.4
 - 优化部分细节
