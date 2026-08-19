@@ -1,3 +1,16 @@
+### v1.4.8 / 2026-08-19
+- 苔原配色适配暗黑模式
+- 黄昏配色适配暗黑模式
+- 蛋白石配色适配暗黑模式
+- 氧配色适配明亮模式
+- 暮光配色适配明亮模式
+- 重做深渊配色
+- Tundra color scheme now supports dark mode
+- Dusk color scheme now supports dark mode
+- Opalite color scheme now supports dark mode
+- Oxygen color scheme now supports light mode
+- Twilight color scheme now supports light mode
+- Redesigned the Abyss color scheme
 ### v1.4.7 / 2026-08-18
 - 适配思源3.8.1
 - 调整部分动效的响应速度，提升流畅度

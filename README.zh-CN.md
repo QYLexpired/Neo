@@ -3,8 +3,12 @@
 - Neo主题大量参考了[Asri主题](https://github.com/mustakshif/Asri)的设计和创意，非常感谢[mustakshif](https://github.com/mustakshif)，没有你超强的审美、技术力和让人惊叹的创意，就不会有Neo的出现
 ## 更新日志
 完整更新历史可查看[CHANGELOG](https://github.com/QYLexpired/Neo/blob/main/CHANGELOG.md)
-- 适配思源3.8.1
-- 调整部分动效的响应速度，提升流畅度
+- 苔原配色适配暗黑模式
+- 黄昏配色适配暗黑模式
+- 蛋白石配色适配暗黑模式
+- 氧配色适配明亮模式
+- 暮光配色适配明亮模式
+- 重做深渊配色
 ## 说明
 - 主题的部分样式和功能无法仅通过CSS实现，因此必须安装并启用主题的配套插件：[Neo+](https://github.com/QYLexpired/Neo-Plus)
 - 使用过程中有任何问题或建议，可通过[Neo 主题介绍及反馈综合帖](https://ld246.com/article/1783158376401)或[GitHub](https://github.com/QYLexpired/Neo/issues)进行反馈
