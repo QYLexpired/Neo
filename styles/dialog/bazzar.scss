@@ -44,6 +44,9 @@
                 & > .block__icon:not(.fn__none) {
                     margin-left: auto;
                 }
+                & > .block__icon.fn__hidden {
+                    width: 0;
+                }
                 & > .block__icon:not(.fn__none) ~ .block__icon:not(.fn__none) {
                     margin-left: 8px;
                 }
