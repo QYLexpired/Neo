@@ -43,6 +43,7 @@
 .agent-chat__confirm-header,
 .agent-chat__confirm-args,
 .agent-chat__confirm-actions,
+.agent-chat__confirm-effects,
 .agent-chat__todo-header,
 .agent-chat__todo-items {
     border-color: transparent !important;
@@ -62,6 +63,11 @@
     &:focus-visible {
         background-color: var(--b3-list-hover);
     }
+}
+.agent-chat__confirm-effects {
+    padding: 8px 12px 0 30px;
+    background-color: transparent;
+    color: var(--b3-theme-error);
 }
 .agent-chat__question {
     &-item {
@@ -139,6 +145,11 @@
         max-height: 500px;
         overflow: auto;
     }
+}
+// 错误
+.agent-chat__msg--error .agent-chat__body {
+    background-color: transparent;
+    color: var(--b3-theme-error);
 }
 // 滚动至底部
 .agent-chat__scroll-bottom {
