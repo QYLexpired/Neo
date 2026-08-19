@@ -92,7 +92,7 @@
     --neo-default-on-background: #e1e4ec;
     --neo-default-on-surface: #bfbec8;
     // custom
-    --neo-custom-primary: oklch(from var(--neo-custom-base-color) clamp(0.68, l, 0.75) c h);
+    --neo-custom-primary: oklch(from var(--neo-custom-base-color) clamp(0.68, l, 0.72) c h);
     --neo-custom-accent: oklch(from var(--neo-custom-base-color) clamp(0.68, l, 0.95) max(c, 0.3) h);
     --neo-custom-background: oklch(from var(--neo-custom-primary) 0.2 calc(0.008 * var(--neo-saturation, 1)) h);
     --neo-custom-surface: oklch(from var(--neo-custom-primary) 0.25 calc(0.012 * var(--neo-saturation, 1)) h);
