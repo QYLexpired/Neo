@@ -15,6 +15,18 @@
         width: 80px;
     }
 }
+.fullscreen > .block__icons {
+    &  > .fn__flex-1 {
+        height: 42px;
+        line-height: 42px;
+    }
+    .block__icon,
+    .fn__space {
+        animation: none !important;
+        opacity: 1 !important;
+        display: flex !important;
+    }
+}
 :root {
     // line
     --b3-graph-line: var(--b3-border-color-trans);
