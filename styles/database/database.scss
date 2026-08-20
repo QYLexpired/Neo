@@ -232,8 +232,14 @@
 }
 .av__relation-panel .av__relation-table-primary,
 .av__relation-panel .av__relation-table-check {
-    background-color: transparent;
-    box-shadow: none !important;
+    background-color: var(--b3-menu-background);
+    @include frostedglass($blur: s, $color: menu);
+}
+.av__relation-panel .av__relation-table-row[data-relation-type=selected] {
+    .av__relation-table-primary,
+    .av__relation-table-check {
+        box-shadow: inset 0 0 0 9999px var(--b3-list-active);
+    }
 }
 .av__relation-panel .av__relation-table-row[data-relation-type=selected],
 .av__relation-panel .av__relation-table-row[data-relation-type=selected]:hover,

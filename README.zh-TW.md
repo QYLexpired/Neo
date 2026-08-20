@@ -64,6 +64,7 @@ Neo 主題完全免費，如果喜歡這個主題，歡迎在 [GitHub](https://g
 ## 寫在最後
 - Neo 主題適合誰：適合追求更現代化的設計、偏愛簡潔整潔的筆記介面、願意為了美觀而犧牲部分效能的使用者
 - Neo 主題不適合誰：不適合追求極致效能的朋友，如果你期望使用一個和預設主題流暢度相同的主題，那 Neo 不適合你。Neo 主題對整個思源的外觀進行了極大幅度的改造（幾乎是重做了思源的介面，這實際上耗費了我大量的精力），不是簡單的換色和零散 CSS 的堆砌，為了追求全域的精緻效果，對效能有更多的消耗是必然的。實際上主題已盡力最佳化效能，且絕大部分特性是可選項，所以在抱怨 Neo 主題讓你的思源筆記變得卡頓之前，先了解這一點
+- Neo 的彩蛋：Neo 主題有許多隱藏的小細節，期待你的探索（比如試試在區塊選單-外觀處改變引述區塊的整體文字顏色，看看會發生什麼）
 - 再次感謝 [Asri 主題](https://github.com/mustakshif/Asri) 和其作者 [mustakshif](https://github.com/mustakshif)
 ## 致謝
 製作 Neo 主題時，從以下專案獲得大量靈感，感謝這些專案的製作者
@@ -72,3 +73,5 @@ Neo 主題完全免費，如果喜歡這個主題，歡迎在 [GitHub](https://g
 - [Border](https://github.com/akifyss/obsidian-border)
 - [Rem Craft](https://github.com/svchord/Rem-Craft)
 - [Savor](https://github.com/royc01/notion-theme)
+- [Baseline](https://github.com/aaaaalexis/obsidian-baseline)
+- [AnuPpuccin](https://github.com/anubisnekhet/AnuPpuccin)

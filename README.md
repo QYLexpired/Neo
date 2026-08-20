@@ -64,6 +64,7 @@ Some features heavily rework SiYuan's native styles, so there are compatibility 
 ## A Final Word
 - Who Neo is for: users who crave a more modern design, prefer a clean and minimal note-taking interface, and are willing to trade some performance for aesthetics
 - Who Neo is NOT for: not for those who demand the absolute best performance. If you expect Neo to feel as smooth as the default theme, it isn't for you. Neo reworks the appearance of the entire SiYuan on a massive scale (almost rebuilt SiYuan's interface, which actually took a huge amount of my effort) — it's not a simple recolor or a pile of scattered CSS tweaks. In the pursuit of a refined look across the entire interface, a higher performance cost is inevitable. That said, the theme is already optimized to the best of its ability, and most features are optional. So before you complain that Neo makes your SiYuan notes laggy, keep this in mind.
+- Neo's Easter Eggs: The Neo theme has many hidden little details waiting for you to discover (for example, try changing the overall text color of a blockquote from the Block Menu → Appearance and see what happens)
 - Once again, thanks to the [Asri theme](https://github.com/mustakshif/Asri) and its author, [mustakshif](https://github.com/mustakshif)
 ## Acknowledgements
 The creation of the Neo theme drew significant inspiration from the following projects. Thanks to their creators:
@@ -72,3 +73,5 @@ The creation of the Neo theme drew significant inspiration from the following pr
 - [Border](https://github.com/akifyss/obsidian-border)
 - [Rem Craft](https://github.com/svchord/Rem-Craft)
 - [Savor](https://github.com/royc01/notion-theme)
+- [Baseline](https://github.com/aaaaalexis/obsidian-baseline)
+- [AnuPpuccin](https://github.com/anubisnekhet/AnuPpuccin)
