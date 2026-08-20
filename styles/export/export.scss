@@ -1,7 +1,12 @@
-body > #preview {
-    box-shadow: none !important;
-    background-color: white !important;
+#previewContainer {
+    background-color: var(--b3-theme-surface);
+    & > #preview {
+        box-shadow: none;
+        background-color: white;
+        margin: 0 auto;
+    }
 }
-#iconsLitheness {
-    background-color: white !important;
+body > #action {
+    background-color: var(--b3-theme-surface);
+    border: none;
 }

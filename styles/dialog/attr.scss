@@ -30,4 +30,13 @@
     .custom-attr__avvalue {
         max-height: 150px;
     }
+    textarea.b3-text-field--text {
+        height: auto;
+        field-sizing: content;
+    }
+    .block__icons.av__row {
+        & > .fn__flex-1 {
+            overflow: visible;
+        }
+    }
 }

@@ -1,6 +1,6 @@
 @use "../utils" as *;
 @mixin input-common {
-    @include superellipse(7px);
+    @include superellipse-use(7px);
     height: 26px;
     min-height: 26px;
     line-height: 18px;
@@ -218,6 +218,7 @@ input[type="color"] {
     min-width: unset !important;
     flex: unset !important;
     border-radius: 50%;
+    corner-shape: unset !important;
     overflow: hidden;
     cursor: pointer;
     &::-webkit-color-swatch-wrapper {

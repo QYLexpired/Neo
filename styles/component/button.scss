@@ -3,7 +3,7 @@
 @mixin button-common {
     padding: 4px 16px;
     line-height: 18px;
-    @include superellipse(7px);
+    @include superellipse-use(7px);
     box-shadow: none;
     outline: none;
     transition: var(--b3-transition), transform 0.45s var(--neo-ease-spring-3);

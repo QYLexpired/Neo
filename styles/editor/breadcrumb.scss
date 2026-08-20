@@ -90,6 +90,8 @@ svg.protyle-breadcrumb__arrow {
     @include button-translucent(accent);
     padding: 4px 8px;
     line-height: 16px;
+    outline: 0.5px solid oklch(from currentColor l c h / 0.18);
+    outline-offset: -0.5px;
 }
 .block__icon[data-subtype="unlock"] {
     @include icon-accent($important: true);
