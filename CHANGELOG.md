@@ -1,4 +1,4 @@
-### v1.4.9 / 2026-08-19
+### v1.4.9 / 2026-08-20
 - 全部预设配色同时支持明亮模式/暗黑模式
 - All preset color schemes support both light and dark modes
 ### v1.4.8 / 2026-08-19
