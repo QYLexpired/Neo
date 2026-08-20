@@ -1,6 +1,8 @@
-### v1.4.9 / 2026-08-20
+### v1.5.0 / 2026-08-20
 - 全部预设配色同时支持明亮模式/暗黑模式
+- 全新预设配色：远行、粗野主义（beta）
 - All preset color schemes support both light and dark modes
+- New preset color schemes: Voyage, Brutalism (beta)
 ### v1.4.8 / 2026-08-19
 - 苔原配色适配暗黑模式
 - 黄昏配色适配暗黑模式

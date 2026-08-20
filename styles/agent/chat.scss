@@ -16,6 +16,9 @@
 .agent-chat__buttons {
     margin: 6px;
 }
+.agent-chat__button-options {
+    overflow: visible;
+}
 // 对话气泡
 .agent-chat__msg--user .agent-chat__body {
     background-color: var(--b3-list-hover);
