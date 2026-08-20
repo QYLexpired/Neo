@@ -1,11 +1,14 @@
 @use "../utils" as *;
+:root {
+    --_heading-color: var(--b3-theme-primary);
+}
 .b3-typography,
 .protyle-wysiwyg {
     @for $i from 1 through 6 {
         h#{$i},
         .h#{$i} {
             @include superellipse(10px);
-            color: var(--b3-theme-primary);
+            color: var(--_heading-color);
             margin-top: 1.2em;
             line-height: 1.5;
             &[fold="1"] {
@@ -29,7 +32,7 @@
 //    inherits: false;
 //}
 .protyle-title__input {
-    color: var(--b3-theme-primary);
+    color: var(--_heading-color);
     font-size: 2.4em;
     line-height: 1.4;
     padding-inline-start: 0.8em;
