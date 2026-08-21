@@ -6,6 +6,7 @@ $table-border-color: oklch(from currentColor l c h / 0.15);
     --b3-table-even-background: oklch(from currentColor l c h / 0.05);
     outline: 1px solid $table-border-color !important; // 覆盖.protyle-wysiwyg [data-node-id] [spellcheck]:focus { outline: none; }
     outline-offset: -1px;
+    border: none;
     padding: 1px;
     overflow: hidden;
     @include superellipse-use(10px);

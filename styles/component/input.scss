@@ -106,7 +106,7 @@ body.body--win32-browser .b3-select { // body用来覆盖思源样式
     @include input-common;
     .search__header & {
         box-shadow: none !important;
-        background-color: transparent;
+        background-color: transparent !important;
     }
     .block__icons + & {
         box-shadow: none !important;
