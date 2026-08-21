@@ -30,8 +30,7 @@
     background-color: var(#{$var});
     @include contrast-color($var);
     #{$hover-var}: oklch(from var(#{$var}) calc(l + 0.0225 + 0.0575 * sign(0.680000001 - l)) c h);
-    .neo-palette-brutalism & {
-        --neo-button-primary: #976868;
+    @include brutalism-palette-x {
         box-shadow: var(--neo-main-shadow);
     }
     &:hover,
@@ -53,8 +52,7 @@
     @include button-common;
     background-color: oklch(from currentColor l c h / 0.08);
     color: $color;
-    .neo-palette-brutalism & {
-        --neo-button-primary: #976868;
+    @include brutalism-palette-x {
         box-shadow: var(--neo-main-shadow);
     }
     &:hover,
@@ -111,8 +109,7 @@
     color: var(--b3-theme-on-surface);
     outline: 1px solid var(--b3-border-color-trans);
     outline-offset: -1px;
-    .neo-palette-brutalism & {
-        --neo-button-primary: #976868;
+    @include brutalism-palette-x {
         box-shadow: var(--neo-main-shadow);
         outline: none;
     }

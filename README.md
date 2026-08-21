@@ -3,8 +3,8 @@
 - Neo draws heavily on the design and ideas of the [Asri theme](https://github.com/mustakshif/Asri). A huge thank you to [mustakshif](https://github.com/mustakshif) — without your impeccable taste, technical skill, and astonishing creativity, Neo would never have come to be.
 ## Changelog
 See the [CHANGELOG](https://github.com/QYLexpired/Neo/blob/main/CHANGELOG.md) for the full update history.
-- All preset color schemes support both light and dark modes
-- New preset color schemes: Voyage, Brutalism (beta)
+- Introducing a brand-new design language: Neue Brutalism — raw texture, back to pure expression
+- Adapted for SiYuan 3.8.2-alpha
 ## Notes
 - Some of the theme's styles and features cannot be implemented with CSS alone, so the companion plugin [Neo+](https://github.com/QYLexpired/Neo-Plus) **MUST** be installed and enabled.
 - For any questions or suggestions during use, please visit the [Neo Theme Introduction & Feedback Thread](https://ld246.com/article/1783158376401) or [GitHub](https://github.com/QYLexpired/Neo/issues)
@@ -15,6 +15,7 @@ The Neo theme is completely free. If you enjoy this theme, feel free to star it 
 - Dozens of built-in preset color schemes, each with its own distinct style
 - Custom Theme Color: pick an accent color and adjust its saturation to customize the interface
 - The theme color can follow time, banner, or system accent color
+- Neue Brutalism color schemes
 - Random Color: a random scheme is selected from all available ones on every SiYuan launch
 #### Ever-Changing Interface
 - Super Fusion: seamlessly blends tabs, breadcrumbs, banner images, and note content together (inspired by the Asri theme)

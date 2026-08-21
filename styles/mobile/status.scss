@@ -1,13 +1,14 @@
 @use "../utils" as *;
 .neo-mobile {
     .status {
-        bottom: -26px;
+        bottom: -32px;
         height: 26px;
         line-height: 26px;
         padding: 0 12px;
-        @include superellipse-use(8px 8px 0 0);
+        margin: 6px 12px;
+        width: calc(100% - 24px);
+        justify-self: center;
+        border-radius: 32px;
         box-shadow: var(--neo-main-shadow);
-        margin: 0 2px -2px 2px;
-        width: calc(100% - 4px);
     }
 }

@@ -1,3 +1,8 @@
+### v1.5.1 / 2026-08-21
+- 引入全新设计语言：新粗野主义-以原始质感，重回纯粹表达
+- 适配思源3.8.2-alpha
+- Introducing a brand-new design language: Neue Brutalism — raw texture, back to pure expression
+- Adapted for SiYuan 3.8.2-alpha
 ### v1.5.0 / 2026-08-20
 - 全部预设配色同时支持明亮模式/暗黑模式
 - 全新预设配色：远行、粗野主义（beta）

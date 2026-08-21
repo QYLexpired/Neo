@@ -1,0 +1,30 @@
+#model .config--mobile {
+    .config-bazaar__main > .layout-tab-bar {
+        margin: 0;
+        margin-bottom: -6px;
+    }
+    .config-bazaar__readme {
+        .item__side {
+            border-radius: 0;
+            corner-shape: unset;
+            margin: 0;
+            box-shadow: none;
+        }
+        .item__preview {
+            margin: 0;
+            width: 100%;
+        }
+        .item__readme {
+            margin-top: 0;
+        }
+        .b3-typography {
+            padding: 0;
+            & > blockquote:first-child {
+                margin: 12px 0;
+            }
+        }
+        .item__actions--mobile {
+            box-shadow: none;
+        }
+    }
+}

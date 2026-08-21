@@ -143,6 +143,13 @@
             margin-top: 0;
         }
     }
+    .config-bazaar__deprecated {
+        background-color: transparent;
+        padding: 0;
+    }
+    .config-bazaar__deprecated-reason {
+        color: var(--b3-card-warning-color);
+    }
 }
 .config-bazaar__rating-summary {
     color: var(--b3-theme-on-surface);
@@ -170,7 +177,8 @@
     }
 }
 // 集市按钮
-.config-bazaar__title {
+.config-bazaar__title,
+#modelMain .config-bazaar__title {
     .b3-button {
         @include button-transparent;
         padding: 0 4px;
@@ -194,7 +202,8 @@
     background-color: var(--b3-theme-accent);
     @include contrast-color(--b3-theme-accent);
 }
-.config-bazaar__readme .item__side {
+.config-bazaar__readme .item__side,
+#modelMain .config-bazaar__readme {
     .b3-button {
         @include button-outline-hover-solid(primary);
         &[data-type="uninstall"],

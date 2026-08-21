@@ -3,8 +3,8 @@
 - Neo 主題大量參考了 [Asri 主題](https://github.com/mustakshif/Asri) 的設計和創意，非常感謝 [mustakshif](https://github.com/mustakshif)，沒有你超強的審美、技術力和令人驚嘆的創意，就不會有 Neo 的出現
 ## 更新日誌
 完整更新紀錄可於 [CHANGELOG](https://github.com/QYLexpired/Neo/blob/main/CHANGELOG.md) 查看
-- 全部預設配色同時支援淺色模式/深色模式
-- 全新預設配色：遠行、粗野主義（beta）
+- 引入全新設計語言：新粗野主義——以原始質感，重回純粹表達
+- 適配思源 3.8.2-alpha
 ## 說明
 - 主題的部分樣式和功能無法僅透過 CSS 實現，因此必須安裝並啟用主題的配套外掛：[Neo+](https://github.com/QYLexpired/Neo-Plus)
 - 使用過程中有任何問題或建議，可透過 [Neo 主題介紹及回饋討論串](https://ld246.com/article/1783158376401) 或 [GitHub](https://github.com/QYLexpired/Neo/issues) 提出回饋
@@ -15,6 +15,7 @@ Neo 主題完全免費，如果喜歡這個主題，歡迎在 [GitHub](https://g
 - 內建數十種風格各異的預設配色方案
 - 自訂主題色：可透過選取主題色與飽和度自訂介面顏色
 - 主題色可跟隨時間、題頭圖或系統強調色
+- 新粗野主義風格配色
 - 隨機配色：每次啟動思源，從所有配色方案中隨機選擇
 #### 千變萬化的介面
 - 超級融合：將頁籤欄、麵包屑、題頭圖和筆記正文無縫融合（源自 Asri 主題）
