@@ -14,7 +14,7 @@
         box-shadow: unset !important;
         &:focus,
         &:hover {
-            background-color: transparent;
+            background-color: transparent !important; // 覆盖粗野主义
             box-shadow: unset !important;
         }
     }
