@@ -71,6 +71,7 @@
     .b3-text-field,
     .b3-select {
         box-shadow: var(--neo-main-shadow);
+        transition: background-color var(--b3-transition);
         &:hover,
         &:focus {
             animation: none;
