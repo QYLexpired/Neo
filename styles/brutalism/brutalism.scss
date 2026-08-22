@@ -102,6 +102,9 @@
         }
     }
     .protyle-background__icon {
-        filter: url(#neo-brutalism-emoji) !important;
+        filter: url(#neo-brutalism-emoji-light);
+    }
+    &.neo-mode-dark .protyle-background__icon {
+        filter: url(#neo-brutalism-emoji-dark);
     }
 }
