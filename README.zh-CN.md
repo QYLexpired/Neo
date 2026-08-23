@@ -3,7 +3,13 @@
 - Neo主题大量参考了[Asri主题](https://github.com/mustakshif/Asri)的设计和创意，非常感谢[mustakshif](https://github.com/mustakshif)，没有你超强的审美、技术力和让人惊叹的创意，就不会有Neo的出现
 ## 更新日志
 完整更新历史可查看[CHANGELOG](https://github.com/QYLexpired/Neo/blob/main/CHANGELOG.md)
-- 自定义图片纹理支持设置CSS纹理函数（如渐变色）及纯色背景
+- 重构自定义图片纹理功能
+    - 支持CSS函数背景（如渐变背景）
+    - 支持纯色背景
+    - 支持背景组合
+    - 支持自定义图片尺寸
+    - 新增背景层混合模式参数
+    - 由于重构幅度较大，之前的配置可能部分失效，需重新配置
 - 垂直页签栏支持配置默认宽度
 - 优化新粗野主义配色
 ## 说明

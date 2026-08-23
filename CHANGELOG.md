@@ -1,3 +1,22 @@
+### v1.5.2 / 2026-08-23
+- 重构自定义图片纹理功能
+    - 支持CSS函数背景（如渐变背景）
+    - 支持纯色背景
+    - 支持背景组合
+    - 支持自定义图片尺寸
+    - 新增背景层混合模式参数
+    - 由于重构幅度较大，之前的配置可能部分失效，需重新配置
+- 垂直页签栏支持配置默认宽度
+- 优化新粗野主义配色
+- Rebuilt the custom image texture feature
+    - Supports CSS function backgrounds (e.g., gradient backgrounds)
+    - Supports solid color backgrounds
+    - Supports background combinations
+    - Supports custom image sizes
+    - Added background layer blend mode parameters
+    - Due to the significant scope of the rebuild, some previous configurations may no longer work and need to be reconfigured
+- The vertical tab bar now supports configuring a default width
+- Optimized Neue Brutalism color schemes
 ### v1.5.1 / 2026-08-21
 - 引入全新设计语言：新粗野主义-以原始质感，重回纯粹表达
 - 适配思源3.8.2-alpha

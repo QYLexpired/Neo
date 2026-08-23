@@ -3,8 +3,15 @@
 - Neo draws heavily on the design and ideas of the [Asri theme](https://github.com/mustakshif/Asri). A huge thank you to [mustakshif](https://github.com/mustakshif) — without your impeccable taste, technical skill, and astonishing creativity, Neo would never have come to be.
 ## Changelog
 See the [CHANGELOG](https://github.com/QYLexpired/Neo/blob/main/CHANGELOG.md) for the full update history.
-- Introducing a brand-new design language: Neue Brutalism — raw texture, back to pure expression
-- Adapted for SiYuan 3.8.2-alpha
+- Rebuilt the custom image texture feature
+    - Supports CSS function backgrounds (e.g., gradient backgrounds)
+    - Supports solid color backgrounds
+    - Supports background combinations
+    - Supports custom image sizes
+    - Added background layer blend mode parameters
+    - Due to the significant scope of the rebuild, some previous configurations may no longer work and need to be reconfigured
+- The vertical tab bar now supports configuring a default width
+- Optimized Neue Brutalism color schemes
 ## Notes
 - Some of the theme's styles and features cannot be implemented with CSS alone, so the companion plugin [Neo+](https://github.com/QYLexpired/Neo-Plus) **MUST** be installed and enabled.
 - For any questions or suggestions during use, please visit the [Neo Theme Introduction & Feedback Thread](https://ld246.com/article/1783158376401) or [GitHub](https://github.com/QYLexpired/Neo/issues)
