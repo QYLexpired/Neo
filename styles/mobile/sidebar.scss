@@ -1,6 +1,10 @@
 @use "../utils" as *;
-#sidebar {
+#sidebar,
+#sidebarRight {
     background-color: var(--b3-theme-background);
     @include frostedglass-menu($scope: global);
     transition: 0.15s var(--neo-ease-out-3);
+}
+.sy__agentChat--mobile {
+    background-color: transparent;
 }

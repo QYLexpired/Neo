@@ -137,6 +137,7 @@ body:not(.body--toolbar-hide) [data-type="wnd"] > .fn__flex:first-child {
     .av__views & {
         margin: unset;
         .item {
+            max-width: 186px;
             .item__text {
                 padding: 0 8px;
             }

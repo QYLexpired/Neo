@@ -1,6 +1,9 @@
 @use "../utils" as *;
 #menu {
     transition: 0.15s var(--neo-ease-out-3);
+    .mobile-main-menu__search {
+        background-color: transparent;
+    }
 }
 .b3-menu__scrim {
     opacity: 0 !important;

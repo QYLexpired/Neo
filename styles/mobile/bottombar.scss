@@ -3,11 +3,11 @@
     --mobile-bottom-bar-offset: 0;
 }
 #mobileBottomBar {
-    margin: 6px;
+    margin: 0 12px;
     border-radius: 32px;
-    width: 360px;
-    width: calc(100% - 12px);
+    width: calc(100% - 24px);
     justify-self: center;
+    border: unset;
     box-shadow: var(--neo-main-shadow);
     background-color: var(--b3-menu-background);
     @include frostedglass-menu;

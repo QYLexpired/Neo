@@ -22,6 +22,9 @@
         --b3-theme-primary-lighter: transparent !important; // 取消阴影
         outline: unset;
     }
+    .status & {
+        animation-name: neo-input-focus-ring-inset;
+    }
 }
 @keyframes neo-input-focus-ring {
     0% {
@@ -32,6 +35,14 @@
     }
     100% {
         box-shadow: 0 0 0 2px var(--neo-input-primary);
+    }
+}
+@keyframes neo-input-focus-ring-inset {
+    from {
+        box-shadow: 0 0 0 0px var(--neo-input-primary) inset;
+    }
+    to {
+        box-shadow: 0 0 0 2px var(--neo-input-primary) inset;
     }
 }
 .b3-select,
@@ -211,6 +222,8 @@ input[type="checkbox"]:not(.b3-switch) {
 input[type="color"] {
     appearance: none;
     border: none;
+    outline: 0.5px solid var(--b3-border-color-trans);
+    outline-offset: -0.5px;
     padding: 0 !important; // 覆盖部分插件内联样式
     width: 20px !important;
     height: 20px !important;
@@ -227,5 +240,13 @@ input[type="color"] {
     &::-webkit-color-swatch {
         border: none;
         border-radius: 50%;
+    }
+    &.b3-text-field {
+        &:hover,
+        &:focus {
+            animation: none;
+            outline: 0.5px solid var(--b3-border-color-trans);
+            outline-offset: -0.5px;
+        }
     }
 }
