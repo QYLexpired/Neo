@@ -1,7 +1,8 @@
 @use "../utils" as *;
 .counter {
     @include superellipse(7px);
-    &--bg {
+    &--bg,
+    .block__icons & {
         background-color: var(--b3-list-hover);
     }
 }

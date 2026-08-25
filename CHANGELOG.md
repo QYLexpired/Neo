@@ -1,3 +1,6 @@
+### v1.5.3 / 2026-08-25
+- 自定义图片纹理支持设置层级：底层、内容层、顶层
+- Custom image textures now support setting their layer: backdrop, content, topmost
 ### v1.5.2 / 2026-08-23
 - 重构自定义图片纹理功能
     - 支持CSS函数背景（如渐变背景）

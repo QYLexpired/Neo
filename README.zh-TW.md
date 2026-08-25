@@ -3,15 +3,7 @@
 - Neo 主題大量參考了 [Asri 主題](https://github.com/mustakshif/Asri) 的設計和創意，非常感謝 [mustakshif](https://github.com/mustakshif)，沒有你超強的審美、技術力和令人驚嘆的創意，就不會有 Neo 的出現
 ## 更新日誌
 完整更新紀錄可於 [CHANGELOG](https://github.com/QYLexpired/Neo/blob/main/CHANGELOG.md) 查看
-- 重構自訂圖片紋理功能
-    - 支援 CSS 函式背景（如漸層背景）
-    - 支援純色背景
-    - 支援背景組合
-    - 支援自訂圖片尺寸
-    - 新增背景層混合模式參數
-    - 由於重構幅度較大，先前的設定可能部分失效，需重新設定
-- 垂直頁籤欄支援設定預設寬度
-- 最佳化新粗野主義配色
+- 自訂圖片紋理支援設定圖層層級：底層、內容層、頂層
 ## 說明
 - 主題的部分樣式和功能無法僅透過 CSS 實現，因此必須安裝並啟用主題的配套外掛：[Neo+](https://github.com/QYLexpired/Neo-Plus)
 - 使用過程中有任何問題或建議，可透過 [Neo 主題介紹及回饋討論串](https://ld246.com/article/1783158376401) 或 [GitHub](https://github.com/QYLexpired/Neo/issues) 提出回饋
