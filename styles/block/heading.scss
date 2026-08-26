@@ -48,13 +48,15 @@
             height: calc(100% - 0.5em);
             background-color: currentColor;
             border-radius: 0;
-            transition: 0.6s var(--neo-ease-spring-3);
+            transition: var(--b3-transition);
+            //transition: 0.6s var(--neo-ease-spring-3);
             transform: translate(-50%, -50%) rotate(0deg);
             //box-sizing: border-box;
             //animation: neo-angle 2.5s linear infinite;
             //animation-play-state: paused;
         }
         &:empty {
+            color: var(--b3-empty-color);
             &::before {
                 background-color: var(--b3-empty-color);
             }
