@@ -1,5 +1,5 @@
 @use "../utils" as *;
-@use "../menu/menu" as *;
+@use "menu" as *;
 .onboarding {
     @include menu-container-common;
 }
