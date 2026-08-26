@@ -13,4 +13,10 @@
             padding-bottom: 0 !important;
         }
     }
+    & > .protyle-breadcrumb {
+        background-color: var(--b3-theme-background);
+    }
+}
+#mobileTopBar {
+    background-color: var(--b3-theme-background);
 }
