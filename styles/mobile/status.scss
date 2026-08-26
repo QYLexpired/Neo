@@ -10,5 +10,7 @@
         justify-self: center;
         border-radius: 32px;
         box-shadow: var(--neo-main-shadow);
+        background-color: var(--b3-menu-background);
+        @include frostedglass-menu;
     }
 }

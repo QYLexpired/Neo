@@ -1,3 +1,8 @@
+### v1.5.4 / 2026-08-26
+- 移动端不再支持超级融合
+- 调整设置页和集市页样式
+- The mobile app no longer supports Super Fusion
+- Adjusted settings page and bazaar page styles
 ### v1.5.3 / 2026-08-25
 - 自定义图片纹理支持设置层级：底层、内容层、顶层
 - Custom image textures now support setting their layer: backdrop, content, topmost
