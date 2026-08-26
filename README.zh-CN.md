@@ -4,6 +4,7 @@
 ## 更新日志
 完整更新历史可查看[CHANGELOG](https://github.com/QYLexpired/Neo/blob/main/CHANGELOG.md)
 - 移动端不再支持超级融合
+- 调整设置页和集市页样式
 ## 说明
 - 主题的部分样式和功能无法仅通过CSS实现，因此必须安装并启用主题的配套插件：[Neo+](https://github.com/QYLexpired/Neo-Plus)
 - 使用过程中有任何问题或建议，可通过[Neo 主题介绍及反馈综合帖](https://ld246.com/article/1783158376401)或[GitHub](https://github.com/QYLexpired/Neo/issues)进行反馈

@@ -101,9 +101,7 @@
     font-weight: bold;
 }
 .b3-menu__group-items {
-    background-color: oklch(from var(--b3-theme-surface) l c h / 0.32);
-    outline: .5px solid oklch(from var(--b3-theme-on-background) l c h / 0.12);
-    outline-offset: -0.5px;
+    background-color: oklch(from var(--b3-theme-surface) l c h / 0.7);
     padding: 10px 0;
     @include superellipse-use(14px);
     & .b3-menu__item {

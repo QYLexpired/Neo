@@ -85,6 +85,8 @@
     }
 }
 .config-bazaar__readme {
+    @include superellipse-use(18px);
+    overflow: hidden;
     .item__header {
         margin: 0;
         padding: 0;
@@ -95,13 +97,10 @@
         }
     }
     .item__side {
-        padding: var(--_sidebar-gap);
-        margin: var(--_sidebar-gap);
-        margin-right: 0;
+        @include superellipse-use(18px 0 0 18px);
+        padding: calc(var(--_sidebar-gap) * 2);
         height: calc(100% - var(--_sidebar-gap) * 4);
-        @include superellipse-use(14px);
-        box-shadow: var(--neo-main-shadow);
-        background-color: transparent;
+        background-color: oklch(from var(--b3-theme-surface) l c h / 0.7);
         color: var(--b3-theme-on-surface);
         font-size: 13px;
         & > .fn__flex-1 {
@@ -122,17 +121,16 @@
     }
     .item__main {
         margin: 0;
-        padding: var(--_sidebar-gap) 0;
+        padding: 0;
         background-color: transparent;
         .item__preview {
-            margin: 0 var(--_sidebar-gap);
-            width: calc(100% - var(--_sidebar-gap) * 2);
-            @include superellipse-use(14px);
+            margin: 0;
+            border-radius: 0;
+            transition: 0.15s var(--neo-ease-out-1);
         }
         .b3-typography {
-            padding: 0 32px;
+            padding: 0 64px;
             & > blockquote:first-child {
-                margin: 12px 0 32px 0;
                 padding: 0;
                 background-color: transparent;
                 outline: unset;
