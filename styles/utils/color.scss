@@ -24,9 +24,9 @@
     // custom
     --neo-custom-primary: oklch(from var(--neo-custom-base-color) clamp(0.6, l, 0.68) c h);
     --neo-custom-accent: oklch(from var(--neo-custom-primary) l max(c, 0.285) h);
-    --neo-custom-background: oklch(from var(--neo-custom-primary) 0.99 calc(0.005 * var(--neo-saturation, 1)) h);
-    --neo-custom-surface: oklch(from var(--neo-custom-primary) 0.96 calc(0.015 * var(--neo-saturation, 1)) h);
-    --neo-custom-on-background: oklch(from var(--neo-custom-primary) 0.35 calc(0.045 * var(--neo-saturation, 1)) h);
+    --neo-custom-background: oklch(from var(--neo-custom-primary) calc(0.99 + 0.035 * var(--neo-brightness, 0)) calc(0.005 * var(--neo-saturation, 1)) h);
+    --neo-custom-surface: oklch(from var(--neo-custom-primary) calc(0.96 + 0.05 * var(--neo-brightness, 0)) calc(0.015 * var(--neo-saturation, 1)) h);
+    --neo-custom-on-background: oklch(from var(--neo-custom-primary) calc(0.35 + 0.05 * var(--neo-brightness, 0)) calc(0.025 * var(--neo-saturation, 1)) h);
     --neo-custom-on-surface: oklch(from var(--neo-custom-on-background) l c h / 0.65);
     // main
     --b3-base-color: var(--neo-custom-base-color, var(--neo-default-base-color));
@@ -94,9 +94,9 @@
     // custom
     --neo-custom-primary: oklch(from var(--neo-custom-base-color) clamp(0.68, l, 0.72) c h);
     --neo-custom-accent: oklch(from var(--neo-custom-base-color) clamp(0.68, l, 0.95) max(c, 0.235) h);
-    --neo-custom-background: oklch(from var(--neo-custom-primary) 0.2 calc(0.008 * var(--neo-saturation, 1)) h);
-    --neo-custom-surface: oklch(from var(--neo-custom-primary) 0.25 calc(0.012 * var(--neo-saturation, 1)) h);
-    --neo-custom-on-background: oklch(from var(--neo-custom-primary) 0.97 calc(0.008 * var(--neo-saturation, 1)) h);
+    --neo-custom-background: oklch(from var(--neo-custom-primary) calc(0.2 + 0.075 * var(--neo-brightness, 0)) calc(0.008 * var(--neo-saturation, 1)) h);
+    --neo-custom-surface: oklch(from var(--neo-custom-primary) calc(0.25 + 0.1 * var(--neo-brightness, 0)) calc(0.012 * var(--neo-saturation, 1)) h);
+    --neo-custom-on-background: oklch(from var(--neo-custom-primary) calc(0.97 + 0.015 * var(--neo-brightness, 0)) calc(0.001 * var(--neo-saturation, 1)) h);
     --neo-custom-on-surface: oklch(from var(--neo-custom-on-background) l c h / 0.65);
     // main
     --b3-base-color: var(--neo-custom-base-color, var(--neo-default-base-color));
@@ -153,8 +153,8 @@
     --neo-menu-item-primary: oklch(from var(--b3-base-color) clamp(0.4, l, 1) c h);
 }
 @mixin light-font-color {
-    $font-l-light: min(0.55, l);
-    $background-l-light: min(0.96, l);
+    $font-l-light: calc(min(0.55, l) + 0.025 * var(--neo-brightness, 0));
+    $background-l-light: calc(min(0.96, l) + 0.025 * var(--neo-brightness, 0));
     $font-c-light: 0.15;
     $background-c-light: 0.05;
     --b3-card-error-color: oklch(from var(--b3-theme-accent) #{$font-l-light} #{$font-c-light} 30);
@@ -170,12 +170,12 @@
         --b3-font-color#{$i}: oklch(from var(--b3-theme-accent) #{$font-l-light} #{$font-c-light} #{$hue});
         --b3-font-background#{$i}: oklch(from var(--b3-theme-background) #{$background-l-light} #{$background-c-light} #{$hue});
     }
-    --b3-font-color13: oklch(from var(--b3-theme-accent) min(0.7, l) 0 h);
-    --b3-font-background13:oklch(from var(--b3-theme-background) min(0.935, l) 0 h);
+    --b3-font-color13: oklch(from var(--b3-theme-accent) calc(min(0.7, l) + 0.025 * var(--neo-brightness, 0)) 0 h);
+    --b3-font-background13:oklch(from var(--b3-theme-background) calc(min(0.935, l) + 0.025 * var(--neo-brightness, 0)) 0 h);
 }
 @mixin dark-font-color {
-    $font-l-dark: max(0.82, l);
-    $background-l-dark: max(0.4, l);
+    $font-l-dark: calc(max(0.82, l) + 0.015 * var(--neo-brightness, 0));
+    $background-l-dark: calc(max(0.4, l) + 0.015 * var(--neo-brightness, 0));
     $font-c-dark: 0.1;
     $background-c-dark: 0.035;
     --b3-card-error-color: oklch(from var(--b3-theme-accent) #{$font-l-dark} #{$font-c-dark} 30);
@@ -191,8 +191,8 @@
         --b3-font-color#{$i}: oklch(from var(--b3-theme-accent) #{$font-l-dark} #{$font-c-dark} #{$hue});
         --b3-font-background#{$i}: oklch(from var(--b3-theme-background) #{$background-l-dark} #{$background-c-dark} #{$hue});
     }
-    --b3-font-color13: oklch(from var(--b3-theme-accent) clamp(0.6, l, 0.7) 0 h);
-    --b3-font-background13:oklch(from var(--b3-theme-on-background) min(0.45, l) 0 h);
+    --b3-font-color13: oklch(from var(--b3-theme-accent) calc(clamp(0.6, l, 0.7) + 0.015 * var(--neo-brightness, 0)) 0 h);
+    --b3-font-background13:oklch(from var(--b3-theme-on-background) calc(min(0.45, l) + 0.015 * var(--neo-brightness, 0)) 0 h);
 }
 [data-theme-mode="light"] {
     @include light-color;
@@ -208,9 +208,9 @@
         --neo-default-surface: #282c34 !important;
         --neo-default-on-background: #e7eaef !important;
         --neo-default-on-surface: #b1afb8 !important;
-        --neo-custom-background: oklch(from var(--neo-custom-primary) 0.25 calc(0.012 * var(--neo-saturation, 1)) h);
-        --neo-custom-surface: oklch(from var(--neo-custom-primary) 0.2 calc(0.008 * var(--neo-saturation, 1)) h);
-        --neo-custom-on-background: oklch(from var(--neo-custom-primary) 0.96 calc(0.008 * var(--neo-saturation, 1)) h);
+        --neo-custom-background: oklch(from var(--neo-custom-primary) calc(0.25 + 0.1 * var(--neo-brightness, 0)) calc(0.012 * var(--neo-saturation, 1)) h);
+        --neo-custom-surface: oklch(from var(--neo-custom-primary) calc(0.2 + 0.075 * var(--neo-brightness, 0)) calc(0.008 * var(--neo-saturation, 1)) h);
+        --neo-custom-on-background: oklch(from var(--neo-custom-primary) calc(0.96 + 0.015 * var(--neo-brightness, 0)) calc(0.001 * var(--neo-saturation, 1)) h);
     }
 }
 :root {
