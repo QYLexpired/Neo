@@ -3,8 +3,8 @@
 - Neo 主題大量參考了 [Asri 主題](https://github.com/mustakshif/Asri) 的設計和創意，非常感謝 [mustakshif](https://github.com/mustakshif)，沒有你超強的審美、技術力和令人驚嘆的創意，就不會有 Neo 的出現
 ## 更新日誌
 完整更新紀錄可於 [CHANGELOG](https://github.com/QYLexpired/Neo/blob/main/CHANGELOG.md) 查看
-- 行動版 App 不再支援超級融合
-- 調整設定頁與集市頁樣式
+- 自訂主題色支援調整亮度
+- 支援雙擊飽和度/亮度滑桿恢復預設值
 ## 說明
 - 主題的部分樣式和功能無法僅透過 CSS 實現，因此必須安裝並啟用主題的配套外掛：[Neo+](https://github.com/QYLexpired/Neo-Plus)
 - 使用過程中有任何問題或建議，可透過 [Neo 主題介紹及回饋討論串](https://ld246.com/article/1783158376401) 或 [GitHub](https://github.com/QYLexpired/Neo/issues) 提出回饋

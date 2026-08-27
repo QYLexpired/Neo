@@ -1,3 +1,8 @@
+### v1.5.5 / 2026-08-27
+- 自定义主题色支持调整亮度
+- 支持双击饱和度/亮度滑块恢复默认值
+- Custom theme colors now support adjusting brightness
+- Double-clicking the saturation/brightness slider restores the default value
 ### v1.5.4 / 2026-08-26
 - 移动端不再支持超级融合
 - 调整设置页和集市页样式
