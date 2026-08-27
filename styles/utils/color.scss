@@ -153,46 +153,46 @@
     --neo-menu-item-primary: oklch(from var(--b3-base-color) clamp(0.4, l, 1) c h);
 }
 @mixin light-font-color {
-    $font-l-light: calc(min(0.55, l) + 0.025 * var(--neo-brightness, 0));
-    $background-l-light: calc(min(0.96, l) + 0.025 * var(--neo-brightness, 0));
-    $font-c-light: 0.15;
-    $background-c-light: 0.05;
-    --b3-card-error-color: oklch(from var(--b3-theme-accent) #{$font-l-light} #{$font-c-light} 30);
-    --b3-card-error-background: oklch(from var(--b3-theme-background) #{$background-l-light} #{$background-c-light} 30);
-    --b3-card-warning-color: oklch(from var(--b3-theme-accent) #{$font-l-light} #{$font-c-light} 75);
-    --b3-card-warning-background: oklch(from var(--b3-theme-background) #{$background-l-light} #{$background-c-light} 75);
-    --b3-card-info-color: oklch(from var(--b3-theme-accent) #{$font-l-light} #{$font-c-light} 265);
-    --b3-card-info-background: oklch(from var(--b3-theme-background) #{$background-l-light} #{$background-c-light} 265);
-    --b3-card-success-color: oklch(from var(--b3-theme-accent) #{$font-l-light} #{$font-c-light} 145);
-    --b3-card-success-background: oklch(from var(--b3-theme-background) #{$background-l-light} #{$background-c-light} 145);
+    $font-l-light: 0.58;
+    $background-l-light: 0.96;
+    $font-c-light: 0.12;
+    $background-c-light: 0.075;
+    --b3-card-error-color: oklch(#{$font-l-light} #{$font-c-light} 30);
+    --b3-card-error-background: oklch(#{$background-l-light} #{$background-c-light} 30);
+    --b3-card-warning-color: oklch(#{$font-l-light} #{$font-c-light} 75);
+    --b3-card-warning-background: oklch(#{$background-l-light} #{$background-c-light} 75);
+    --b3-card-info-color: oklch(#{$font-l-light} #{$font-c-light} 265);
+    --b3-card-info-background: oklch(#{$background-l-light} #{$background-c-light} 265);
+    --b3-card-success-color: oklch(#{$font-l-light} #{$font-c-light} 145);
+    --b3-card-success-background: oklch(#{$background-l-light} #{$background-c-light} 145);
     @for $i from 1 through 12 {
         $hue: $i * 30;
-        --b3-font-color#{$i}: oklch(from var(--b3-theme-accent) #{$font-l-light} #{$font-c-light} #{$hue});
-        --b3-font-background#{$i}: oklch(from var(--b3-theme-background) #{$background-l-light} #{$background-c-light} #{$hue});
+        --b3-font-color#{$i}: oklch(#{$font-l-light} #{$font-c-light} #{$hue});
+        --b3-font-background#{$i}: oklch(#{$background-l-light} #{$background-c-light} #{$hue});
     }
-    --b3-font-color13: oklch(from var(--b3-theme-accent) calc(min(0.7, l) + 0.025 * var(--neo-brightness, 0)) 0 h);
-    --b3-font-background13:oklch(from var(--b3-theme-background) calc(min(0.935, l) + 0.025 * var(--neo-brightness, 0)) 0 h);
+    --b3-font-color13: oklch(0.6 0 0);
+    --b3-font-background13:oklch(0.93 0 0);
 }
 @mixin dark-font-color {
-    $font-l-dark: calc(max(0.82, l) + 0.015 * var(--neo-brightness, 0));
-    $background-l-dark: calc(max(0.4, l) + 0.015 * var(--neo-brightness, 0));
-    $font-c-dark: 0.1;
-    $background-c-dark: 0.035;
-    --b3-card-error-color: oklch(from var(--b3-theme-accent) #{$font-l-dark} #{$font-c-dark} 30);
-    --b3-card-error-background: oklch(from var(--b3-theme-background) #{$background-l-dark} #{$background-c-dark} 30);
-    --b3-card-warning-color: oklch(from var(--b3-theme-accent) #{$font-l-dark} #{$font-c-dark} 75);
-    --b3-card-warning-background: oklch(from var(--b3-theme-background) #{$background-l-dark} #{$background-c-dark} 75);
-    --b3-card-info-color: oklch(from var(--b3-theme-accent) #{$font-l-dark} #{$font-c-dark} 265);
-    --b3-card-info-background: oklch(from var(--b3-theme-background) #{$background-l-dark} #{$background-c-dark} 265);
-    --b3-card-success-color: oklch(from var(--b3-theme-accent) #{$font-l-dark} #{$font-c-dark} 145);
-    --b3-card-success-background: oklch(from var(--b3-theme-background) #{$background-l-dark} #{$background-c-dark} 145);
+    $font-l-dark: 0.82;
+    $background-l-dark: 0.32;
+    $font-c-dark: 0.12;
+    $background-c-dark: 0.03;
+    --b3-card-error-color: oklch(#{$font-l-dark} #{$font-c-dark} 30);
+    --b3-card-error-background: oklch(#{$background-l-dark} #{$background-c-dark} 30);
+    --b3-card-warning-color: oklch(#{$font-l-dark} #{$font-c-dark} 75);
+    --b3-card-warning-background: oklch(#{$background-l-dark} #{$background-c-dark} 75);
+    --b3-card-info-color: oklch(#{$font-l-dark} #{$font-c-dark} 265);
+    --b3-card-info-background: oklch(#{$background-l-dark} #{$background-c-dark} 265);
+    --b3-card-success-color: oklch(#{$font-l-dark} #{$font-c-dark} 145);
+    --b3-card-success-background: oklch(#{$background-l-dark} #{$background-c-dark} 145);
     @for $i from 1 through 12 {
         $hue: $i * 30;
-        --b3-font-color#{$i}: oklch(from var(--b3-theme-accent) #{$font-l-dark} #{$font-c-dark} #{$hue});
-        --b3-font-background#{$i}: oklch(from var(--b3-theme-background) #{$background-l-dark} #{$background-c-dark} #{$hue});
+        --b3-font-color#{$i}: oklch(#{$font-l-dark} #{$font-c-dark} #{$hue});
+        --b3-font-background#{$i}: oklch(#{$background-l-dark} #{$background-c-dark} #{$hue});
     }
-    --b3-font-color13: oklch(from var(--b3-theme-accent) calc(clamp(0.6, l, 0.7) + 0.015 * var(--neo-brightness, 0)) 0 h);
-    --b3-font-background13:oklch(from var(--b3-theme-on-background) calc(min(0.45, l) + 0.015 * var(--neo-brightness, 0)) 0 h);
+    --b3-font-color13: oklch(0.75 0 0);
+    --b3-font-background13:oklch(0.4 0 0);
 }
 [data-theme-mode="light"] {
     @include light-color;
