@@ -86,8 +86,14 @@
     outline: 0.5px solid oklch(from currentColor l c h / 0.15);
     outline-offset: -0.5px;
     @include superellipse(4px);
-    line-height: 18px;
+    line-height: 16px;
     padding: 2px 6px;
+}
+.b3-chip .b3-chip__close {
+    @include icon;
+    &:hover {
+        color: var(--b3-theme-error);
+    }
 }
 .av__celltext--url.b3-chip {
     color: var(--b3-theme-on-surface);
@@ -100,7 +106,7 @@
     &:hover {
         color: var(--b3-theme-accent);
         background-color: oklch(from currentColor l c h / 0.1);
-        outline-color: oklch(from currentColor l c h / 0.15);
+        outline-color: oklch(from currentColor l c h / 0.18);
     }
 }
 .av__layout-item {
