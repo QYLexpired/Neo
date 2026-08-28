@@ -50,7 +50,7 @@
     --b3-border-color-trans: oklch(from var(--b3-theme-on-background) l c h / 0.15);
     --b3-toolbar-color: var(--b3-theme-on-surface);
     --b3-list-hover: oklch(from var(--b3-theme-on-background) l c h / 0.08);
-    --b3-list-active: oklch(from var(--b3-theme-accent) l min(0.15, c) h / 0.15);
+    --b3-list-active: oklch(from var(--b3-theme-accent) min(0.6, l) min(0.16, c) h / 0.15);
     --b3-av-background-hl: color-mix(in srgb, var(--b3-theme-primary) 20%, var(--b3-theme-background));
     --b3-av-hover: oklch(from var(--b3-theme-on-background) 0.93 0.02 h);
     --b3-scroll-color: oklch(from var(--b3-theme-on-background) l c h / 0.09);
@@ -120,7 +120,7 @@
     --b3-border-color-trans: oklch(from var(--b3-theme-on-background) l c h / 0.15);
     --b3-toolbar-color: var(--b3-theme-on-surface);
     --b3-list-hover: oklch(from var(--b3-theme-on-background) l c h / 0.08);
-    --b3-list-active: oklch(from var(--b3-theme-accent) l min(0.15, c) h / 0.15);
+    --b3-list-active: oklch(from var(--b3-theme-accent) max(l, 0.78) min(0.12, c) h / 0.15);
     --b3-av-background-hl: color-mix(in srgb, var(--b3-theme-primary) 20%, var(--b3-theme-background));
     --b3-av-hover: oklch(from var(--b3-theme-on-background) 0.35 0.02 h);
     --b3-scroll-color: oklch(from var(--b3-theme-on-background) l c h / 0.09);
