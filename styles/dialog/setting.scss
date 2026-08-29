@@ -75,10 +75,10 @@
     padding: unset;
     opacity: 0;
     transform: scale(1.2);
-    filter: blur(32px);
+    filter: blur(12px);
     inset: 0;
     pointer-events: none;
-    transition: 0.4s ease;
+    transition: 0.45s ease;
     &.config__view--show {
         opacity: 1;
         transform: scale(1);

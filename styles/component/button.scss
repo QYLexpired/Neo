@@ -141,12 +141,12 @@
     &.b3-chip--current {
         background-color: var(--neo-button-primary);
         @include contrast-color(--neo-button-primary);
-        &.history__compare-filter {
+        /*&.history__compare-filter {
             & > span {
                 outline: 1px solid;
                 @include contrast-color(--neo-button-primary, outline-color, 0.8);
             }
-        }
+        } 低效选择器导致性能降低*/
     }
 }
 // 通用
