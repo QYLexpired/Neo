@@ -1,3 +1,10 @@
+### v1.5.6 / 2026-08-29
+- 随机配色支持配置随机参数
+- 优化主题在Windows平台的性能表现
+- 修复彩色选区初始化失败的问题
+- Random color schemes now support configurable random parameters
+- Optimized theme performance on Windows
+- Fixed an issue where colored selection failed to initialize
 ### v1.5.5 / 2026-08-27
 - 自定义主题色支持调整亮度
 - 支持双击饱和度/亮度滑块恢复默认值

@@ -3,8 +3,9 @@
 - Neo draws heavily on the design and ideas of the [Asri theme](https://github.com/mustakshif/Asri). A huge thank you to [mustakshif](https://github.com/mustakshif) — without your impeccable taste, technical skill, and astonishing creativity, Neo would never have come to be.
 ## Changelog
 See the [CHANGELOG](https://github.com/QYLexpired/Neo/blob/main/CHANGELOG.md) for the full update history.
-- Custom theme colors now support adjusting brightness
-- Double-clicking the saturation/brightness slider restores the default value
+- Random color schemes now support configurable random parameters
+- Optimized theme performance on Windows
+- Fixed an issue where colored selection failed to initialize
 ## Notes
 - Some of the theme's styles and features cannot be implemented with CSS alone, so the companion plugin [Neo+](https://github.com/QYLexpired/Neo-Plus) **MUST** be installed and enabled.
 - For any questions or suggestions during use, please visit the [Neo Theme Introduction & Feedback Thread](https://ld246.com/article/1783158376401) or [GitHub](https://github.com/QYLexpired/Neo/issues)
@@ -64,8 +65,7 @@ Some features heavily rework SiYuan's native styles, so there are compatibility 
 - Immersive Mode
     - The focused-line highlight effect within it can significantly degrade performance; enable with caution
 ## A Final Word
-- Who Neo is for: users who crave a more modern design, prefer a clean and minimal note-taking interface, and are willing to trade some performance for aesthetics
-- Who Neo is NOT for: not for those who demand the absolute best performance. If you expect Neo to feel as smooth as the default theme, it isn't for you. Neo reworks the appearance of the entire SiYuan on a massive scale (almost rebuilt SiYuan's interface, which actually took a huge amount of my effort) — it's not a simple recolor or a pile of scattered CSS tweaks. In the pursuit of a refined look across the entire interface, a higher performance cost is inevitable. That said, the theme is already optimized to the best of its ability, and most features are optional. So before you complain that Neo makes your SiYuan notes laggy, keep this in mind.
+- Neo's performance: To achieve a global style overhaul, Neo inevitably consumes more performance than the default theme. The theme has been optimized to the best of its ability (the `performancetunning` module in Neo+ is a dedicated performance optimization module). But performance is a subjective experience shaped by multiple coupled factors. If we take the default theme's smoothness as 1, Neo's might be 0.9; however, if you use complex plugins or inefficient code snippets, the result can be 0.9 × 0.9 = 0.81. At that point, blaming all the lag on the theme is unreasonable.
 - Neo's Easter Eggs: The Neo theme has many hidden little details waiting for you to discover (for example, try changing the overall text color of a blockquote from the Block Menu → Appearance and see what happens)
 - Once again, thanks to the [Asri theme](https://github.com/mustakshif/Asri) and its author, [mustakshif](https://github.com/mustakshif)
 ## Acknowledgements
