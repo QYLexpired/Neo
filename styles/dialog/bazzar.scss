@@ -99,7 +99,8 @@
     .item__side {
         @include superellipse-use(18px 0 0 18px);
         padding: calc(var(--_sidebar-gap) * 2);
-        height: calc(100% - var(--_sidebar-gap) * 4);
+        margin: 1px 0 1px 1px;
+        height: calc(100% - var(--_sidebar-gap) * 4 - 2px);
         background-color: oklch(from var(--b3-theme-surface) l c h / 0.7);
         color: var(--b3-theme-on-surface);
         font-size: 13px;
