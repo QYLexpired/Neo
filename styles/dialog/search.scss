@@ -2,6 +2,8 @@
 @use "../component" as *;
 #criteria {
     .b3-chips .b3-chip {
+        @include superellipse(24px);
+        corner-shape: unset;
         $offset: 16px;
         padding: 4px 14px;
         .b3-chip__close {

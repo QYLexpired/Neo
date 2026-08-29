@@ -136,7 +136,7 @@ $slider-thumb-width: 20px;
 $slider-track-height: 6px;
 .b3-slider,
 .protyle-scroll__bar .b3-slider {
-    padding: 0;
+    padding: 0 1px;
     height: 26px;
     transition: 0.8s var(--neo-ease-spring-4);
     -webkit-appearance: none;

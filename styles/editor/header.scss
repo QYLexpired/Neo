@@ -8,6 +8,7 @@
 .b3-chips__doctag .b3-chip {
     @include button-outline;
     @include superellipse(24px);
+    corner-shape: unset;
     $offset: 16px;
     padding: 4px 14px;
     background-color: oklch(from currentColor l c h / 0.12);
