@@ -84,6 +84,12 @@ body:not(.body--toolbar-hide) [data-type="wnd"] > .fn__flex:first-child {
                         color: var(--b3-theme-on-background);
                     }
                 }
+                & + .item:not(.item--pin) {
+                    margin-left: 24px !important;
+                    &::before {
+                        opacity: 0;
+                    }
+                }
             }
             overflow: visible;
             &:not(:first-child)::before {
