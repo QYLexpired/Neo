@@ -3,6 +3,16 @@
 .agent-chat__nav-rail {
     border: unset;
 }
+.agent-chat__nav-rail-marker {
+    transition-timing-function: var(--neo-ease-spring-1);
+    transition-duration: 0.15s;
+    transition-behavior: allow-discrete;
+    .agent-chat__nav-rail--expanded & {
+        transition-property: width, height, padding;
+        transition-duration: 0.15s;
+        transition-timing-function: var(--neo-ease-spring-1);
+    }
+}
 .agent-chat__nav-rail-marker--active {
     background-color: var(--b3-theme-accent);
     .agent-chat__nav-rail--expanded & {
@@ -13,5 +23,5 @@
     }
 }
 .agent-chat__nav-rail--expanded {
-    @include menu-container-common;
+    @include menu-container-common-simple;
 }
