@@ -1,3 +1,12 @@
+### v1.5.7 / 2026-09-01
+- 优化Neo+的生命周期管理
+- 新增预设配色：旧杂志
+- 移除主题色跟随时间（该特性存在无法解决的性能问题）
+- 修复大量边界错误
+- Optimized Neo+ lifecycle management
+- New preset color scheme: Old Magazine
+- Removed theme color following time (the feature had an unsolvable performance issue)
+- Fixed numerous edge cases
 ### v1.5.6 / 2026-08-29
 - 随机配色支持配置随机参数
 - 优化主题在Windows平台的性能表现
