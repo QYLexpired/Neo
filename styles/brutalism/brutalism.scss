@@ -1,19 +1,16 @@
+$brutalism-palettes: zine, retroconsole, bumblebee, glitch, acid;
 @mixin brutalism-palette {
-    .neo-palette-zine,
-    .neo-palette-retroconsole,
-    .neo-palette-bumblebee,
-    .neo-palette-glitch,
-    .neo-palette-acid {
-        @content;
+    @each $p in $brutalism-palettes {
+        .neo-palette-#{$p} {
+            @content;
+        }
     }
 }
 @mixin brutalism-palette-x {
-    .neo-palette-zine &,
-    .neo-palette-retroconsole &,
-    .neo-palette-bumblebee &,
-    .neo-palette-glitch &,
-    .neo-palette-acid & {
-        @content;
+    @each $p in $brutalism-palettes {
+        .neo-palette-#{$p} & {
+            @content;
+        }
     }
 }
 @mixin brutalism-shadow {
