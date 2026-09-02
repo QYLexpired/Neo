@@ -94,6 +94,14 @@ table,
             }
         }
     }
+    @each $container in ".b3-typography", ".protyle-wysiwyg" {
+        #{$container} h#{$i} + h#{$i} {
+            margin-top: 0;
+        }
+        #{$container} .h#{$i} + .h#{$i} {
+            margin-top: 0;
+        }
+    }
 }
 .protyle-title__input {
     word-break: auto-phrase;

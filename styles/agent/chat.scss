@@ -70,7 +70,7 @@
 .agent-chat__confirm-effects {
     padding: 8px 12px 0 30px;
     background-color: transparent;
-    color: var(--b3-theme-error);
+    color: var(--b3-theme-warning);
 }
 .agent-chat__question {
     &-item {
@@ -133,6 +133,9 @@
             color: var(--b3-theme-on-background);
         }
     }
+}
+.agent-chat__thinking-latest {
+    @include overflow-indicator-fadein-mask($fadeout-size-m, "left right");
 }
 .agent-chat__thinking-chat {
     color: var(--b3-theme-on-surface);

@@ -3,10 +3,13 @@
 - Neo 主題大量參考了 [Asri 主題](https://github.com/mustakshif/Asri) 的設計和創意，非常感謝 [mustakshif](https://github.com/mustakshif)，沒有你超強的審美、技術力和令人驚嘆的創意，就不會有 Neo 的出現
 ## 更新日誌
 完整更新紀錄可於 [CHANGELOG](https://github.com/QYLexpired/Neo/blob/main/CHANGELOG.md) 查看
-- 最佳化 Neo+ 的生命週期管理
-- 新增預設配色：舊雜誌
-- 移除主題色跟隨時間（該特性存在無法解決的效能問題）
-- 修復大量邊界錯誤
+- 彩色標題支援設定色彩風格
+- 彩色列表支援設定色彩風格
+- 彩色文件樹支援設定色彩風格
+- 預設紋理支援設定層級
+- 棋盤紋理支援細節設定
+- 網格紋理支援細節設定
+- 波點紋理支援細節設定
 ## 說明
 - 主題的部分樣式和功能無法僅透過 CSS 實現，因此必須安裝並啟用主題的配套外掛：[Neo+](https://github.com/QYLexpired/Neo-Plus)
 - 使用過程中有任何問題或建議，可透過 [Neo 主題介紹及回饋討論串](https://ld246.com/article/1783158376401) 或 [GitHub](https://github.com/QYLexpired/Neo/issues) 提出回饋

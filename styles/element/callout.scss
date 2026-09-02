@@ -12,19 +12,22 @@
         "caution":   30,
     );
     @each $name, $hue in $callout-subtypes {
-        --b3-callout-#{$name}: oklch(from var(--b3-theme-accent) l max(c, 0.2) #{$hue});
+        --b3-callout-#{$name}: oklch(from var(--b3-base-color) clamp(0.55, l, 0.68) clamp(0.12, c, 0.165) #{$hue});
     }
 }
 .b3-typography .callout,
 .protyle-wysiwyg .callout {
-    background-color: oklch(from currentColor l c h / 0.05);
-    outline: 0.5px solid oklch(from currentColor l c h / 0.08);
+    background-color: oklch(from currentColor l c h / 0.08);
+    outline: 0.5px solid oklch(from currentColor l c h / 0.1);
     outline-offset: -0.5px;
     padding: 16px 16px 10px 16px;
     margin: 0.4em 0;
     @include superellipse-use(10px);
     .callout-title {
         transition: var(--b3-transition);
+    }
+    .callout-info {
+        color: var(--b3-theme-primary);
     }
     &::before {
         display: none;
@@ -38,6 +41,9 @@
             --neo-inline-code-color: var(#{$var});
             --neo-tag-color: var(#{$var});
             --neo-inline-memo-color: var(#{$var});
+            .callout-info {
+                color: var(#{$var});
+            }
         }
     }
 }

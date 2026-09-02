@@ -148,6 +148,18 @@
             }
         } 低效选择器导致性能降低*/
     }
+    &.b3-chip--warning {
+        color: var(--b3-theme-warning);
+        &:hover {
+            color: var(--b3-theme-warning);
+        }
+    }
+    &.b3-chip--error {
+        color: var(--b3-theme-error);
+        &:hover {
+            color: var(--b3-theme-error);
+        }
+    }
 }
 // 通用
 .b3-button {

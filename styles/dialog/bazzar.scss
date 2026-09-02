@@ -91,6 +91,9 @@
         margin: 0;
         padding: 0;
         font-size: 16px;
+        .b3-list-item__text {
+            line-height: 18px;
+        }
         .b3-list-item__graphic {
             width: 18px;
             height: 18px;
@@ -147,8 +150,9 @@
         background-color: transparent;
         padding: 0;
     }
+    .config-bazaar__deprecated-title,
     .config-bazaar__deprecated-reason {
-        color: var(--b3-card-warning-color);
+        color: var(--b3-theme-warning);
     }
 }
 .config-bazaar__rating-summary {

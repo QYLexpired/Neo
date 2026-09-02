@@ -1,3 +1,18 @@
+### v1.5.8 / 2026-09-02
+- 彩色标题支持配置色彩风格
+- 彩色列表支持配置色彩风格
+- 彩色文档树支持配置色彩风格
+- 预设纹理支持配置层级
+- 棋盘纹理支持细节配置
+- 网格纹理支持细节配置
+- 波点纹理支持细节配置
+- Colored headings now support configurable color styles
+- Colored lists now support configurable color styles
+- Colored document tree now supports configurable color styles
+- Preset textures now support configurable layers
+- Checkerboard texture now supports detailed configuration
+- Grid texture now supports detailed configuration
+- Polka dot texture now supports detailed configuration
 ### v1.5.7 / 2026-09-01
 - 优化Neo+的生命周期管理
 - 新增预设配色：旧杂志

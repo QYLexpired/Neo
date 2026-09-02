@@ -3,10 +3,13 @@
 - Neo draws heavily on the design and ideas of the [Asri theme](https://github.com/mustakshif/Asri). A huge thank you to [mustakshif](https://github.com/mustakshif) — without your impeccable taste, technical skill, and astonishing creativity, Neo would never have come to be.
 ## Changelog
 See the [CHANGELOG](https://github.com/QYLexpired/Neo/blob/main/CHANGELOG.md) for the full update history.
-- Optimized the lifecycle management of Neo+
-- Added a new preset color scheme: Old Magazine
-- Removed theme color following time (the feature had an unsolvable performance issue)
-- Fixed numerous edge cases
+- Colored Headings now support configurable color styles
+- Colored Lists now support configurable color styles
+- Colored Document Tree now supports configurable color styles
+- Preset Textures now support configurable layers
+- Checkerboard Texture now supports detailed configuration
+- Grid Texture now supports detailed configuration
+- Polka Dot Texture now supports detailed configuration
 ## Notes
 - Some of the theme's styles and features cannot be implemented with CSS alone, so the companion plugin [Neo+](https://github.com/QYLexpired/Neo-Plus) **MUST** be installed and enabled.
 - For any questions or suggestions during use, please visit the [Neo Theme Introduction & Feedback Thread](https://ld246.com/article/1783158376401) or [GitHub](https://github.com/QYLexpired/Neo/issues)
