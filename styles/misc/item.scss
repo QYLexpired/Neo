@@ -1,6 +1,6 @@
 @use "../utils" as *;
 .b3-list--background .b3-list-item {
-    @include superellipse(7px);
+    @include superellipse-use(7px);
 }
 .b3-list-item--focus {
     background-color: var(--b3-list-active);
