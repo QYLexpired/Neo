@@ -17,19 +17,20 @@ body {
 // neo+提示
 html[data-frontend]:not(.neo-enabled) {
     body::after {
-        content: "Neo+ plugin is not installed or enabled, the theme cannot be displayed properly";
+        content: "Note: Neo+ is not installed or enabled, so the theme will not display correctly.";
         position: fixed;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
         pointer-events: none;
-        font-size: 1.5em;
+        font-size: 16px;
         z-index: 3;
-        @include superellipse(12px);
-        padding: 8px 32px;
+        @include superellipse-use(16px);
+        padding: 16px 24px;
         line-height: 1.625;
-        background-color: oklch(from var(--b3-theme-surface) l c h / 0.8);
-        box-shadow: var(--b3-message-shadow);
+        color: var(--b3-theme-warning);
+        background-color: oklch(from var(--b3-menu-background) l c h / 0.8);
+        box-shadow: var(--neo-main-shadow);
         backdrop-filter: blur(3px) saturate(1.5) brightness(1.05);
     }
     &[data-theme-mode="dark"] {
@@ -39,5 +40,5 @@ html[data-frontend]:not(.neo-enabled) {
     }
 }
 html[data-frontend][lang="zh-CN"]:not(.neo-enabled) body::after {
-    content: "未安装或启用Neo+插件，主题无法正常显示";
+    content: "注意：当前未安装或未启用Neo+插件，Neo主题无法正常显示";
 }
