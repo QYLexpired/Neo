@@ -15,6 +15,7 @@
     padding: 2px 8px;
     font-size: 0.85em;
     margin: 0 0.35em;
+    transition: var(--b3-transition);
     &::before {
         content: "#";
         margin-inline-end: 4px;

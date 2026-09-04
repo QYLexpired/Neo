@@ -3,13 +3,9 @@
 - Neo主题大量参考了[Asri主题](https://github.com/mustakshif/Asri)的设计和创意，非常感谢[mustakshif](https://github.com/mustakshif)，没有你超强的审美、技术力和让人惊叹的创意，就不会有Neo的出现
 ## 更新日志
 完整更新历史可查看[CHANGELOG](https://github.com/QYLexpired/Neo/blob/main/CHANGELOG.md)
-- 彩色标题支持配置色彩风格
-- 彩色列表支持配置色彩风格
-- 彩色文档树支持配置色彩风格
-- 预设纹理支持配置层级
-- 棋盘纹理支持细节配置
-- 网格纹理支持细节配置
-- 波点纹理支持细节配置
+- 重大更新：侧边备注重构为Protyle Lite
+    - 支持原地所见即所得编辑备注内容（以markdown形式回写）
+    - 支持图表渲染
 ## 说明
 - 主题的部分样式和功能无法仅通过CSS实现，因此必须安装并启用主题的配套插件：[Neo+](https://github.com/QYLexpired/Neo-Plus)
 - 使用过程中有任何问题或建议，可通过[Neo 主题介绍及反馈综合帖](https://ld246.com/article/1783158376401)或[GitHub](https://github.com/QYLexpired/Neo/issues)进行反馈
