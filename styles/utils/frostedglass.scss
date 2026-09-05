@@ -10,7 +10,7 @@
     @if $color-var == null {
         $color-var: --b3-theme-background;
     }
-    $glass-selector: ".neo-visual-frostedglass#{if(sass($scope == global): '-global'; else: '')}";
+    $glass-selector: ".neo-frostedglass#{if(sass($scope == global): '-global'; else: '')}";
     #{$glass-selector} & {
         background-color: oklch(from var(#{$color-var}) l c h / #{$alpha});
         backdrop-filter: blur(#{$blur-value}) saturate(1.5) brightness(1.05);
@@ -27,7 +27,7 @@
     border-radius: inherit;
     corner-shape: inherit;
     pointer-events: none;
-    .neo-visual-frostedglass#{if(sass($scope == global): "-global"; else: "")} & {
+    .neo-frostedglass#{if(sass($scope == global): "-global"; else: "")} & {
         content: "";
     }
 }

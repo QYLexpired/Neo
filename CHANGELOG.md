@@ -1,3 +1,18 @@
+### v1.6.0 / 2026-09-05
+- 破坏性更新：为了增强主题的可维护性，移除Neo+插件中超出主题职责的特性或兼容性较差的特性
+    - 移除钉住工具栏
+    - 移除侧边备注
+    - 移除沉浸模式
+    - 移除卷轴效果
+    - 由于修改幅度较大，部分旧配置无法迁移，需重新设置
+- 整合菜单结构
+- Breaking change: to improve the maintainability of the theme, Neo+ features beyond the theme's scope or with poor compatibility have been removed.
+    - Removed Pinned Toolbar
+    - Removed Side Memo
+    - Removed Immersive Mode
+    - Removed Cinematic Scroll
+    - Because the changes are extensive, some old configurations cannot be migrated and need to be set again.
+- Consolidated the menu structure
 ### v1.5.8 / 2026-09-02
 - 彩色标题支持配置色彩风格
 - 彩色列表支持配置色彩风格

@@ -5,11 +5,11 @@
 }
 #editor {
     background-color: var(--b3-theme-background);
-    .neo-visual-frostedglass-global & {
+    .neo-frostedglass-global & {
         min-height: 100%;
     }
     @at-root {
-        .neo-visual-frostedglass-global .neo-mobile {
+        .neo-frostedglass-global .neo-mobile {
             padding-bottom: 0 !important;
         }
     }

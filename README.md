@@ -3,13 +3,13 @@
 - Neo draws heavily on the design and ideas of the [Asri theme](https://github.com/mustakshif/Asri). A huge thank you to [mustakshif](https://github.com/mustakshif) — without your impeccable taste, technical skill, and astonishing creativity, Neo would never have come to be.
 ## Changelog
 See the [CHANGELOG](https://github.com/QYLexpired/Neo/blob/main/CHANGELOG.md) for the full update history.
-- Colored Headings now support configurable color styles
-- Colored Lists now support configurable color styles
-- Colored Document Tree now supports configurable color styles
-- Preset Textures now support configurable layers
-- Checkerboard Texture now supports detailed configuration
-- Grid Texture now supports detailed configuration
-- Polka Dot Texture now supports detailed configuration
+- Breaking change: to improve the maintainability of the theme, Neo+ features beyond the theme's scope or with poor compatibility have been removed.
+    - Pinned Toolbar
+    - Side Memo
+    - Immersive Mode
+    - Cinematic Scroll
+    - Because the changes are extensive, some old configurations cannot be migrated and need to be set again.
+- The menu structure has been consolidated.
 ## Notes
 - Some of the theme's styles and features cannot be implemented with CSS alone, so the companion plugin [Neo+](https://github.com/QYLexpired/Neo-Plus) **MUST** be installed and enabled.
 - For any questions or suggestions during use, please visit the [Neo Theme Introduction & Feedback Thread](https://ld246.com/article/1783158376401) or [GitHub](https://github.com/QYLexpired/Neo/issues)
@@ -18,8 +18,8 @@ The Neo theme is completely free. If you enjoy this theme, feel free to star it 
 ## Features
 #### Rich, Rigorous Color Schemes
 - Dozens of built-in preset color schemes, each with its own distinct style
-- Custom Theme Color: pick an accent color and adjust its saturation to customize the interface
-- The theme color can follow time, banner, or system accent color
+- Custom Theme Color: pick an accent color and adjust its saturation and brightness to customize the interface
+- The theme color can follow banner or system accent color
 - Neue Brutalism color schemes
 - Random Color: a random scheme is selected from all available ones on every SiYuan launch
 #### Ever-Changing Interface
@@ -30,7 +30,6 @@ The Neo theme is completely free. If you enjoy this theme, feel free to star it 
 - Invert: swaps the background colors of the sidebars and the content area in dark mode
 - Vertical Tabs: stack your tabs vertically for easier viewing and switching
 - Global frosted glass effects for a transparent and layered interface
-- Parallax scrolling for banner images and a cinematic scroll effect for the editor body, for striking visual impact
 - Fade-out effects to eliminate visual fragmentation
 - A large variety of preset Textures, plus support for custom image textures or backgrounds
 - Colored Folders: colorize folders in the document tree
@@ -42,11 +41,8 @@ The Neo theme is completely free. If you enjoy this theme, feel free to star it 
 - Optimized global typography for an enhanced Chinese and English reading experience
 - Smooth Caret and Fluid Cursor effects
 - Colored Headings and Colored Lists for better differentiation
-- Immersive Mode: automatically highlights the focused line and scrolls it to the center of the editor
-- Pinned Toolbar: pin the formatting toolbar to the editor
 - List Bullet Line: guide lines for a clearer list hierarchy
 - Focus Block Indicator effect
-- Side Memo: renders memo content in a WYSIWYG fashion right beside the editor
 ## Cautions
 Some features heavily rework SiYuan's native styles, so there are compatibility issues that cannot be fixed. Please disable them promptly if they affect your usage. Additionally, some features are quite performance-intensive and should be enabled with caution.
 - Super Fusion
@@ -54,22 +50,14 @@ Some features heavily rework SiYuan's native styles, so there are compatibility 
     - Causes database table headers to fail to stick to the top or end up in the wrong position
     - May conflict with some plugins
     - This feature adds blur and refraction effects, which may cause lag
-- Cinematic Scroll
-    - May cause the top or bottom of short documents to not display correctly
-    - Causes database table headers to fail to stick to the top or end up in the wrong position
-    - May cause performance degradation or scroll lag
-- Theme Color Following Time
-    - This feature constantly changes the theme color over time, causing heavy repainting that may lead to lag
 - Frosted Glass
     - Increases rendering load; if you perceive lag, turn it off or switch to the Light level
 - Fluid Cursor
     - The cursor trail animation can significantly degrade performance; enable with caution
 - Colored Selection
     - The related CSS selectors have poor performance; enable with caution
-- Immersive Mode
-    - The focused-line highlight effect within it can significantly degrade performance; enable with caution
 ## A Final Word
-- Neo's performance: To achieve a global style overhaul, Neo inevitably consumes more performance than the default theme. The theme has been optimized to the best of its ability (the `performancetunning` module in Neo+ is a dedicated performance optimization module). But performance is a subjective experience shaped by multiple coupled factors. If we take the default theme's smoothness as 1, Neo's might be 0.9; however, if you use complex plugins or inefficient code snippets, the result can be 0.9 × 0.9 = 0.81. At that point, blaming all the lag on the theme is unreasonable.
+- Neo's performance: To achieve a global style overhaul, Neo inevitably consumes more performance than the default theme. The theme has been optimized to the best of its ability (the `performancetuning` module in Neo+ is a dedicated performance optimization module). But performance is a subjective experience shaped by multiple coupled factors. If we take the default theme's smoothness as 1, Neo's might be 0.9; however, if you use complex plugins or inefficient code snippets, the result can be 0.9 × 0.9 = 0.81. At that point, blaming all the lag on the theme is unreasonable.
 - Neo's Easter Eggs: The Neo theme has many hidden little details waiting for you to discover (for example, try changing the overall text color of a blockquote from the Block Menu → Appearance and see what happens)
 - Once again, thanks to the [Asri theme](https://github.com/mustakshif/Asri) and its author, [mustakshif](https://github.com/mustakshif)
 ## Acknowledgements

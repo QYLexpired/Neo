@@ -11,8 +11,7 @@
     transition: 0.15s !important;
     padding-bottom: 1px !important;
     // important以覆盖其他行内元素叠加的效果
-    &:hover,
-    &[neo-sidememo-highlight] {
+    &:hover {
         --neo-inline-memo-color: var(--b3-base-color);
         @include superellipse(0px);
         background-color: var(--neo-inline-memo-color) !important;
@@ -21,9 +20,5 @@
         @include contrast-color(--neo-inline-memo-color, --_inlime-memo-color);
         color: var(--_inlime-memo-color) !important;
         border-color: transparent !important;
-    }
-    .neo-sidememo-protyle &:hover,
-    &[neo-sidememo-highlight] {
-        --neo-inline-memo-color: var(--b3-base-color);
     }
 }

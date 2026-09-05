@@ -16,12 +16,12 @@
         .neo-mode-dark & {
             backdrop-filter: brightness(0.5);
         }
-        .neo-visual-frostedglass & {
+        .neo-frostedglass & {
             z-index: -2;
             backdrop-filter: blur(2px);
         }
     }
-    .neo-visual-frostedglass & {
+    .neo-frostedglass & {
         transition: backdrop-filter 0.45s;
     }
 }
@@ -30,7 +30,7 @@
     border-radius: 0;
     corner-shape: unset;
     box-shadow: unset;
-    .neo-visual-frostedglass-global & {
+    .neo-frostedglass-global & {
         background-color: transparent;
     }
     &::before {
@@ -46,7 +46,7 @@
         box-shadow: var(--b3-menu-shadow);
         margin: 0 2px -2px 2px;
         transition: 0.15s var(--neo-ease-out-3);
-        .neo-visual-frostedglass & {
+        .neo-frostedglass & {
             background-color: transparent;
             box-shadow: var(--b3-menu-shadow-blur);
         }

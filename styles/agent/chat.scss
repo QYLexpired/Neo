@@ -162,7 +162,7 @@
     border: unset;
     box-shadow: var(--neo-main-shadow);
     background-color: var(--b3-theme-background);
-    .neo-visual-frostedglass & {
+    .neo-frostedglass & {
         background-color: transparent;
         backdrop-filter: blur(3px);
     }

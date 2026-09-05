@@ -46,6 +46,9 @@
         margin-left: 0;
         margin-right: 0;
     }
+    .protyle-icon.fn__none + & {
+        margin-right: 0;
+    }
 }
 .protyle-icons,
 .av__gallery-actions,

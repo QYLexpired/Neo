@@ -9,12 +9,12 @@
         .neo-mode-dark & {
             backdrop-filter: brightness(0.5);
         }
-        .neo-visual-frostedglass-global & {
+        .neo-frostedglass-global & {
             z-index: -2;
             backdrop-filter: blur(2px);
         }
     }
-    .neo-visual-frostedglass-global & {
+    .neo-frostedglass-global & {
         transition: backdrop-filter 0.25s, opacity 0.25s;
     }
 }
@@ -39,7 +39,7 @@
     box-shadow: var(--b3-dialog-shadow);
     background-color: var(--b3-theme-background);
     @include superellipse-use(18px);
-    .neo-visual-frostedglass-global & {
+    .neo-frostedglass-global & {
         background-color: transparent;
         box-shadow: var(--b3-dialog-shadow-blur);
     }
