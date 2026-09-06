@@ -1,5 +1,6 @@
 @use "sass:list";
-.sy__outline {
+.sy__outline,
+.fn__flex-column[data-type="sidebar-outline"] {
     .b3-list-item[data-type="NodeHeading"] {
         .b3-list-item__graphic {
             opacity: 0;
