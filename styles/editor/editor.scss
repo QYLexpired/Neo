@@ -299,3 +299,7 @@
         }
     }
 }
+.av__cell.dragover__left::after,
+.av__cell.dragover__right::after {
+    background-color: oklch(from var(--b3-theme-secondary) l c h);
+}

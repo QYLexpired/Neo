@@ -3,6 +3,9 @@
 .config__panel {
     background-color: transparent;
 }
+.config__panel .config__tab-container .layout-tab-bar {
+    padding: 0;
+}
 .config__tab-title {
     font-weight: bold;
     font-size: 16px;

@@ -3,12 +3,19 @@
 - Neo主题大量参考了[Asri主题](https://github.com/mustakshif/Asri)的设计和创意，非常感谢[mustakshif](https://github.com/mustakshif)，没有你超强的审美、技术力和让人惊叹的创意，就不会有Neo的出现
 ## 更新日志
 完整更新历史可查看[CHANGELOG](https://github.com/QYLexpired/Neo/blob/main/CHANGELOG.md)
+- 全新配色方案-自由配色
+    - 支持完全自定义界面关键色值
+    - 支持微调Neo的预设配色
+    - 内置大量知名配色方案并支持微调
 - 破坏性更新：为了增强主题的可维护性，移除Neo+插件中超出主题职责的特性或兼容性较差的特性
     - 移除钉住工具栏
     - 移除侧边备注
     - 移除沉浸模式
     - 移除卷轴效果
     - 由于修改幅度较大，部分旧配置无法迁移，需重新设置
+- 适配思源3.8.3版本
+    - 适配页签块样式
+    - 适配数据库富文本编辑器样式
 - 整合菜单结构
 ## 说明
 - 主题的部分样式和功能无法仅通过CSS实现，因此必须安装并启用主题的配套插件：[Neo+](https://github.com/QYLexpired/Neo-Plus)

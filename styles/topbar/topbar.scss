@@ -1,6 +1,11 @@
 @use "../utils" as *;
 .toolbar__item {
     @include icon;
+    &[data-topbar-drag-placeholder] {
+        background-color: transparent !important; // 覆盖内联
+        box-shadow: var(--neo-main-shadow);
+        animation: neo-dock-move 0.2s var(--neo-ease-out-2);
+    }
 }
 #barWorkspace {
     .toolbar__text {

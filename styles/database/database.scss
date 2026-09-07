@@ -1,6 +1,7 @@
 @use "../utils" as *;
 @use "../tooltip" as *;
 @use "../component" as *;
+@use "../menu/menu" as *;
 .av__cell,
 .av__row,
 .av__row--footer {
@@ -279,5 +280,15 @@
             flex-shrink: 1;
             flex-basis: 100%
         }
+    }
+}
+// 富文本
+.av__richtext-mask {
+    background-color: transparent;
+}
+.av__richtext-editor {
+    @include menu-container-common;
+    .protyle-content {
+        animation: none !important;
     }
 }

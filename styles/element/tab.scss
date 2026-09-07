@@ -1,0 +1,30 @@
+@use "../utils" as *;
+@use "../component" as *;
+.protyle-wysiwyg,
+.b3-typography {
+    .tabs-control {
+        @include icon;
+        margin-left: 9px;
+    }
+    .tabs {
+        border: unset;
+    }
+    .tabs-tab--editing {
+        box-shadow: none !important;
+        background-color: transparent !important;
+    }
+    .tab-item {
+        @include superellipse-use(10px);
+        background-color: oklch(from var(--b3-theme-on-background) l c h / 0.05);
+        padding: 6px 12px;
+    }
+    .tabs-title-editor {
+        @include input-common;
+        background-color: var(--b3-theme-background) !important;
+        animation: neo-input-focus-ring 0.2s var(--neo-ease-out-3) forwards;
+        clip-path: unset !important; //覆盖内联
+        .tab-item-title[spellcheck] {
+            min-height: unset;
+        }
+    }
+}
