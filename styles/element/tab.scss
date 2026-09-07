@@ -2,12 +2,27 @@
 @use "../component" as *;
 .protyle-wysiwyg,
 .b3-typography {
+    .tabs-list[aria-orientation="vertical"] {
+        & + .tabs-control {
+            margin: 6px auto;
+        }
+    }
     .tabs-control {
         @include icon;
         margin-left: 9px;
     }
     .tabs {
         border: unset;
+        &[data-tabs-orientation="vertical"] {
+            gap: 12px !important;
+            & > .tabs-header {
+                border: unset !important;
+                margin-bottom: 0;
+            }
+        }
+    }
+    .tabs-header {
+        margin-bottom: 12px;
     }
     .tabs-tab--editing {
         box-shadow: none !important;

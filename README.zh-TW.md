@@ -3,12 +3,19 @@
 - Neo 主題大量參考了 [Asri 主題](https://github.com/mustakshif/Asri) 的設計和創意，非常感謝 [mustakshif](https://github.com/mustakshif)，沒有你超強的審美、技術力和令人驚嘆的創意，就不會有 Neo 的出現
 ## 更新日誌
 完整更新紀錄可於 [CHANGELOG](https://github.com/QYLexpired/Neo/blob/main/CHANGELOG.md) 查看
+- 全新配色方案：自由配色
+    - 可完全自訂介面的關鍵色值
+    - 可微調 Neo 的預設配色
+    - 內建大量知名配色方案，皆可微調
 - 破壞性更新：為了提升主題的可維護性，移除 Neo+ 外掛中超出主題職責或相容性較差的功能
     - 移除釘選工具列
     - 移除側邊註記
     - 移除沉浸模式
     - 移除捲動效果
     - 由於修改幅度較大，部分舊設定無法遷移，需重新設定
+- 對應思源 3.8.3 版本
+    - 調整頁籤區塊樣式
+    - 調整資料庫富文字編輯器樣式
 - 整合選單結構
 ## 說明
 - 主題的部分樣式和功能無法僅透過 CSS 實現，因此必須安裝並啟用主題的配套外掛：[Neo+](https://github.com/QYLexpired/Neo-Plus)

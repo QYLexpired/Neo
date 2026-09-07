@@ -3,12 +3,19 @@
 - Neo draws heavily on the design and ideas of the [Asri theme](https://github.com/mustakshif/Asri). A huge thank you to [mustakshif](https://github.com/mustakshif) — without your impeccable taste, technical skill, and astonishing creativity, Neo would never have come to be.
 ## Changelog
 See the [CHANGELOG](https://github.com/QYLexpired/Neo/blob/main/CHANGELOG.md) for the full update history.
+- Brand-new color scheme: Freeform Palette
+    - Fully customize the key color values of the interface
+    - Fine-tune Neo's preset color schemes
+    - Dozens of well-known color schemes built in, all fine-tunable
 - Breaking change: to improve the maintainability of the theme, Neo+ features beyond the theme's scope or with poor compatibility have been removed.
     - Pinned Toolbar
     - Side Memo
     - Immersive Mode
     - Cinematic Scroll
     - Because the changes are extensive, some old configurations cannot be migrated and need to be set again.
+- Adapted for SiYuan 3.8.3
+    - Adapted Tabbed Container block styles
+    - Adapted database rich-text editor styles
 - The menu structure has been consolidated.
 ## Notes
 - Some of the theme's styles and features cannot be implemented with CSS alone, so the companion plugin [Neo+](https://github.com/QYLexpired/Neo-Plus) **MUST** be installed and enabled.

@@ -1,17 +1,31 @@
-### v1.6.0 / 2026-09-05
+### v1.6.0 / 2026-09-07
+- 全新配色方案-自由配色
+    - 支持完全自定义界面关键色值
+    - 支持微调Neo的预设配色
+    - 内置大量知名配色方案并支持微调
 - 破坏性更新：为了增强主题的可维护性，移除Neo+插件中超出主题职责的特性或兼容性较差的特性
     - 移除钉住工具栏
     - 移除侧边备注
     - 移除沉浸模式
     - 移除卷轴效果
     - 由于修改幅度较大，部分旧配置无法迁移，需重新设置
+- 适配思源3.8.3版本
+    - 适配页签块样式
+    - 适配数据库富文本编辑器样式
 - 整合菜单结构
+- Brand-new color scheme: Freeform Palette
+    - Fully customize the key color values of the interface
+    - Fine-tune Neo's preset color schemes
+    - Dozens of well-known color schemes built in, all fine-tunable
 - Breaking change: to improve the maintainability of the theme, Neo+ features beyond the theme's scope or with poor compatibility have been removed.
     - Removed Pinned Toolbar
     - Removed Side Memo
     - Removed Immersive Mode
     - Removed Cinematic Scroll
     - Because the changes are extensive, some old configurations cannot be migrated and need to be set again.
+- Adapted for SiYuan 3.8.3
+    - Adapted Tabbed Container block styles
+    - Adapted database rich-text editor styles
 - Consolidated the menu structure
 ### v1.5.8 / 2026-09-02
 - 彩色标题支持配置色彩风格

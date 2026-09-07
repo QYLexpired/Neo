@@ -23,6 +23,17 @@ body:not(.body--toolbar-hide) [data-type="wnd"] > .fn__flex:first-child {
                         @include overflow-indicator-fadein-mask($fadeout-size-l, "left right");
                         scrollbar-width: none;
                         gap: 0;
+                        &[aria-orientation="vertical"] {
+                            .tabs-tab {
+                                margin: 3px 6px !important;
+                                &:first-child {
+                                    margin-top: 6px !important;
+                                }
+                                &:last-child {
+                                    margin-bottom: 6px !important;
+                                }
+                            }
+                        }
                     }
                     .tabs-tab {
                         position: relative;
@@ -172,6 +183,11 @@ body:not(.body--toolbar-hide) [data-type="wnd"] > .fn__flex:first-child {
                             width: 1px;
                             pointer-events: none;
                             transition: var(--b3-transition);
+                        }
+                        .tabs-list[aria-orientation="vertical"] {
+                            .tabs-tab::before {
+                                display: none;
+                            }
                         }
                     }
                 }
