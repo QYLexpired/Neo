@@ -1,3 +1,14 @@
+### v1.6.1 / 2026-09-09
+- 自定义图片配置改为明亮/暗黑模式分离
+- 修复数据库富文本编辑窗内平滑光标z轴过低的问题
+- 修复移动端集市布局异常的问题
+- 移除图片查看器的全屏背景样式
+- 适配模版管理界面
+- Custom image settings are now configured separately for Light and Dark modes
+- Fixed an issue where the smooth caret's z-index was too low in the database rich-text editor window
+- Fixed an abnormal Marketplace layout on mobile devices
+- Removed the fullscreen background style of the image viewer
+- Adapted the template management interface
 ### v1.6.0 / 2026-09-07
 - 全新配色方案-自由配色
     - 支持完全自定义界面关键色值

@@ -3,20 +3,11 @@
 - Neo draws heavily on the design and ideas of the [Asri theme](https://github.com/mustakshif/Asri). A huge thank you to [mustakshif](https://github.com/mustakshif) — without your impeccable taste, technical skill, and astonishing creativity, Neo would never have come to be.
 ## Changelog
 See the [CHANGELOG](https://github.com/QYLexpired/Neo/blob/main/CHANGELOG.md) for the full update history.
-- Brand-new color scheme: Freeform Palette
-    - Fully customize the key color values of the interface
-    - Fine-tune Neo's preset color schemes
-    - Dozens of well-known color schemes built in, all fine-tunable
-- Breaking change: to improve the maintainability of the theme, Neo+ features beyond the theme's scope or with poor compatibility have been removed.
-    - Pinned Toolbar
-    - Side Memo
-    - Immersive Mode
-    - Cinematic Scroll
-    - Because the changes are extensive, some old configurations cannot be migrated and need to be set again.
-- Adapted for SiYuan 3.8.3
-    - Adapted Tabbed Container block styles
-    - Adapted database rich-text editor styles
-- The menu structure has been consolidated.
+- Custom image settings are now configured separately for Light and Dark modes
+- Fixed an issue where the smooth caret's z-index was too low in the database rich-text editor window
+- Fixed an abnormal Marketplace layout on mobile devices
+- Removed the fullscreen background style of the image viewer
+- Adapted the template management interface
 ## Notes
 - Some of the theme's styles and features cannot be implemented with CSS alone, so the companion plugin [Neo+](https://github.com/QYLexpired/Neo-Plus) **MUST** be installed and enabled.
 - For any questions or suggestions during use, please visit the [Neo Theme Introduction & Feedback Thread](https://ld246.com/article/1783158376401) or [GitHub](https://github.com/QYLexpired/Neo/issues)
@@ -24,11 +15,12 @@ See the [CHANGELOG](https://github.com/QYLexpired/Neo/blob/main/CHANGELOG.md) fo
 The Neo theme is completely free. If you enjoy this theme, feel free to star it on [GitHub](https://github.com/QYLexpired/Neo) or [buy me a coffee](https://icnmjy02sv9g.feishu.cn/wiki/FekNwrtB7ia1WckYelRckwzZnig?from=from_copylink)
 ## Features
 #### Rich, Rigorous Color Schemes
-- Dozens of built-in preset color schemes, each with its own distinct style
+- Preset Schemes: dozens of built-in preset color schemes, each with its own distinct style
+- Freeform Palette: fully customize the interface's key color values, with hundreds of classic reference color schemes built in
 - Custom Theme Color: pick an accent color and adjust its saturation and brightness to customize the interface
-- The theme color can follow banner or system accent color
+- The theme color can follow the banner image or the system accent color
 - Neue Brutalism color schemes
-- Random Color: a random scheme is selected from all available ones on every SiYuan launch
+- Random Color: a random scheme is selected from all the theme's color schemes on every SiYuan launch
 #### Ever-Changing Interface
 - Super Fusion: seamlessly blends tabs, breadcrumbs, banner images, and note content together (inspired by the Asri theme)
 - IDE Style: a minimalist look defined by clean line-based divisions (inspired by the Asri theme)
