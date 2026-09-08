@@ -7,11 +7,37 @@
     }
 }
 .viewer-backdrop {
-    @include frostedglass($blur: l, $color: background, $alpha: 0.9, $scope: global);
-    background-color: var(--b3-theme-background);
+    background-color: transparent;
+    animation: neo-img-in 0.25s forwards;
+    .neo-mode-dark & {
+        animation-name: neo-img-in-dark;
+    }
+}
+@keyframes neo-img-in {
+    0% {
+        backdrop-filter: none;
+        opacity: 0;
+    }
+    100% {
+        backdrop-filter: brightness(0.75);
+        opacity: 1;
+    }
+}
+@keyframes neo-img-in-dark {
+    0% {
+        backdrop-filter: none;
+        opacity: 0;
+    }
+    100% {
+        backdrop-filter: brightness(0.5);
+        opacity: 1;
+    }
+}
+.viewer-footer {
+    background-color: oklch(from var(--b3-theme-background) l c h / 0.8)
 }
 .viewer-navbar {
-    background-color: oklch(from var(--b3-theme-surface) l c h / 0.7);
+    background-color: transparent;
     .viewer-list {
         transition: var(--b3-transition);
     }

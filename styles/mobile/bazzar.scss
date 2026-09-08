@@ -1,7 +1,7 @@
 #model .config--mobile {
-    .config-bazaar__main > .layout-tab-bar {
+    .config-bazaar__title {
         margin: 0;
-        margin-bottom: -6px;
+        padding-top: 0;
     }
     .config-bazaar__readme {
         .item__side {

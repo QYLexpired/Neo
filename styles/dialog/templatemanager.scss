@@ -1,0 +1,15 @@
+.template-manager__files {
+    & > .b3-list-item {
+        margin: 4px 0;
+        min-height: auto;
+        .template-manager__toggle {
+            height: auto;
+        }
+        .template-manager__file {
+            min-height: auto;
+        }
+    }
+}
+.template-manager__editor {
+    padding: 0 4px;
+}
