@@ -16,7 +16,7 @@ The Neo theme is completely free. If you enjoy this theme, feel free to star it 
 ## Features
 #### Rich, Rigorous Color Schemes
 - Preset Schemes: dozens of built-in preset color schemes, each with its own distinct style
-- Freeform Palette: fully customize the interface's key color values, with hundreds of classic reference color schemes built in
+- Freeform Palette: fully customize the interface's key color values, with a built-in reference library of hundreds of classic color schemes
 - Custom Theme Color: pick an accent color and adjust its saturation and brightness to customize the interface
 - The theme color can follow the banner image or the system accent color
 - Neue Brutalism color schemes
