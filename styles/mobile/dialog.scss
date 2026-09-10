@@ -1,0 +1,29 @@
+@use "../utils" as *;
+.neo-mobile {
+    .b3-dialog__container:not(.mobile-bottom-sheet) {
+        max-width: 95vw !important;
+        max-height: 95vh !important;
+        min-width: 300px !important;
+    }
+    [data-key="dialog-opencard"] .b3-dialog__container,
+    .config__view  {
+        max-width: 100vw !important;
+        max-height: 100vh !important;
+        box-shadow: none;
+        border-radius: 0;
+        corner-shape: unset;
+        &::before {
+            box-shadow: none;
+        }
+    }
+    .b3-dialog__container.mobile-bottom-sheet {
+        @include superellipse-use(22px 22px 0 0);
+        box-shadow: var(--b3-menu-shadow);
+        margin: 0 2px -2px 2px;
+        transition: 0.15s var(--neo-ease-out-3);
+        max-width: calc(100vw - 4px);
+        .mobile-bottom-sheet__handle::before {
+            background-color: oklch(from var(--b3-theme-on-background) l c h / 0.5);
+        }
+    }
+}

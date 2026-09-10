@@ -28,7 +28,7 @@
     @include superellipse(6px);
     padding: 4px;
     margin: 0 2px;
-    font-size: 8px;
+    font-size: 14px;
     height: 24px;
     &--current {
         @include icon-accent;

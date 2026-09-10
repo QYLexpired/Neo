@@ -18,6 +18,7 @@
 a {
     color: var(--b3-theme-accent);
     transition: var(--b3-transition);
+    text-decoration: none;
     &:hover {
         color: var(--b3-theme-secondary);
         text-decoration: none;

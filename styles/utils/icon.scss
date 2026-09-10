@@ -15,7 +15,8 @@
         transition: var(--b3-transition);
     }
     @include _maybe-important(background-color, transparent, $important);
-    &:hover {
+    &:hover,
+    &:active {
         @include _maybe-important(background-color, transparent, $important);
     }
 }
@@ -25,7 +26,8 @@
     svg {
         @include _maybe-important(color, var(--b3-theme-on-surface), $important);
     }
-    &:hover {
+    &:hover,
+    &:active {
         @include _maybe-important(color, var(--b3-theme-on-background), $important);
         svg {
             @include _maybe-important(color, var(--b3-theme-on-background), $important);
@@ -38,7 +40,8 @@
     svg {
         @include _maybe-important(color, var(--b3-theme-accent), $important);
     }
-    &:hover {
+    &:hover,
+    &:active {
         @include _maybe-important(color, var(--b3-theme-accent), $important);
         svg {
             @include _maybe-important(color, var(--b3-theme-accent), $important);

@@ -3,6 +3,17 @@
         margin: 0;
         padding-top: 0;
     }
+    .config-bazaar .layout-tab-bar {
+        font-size: 14px;
+        padding: 0;
+        .item .item__text {
+            padding: 0 10px;
+        }
+    }
+    .config-bazaar__tabs {
+        font-size: 14px;
+        justify-content: center;
+    }
     .config-bazaar__readme {
         .item__side {
             border-radius: 0;

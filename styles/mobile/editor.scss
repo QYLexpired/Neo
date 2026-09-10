@@ -3,6 +3,11 @@
 .neo-mobile .protyle-breadcrumb__icon {
     padding: 2px 6px;
 }
+#mobileTopBar {
+    .toolbar__button {
+        @include icon;
+    }
+}
 #editor {
     background-color: var(--b3-theme-background);
     .neo-frostedglass-global & {

@@ -14,6 +14,9 @@
         height: 18px;
     }
 }
+.config__drag-anchor {
+    opacity: 0
+}
 .config__panel .config__side,
 .config__panel .b3-tab-bar {
     @include superellipse-use(14px);

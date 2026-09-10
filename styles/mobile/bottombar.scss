@@ -12,3 +12,6 @@
     background-color: var(--b3-menu-background);
     @include frostedglass-menu;
 }
+.mobile-bottom-bar__item {
+    @include icon($important: true);
+}
