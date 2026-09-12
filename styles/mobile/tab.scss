@@ -11,6 +11,10 @@
         box-shadow: none;
     }
 }
+.mobile-tabs__item-pin {
+    color: var(--b3-theme-on-surface);
+}
 .mobile-tabs__actions {
     border: none;
+    background-color: transparent;
 }

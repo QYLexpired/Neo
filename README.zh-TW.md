@@ -3,11 +3,14 @@
 - Neo 主題大量參考了 [Asri 主題](https://github.com/mustakshif/Asri) 的設計和創意，非常感謝 [mustakshif](https://github.com/mustakshif)，沒有你超強的審美、技術力和令人驚嘆的創意，就不會有 Neo 的出現
 ## 更新日誌
 完整更新紀錄可於 [CHANGELOG](https://github.com/QYLexpired/Neo/blob/main/CHANGELOG.md) 查看
-- 自訂圖片設定改為明亮／暗黑模式分離
-- 修復資料庫富文字編輯視窗內平滑游標 z 軸過低的問題
-- 修復行動端市集版面異常的問題
-- 移除圖片檢視器的全螢幕背景樣式
-- 對應模板管理介面
+- 隨機配色的隨機池支援自由組合，並支援自由配色的配色庫作為隨機池
+- 優化平滑游標顯示行為
+- 優化聚焦區塊指示的回應速度
+- 優化列表引導線的回應速度
+- 文件標題與正文標題不再使用強調色
+- 彩色標題、彩色列表、彩色文件樹支援固定為強調色
+- 對應思源 3.8.4 行動端樣式
+- 優化 Neo+ 部分設定彈窗的版面與互動
 ## 說明
 - 主題的部分樣式和功能無法僅透過 CSS 實現，因此必須安裝並啟用主題的配套外掛：[Neo+](https://github.com/QYLexpired/Neo-Plus)
 - 使用過程中有任何問題或建議，可透過 [Neo 主題介紹及回饋討論串](https://ld246.com/article/1783158376401) 或 [GitHub](https://github.com/QYLexpired/Neo/issues) 提出回饋

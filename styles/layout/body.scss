@@ -15,8 +15,8 @@ body {
     }
 }
 // neo+提示
-html[data-frontend]:not(.neo-enabled) {
-    body::after {
+html[data-frontend] {
+    &::after {
         content: "Note: Neo+ is not installed or enabled, so the theme will not display correctly.";
         position: fixed;
         top: 50%;
@@ -36,11 +36,13 @@ html[data-frontend]:not(.neo-enabled) {
         backdrop-filter: blur(3px) saturate(1.5) brightness(1.05);
     }
     &[data-theme-mode="dark"] {
-        body::after {
+        &::after {
             backdrop-filter: blur(3px) saturate(1.5) brightness(0.9);
         }
     }
 }
-html[data-frontend][lang="zh-CN"]:not(.neo-enabled) body::after {
-    content: "注意：当前未安装或未启用Neo+插件，Neo主题无法正常显示";
+html[data-frontend][lang="zh-CN"] {
+    &::after {
+        content: "注意：当前未安装或未启用Neo+插件，Neo主题无法正常显示";
+    }
 }

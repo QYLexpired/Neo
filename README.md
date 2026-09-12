@@ -3,11 +3,14 @@
 - Neo draws heavily on the design and ideas of the [Asri theme](https://github.com/mustakshif/Asri). A huge thank you to [mustakshif](https://github.com/mustakshif) — without your impeccable taste, technical skill, and astonishing creativity, Neo would never have come to be.
 ## Changelog
 See the [CHANGELOG](https://github.com/QYLexpired/Neo/blob/main/CHANGELOG.md) for the full update history.
-- Custom image settings are now configured separately for Light and Dark modes
-- Fixed an issue where the smooth caret's z-index was too low in the database rich-text editor window
-- Fixed an abnormal Marketplace layout on mobile devices
-- Removed the fullscreen background style of the image viewer
-- Adapted the template management interface
+- The random pool for Random Color now supports free combination, and the Freeform Palette color library can be used as the random pool
+- Optimized the display behavior of the smooth caret
+- Optimized the response speed of the Focus Block Indicator
+- Optimized the response speed of list bullet lines
+- Document titles and body headings no longer use the accent color
+- Colored Headings, Colored Lists, and Colored Document Tree can be pinned to the accent color
+- Adapted to SiYuan 3.8.4 mobile styles
+- Optimized the layout and interaction of some Neo+ configuration dialogs
 ## Notes
 - Some of the theme's styles and features cannot be implemented with CSS alone, so the companion plugin [Neo+](https://github.com/QYLexpired/Neo-Plus) **MUST** be installed and enabled.
 - For any questions or suggestions during use, please visit the [Neo Theme Introduction & Feedback Thread](https://ld246.com/article/1783158376401) or [GitHub](https://github.com/QYLexpired/Neo/issues)

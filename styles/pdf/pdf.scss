@@ -27,6 +27,9 @@
         }
     }
 }
+#pageWidthOption {
+    border-bottom: unset;
+}
 .findbar {
     padding: 8px;
 }
@@ -51,6 +54,7 @@
 }
 #dialogContainer > .dialog {
     @include dialog-container-common;
+    padding: 12px 24px;
     .separator {
         background-color: var(--b3-border-color-trans);
     }

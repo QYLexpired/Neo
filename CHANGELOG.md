@@ -1,3 +1,20 @@
+### v1.6.2 / 2026-09-12
+- 随机配色的随机池支持自由组合，并支持将自由配色的配色库作为随机池
+- 优化平滑光标显示行为
+- 优化聚焦块指示的响应速度
+- 优化列表子弹线的响应速度
+- 文档标题和正文标题不再使用强调色
+- 彩色标题、彩色列表、彩色文档树支持固定为强调色
+- 适配思源3.8.4移动端样式
+- 优化Neo+部分配置弹窗的布局和交互
+- The random pool for Random Color now supports free combination, and the Freeform Palette color library can be used as the random pool
+- Optimized the display behavior of the smooth caret
+- Optimized the response speed of the Focus Block Indicator
+- Optimized the response speed of list bullet lines
+- Document titles and body headings no longer use the accent color
+- Colored Headings, Colored Lists, and Colored Document Tree can be pinned to the accent color
+- Adapted to SiYuan 3.8.4 mobile styles
+- Optimized the layout and interaction of some Neo+ configuration dialogs
 ### v1.6.1 / 2026-09-09
 - 自定义图片配置改为明亮/暗黑模式分离
 - 修复数据库富文本编辑窗内平滑光标z轴过低的问题
