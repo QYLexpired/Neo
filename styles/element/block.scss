@@ -10,9 +10,10 @@
 }
 .protyle-wysiwyg [data-node-id][fold="1"] {
     &:not(.li) {
-        outline: 1px solid oklch(from currentColor l c h / 0.12);
+        outline: 1px solid oklch(from currentColor l c h / 0.25);
         outline-offset: -1px;
-        background-color: oklch(from currentColor l c h / 0.1);
+        background-color: oklch(from currentColor l c h / 0.12);
+        opacity: 0.38;
     }
 }
 :root {
