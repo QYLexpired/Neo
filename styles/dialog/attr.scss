@@ -1,6 +1,6 @@
 @use "../component" as *;
 .custom-attr__avheader .block__logo {
-    color: var(--b3-theme-accent);
+    color: var(--b3-theme-primary);
 }
 .custom-attr .b3-button[data-type=addColumn] {
     @include button-transparent-hover-translucent;

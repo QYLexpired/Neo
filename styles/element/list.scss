@@ -1,6 +1,6 @@
 :root {
     --_list-action-color: var(--b3-theme-on-surface);
-    --_list-fold-color: var(--b3-theme-accent);
+    --_list-fold-color: var(--b3-theme-primary);
     --_list-fold-bg: oklch(from var(--_list-fold-color) l c h / 0.18);
 }
 @mixin list-common {

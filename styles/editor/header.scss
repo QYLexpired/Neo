@@ -54,7 +54,7 @@
     right: -40px;
     top: 0px;
     padding: 2px 7px;
-    color: var(--b3-theme-accent);
+    color: var(--b3-theme-primary);
     background-color: oklch(from currentColor l c h / 0.1);
     outline: 0.5px solid oklch(from currentColor l c h / 0.12);
     outline-offset: -0.5px;
@@ -68,7 +68,7 @@
         top: -24px;
     }
     &:hover {
-        color: var(--b3-theme-accent);
+        color: var(--b3-theme-primary);
         background-color: oklch(from currentColor l c h / 0.18);
     }
 }

@@ -203,8 +203,8 @@
     }
 }
 .config-bazaar__update-count {
-    background-color: var(--b3-theme-accent);
-    @include contrast-color(--b3-theme-accent);
+    background-color: var(--b3-theme-primary);
+    @include contrast-color(--b3-theme-primary);
 }
 .config-bazaar__readme .item__side,
 #modelMain .config-bazaar__readme {

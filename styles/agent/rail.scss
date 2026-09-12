@@ -14,7 +14,7 @@
     }
 }
 .agent-chat__nav-rail-marker--active {
-    background-color: var(--b3-theme-accent);
+    background-color: var(--b3-theme-primary);
     .agent-chat__nav-rail--expanded & {
         background-color: var(--b3-list-active);
         &:hover {
