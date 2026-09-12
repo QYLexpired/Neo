@@ -172,7 +172,7 @@
         --b3-font-background#{$i}: oklch(#{$background-l-light} #{$background-c-light} #{$hue});
     }
     --b3-font-color13: oklch(0.6 0 0);
-    --b3-font-background13:oklch(0.93 0 0);
+    --b3-font-background13: oklch(0.93 0 0);
     --b3-font-color14: oklch(#{$font-l-light} #{$font-c-light} 105);
     --b3-font-background14: oklch(#{$background-l-light} #{$background-c-light} 105);
 }
@@ -195,7 +195,7 @@
         --b3-font-background#{$i}: oklch(#{$background-l-dark} #{$background-c-dark} #{$hue});
     }
     --b3-font-color13: oklch(0.75 0 0);
-    --b3-font-background13:oklch(0.4 0 0);
+    --b3-font-background13: oklch(0.4 0 0);
     --b3-font-color14: oklch(#{$font-l-dark} #{$font-c-dark} 105);
     --b3-font-background14: oklch(#{$background-l-dark} #{$background-c-dark} 105);
 }
@@ -207,12 +207,10 @@
     @include dark-color;
     @include dark-font-color;
     &.neo-palette-invert {
-        @include dark-color;
-        @include dark-font-color;
-        --neo-default-background: #1e2227 !important;
-        --neo-default-surface: #282c34 !important;
-        --neo-default-on-background: #e7eaef !important;
-        --neo-default-on-surface: #b1afb8 !important;
+        --neo-default-background: #1e2227;
+        --neo-default-surface: #282c34;
+        --neo-default-on-background: #e7eaef;
+        --neo-default-on-surface: #b1afb8;
         --neo-custom-background: oklch(from var(--neo-custom-base-color) calc(0.25 + 0.1 * var(--neo-brightness, 0)) calc(0.012 * var(--neo-saturation, 1)) h);
         --neo-custom-surface: oklch(from var(--neo-custom-base-color) calc(0.2 + 0.075 * var(--neo-brightness, 0)) calc(0.008 * var(--neo-saturation, 1)) h);
         --neo-custom-on-background: oklch(from var(--neo-custom-base-color) calc(0.96 + 0.015 * var(--neo-brightness, 0)) calc(0.001 * var(--neo-saturation, 1)) h);

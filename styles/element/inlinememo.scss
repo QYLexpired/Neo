@@ -16,9 +16,8 @@
         @include superellipse(0px);
         background-color: var(--neo-inline-memo-color) !important;
         box-shadow: 0 0 0 6px var(--neo-inline-memo-color);
-        @include contrast-color(--neo-inline-memo-color);
-        @include contrast-color(--neo-inline-memo-color, --_inlime-memo-color);
-        color: var(--_inlime-memo-color) !important;
+        @include contrast-color(--neo-inline-memo-color, --_inline-memo-color-hover);
+        color: var(--_inline-memo-color-hover) !important;
         border-color: transparent !important;
     }
 }
