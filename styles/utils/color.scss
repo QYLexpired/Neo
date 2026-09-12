@@ -19,26 +19,24 @@
     --neo-default-background: #ffffff;
     --neo-default-surface: #f1f2ff;
     --neo-default-on-background: #181051;
-    --neo-default-on-surface: #6b668d;
     // custom
     --neo-custom-accent: oklch(from var(--neo-custom-base-color) clamp(0.6, l, 0.68) max(c, 0.25) h);
     --neo-custom-background: oklch(from var(--neo-custom-base-color) calc(0.99 + 0.035 * var(--neo-brightness, 0)) calc(0.005 * var(--neo-saturation, 1)) h);
     --neo-custom-surface: oklch(from var(--neo-custom-base-color) calc(0.96 + 0.05 * var(--neo-brightness, 0)) calc(0.015 * var(--neo-saturation, 1)) h);
     --neo-custom-on-background: oklch(from var(--neo-custom-base-color) calc(0.35 + 0.05 * var(--neo-brightness, 0)) calc(0.025 * var(--neo-saturation, 1)) h);
-    --neo-custom-on-surface: oklch(from var(--neo-custom-on-background) l c h / 0.65);
     // main
     --b3-base-color: var(--neo-custom-base-color, var(--neo-default-base-color));
     --b3-theme-accent: var(--neo-custom-accent, var(--neo-default-accent));
     --b3-theme-background: var(--neo-custom-background, var(--neo-default-background));
     --b3-theme-surface: var(--neo-custom-surface, var(--neo-default-surface));
     --b3-theme-on-background: var(--neo-custom-on-background, var(--neo-default-on-background));
-    --b3-theme-on-surface: var(--neo-custom-on-surface, var(--neo-default-on-surface));
     // derived
     // primary和accent的区别：primary不要求一定是彩色、且作为白色文字的背景色时必须有可读性；accent必须是彩色，亮色模式下亮度与primary接近，而暗色模式可以是很亮的颜色（此时白色文字在上面可能不具有可读性）
     --b3-theme-primary: oklch(from var(--b3-base-color) clamp(0.6, l, 0.68) c h);
     --b3-theme-primary-light: oklch(from var(--b3-theme-primary) l c h / 0.56);
     --b3-theme-primary-lighter: oklch(from var(--b3-theme-primary) l c h / 0.38);
     --b3-theme-primary-lightest: oklch(from var(--b3-theme-primary) l c h / 0.2);
+    --b3-theme-on-surface: oklch(from var(--b3-theme-on-background) l c h / 0.65);
     --b3-theme-background-light: oklch(from var(--b3-theme-background) l c h / 0.1);
     --b3-theme-surface-light: oklch(from var(--b3-theme-surface) l c h / 0.5);
     --b3-theme-surface-lighter: oklch(from var(--b3-theme-surface) 0.9 c h);
@@ -90,25 +88,23 @@
     --neo-default-background: #282c34;
     --neo-default-surface: #1e2227;
     --neo-default-on-background: #e1e4ec;
-    --neo-default-on-surface: #bfbec8;
     // custom
     --neo-custom-accent: oklch(from var(--neo-custom-base-color) clamp(0.68, l, 0.78) max(c, 0.18) h);
     --neo-custom-background: oklch(from var(--neo-custom-base-color) calc(0.2 + 0.075 * var(--neo-brightness, 0)) calc(0.008 * var(--neo-saturation, 1)) h);
     --neo-custom-surface: oklch(from var(--neo-custom-base-color) calc(0.25 + 0.1 * var(--neo-brightness, 0)) calc(0.012 * var(--neo-saturation, 1)) h);
     --neo-custom-on-background: oklch(from var(--neo-custom-base-color) calc(0.97 + 0.015 * var(--neo-brightness, 0)) calc(0.001 * var(--neo-saturation, 1)) h);
-    --neo-custom-on-surface: oklch(from var(--neo-custom-on-background) l c h / 0.65);
     // main
     --b3-base-color: var(--neo-custom-base-color, var(--neo-default-base-color));
     --b3-theme-accent: var(--neo-custom-accent, var(--neo-default-accent));
     --b3-theme-background: var(--neo-custom-background, var(--neo-default-background));
     --b3-theme-surface: var(--neo-custom-surface, var(--neo-default-surface));
     --b3-theme-on-background: var(--neo-custom-on-background, var(--neo-default-on-background));
-    --b3-theme-on-surface: var(--neo-custom-on-surface, var(--neo-default-on-surface));
     // derived
     --b3-theme-primary: oklch(from var(--b3-base-color) clamp(0.68, l, 0.7) c h);
     --b3-theme-primary-light: oklch(from var(--b3-theme-primary) l c h / 0.56);
     --b3-theme-primary-lighter: oklch(from var(--b3-theme-primary) l c h / 0.38);
     --b3-theme-primary-lightest: oklch(from var(--b3-theme-primary) l c h / 0.2);
+    --b3-theme-on-surface: oklch(from var(--b3-theme-on-background) l c h / 0.65);
     --b3-theme-background-light: oklch(from var(--b3-theme-background) l c h / 0.1);
     --b3-theme-surface-light: oklch(from var(--b3-theme-surface) l c h / 0.5);
     --b3-theme-surface-lighter: var(--b3-border-color);
@@ -210,7 +206,6 @@
         --neo-default-background: #1e2227;
         --neo-default-surface: #282c34;
         --neo-default-on-background: #e7eaef;
-        --neo-default-on-surface: #b1afb8;
         --neo-custom-background: oklch(from var(--neo-custom-base-color) calc(0.25 + 0.1 * var(--neo-brightness, 0)) calc(0.012 * var(--neo-saturation, 1)) h);
         --neo-custom-surface: oklch(from var(--neo-custom-base-color) calc(0.2 + 0.075 * var(--neo-brightness, 0)) calc(0.008 * var(--neo-saturation, 1)) h);
         --neo-custom-on-background: oklch(from var(--neo-custom-base-color) calc(0.96 + 0.015 * var(--neo-brightness, 0)) calc(0.001 * var(--neo-saturation, 1)) h);
