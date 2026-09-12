@@ -211,7 +211,10 @@
     top: 50%;
     transform: translateY(-50%);
     bottom: auto;
-    height: 300px;
+}
+.protyle-scroll__bar {
+    top: 50%;
+    transform: translateY(-50%) rotate(90deg);
 }
 .protyle-scroll__up,
 .protyle-scroll__down {

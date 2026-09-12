@@ -33,8 +33,9 @@
         .block__icon,
         .fn__space {
             opacity: 1 !important;
-            animation: none !important;
             display: flex !important;
+            filter: none !important;
+            transform: none !important;
         }
     }
     .block__logo {

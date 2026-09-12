@@ -10,6 +10,7 @@
     opacity: 1;
     transition: var(--b3-transition);
     border-bottom: 1px dashed var(--_ref-underline-color);
+    background-image: unset;
     padding-bottom: 1px;
     &:hover {
         color: var(--_ref-underline-color);

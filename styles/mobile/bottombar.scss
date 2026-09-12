@@ -3,9 +3,7 @@
     --mobile-bottom-bar-offset: 0;
 }
 #mobileBottomBar {
-    margin: 0 12px;
     border-radius: 32px;
-    width: calc(100% - 24px);
     justify-self: center;
     border: unset;
     box-shadow: var(--neo-main-shadow);
