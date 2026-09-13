@@ -12,6 +12,9 @@
         color: var(--b3-theme-on-surface);
     }
 }
+.file-tree__pins {
+    border-color: var(--b3-border-color-trans) !important;
+}
 .layout__dockl,
 .layout__dockr {
     transition: width 0.1s var(--neo-ease-in-out-1);

@@ -4,7 +4,7 @@
     transition: var(--b3-transition);
     text-decoration: none;
     border-bottom: 1px solid var(--b3-theme-accent);
-    padding-bottom: 1px;
+    padding-bottom: 2px;
     &:hover {
         color: var(--b3-theme-accent);
         text-decoration: none;
@@ -16,14 +16,14 @@
     @include neo-link-common;
 }
 a {
-    color: var(--b3-theme-accent);
+    color: inherit;
     transition: var(--b3-transition);
-    text-decoration: none;
+    text-decoration: underline;
+    text-decoration-color: var(--b3-theme-accent);
     &:hover {
-        color: var(--b3-theme-secondary);
-        text-decoration: none;
+        color: var(--b3-theme-accent);
     }
     &.fn__a:hover {
-        color: var(--b3-theme-secondary);
+        color: var(--b3-theme-accent);
     }
 }

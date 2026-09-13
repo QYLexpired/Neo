@@ -33,6 +33,25 @@
         opacity: 1;
     }
 }
+.viewer-navigation > .viewer-prev,
+.viewer-navigation > .viewer-next {
+    transition: var(--b3-transition);
+    background-color: var(--b3-list-hover);
+    color: var(--b3-theme-on-background);
+    &:hover {
+        background-color: var(--b3-list-active);
+        color: var(--b3-theme-on-background);
+    }
+    &:focus {
+        box-shadow: none;
+        background-color: var(--b3-list-active);
+        color: var(--b3-theme-on-background);
+    }
+}
+.viewer-magnifier {
+    box-shadow: var(--neo-main-shadow);
+    border: unset;
+}
 .viewer-footer {
     background-color: oklch(from var(--b3-theme-background) l c h / 0.8)
 }

@@ -30,7 +30,8 @@
     .card__main:not(.fullscreen),
     .card__empty,
     .config-entry-visibility__browser,
-    .config-entry-visibility__column {
+    .config-entry-visibility__column,
+    .template-manager__preview {
         @content;
     }
 }
