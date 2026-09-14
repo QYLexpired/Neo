@@ -31,7 +31,8 @@
     .card__empty,
     .config-entry-visibility__browser,
     .config-entry-visibility__column,
-    .template-manager__preview {
+    .template-manager__preview,
+    .history__snapshot-heading {
         @content;
     }
 }

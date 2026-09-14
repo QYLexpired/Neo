@@ -7,6 +7,9 @@
             margin: 6px auto;
         }
     }
+    .tabs-divider {
+        display: none !important;
+    }
     .tabs-control {
         @include icon;
         margin-left: 9px;
@@ -14,7 +17,6 @@
     .tabs {
         border: unset;
         &[data-tabs-orientation="vertical"] {
-            gap: 12px !important;
             & > .tabs-header {
                 border: unset !important;
                 margin-bottom: 0;
@@ -23,6 +25,7 @@
     }
     .tabs-header {
         margin-bottom: 12px;
+        z-index: 1; // 防止覆盖块标
     }
     .tabs-tab--editing {
         box-shadow: none !important;

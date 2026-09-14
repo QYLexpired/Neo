@@ -1,4 +1,5 @@
 @use "../utils" as *;
+@use "../component" as *;
 .history__resize {
     transition: var(--b3-transition);
     box-shadow: 1px 0 0 0 var(--b3-border-color-trans) inset;
@@ -10,7 +11,6 @@
 .b3-dialog--open[data-key="dialog-historycompare"] {
     .b3-dialog {
         .history__panel>.b3-list,
-        .history__panel>.history__diff,
         .history__text {
             background-color: transparent;
         }
@@ -32,6 +32,19 @@
 }
 .history__compare-label {
     border-bottom: unset;   
+}
+.history__snapshot-toolbar {
+    .b3-button--text {
+        @include button-translucent;
+        &[aria-pressed="true"] {
+            @include button-solid;
+        }
+    }
+}
+.history__snapshot-toolbar,
+.history__snapshot-sources
+.history__snapshot-heading {
+    border-color: var(--b3-border-color-trans);
 }
 // diff
 .history__diff-filter-row--kind {
