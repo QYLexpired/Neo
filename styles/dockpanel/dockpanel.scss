@@ -14,20 +14,13 @@
 }
 .file-tree__pins {
     border: unset !important;
-    overflow: visible;
-    & > .b3-list--background {
-        position: relative;
-        &::after {
-            content: "";
-            position: absolute;
-            background-color: var(--b3-border-color-trans);
-            width: var(--_file-tree__pins-separator-width, calc(100% - 24px));
-            height: 1px;
-            bottom: -10px;
-            left: 50%;
-            transform: translateX(-50%);
-            pointer-events: none;
-        }
+    padding-bottom: 2px;
+    margin-bottom: 0;
+    &:not(.fn__none) + .fn__flex-1 {
+        border-top: 0.5px solid var(--b3-border-color-trans);
+    }
+    & + .fn__flex-1 + .b3-list.fn__flex-column { // 已关闭的笔记本
+        border-top: 0.5px solid var(--b3-border-color-trans) !important;
     }
 }
 .layout__dockl,

@@ -2,8 +2,9 @@
 :root {
     --_indentline-color: var(--b3-border-color-trans);
 }
+.file-tree,
 .file-tree > .fn__flex-1,
-.file-tree__pins {
+.file-tree .file-tree__pins {
     & > ul {
         & > .b3-list-item {
             margin-inline-start: 6px;
@@ -94,4 +95,8 @@
           $selector: "#{$selector} > ul";
         }
     }
+}
+// 已关闭的笔记本
+.file-tree > ul > ul > .b3-list-item > .b3-list-item__toggle {
+    padding-left: 18px !important;
 }
