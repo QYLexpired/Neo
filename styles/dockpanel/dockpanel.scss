@@ -19,7 +19,7 @@
     &:not(.fn__none) + .fn__flex-1 {
         border-top: 0.5px solid var(--b3-border-color-trans);
     }
-    & + .fn__flex-1 + .b3-list.fn__flex-column { // 已关闭的笔记本
+    & ~ ul { // 已关闭的笔记本
         border-top: 0.5px solid var(--b3-border-color-trans) !important;
     }
 }

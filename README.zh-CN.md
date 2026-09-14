@@ -5,6 +5,7 @@
 完整更新历史可查看[CHANGELOG](https://github.com/QYLexpired/Neo/blob/main/CHANGELOG.md)
 - 简化主题颜色模型
 - 适配置顶文档树
+- 已关闭的笔记本区域添加引导线
 - 移除块折叠动效
 - 彩色标题支持配置大纲是否跟随着色
 - 适配反向链接样式
