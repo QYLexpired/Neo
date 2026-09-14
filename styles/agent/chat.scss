@@ -10,7 +10,7 @@
     @include superellipse-use(12px);
     padding: 0;
     .protyle-wysiwyg {
-        padding: 4px 8px;
+        padding: 4px 8px !important; 
     }
 }
 .agent-chat__buttons {
@@ -25,10 +25,10 @@
     @include superellipse-use(12px);
     padding: 0;
     &.protyle-wysiwyg {
-        padding: 4px 12px;
+        padding: 4px 12px !important;
     }
     .protyle-wysiwyg {
-        padding: 4px 12px;
+        padding: 4px 12px !important;
     }
 }
 // 交互框

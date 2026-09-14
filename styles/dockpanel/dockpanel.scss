@@ -13,7 +13,22 @@
     }
 }
 .file-tree__pins {
-    border-color: var(--b3-border-color-trans) !important;
+    border: unset !important;
+    overflow: visible;
+    & > .b3-list--background {
+        position: relative;
+        &::after {
+            content: "";
+            position: absolute;
+            background-color: var(--b3-border-color-trans);
+            width: var(--_file-tree__pins-separator-width, calc(100% - 24px));
+            height: 1px;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            pointer-events: none;
+        }
+    }
 }
 .layout__dockl,
 .layout__dockr {
