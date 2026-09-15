@@ -48,11 +48,6 @@ $switch-width: 36px;
             }
         }
     }
-    &:focus,
-    &:focus-visible {
-        outline: unset;
-        transform: scale(1.25);
-    }
     .neo-mode-dark & {
         box-shadow: inset 0 0 0 1px oklch(from var(--b3-theme-on-background) l c h / 0.12);
         &:checked {
