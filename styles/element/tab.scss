@@ -1,36 +1,134 @@
 @use "../utils" as *;
 @use "../component" as *;
-.protyle-wysiwyg,
-.b3-typography {
-    .tabs-list[aria-orientation="vertical"] {
-        & + .tabs-control {
-            margin: 6px auto;
+.protyle-wysiwyg .tabs[data-node-id][data-tabs-ready=true],
+.b3-typography .tabs[data-node-id][data-tabs-ready=true] {
+    border: unset;
+    & > .tabs-header {
+        border-radius: 0;
+        scrollbar-width: none;
+        @include overflow-indicator-fadein-mask($fadeout-size-l, "left right");
+        padding: 0;
+        min-height: 42px;
+        border: unset;
+        &::before,
+        &::after {
+            display: none;
+        }
+        @at-root {
+            .protyle-wysiwyg .tabs[data-node-id][data-tabs-ready=true],
+            .b3-typography .tabs[data-node-id][data-tabs-ready=true] {
+                &[data-tabs-orientation="horizontal"] {
+                    & > .tabs-header {
+                        @include overflow-indicator-fadein-mask($fadeout-size-l, "left right");
+                        margin-bottom: 6px;
+                    }
+                }
+                &.protyle-wysiwyg--hl,
+                &.protyle-wysiwyg--select {
+                    & > .tabs-header {
+                        background-color: transparent;
+                    }
+                }
+            }
+        }
+        @at-root {
+            .protyle-wysiwyg .tabs[data-node-id][data-tabs-ready=true],
+            .b3-typography .tabs[data-node-id][data-tabs-ready=true] {
+                &[data-tabs-orientation="vertical"] {
+                    & > .tabs-header {
+                        margin-right: 12px;
+                    }
+                }
+            }
+        }
+    }
+    .tabs-tab {
+        @include superellipse-use(8px);
+        margin: 6px 3px;
+        background-color: transparent;
+        min-height: 30px;
+        color: var(--b3-theme-on-surface);
+        transition: var(--b3-transition);
+        position: relative;
+        &.tabs-tab--editing {
+            box-shadow: none;
+            background-color: transparent;
+        }
+        @at-root {
+            .protyle-wysiwyg .tabs[data-node-id][data-tabs-ready=true],
+            .b3-typography .tabs[data-node-id][data-tabs-ready=true] {
+                &[data-tabs-orientation="vertical"] {
+                    .tabs-tab {
+                        margin: 3px 6px;
+                        &:first-child {
+                            margin-top: 6px;
+                        }
+                        &:last-child {
+                            margin-bottom: 6px;
+                        }
+                        &::before {
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+        &:hover {
+            background-color: transparent;
+            color: var(--b3-theme-on-background);
+        }
+        &:first-child {
+            margin-left: 6px;
+            &::before {
+                opacity: 0;
+            }
+        }
+        &:last-child {
+            margin-right: 6px;
+        }
+        &[aria-selected=true] {
+            background-color: oklch(from var(--b3-theme-background) l c h / 0.7);
+            box-shadow: var(--neo-main-shadow);
+            color: var(--b3-theme-on-background);
+            animation: neo-tab-focus 0.2s var(--neo-ease-out-2);
+            &::before {
+                opacity: 0;
+            }
+            & + .tabs-tab::before {
+                opacity: 0;
+            }
+        }
+        &::before {
+            content: "";
+            position: absolute;
+            left: -3.5px;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: var(--b3-border-color-trans);
+            height: calc(100% - 8px);
+            width: 1px;
+            pointer-events: none;
+            transition: var(--b3-transition);
+        }
+    }
+    .tabs-control {
+        @include icon;
+        margin-left: 9px;
+        @at-root {
+            .protyle-wysiwyg .tabs[data-node-id][data-tabs-ready=true],
+            .b3-typography .tabs[data-node-id][data-tabs-ready=true] {
+                &[data-tabs-orientation="vertical"] {
+                    .tabs-control {
+                        margin: 0 auto;
+                    }
+                }
+            }
         }
     }
     .tabs-divider {
         display: none !important;
     }
-    .tabs-control {
-        @include icon;
-        margin-left: 9px;
-    }
-    .tabs {
-        border: unset;
-        &[data-tabs-orientation="vertical"] {
-            & > .tabs-header {
-                border: unset !important;
-                margin-bottom: 0;
-            }
-        }
-    }
-    .tabs-header {
-        margin-bottom: 12px;
-    }
-    .tabs-tab--editing {
-        box-shadow: none !important;
-        background-color: transparent !important;
-    }
-    .tab-item {
+    & > .tab-item {
         @include superellipse-use(10px);
         background-color: oklch(from var(--b3-theme-on-background) l c h / 0.05);
         padding: 6px 12px;
@@ -40,8 +138,8 @@
         background-color: var(--b3-theme-background) !important;
         animation: neo-input-focus-ring 0.2s var(--neo-ease-out-3) forwards;
         clip-path: unset !important; //覆盖内联
-        .tab-item-title[spellcheck] {
-            min-height: unset;
+        [neo-focusblock]::before {
+            display: none;
         }
     }
 }

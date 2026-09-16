@@ -62,13 +62,26 @@
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
 }
-.av__new {
+.av__new,
+.av__views--mobile > .av__mobile-view {
     @include superellipse(7px);
     outline: 1px solid var(--b3-border-color-trans);
     outline-offset: -1px;
     .b3-button {
         @include button-transparent-hover-translucent;
         border-color: var(--b3-border-color-trans) !important;
+    }
+    @at-root {
+        .av__views--mobile > .av__mobile-view {
+            padding: 0 0.25em 0 0.5em;
+            min-height: 24px;
+            .fn__ellipsis {
+                min-height: 24px;
+                line-height: 24px;
+                border-right: 1px solid var(--b3-border-color-trans);
+                padding-right: 0.25em;
+            }
+        }
     }
 }
 // cell

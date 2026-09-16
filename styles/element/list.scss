@@ -1,6 +1,8 @@
+@use "sass:string";
+@use "sass:list";
 :root {
     --_list-action-color: var(--b3-theme-on-surface);
-    --_list-fold-color: var(--b3-theme-primary);
+    --_list-fold-color: var(--b3-theme-accent);
     --_list-fold-bg: oklch(from var(--_list-fold-color) l c h / 0.18);
 }
 @mixin list-common {
@@ -76,6 +78,7 @@
     position: absolute;
     width: 1.2em;
     height: 1.2em;
+    font-size: inherit !important;
     background-color: var(--_list-action-color, var(--b3-theme-on-surface));
     mask-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024"><path d="M512 903.110656c216.004608 0 391.110656-175.106048 391.110656-391.110656S728.004608 120.889344 512 120.889344 120.889344 295.995392 120.889344 512 295.995392 903.110656 512 903.110656z m0 64C260.64896 967.110656 56.889344 763.35104 56.889344 512S260.64896 56.889344 512 56.889344 967.110656 260.64896 967.110656 512 763.35104 967.110656 512 967.110656z"/></svg>');
     -webkit-mask-repeat: no-repeat;
@@ -83,18 +86,40 @@
     -webkit-mask-size: 100% 100%;
     mask-size: 100% 100%;
     top: 50%;
-    transform: translateY(-50%);
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%) !important;
     vertical-align: unset;
+}
+.tabs-task::before {
+    left: unset;
+    transform: translateY(-50%) !important;
 }
 .protyle-wysiwyg .li[data-subtype=t].protyle-task--done > .protyle-action--task::before,
 .tabs-task[aria-checked="true"]::before {
-    background-color: var(--_list-fold-color, var(--b3-theme-primary));
+    background-color: var(--_list-fold-color, var(--b3-theme-accent));
     mask-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024"><path d="M512.45568 57.344c251.35104 0 455.11168 203.76064 455.11168 455.11168 0 251.35104-203.76064 455.11168-455.11168 455.11168C261.10464 967.56736 57.344 763.80672 57.344 512.45568 57.344 261.10464 261.10464 57.344 512.45568 57.344z m272.444416 288.876544c-5.842944-5.445632-16.21504-5.953536-22.995968-1.074176l-0.315392 0.232448-301.232128 228.097024c-5.515264 4.176896-15.601664 4.72064-21.655552 1.186816l-0.320512-0.193536-113.998848-71.015424c-7.031808-4.380672-16.93696-2.89792-22.390784 3.219456l-0.24576 0.2816-13.169664 15.497216c-5.553152 6.53312-4.62848 15.625216 1.519616 21.586944l0.27136 0.258048 140.93312 131.342336c10.247168 9.550848 26.529792 10.051584 36.615168 0.9728l0.313344-0.28672 323.310592-301.310976c6.679552-6.223872 7.225344-15.606784 1.036288-21.63712l-0.254976-0.241664-7.419904-6.915072z"/></svg>');
 }
-.protyle-task--done > div[data-node-id].p {
-    color: currentColor;
-    text-decoration: unset;
-    opacity: 0.38;
+// 进行中
+.protyle-wysiwyg .li[data-subtype=t].protyle-task--done[data-task="/"] > .protyle-action--task,
+.tabs-task[data-task="/"] {
+    --_list-fold-color: oklch(from var(--b3-theme-accent) l c 60);
+    &::before {
+        mask-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="-64 -64 1152 1152"><path d="M512 1024C229.241263 1024 0 794.758737 0 512S229.241263 0 512 0s512 229.241263 512 512-229.241263 512-512 512z m202.058-375.176l-132.634947-101.456842V225.010526a44.005053 44.005053 0 0 0-88.010106 0v346.408421l192.599 147.306a44.005053 44.005053 0 0 0 53.463579-69.901474z"/></svg>');
+    }
+    &::after {
+        --_list-fold-bg: oklch(from var(--_list-fold-color) l c h / 0.18); // 重置作用域
+    }
+}
+// 放弃
+.protyle-wysiwyg .li[data-subtype=t].protyle-task--done[data-task="-"] > .protyle-action--task,
+.tabs-task[data-task="-"] {
+    --_list-fold-color: oklch(from var(--b3-theme-accent) l c 15);
+    &::before {
+        mask-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="32 32 960 960"><path d="M512 85.333333C277.333333 85.333333 85.333333 277.333333 85.333333 512s192 426.666667 426.666667 426.666667 426.666667-192 426.666667-426.666667S746.666667 85.333333 512 85.333333z m170.666667 469.333334H341.333333c-25.6 0-42.666667-17.066667-42.666666-42.666667s17.066667-42.666667 42.666666-42.666667h341.333334c25.6 0 42.666667 17.066667 42.666666 42.666667s-17.066667 42.666667-42.666666 42.666667z"/></svg>');
+    }
+    &::after {
+        --_list-fold-bg: oklch(from var(--_list-fold-color) l c h / 0.18);
+    }
 }
 .protyle-wysiwyg .li[data-subtype=t] > .protyle-action--task {
     &::before {
@@ -109,17 +134,94 @@
 }
 @keyframes neo-task-entrance {
     from {
-        transform: scale(1.2) translateY(-50%);
+        scale: 1.2;
     }
     to {
-        transform: scale(1) translateY(-50%);
+        scale: 1;
     }
 }
 @keyframes neo-task-done-entrance {
     from {
-        transform: scale(1.2) translateY(-50%);
+        scale: 1.2;
     }
     to {
-        transform: scale(1) translateY(-50%);
+        scale: 1;
+    }
+}
+// 自定义任务状态
+.protyle-wysiwyg .li[data-subtype="t"][data-task]  {
+    &:not([data-task=" "]):not([data-task="x"]):not([data-task="X"]):not([data-task="/"]):not([data-task="-"]) {
+        & > .protyle-action--task {
+            & > svg {
+                width: 1.125em;
+                height: 1.125em;
+                background-color: var(--_list-fold-color, var(--b3-theme-accent));
+                border-radius: 50%;
+                mask: none;
+            }
+            &::before {
+                content: var(--task-marker, attr(data-task)) !important;
+                width: 1.125em;
+                height: 1.125em;
+                display: grid;
+                place-items: center;
+                line-height: 1;
+                box-sizing: border-box;
+                mask: none;
+                color: var(--b3-theme-background);
+                background-color: transparent;
+                font-size: 0.9em !important;
+                font-family: inherit !important;
+                top: 50%;
+                left: 50%;
+                transform: translateX(-50%) translateY(-50%) !important;
+                z-index: 2;
+            }
+        }
+    }
+}
+.protyle-wysiwyg .tabs-task--custom {
+    position: relative;
+    &::before {
+        content: none !important;
+    }
+    & > svg {
+        width: 1.2em;
+        height: 1.2em;
+        background-color: var(--_list-fold-color, var(--b3-theme-accent));
+        border-radius: 50%;
+        mask: none;
+    }
+    & > span {
+        width: 1.335em;
+        height: 1.335em;
+        display: grid;
+        place-items: center;
+        line-height: 1;
+        box-sizing: border-box;
+        color: var(--b3-theme-background);
+        background-color: transparent;
+        font-size: 0.9em;
+        font-family: inherit;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translateX(-50%) translateY(-50%) !important;
+        z-index: 2;
+    }
+}
+$neo-custom-task-codes: string.split(
+    "21 22 23 24 25 26 27 28 29 2a 2b 2c 2e 30 31 32 33 34 35 36 37 38 39 3a 3b 3c 3d 3e 3f 40 41 42 43 44 45 46 47 48 49 4a 4b 4c 4d 4e 4f 50 51 52 53 54 55 56 57 59 5a 5c 5e 5f 60 61 62 63 64 65 66 67 68 69 6a 6b 6c 6d 6e 6f 70 71 72 73 74 75 76 77 79 7a 7b 7c 7d 7e",
+    " "
+);
+@for $i from 1 through list.length($neo-custom-task-codes) {
+    $code: list.nth($neo-custom-task-codes, $i);
+    $hue: (($i - 1) * 137.508) % 360;
+    .protyle-wysiwyg .li[data-subtype="t"][data-task="#{'\\'}#{$code}"] > .protyle-action--task,
+    .tabs-task[data-task="#{'\\'}#{$code}"] {
+        --_list-fold-color: oklch(0.68 0.16 #{$hue});
+        &::after {
+            --_list-fold-bg: oklch(from var(--_list-fold-color) l c h / 0.18);
+        }
     }
 }

@@ -6,7 +6,9 @@
 .config__panel .config__tab-container .layout-tab-bar {
     padding: 0;
 }
-.config__tab-title {
+.config__panel > .config__side .config__tab-title {
+    margin: -16px -20px 0;
+    padding: 0 0 0 20px;
     font-weight: bold;
     font-size: 16px;
     .b3-list-item__graphic {
@@ -92,10 +94,43 @@
         pointer-events: all;
         transition: 0.2s var(--neo-ease-out-3);
     }
-    .b3-dialog__header .block__logo {
-        .block__logoicon {
-            width: 18px;
-            height: 18px;
+    .b3-dialog__header {
+        padding: 0;
+        & + .b3-dialog__body {
+            padding-top: 24px;
+        }
+        .block__logo {
+            margin: 0;
+            padding: 0;
+            font-size: 16px;
+            position: absolute;
+            left: 16px;
+            top: 16px;
+            box-shadow: var(--neo-main-shadow);
+            border-radius: 50%;
+            width: 32px;
+            height: 32px;
+            justify-content: center;
+            z-index: 1;
+            color: var(--b3-theme-on-surface);
+            background-color: var(--b3-theme-background);
+            @include frostedglass-tooltip;
+            transition: var(--b3-transition), 0.65s var(--neo-ease-spring-4);
+            &:hover {
+                color: var(--b3-theme-on-background);
+                scale: 1.12;
+            }
+            &:active {
+                transform: scale(0.95);
+                transition: var(--b3-transition), transform 0.15s var(--neo-ease-out-3);
+            }
+            .block__logoicon {
+                margin: 0;
+                padding: 0;
+            }
+            .ft__breakword {
+                display: none;
+            }
         }
     }
 }
