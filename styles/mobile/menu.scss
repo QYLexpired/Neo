@@ -62,7 +62,8 @@
             &:not(.b3-menu__title--root) {
                 border-radius: inherit;
                 corner-shape: inherit;
-                background-color: transparent;
+                background-color: var(--b3-menu-background);
+                @include frostedglass-menu;
             }
         }
         .b3-menu__submenu {

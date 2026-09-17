@@ -30,6 +30,9 @@
         color: var(--b3-theme-on-background);
     }
 }
+#model .mobile-tabs__close {
+    @include icon;
+}
 #sidebar > .toolbar > .toolbar__icon,
 #sidebarRight > .toolbar > .toolbar__icon,
 #menu > .b3-menu__title > .b3-menu__icon,
