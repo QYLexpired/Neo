@@ -3,14 +3,23 @@
 - Neo draws heavily on the design and ideas of the [Asri theme](https://github.com/mustakshif/Asri). A huge thank you to [mustakshif](https://github.com/mustakshif) — without your impeccable taste, technical skill, and astonishing creativity, Neo would never have come to be.
 ## Changelog
 See the [CHANGELOG](https://github.com/QYLexpired/Neo/blob/main/CHANGELOG.md) for the full update history.
-- The random pool for Random Color now supports free combination, and the Freeform Palette color library can be used as the random pool
-- Optimized the display behavior of the smooth caret
-- Optimized the response speed of the Focus Block Indicator
-- Optimized the response speed of list bullet lines
-- Document titles and body headings no longer use the accent color
-- Colored Headings, Colored Lists, and Colored Document Tree can be pinned to the accent color
-- Adapted to SiYuan 3.8.4 mobile styles
-- Optimized the layout and interaction of some Neo+ configuration dialogs
+- Adapted to SiYuan 3.8.4
+    - Added support for pinned document trees
+    - Added support for the new task list checkboxes
+        - Added In Progress and Abandoned styles
+        - Added custom status styles that adapt their color automatically
+    - Added support for the new Data History interface
+    - Adapted link styles
+- Streamlined the theme color model
+- Unified the mobile back button style
+- Added guide lines to closed notebooks
+- Removed the block folding animation
+- Removed the editor fade-in animation
+- Colored Headings can now optionally color the outline too
+- Improved list bullet line performance
+- Fixed Focus Block Indicator glitches on table blocks
+- Focus Block Indicator now supports block filtering
+- Fixed dynamic scrollbar misalignment on mobile
 ## Notes
 - Some of the theme's styles and features cannot be implemented with CSS alone, so the companion plugin [Neo+](https://github.com/QYLexpired/Neo-Plus) **MUST** be installed and enabled.
 - For any questions or suggestions during use, please visit the [Neo Theme Introduction & Feedback Thread](https://ld246.com/article/1783158376401) or [GitHub](https://github.com/QYLexpired/Neo/issues)

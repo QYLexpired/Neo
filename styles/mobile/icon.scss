@@ -67,6 +67,7 @@
 }
 .neo-mobile .config__view .b3-dialog__header .block__logo,
 #model .config--mobile .config-bazaar__readme .item__header {
+    width: 32px;
     height: 32px;
     min-height: 32px;
     top: 8px;
@@ -77,6 +78,6 @@
     }
     &:active {
         transform: scale(1.2);
-        transition: var(--b3-transition), 0.65s var(--neo-ease-spring-4);
+        transition: var(--b3-transition), 0.65s var(--neo-ease-spring-3);
     }
 }

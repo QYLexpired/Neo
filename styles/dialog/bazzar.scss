@@ -88,6 +88,8 @@
     @include superellipse-use(18px);
     overflow: hidden;
     .item__header {
+        top: 12px;
+        left: 12px;
         margin: 0;
         padding: 0;
         font-size: 16px;
@@ -101,7 +103,7 @@
         color: var(--b3-theme-on-surface);
         background-color: var(--b3-theme-background);
         @include frostedglass-tooltip;
-        transition: var(--b3-transition), 0.65s var(--neo-ease-spring-4);
+        transition: var(--b3-transition), 0.65s var(--neo-ease-spring-3);
         &:hover {
             color: var(--b3-theme-on-background);
             scale: 1.12;
@@ -111,7 +113,7 @@
             transition: var(--b3-transition), transform 0.15s var(--neo-ease-out-3);
         }
         .b3-list-item__text {
-            display: none;
+            display: none;;
         }
         .b3-list-item__graphic {
             margin: 0;

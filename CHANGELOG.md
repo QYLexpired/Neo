@@ -1,3 +1,38 @@
+### v1.6.3 / 2026-09-17
+- 适配思源3.8.4
+    - 适配置顶文档树
+    - 适配新版任务列表复选框
+        - 新增进行中、放弃样式
+        - 新增自定义状态样式并自动变色
+    - 适配新版数据历史界面
+    - 适配链接样式
+- 简化主题颜色模型
+- 统一移动端返回键样式
+- 已关闭的笔记本区域添加引导线
+- 移除块折叠动效
+- 移除编辑器缓入动效
+- 彩色标题支持配置大纲是否跟随着色
+- 优化列表子弹线的性能
+- 修复聚焦块指示在表格块上的异常
+- 聚焦块指示支持块过滤
+- 修复移动端动态滚动条错位
+- Adapted to SiYuan 3.8.4
+    - Added support for pinned document trees
+    - Added support for the new task list checkboxes
+        - Added In Progress and Abandoned styles
+        - Added custom status styles that adapt their color automatically
+    - Added support for the new Data History interface
+    - Adapted link styles
+- Streamlined the theme color model
+- Unified the mobile back button style
+- Added guide lines to closed notebooks
+- Removed the block folding animation
+- Removed the editor fade-in animation
+- Colored Headings can now optionally color the outline too
+- Improved list bullet line performance
+- Fixed Focus Block Indicator glitches on table blocks
+- Focus Block Indicator now supports block filtering
+- Fixed dynamic scrollbar misalignment on mobile
 ### v1.6.2 / 2026-09-12
 - 随机配色的随机池支持自由组合，并支持将自由配色的配色库作为随机池
 - 优化平滑光标显示行为
