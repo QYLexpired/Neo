@@ -3,19 +3,6 @@
 .protyle {
     background-color: transparent;
 }
-.protyle:not(.fn__none) .protyle-content {
-    animation: neo-protyle-entrance 0.3s var(--neo-ease-out-3);
-}
-@keyframes neo-protyle-entrance {
-    0% {
-        opacity: 0;
-        transform: translateY(-1.5%);
-    }
-    100% {
-        opacity: 1;
-        transform: none;
-    }
-}
 .fullscreen {
     background-color: var(--b3-theme-background);
     @include frostedglass($blur: l, $color: background, $scope: global);

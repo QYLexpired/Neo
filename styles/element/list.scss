@@ -158,6 +158,7 @@
                 background-color: var(--_list-fold-color, var(--b3-theme-accent));
                 border-radius: 50%;
                 mask: none;
+                transition: var(--b3-transition);
             }
             &::before {
                 content: var(--task-marker, attr(data-task)) !important;
@@ -169,7 +170,7 @@
                 box-sizing: border-box;
                 mask: none;
                 color: var(--b3-theme-background);
-                background-color: transparent;
+                background-color: transparent !important; // 覆盖彩色列表
                 font-size: 0.9em !important;
                 font-family: inherit !important;
                 top: 50%;
@@ -191,6 +192,7 @@
         background-color: var(--_list-fold-color, var(--b3-theme-accent));
         border-radius: 50%;
         mask: none;
+        transition: var(--b3-transition);
     }
     & > span {
         width: 1.335em;

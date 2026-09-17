@@ -301,7 +301,4 @@
 }
 .av__richtext-editor {
     @include menu-container-common;
-    .protyle-content {
-        animation: none !important;
-    }
 }
