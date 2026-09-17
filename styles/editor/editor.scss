@@ -13,6 +13,7 @@
     transition: var(--b3-transition);
     @include superellipse(18px);
     box-shadow: var(--neo-main-shadow);
+    mix-blend-mode: luminosity;
 }
 .protyle-icon {
     padding: 6px;

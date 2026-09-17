@@ -20,13 +20,6 @@
             background-color: #ffffff;
             box-shadow: none;
             scale: 1.2;
-            @at-root { // 修复mix-blend-mode引起的backdrop-filter失效
-                .b3-typography .img>span:nth-child(2),
-                .protyle-wysiwyg .img>span:nth-child(2),
-                .table__cell-rich .img>span:nth-child(2) {
-                    z-index: 1;
-                }
-            }
         }
     }
 }

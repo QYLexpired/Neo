@@ -44,6 +44,9 @@
     .neo-frostedglass-global & {
         background-color: transparent;
         box-shadow: var(--b3-dialog-shadow-blur);
+        .b3-dialog__body {
+            isolation: isolate; // 修复内部元素mix-blend-mode导致blur失效的问题
+        }
     }
     &::before {
         @include frostedglass-before($scope: global);

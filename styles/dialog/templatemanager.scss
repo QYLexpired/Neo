@@ -1,18 +1,25 @@
-.template-manager__files {
+.template-manager__files,
+.skill-manager__files {
     & > .b3-list-item {
         margin: 4px 0;
         min-height: auto;
-        .template-manager__toggle {
-            height: auto;
-        }
-        .template-manager__file {
-            min-height: auto;
+        @at-root {
+            .template-manager__toggle,
+            .skill-manager__toggle {
+                height: auto;
+            }
+            .template-manager__file,
+            .skill-manager__file {
+                min-height: auto;
+            }
         }
     }
 }
-.template-manager__sidebar {
+.template-manager__sidebar,
+.skill-manager__sidebar {
     border-color: var(--b3-border-color-trans);
 }
-.template-manager__editor {
+.template-manager__editor,
+.skill-manager__editor {
     padding: 0 4px;
 }
