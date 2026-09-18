@@ -3,6 +3,10 @@
 - Neo主题大量参考了[Asri主题](https://github.com/mustakshif/Asri)的设计和创意，非常感谢[mustakshif](https://github.com/mustakshif)，没有你超强的审美、技术力和让人惊叹的创意，就不会有Neo的出现
 ## 更新日志
 完整更新历史可查看[CHANGELOG](https://github.com/QYLexpired/Neo/blob/main/CHANGELOG.md)
+### v1.6.4
+- 超级融合的面包屑随题头图消失而动态缓入
+- 优化超级融合的渐进模糊参数
+### v1.6.3
 - 适配思源3.8.4
     - 适配置顶文档树
     - 适配新版任务列表复选框
