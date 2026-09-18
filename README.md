@@ -3,6 +3,11 @@
 - Neo draws heavily on the design and ideas of the [Asri theme](https://github.com/mustakshif/Asri). A huge thank you to [mustakshif](https://github.com/mustakshif) — without your impeccable taste, technical skill, and astonishing creativity, Neo would never have come to be.
 ## Changelog
 See the [CHANGELOG](https://github.com/QYLexpired/Neo/blob/main/CHANGELOG.md) for the full update history.
+### v1.6.4
+- Super Fusion's breadcrumbs now ease in dynamically as the banner image disappears
+- Removed Super Fusion's banner image fade-out effect
+- Tuned Super Fusion's progressive blur parameters
+### v1.6.3
 - Adapted to SiYuan 3.8.4
     - Added support for pinned document trees
     - Added support for the new task list checkboxes

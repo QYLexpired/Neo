@@ -1,3 +1,10 @@
+### v1.6.4 / 2026-09-18
+- 超级融合的面包屑随题头图消失而动态缓入
+- 移除超级融合的题头图渐隐效果
+- 优化超级融合的渐进模糊参数
+- Super Fusion's breadcrumbs now ease in dynamically as the banner image disappears
+- Removed Super Fusion's banner image fade-out effect
+- Tuned Super Fusion's progressive blur parameters
 ### v1.6.3 / 2026-09-17
 - 适配思源3.8.4
     - 适配置顶文档树

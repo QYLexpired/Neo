@@ -3,6 +3,11 @@
 - Neo 主題大量參考了 [Asri 主題](https://github.com/mustakshif/Asri) 的設計和創意，非常感謝 [mustakshif](https://github.com/mustakshif)，沒有你超強的審美、技術力和令人驚嘆的創意，就不會有 Neo 的出現
 ## 更新日誌
 完整更新紀錄可於 [CHANGELOG](https://github.com/QYLexpired/Neo/blob/main/CHANGELOG.md) 查看
+### v1.6.4
+- 超級融合的麵包屑隨題頭圖消失而動態緩入
+- 移除超級融合的題頭圖漸隱效果
+- 最佳化超級融合的漸進模糊參數
+### v1.6.3
 - 適配思源 3.8.4
     - 支援置頂文件樹
     - 支援新版任務列表核取方塊
