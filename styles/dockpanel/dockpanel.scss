@@ -59,3 +59,6 @@
         transition: 0.3s var(--neo-ease-out-3) !important;
     }
 }
+.file-tree__item--icon-expand > .b3-list-item__icon::before {
+    display: none !important;
+}

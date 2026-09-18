@@ -5,6 +5,7 @@
 完整更新历史可查看[CHANGELOG](https://github.com/QYLexpired/Neo/blob/main/CHANGELOG.md)
 ### v1.6.4
 - 超级融合的面包屑随题头图消失而动态缓入
+- 移除超级融合的题头图渐隐效果
 - 优化超级融合的渐进模糊参数
 ### v1.6.3
 - 适配思源3.8.4
