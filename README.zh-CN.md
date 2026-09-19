@@ -3,6 +3,9 @@
 - Neo主题大量参考了[Asri主题](https://github.com/mustakshif/Asri)的设计和创意，非常感谢[mustakshif](https://github.com/mustakshif)，没有你超强的审美、技术力和让人惊叹的创意，就不会有Neo的出现
 ## 更新日志
 完整更新历史可查看[CHANGELOG](https://github.com/QYLexpired/Neo/blob/main/CHANGELOG.md)
+### v1.6.5
+- 在自由配色的参考配色库中加入QYL主题的配色
+- 添加主菜单按钮的渐变收敛动效
 ### v1.6.4
 - 超级融合的面包屑随题头图消失而动态缓入
 - 移除超级融合的题头图渐隐效果

@@ -111,19 +111,41 @@
             max-width: fit-content;
             background-clip: text;
             background-size: 200% 100%;
-            background-image: linear-gradient(120deg, var(--b3-theme-on-surface) 30%, white 50%, var(--b3-theme-on-surface) 70%);
+            background-image: linear-gradient(in oklch to right,
+                oklch(from var(--b3-theme-on-surface) calc(l - 0.06) c h) 8%,
+                oklch(from var(--b3-theme-on-surface) calc(l - 0.03) c h) 22%,
+                oklch(from var(--b3-theme-on-surface) calc(l + 0.08) c h) 34%,
+                oklch(from var(--b3-theme-on-surface) calc(l + 0.24) c h) 43%,
+                oklch(from var(--b3-theme-on-surface) calc(l + 0.55) c h) 50%,
+                oklch(from var(--b3-theme-on-surface) calc(l + 0.24) c h) 57%,
+                oklch(from var(--b3-theme-on-surface) calc(l + 0.08) c h) 66%,
+                oklch(from var(--b3-theme-on-surface) calc(l - 0.03) c h) 78%,
+                oklch(from var(--b3-theme-on-surface) calc(l - 0.06) c h) 92%
+            );
             -webkit-text-fill-color: transparent;
             color: transparent;
-            animation: neo-agent-thinking 0.65s linear infinite;
+            animation: neo-agent-thinking 0.8s linear infinite;
+            .neo-mode-dark & {
+                background-image: linear-gradient(in oklch to right,
+                    oklch(from var(--b3-theme-on-surface) calc(l - 0.36) c h) 20%,
+                    oklch(from var(--b3-theme-on-surface) calc(l - 0.24) c h) 36%,
+                    oklch(from var(--b3-theme-on-surface) calc(l - 0.12) c h) 44%,
+                    oklch(from var(--b3-theme-on-surface) calc(l + 0.95) c h) 48%,
+                    oklch(from var(--b3-theme-on-surface) calc(l + 0.95) c h) 52%,
+                    oklch(from var(--b3-theme-on-surface) calc(l - 0.12) c h) 56%,
+                    oklch(from var(--b3-theme-on-surface) calc(l - 0.24) c h) 64%,
+                    oklch(from var(--b3-theme-on-surface) calc(l - 0.36) c h) 80%
+                );
+            }
         }
     }
 }
 @keyframes neo-agent-thinking {
     0% {
-        background-position: 100%
+        background-position: 100%;
     }
     100% {
-        background-position: -100%
+        background-position: -100%;
     }
 }
 .agent-chat__thinking-header {
