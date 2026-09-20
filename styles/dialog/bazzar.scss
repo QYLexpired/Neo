@@ -64,15 +64,15 @@
         &.b3-card--current,
         &:hover {
             box-shadow: unset;
-            outline-color: oklch(from var(--b3-base-color) clamp(0, l, 0.8) c h / 0.3);
-            background-color: oklch(from var(--b3-base-color) clamp(0, l, 0.8) c h / 0.12);
+            outline-color: oklch(from var(--b3-theme-base) clamp(0, l, 0.8) c h / 0.3);
+            background-color: oklch(from var(--b3-theme-base) clamp(0, l, 0.8) c h / 0.12);
         }
         .neo-mode-dark & {
             &.b3-card--current,
             &:hover {
                 box-shadow: unset;
-                outline-color: oklch(from var(--b3-base-color) clamp(0.4, l, 1) c h / 0.3);
-                background-color: oklch(from var(--b3-base-color) clamp(0.4, l, 1) c h / 0.12);
+                outline-color: oklch(from var(--b3-theme-base) clamp(0.4, l, 1) c h / 0.3);
+                background-color: oklch(from var(--b3-theme-base) clamp(0.4, l, 1) c h / 0.12);
             }
         }
         .b3-card__img {

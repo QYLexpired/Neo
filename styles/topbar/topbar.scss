@@ -1,9 +1,4 @@
 @use "../utils" as *;
-@property --_barWorkspace-sweep {
-    syntax: "<percentage>";
-    inherits: false;
-    initial-value: -15%;
-}
 .toolbar__item {
     @include icon;
     &[data-topbar-drag-placeholder] {
@@ -13,21 +8,61 @@
     }
 }
 #barWorkspace {
+    --_barWorkspace-gradient: linear-gradient(
+        in oklch to bottom,
+        var(--b3-theme-on-surface) 0%,
+        var(--b3-theme-on-surface) 20%,
+        color-mix(in oklch, var(--b3-theme-on-surface) 68%, var(--b3-theme-accent)) 24%,
+        oklch(from var(--b3-theme-accent) max(0.62, l) max(0.15, c) h) 30%,
+        oklch(from var(--b3-theme-accent) max(0.68, l) max(0.16, c) calc(h + 15)) 42%,
+        oklch(from var(--b3-theme-accent) max(0.64, l) max(0.16, c) calc(h + 30)) 54%,
+        color-mix(in oklch, oklch(from var(--b3-theme-accent) max(0.62, l) max(0.15, c) calc(h + 30)) 90%, var(--b3-theme-on-background)) 59%,
+        color-mix(in oklch, oklch(from var(--b3-theme-accent) max(0.62, l) max(0.15, c) calc(h + 30)) 74%, var(--b3-theme-on-background)) 64%,
+        color-mix(in oklch, oklch(from var(--b3-theme-accent) max(0.62, l) max(0.15, c) calc(h + 30)) 56%, var(--b3-theme-on-background)) 69%,
+        color-mix(in oklch, oklch(from var(--b3-theme-accent) max(0.62, l) max(0.15, c) calc(h + 30)) 38%, var(--b3-theme-on-background)) 73%,
+        color-mix(in oklch, oklch(from var(--b3-theme-accent) max(0.62, l) max(0.15, c) calc(h + 30)) 20%, var(--b3-theme-on-background)) 76%,
+        color-mix(in oklch, oklch(from var(--b3-theme-accent) max(0.62, l) max(0.15, c) calc(h + 30)) 7%, var(--b3-theme-on-background)) 78.5%,
+        var(--b3-theme-on-background) 80%,
+        var(--b3-theme-on-background) 100%
+    );
+    .neo-mode-dark & {
+        --_barWorkspace-gradient: linear-gradient(
+            in oklch to bottom,
+            var(--b3-theme-on-surface) 0%,
+            var(--b3-theme-on-surface) 20%,
+            color-mix(in oklch, var(--b3-theme-on-surface) 82%, var(--b3-theme-accent)) 24%,
+            color-mix(in oklch, var(--b3-theme-on-surface) 55%, var(--b3-theme-accent)) 30%,
+            oklch(from var(--b3-theme-accent) max(0.72, l) max(0.15, c) calc(h + 15)) 42%,
+            oklch(from var(--b3-theme-accent) max(0.68, l) max(0.15, c) calc(h + 30)) 54%,
+            color-mix(in oklch, oklch(from var(--b3-theme-accent) max(0.68, l) max(0.15, c) calc(h + 30)) 90%, var(--b3-theme-on-background)) 59%,
+            color-mix(in oklch, oklch(from var(--b3-theme-accent) max(0.68, l) max(0.15, c) calc(h + 30)) 74%, var(--b3-theme-on-background)) 64%,
+            color-mix(in oklch, oklch(from var(--b3-theme-accent) max(0.68, l) max(0.15, c) calc(h + 30)) 56%, var(--b3-theme-on-background)) 69%,
+            color-mix(in oklch, oklch(from var(--b3-theme-accent) max(0.68, l) max(0.15, c) calc(h + 30)) 38%, var(--b3-theme-on-background)) 73%,
+            color-mix(in oklch, oklch(from var(--b3-theme-accent) max(0.68, l) max(0.15, c) calc(h + 30)) 20%, var(--b3-theme-on-background)) 76%,
+            color-mix(in oklch, oklch(from var(--b3-theme-accent) max(0.68, l) max(0.15, c) calc(h + 30)) 7%, var(--b3-theme-on-background)) 78.5%,
+            var(--b3-theme-on-background) 80%,
+            var(--b3-theme-on-background) 100%
+        );
+    }
     .toolbar__text {
+        font-weight: bold;
         font-size: 14px;
-        --_barWorkspace-sweep: -15%;
         color: var(--b3-theme-on-surface);
         -webkit-text-fill-color: currentColor;
-        transition: color 0.3s var(--neo-ease-out-3);
+        transition: color 0.3s;
     }
     &:hover {
         .toolbar__text {
-            --_barWorkspace-sweep: 115%;
             color: var(--b3-theme-on-background);
             -webkit-text-fill-color: transparent;
-            background: linear-gradient(in oklch to top, var(--b3-theme-on-background) 0% calc(var(--_barWorkspace-sweep) - 45%), var(--b3-theme-accent) calc(var(--_barWorkspace-sweep) - 20%), oklch(from var(--b3-theme-accent) l c calc(h + 90)) calc(var(--_barWorkspace-sweep) + 20%), var(--b3-theme-on-surface) calc(var(--_barWorkspace-sweep) + 45%) 100%);
+            background-image: var(--_barWorkspace-gradient);
+            background-size: 100% 500%;
+            background-position: 0 0;
+            background-repeat: no-repeat;
             background-clip: text;
-            transition: color 0s, --_barWorkspace-sweep 0.75s var(--neo-ease-out-3);
+            -webkit-background-clip: text;
+            transition: color 0s;
+            animation: neo-barWorkspace-sweep 0.95s var(--neo-ease-out-2) 0.15s both;
         }
     }
     .toolbar__svg {
@@ -36,6 +71,14 @@
     .body--toolbar-hide & {
         line-height: 20px;
         height: unset;
+    }
+}
+@keyframes neo-barWorkspace-sweep {
+    from {
+        background-position: 0 0;
+    }
+    to {
+        background-position: 0 100%;
     }
 }
 // windows

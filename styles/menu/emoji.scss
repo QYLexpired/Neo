@@ -15,15 +15,13 @@
         @include icon;
         @include superellipse(12px);
         transition: var(--_emoji-transiton);
-        &:hover {
-            filter: url(#neo-neon-emoji) saturate(1.5) brightness(1.02);
-            scale: 1.35;
-            background-color: transparent;
+        &:hover,
+        &.emojis__type--current {
+            color: var(--b3-theme-on-background);
+            animation: neo-emoji-flow 0.32s var(--neo-ease-out-2) both;
+            transform: scale(1.35);
             box-shadow: none;
         }
-    }
-    .emojis__panel + .fn__flex {
-        padding: 8px 8px 0 8px;
     }
     .emojis__item {
         @include icon;
@@ -31,18 +29,37 @@
         color: unset;
         transition: var(--_emoji-transiton);
         &:hover {
-            filter: url(#neo-neon-emoji) saturate(1.5) brightness(1.02);
-            scale: 1.35;
+            animation: neo-emoji-flow 0.32s var(--neo-ease-out-2) both;
+            transform: scale(1.35);
             box-shadow: none;
         }
     }
 }
+@keyframes neo-emoji-flow {
+    0% {
+        filter: saturate(1) brightness(1);
+    }
+
+    55% {
+        filter: saturate(1.35) brightness(1.1);
+    }
+
+    100% {
+        filter: saturate(1.2) brightness(1.05);
+    }
+}
 .emojis__title {
-    position: unset;
-    background-color: transparent;
+    max-width: fit-content;
+    padding: 4px 12px !important;
+    @include superellipse-use(7px);
+    background-color: var(--b3-menu-background);
+    @include frostedglass($blur: t, $color: menu);
+    outline: 0.5px solid var(--b3-border-color-trans);
+    outline-offset: -0.5px;
 }
 .emojis__types {
     padding: 8px 8px 0 8px;
+    overflow: hidden;
 }
 .emojis__link-empty-content {
     justify-content: center;

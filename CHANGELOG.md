@@ -1,3 +1,10 @@
+### v1.7.0
+- 将自定义主题色、主题色跟随题头图、主题色跟随系统整合为基色配色
+- 在自由配色的参考配色库中加入QYL主题的配色
+- 为主菜单按钮添加渐变光感动效
+- Grouped Custom Theme Color, banner-following color, and system-following color under Base Palette
+- Added QYL theme palettes to the Freeform Palette reference library
+- Added a gradient lighting animation to the main menu button
 ### v1.6.4 / 2026-09-18
 - 超级融合的面包屑随题头图消失而动态缓入
 - 移除超级融合的题头图渐隐效果

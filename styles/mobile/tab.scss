@@ -6,8 +6,8 @@
     outline-offset: -1px;
     background-color: transparent;
     &.mobile-tabs__item--active {
-        outline-color: oklch(from var(--b3-base-color) clamp(0.4, l, 1) c h / 0.3);
-        background-color: oklch(from var(--b3-base-color) clamp(0.4, l, 1) c h / 0.12);
+        outline-color: oklch(from var(--b3-theme-base) clamp(0.4, l, 1) c h / 0.3);
+        background-color: oklch(from var(--b3-theme-base) clamp(0.4, l, 1) c h / 0.12);
         box-shadow: none;
     }
 }

@@ -3,6 +3,10 @@
 - Neo draws heavily on the design and ideas of the [Asri theme](https://github.com/mustakshif/Asri). A huge thank you to [mustakshif](https://github.com/mustakshif) — without your impeccable taste, technical skill, and astonishing creativity, Neo would never have come to be.
 ## Changelog
 See the [CHANGELOG](https://github.com/QYLexpired/Neo/blob/main/CHANGELOG.md) for the full update history.
+### v1.7.0
+- Grouped Custom Theme Color, banner-following color, and system-following color under Base Palette
+- Added QYL theme palettes to the Freeform Palette reference library
+- Added a gradient lighting animation to the main menu button
 ### v1.6.4
 - Super Fusion's breadcrumbs now ease in dynamically as the banner image disappears
 - Removed Super Fusion's banner image fade-out effect
@@ -34,8 +38,7 @@ The Neo theme is completely free. If you enjoy this theme, feel free to star it 
 #### Rich, Rigorous Color Schemes
 - Preset Schemes: dozens of built-in preset color schemes, each with its own distinct style
 - Freeform Palette: fully customize the interface's key color values, with a built-in reference library of hundreds of classic color schemes
-- Custom Theme Color: pick an accent color and adjust its saturation and brightness to customize the interface
-- The theme color can follow the banner image or the system accent color
+- Base Palette: choose a base color and adjust saturation and brightness to customize the interface, with support for following the banner image or the system accent color
 - Neue Brutalism color schemes
 - Random Color: a random scheme is selected from all the theme's color schemes on every SiYuan launch
 #### Ever-Changing Interface

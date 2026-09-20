@@ -141,5 +141,8 @@
         [neo-focusblock]::before {
             display: none;
         }
+        .tab-item-title[spellcheck] {
+            line-height: 22px;
+        }
     }
 }

@@ -12,7 +12,7 @@
         "caution":   30,
     );
     @each $name, $hue in $callout-subtypes {
-        --b3-callout-#{$name}: oklch(from var(--b3-base-color) clamp(0.55, l, 0.68) clamp(0.12, c, 0.165) #{$hue});
+        --b3-callout-#{$name}: oklch(from var(--b3-theme-base) clamp(0.55, l, 0.68) clamp(0.12, c, 0.165) #{$hue});
     }
 }
 .b3-typography .callout,
