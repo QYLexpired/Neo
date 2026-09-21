@@ -19,9 +19,16 @@
             position: relative; // 禁用吸顶
             z-index: auto;
             background-color: var(--b3-list-hover);
+            &:hover {
+                background-color: var(--b3-list-hover) !important;
+                background-image: unset !important;
+            }
             &.b3-list-item--focus {
                 background-color: var(--b3-list-active);
                 background-image: unset;
+                &:hover {
+                    background-color: var(--b3-list-active) !important;
+                }
             }
         }
     }

@@ -180,6 +180,16 @@
         @include button-solid(primary);
     }
 }
+.b3-button--progress {
+    background-color: transparent !important;
+    outline-offset: -1px !important;
+    outline: 1px solid var(--b3-border-color-trans) !important;
+    & > span {
+        height: inherit;
+        @include superellipse-use(7px 0 0 7px);
+        background-color: var(--b3-theme-accent);
+    }
+}
 // 设置页按钮
 .config__tab-wrap,
 .config__item,

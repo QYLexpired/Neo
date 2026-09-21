@@ -9,7 +9,7 @@
 }
 .av__title {
     padding-left: 12px;
-    color: var(--b3-theme-primary);
+    color: var(--b3-theme-accent);
 }
 .av__cell--header {
     border-color: transparent;
@@ -21,6 +21,7 @@
 .av__cell--active {
     background-color: var(--b3-list-active);
 }
+// 卡片视图，看板视图
 .av__gallery-item {
     box-shadow: var(--neo-main-shadow);
     @include superellipse-use(10px);
@@ -246,9 +247,6 @@
     text-overflow: ellipsis;
     word-break: break-all;
     transition: var(--b3-transition);
-    &:hover {
-        color: var(--b3-theme-secondary) !important;
-    }
 }
 .av__relation-panel .av__relation-table-primary,
 .av__relation-panel .av__relation-table-check {
@@ -301,4 +299,22 @@
 }
 .av__richtext-editor {
     @include menu-container-common;
+}
+// 列表视图
+.av[data-av-type="list"] {
+    .av__row[data-id] {
+        @include superellipse(8px);
+        &.av__row--select,
+        &.av__row--hl {
+            background-color: transparent;
+            &::before {
+                box-shadow: none;
+                border-radius: inherit;
+                corner-shape: inherit;
+                outline: 1px solid oklch(from var(--b3-theme-accent) l c h / 0.12);
+                outline-offset: -1px;
+                background-color: oklch(from var(--b3-theme-accent) l c h / 0.12);
+            }
+        }
+    }
 }

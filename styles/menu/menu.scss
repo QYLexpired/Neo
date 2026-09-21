@@ -8,7 +8,8 @@
     & > .b3-menu__label .b3-menu__icon,
     & > .b3-menu__action,
     & > .b3-menu__checked,
-    & > .block__icon svg {
+    & > .block__icon svg,
+    & > .b3-menu__icon--custom svg {
         @content;
     }
 }

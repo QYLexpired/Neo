@@ -19,8 +19,11 @@
             .b3-typography .tabs[data-node-id][data-tabs-ready=true] {
                 &[data-tabs-orientation="horizontal"] {
                     & > .tabs-header {
-                        @include overflow-indicator-fadein-mask($fadeout-size-l, "left right");
                         margin-bottom: 6px;
+                        .tabs-list {
+                            scrollbar-width: none;
+                            @include overflow-indicator-fadein-mask($fadeout-size-l, "left right");
+                        }
                     }
                 }
                 &.protyle-wysiwyg--hl,

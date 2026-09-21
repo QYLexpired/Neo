@@ -1,0 +1,21 @@
+@use "../utils" as *;
+@use "../tooltip" as *;
+@use "../menu/menu" as *;
+.list-mindmap {
+    @include superellipse-use(10px);
+    border: unset;
+    box-shadow: var(--neo-main-shadow);
+}
+.list-mindmap__tooltip {
+    @include tooltip-common;
+    animation: neo-tooltip-entrance 0.6s var(--neo-ease-spring-3);
+}
+.list-mindmap__zoom-actions {
+    @include menu-container-common-simple;
+}
+.list-mindmap__inspector {
+    @include menu-container-common-simple;
+    box-shadow: var(--neo-main-shadow);
+    @include superellipse(32px);
+    corner-shape: unset;
+}

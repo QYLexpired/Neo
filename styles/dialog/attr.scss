@@ -1,6 +1,6 @@
 @use "../component" as *;
 .custom-attr__avheader .block__logo {
-    color: var(--b3-theme-primary);
+    color: var(--b3-theme-accent);
 }
 .custom-attr .b3-button[data-type=addColumn] {
     @include button-transparent-hover-translucent;
@@ -33,10 +33,5 @@
     textarea.b3-text-field--text {
         height: auto;
         field-sizing: content;
-    }
-    .block__icons.av__row {
-        & > .fn__flex-1 {
-            overflow: visible;
-        }
     }
 }

@@ -1,10 +1,18 @@
-### v1.7.0
+### v1.6.5 / 2026-09-21
 - 将自定义主题色、主题色跟随题头图、主题色跟随系统整合为基色配色
+- 基色跟随题头图支持配置取色风格
 - 在自由配色的参考配色库中加入QYL主题的配色
+- 预设配色支持搜索和随机
 - 为主菜单按钮添加渐变光感动效
-- Grouped Custom Theme Color, banner-following color, and system-following color under Base Palette
+- 修复换行后平滑光标可能丢失的问题
+- 移除超级融合（毛玻璃）的感光效果
+- Grouped Custom Theme Color, theme color following the banner image's dominant color, and theme color following the system accent color under Base Palette
+- Base color following the banner image's dominant color now supports configurable color-picking styles
 - Added QYL theme palettes to the Freeform Palette reference library
+- Preset color schemes now support search and random selection
 - Added a gradient lighting animation to the main menu button
+- Fixed the smooth caret potentially being lost after a line break
+- Removed the light-sensing effect of Super Fusion (frosted glass)
 ### v1.6.4 / 2026-09-18
 - 超级融合的面包屑随题头图消失而动态缓入
 - 移除超级融合的题头图渐隐效果

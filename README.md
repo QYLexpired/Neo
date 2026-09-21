@@ -3,32 +3,13 @@
 - Neo draws heavily on the design and ideas of the [Asri theme](https://github.com/mustakshif/Asri). A huge thank you to [mustakshif](https://github.com/mustakshif) — without your impeccable taste, technical skill, and astonishing creativity, Neo would never have come to be.
 ## Changelog
 See the [CHANGELOG](https://github.com/QYLexpired/Neo/blob/main/CHANGELOG.md) for the full update history.
-### v1.7.0
-- Grouped Custom Theme Color, banner-following color, and system-following color under Base Palette
+- Grouped Custom Theme Color, theme color following the banner image's dominant color, and theme color following the system accent color under Base Palette
+- Base color following the banner image's dominant color now supports configurable color-picking styles
 - Added QYL theme palettes to the Freeform Palette reference library
+- Preset color schemes now support search and random selection
 - Added a gradient lighting animation to the main menu button
-### v1.6.4
-- Super Fusion's breadcrumbs now ease in dynamically as the banner image disappears
-- Removed Super Fusion's banner image fade-out effect
-- Tuned Super Fusion's progressive blur parameters
-### v1.6.3
-- Adapted to SiYuan 3.8.4
-    - Added support for pinned document trees
-    - Added support for the new task list checkboxes
-        - Added In Progress and Abandoned styles
-        - Added custom status styles that adapt their color automatically
-    - Added support for the new Data History interface
-    - Adapted link styles
-- Streamlined the theme color model
-- Unified the mobile back button style
-- Added guide lines to closed notebooks
-- Removed the block folding animation
-- Removed the editor fade-in animation
-- Colored Headings can now optionally color the outline too
-- Improved list bullet line performance
-- Fixed Focus Block Indicator glitches on table blocks
-- Focus Block Indicator now supports block filtering
-- Fixed dynamic scrollbar misalignment on mobile
+- Fixed the smooth caret potentially being lost after a line break
+- Removed the light-sensing effect of Super Fusion (frosted glass)
 ## Notes
 - Some of the theme's styles and features cannot be implemented with CSS alone, so the companion plugin [Neo+](https://github.com/QYLexpired/Neo-Plus) **MUST** be installed and enabled.
 - For any questions or suggestions during use, please visit the [Neo Theme Introduction & Feedback Thread](https://ld246.com/article/1783158376401) or [GitHub](https://github.com/QYLexpired/Neo/issues)
@@ -38,7 +19,7 @@ The Neo theme is completely free. If you enjoy this theme, feel free to star it 
 #### Rich, Rigorous Color Schemes
 - Preset Schemes: dozens of built-in preset color schemes, each with its own distinct style
 - Freeform Palette: fully customize the interface's key color values, with a built-in reference library of hundreds of classic color schemes
-- Base Palette: choose a base color and adjust saturation and brightness to customize the interface, with support for following the banner image or the system accent color
+- Base Palette: choose a base color and adjust saturation and brightness to customize the interface, with support for following the banner image's dominant color or the system accent color
 - Neue Brutalism color schemes
 - Random Color: a random scheme is selected from all the theme's color schemes on every SiYuan launch
 #### Ever-Changing Interface
