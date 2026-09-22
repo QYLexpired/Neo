@@ -311,3 +311,69 @@
         }
     }
 }
+// 日历视图
+.av[data-av-type="calendar"] {
+    .av__calendar-grid {
+        @include superellipse-use(12px);
+    }
+    .av__calendar-week {
+        &:first-child {
+            @include superellipse-use(12px 12px 0 0);
+        }
+        &:last-child {
+            @include superellipse-use(0 0 12px 12px);
+        }
+    }
+    .av__calendar-day > span {
+        @include superellipse-use(8px);
+    }
+    .av__calendar-day--today > span {
+        background-color: var(--neo-base-bg);
+        @include contrast-color(--neo-base-bg);
+    }
+    .av__calendar-item {
+        --_av__calendar-item-default-bg: oklch(from var(--b3-theme-accent) l c h / 0.15);
+        --_av__calendar-item-bg: var(--b3-av-calendar-background);
+        --_av__calendar-item-default-outline: oklch(from var(--b3-theme-accent) calc(l - 0.2) c h / 0.15);
+        --_av__calendar-item-outline: oklch(from var(--b3-av-calendar-background) calc(l - 0.2) c h);
+        --_av__calendar-item-default-hover-bg: oklch(from var(--b3-theme-accent) l c h / 0.25);
+        --_av__calendar-item-hover-bg: oklch(from var(--b3-av-calendar-background) calc(l - 0.05) c h);
+        --_av__calendar-item-default-hover-outline: oklch(from var(--b3-theme-accent) calc(l - 0.2) c h / 0.3);
+        --_av__calendar-item-hover-outline: oklch(from var(--b3-av-calendar-background) calc(l - 0.3) c h);
+        .neo-mode-dark & {
+            --_av__calendar-item-default-bg: oklch(from var(--b3-theme-accent) l c h / 0.15);
+            --_av__calendar-item-bg: var(--b3-av-calendar-background);
+            --_av__calendar-item-default-outline: oklch(from var(--b3-theme-accent) calc(l + 0.2) c h / 0.15);
+            --_av__calendar-item-outline: oklch(from var(--b3-av-calendar-background) calc(l + 0.2) c h);
+            --_av__calendar-item-default-hover-bg: oklch(from var(--b3-theme-accent) l c h / 0.25);
+            --_av__calendar-item-hover-bg: oklch(from var(--b3-av-calendar-background) calc(l + 0.05) c h);
+            --_av__calendar-item-default-hover-outline: oklch(from var(--b3-theme-accent) calc(l + 0.2) c h / 0.3);
+            --_av__calendar-item-hover-outline: oklch(from var(--b3-av-calendar-background) calc(l + 0.3) c h);
+        }
+        &.av__calendar-item--start {
+            @include superellipse-use(8px 0 0 8px);
+        }
+        &.av__calendar-item--end {
+            @include superellipse-use(0 8px 8px 0);
+        }
+        &.av__calendar-item--start.av__calendar-item--end {
+            @include superellipse-use(8px);
+        }
+        border: unset;
+        transition: var(--b3-transition);
+        background-color: var(--_av__calendar-item-bg, var(--_av__calendar-item-default-bg));
+        outline: 0.5px solid;
+        outline-color: var(--_av__calendar-item-outline, var(--_av__calendar-item-default-outline));
+        outline-offset: -0.5px;
+        &:hover {
+            background-color: var(--_av__calendar-item-hover-bg, var(--_av__calendar-item-default-hover-bg));
+            outline-color: var(--_av__calendar-item-hover-outline, var(--_av__calendar-item-default-hover-outline));
+        }
+    }
+    .av__calendar-drop {
+        border: unset;
+        outline: 1px solid oklch(from var(--b3-theme-secondary) l c h / 0.3);
+        outline-offset: -1px;
+        background-color: oklch(from var(--b3-theme-secondary) l c h / 0.12);
+    }
+}

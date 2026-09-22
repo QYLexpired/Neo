@@ -80,6 +80,7 @@
     --neo-button-primary: oklch(from var(--b3-theme-base) clamp(0, l, 0.92) c h);
     --neo-switch-primary: oklch(from var(--b3-theme-base) clamp(0, l, 0.9) c h);
     --neo-menu-item-primary: oklch(from var(--b3-theme-base) clamp(0, l, 0.9) c h);
+    --neo-base-bg: oklch(from var(--b3-theme-base) clamp(0, l, 0.9) c h);
 }
 @mixin dark-color {
     // default
@@ -148,6 +149,7 @@
     --neo-button-primary: oklch(from var(--b3-theme-base) clamp(0.4, l, 1) c h);
     --neo-switch-primary: oklch(from var(--b3-theme-base) clamp(0.38, l, 0.8) c h);
     --neo-menu-item-primary: oklch(from var(--b3-theme-base) clamp(0.4, l, 1) c h);
+    --neo-base-bg: oklch(from var(--b3-theme-base) clamp(0.4, l, 1) c h);
 }
 @mixin light-font-color {
     $font-l-light: 0.58;

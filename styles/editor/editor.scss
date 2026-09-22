@@ -262,6 +262,8 @@
 .av__gallery-item,
 .av__gallery-add,
 .av__row,
+.av__cell,
+.av__kanban-group,
 .b3-list--background .b3-list-item {
     &.dragover {
         border-radius: 0 !important;
@@ -289,8 +291,4 @@
             background-color: oklch(from var(--b3-theme-secondary) l c h);
         }
     }
-}
-.av__cell.dragover__left::after,
-.av__cell.dragover__right::after {
-    background-color: oklch(from var(--b3-theme-secondary) l c h);
 }
