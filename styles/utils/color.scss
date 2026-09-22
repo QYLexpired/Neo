@@ -20,6 +20,7 @@
     --neo-default-surface: #f1f2ff;
     --neo-default-on-background: #181051;
     // base palette
+    // --neo-saturation和--neo-brightness在--neo-base-xxx或--neo-highcontrast-bg变量上使用！！！
     --neo-base-accent: oklch(from var(--neo-base) clamp(0.6, l, 0.68) max(c, 0.25) h);
     --neo-base-background: oklch(from var(--neo-base) calc(0.99 + 0.035 * var(--neo-brightness, 0)) calc(0.005 * var(--neo-saturation, 1)) h);
     --neo-base-surface: oklch(from var(--neo-base) calc(0.96 + 0.05 * var(--neo-brightness, 0)) calc(0.015 * var(--neo-saturation, 1)) h);
@@ -90,6 +91,7 @@
     --neo-default-surface: #1e2227;
     --neo-default-on-background: #e1e4ec;
     // base palette
+    // --neo-saturation和--neo-brightness在--neo-base-xxx或--neo-highcontrast-bg变量上使用！！！
     --neo-base-accent: oklch(from var(--neo-base) clamp(0.68, l, 0.78) max(c, 0.18) h);
     --neo-base-background: oklch(from var(--neo-base) calc(0.2 + 0.075 * var(--neo-brightness, 0)) calc(0.008 * var(--neo-saturation, 1)) h);
     --neo-base-surface: oklch(from var(--neo-base) calc(0.25 + 0.1 * var(--neo-brightness, 0)) calc(0.012 * var(--neo-saturation, 1)) h);
