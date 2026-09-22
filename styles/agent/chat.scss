@@ -157,7 +157,7 @@
     }
 }
 .agent-chat__thinking-latest {
-    @include overflow-indicator-fadein-mask($fadeout-size-m, "left right");
+    @include overflow-fade-mask($fade-mask-m, "left right");
 }
 .agent-chat__thinking-chat {
     color: var(--b3-theme-on-surface);

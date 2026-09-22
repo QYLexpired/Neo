@@ -8,7 +8,7 @@ body:not(.body--toolbar-hide) [data-type="wnd"] > .fn__flex:first-child {
     border-bottom: unset;
     scrollbar-width: none;
     &:not(.layout-tab-bar--readonly) {
-        @include overflow-indicator-fadein-mask($fadeout-size-l, "left right");
+        @include overflow-fade-mask($fade-mask-l, "left right");
         padding: 0;
         min-height: 42px;
         .item {
