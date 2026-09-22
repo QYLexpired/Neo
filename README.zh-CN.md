@@ -3,13 +3,7 @@
 - Neo主题大量参考了[Asri主题](https://github.com/mustakshif/Asri)的设计和创意，非常感谢[mustakshif](https://github.com/mustakshif)，没有你超强的审美、技术力和让人惊叹的创意，就不会有Neo的出现
 ## 更新日志
 完整更新历史可查看[CHANGELOG](https://github.com/QYLexpired/Neo/blob/main/CHANGELOG.md)
-- 将自定义主题色、主题色跟随题头图、主题色跟随系统整合为基色配色
-- 基色跟随题头图支持配置取色风格
-- 在自由配色的参考配色库中加入QYL主题的配色
-- 预设配色支持搜索和随机
-- 为主菜单按钮添加渐变光感动效
-- 修复换行后平滑光标可能丢失的问题
-- 移除超级融合（毛玻璃）的感光效果
+- 适配思维导图
 ## 说明
 - 主题的部分样式和功能无法仅通过CSS实现，因此必须安装并启用主题的配套插件：[Neo+](https://github.com/QYLexpired/Neo-Plus)
 - 使用过程中有任何问题或建议，可通过[Neo 主题介绍及反馈综合帖](https://ld246.com/article/1783158376401)或[GitHub](https://github.com/QYLexpired/Neo/issues)进行反馈

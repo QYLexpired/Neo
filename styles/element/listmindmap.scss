@@ -1,14 +1,30 @@
 @use "../utils" as *;
-@use "../tooltip" as *;
 @use "../menu/menu" as *;
 .list-mindmap {
     @include superellipse-use(10px);
     border: unset;
     box-shadow: var(--neo-main-shadow);
 }
-.list-mindmap__tooltip {
-    @include tooltip-common;
-    animation: neo-tooltip-entrance 0.6s var(--neo-ease-spring-3);
+.list-mindmap__toolbar {
+    opacity: 1;
+    .block__icon,
+    .list-mindmap__zoom-control {
+        filter: blur(6px);
+        transform: scale(1.2);
+        opacity: 0;
+        transition: 1.2s var(--neo-ease-spring-2);
+        &[disabled] {
+            opacity: 0;
+        }
+        .list-mindmap:not(.fullscreen):hover & {
+            filter: none;
+            transform: none;
+            opacity: 1;
+            &[disabled] {
+                opacity: 0.38;
+            }
+        }
+    }
 }
 .list-mindmap__zoom-actions {
     @include menu-container-common-simple;
@@ -18,4 +34,62 @@
     box-shadow: var(--neo-main-shadow);
     @include superellipse(32px);
     corner-shape: unset;
+    bottom: 12px;
+}
+// 线条
+// TODO: https://github.com/siyuan-note/siyuan/issues/19747
+// 节点
+.list-mindmap__node {
+    @include superellipse-use(8px);
+    outline: 2px solid;
+    outline-offset: -2px;
+    outline-color: transparent;
+    transition: outline-color var(--b3-transition);
+    &:hover {
+        outline-color: oklch(from currentColor l c h / 0.18);
+        box-shadow: none !important;
+    }
+    &.list-mindmap__node--selected {
+        outline-color: var(--b3-theme-accent);
+        &::after {
+            display: none;
+        }
+    }
+    &[data-mindmap-drop=child] {
+        box-shadow: none !important;
+        background-color: transparent !important;
+        outline-color: var(--b3-theme-secondary);
+    }
+    &[data-mindmap-drop=before]::before,
+    &[data-mindmap-drop=after]::after {
+        background-color: var(--b3-theme-secondary);
+    }
+}
+.list-mindmap__fold.block__icon,
+.list-mindmap__add-child.block__icon {
+    border-radius: 50% !important;
+    background-color: var(--b3-menu-background) !important;
+    box-shadow: var(--neo-main-shadow);
+    border: unset;
+    &:hover {
+        background-color: var(--b3-menu-background) !important;
+    }
+}
+// 根节点
+.list-mindmap__node--virtual {
+    box-shadow: none !important;
+    background-color: oklch(from var(--b3-theme-accent) l c h / 0.25) !important;
+    &::before {
+        width: 8px;
+        height: 8px;
+    }
+    &::after {
+        display: none;
+    }
+    &:hover {
+        outline-color: oklch(from var(--b3-theme-accent) l c h / 0.25);
+    }
+    &.list-mindmap__node--selected {
+        outline-color: var(--b3-theme-accent);
+    }
 }
