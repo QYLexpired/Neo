@@ -6,7 +6,7 @@
     & > .tabs-header {
         border-radius: 0;
         scrollbar-width: none;
-        @include overflow-fade-mask($fade-mask-l, "left right");
+        @include overflow-fade-mask($fade-mask-m, "left right");
         padding: 0;
         min-height: 42px;
         border: unset;
@@ -22,7 +22,7 @@
                         margin-bottom: 6px;
                         .tabs-list {
                             scrollbar-width: none;
-                            @include overflow-fade-mask($fade-mask-l, "left right");
+                            @include overflow-fade-mask($fade-mask-m, "left right");
                         }
                     }
                 }
