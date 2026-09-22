@@ -1,7 +1,7 @@
 @use "../utils" as *;
 .agent-chat__messages {
     padding: 24px;
-    // 导致闪退 // 导致闪退 @include overflow-fade-mask($fade-mask-l, "top bottom");
+    // 导致闪退 @include overflow-fade-mask($fade-mask-l, "top bottom");
 }
 .agent-welcome__example,
 .agent-welcome__no-model {
