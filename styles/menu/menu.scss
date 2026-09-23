@@ -92,7 +92,8 @@
     &.b3-menu__item--show:not(.b3-menu__item--readonly),
     &.pdf__util__hide:hover,
     &.secondaryToolbarButton:hover,
-    .av__panel &:not([data-type=nobg]):not(.av__filter-row):not(.av__relation-table-row):hover {
+    .av__panel &:not([data-type=nobg]):not(.av__filter-row):not(.av__relation-table-row):hover,
+    &.av__calendar-undated-item:hover {
         @content;
     }
 }
@@ -104,7 +105,8 @@
         --neo-menu-item-primary: var(--b3-theme-error-bg);
     }
     @include menu-item-child {
-        @include contrast-color(--neo-menu-item-primary);
+        @include contrast-color(--neo-menu-item-primary, --neo-menu-item-child-color);
+        color: var(--neo-menu-item-child-color) !important;
         @include contrast-color(--neo-menu-item-primary, --b3-callout-note);
         @include contrast-color(--neo-menu-item-primary, --b3-callout-tip);
         @include contrast-color(--neo-menu-item-primary, --b3-callout-important);
@@ -118,6 +120,9 @@
     line-height: 24px;
     @include superellipse-use(7px);
     @include menu-item-child-trans-origin;
+    @include menu-item-child {
+        transition-property: none;
+    }
     @include menu-item-current {
         @include menu-item-current-style;
     }

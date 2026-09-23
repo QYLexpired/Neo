@@ -13,6 +13,16 @@
         scrollbar-width: none;
     }
 }
+.dockPanel.fullscreen > .block__icons {
+    &  > .fn__flex-1 {
+        height: 32px;
+        line-height: 32px;
+        .body--toolbar-hide & {
+            height: 42px;
+            line-height: 42px;
+        }
+    }
+}
 .file-tree__pins {
     border: unset !important;
     padding-bottom: 2px;

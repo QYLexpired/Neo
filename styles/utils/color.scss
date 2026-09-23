@@ -52,7 +52,7 @@
     --b3-av-background-hl: color-mix(in srgb, var(--b3-theme-primary) 20%, var(--b3-theme-background));
     --b3-av-hover: oklch(from var(--b3-theme-on-background) 0.93 0.02 h);
     --b3-scroll-color: oklch(from var(--b3-theme-on-background) l c h / 0.09);
-    --b3-scroll-color-hover: oklch(from var(--b3-theme-on-background) l c h / 0.18);
+    --b3-scroll-color-hover: oklch(from var(--b3-theme-on-background) l c h / 0.2);
     --b3-protyle-code-background: oklch(from var(--b3-theme-surface) 0.9 c h / 0.5);
     --b3-empty-color: oklch(from var(--b3-theme-on-background) l c h / 0.45);
     --b3-body-background: var(--b3-theme-background);
@@ -122,7 +122,7 @@
     --b3-av-background-hl: color-mix(in srgb, var(--b3-theme-primary) 20%, var(--b3-theme-background));
     --b3-av-hover: oklch(from var(--b3-theme-on-background) 0.35 0.02 h);
     --b3-scroll-color: oklch(from var(--b3-theme-on-background) l c h / 0.09);
-    --b3-scroll-color-hover: oklch(from var(--b3-theme-on-background) l c h / 0.18);
+    --b3-scroll-color-hover: oklch(from var(--b3-theme-on-background) l c h / 0.2);
     --b3-protyle-code-background: oklch(from var(--b3-theme-surface) 0.4 c h / 0.6);
     --b3-empty-color: oklch(from var(--b3-theme-on-background) l c h / 0.45);
     --b3-body-background: var(--b3-theme-background);

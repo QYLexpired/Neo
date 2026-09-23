@@ -5,9 +5,9 @@
 完整更新历史可查看[CHANGELOG](https://github.com/QYLexpired/Neo/blob/main/CHANGELOG.md)
 - 适配思维导图
 - 适配数据库日历视图
-- 调整部分QYL主题配色以适应Neo的风格
+- 适配数据库列表视图
+- 优化Windows平台的滚动条样式
 - 在思维导图节点中禁用聚焦块指示
-- 支持在只读模式中禁用聚焦块指示
 ## 说明
 - 主题的部分样式和功能无法仅通过CSS实现，因此必须安装并启用主题的配套插件：[Neo+](https://github.com/QYLexpired/Neo-Plus)
 - 使用过程中有任何问题或建议，可通过[Neo 主题介绍及反馈综合帖](https://ld246.com/article/1783158376401)或[GitHub](https://github.com/QYLexpired/Neo/issues)进行反馈

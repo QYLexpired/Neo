@@ -11,16 +11,24 @@
     box-shadow: unset;
     outline: unset;
     transition: box-shadow var(--b3-transition);
+    box-sizing: border-box !important;
     &:hover {
         background-color: var(--neo-input-background);
-        --b3-border-color: transparent !important; // 取消阴影
+        box-shadow: unset;
         outline: unset;
+        &:not(.b3-text-field--text) {
+            box-shadow: unset;
+            outline: unset;
+        }
     }
     &:focus {
         animation: neo-input-focus-ring 0.2s var(--neo-ease-out-3) forwards;
         background-color: var(--neo-input-background);
-        --b3-theme-primary-lighter: transparent !important; // 取消阴影
         outline: unset;
+        &:not(.b3-text-field--text) {
+            box-shadow: unset;
+            outline: unset;
+        }
     }
     .status & {
         animation-name: neo-input-focus-ring-inset;
@@ -79,20 +87,11 @@ body.body--win32-browser .b3-select { // body用来覆盖思源样式
             color: var(--b3-theme-accent);
         }    
         &::checkmark {
-            margin-left: auto;
+            content: "✓";
+            display: inline-block;
             order: 1;
+            margin-left: auto;
         }
-        &:focus-visible {
-            outline: unset;
-        }
-    }
-    &:hover {
-        background-color: var(--neo-input-background);
-        box-shadow: unset;
-    }
-    &:focus {
-        background-color: var(--neo-input-background);
-        box-shadow: 0 0 0 2px var(--neo-input-primary);
     }
 }
 .av__panel .b3-menu .av__filter-row,

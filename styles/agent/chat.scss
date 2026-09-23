@@ -167,6 +167,7 @@
     border: unset;
     padding: 4px 6px;
     transition: none;
+    @include overflow-fade-mask($fade-mask-m, "top bottom");
     &--expanded {
         display: block;
         border: unset;
@@ -181,11 +182,20 @@
 }
 // 滚动至底部
 .agent-chat__scroll-bottom {
+    width: 32px;
+    height: 32px;
     border: unset;
     box-shadow: var(--neo-main-shadow);
+    color: var(--b3-theme-on-surface);
     background-color: var(--b3-theme-background);
-    .neo-frostedglass & {
-        background-color: transparent;
-        backdrop-filter: blur(3px);
+    @include frostedglass-tooltip;
+    transition: var(--b3-transition), 0.65s var(--neo-ease-spring-3);
+    &:hover {
+        color: var(--b3-theme-on-background);
+        scale: 1.12;
+    }
+    &:active {
+        transform: scale(0.95);
+        transition: var(--b3-transition), transform 0.15s var(--neo-ease-out-3);
     }
 }

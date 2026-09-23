@@ -29,3 +29,6 @@ body.body--window {
         }
     }
 }
+.dockPanel.fullscreen > .block__icons {
+    app-region: no-drag;
+}

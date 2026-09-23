@@ -8,6 +8,7 @@
     box-shadow: none;
     outline: none;
     transition: var(--b3-transition), transform 0.45s var(--neo-ease-spring-3);
+    box-sizing: border-box !important;
     &:hover,
     &:active,
     &:focus {

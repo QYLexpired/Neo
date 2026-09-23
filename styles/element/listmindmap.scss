@@ -4,24 +4,36 @@
     @include superellipse-use(10px);
     border: unset;
     box-shadow: var(--neo-main-shadow);
-}
-.list-mindmap__toolbar {
-    opacity: 1;
-    .block__icon,
-    .list-mindmap__zoom-control {
-        filter: blur(6px);
-        transform: scale(1.2);
-        opacity: 0;
-        transition: 1.2s var(--neo-ease-spring-2);
-        &[disabled] {
-            opacity: 0;
+    &.fullscreen {
+        .list-mindmap__toolbar {
+            app-region: no-drag;
         }
-        .list-mindmap:not(.fullscreen):hover & {
-            filter: none;
-            transform: none;
+    }
+    &:not(.fullscreen) {
+        .list-mindmap__toolbar {
             opacity: 1;
-            &[disabled] {
-                opacity: 0.38;
+            .block__icon,
+            .list-mindmap__zoom-control {
+                filter: blur(6px);
+                transform: scale(1.2);
+                opacity: 0;
+                transition: 1.2s var(--neo-ease-spring-2);
+                &[disabled] {
+                    opacity: 0;
+                }
+            }
+        }
+        &:hover {
+            .list-mindmap__toolbar {
+                .block__icon,
+                .list-mindmap__zoom-control {
+                    filter: none;
+                    transform: none;
+                    opacity: 1;
+                    &[disabled] {
+                        opacity: 0.38;
+                    }
+                }
             }
         }
     }
@@ -37,7 +49,20 @@
     bottom: 12px;
 }
 // 线条
-// TODO: https://github.com/siyuan-note/siyuan/issues/19747
+:root {
+    --b3-list-mindmap-line-color: var(--b3-border-color);
+    --b3-list-mindmap-line-width: 1.5px;
+    --b3-list-mindmap-line-hover-color: unset;
+    --b3-list-mindmap-line-hover-width: 1.5px;
+    --b3-list-mindmap-line-selected-color:var(--b3-theme-accent);
+    --b3-list-mindmap-line-selected-width: 1.5px;
+    --b3-list-mindmap-relation-color: var(--b3-theme-accent);
+    --b3-list-mindmap-relation-width: 1.5px;
+    --b3-list-mindmap-relation-hover-color: unset;
+    --b3-list-mindmap-relation-hover-width: 1.5px;
+    --b3-list-mindmap-relation-selected-color: var(--b3-theme-accent);
+    --b3-list-mindmap-relation-selected-width: 1.5px;
+}
 // 节点
 .list-mindmap__node {
     @include superellipse-use(8px);
