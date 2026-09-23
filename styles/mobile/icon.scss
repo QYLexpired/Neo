@@ -64,7 +64,7 @@
 .b3-menu--sheet > .b3-menu__title:not(.b3-menu__title--root) {
     padding: 0 10px;
 }
-#model > .toolbar > .toolbar__text,
+#model > .toolbar > .toolbar__text:not(.toolbar__text--search),
 .b3-menu--sheet > .b3-menu__title:not(.b3-menu__title--root) .b3-menu__label {
     display: none;
 }

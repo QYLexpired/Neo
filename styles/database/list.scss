@@ -1,0 +1,18 @@
+@use "../utils" as *;
+.av[data-av-type="list"] {
+    .av__row[data-id] {
+        @include superellipse(8px);
+        &.av__row--select,
+        &.av__row--hl {
+            background-color: transparent;
+            &::before {
+                box-shadow: none;
+                border-radius: inherit;
+                corner-shape: inherit;
+                outline: 1px solid oklch(from var(--b3-theme-accent) l c h / 0.12);
+                outline-offset: -1px;
+                background-color: oklch(from var(--b3-theme-accent) l c h / 0.12);
+            }
+        }
+    }
+}

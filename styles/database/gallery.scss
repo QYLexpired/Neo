@@ -1,0 +1,65 @@
+@use "../utils" as *;
+@use "../tooltip" as *;
+@use "../component" as *;
+.av__gallery-item {
+    box-shadow: var(--neo-main-shadow);
+    @include superellipse-use(10px);
+    &::before {
+        background-color: transparent !important;
+    }
+}
+.av__gallery-fields:hover .b3-chip[data-type=block-more] {
+    right: 70px;
+    top: 2px;
+    .av__gallery-cover ~ & {
+        right: 0;
+    }
+}
+.av__gallery-actions {
+    right: 4px;
+    top: 4px;
+}
+.av__gallery-add {
+    @include button-transparent-hover-translucent;
+    @include superellipse(10px);
+}
+.av__gallery-cover {
+    border-bottom: 0.75px solid var(--b3-border-color-trans);
+    @include superellipse(10px);
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+.av__gallery-field .av__cell-check::before,
+.av__gallery-field .av__cell-uncheck::before {
+    top: 0.3125em;
+}
+.av__gallery-cover-position-tip {
+    @include tooltip-common;
+    padding: 4px 12px;
+}
+// 卡片字段合并为单行
+.av__gallery-item {
+    container-type: inline-size;
+    container-name: gallery-item;
+}
+@container gallery-item (min-width: 200px) {
+    .av__gallery-field.av__gallery-field--name {
+        display: flex;
+        flex-direction: row;
+        & .av__gallery-name {
+            flex-shrink: 0;
+            flex-basis: 33.3%;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            max-width: 10em;
+        }
+        & .av__cell {
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            flex-shrink: 1;
+            flex-basis: 100%
+        }
+    }
+}

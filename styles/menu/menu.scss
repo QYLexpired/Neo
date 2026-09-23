@@ -145,10 +145,6 @@
     width: 16px;
 }
 // 数据库菜单
-.av__panel .b3-menu__item:not([data-type=nobg]):hover,
-.av__panel .b3-menu__item--current:not([data-type=nobg]) {
-    @include menu-item-current;
-}
 .av__panel .b3-menu__label {
     min-height: unset;
 }

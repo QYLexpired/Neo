@@ -160,7 +160,14 @@
             color: var(--b3-theme-error);
         }
     }
+    .b3-chip__close {
+        @include icon;
+        &:hover {
+            color: var(--b3-theme-error);
+        }
+    }
 }
+.b3-chip 
 // 通用
 .b3-button {
     @include button-outline;

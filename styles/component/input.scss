@@ -129,6 +129,9 @@ body.body--win32-browser .b3-select { // body用来覆盖思源样式
     .av__mask & {
         background-color: var(--b3-theme-background) !important;
     }
+    .neo-mobile .toolbar & {
+        background-color: var(--b3-theme-background) !important;    
+    }
 }
 $slider-thumb-border-width: 0;
 $slider-thumb-y: -5px;
@@ -249,5 +252,14 @@ input[type="color"] {
             outline: 0.5px solid var(--b3-border-color-trans);
             outline-offset: -0.5px;
         }
+    }
+}
+// 日期输入框
+input[type="datetime-local"],
+input[type="date"],
+input[type="month"],
+input[type="week"] {
+    &::-webkit-calendar-picker-indicator {
+        filter: invert(0);
     }
 }
