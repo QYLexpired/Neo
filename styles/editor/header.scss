@@ -5,12 +5,9 @@
         @include button-transparent-hover-translucent;
     }
 }
-.b3-chips__doctag .b3-chip {
-    @include button-outline;
+.protyle .b3-chips__doctag .b3-chip {
     @include superellipse(24px);
     corner-shape: unset;
-    $offset: 16px;
-    padding: 4px 14px;
     background-color: oklch(from currentColor l c h / 0.12);
     color: var(--neo-tag-color);
     outline: 0.5px solid oklch(from currentColor l c h / 0.25);
@@ -20,25 +17,9 @@
         display: inline-block;
         margin-inline-end: 4px;
     }
-    .b3-chip__close {
-        opacity: 0;
-        margin-right: -$offset;
-        margin-left: 0;
-        padding-right: 0;
-        transition: inherit;
-        &:hover {
-            background-color: transparent;
-            color: var(--b3-theme-error);
-        }
-    }
     &:hover {
-        padding: 4px 6px;
         background-color: oklch(from currentColor l c h / 0.18);
         color: var(--neo-tag-color);
-        .b3-chip__close {
-            opacity: 1;
-            margin-right: 0;
-        }
     }
 }
 .protyle-background--enable .protyle-background__icon {

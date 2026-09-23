@@ -132,6 +132,27 @@
     opacity: 1;
     .b3-chips & {
         transition: var(--b3-transition);
+        corner-shape: unset;
+        $offset: 16px;
+        padding: 4px 14px;
+        .b3-chip__close {
+            opacity: 0;
+            margin-right: -$offset;
+            margin-left: 0;
+            padding-right: 0;
+            transition: inherit;
+            &:hover {
+                background-color: transparent;
+                color: var(--b3-theme-error);
+            }
+        }
+        &:hover {
+            padding: 4px 6px;
+            .b3-chip__close {
+                opacity: 1;
+                margin-right: 0;
+            }
+        }
     }
     &:hover {
         color: var(--b3-theme-on-surface);
@@ -142,6 +163,9 @@
     &.b3-chip--current {
         background-color: var(--neo-button-primary);
         @include contrast-color(--neo-button-primary);
+        .b3-chip__close {
+            @include contrast-color(--neo-button-primary);
+        }
         /*&.history__compare-filter {
             & > span {
                 outline: 1px solid;
