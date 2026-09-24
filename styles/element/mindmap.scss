@@ -1,19 +1,19 @@
 @use "../utils" as *;
 @use "../menu/menu" as *;
-.list-mindmap {
+.mindmap-view {
     @include superellipse-use(10px);
     border: unset;
     box-shadow: var(--neo-main-shadow);
     &.fullscreen {
-        .list-mindmap__toolbar {
+        .mindmap-view__toolbar {
             app-region: no-drag;
         }
     }
     &:not(.fullscreen) {
-        .list-mindmap__toolbar {
+        .mindmap-view__toolbar {
             opacity: 1;
             .block__icon,
-            .list-mindmap__zoom-control {
+            .mindmap-view__zoom-control {
                 filter: blur(6px);
                 transform: scale(1.2);
                 opacity: 0;
@@ -24,9 +24,9 @@
             }
         }
         &:hover {
-            .list-mindmap__toolbar {
+            .mindmap-view__toolbar {
                 .block__icon,
-                .list-mindmap__zoom-control {
+                .mindmap-view__zoom-control {
                     filter: none;
                     transform: none;
                     opacity: 1;
@@ -38,10 +38,10 @@
         }
     }
 }
-.list-mindmap__zoom-actions {
+.mindmap-view__zoom-actions {
     @include menu-container-common-simple;
 }
-.list-mindmap__inspector {
+.mindmap-view__inspector {
     @include menu-container-common-simple;
     box-shadow: var(--neo-main-shadow);
     @include superellipse(32px);
@@ -50,21 +50,21 @@
 }
 // 线条
 :root {
-    --b3-list-mindmap-line-color: var(--b3-border-color);
-    --b3-list-mindmap-line-width: 1.5px;
-    --b3-list-mindmap-line-hover-color: unset;
-    --b3-list-mindmap-line-hover-width: 1.5px;
-    --b3-list-mindmap-line-selected-color:var(--b3-theme-accent);
-    --b3-list-mindmap-line-selected-width: 1.5px;
-    --b3-list-mindmap-relation-color: var(--b3-theme-accent);
-    --b3-list-mindmap-relation-width: 1.5px;
-    --b3-list-mindmap-relation-hover-color: unset;
-    --b3-list-mindmap-relation-hover-width: 1.5px;
-    --b3-list-mindmap-relation-selected-color: var(--b3-theme-accent);
-    --b3-list-mindmap-relation-selected-width: 1.5px;
+    --b3-mindmap-line-color: var(--b3-border-color);
+    --b3-mindmap-line-width: 1.5px;
+    --b3-mindmap-line-hover-color: unset;
+    --b3-mindmap-line-hover-width: 1.5px;
+    --b3-mindmap-line-selected-color: unset;
+    --b3-mindmap-line-selected-width: 2.5px;
+    --b3-mindmap-relation-color: var(--b3-theme-accent);
+    --b3-mindmap-relation-width: 1.5px;
+    --b3-mindmap-relation-hover-color: unset;
+    --b3-mindmap-relation-hover-width: 1.5px;
+    --b3-mindmap-relation-selected-color: unset;
+    --b3-mindmap-relation-selected-width: 2.5px;
 }
 // 节点
-.list-mindmap__node {
+.mindmap-view__node {
     @include superellipse-use(8px);
     outline: 2px solid;
     outline-offset: -2px;
@@ -74,24 +74,15 @@
         outline-color: oklch(from currentColor l c h / 0.18);
         box-shadow: none !important;
     }
-    &.list-mindmap__node--selected {
+    &.mindmap-view__node--selected {
         outline-color: var(--b3-theme-accent);
         &::after {
             display: none;
         }
     }
-    &[data-mindmap-drop=child] {
-        box-shadow: none !important;
-        background-color: transparent !important;
-        outline-color: var(--b3-theme-secondary);
-    }
-    &[data-mindmap-drop=before]::before,
-    &[data-mindmap-drop=after]::after {
-        background-color: var(--b3-theme-secondary);
-    }
 }
-.list-mindmap__fold.block__icon,
-.list-mindmap__add-child.block__icon {
+.mindmap-view__fold.block__icon,
+.mindmap-view__add-child.block__icon {
     border-radius: 50% !important;
     background-color: var(--b3-menu-background) !important;
     box-shadow: var(--neo-main-shadow);
@@ -101,7 +92,7 @@
     }
 }
 // 根节点
-.list-mindmap__node--virtual {
+.mindmap-view__node--virtual {
     box-shadow: none !important;
     background-color: oklch(from var(--b3-theme-accent) l c h / 0.25) !important;
     &::before {
@@ -114,7 +105,7 @@
     &:hover {
         outline-color: oklch(from var(--b3-theme-accent) l c h / 0.25);
     }
-    &.list-mindmap__node--selected {
+    &.mindmap-view__node--selected {
         outline-color: var(--b3-theme-accent);
     }
 }

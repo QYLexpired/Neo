@@ -46,3 +46,6 @@ html[data-frontend][lang="zh-CN"] {
         content: "注意：当前未安装或未启用Neo+插件，Neo主题无法正常显示";
     }
 }
+html.neo-enabled::after {
+    display: none !important;
+}

@@ -1,0 +1,132 @@
+// 拖拽选区
+.protyle-select,
+.protyle-table-control__selection,
+.av[data-av-type="calendar"] .av__calendar-drop {
+    outline: 1px solid oklch(from var(--b3-theme-secondary) l c h / 0.3);
+    outline-offset: -1px;
+    background-color: oklch(from var(--b3-theme-secondary) l c h / 0.12);
+}
+.protyle-table-control__selection,
+.av[data-av-type="calendar"] .av__calendar-drop {
+    border: unset;
+}
+.pdf__resize {
+    border-radius: 0;
+    border: unset;
+    outline: 1px solid oklch(from var(--b3-theme-secondary) l c h / 0.12);
+    outline-offset: -1px;
+    background-color: oklch(from var(--b3-theme-secondary) l c h / 0.12);
+}
+// 拖入区域
+.layout-tab-container__drag,
+.layout-tab-bars--drag > .layout-tab-bar,
+.layout-tab-bar .item--document-drop > .item__document-drop .item__document-drop-option--active,
+.config-entry-visibility__dock-group--drop,
+.config-bazaar__drop {
+    outline: 1px solid oklch(from var(--b3-theme-secondary) l c h / 0.12);
+    outline-offset: -1px;
+    background-color: oklch(from var(--b3-theme-secondary) l c h / 0.12);
+}
+.layout-tab-bar .item--document-drop > .item__document-drop {
+    box-shadow: 0 0 0 1px oklch(from var(--b3-theme-secondary) l c h / 0.12) inset, var(--b3-point-shadow);
+}
+.config-entry-visibility__dock-group--drop {
+    box-shadow: none;
+}
+.layout-tab-bar .item--document-drop > .item__document-drop .item__document-drop-option--active,
+.config-bazaar__drop {
+    color: var(--b3-theme-secondary);
+}
+.custom-attr__avvalue--active {
+    background-color: var(--b3-list-hover);
+}
+// 插入线与目标块
+.protyle-wysiwyg [data-node-id],
+.protyle-wysiwyg [data-table-cell-node],
+.av__gallery-item,
+.av__gallery-add,
+.av__row,
+.av__cell,
+.av__kanban-group,
+.b3-list--background .b3-list-item {
+    &.dragover {
+        border-radius: 0 !important;
+        outline: 1px solid oklch(from var(--b3-theme-secondary) l c h / 0.12);
+        outline-offset: -1px;
+        background-color: oklch(from var(--b3-theme-secondary) l c h / 0.12) !important;
+        @at-root {
+            .b3-list--background .b3-list-item.dragover::after {
+                opacity: 0;
+            }
+        }
+    }
+    &.dragover__left,
+    &.dragover__right,
+    &.dragover__top,
+    &.dragover__bottom,
+    &.dragover__top--sibling,
+    &.dragover__bottom--sibling,
+    &.dragover__top--child,
+    &.dragover__bottom--child {
+        &::before {
+            display: none;
+        }
+        &::after {
+            background-color: var(--b3-theme-secondary);
+        }
+    }
+}
+.av__panel .b3-menu__item,
+.b3-menu[data-name="av-new-item-template"] [data-template-id],
+.av__relation-panel .av__relation-table-row {
+    &.dragover__top::after,
+    &.dragover__bottom::after {
+        background-color: var(--b3-theme-secondary);
+    }
+}
+.protyle-table-control__drop {
+    background-color: var(--b3-theme-secondary);
+}
+// 富文本跨单元格拖拽
+.protyle-wysiwyg [data-type="NodeTable"] {
+    td.dragover__top::before,
+    td.dragover__bottom::before,
+    th.dragover__top::before,
+    th.dragover__bottom::before {
+        background-color: var(--b3-theme-secondary);
+    }
+}
+.config-ai-provider__model--drop-before,
+.config-entry-visibility__row--drop-before {
+    box-shadow: inset 0 3px 0 var(--b3-theme-secondary);
+}
+.config-ai-provider__model--drop-after,
+.config-entry-visibility__row--drop-after {
+    box-shadow: inset 0 -3px 0 var(--b3-theme-secondary);
+}
+.mindmap-view__node[data-mindmap-drop=child] {
+    box-shadow: none !important;
+    background-color: transparent !important;
+    outline-color: var(--b3-theme-secondary);
+}
+.mindmap-view__node[data-mindmap-drop=before]::before,
+.mindmap-view__node[data-mindmap-drop=after]::after {
+    background-color: var(--b3-theme-secondary);
+}
+// Dock 与顶栏排序预览
+#dockMoveItem,
+.toolbar__item[data-topbar-drag-placeholder] {
+    background-color: transparent !important; // 覆盖内联
+    box-shadow: var(--neo-main-shadow);
+    animation: neo-dock-move 0.2s var(--neo-ease-out-2);
+}
+@keyframes neo-dock-move {
+    0% {
+        opacity: 0;
+        transform: scale(0.6);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}

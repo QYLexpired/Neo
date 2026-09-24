@@ -240,55 +240,9 @@
         transform: scale(1);
     }
 }
-// 选区
-.protyle-select {
-    outline: 1px solid oklch(from var(--b3-theme-secondary) l c h / 0.3);
-    outline-offset: -1px;
-    background-color: oklch(from var(--b3-theme-secondary) l c h / 0.12);
-}
 .protyle-wysiwyg--select::after,
 .protyle-wysiwyg--hl::after {
     outline: 1px solid oklch(from var(--b3-theme-accent) l c h / 0.12);
     outline-offset: -1px;
     background-color: oklch(from var(--b3-theme-accent) l c h / 0.12);
-}
-// 拖拽
-.layout-tab-container__drag {
-    outline: 1px solid oklch(from var(--b3-theme-secondary) l c h / 0.12);
-    outline-offset: -1px;
-    background-color: oklch(from var(--b3-theme-secondary) l c h / 0.12);
-}
-.protyle-wysiwyg [data-node-id],
-.av__gallery-item,
-.av__gallery-add,
-.av__row,
-.av__cell,
-.av__kanban-group,
-.b3-list--background .b3-list-item {
-    &.dragover {
-        border-radius: 0 !important;
-        outline: 1px solid oklch(from var(--b3-theme-secondary) l c h / 0.12);
-        outline-offset: -1px;
-        background-color: oklch(from var(--b3-theme-secondary) l c h / 0.12) !important;
-        @at-root {
-            .b3-list--background .b3-list-item.dragover::after {
-                opacity: 0;
-            }
-        }
-    }
-    &.dragover__left,
-    &.dragover__right,
-    &.dragover__top,
-    &.dragover__bottom,
-    &.dragover__top--sibling,
-    &.dragover__bottom--sibling,
-    &.dragover__top--child,
-    &.dragover__bottom--child {
-        &::before {
-            display: none;
-        }
-        &::after {
-            background-color: oklch(from var(--b3-theme-secondary) l c h);
-        }
-    }
 }

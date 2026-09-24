@@ -1,10 +1,10 @@
 @use "../utils" as *;
 .av[data-av-type="calendar"] {
+    --b3-av-calendar-weekend-background: oklch(from var(--b3-theme-on-background) l c h / 0.05);
     .av__calendar-grid {
         @include superellipse-use(12px);
     }
     .av__calendar-week {
-        --b3-av-calendar-weekend-background: oklch(from var(--b3-theme-on-background) l c h / 0.05);
         &:first-child {
             @include superellipse-use(12px 12px 0 0);
         }
@@ -49,6 +49,7 @@
         }
         border: unset;
         transition: var(--b3-transition);
+        transition-property: background-color, outline-color;
         background-color: var(--_av__calendar-item-bg, var(--_av__calendar-item-default-bg));
         outline: 0.5px solid;
         outline-color: var(--_av__calendar-item-outline, var(--_av__calendar-item-default-outline));
@@ -57,12 +58,6 @@
             background-color: var(--_av__calendar-item-hover-bg, var(--_av__calendar-item-default-hover-bg));
             outline-color: var(--_av__calendar-item-hover-outline, var(--_av__calendar-item-default-hover-outline));
         }
-    }
-    .av__calendar-drop {
-        border: unset;
-        outline: 1px solid oklch(from var(--b3-theme-secondary) l c h / 0.3);
-        outline-offset: -1px;
-        background-color: oklch(from var(--b3-theme-secondary) l c h / 0.12);
     }
 }
 .av[data-av-type=calendar],

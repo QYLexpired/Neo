@@ -11,8 +11,7 @@
     transition: var(--b3-transition);
 }
 .custom-attr .block__logo:not(.popover__block):hover,
-.custom-attr__avvalue:not(.custom-attr__avvalue--readonly):hover,
-.custom-attr__avvalue--active {
+.custom-attr__avvalue:not(.custom-attr__avvalue--readonly):hover {
     background-color: var(--b3-list-hover);
 }
 .custom-attr {

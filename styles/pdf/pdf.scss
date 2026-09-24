@@ -132,13 +132,6 @@
         right: auto;
     }
 }
-.pdf__resize {
-    border-radius: 0;
-    border: unset;
-    outline: 1px solid oklch(from var(--b3-theme-secondary) l c h / 0.12);
-    outline-offset: -1px;
-    background-color: oklch(from var(--b3-theme-secondary) l c h / 0.12);
-}
 .pdf__rect > div {
     border: unset;
     outline: 2px solid var(--pdf-annotation-color);
