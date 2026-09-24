@@ -1,7 +1,8 @@
 @use "../utils" as *;
 @use "../component" as *;
 .protyle-wysiwyg .tabs[data-node-id][data-tabs-ready=true],
-.b3-typography .tabs[data-node-id][data-tabs-ready=true] {
+.b3-typography .tabs[data-node-id][data-tabs-ready=true],
+.mindmap-view__content .tabs[data-tabs-ready=true] {
     border: unset;
     & > .tabs-header {
         border-radius: 0;
@@ -16,7 +17,8 @@
         }
         @at-root {
             .protyle-wysiwyg .tabs[data-node-id][data-tabs-ready=true],
-            .b3-typography .tabs[data-node-id][data-tabs-ready=true] {
+            .b3-typography .tabs[data-node-id][data-tabs-ready=true],
+            .mindmap-view__content .tabs[data-tabs-ready=true] {
                 &[data-tabs-orientation="horizontal"] {
                     & > .tabs-header {
                         margin-bottom: 6px;
@@ -36,7 +38,8 @@
         }
         @at-root {
             .protyle-wysiwyg .tabs[data-node-id][data-tabs-ready=true],
-            .b3-typography .tabs[data-node-id][data-tabs-ready=true] {
+            .b3-typography .tabs[data-node-id][data-tabs-ready=true],
+            .mindmap-view__content .tabs[data-tabs-ready=true] {
                 &[data-tabs-orientation="vertical"] {
                     & > .tabs-header {
                         margin-right: 12px;
@@ -59,7 +62,8 @@
         }
         @at-root {
             .protyle-wysiwyg .tabs[data-node-id][data-tabs-ready=true],
-            .b3-typography .tabs[data-node-id][data-tabs-ready=true] {
+            .b3-typography .tabs[data-node-id][data-tabs-ready=true],
+            .mindmap-view__content .tabs[data-tabs-ready=true] {
                 &[data-tabs-orientation="vertical"] {
                     .tabs-tab {
                         margin: 3px 6px;
@@ -119,7 +123,8 @@
         margin-left: 9px;
         @at-root {
             .protyle-wysiwyg .tabs[data-node-id][data-tabs-ready=true],
-            .b3-typography .tabs[data-node-id][data-tabs-ready=true] {
+            .b3-typography .tabs[data-node-id][data-tabs-ready=true],
+            .mindmap-view__content .tabs[data-tabs-ready=true] {
                 &[data-tabs-orientation="vertical"] {
                     .tabs-control {
                         margin: 0 auto;

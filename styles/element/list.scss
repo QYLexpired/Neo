@@ -87,7 +87,8 @@ $neo-custom-task-codes: neo-list-exclude($neo-task-codes, $neo-standard-task-cod
     --_list-fold-color: var(--b3-theme-accent);
     --_list-fold-bg: oklch(from var(--_list-fold-color) l c h / 0.18);
 }
-.protyle-wysiwyg [data-node-id] {
+.protyle-wysiwyg [data-node-id],
+.mindmap-view__content .mindmap-view__preview-block {
     &.li[data-subtype="u"],
     &.li[data-subtype="o"],
     &.li[data-subtype="t"] {

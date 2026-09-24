@@ -2,7 +2,8 @@
 @use "../tooltip" as *;
 $table-border-color: oklch(from currentColor l c h / 0.15);
 .b3-typography table,
-.protyle-wysiwyg table {
+.protyle-wysiwyg table,
+.mindmap-view__content table {
     --b3-table-even-background: oklch(from currentColor l c h / 0.05);
     outline: 1px solid $table-border-color !important; // 覆盖.protyle-wysiwyg [data-node-id] [spellcheck]:focus { outline: none; }
     outline-offset: -1px;
@@ -49,7 +50,8 @@ $table-border-color: oklch(from currentColor l c h / 0.15);
 }
 // 转置
 .b3-typography,
-.protyle-wysiwyg  {
+.protyle-wysiwyg,
+.mindmap-view__content {
     [data-type=NodeTable][custom-sy-table-header-column=true] table {
         thead th,
         tbody tr {

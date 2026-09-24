@@ -1,5 +1,6 @@
 @use "../utils" as *;
-.protyle-wysiwyg [data-node-id] {
+.protyle-wysiwyg [data-node-id],
+.mindmap-view__content .mindmap-view__preview-block {
     @include superellipse(10px);
     &.protyle-wysiwyg--select,
     &.protyle-wysiwyg--hl {
@@ -8,7 +9,8 @@
         }
     }
 }
-.protyle-wysiwyg [data-node-id][fold="1"] {
+.protyle-wysiwyg [data-node-id][fold="1"],
+.mindmap-view__content .mindmap-view__preview-block[fold="1"] {
     &:not(.li) {
         outline: 1px solid oklch(from currentColor l c h / 0.25);
         outline-offset: -1px;
@@ -35,13 +37,13 @@ table,
   font-variant-numeric: tabular-nums;
 }
 @for $i from 1 through 6 {
-    .b3-typography, .protyle-wysiwyg {
+    .b3-typography, .protyle-wysiwyg, .mindmap-view__content {
         h#{$i}, .h#{$i} {
             word-break: auto-phrase;
         }
     }
     @if $i == 1 {
-        .b3-typography, .protyle-wysiwyg {
+        .b3-typography, .protyle-wysiwyg, .mindmap-view__content {
             h1, .h1 {
             padding: 0 4px;
             margin-bottom: calc(0.1em + 4px);
@@ -49,7 +51,7 @@ table,
         }
     }
     @if $i < 6 {
-        @each $container in ".b3-typography", ".protyle-wysiwyg" {
+        @each $container in ".b3-typography", ".protyle-wysiwyg", ".mindmap-view__content" {
             @for $j from 1 through $i {
                 #{$container} h#{$j} + h#{($i + 1)} {
                     margin-top: 0;
@@ -60,7 +62,7 @@ table,
             }
         }
     }
-    @each $container in ".b3-typography", ".protyle-wysiwyg" {
+    @each $container in ".b3-typography", ".protyle-wysiwyg", ".mindmap-view__content" {
         #{$container} h#{$i} + h#{$i} {
             margin-top: 0;
         }
@@ -74,7 +76,7 @@ table,
     text-wrap-style: pretty;
     white-space: normal;
 }
-.b3-typography, .protyle-wysiwyg {
+.b3-typography, .protyle-wysiwyg, .mindmap-view__content {
     kbd,
     span[data-type~="kbd"],
     code:not(.hljs),

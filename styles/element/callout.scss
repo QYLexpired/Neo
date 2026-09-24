@@ -1,6 +1,7 @@
 @use "sass:string";
 @use "../utils" as *;
-.protyle-wysiwyg[data-readonly] .callout-icon {
+.protyle-wysiwyg[data-readonly] .callout-icon,
+.mindmap-view__content .callout-icon {
     @include icon;
 }
 :root {
@@ -16,7 +17,8 @@
     }
 }
 .b3-typography .callout,
-.protyle-wysiwyg .callout {
+.protyle-wysiwyg .callout,
+.mindmap-view__content .callout {
     background-color: oklch(from currentColor l c h / 0.08);
     outline: 0.5px solid oklch(from currentColor l c h / 0.1);
     outline-offset: -0.5px;

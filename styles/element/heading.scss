@@ -3,7 +3,8 @@
     --_heading-color: var(--b3-theme-on-background);
 }
 .b3-typography,
-.protyle-wysiwyg {
+.protyle-wysiwyg,
+.mindmap-view__content {
     @for $i from 1 through 6 {
         h#{$i},
         .h#{$i} {

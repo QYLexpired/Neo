@@ -1,5 +1,6 @@
 @use "../utils" as *;
-.protyle-wysiwyg [data-node-id] .img--select {
+.protyle-wysiwyg [data-node-id] .img--select,
+.mindmap-view__content .img--select {
     filter: unset;
     img {
         transition: var(--b3-transition);

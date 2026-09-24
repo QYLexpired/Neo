@@ -1,4 +1,5 @@
-.protyle-wysiwyg [data-node-id].hr {
+.protyle-wysiwyg [data-node-id].hr,
+.mindmap-view__content .hr {
     color: var(--b3-theme-on-background);
     & > div::after {
         background-color: oklch(from currentColor l c h / 0.18);
