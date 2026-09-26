@@ -1,8 +1,12 @@
 @use "../utils" as *;
 @use "../component" as *;
+.b3-cover {
+    gap: 8px;
+}
 .b3-cover__cards {
+    padding-top: 0; 
     .b3-card {
-        @include superellipse(12px);
+        @include superellipse-use(16px);
         img {
             transition: 0.3s;
         }

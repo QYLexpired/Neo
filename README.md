@@ -11,6 +11,7 @@ See the [CHANGELOG](https://github.com/QYLexpired/Neo/blob/main/CHANGELOG.md) fo
 - Disabled Focus Block Indicator and Smooth Caret in mind map nodes
 ## Notes
 - [Neo+](https://github.com/QYLexpired/Neo-Plus) is required because some of Neo's features cannot be implemented with CSS alone. Install and enable the plugin before using the theme.
+- Neither the Neo theme nor the Neo+ plugin modifies document data. You can enable or disable them at any time without any migration.
 - Have a question or suggestion? Post in the [Neo theme discussion thread](https://ld246.com/article/1783158376401) or open an issue on [GitHub](https://github.com/QYLexpired/Neo/issues)
 ## Support Me
 Neo is free to use. If you enjoy it, consider starring the project on [GitHub](https://github.com/QYLexpired/Neo) or [buying me a coffee](https://icnmjy02sv9g.feishu.cn/wiki/FekNwrtB7ia1WckYelRckwzZnig?from=from_copylink)
