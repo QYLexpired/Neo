@@ -1,3 +1,18 @@
+### v1.6.6 / 2026-09-26
+- 适配思维导图（仅支持思源3.8.6）
+- 支持在自定义图片设置中直接预览并选择资源文件图片（仅支持思源3.8.6）
+- 支持直接在预设配色菜单使用配色库的配色方案
+- 适配数据库日历视图
+- 适配数据库列表视图
+- 优化Windows端的滚动条样式
+- 在思维导图节点中禁用聚焦块指示和平滑光标
+- Added support for mind maps (SiYuan 3.8.6 only)
+- Custom Image settings now let you preview and select images from your assets (SiYuan 3.8.6 only)
+- Color schemes from the palette library can now be applied directly from the Preset Palette menu
+- Added support for the calendar view in databases
+- Added support for the list view in databases
+- Improved scrollbar styling on Windows
+- Disabled Focus Block Indicator and Smooth Caret in mind map nodes
 ### v1.6.5 / 2026-09-21
 - 将自定义主题色、主题色跟随题头图、主题色跟随系统整合为基色配色
 - 基色跟随题头图支持配置取色风格

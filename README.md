@@ -5,6 +5,7 @@
 See the [CHANGELOG](https://github.com/QYLexpired/Neo/blob/main/CHANGELOG.md) for the full update history.
 - Added support for mind maps (SiYuan 3.8.6 only)
 - Custom Image settings now let you preview and select images from your assets (SiYuan 3.8.6 only)
+- Color schemes from the palette library can now be applied directly from the Preset Palette menu
 - Added support for the calendar view in databases
 - Added support for the list view in databases
 - Improved scrollbar styling on Windows
@@ -25,8 +26,8 @@ Neo is free to use. If you enjoy it, consider starring the project on [GitHub](h
 - Overflow fades soften the edges of scrollable content
 - Spring easing gives transitions and interactions a more natural feel
 #### Expressive Color Schemes
-- Preset palettes: dozens of distinctive color schemes
-- Freeform Palette: set the interface's main colors yourself, with hundreds of classic palettes in the built-in reference library
+- Preset palettes: dozens of distinctive presets, plus a built-in library of hundreds of classic color schemes
+- Freeform Palette: set the interface's main colors yourself
 - Base Palette: choose a base color and adjust saturation and brightness, or match the base color to your banner image or system accent color
 - Neue Brutalism palettes are also available
 - Random Color: picks a color scheme at random whenever SiYuan starts
