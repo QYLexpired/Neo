@@ -15,4 +15,7 @@
             }
         }
     }
+    .av__row > .av__cell {
+        @include overflow-fade-mask($fade-mask-m, "left right");
+    }
 }

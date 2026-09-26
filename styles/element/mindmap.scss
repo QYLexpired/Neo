@@ -94,7 +94,7 @@
 // 根节点
 .mindmap-view__node--virtual {
     box-shadow: none !important;
-    background-color: oklch(from var(--b3-theme-accent) l c h / 0.25) !important;
+    background-color: oklch(from var(--b3-theme-accent) l c h / 0.25);
     &::before {
         width: 8px;
         height: 8px;

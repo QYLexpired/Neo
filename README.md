@@ -1,67 +1,72 @@
-# Neo: Refined Interface, Fluid and Free Thinking
-- Neo is a third-party theme designed specifically for SiYuan Notes, with a design language inspired by Apple (macOS/iOS). Its globally unified, meticulously polished interface makes every note-taking experience a delight.
-- Neo draws heavily on the design and ideas of the [Asri theme](https://github.com/mustakshif/Asri). A huge thank you to [mustakshif](https://github.com/mustakshif) — without your impeccable taste, technical skill, and astonishing creativity, Neo would never have come to be.
+# Neo: A Refined Interface for Free-Flowing Ideas
+- Neo is a third-party theme for SiYuan Notes inspired by Apple's macOS and iOS design language. It brings a cohesive, polished look to your workspace.
+- Neo owes much of its design and ideas to the [Asri theme](https://github.com/mustakshif/Asri). Thank you, [mustakshif](https://github.com/mustakshif) — your eye for design, technical skill, and creativity made Neo possible.
 ## Changelog
 See the [CHANGELOG](https://github.com/QYLexpired/Neo/blob/main/CHANGELOG.md) for the full update history.
-- Grouped Custom Theme Color, theme color following the banner image's dominant color, and theme color following the system accent color under Base Palette
-- Base color following the banner image's dominant color now supports configurable color-picking styles
-- Added QYL theme palettes to the Freeform Palette reference library
-- Preset color schemes now support search and random selection
-- Added a gradient lighting animation to the main menu button
-- Fixed the smooth caret potentially being lost after a line break
-- Removed the light-sensing effect of Super Fusion (frosted glass)
+- Added support for mind maps (SiYuan 3.8.6 only)
+- Custom Image settings now let you preview and select images from your assets (SiYuan 3.8.6 only)
+- Added support for the calendar view in databases
+- Added support for the list view in databases
+- Improved scrollbar styling on Windows
+- Disabled Focus Block Indicator and Smooth Caret in mind map nodes
 ## Notes
-- Some of the theme's styles and features cannot be implemented with CSS alone, so the companion plugin [Neo+](https://github.com/QYLexpired/Neo-Plus) **MUST** be installed and enabled.
-- For any questions or suggestions during use, please visit the [Neo Theme Introduction & Feedback Thread](https://ld246.com/article/1783158376401) or [GitHub](https://github.com/QYLexpired/Neo/issues)
+- [Neo+](https://github.com/QYLexpired/Neo-Plus) is required because some of Neo's features cannot be implemented with CSS alone. Install and enable the plugin before using the theme.
+- Have a question or suggestion? Post in the [Neo theme discussion thread](https://ld246.com/article/1783158376401) or open an issue on [GitHub](https://github.com/QYLexpired/Neo/issues)
 ## Support Me
-The Neo theme is completely free. If you enjoy this theme, feel free to star it on [GitHub](https://github.com/QYLexpired/Neo) or [buy me a coffee](https://icnmjy02sv9g.feishu.cn/wiki/FekNwrtB7ia1WckYelRckwzZnig?from=from_copylink)
+Neo is free to use. If you enjoy it, consider starring the project on [GitHub](https://github.com/QYLexpired/Neo) or [buying me a coffee](https://icnmjy02sv9g.feishu.cn/wiki/FekNwrtB7ia1WckYelRckwzZnig?from=from_copylink)
 ## Features
-#### Rich, Rigorous Color Schemes
-- Preset Schemes: dozens of built-in preset color schemes, each with its own distinct style
-- Freeform Palette: fully customize the interface's key color values, with a built-in reference library of hundreds of classic color schemes
-- Base Palette: choose a base color and adjust saturation and brightness to customize the interface, with support for following the banner image's dominant color or the system accent color
-- Neue Brutalism color schemes
-- Random Color: a random scheme is selected from all the theme's color schemes on every SiYuan launch
-#### Ever-Changing Interface
-- Super Fusion: seamlessly blends tabs, breadcrumbs, banner images, and note content together (inspired by the Asri theme)
-- IDE Style: a minimalist look defined by clean line-based divisions (inspired by the Asri theme)
-- Sidebar Mute: emphasizes the editor area, giving the content and sidebars more depth
+#### A Consistent Experience
+- Designed for macOS, Windows, and mobile devices, with a consistent visual style across platforms
+#### Refined Design
+- Uses the OKLCH color space to support flexible palettes while keeping text readable
+- Introduces smooth superellipse corners
+- Frosted glass adds translucency and depth across the interface
+- Overflow fades soften the edges of scrollable content
+- Spring easing gives transitions and interactions a more natural feel
+#### Expressive Color Schemes
+- Preset palettes: dozens of distinctive color schemes
+- Freeform Palette: set the interface's main colors yourself, with hundreds of classic palettes in the built-in reference library
+- Base Palette: choose a base color and adjust saturation and brightness, or match the base color to your banner image or system accent color
+- Neue Brutalism palettes are also available
+- Random Color: picks a color scheme at random whenever SiYuan starts
 - High Contrast: uses a dark background for the top bar and dock in light mode
 - Invert: swaps the background colors of the sidebars and the content area in dark mode
+#### A Customizable Interface
+- Super Fusion: merges the tab bar, breadcrumbs, banner image, and note content into a continuous surface (inspired by the Asri theme)
+- IDE Style: uses dividing lines to organize the interface (inspired by the Asri theme)
+- Sidebar Mute: tones down the sidebars to draw attention to the editor
 - Vertical Tabs: stack your tabs vertically for easier viewing and switching
-- Global frosted glass effects for a transparent and layered interface
-- Fade-out effects to eliminate visual fragmentation
-- A large variety of preset Textures, plus support for custom image textures or backgrounds
-- Colored Folders: colorize folders in the document tree
-#### Natural and Dynamic Interactions
-- Adds fluid easing animations to enhance interactive delight and visual smoothness
-- Card Style Search List: card-style layout for search results to improve reading efficiency
+- Choose from built-in textures or use your own images as textures or backgrounds
+- Add color to the document tree
+#### Fluid Interactions
+- Smooth Caret and Fluid Cursor animations
+- Focus Block Indicator highlights the block you are editing
+- Card Style Search List: displays search results as cards for easier scanning
 - Multicolumn Slash Menu: expands into multiple columns, navigable with the arrow keys
-#### Effortless Editing
-- Optimized global typography for an enhanced Chinese and English reading experience
-- Smooth Caret and Fluid Cursor effects
-- Colored Headings and Colored Lists for better differentiation
-- List Bullet Line: guide lines for a clearer list hierarchy
-- Focus Block Indicator effect
+#### Readable Typography
+- Text styling tuned for readability in Chinese and English
+- Optional colors for headings and lists make them easier to distinguish
+- Colorful Selection: selection highlights take their color from the text
+- List Bullet Line: shows guide lines to make nested lists easier to follow
 ## Cautions
-Some features heavily rework SiYuan's native styles, so there are compatibility issues that cannot be fixed. Please disable them promptly if they affect your usage. Additionally, some features are quite performance-intensive and should be enabled with caution.
+Some features substantially change SiYuan's default styling and may cause compatibility issues that cannot be fully resolved. Disable any feature that causes problems. Others can affect performance, so enable them with care.
 - Super Fusion
-    - The document's dynamically loaded scrollbar cannot correctly indicate the current reading position
-    - Causes database table headers to fail to stick to the top or end up in the wrong position
+    - In documents with dynamically loaded content, the scrollbar may not accurately show your position
+    - Database table headers may fail to stay pinned or appear in the wrong position
     - May conflict with some plugins
-    - This feature adds blur and refraction effects, which may cause lag
+    - Its blur and refraction effects may cause lag
 - Frosted Glass
-    - Increases rendering load; if you perceive lag, turn it off or switch to the Light level
+    - Increases rendering load; if you notice lag, turn it off or select the Light setting
 - Fluid Cursor
-    - The cursor trail animation can significantly degrade performance; enable with caution
-- Colored Selection
-    - The related CSS selectors have poor performance; enable with caution
-## A Final Word
-- Neo's performance: To achieve a global style overhaul, Neo inevitably consumes more performance than the default theme. The theme has been optimized to the best of its ability (the `performancetuning` module in Neo+ is a dedicated performance optimization module). But performance is a subjective experience shaped by multiple coupled factors. If we take the default theme's smoothness as 1, Neo's might be 0.9; however, if you use complex plugins or inefficient code snippets, the result can be 0.9 × 0.9 = 0.81. At that point, blaming all the lag on the theme is unreasonable.
-- Neo's Easter Eggs: The Neo theme has many hidden little details waiting for you to discover (for example, try changing the overall text color of a blockquote from the Block Menu → Appearance and see what happens)
-- Once again, thanks to the [Asri theme](https://github.com/mustakshif/Asri) and its author, [mustakshif](https://github.com/mustakshif)
+    - Its cursor trail can significantly slow down the interface; enable it with care
+- Colorful Selection
+    - Its CSS selectors may slow down the app; enable it with care
+## Final Notes
+- Performance: Neo's changes throughout the interface use more resources than the default theme, although we have optimized them where we can (including Neo+'s `performancetuning` module). Responsiveness also depends on your device, plugins, and code snippets. Suppose the default theme's smoothness is 1 and Neo's is 0.9. A demanding plugin could bring the combined result to 0.9 × 0.9 = 0.81. Lag may have more than one cause.
+- Easter eggs: Neo has many small details to discover. For example, change an entire blockquote's text color from the block menu under Appearance and see what happens.
+- Thanks again to [mustakshif](https://github.com/mustakshif), creator of the [Asri theme](https://github.com/mustakshif/Asri)
 ## Acknowledgements
-The creation of the Neo theme drew significant inspiration from the following projects. Thanks to their creators:
+Neo also draws inspiration from the projects below. Thanks to everyone who made them:
 - [Asri](https://github.com/mustakshif/Asri)
 - [Cupertino](https://github.com/aaaaalexis/obsidian-cupertino)
 - [Border](https://github.com/akifyss/obsidian-border)

@@ -242,7 +242,7 @@
 }
 .protyle-wysiwyg--select::after,
 .protyle-wysiwyg--hl::after {
-    outline: 1px solid oklch(from var(--b3-theme-accent) l c h / 0.12);
+    outline: 1px solid oklch(from var(--b3-theme-accent) l c h / 0.3);
     outline-offset: -1px;
     background-color: oklch(from var(--b3-theme-accent) l c h / 0.12);
 }

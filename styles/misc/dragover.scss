@@ -10,20 +10,15 @@
 .av[data-av-type="calendar"] .av__calendar-drop {
     border: unset;
 }
-.pdf__resize {
-    border-radius: 0;
-    border: unset;
-    outline: 1px solid oklch(from var(--b3-theme-secondary) l c h / 0.12);
-    outline-offset: -1px;
-    background-color: oklch(from var(--b3-theme-secondary) l c h / 0.12);
-}
 // 拖入区域
 .layout-tab-container__drag,
 .layout-tab-bars--drag > .layout-tab-bar,
 .layout-tab-bar .item--document-drop > .item__document-drop .item__document-drop-option--active,
 .config-entry-visibility__dock-group--drop,
-.config-bazaar__drop {
-    outline: 1px solid oklch(from var(--b3-theme-secondary) l c h / 0.12);
+.config-bazaar__drop,
+.custom-attr__avvalue--active,
+.custom-attr__avvalue.custom-attr__avvalue--active:hover {
+    outline: 1px solid oklch(from var(--b3-theme-secondary) l c h / 0.3);
     outline-offset: -1px;
     background-color: oklch(from var(--b3-theme-secondary) l c h / 0.12);
 }
@@ -37,9 +32,6 @@
 .config-bazaar__drop {
     color: var(--b3-theme-secondary);
 }
-.custom-attr__avvalue--active {
-    background-color: var(--b3-list-hover);
-}
 // 插入线与目标块
 .protyle-wysiwyg [data-node-id],
 .protyle-wysiwyg [data-table-cell-node],
@@ -51,7 +43,7 @@
 .b3-list--background .b3-list-item {
     &.dragover {
         border-radius: 0 !important;
-        outline: 1px solid oklch(from var(--b3-theme-secondary) l c h / 0.12);
+        outline: 1px solid oklch(from var(--b3-theme-secondary) l c h / 0.3);
         outline-offset: -1px;
         background-color: oklch(from var(--b3-theme-secondary) l c h / 0.12) !important;
         @at-root {
@@ -106,8 +98,9 @@
 }
 .mindmap-view__node[data-mindmap-drop=child] {
     box-shadow: none !important;
-    background-color: transparent !important;
-    outline-color: var(--b3-theme-secondary);
+    outline: 1px solid oklch(from var(--b3-theme-secondary) l c h / 0.3);
+    outline-offset: -1px;
+    background-color: oklch(from var(--b3-theme-secondary) l c h / 0.12) !important;
 }
 .mindmap-view__node[data-mindmap-drop=before]::before,
 .mindmap-view__node[data-mindmap-drop=after]::after {

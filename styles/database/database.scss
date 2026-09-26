@@ -24,14 +24,18 @@
 .av__group-icon {
     @include icon;
 }
-.av__row-actions .av__row-action {
+.av__row-actions .av__row-action,
+.av__cell-action {
     @include icon;
-    transition: var(--b3-transition);
+    transition: none;
     background-color: oklch(from var(--b3-theme-background) l c h / 0.8);
     backdrop-filter: blur(3px);
     &:hover {
         background-color: oklch(from var(--b3-theme-background) l c h / 0.8);
         background-image: unset;
+    }
+    svg {
+        transition: color var(--b3-transition);
     }
 }
 .av__new,
