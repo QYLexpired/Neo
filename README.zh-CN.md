@@ -4,7 +4,6 @@
 ## 更新日志
 完整更新历史可查看[CHANGELOG](https://github.com/QYLexpired/Neo/blob/main/CHANGELOG.md)
 ### 1.6.7
-- 支持收藏预设配色
 - 适配数据库看板视图
 - 适配数据库条件颜色
 ### 1.6.6

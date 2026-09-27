@@ -76,6 +76,10 @@
 .b3-menu__submenu {
     @include menu-container-common;
 }
+.b3-menu__items {
+    padding: 8px;
+    margin: -8px 0; // 解决部分菜单内输入框外阴影被裁剪的问题
+}
 .b3-menu__item {
     background-color: transparent;
 }
