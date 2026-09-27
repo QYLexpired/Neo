@@ -125,7 +125,6 @@
         overflow: visible;
     }
     .b3-menu__icon {
-        --b3-transition: none;
         @include icon;
     }
     .av__field-wrapper {
@@ -139,7 +138,7 @@
         background-color: unset;
         outline: 1px solid var(--b3-border-color-trans);
         outline-offset: -1px;
-        @include superellipse(10px);
+        @include superellipse-use(7px);
     }
 }
 // 复选框
@@ -239,4 +238,18 @@
 }
 .av__richtext-editor {
     @include menu-container-common;
+}
+// 条件颜色
+.av__panel .av__conditional-colors {
+    .av__conditional-rule {
+        @include superellipse-use(7px);
+        background-color: transparent;
+        outline: 1px solid var(--b3-border-color-trans);
+        outline-offset: -1px;
+    }
+    .av__conditional-swatch {
+        border-radius: 50%;
+        outline: .5px solid oklch(from currentColor l c h / 0.18);
+        outline-offset: -0.5px;
+    }
 }

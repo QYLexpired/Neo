@@ -121,7 +121,7 @@
     @include superellipse-use(7px);
     @include menu-item-child-trans-origin;
     @include menu-item-child {
-        transition-property: none;
+        transition-property: none !important;
     }
     @include menu-item-current {
         @include menu-item-current-style;

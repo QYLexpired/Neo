@@ -3,6 +3,11 @@
 - Neo主题大量参考了[Asri主题](https://github.com/mustakshif/Asri)的设计和创意，非常感谢[mustakshif](https://github.com/mustakshif)，没有你超强的审美、技术力和让人惊叹的创意，就不会有Neo的出现
 ## 更新日志
 完整更新历史可查看[CHANGELOG](https://github.com/QYLexpired/Neo/blob/main/CHANGELOG.md)
+### 1.6.7
+- 支持收藏预设配色
+- 适配数据库看板视图
+- 适配数据库条件颜色
+### 1.6.6
 - 适配思维导图（仅支持思源3.8.6）
 - 支持在自定义图片设置中直接预览并选择资源文件图片（仅支持思源3.8.6）
 - 支持直接在预设配色菜单使用配色库的配色方案

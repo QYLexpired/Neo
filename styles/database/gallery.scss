@@ -5,7 +5,9 @@
     box-shadow: var(--neo-main-shadow);
     @include superellipse-use(10px);
     &::before {
-        background-color: transparent !important;
+        border-radius: inherit;
+        corner-shape: inherit;
+        background-color: var(--b3-av-item-background, transparent) !important;
     }
 }
 .av__gallery-fields:hover .b3-chip[data-type=block-more] {
@@ -60,6 +62,38 @@
             text-overflow: ellipsis;
             flex-shrink: 1;
             flex-basis: 100%
+        }
+    }
+}
+.av__kanban {
+    @include overflow-fade-mask($fade-mask-m, "left right");
+}
+.av__kanban-group {
+    @include superellipse-use(12px);
+    &::before {
+        border-radius: inherit;
+        corner-shape: inherit;
+    }
+}
+.av__kanban--bg {
+    .av__kanban-group {
+        &::before {
+            --b3-border-color: var(--b3-theme-background) !important;
+            background-color: oklch(from var(--b3-av-kanban-background) l c h / 0.35);
+            opacity: 1;
+        }
+    }
+    .av__gallery-item {
+        box-shadow: none;
+        outline: 1px solid oklch(from var(--b3-av-kanban-background) calc(l - 0.1) c h / 0.55);
+        .neo-mode-dark & {
+            outline-color: oklch(from var(--b3-av-kanban-background) calc(l + 0.1) c h / 0.55);
+        }
+    }
+    .av__gallery-add {
+        @include button-transparent-hover-translucent;
+        &::before {
+            display: none;
         }
     }
 }

@@ -50,6 +50,7 @@
 }
 // 线条
 :root {
+    /*
     --b3-mindmap-line-color: var(--b3-border-color);
     --b3-mindmap-line-width: 1.5px;
     --b3-mindmap-line-hover-color: unset;
@@ -62,6 +63,11 @@
     --b3-mindmap-relation-hover-width: 1.5px;
     --b3-mindmap-relation-selected-color: unset;
     --b3-mindmap-relation-selected-width: 2.5px;
+    --b3-mindmap-summary-color: var(--b3-border-color);
+    --b3-mindmap-summary-width: 1.5px;
+    --b3-mindmap-summary-selected-color: unset;
+    --b3-mindmap-summary-selected-width: 2.5px;
+    */
 }
 // 节点
 .mindmap-view__node {
@@ -73,6 +79,13 @@
     &:hover {
         outline-color: oklch(from currentColor l c h / 0.18);
         box-shadow: none !important;
+    }
+    &.mindmap-view__node--relation {
+        box-shadow: none;
+        outline-color: oklch(from var(--b3-theme-on-background) l c h / 0.18);
+        &:hover {
+            outline-color: var(--b3-theme-accent);
+        }
     }
     &.mindmap-view__node--selected {
         outline-color: var(--b3-theme-accent);
