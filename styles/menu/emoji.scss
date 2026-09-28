@@ -5,6 +5,7 @@
 }
 [data-key="dialog-emojis"] .b3-dialog__scrim {
     opacity: 0 !important;
+    transition: none !important;
 }
 .emojis {
     .emojis__tabheader {
@@ -82,4 +83,10 @@
 .emojis__link-sample {
     border: unset;
     @include superellipse(10px);
+}
+.emojis .emoji__dynamic-item {
+    &:hover {
+        box-shadow: unset !important;
+        background-color: transparent !important;
+    }
 }

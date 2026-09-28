@@ -38,6 +38,7 @@
     --_frostedglass-luminous-main-tooltip-shadow: 0 0 0 2px oklch(from var(--b3-theme-on-background) calc(l - 0.35) c h / 0.225) inset;
     --_frostedglass-luminous-toolbar-shadow: 0 0 0 0.5px oklch(from var(--b3-theme-on-background) calc(l - 0.035) c h / 0.08), 0.5px 0 0 0 oklch(from var(--b3-theme-on-background) calc(l - 0.035) c h / 0.25), -0.5px 0 0 0 oklch(from var(--b3-theme-on-background) calc(l - 0.035) c h / 0.25), 0 0 0 1px oklch(from var(--b3-theme-background) 0.99 c h / 0.6) inset, 0 1px 1px -0.5px oklch(from var(--b3-theme-background) 0.99 c h / 0.95) inset, 0 -1px 1px -0.5px oklch(from var(--b3-theme-background) 0.99 c h / 0.95) inset;
     --_frostedglass-luminous-tooltip-shadow: 0 0 0 0.5px oklch(from var(--b3-theme-on-background) calc(l - 0.035) c h / 0.08), 0.5px 0 0 0 oklch(from var(--b3-theme-on-background) calc(l - 0.035) c h / 0.25), -0.5px 0 0 0 oklch(from var(--b3-theme-on-background) calc(l - 0.035) c h / 0.25), 0 0 0 1px oklch(from var(--b3-theme-background) 0.99 c h / 0.6) inset, 0 1px 1px -0.5px oklch(from var(--b3-theme-background) 0.99 c h / 0.95) inset, 0 -1px 1px -0.5px oklch(from var(--b3-theme-background) 0.99 c h / 0.95) inset;
+    // 子菜单宽度落在半像素时，毛玻璃合成可能吞掉 0.5px 零模糊的右外描边；把左右描边画在铺满菜单的 ::before 玻璃层内侧。
     --_frostedglass-luminous-menu-shadow-blur: 0 0 transparent;
     --_frostedglass-luminous-menu-shadow-inset: 0 0 0 0.5px oklch(from var(--b3-theme-on-background) calc(l - 0.035) c h / 0.095) inset, 0.5px 0 0 0 oklch(from var(--b3-theme-on-background) calc(l - 0.035) c h / 0.265) inset, -0.5px 0 0 0 oklch(from var(--b3-theme-on-background) calc(l - 0.035) c h / 0.265) inset, 0 0 0 1px oklch(from var(--b3-theme-background) 0.99 c h / 0.6) inset, 0 1px 1px -0.5px oklch(from var(--b3-theme-background) 0.99 c h / 0.95) inset, 0 -1px 1px -0.5px oklch(from var(--b3-theme-background) 0.99 c h / 0.95) inset;
     --_frostedglass-luminous-menu-shadow: var(--_frostedglass-luminous-menu-shadow-inset), var(--_frostedglass-luminous-menu-shadow-blur);
@@ -63,6 +64,7 @@
         toolbar: (pseudo: before, blur: 5px, offset: 10px, overflow: visible),
         status: (base-type: toolbar, pseudo: after, blur: 5px, offset: 10px, overflow: visible),
         tooltip: (pseudo: before, blur: 4px, offset: 8px, overflow: visible),
+        table-handle: (base-type: tooltip, pseudo: after, blur: 4px, offset: 8px, overflow: visible),
         snackbar: (base-type: menu, pseudo: before, blur: 7px, offset: 16px, overflow: visible)
     );
     $config: map.get($types, $type);
@@ -95,7 +97,15 @@
         pointer-events: none;
         box-shadow: var(--_frostedglass-luminous-main-#{$base-type}-shadow);
         filter: blur(map.get($config, blur));
-        transform: translate(0px, map.get($config, offset));
+        @if $type == table-handle {
+            inset: 2px auto auto 50%;
+            width: 16px;
+            height: 20px;
+            border-radius: 11px;
+            transform: translate(-50%, map.get($config, offset));
+        } @else {
+            transform: translate(0px, map.get($config, offset));
+        }
     }
 }
 @mixin frostedglass-menu($scope: null) {

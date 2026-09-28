@@ -6,7 +6,7 @@ See the [CHANGELOG](https://github.com/QYLexpired/Neo/blob/main/CHANGELOG.md) fo
 ### 1.6.7
 - Added support for Kanban views in databases
 - Added support for conditional colors in databases
-- Added an optional Luminous Glass effect to frosted glass elements (inspired by the Asri theme)
+- Added a Luminous Glass effect to frosted glass elements (inspired by the Asri theme)
 ### 1.6.6
 - Added support for mind maps (SiYuan 3.8.6 only)
 - Custom Image settings now let you preview and select images from your assets (SiYuan 3.8.6 only)

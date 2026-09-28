@@ -48,11 +48,10 @@
     outline-offset: -0.5px;
     border-radius: 50%;
     transition: var(--_emoji-transiton);
-}
-.color__square:hover,
-.protyle-font__style:hover {
-    box-shadow: unset !important;
-    scale: 1.15;
+    &:hover {
+        box-shadow: unset !important;
+        scale: 1.15;
+    }
 }
 .protyle-util .protyle-linenumber__rows {
     line-height: 18px;

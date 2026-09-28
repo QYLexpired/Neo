@@ -35,7 +35,7 @@
 }
 #sidebar > .toolbar > .toolbar__icon,
 #sidebarRight > .toolbar > .toolbar__icon,
-#menu > .b3-menu__title > .b3-menu__icon,
+#menu > .toolbar > .toolbar__icon,
 #model > .toolbar > .toolbar__icon,
 .b3-menu--sheet > .b3-menu__title:not(.b3-menu__title--root) > .b3-menu__icon {
     box-shadow: var(--neo-main-shadow);
@@ -58,7 +58,7 @@
 }
 #sidebar > .toolbar,
 #sidebarRight > .toolbar,
-#menu > .b3-menu__title,
+#menu > .toolbar,
 #model > .toolbar {
     height: 48px;
     padding: 0 6px;

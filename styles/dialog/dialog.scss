@@ -32,7 +32,8 @@
     .config-entry-visibility__browser,
     .config-entry-visibility__column,
     .template-manager__preview,
-    .history__snapshot-heading {
+    .history__snapshot-heading,
+    .history__text {
         @content;
     }
 }

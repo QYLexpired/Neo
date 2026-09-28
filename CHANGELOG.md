@@ -1,3 +1,10 @@
+### v1.6.7 / 2026-09-28
+- 适配数据库看板视图
+- 适配数据库条件颜色
+- 为毛玻璃材质引入雾光玻璃效果（源于Asri主题）
+- Added support for Kanban views in databases
+- Added support for conditional colors in databases
+- Added a Luminous Glass effect to frosted glass elements (inspired by the Asri theme)
 ### v1.6.6 / 2026-09-26
 - 适配思维导图（仅支持思源3.8.6）
 - 支持在自定义图片设置中直接预览并选择资源文件图片（仅支持思源3.8.6）

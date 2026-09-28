@@ -2,7 +2,7 @@
     opacity: 0 !important;
 }
 .neo-mobile {
-    -webkit-tap-highlight-color: transparent;
+    -webkit-tap-highlight-color: var(--b3-list-hover);
     .toolbar {
         border-bottom: unset;
         background-color: transparent;

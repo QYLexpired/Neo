@@ -222,6 +222,9 @@
     .av__relation-table-check {
         background-color: var(--b3-menu-background);
         @include frostedglass($blur: s, $color: menu);
+        .neo-frostedglass-luminous & {
+            @include frostedglass-luminous(menu-simple);
+        }
     }
     .av__relation-table-row {
         &[data-relation-type=selected] {

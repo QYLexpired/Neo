@@ -104,6 +104,9 @@ table + .protyle-action__table .table__resize {
 }
 // 控制
 .protyle-table-control__handle {
+    .neo-frostedglass-luminous &:hover {
+        @include frostedglass-luminous(table-handle);
+    }
     &::before {
         background-color: var(--b3-theme-on-surface);
         @include superellipse(10px);
