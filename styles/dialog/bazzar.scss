@@ -103,6 +103,9 @@
         color: var(--b3-theme-on-surface);
         background-color: var(--b3-theme-background);
         @include frostedglass-tooltip;
+        .neo-frostedglass-luminous & {
+            @include frostedglass-luminous(tooltip);
+        }
         transition: var(--b3-transition), 0.65s var(--neo-ease-spring-3);
         &:hover {
             color: var(--b3-theme-on-background);

@@ -96,12 +96,6 @@
 .config-entry-visibility__row--drop-after {
     box-shadow: inset 0 -3px 0 var(--b3-theme-secondary);
 }
-.mindmap-view__node[data-mindmap-drop=child] {
-    box-shadow: none !important;
-    outline: 1px solid oklch(from var(--b3-theme-secondary) l c h / 0.3);
-    outline-offset: -1px;
-    background-color: oklch(from var(--b3-theme-secondary) l c h / 0.12) !important;
-}
 .mindmap-view__node[data-mindmap-drop=before]::before,
 .mindmap-view__node[data-mindmap-drop=after]::after {
     background-color: var(--b3-theme-secondary);

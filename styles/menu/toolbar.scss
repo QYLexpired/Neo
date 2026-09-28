@@ -1,7 +1,7 @@
 @use "../utils" as *;
 @use "menu" as *;
 .protyle-toolbar {
-    @include menu-container-common-simple;
+    @include menu-container-common-simple(toolbar);
     box-shadow: var(--neo-main-shadow);
     @include superellipse(18px);
     corner-shape: unset;

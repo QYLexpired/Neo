@@ -13,6 +13,12 @@
         @content;
     }
 }
+@mixin menu-item-child-bg {
+    // 菜单项的子元素（更改background-color）
+    & > .window-workspace__selection input[type="checkbox"]:not(.b3-switch) {
+        @content;
+    }
+}
 @mixin menu-item-child-trans-origin {
     // 特殊的菜单项子元素需要变化
     .b3-text-field {
@@ -59,18 +65,24 @@
         background-color: transparent;
         box-shadow: var(--b3-menu-shadow-blur);
     }
+    .neo-frostedglass-luminous & {
+        @include frostedglass-luminous(menu);
+    }
     &::before {
         @include frostedglass-before;
         @include frostedglass-menu;
         box-shadow: var(--b3-menu-shadow-inset);
     }
 }
-@mixin menu-container-common-simple {
+@mixin menu-container-common-simple($luminous-type: menu-simple) {
     @include superellipse-use(12px);
     background-color: var(--b3-menu-background);
     @include frostedglass-menu;
     border: unset;
     box-shadow: var(--b3-menu-shadow);
+    .neo-frostedglass-luminous & {
+        @include frostedglass-luminous($luminous-type);
+    }
 }
 .b3-menu,
 .b3-menu__submenu {
@@ -118,6 +130,9 @@
         @include contrast-color(--neo-menu-item-primary, --b3-callout-caution);
         @include contrast-color(--neo-menu-item-primary, --b3-protyle-inline-blockref-color);
     }
+    @include menu-item-child-bg {
+        @include contrast-color(--neo-menu-item-primary, background-color)
+    }
     @include menu-item-child-trans-current;
 }
 .b3-menu__item {
@@ -159,4 +174,8 @@
 }
 .av__panel .b3-menu .block__icon {
     padding: 4px !important;
+}
+// 布局
+.window-workspace__toolbar {
+    color: var(--b3-theme-on-surface);
 }

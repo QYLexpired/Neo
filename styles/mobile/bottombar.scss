@@ -9,6 +9,9 @@
     box-shadow: var(--neo-main-shadow);
     background-color: var(--b3-menu-background);
     @include frostedglass-menu;
+    .neo-frostedglass-luminous & {
+        @include frostedglass-luminous(toolbar);
+    }
 }
 .mobile-bottom-bar__item {
     @include icon($important: true);

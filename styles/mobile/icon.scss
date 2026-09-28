@@ -39,6 +39,8 @@
 #model > .toolbar > .toolbar__icon,
 .b3-menu--sheet > .b3-menu__title:not(.b3-menu__title--root) > .b3-menu__icon {
     box-shadow: var(--neo-main-shadow);
+    background-color: var(--b3-theme-background);
+    @include frostedglass-tooltip;
     border-radius: 50%;
     padding: 8px;
     margin: 2px;

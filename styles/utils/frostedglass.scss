@@ -31,6 +31,73 @@
         content: "";
     }
 }
+.neo-mode-light {
+    --_frostedglass-luminous-main-menu-shadow: 0 0 0 3px oklch(from var(--b3-theme-on-background) calc(l - 0.35) c h / 0.225) inset;
+    --_frostedglass-luminous-main-dialog-shadow: 0 0 0 3px oklch(from var(--b3-theme-on-background) calc(l - 0.35) c h / 0.225) inset;
+    --_frostedglass-luminous-main-toolbar-shadow: 0 0 0 3px oklch(from var(--b3-theme-on-background) calc(l - 0.35) c h / 0.225) inset;
+    --_frostedglass-luminous-main-tooltip-shadow: 0 0 0 2px oklch(from var(--b3-theme-on-background) calc(l - 0.35) c h / 0.225) inset;
+    --_frostedglass-luminous-toolbar-shadow: 0 0 0 0.5px oklch(from var(--b3-theme-on-background) calc(l - 0.035) c h / 0.08), 0.5px 0 0 0 oklch(from var(--b3-theme-on-background) calc(l - 0.035) c h / 0.25), -0.5px 0 0 0 oklch(from var(--b3-theme-on-background) calc(l - 0.035) c h / 0.25), 0 0 0 1px oklch(from var(--b3-theme-background) 0.99 c h / 0.6) inset, 0 1px 1px -0.5px oklch(from var(--b3-theme-background) 0.99 c h / 0.95) inset, 0 -1px 1px -0.5px oklch(from var(--b3-theme-background) 0.99 c h / 0.95) inset;
+    --_frostedglass-luminous-tooltip-shadow: 0 0 0 0.5px oklch(from var(--b3-theme-on-background) calc(l - 0.035) c h / 0.08), 0.5px 0 0 0 oklch(from var(--b3-theme-on-background) calc(l - 0.035) c h / 0.25), -0.5px 0 0 0 oklch(from var(--b3-theme-on-background) calc(l - 0.035) c h / 0.25), 0 0 0 1px oklch(from var(--b3-theme-background) 0.99 c h / 0.6) inset, 0 1px 1px -0.5px oklch(from var(--b3-theme-background) 0.99 c h / 0.95) inset, 0 -1px 1px -0.5px oklch(from var(--b3-theme-background) 0.99 c h / 0.95) inset;
+    --_frostedglass-luminous-menu-shadow-blur: 0 0 transparent;
+    --_frostedglass-luminous-menu-shadow-inset: 0 0 0 0.5px oklch(from var(--b3-theme-on-background) calc(l - 0.035) c h / 0.095) inset, 0.5px 0 0 0 oklch(from var(--b3-theme-on-background) calc(l - 0.035) c h / 0.265) inset, -0.5px 0 0 0 oklch(from var(--b3-theme-on-background) calc(l - 0.035) c h / 0.265) inset, 0 0 0 1px oklch(from var(--b3-theme-background) 0.99 c h / 0.6) inset, 0 1px 1px -0.5px oklch(from var(--b3-theme-background) 0.99 c h / 0.95) inset, 0 -1px 1px -0.5px oklch(from var(--b3-theme-background) 0.99 c h / 0.95) inset;
+    --_frostedglass-luminous-menu-shadow: var(--_frostedglass-luminous-menu-shadow-inset), var(--_frostedglass-luminous-menu-shadow-blur);
+    --_frostedglass-luminous-dialog-shadow-blur: 0 0 0 0.5px oklch(from var(--b3-theme-on-background) calc(l - 0.035) c h / 0.135), 0.5px 0 0 0 oklch(from var(--b3-theme-on-background) calc(l - 0.035) c h / 0.265), -0.5px 0 0 0 oklch(from var(--b3-theme-on-background) calc(l - 0.035) c h / 0.265);
+}
+.neo-mode-dark {
+    --_frostedglass-luminous-main-menu-shadow: 0 0 0 3px oklch(from var(--b3-theme-background) calc(l - 0.35) c h / 0.8) inset;
+    --_frostedglass-luminous-main-dialog-shadow: 0 0 0 3px oklch(from var(--b3-theme-background) calc(l - 0.35) c h / 0.8) inset;
+    --_frostedglass-luminous-main-toolbar-shadow: 0 0 0 3px oklch(from var(--b3-theme-background) calc(l - 0.35) c h / 0.8) inset;
+    --_frostedglass-luminous-main-tooltip-shadow: 0 0 0 2px oklch(from var(--b3-theme-background) calc(l - 0.35) c h / 0.65) inset;
+    --_frostedglass-luminous-toolbar-shadow: 0.5px 0 0 0 oklch(from var(--b3-theme-background) calc(l - 0.05) c h / 0.8), -0.5px 0 0 0 oklch(from var(--b3-theme-background) calc(l - 0.05) c h / 0.8), 0 0 0 0.5px oklch(from var(--b3-theme-on-background) calc(l + 0.02) c h / 0.05) inset, 0 0.75px 1px -0.5px oklch(from var(--b3-theme-on-background) calc(l + 0.05) c h / 0.48) inset, 0 -0.75px 1px -0.5px oklch(from var(--b3-theme-on-background) calc(l + 0.05) c h / 0.48) inset;
+    --_frostedglass-luminous-tooltip-shadow: 0.5px 0 0 0 oklch(from var(--b3-theme-background) calc(l - 0.05) c h / 0.8), -0.5px 0 0 0 oklch(from var(--b3-theme-background) calc(l - 0.05) c h / 0.8), 0 0 0 0.5px oklch(from var(--b3-theme-on-background) calc(l + 0.02) c h / 0.05) inset, 0 0.75px 1px -0.5px oklch(from var(--b3-theme-on-background) calc(l + 0.05) c h / 0.48) inset, 0 -0.75px 1px -0.5px oklch(from var(--b3-theme-on-background) calc(l + 0.05) c h / 0.48) inset;
+    --_frostedglass-luminous-menu-shadow-blur: 1px 0 0 0 oklch(from var(--b3-theme-background) calc(l - 0.05) c h / 0.8), -1px 0 0 0 oklch(from var(--b3-theme-background) calc(l - 0.05) c h / 0.8);
+    --_frostedglass-luminous-menu-shadow-inset: 0 0 0 1px oklch(from var(--b3-theme-on-background) calc(l + 0.02) c h / 0.05) inset, 0 1px 1px -0.5px oklch(from var(--b3-theme-on-background) calc(l + 0.05) c h / 0.5) inset, 0 -1px 1px -0.5px oklch(from var(--b3-theme-on-background) calc(l + 0.05) c h / 0.5) inset;
+    --_frostedglass-luminous-menu-shadow: var(--_frostedglass-luminous-menu-shadow-inset), var(--_frostedglass-luminous-menu-shadow-blur);
+    --_frostedglass-luminous-dialog-shadow-blur: 1px 0 0 0 oklch(from var(--b3-theme-background) calc(l - 0.05) c h / 0.8), -1px 0 0 0 oklch(from var(--b3-theme-background) calc(l - 0.05) c h / 0.8);
+}
+@mixin frostedglass-luminous($type) {
+    $types: (
+        menu: (pseudo: after, blur: 7px, offset: 16px, overflow: visible),
+        menu-simple: (base-type: menu, pseudo: before, blur: 7px, offset: 16px, overflow: visible),
+        dialog: (pseudo: after, blur: 7px, offset: 16px),
+        toolbar: (pseudo: before, blur: 5px, offset: 10px, overflow: visible),
+        status: (base-type: toolbar, pseudo: after, blur: 5px, offset: 10px, overflow: visible),
+        tooltip: (pseudo: before, blur: 4px, offset: 8px, overflow: visible),
+        snackbar: (base-type: menu, pseudo: before, blur: 7px, offset: 16px, overflow: visible)
+    );
+    $config: map.get($types, $type);
+    @if $config == null {
+        @error "Unknown frostedglass-luminous type: #{$type}";
+    }
+    $base-type: if(sass(map.has-key($config, base-type)): map.get($config, base-type); else: $type);
+    $shadow: if(sass($type == menu-simple): shadow; else: shadow-blur);
+    @if $base-type == toolbar or $base-type == tooltip {
+        --neo-main-shadow: var(--_frostedglass-luminous-#{$base-type}-shadow);
+    } @else if $type == snackbar {
+        --b3-message-shadow: var(--_frostedglass-luminous-menu-shadow);
+    } @else {
+        --b3-#{$base-type}-#{$shadow}: var(--_frostedglass-luminous-#{$base-type}-#{$shadow});
+    }
+    @if $type == menu {
+        --b3-menu-shadow-inset: var(--_frostedglass-luminous-menu-shadow-inset);
+    }
+    @if $type == status {
+        --_status-position-factor: 3;
+    }
+    overflow: map.get($config, overflow);
+    &::#{map.get($config, pseudo)} {
+        position: absolute;
+        content: "";
+        inset: 0;
+        z-index: -1;
+        border-radius: inherit;
+        corner-shape: inherit;
+        pointer-events: none;
+        box-shadow: var(--_frostedglass-luminous-main-#{$base-type}-shadow);
+        filter: blur(map.get($config, blur));
+        transform: translate(0px, map.get($config, offset));
+    }
+}
 @mixin frostedglass-menu($scope: null) {
     @include frostedglass($blur: t, $color: menu, $scope: $scope);
 }

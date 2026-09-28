@@ -50,24 +50,24 @@
 }
 // 线条
 :root {
-    /*
     --b3-mindmap-line-color: var(--b3-border-color);
-    --b3-mindmap-line-width: 1.5px;
-    --b3-mindmap-line-hover-color: unset;
-    --b3-mindmap-line-hover-width: 1.5px;
-    --b3-mindmap-line-selected-color: unset;
-    --b3-mindmap-line-selected-width: 2.5px;
+    --b3-mindmap-line-width: 1.5;
+    --b3-mindmap-line-hover-color: initial;
+    --b3-mindmap-line-hover-width: 1.5;
+    --b3-mindmap-line-selected-color: initial;
+    --b3-mindmap-line-selected-width: 2.5;
     --b3-mindmap-relation-color: var(--b3-theme-accent);
-    --b3-mindmap-relation-width: 1.5px;
-    --b3-mindmap-relation-hover-color: unset;
-    --b3-mindmap-relation-hover-width: 1.5px;
-    --b3-mindmap-relation-selected-color: unset;
-    --b3-mindmap-relation-selected-width: 2.5px;
+    --b3-mindmap-relation-width: 1.5;
+    --b3-mindmap-relation-hover-color: initial;
+    --b3-mindmap-relation-hover-width: 1.5;
+    --b3-mindmap-relation-selected-color: initial;
+    --b3-mindmap-relation-selected-width: 2.5;
     --b3-mindmap-summary-color: var(--b3-border-color);
-    --b3-mindmap-summary-width: 1.5px;
-    --b3-mindmap-summary-selected-color: unset;
-    --b3-mindmap-summary-selected-width: 2.5px;
-    */
+    --b3-mindmap-summary-width: 1.5;
+    --b3-mindmap-summary-hover-color: initial;
+    --b3-mindmap-summary-hover-width: 1.5;
+    --b3-mindmap-summary-selected-color: initial;
+    --b3-mindmap-summary-selected-width: 2.5;
 }
 // 节点
 .mindmap-view__node {
@@ -93,6 +93,11 @@
             display: none;
         }
     }
+    &[data-mindmap-drop=child] {
+        outline-color: var(--b3-theme-secondary);
+        background: unset !important;
+        box-shadow: none;
+    }
 }
 .mindmap-view__fold.block__icon,
 .mindmap-view__add-child.block__icon {
@@ -107,7 +112,7 @@
 // 根节点
 .mindmap-view__node--virtual {
     box-shadow: none !important;
-    background-color: oklch(from var(--b3-theme-accent) l c h / 0.25);
+    background-color: oklch(from var(--b3-theme-accent) l c h / 0.25) !important;
     &::before {
         width: 8px;
         height: 8px;

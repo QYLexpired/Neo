@@ -5,8 +5,8 @@
 @supports (bottom: anchor(--a bottom)) {
     body:not(.neo-mobile) .status {
         position: absolute;
-        bottom: calc(anchor(--anchor-layout-center bottom) + calc(var(--_layout-gap) * 1.5));
-        right: calc(anchor(--anchor-layout-center right) + calc(var(--_layout-gap) * 1.5));
+        bottom: calc(anchor(--anchor-layout-center bottom) + calc(var(--_layout-gap) * var(--_status-position-factor, 1.5)));
+        right: calc(anchor(--anchor-layout-center right) + calc(var(--_layout-gap) * var(--_status-position-factor, 1.5)));
         @include superellipse(18px);
         background-color: var(--b3-menu-background);
         @include frostedglass-menu;
@@ -18,6 +18,9 @@
         overflow: hidden;
         z-index: 5;
         max-width: max(anchor-size(--anchor-layout-center) - 16px, 200px);
+        .neo-frostedglass-luminous & {
+            @include frostedglass-luminous(status);
+        }
         .toolbar__item {
             &:hover {
                 box-shadow: none;

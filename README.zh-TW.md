@@ -3,6 +3,11 @@
 - Neo 主題大量參考了 [Asri 主題](https://github.com/mustakshif/Asri) 的設計和創意，非常感謝 [mustakshif](https://github.com/mustakshif)，沒有你超強的審美、技術力和令人驚嘆的創意，就不會有 Neo 的出現
 ## 更新日誌
 完整更新紀錄可於 [CHANGELOG](https://github.com/QYLexpired/Neo/blob/main/CHANGELOG.md) 查看
+### 1.6.7
+- 適配資料庫看板檢視
+- 適配資料庫條件顏色
+- 為毛玻璃材質加入霧光玻璃效果（可關閉；參考 Asri 主題）
+### 1.6.6
 - 支援心智圖（僅支援思源 3.8.6）
 - 支援在自訂圖片設定中直接預覽並選擇資源檔案中的圖片（僅支援思源 3.8.6）
 - 支援直接在預設配色選單使用配色庫的配色方案

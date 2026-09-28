@@ -45,6 +45,9 @@
         background-color: transparent;
         box-shadow: var(--b3-dialog-shadow-blur);
     }
+    .neo-frostedglass-global.neo-frostedglass-luminous & {
+        @include frostedglass-luminous(dialog);
+    }
     &::before {
         @include frostedglass-before($scope: global);
         @include frostedglass-dialog($scope: global);

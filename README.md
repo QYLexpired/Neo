@@ -3,6 +3,11 @@
 - Neo owes much of its design and ideas to the [Asri theme](https://github.com/mustakshif/Asri). Thank you, [mustakshif](https://github.com/mustakshif) — your eye for design, technical skill, and creativity made Neo possible.
 ## Changelog
 See the [CHANGELOG](https://github.com/QYLexpired/Neo/blob/main/CHANGELOG.md) for the full update history.
+### 1.6.7
+- Added support for Kanban views in databases
+- Added support for conditional colors in databases
+- Added an optional Luminous Glass effect to frosted glass elements (inspired by the Asri theme)
+### 1.6.6
 - Added support for mind maps (SiYuan 3.8.6 only)
 - Custom Image settings now let you preview and select images from your assets (SiYuan 3.8.6 only)
 - Color schemes from the palette library can now be applied directly from the Preset Palette menu

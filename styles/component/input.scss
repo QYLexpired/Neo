@@ -72,6 +72,9 @@ body.body--win32-browser .b3-select { // body用来覆盖思源样式
         @include superellipse-use(12px);
         @include frostedglass-menu;
         box-shadow: var(--b3-menu-shadow);
+        .neo-frostedglass-luminous & {
+            @include frostedglass-luminous(menu-simple);
+        }
     }
     option {
         @include superellipse(7px);
