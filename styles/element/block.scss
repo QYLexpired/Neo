@@ -5,7 +5,8 @@
     &.protyle-wysiwyg--select,
     &.protyle-wysiwyg--hl {
         &::after {
-            @include superellipse(10px);
+            border-radius: inherit;
+            corner-shape: inherit;
         }
     }
 }

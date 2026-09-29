@@ -3,6 +3,9 @@
     background-color: var(--b3-menu-background);
     border-top: unset;
     @include frostedglass-menu($scope: global);
+    .neo-frostedglass-global.neo-frostedglass-luminous & {
+        @include frostedglass-luminous(menu-simple);
+    }
     @include superellipse-use(16px 16px 0 0);
     box-shadow: var(--b3-menu-shadow);
     margin: 0 2px -2px 2px;
@@ -39,4 +42,7 @@
 }
 .protyle-util--mobile {
     box-shadow: var(--neo-main-shadow);
+    top: 12px !important;
+    left: 12px !important;
+    max-width: calc(100% - 24px);
 }

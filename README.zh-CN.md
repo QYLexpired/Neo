@@ -3,18 +3,12 @@
 - Neo主题大量参考了[Asri主题](https://github.com/mustakshif/Asri)的设计和创意，非常感谢[mustakshif](https://github.com/mustakshif)，没有你超强的审美、技术力和让人惊叹的创意，就不会有Neo的出现
 ## 更新日志
 完整更新历史可查看[CHANGELOG](https://github.com/QYLexpired/Neo/blob/main/CHANGELOG.md)
+### 1.6.8
+- 修复部分样式异常
 ### 1.6.7
 - 适配数据库看板视图
 - 适配数据库条件颜色
 - 为毛玻璃材质引入雾光玻璃效果（源于Asri主题）
-### 1.6.6
-- 适配思维导图（仅支持思源3.8.6）
-- 支持在自定义图片设置中直接预览并选择资源文件图片（仅支持思源3.8.6）
-- 支持直接在预设配色菜单使用配色库的配色方案
-- 适配数据库日历视图
-- 适配数据库列表视图
-- 优化Windows端的滚动条样式
-- 在思维导图节点中禁用聚焦块指示和平滑光标
 ## 说明
 - 主题的部分样式和功能无法仅通过CSS实现，因此必须安装并启用主题的配套插件：[Neo+](https://github.com/QYLexpired/Neo-Plus)
 - Neo主题和Neo+插件均不会对文档数据进行任何修改，可随时启用或停用，不存在迁移负担

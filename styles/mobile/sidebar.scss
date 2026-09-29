@@ -1,9 +1,27 @@
 @use "../utils" as *;
+@mixin sidebar-edge-shadow($direction) {
+    .neo-mode-light & {
+        box-shadow: inset #{$direction * -1px} 0 0 oklch(from var(--b3-theme-background) 0.99 c h / 0.2),
+            #{$direction * 2px} 0 6px -3px oklch(from var(--b3-theme-on-background) calc(l - 0.035) c h / 0.08),
+            #{$direction * 8px} 0 20px -10px oklch(from var(--b3-theme-on-background) calc(l - 0.035) c h / 0.06);
+    }
+    .neo-mode-dark & {
+        box-shadow: inset #{$direction * -1px} 0 0 oklch(from var(--b3-theme-on-background) calc(l + 0.05) c h / 0.06),
+            #{$direction * 2px} 0 6px -3px oklch(from var(--b3-theme-background) calc(l - 0.1) c h / 0.2),
+            #{$direction * 8px} 0 20px -10px oklch(from var(--b3-theme-background) calc(l - 0.1) c h / 0.16);
+    }
+}
 #sidebar,
 #sidebarRight {
     background-color: var(--b3-theme-background);
     @include frostedglass-menu($scope: global);
     transition: 0.15s var(--neo-ease-out-3);
+}
+#sidebar.side-panel--swiping {
+    @include sidebar-edge-shadow(1);
+}
+#sidebarRight.side-panel--swiping {
+    @include sidebar-edge-shadow(-1);
 }
 .sy__agentChat--mobile {
     background-color: transparent;

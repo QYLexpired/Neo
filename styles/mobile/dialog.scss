@@ -19,6 +19,9 @@
     .b3-dialog__container.mobile-bottom-sheet {
         @include superellipse-use(22px 22px 0 0);
         box-shadow: var(--b3-menu-shadow);
+        .neo-frostedglass-global.neo-frostedglass-luminous & {
+            box-shadow: var(--b3-dialog-shadow-blur);
+        }
         margin: 0 2px -2px 2px;
         transition: 0.15s var(--neo-ease-out-3);
         max-width: calc(100vw - 4px);
