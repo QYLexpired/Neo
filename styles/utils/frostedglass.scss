@@ -32,10 +32,10 @@
     }
 }
 .neo-mode-light {
-    --_frostedglass-luminous-main-menu-shadow: 0 0 0 3px oklch(from var(--b3-theme-on-background) calc(l - 0.35) c h / 0.225) inset;
-    --_frostedglass-luminous-main-dialog-shadow: 0 0 0 3px oklch(from var(--b3-theme-on-background) calc(l - 0.35) c h / 0.225) inset;
-    --_frostedglass-luminous-main-toolbar-shadow: 0 0 0 3px oklch(from var(--b3-theme-on-background) calc(l - 0.35) c h / 0.225) inset;
-    --_frostedglass-luminous-main-tooltip-shadow: 0 0 0 2px oklch(from var(--b3-theme-on-background) calc(l - 0.35) c h / 0.225) inset;
+    --_frostedglass-luminous-menu-glow: 0 0 0 3px oklch(from var(--b3-theme-on-background) calc(l - 0.35) c h / 0.225) inset;
+    --_frostedglass-luminous-dialog-glow: 0 0 0 3px oklch(from var(--b3-theme-on-background) calc(l - 0.35) c h / 0.225) inset;
+    --_frostedglass-luminous-toolbar-glow: 0 0 0 3px oklch(from var(--b3-theme-on-background) calc(l - 0.35) c h / 0.225) inset;
+    --_frostedglass-luminous-tooltip-glow: 0 0 0 2px oklch(from var(--b3-theme-on-background) calc(l - 0.35) c h / 0.225) inset;
     --_frostedglass-luminous-toolbar-shadow: 0 0 0 0.5px oklch(from var(--b3-theme-on-background) calc(l - 0.035) c h / 0.08), 0.5px 0 0 0 oklch(from var(--b3-theme-on-background) calc(l - 0.035) c h / 0.25), -0.5px 0 0 0 oklch(from var(--b3-theme-on-background) calc(l - 0.035) c h / 0.25), 0 0 0 1px oklch(from var(--b3-theme-background) 0.99 c h / 0.6) inset, 0 1px 1px -0.5px oklch(from var(--b3-theme-background) 0.99 c h / 0.95) inset, 0 -1px 1px -0.5px oklch(from var(--b3-theme-background) 0.99 c h / 0.95) inset;
     --_frostedglass-luminous-tooltip-shadow: 0 0 0 0.5px oklch(from var(--b3-theme-on-background) calc(l - 0.035) c h / 0.08), 0.5px 0 0 0 oklch(from var(--b3-theme-on-background) calc(l - 0.035) c h / 0.25), -0.5px 0 0 0 oklch(from var(--b3-theme-on-background) calc(l - 0.035) c h / 0.25), 0 0 0 1px oklch(from var(--b3-theme-background) 0.99 c h / 0.6) inset, 0 1px 1px -0.5px oklch(from var(--b3-theme-background) 0.99 c h / 0.95) inset, 0 -1px 1px -0.5px oklch(from var(--b3-theme-background) 0.99 c h / 0.95) inset;
     // 子菜单宽度落在半像素时，毛玻璃合成可能吞掉 0.5px 零模糊的右外描边；把左右描边画在铺满菜单的 ::before 玻璃层内侧。
@@ -45,10 +45,10 @@
     --_frostedglass-luminous-dialog-shadow-blur: 0 0 0 0.5px oklch(from var(--b3-theme-on-background) calc(l - 0.035) c h / 0.135), 0.5px 0 0 0 oklch(from var(--b3-theme-on-background) calc(l - 0.035) c h / 0.265), -0.5px 0 0 0 oklch(from var(--b3-theme-on-background) calc(l - 0.035) c h / 0.265);
 }
 .neo-mode-dark {
-    --_frostedglass-luminous-main-menu-shadow: 0 0 0 3px oklch(from var(--b3-theme-background) calc(l - 0.35) c h / 0.8) inset;
-    --_frostedglass-luminous-main-dialog-shadow: 0 0 0 3px oklch(from var(--b3-theme-background) calc(l - 0.35) c h / 0.8) inset;
-    --_frostedglass-luminous-main-toolbar-shadow: 0 0 0 3px oklch(from var(--b3-theme-background) calc(l - 0.35) c h / 0.8) inset;
-    --_frostedglass-luminous-main-tooltip-shadow: 0 0 0 2px oklch(from var(--b3-theme-background) calc(l - 0.35) c h / 0.65) inset;
+    --_frostedglass-luminous-menu-glow: 0 0 0 3px oklch(from var(--b3-theme-background) calc(l - 0.35) c h / 0.8) inset;
+    --_frostedglass-luminous-dialog-glow: 0 0 0 3px oklch(from var(--b3-theme-background) calc(l - 0.35) c h / 0.8) inset;
+    --_frostedglass-luminous-toolbar-glow: 0 0 0 3px oklch(from var(--b3-theme-background) calc(l - 0.35) c h / 0.8) inset;
+    --_frostedglass-luminous-tooltip-glow: 0 0 0 2px oklch(from var(--b3-theme-background) calc(l - 0.35) c h / 0.65) inset;
     --_frostedglass-luminous-toolbar-shadow: 0.5px 0 0 0 oklch(from var(--b3-theme-background) calc(l - 0.05) c h / 0.8), -0.5px 0 0 0 oklch(from var(--b3-theme-background) calc(l - 0.05) c h / 0.8), 0 0 0 0.5px oklch(from var(--b3-theme-on-background) calc(l + 0.02) c h / 0.05) inset, 0 0.75px 1px -0.5px oklch(from var(--b3-theme-on-background) calc(l + 0.05) c h / 0.48) inset, 0 -0.75px 1px -0.5px oklch(from var(--b3-theme-on-background) calc(l + 0.05) c h / 0.48) inset;
     --_frostedglass-luminous-tooltip-shadow: 0.5px 0 0 0 oklch(from var(--b3-theme-background) calc(l - 0.05) c h / 0.8), -0.5px 0 0 0 oklch(from var(--b3-theme-background) calc(l - 0.05) c h / 0.8), 0 0 0 0.5px oklch(from var(--b3-theme-on-background) calc(l + 0.02) c h / 0.05) inset, 0 0.75px 1px -0.5px oklch(from var(--b3-theme-on-background) calc(l + 0.05) c h / 0.48) inset, 0 -0.75px 1px -0.5px oklch(from var(--b3-theme-on-background) calc(l + 0.05) c h / 0.48) inset;
     --_frostedglass-luminous-menu-shadow-blur: 1px 0 0 0 oklch(from var(--b3-theme-background) calc(l - 0.05) c h / 0.8), -1px 0 0 0 oklch(from var(--b3-theme-background) calc(l - 0.05) c h / 0.8);
@@ -56,37 +56,105 @@
     --_frostedglass-luminous-menu-shadow: var(--_frostedglass-luminous-menu-shadow-inset), var(--_frostedglass-luminous-menu-shadow-blur);
     --_frostedglass-luminous-dialog-shadow-blur: 1px 0 0 0 oklch(from var(--b3-theme-background) calc(l - 0.05) c h / 0.8), -1px 0 0 0 oklch(from var(--b3-theme-background) calc(l - 0.05) c h / 0.8);
 }
+$_luminous-presets: (
+    menu: (
+        shadow-property: --b3-menu-shadow-blur,
+        shadow-source: --_frostedglass-luminous-menu-shadow-blur,
+        extra-vars: (--b3-menu-shadow-inset: var(--_frostedglass-luminous-menu-shadow-inset)),
+        glow-source: --_frostedglass-luminous-menu-glow,
+        pseudo: after,
+        blur: 7px,
+        offset: 16px,
+        overflow: visible
+    ),
+    menu-simple: (
+        shadow-property: --b3-menu-shadow,
+        shadow-source: --_frostedglass-luminous-menu-shadow,
+        glow-source: --_frostedglass-luminous-menu-glow,
+        pseudo: before,
+        blur: 7px,
+        offset: 16px,
+        overflow: visible
+    ),
+    select-picker: (
+        shadow-property: --b3-menu-shadow,
+        shadow-source: --_frostedglass-luminous-menu-shadow,
+        glow-source: --_frostedglass-luminous-menu-glow,
+        pseudo: before,
+        blur: 7px,
+        offset: 16px,
+        // 收回与位移相同的距离，避免光晕盒子撑大 picker 的滚动区域。
+        glow-layout: (bottom: 16px)
+    ),
+    dialog: (
+        shadow-property: --b3-dialog-shadow-blur,
+        shadow-source: --_frostedglass-luminous-dialog-shadow-blur,
+        glow-source: --_frostedglass-luminous-dialog-glow,
+        pseudo: after,
+        blur: 7px,
+        offset: 16px
+    ),
+    toolbar: (
+        shadow-property: --neo-main-shadow,
+        shadow-source: --_frostedglass-luminous-toolbar-shadow,
+        glow-source: --_frostedglass-luminous-toolbar-glow,
+        pseudo: before,
+        blur: 5px,
+        offset: 10px,
+        overflow: visible
+    ),
+    status: (
+        shadow-property: --neo-main-shadow,
+        shadow-source: --_frostedglass-luminous-toolbar-shadow,
+        extra-vars: (--_status-position-factor: 3),
+        glow-source: --_frostedglass-luminous-toolbar-glow,
+        pseudo: after,
+        blur: 5px,
+        offset: 10px,
+        overflow: visible
+    ),
+    tooltip: (
+        shadow-property: --neo-main-shadow,
+        shadow-source: --_frostedglass-luminous-tooltip-shadow,
+        glow-source: --_frostedglass-luminous-tooltip-glow,
+        pseudo: before,
+        blur: 4px,
+        offset: 8px,
+        overflow: visible
+    ),
+    table-handle: (
+        shadow-property: --neo-main-shadow,
+        shadow-source: --_frostedglass-luminous-tooltip-shadow,
+        glow-source: --_frostedglass-luminous-tooltip-glow,
+        pseudo: after,
+        blur: 4px,
+        offset: 8px,
+        overflow: visible,
+        glow-layout: (inset: 2px auto auto 50%, width: 16px, height: 20px, border-radius: 11px),
+        translate-x: -50%
+    ),
+    snackbar: (
+        shadow-property: --b3-message-shadow,
+        shadow-source: --_frostedglass-luminous-menu-shadow,
+        glow-source: --_frostedglass-luminous-menu-glow,
+        pseudo: before,
+        blur: 7px,
+        offset: 16px,
+        overflow: visible
+    )
+);
 @mixin frostedglass-luminous($type) {
-    $types: (
-        menu: (pseudo: after, blur: 7px, offset: 16px, overflow: visible),
-        menu-simple: (base-type: menu, pseudo: before, blur: 7px, offset: 16px, overflow: visible),
-        dialog: (pseudo: after, blur: 7px, offset: 16px),
-        toolbar: (pseudo: before, blur: 5px, offset: 10px, overflow: visible),
-        status: (base-type: toolbar, pseudo: after, blur: 5px, offset: 10px, overflow: visible),
-        tooltip: (pseudo: before, blur: 4px, offset: 8px, overflow: visible),
-        table-handle: (base-type: tooltip, pseudo: after, blur: 4px, offset: 8px, overflow: visible),
-        snackbar: (base-type: menu, pseudo: before, blur: 7px, offset: 16px, overflow: visible)
-    );
-    $config: map.get($types, $type);
+    $config: map.get($_luminous-presets, $type);
     @if $config == null {
         @error "Unknown frostedglass-luminous type: #{$type}";
     }
-    $base-type: if(sass(map.has-key($config, base-type)): map.get($config, base-type); else: $type);
-    $shadow: if(sass($type == menu-simple): shadow; else: shadow-blur);
-    @if $base-type == toolbar or $base-type == tooltip {
-        --neo-main-shadow: var(--_frostedglass-luminous-#{$base-type}-shadow);
-    } @else if $type == snackbar {
-        --b3-message-shadow: var(--_frostedglass-luminous-menu-shadow);
-    } @else {
-        --b3-#{$base-type}-#{$shadow}: var(--_frostedglass-luminous-#{$base-type}-#{$shadow});
+    #{map.get($config, shadow-property)}: var(#{map.get($config, shadow-source)});
+    @each $property, $value in map.get($config, extra-vars) {
+        #{$property}: $value;
     }
-    @if $type == menu {
-        --b3-menu-shadow-inset: var(--_frostedglass-luminous-menu-shadow-inset);
+    @if map.has-key($config, overflow) {
+        overflow: map.get($config, overflow);
     }
-    @if $type == status {
-        --_status-position-factor: 3;
-    }
-    overflow: map.get($config, overflow);
     &::#{map.get($config, pseudo)} {
         position: absolute;
         content: "";
@@ -95,17 +163,16 @@
         border-radius: inherit;
         corner-shape: inherit;
         pointer-events: none;
-        box-shadow: var(--_frostedglass-luminous-main-#{$base-type}-shadow);
+        box-shadow: var(#{map.get($config, glow-source)});
         filter: blur(map.get($config, blur));
-        @if $type == table-handle {
-            inset: 2px auto auto 50%;
-            width: 16px;
-            height: 20px;
-            border-radius: 11px;
-            transform: translate(-50%, map.get($config, offset));
-        } @else {
-            transform: translate(0px, map.get($config, offset));
+        @each $property, $value in map.get($config, glow-layout) {
+            #{$property}: $value;
         }
+        $translate-x: map.get($config, translate-x);
+        @if $translate-x == null {
+            $translate-x: 0px;
+        }
+        transform: translate($translate-x, map.get($config, offset));
     }
 }
 @mixin frostedglass-menu($scope: null) {
