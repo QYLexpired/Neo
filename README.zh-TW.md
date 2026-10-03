@@ -3,12 +3,12 @@
 - Neo 主題大量參考了 [Asri 主題](https://github.com/mustakshif/Asri) 的設計和創意，非常感謝 [mustakshif](https://github.com/mustakshif)，沒有你超強的審美、技術力和令人驚嘆的創意，就不會有 Neo 的出現
 ## 更新日誌
 完整更新紀錄可於 [CHANGELOG](https://github.com/QYLexpired/Neo/blob/main/CHANGELOG.md) 查看
-### 1.6.8
-- 修復部分樣式異常
-### 1.6.7
-- 適配資料庫看板檢視
-- 適配資料庫條件顏色
-- 為毛玻璃材質加入霧光玻璃效果（源自 Asri 主題）
+### 1.6.9
+- 新增新粗野主義風格配色：加州海岸、泡泡糖
+- 調整行內標註背景色
+- 調整各平台捲軸樣式
+- 適配思維導圖的尺寸調整控制點
+- 最佳化啟用超級融合後的資料庫表頭吸頂效果
 ## 說明
 - 主題的部分樣式和功能無法僅透過 CSS 實現，因此必須安裝並啟用主題的配套外掛：[Neo+](https://github.com/QYLexpired/Neo-Plus)
 - Neo 主題和 Neo+ 外掛均不會對文件資料進行任何修改，可隨時啟用或停用，不存在遷移負擔

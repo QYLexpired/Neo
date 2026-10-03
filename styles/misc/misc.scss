@@ -1,4 +1,7 @@
 @use "../utils" as *;
+:focus {
+    outline: unset;
+}
 .counter {
     @include superellipse(7px);
     &--bg,
