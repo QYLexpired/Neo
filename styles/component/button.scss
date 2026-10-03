@@ -17,7 +17,7 @@
     }
     &:active {
         transform: scale(0.975);
-        transition: var(--b3-transition), transform 0.15s var(--neo-ease-out-3);
+        transition: color var(--b3-transition), transform 0.15s var(--neo-ease-out-3);
     }
 }
 @mixin button-solid($color: primary) {

@@ -36,17 +36,29 @@
 }
 .viewer-navigation > .viewer-prev,
 .viewer-navigation > .viewer-next {
-    transition: var(--b3-transition);
-    background-color: var(--b3-list-hover);
-    color: var(--b3-theme-on-background);
-    &:hover {
-        background-color: var(--b3-list-active);
-        color: var(--b3-theme-on-background);
+    width: 32px;
+    height: 32px;
+    transition: color var(--b3-transition), 0.65s var(--neo-ease-spring-3);
+    @include superellipse(18px);
+    box-shadow: var(--neo-main-shadow);
+    mix-blend-mode: luminosity;
+    background-color: var(--b3-theme-background);
+    color: var(--b3-theme-on-surface);
+    @include frostedglass-tooltip;
+    .neo-frostedglass-luminous & {
+        @include frostedglass-luminous(toolbar);
     }
+    &:hover,
     &:focus {
-        box-shadow: none;
-        background-color: var(--b3-list-active);
+        scale: 1.12;
+        box-shadow: var(--neo-main-shadow);
         color: var(--b3-theme-on-background);
+        background-color: var(--b3-theme-background);
+        @include frostedglass-tooltip;
+    }
+    &:active {
+        transform: scale(0.95);
+        transition: color var(--b3-transition), transform 0.15s var(--neo-ease-out-3);
     }
 }
 .viewer-magnifier {

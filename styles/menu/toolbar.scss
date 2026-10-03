@@ -3,7 +3,7 @@
 .protyle-toolbar {
     @include menu-container-common-simple(toolbar);
     box-shadow: var(--neo-main-shadow);
-    @include superellipse(18px);
+    @include superellipse(24px);
     corner-shape: unset;
     padding: 6px;
     animation: neo-toolbar-entrance 0.45s var(--neo-ease-spring-2);

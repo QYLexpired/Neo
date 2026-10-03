@@ -83,6 +83,6 @@
     }
     &:active {
         transform: scale(1.2);
-        transition: var(--b3-transition), 0.65s var(--neo-ease-spring-3);
+        transition: color var(--b3-transition), 0.65s var(--neo-ease-spring-3);
     }
 }
