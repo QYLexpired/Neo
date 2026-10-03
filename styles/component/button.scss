@@ -241,7 +241,8 @@
     #keymapResetBtn,
     #purgeCloudData,
     #resetRepo,
-    #purgeRepo {
+    #purgeRepo,
+    #resetSettings {
         @include button-outline-hover-solid(error);  
     }
 }

@@ -105,8 +105,12 @@
     background-color: var(--b3-menu-background) !important;
     box-shadow: var(--neo-main-shadow);
     border: unset;
+    transition: none;
     &:hover {
         background-color: var(--b3-menu-background) !important;
+    }
+    svg {
+        transition: none;
     }
 }
 // 根节点
