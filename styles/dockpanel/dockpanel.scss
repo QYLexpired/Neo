@@ -11,6 +11,7 @@
     .block__logo {
         color: var(--b3-theme-on-surface);
         scrollbar-width: none;
+        @include overflow-fade-mask($fade-mask-m, "left right");
     }
 }
 .dockPanel.fullscreen > .block__icons {

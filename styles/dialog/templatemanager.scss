@@ -19,7 +19,7 @@
 .skill-manager__sidebar {
     border-color: var(--b3-border-color-trans);
 }
-.template-manager__editor,
-.skill-manager__editor {
+.template-manager--wide .template-manager__source-panel,
+.template-manager--wide .template-manager__preview-panel {
     padding: 0 4px;
 }

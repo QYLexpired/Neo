@@ -5,6 +5,9 @@
 See the [CHANGELOG](https://github.com/QYLexpired/Neo/blob/main/CHANGELOG.md) for the full update history.
 ### 1.6.9
 - Added two Neue Brutalism palettes: California Coast and Bubblegum
+- Palette Library entries under Preset palettes now support Invert in dark mode
+- The Focus Block Indicator's vertical line can now follow the text color
+- Added an Outline effect to Focus Block Indicator
 - Adjusted inline annotation background colors
 - Adjusted scrollbar styles across platforms
 - Added support for mind map resize handles
