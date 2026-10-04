@@ -265,7 +265,7 @@
         @include button-translucent(error);
     }
 }
-// misc
+// 添加自定义属性
 .b3-button[data-action="addCustom"] {
     @include button-transparent-hover-translucent;   
 }

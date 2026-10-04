@@ -1,4 +1,5 @@
 @use "../utils" as *;
+@use "button" as *;
 @mixin input-common {
     @include superellipse-use(7px);
     height: 26px;
@@ -267,5 +268,21 @@ input[type="month"],
 input[type="week"] {
     &::-webkit-calendar-picker-indicator {
         filter: invert(0);
+    }
+}
+// 文件选择输入框
+input[type="file"] {
+    height: auto;
+    color: var(--b3-theme-on-background);
+    background-color: transparent;
+    &:hover,
+    &:focus {
+        background-color: transparent;
+        animation: none;
+    }
+    &::file-selector-button {
+        @include button-outline-hover-solid(primary);
+        cursor: pointer;
+        border: unset;
     }
 }
