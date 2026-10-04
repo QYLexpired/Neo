@@ -110,6 +110,12 @@ $neo-custom-task-codes: neo-list-exclude($neo-task-codes, $neo-standard-task-cod
         }
     }
 }
+// 取消任务状态删除线
+.li[data-subtype="t"] > .p,
+.tabs-task ~ .tabs-tab-label,
+.protyle-task--done .mindmap-view__content .p {
+    text-decoration: none !important;
+}
 .protyle-wysiwyg .li[data-subtype=t] .protyle-action--task,
 .tabs-task {
     color: transparent !important;

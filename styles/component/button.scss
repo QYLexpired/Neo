@@ -153,6 +153,14 @@
             }
         }
     }
+    // 部分情况没有.b3-chip__close
+    .b3-chips#editor\.spellcheckLanguages &,
+    .b3-chips.config-account__profile-titles &,
+    .protyle-background:not(.protyle-background--enable) .b3-chips__doctag & {
+        &:hover {
+            padding: 4px 14px;
+        }
+    }
     &:hover {
         color: var(--b3-theme-on-surface);
         background-color: oklch(from currentColor l c h / 0.12);
