@@ -104,3 +104,18 @@
 .image-ocr__text.b3-text-field {
     height: auto;
 }
+// 网络图片角标
+.protyle-wysiwyg [data-node-id] .img__net,
+.protyle-wysiwyg [data-table-cell-node] .img__net,
+.table__cell-rich [data-node-id] .img__net,
+.table__cell-rich [data-table-cell-node] .img__net {
+    transition: var(--b3-transition);
+    @include superellipse(18px);
+    box-shadow: var(--neo-main-shadow);
+    background-color: var(--b3-theme-background);
+    @include frostedglass-tooltip;
+    color: var(--b3-theme-accent);
+    .neo-frostedglass-luminous & {
+        @include frostedglass-luminous(toolbar);
+    }
+}

@@ -130,6 +130,10 @@
         background-color: oklch(from var(--b3-theme-surface) l c h / 0.7);
         color: var(--b3-theme-on-surface);
         font-size: 13px;
+        .body--settings & {
+            border-radius: 0;
+            corner-shape: unset;
+        }
         .item__img {
             margin: 8px auto;
             @include superellipse(14px);
