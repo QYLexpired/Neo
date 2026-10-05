@@ -52,7 +52,10 @@
 }
 .mindmap-view__inspector,
 .mindmap-view__route-status {
-    @include menu-container-common-simple;
+    scrollbar-width: none;
+    background-color: var(--b3-menu-background);
+    @include frostedglass($blur: t, $color: menu);
+    border: unset;
     padding: 4px 12px;
     box-shadow: var(--neo-main-shadow);
     @include superellipse(32px);

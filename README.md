@@ -8,9 +8,11 @@ See the [CHANGELOG](https://github.com/QYLexpired/Neo/blob/main/CHANGELOG.md) fo
 - Palette Library entries under Preset palettes now support Invert in dark mode
 - The Focus Block Indicator's vertical line can now follow the text color
 - Added an Outline effect to Focus Block Indicator
+- Updated focus styles for tab blocks
 - Adjusted inline annotation background colors
 - Adjusted scrollbar styles across platforms
 - Added support for mind map resize handles
+- Fixed breadcrumb overflow fades when Super Fusion is enabled
 - Improved sticky database headers when Super Fusion is enabled
 ## Notes
 - [Neo+](https://github.com/QYLexpired/Neo-Plus) is required because some of Neo's features cannot be implemented with CSS alone. Install and enable the plugin before using the theme.

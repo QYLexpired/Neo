@@ -8,6 +8,7 @@
     scrollbar-width: none;
 }
 button.protyle-breadcrumb__arrow {
+    position: relative;
     color: transparent;
     margin: 0;
     &::before {
