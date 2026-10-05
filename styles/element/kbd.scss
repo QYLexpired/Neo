@@ -31,3 +31,10 @@
     @include superellipse(4px);
     line-height: 1;
 }
+.config-keymap__remove {
+    transition: var(--b3-transition);
+    &:hover {
+        background-color: transparent;
+        color: var(--b3-theme-error);
+    }
+}
