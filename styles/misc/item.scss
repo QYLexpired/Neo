@@ -14,3 +14,6 @@
 .b3-list-item svg.b3-list-item__arrow {
     transition: color var(--b3-transition), transform var(--_rotate-transition);
 }
+.b3-list--border .b3-list__panel::before {
+    border-color: oklch(from var(--b3-theme-on-background) l c h / 0.1);
+}
