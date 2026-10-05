@@ -154,3 +154,13 @@
         }
     }
 }
+// 页签块聚焦
+.protyle-wysiwyg > .tab-item > .tab-item-info {
+    border-bottom: unset;
+    .tab-item-title {
+        @include superellipse-use(8px);
+        font-size: 1em;
+        padding: 2px 12px;
+        box-shadow: var(--neo-main-shadow);
+    }
+}

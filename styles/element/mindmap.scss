@@ -1,5 +1,6 @@
 @use "../utils" as *;
 @use "../menu/menu" as *;
+@use "../component" as *;
 .mindmap-view {
     @include superellipse-use(10px);
     border: unset;
@@ -41,8 +42,18 @@
 .mindmap-view__zoom-actions {
     @include menu-container-common-simple;
 }
-.mindmap-view__inspector {
+.mindmap-view__summary-actions {
+    .b3-button {
+        @include button-outline-hover-solid;
+    }
+    .b3-button--text {
+        @include button-solid(primary);
+    }
+}
+.mindmap-view__inspector,
+.mindmap-view__route-status {
     @include menu-container-common-simple;
+    padding: 4px 12px;
     box-shadow: var(--neo-main-shadow);
     @include superellipse(32px);
     corner-shape: unset;

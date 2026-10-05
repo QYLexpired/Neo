@@ -25,8 +25,13 @@
     padding: 16px 16px 10px 16px;
     margin: 0.4em 0;
     @include superellipse-use(10px);
-    .callout-title {
-        transition: var(--b3-transition);
+    @at-root {
+        .b3-typography .callout-title,
+        .protyle-wysiwyg .callout-title,
+        .table__cell-rich .callout-title,
+        .mindmap-view__content .callout-title {
+            transition: var(--b3-transition);
+        }
     }
     .callout-info {
         color: var(--b3-theme-primary);

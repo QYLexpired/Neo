@@ -1,12 +1,14 @@
 // 拖拽选区
 .protyle-select,
 .protyle-table-control__selection,
+.mindmap-view__selection-box,
 .av[data-av-type="calendar"] .av__calendar-drop {
     outline: 1px solid oklch(from var(--b3-theme-secondary) l c h / 0.3);
     outline-offset: -1px;
     background-color: oklch(from var(--b3-theme-secondary) l c h / 0.12);
 }
 .protyle-table-control__selection,
+.mindmap-view__selection-box,
 .av[data-av-type="calendar"] .av__calendar-drop {
     border: unset;
 }
