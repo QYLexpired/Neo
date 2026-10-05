@@ -53,12 +53,15 @@ Neo is free to use. If you enjoy it, consider starring the project on [GitHub](h
 - Colorful Selection: selection highlights take their color from the text
 - List Bullet Line: shows guide lines to make nested lists easier to follow
 ## Cautions
-Some features substantially change SiYuan's default styling and may cause compatibility issues that cannot be fully resolved. Disable any feature that causes problems. Others can affect performance, so enable them with care.
+Some features substantially change SiYuan's default styling and may cause compatibility issues that **cannot be fixed**. Disable any feature that causes problems. Others can affect performance, so enable them with care.
 - Super Fusion
     - In documents with dynamically loaded content, the scrollbar may not accurately show your position
+    - Arrow keys and block dragging cannot trigger upward scrolling in the editor
     - Database table headers may fail to stay pinned or appear in the wrong position
     - May conflict with some plugins
     - Its blur and refraction effects may cause lag
+- Multicolumn Slash Menu
+    - In split view, the menu may extend over another editor, preventing the caret in the covered area from moving to other blocks with the arrow keys
 - Frosted Glass
     - Increases rendering load; if you notice lag, turn it off or select the Light setting
 - Fluid Cursor

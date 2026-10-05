@@ -1,6 +1,7 @@
 @use "../utils" as *;
 @use "dialog" as *;
 .block__popover {
+    font-size: 14px; // 对齐思源的body > .fn__flex-1 { font-size: 14px; }
     transform: translateY(min(-1.5%, -10px));
     opacity: 0;
     transition: transform 0.3s var(--neo-ease-spring-1), opacity 0.25s;
