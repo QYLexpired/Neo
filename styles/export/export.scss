@@ -2,11 +2,18 @@
     background-color: var(--b3-theme-surface);
     & > #preview {
         box-shadow: none;
-        background-color: white;
         margin: 0 auto;
+        & > .protyle-wysiwyg {
+            overflow-x: visible;
+            padding-left: 6px !important;
+            padding-right: 6px !important;
+        }
     }
 }
-body > #action {
-    background-color: var(--b3-theme-surface);
-    border: none;
+body[data-export-pdf="true"] {
+    color: var(--b3-theme-on-background);
+    & > #action {
+        background-color: var(--b3-theme-surface);
+        border: none;
+    }
 }

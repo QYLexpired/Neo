@@ -5,6 +5,7 @@
     @include superellipse-use(10px);
     border: unset;
     box-shadow: var(--neo-main-shadow);
+    background-color: transparent;
     &.fullscreen {
         .mindmap-view__toolbar {
             app-region: no-drag;

@@ -3,7 +3,8 @@
 - Neo owes much of its design and ideas to the [Asri theme](https://github.com/mustakshif/Asri). Thank you, [mustakshif](https://github.com/mustakshif) — your eye for design, technical skill, and creativity made Neo possible.
 ## Changelog
 See the [CHANGELOG](https://github.com/QYLexpired/Neo/blob/main/CHANGELOG.md) for the full update history.
-### 1.6.9
+### 1.7.0
+- Neo+ color schemes, colored headings, and colored lists now apply to PDF exports
 - Added two Neue Brutalism palettes: California Coast and Bubblegum
 - Palette Library entries under Preset palettes now support Invert in dark mode
 - The Focus Block Indicator's vertical line can now follow the text color
@@ -12,6 +13,7 @@ See the [CHANGELOG](https://github.com/QYLexpired/Neo/blob/main/CHANGELOG.md) fo
 - Adjusted inline annotation background colors
 - Adjusted scrollbar styles across platforms
 - Added support for mind map resize handles
+- Redesigned keyboard key styles
 - Fixed breadcrumb overflow fades when Super Fusion is enabled
 - Improved sticky database headers when Super Fusion is enabled
 ## Notes
