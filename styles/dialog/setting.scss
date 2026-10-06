@@ -87,6 +87,12 @@
     inset: 0;
     pointer-events: none;
     transition: 0.45s ease;
+    .b3-dialog--window & {
+        box-shadow: none !important;
+        &::before {
+            box-shadow: none !important;
+        }
+    }
     &.config__view--show {
         opacity: 1;
         transform: scale(1);
@@ -135,5 +141,17 @@
                 display: none;
             }
         }
+    }
+}
+// 独立设置窗口
+.b3-dialog--window {
+    & > .b3-dialog__container {
+        box-shadow: none;
+        &::before {
+            box-shadow: none;
+        }
+    }
+    .toolbar--settings {
+        border-bottom: 1px solid var(--b3-border-color-trans);
     }
 }
