@@ -5,20 +5,8 @@
     .av__calendar-week {
         border-radius: 0 !important;
     }
-    .av__calendar-grid {
-        border-top: none;
-        border-bottom: none;
-        border-left: none;
-        .av__calendar-week-row:first-child {
-            .av__calendar-days {
-                border-top: 1px solid var(--b3-border-color);
-            }
-        }
-        .av__calendar-week-row:last-child {
-            .av__calendar-week {
-                border-bottom: 1px solid var(--b3-border-color);
-            }
-        }
+    .av__calendar-week {
+        border-left: 0;
     }
     .av__calendar-week-number {
         border-right: 1px solid var(--b3-border-color);
@@ -73,7 +61,7 @@
         }
     }
 }
-.av[data-av-type=calendar],
+.av[data-av-type="calendar"],
 #commonMenu {
     .av__calendar-undated-panel {
         gap: 8px;

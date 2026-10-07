@@ -4,7 +4,8 @@
 ## Changelog
 See the [CHANGELOG](https://github.com/QYLexpired/Neo/blob/main/CHANGELOG.md) for the full update history.
 ### 1.7.0
-- Neo+ color schemes, colored headings, and colored lists now apply to PDF exports
+- Major update: Neo+ color schemes, colored headings, and colored lists now apply to PDF exports
+- Added support for the standalone settings window (SiYuan 3.8.7)
 - Added two Neue Brutalism palettes: California Coast and Bubblegum
 - Palette Library entries under Preset palettes now support Invert in dark mode
 - The Focus Block Indicator's vertical line can now follow the text color
@@ -14,6 +15,8 @@ See the [CHANGELOG](https://github.com/QYLexpired/Neo/blob/main/CHANGELOG.md) fo
 - Adjusted scrollbar styles across platforms
 - Added support for mind map resize handles
 - Redesigned keyboard key styles
+- Fixed arrow-key navigation in the Multicolumn Slash Menu within table rich text cells
+- Fixed colored lists not applying within table rich text cells
 - Fixed breadcrumb overflow fades when Super Fusion is enabled
 - Improved sticky database headers when Super Fusion is enabled
 ## Notes

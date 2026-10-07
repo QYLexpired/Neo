@@ -202,3 +202,9 @@
         transition: color var(--b3-transition), transform 0.15s var(--neo-ease-out-3);
     }
 }
+// 对话历史
+.agent-session-status {
+    width: 10px;
+    height: 10px;
+    background-color: var(--b3-theme-accent);
+}
