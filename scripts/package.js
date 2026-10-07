@@ -1,18 +1,9 @@
 import archiver from 'archiver';
-import fs from 'fs';
+import { createWriteStream, rmSync, statSync } from 'fs';
 import { dirname, resolve } from 'path';
+import { pipeline } from 'stream/promises';
 import { fileURLToPath } from 'url';
-const __dirname = dirname(fileURLToPath(import.meta.url));
-const root = resolve(__dirname, '..');
-const output = fs.createWriteStream(resolve(root, 'package.zip'));
-const archive = archiver('zip', { zlib: { level: 9 } });
-output.on('close', () => {
-  console.log(`Created package.zip (${archive.pointer()} bytes)`);
-});
-archive.on('error', (err) => {
-  throw err;
-});
-archive.pipe(output);
+const root = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 const files = [
   'theme.css',
   'theme.json',
@@ -22,13 +13,40 @@ const files = [
   'icon.png',
   'preview.png'
 ];
-for (const file of files) {
-  const fullPath = resolve(root, file);
-  if (fs.existsSync(fullPath)) {
-    archive.file(fullPath, { name: file });
-    console.log(`Added: ${file}`);
-  } else {
-    console.warn(`Warning: ${file} not found, skipping.`);
+const packagePath = resolve(root, 'package.zip');
+async function createPackage() {
+  const entries = files.map((file) => {
+    const fullPath = resolve(root, file);
+    const entry = statSync(fullPath, { throwIfNoEntry: false });
+    if (!entry || (!entry.isFile() && !entry.isDirectory())) {
+      throw new Error(`Required package file not found: ${file}`);
+    }
+    return { file, fullPath, isDirectory: entry.isDirectory() };
+  });
+  rmSync(packagePath, { force: true });
+  const output = createWriteStream(packagePath);
+  const archive = archiver('zip', { zlib: { level: 9 } });
+  const completed = pipeline(archive, output);
+  archive.on('warning', (error) => archive.destroy(error));
+  try {
+    for (const { file, fullPath, isDirectory } of entries) {
+      if (isDirectory) {
+        archive.directory(fullPath, file);
+      } else {
+        archive.file(fullPath, { name: file });
+      }
+    }
+    await Promise.all([archive.finalize(), completed]);
+    console.log(`Created package.zip (${archive.pointer()} bytes)`);
+  } catch (error) {
+    archive.abort();
+    output.destroy();
+    await completed.catch(() => {});
+    rmSync(packagePath, { force: true });
+    throw error;
   }
 }
-archive.finalize();
+createPackage().catch((error) => {
+  console.error(`Package failed: ${error.message}`);
+  process.exitCode = 1;
+});
