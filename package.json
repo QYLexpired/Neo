@@ -4,7 +4,8 @@
   "type": "module",
   "scripts": {
     "build": "node scripts/build.js",
-    "package": "node scripts/package.js"
+    "package": "node scripts/package.js",
+    "release": "node scripts/release.js"
   },
   "devDependencies": {
     "archiver": "^7.0.1",
