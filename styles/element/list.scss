@@ -363,3 +363,11 @@ $neo-custom-task-codes: neo-list-exclude($neo-task-codes, $neo-standard-task-cod
         transform-origin: center;
     }
 }
+// pdf导出
+.protyle-wysiwyg [data-node-id].li::before,
+.protyle-wysiwyg [data-table-cell-node].li::before,
+.table__cell-rich [data-node-id].li::before,
+.table__cell-rich [data-table-cell-node].li::before {
+    border-color: var(--b3-theme-on-background) !important;
+    opacity: 0.2 !important;
+}

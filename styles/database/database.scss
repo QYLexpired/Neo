@@ -176,6 +176,7 @@
 }
 // 拖拽
 .av__widthdrag {
+    right: -2.5px !important;
     &:hover,
     &:active {
         right: -3px;

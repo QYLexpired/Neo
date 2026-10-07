@@ -164,3 +164,10 @@
         box-shadow: var(--neo-main-shadow);
     }
 }
+// pdf导出
+.protyle-wysiwyg .tabs[data-node-id],
+.b3-typography .tabs[data-node-id] {
+    @include superellipse-use(10px);
+    border: 1px solid var(--b3-border-color-trans);
+    padding: 4px 8px;
+}

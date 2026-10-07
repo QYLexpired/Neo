@@ -1,6 +1,6 @@
 @use "../utils" as *;
 :focus {
-    outline: unset;
+    outline-color: transparent;
 }
 .counter {
     @include superellipse(7px);

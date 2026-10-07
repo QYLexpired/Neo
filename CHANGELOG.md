@@ -1,3 +1,34 @@
+### v1.7.0 / 2026-10-07
+- 重大更新：使Neo+的配色、彩色标题、彩色列表在导出为PDF时生效
+- 适配独立设置窗口（思源3.8.7）
+- 新增新粗野主义风格配色：加州海岸、泡泡糖
+- 暗黑模式的预设配色-配色库可以使用反转
+- 聚焦块指示的竖线可以设置为跟随文字颜色
+- 聚焦块指示新增描边效果
+- 适配页签块聚焦样式
+- 调整行内标注背景色
+- 调整各平台滚动条样式
+- 适配思维导图尺寸抓手
+- 重做键盘元素样式
+- 修复多列斜杠菜单方向键导航在表格富文本单元格不生效的问题
+- 修复彩色列表在表格富文本单元格不生效的问题
+- 修复开启超级融合后面包屑溢出渐隐失效的问题
+- 优化开启超级融合后数据库表头吸顶效果
+- Major update: Neo+ color schemes, colored headings, and colored lists now apply to PDF exports
+- Added support for the standalone settings window (SiYuan 3.8.7)
+- Added two Neue Brutalism palettes: California Coast and Bubblegum
+- Palette Library entries under Preset palettes now support Invert in dark mode
+- The Focus Block Indicator's vertical line can now follow the text color
+- Added an Outline effect to Focus Block Indicator
+- Updated focus styles for tab blocks
+- Adjusted inline annotation background colors
+- Adjusted scrollbar styles across platforms
+- Added support for mind map resize handles
+- Redesigned keyboard key styles
+- Fixed arrow-key navigation in the Multicolumn Slash Menu within table rich text cells
+- Fixed colored lists not applying within table rich text cells
+- Fixed breadcrumb overflow fades when Super Fusion is enabled
+- Improved sticky database headers when Super Fusion is enabled
 ### v1.6.8 / 2026-09-29
 - 修复部分样式异常
 - Fixed some styling issues

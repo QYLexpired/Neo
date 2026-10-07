@@ -41,6 +41,9 @@
     }
     .protyle-icon.fn__none + & {
         margin-right: 0;
+        &.protyle-icon--last {
+            margin-right: 4px;
+        }
     }
 }
 .b3-typography .code-block:not(pre) .protyle-action,
