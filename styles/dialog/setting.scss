@@ -144,6 +144,9 @@
     }
 }
 // 独立设置窗口
+body.body--settings {
+    background-color:  var(--b3-theme-background);
+}
 .b3-dialog--window {
     & > .b3-dialog__container {
         box-shadow: none;
