@@ -3,6 +3,9 @@
 - Neo owes much of its design and ideas to the [Asri theme](https://github.com/mustakshif/Asri). Thank you, [mustakshif](https://github.com/mustakshif) — your eye for design, technical skill, and creativity made Neo possible.
 ## Changelog
 See the [CHANGELOG](https://github.com/QYLexpired/Neo/blob/main/CHANGELOG.md) for the full update history.
+### 1.7.1
+- Redesigned Neo’s icon and preview image
+- Refined some styles
 ### 1.7.0
 - Major update: Neo+ color schemes, colored headings, and colored lists now apply to PDF exports
 - Added support for the standalone settings window (SiYuan 3.8.7)

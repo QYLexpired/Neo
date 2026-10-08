@@ -3,6 +3,9 @@
 - Neo主题大量参考了[Asri主题](https://github.com/mustakshif/Asri)的设计和创意，非常感谢[mustakshif](https://github.com/mustakshif)，没有你超强的审美、技术力和让人惊叹的创意，就不会有Neo的出现
 ## 更新日志
 完整更新历史可查看[CHANGELOG](https://github.com/QYLexpired/Neo/blob/main/CHANGELOG.md)
+### 1.7.1
+- 重新设计Neo的图标和预览图
+- 优化部分样式
 ### 1.7.0
 - 重大更新：使Neo+的配色、彩色标题、彩色列表在导出为PDF时生效
 - 适配独立设置窗口（思源3.8.7）

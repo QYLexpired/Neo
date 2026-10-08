@@ -1,3 +1,8 @@
+### v1.7.1 / 2026-10-09
+- 重新设计Neo的图标和预览图
+- 优化部分样式
+- Redesigned Neo’s icon and preview image
+- Refined some styles
 ### v1.7.0 / 2026-10-07
 - 重大更新：使Neo+的配色、彩色标题、彩色列表在导出为PDF时生效
 - 适配独立设置窗口（思源3.8.7）

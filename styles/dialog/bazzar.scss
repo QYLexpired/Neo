@@ -79,7 +79,7 @@
             margin-left: unset;
             margin-inline-start: 16px;
             img {
-                @include superellipse(14px);
+                @include superellipse-use(14px);
             }
         }
     }
@@ -137,7 +137,7 @@
         }
         .item__img {
             margin: 8px auto;
-            @include superellipse(14px);
+            @include superellipse-use(16px);
         }
         .item__meta-title {
             color: var(--b3-theme-on-background);
