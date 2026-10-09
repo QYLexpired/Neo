@@ -1,12 +1,12 @@
-# Neo：精心打磨的界面，灵动自由的思维
+# <span style="font-family: neo;">✦ Neo </span>精心打磨的界面，灵动自由的思维
 - Neo是专为思源笔记设计的第三方主题，以 Apple（macOS/iOS）设计语言为灵感，营造统一、精致且赏心悦目的笔记空间
 - Neo主题大量参考了[Asri主题](https://github.com/mustakshif/Asri)的设计和创意，非常感谢[mustakshif](https://github.com/mustakshif)，没有你超强的审美、技术力和让人惊叹的创意，就不会有Neo的出现
 ## 更新日志
 完整更新历史可查看[CHANGELOG](https://github.com/QYLexpired/Neo/blob/main/CHANGELOG.md)
-### 1.7.1
+### <span style="font-family: neo;">1.7.1</span>
 - 重新设计Neo的图标和预览图
 - 优化部分样式
-### 1.7.0
+### <span style="font-family: neo;">1.7.0</span>
 - 重大更新：使Neo+的配色、彩色标题、彩色列表在导出为PDF时生效
 - 适配独立设置窗口（思源3.8.7）
 - 新增新粗野主义风格配色：加州海岸、泡泡糖

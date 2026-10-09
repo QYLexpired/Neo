@@ -1,0 +1,14 @@
+@font-face {
+    font-family: "neo";
+    src: url("assets/neo-fonts.ttf?v=0.9.5") format("truetype");
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+// 集市
+.item__side[data-name="Neo"],
+.item__side[data-name="Neo-Plus"] {
+    .item__title {
+        font-family: neo;
+    }
+}
