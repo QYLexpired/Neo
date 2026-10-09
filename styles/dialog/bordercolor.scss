@@ -19,7 +19,8 @@
 .config-entry-visibility__location,
 .config-entry-visibility__row,
 .config-entry-visibility__column,
-.config-entry-visibility__browser {
+.config-entry-visibility__browser,
+.config-assets__preview {
     --b3-border-color: var(--b3-border-color-trans) !important;
     border-color: var(--b3-border-color-trans) !important;
 }
