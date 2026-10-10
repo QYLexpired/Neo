@@ -1,16 +1,8 @@
 @use "../utils" as *;
-@mixin topbar-gradient-sweep {
-    background-image: var(--_barWorkspace-gradient);
-    background-size: 100% 500%;
-    background-position: 0 0;
-    background-repeat: no-repeat;
-    animation: neo-barWorkspace-sweep 0.95s var(--neo-ease-out-2) 0.15s both;
-}
 .toolbar__item {
     @include icon;
 }
-#barWorkspace,
-.toolbar__item#plugin_Neo-Plus\:Topbar {
+#barWorkspace {
     --_barWorkspace-gradient: linear-gradient(
         in oklch to bottom,
         var(--b3-theme-on-surface) 0%,
@@ -47,8 +39,6 @@
             var(--b3-theme-on-background) 100%
         );
     }
-}
-#barWorkspace {
     .toolbar__text {
         font-weight: bold;
         font-size: 14px;
@@ -60,10 +50,14 @@
         .toolbar__text {
             color: var(--b3-theme-on-background);
             -webkit-text-fill-color: transparent;
-            @include topbar-gradient-sweep;
+            background-image: var(--_barWorkspace-gradient);
+            background-size: 100% 500%;
+            background-position: 0 0;
+            background-repeat: no-repeat;
             background-clip: text;
             -webkit-background-clip: text;
             transition: color 0s;
+            animation: neo-barWorkspace-sweep 0.95s var(--neo-ease-out-2) 0.15s both;
         }
     }
     .toolbar__svg {
@@ -72,13 +66,6 @@
     .body--toolbar-hide & {
         line-height: 20px;
         height: unset;
-    }
-}
-.toolbar__item#plugin_Neo-Plus\:Topbar:hover > svg {
-    @include topbar-gradient-sweep;
-    mask: url("assets/neo-path.svg") center / contain no-repeat;
-    & > use {
-        opacity: 0;
     }
 }
 @keyframes neo-barWorkspace-sweep {

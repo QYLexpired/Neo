@@ -12,8 +12,7 @@ const files = [
   'README.zh-TW.md',
   'icon.png',
   'preview.png',
-  'assets/neo-fonts.ttf',
-  'assets/neo-path.svg'
+  'assets/neo-fonts.ttf'
 ];
 const packagePath = resolve(root, 'package.zip');
 async function createPackage() {
