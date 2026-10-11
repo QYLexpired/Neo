@@ -3,25 +3,8 @@
 - Neo owes much of its design and ideas to the [Asri theme](https://github.com/mustakshif/Asri). Thank you, [mustakshif](https://github.com/mustakshif) — your eye for design, technical skill, and creativity made Neo possible.
 ## <span style="font-family: neo;">Changelog</span>
 See the [CHANGELOG](https://github.com/QYLexpired/Neo/blob/main/CHANGELOG.md) for the full update history.
-### <span style="font-family: neo;">1.7.1</span>
-- Redesigned Neo’s icon and preview image
-- Refined some styles
-### <span style="font-family: neo;">1.7.0</span>
-- Major update: Neo+ color schemes, colored headings, and colored lists now apply to PDF exports
-- Added support for the standalone settings window (SiYuan 3.8.7)
-- Added two Neue Brutalism palettes: California Coast and Bubblegum
-- Palette Library entries under Preset palettes now support Invert in dark mode
-- The Focus Block Indicator's vertical line can now follow the text color
-- Added an Outline effect to Focus Block Indicator
-- Updated focus styles for tab blocks
-- Adjusted inline annotation background colors
-- Adjusted scrollbar styles across platforms
-- Added support for mind map resize handles
-- Redesigned keyboard key styles
-- Fixed arrow-key navigation in the Multicolumn Slash Menu within table rich text cells
-- Fixed colored lists not applying within table rich text cells
-- Fixed breadcrumb overflow fades when Super Fusion is enabled
-- Improved sticky database headers when Super Fusion is enabled
+### <span style="font-family: neo;">1.7.2</span>
+- Added support for the updated layout of downloaded Bazaar packages
 ## <span style="font-family: neo;">Notes</span>
 - [Neo+](https://github.com/QYLexpired/Neo-Plus) is required because some of Neo's features cannot be implemented with CSS alone. Install and enable the plugin before using the theme.
 - Neither the Neo theme nor the Neo+ plugin modifies document data. You can enable or disable them at any time without any migration.

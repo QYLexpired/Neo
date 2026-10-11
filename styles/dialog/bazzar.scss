@@ -25,22 +25,36 @@
         grid-template-columns: repeat(auto-fill, minmax(min(100%, 355px), 1fr));
     }
     &[data-type=downloaded] {
-        .b3-card {
+        .config-bazaar__content .b3-card {
             display: grid;
-            grid-template-areas:
-            "img info"
-            "img buttons";
-            grid-template-columns: 90px 1fr;
+            grid-template-areas: "img info" "buttons buttons";
+            grid-template-columns: 90px 1fr !important;
             & > .b3-card__img {
-                grid-area: img;
+                grid-area: img !important;
+                align-self: stretch !important;
+                margin: 16px 0 16px 16px !important;
+                & > img,
+                & > span {
+                    width: 74px !important;
+                    height: 74px !important;
+                }
                 & + div {
-                    grid-area: info;
+                    grid-area: info !important;
+                    .b3-card__info {
+                        padding: 16px 8px 16px 16px !important;
+                    }
                 }
             }
             & > .b3-card__actions {
-                grid-area: buttons;
-                padding: 3px 11px 11px;
+                grid-area: buttons !important;
+                padding: 3px 11px 11px 16px !important;
                 align-self: flex-end;
+                max-width: none !important;
+                min-height: 0 !important;
+                width: auto !important;
+                flex-wrap: nowrap !important;
+                justify-content: flex-start !important;
+                white-space: nowrap;
                 & > .block__icon:not(.fn__none) {
                     margin-left: auto;
                 }

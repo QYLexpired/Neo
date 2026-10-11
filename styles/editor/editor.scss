@@ -122,6 +122,7 @@
 .b3-typography .code-block:not(pre):hover .protyle-icon,
 .b3-typography .code-block:not(pre):hover .protyle-action__language,
 .protyle-wysiwyg .code-block:not(pre):hover .protyle-icon,
+.protyle-wysiwyg [data-node-id].render-node[data-type=NodeBlockQueryEmbed] > .protyle-wysiwyg__embed .code-block:not(pre):hover .protyle-action > .protyle-icon,
 .protyle-wysiwyg .code-block:not(pre):hover .protyle-action__language {
     opacity: 1 !important;
 }
@@ -246,6 +247,20 @@
 .protyle-scroll__bar {
     top: 50%;
     transform: translateY(-50%) rotate(90deg);
+}
+.protyle--page-scroll .protyle-scroll {
+    top: 30px;
+    bottom: 9px;
+    transform: none;
+    > .protyle-scroll__bar {
+        top: calc(50% - 10.5px);
+    }
+    > .protyle-scroll__up {
+        top: calc(50% - 10.5px - var(--b3-dynamicscroll-width) / 2 - 20px);
+    }
+    > .protyle-scroll__down {
+        bottom: calc(50% + 10.5px - var(--b3-dynamicscroll-width) / 2 - 20px);
+    }
 }
 .protyle-scroll__up,
 .protyle-scroll__down {

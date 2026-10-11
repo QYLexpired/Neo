@@ -87,7 +87,7 @@
         background-color: transparent;
         border: unset;
         &--current {
-            border-radius: 8px !important;
+            @include superellipse-use(7px, $important: true);
         }
     }
     .b3-menu__separator {

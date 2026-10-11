@@ -12,6 +12,15 @@
         box-shadow: var(--neo-main-shadow) !important;
         background-color: oklch(from var(--b3-theme-background) l c h / 0.7) !important;
     }
+    body.body--blur & {
+        box-shadow: var(--neo-main-shadow) !important;
+        color: var(--b3-theme-on-surface) !important;
+        background-color: oklch(from var(--b3-theme-background) l c h / 0.7) !important;
+        &:hover,
+        &:active {
+            color: var(--b3-theme-on-background) !important;
+        }
+    }
 }
 .dock__item--active {
     animation: neo-dock-active 0.2s var(--neo-ease-out-2);

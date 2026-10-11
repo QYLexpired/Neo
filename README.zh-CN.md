@@ -3,25 +3,8 @@
 - Neo主题大量参考了[Asri主题](https://github.com/mustakshif/Asri)的设计和创意，非常感谢[mustakshif](https://github.com/mustakshif)，没有你超强的审美、技术力和让人惊叹的创意，就不会有Neo的出现
 ## 更新日志
 完整更新历史可查看[CHANGELOG](https://github.com/QYLexpired/Neo/blob/main/CHANGELOG.md)
-### <span style="font-family: neo;">1.7.1</span>
-- 重新设计Neo的图标和预览图
-- 优化部分样式
-### <span style="font-family: neo;">1.7.0</span>
-- 重大更新：使Neo+的配色、彩色标题、彩色列表在导出为PDF时生效
-- 适配独立设置窗口（思源3.8.7）
-- 新增新粗野主义风格配色：加州海岸、泡泡糖
-- 暗黑模式的预设配色-配色库可以使用反转
-- 聚焦块指示的竖线可以设置为跟随文字颜色
-- 聚焦块指示新增描边效果
-- 适配页签块聚焦样式
-- 调整行内标注背景色
-- 调整各平台滚动条样式
-- 适配思维导图尺寸抓手
-- 重做键盘元素样式
-- 修复多列斜杠菜单方向键导航在表格富文本单元格不生效的问题
-- 修复彩色列表在表格富文本单元格不生效的问题
-- 修复开启超级融合后面包屑溢出渐隐失效的问题
-- 优化开启超级融合后数据库表头吸顶效果
+### <span style="font-family: neo;">1.7.2</span>
+- 适配新版集市已下载项目布局
 ## 说明
 - 主题的部分样式和功能无法仅通过CSS实现，因此必须安装并启用主题的配套插件：[Neo+](https://github.com/QYLexpired/Neo-Plus)
 - Neo主题和Neo+插件均不会对文档数据进行任何修改，可随时启用或停用，不存在迁移负担

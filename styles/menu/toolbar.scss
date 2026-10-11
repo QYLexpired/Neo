@@ -25,7 +25,6 @@
 }
 .protyle-toolbar__item {
     @include icon;
-    @include superellipse(6px);
     padding: 4px;
     margin: 0 2px;
     font-size: 14px;

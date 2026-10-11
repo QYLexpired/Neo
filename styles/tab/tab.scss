@@ -63,6 +63,19 @@ body:not(.body--toolbar-hide) [data-type="wnd"] > .fn__flex:first-child {
                 box-shadow: var(--neo-main-shadow);
                 color: var(--b3-theme-on-background);
                 animation: neo-tab-focus 0.2s var(--neo-ease-out-2);
+                body.body--blur & {
+                    background-color: oklch(from var(--b3-theme-background) l c h / 0.7) !important;
+                    box-shadow: var(--neo-main-shadow) !important;
+                    & > .item__text {
+                        color: var(--b3-theme-on-background) !important;
+                    }
+                    &.item--pin > .item__text {
+                        color: var(--b3-theme-on-surface) !important;
+                    }
+                    &.item--pin:hover > .item__text {
+                        color: var(--b3-theme-on-background) !important;
+                    }
+                }
                 &::before {
                     opacity: 0;
                 }

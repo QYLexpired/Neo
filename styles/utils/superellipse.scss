@@ -2,30 +2,37 @@
 @use "sass:list";
 $layout-border-radius: 8px;
 $k: 1.4;
-@mixin superellipse($r: ()) {
+@mixin _border-radius($value, $important: false) {
+    @if $important {
+        border-radius: $value !important;
+    } @else {
+        border-radius: $value;
+    }
+}
+@mixin superellipse($r: (), $important: false) {
     $out-plus: ();
     $out-mul: ();
     @each $i in $r {
         $out-plus: list.append($out-plus, $i + 1px, space);
         $out-mul: list.append($out-mul, $i * $k, space);
     }
-    border-radius: $out-plus;
+    @include _border-radius($out-plus, $important);
 //    superellipse尚不稳定
 //    @supports (corner-shape: superellipse(1.4)) {
 //        corner-shape: superellipse($k);
-//        border-radius: $out-mul;
+//        @include _border-radius($out-mul, $important);
 //    }
 }
-@mixin superellipse-use($r: ()) {
+@mixin superellipse-use($r: (), $important: false) {
     $out-plus: ();
     $out-mul: ();
     @each $i in $r {
         $out-plus: list.append($out-plus, $i + 1px, space);
         $out-mul: list.append($out-mul, $i * $k, space);
     }
-    border-radius: $out-plus;
+    @include _border-radius($out-plus, $important);
     @supports (corner-shape: superellipse(1.4)) {
         corner-shape: superellipse($k);
-        border-radius: $out-mul;
+        @include _border-radius($out-mul, $important);
     }
 }

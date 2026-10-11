@@ -5,6 +5,9 @@
     .av__calendar-week {
         border-radius: 0 !important;
     }
+    .av__calendar-grid--empty {
+        @include superellipse-use(12px, $important: true);
+    }
     .av__calendar-week {
         border-left: 0;
     }

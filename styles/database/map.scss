@@ -1,0 +1,4 @@
+@use "../utils" as *;
+.av__map-empty {
+    @include superellipse-use(12px);
+}
