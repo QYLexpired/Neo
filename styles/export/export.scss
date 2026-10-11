@@ -17,3 +17,14 @@ body[data-export-pdf="true"] {
         border: none;
     }
 }
+@media print {
+    body[data-export-pdf="true"] {
+        page: neo-pdf;
+        #previewContainer {
+            background-color: var(--b3-theme-background);
+        }
+    }
+    @page neo-pdf {
+        background-color: var(--b3-theme-background);
+    }
+}

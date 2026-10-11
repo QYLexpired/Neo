@@ -5,6 +5,7 @@
 完整更新紀錄可於 [CHANGELOG](https://github.com/QYLexpired/Neo/blob/main/CHANGELOG.md) 查看
 ### <span style="font-family: neo;">1.7.2</span>
 - 適配新版集市已下載項目的版面配置
+- 修復匯出為 PDF 時頁邊距區域背景色與文件背景色不一致的問題
 ## 說明
 - 主題的部分樣式和功能無法僅透過 CSS 實現，因此必須安裝並啟用主題的配套外掛：[Neo+](https://github.com/QYLexpired/Neo-Plus)
 - Neo 主題和 Neo+ 外掛均不會對文件資料進行任何修改，可隨時啟用或停用，不存在遷移負擔
