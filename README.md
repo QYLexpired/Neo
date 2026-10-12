@@ -6,6 +6,8 @@ See the [CHANGELOG](https://github.com/QYLexpired/Neo/blob/main/CHANGELOG.md) fo
 ### <span style="font-family: neo;">1.7.2</span>
 - Added support for the updated layout of downloaded Bazaar packages
 - Fixed mismatched background colors between page margins and document content in PDF exports
+- Text selection backgrounds now follow the theme accent color; removed Colorful Selection
+- Fixed duplicate text rendering when selecting text in the PDF viewer on Windows
 ## <span style="font-family: neo;">Notes</span>
 - [Neo+](https://github.com/QYLexpired/Neo-Plus) is required because some of Neo's features cannot be implemented with CSS alone. Install and enable the plugin before using the theme.
 - Neither the Neo theme nor the Neo+ plugin modifies document data. You can enable or disable them at any time without any migration.
@@ -44,7 +46,6 @@ Neo is free to use. If you enjoy it, consider starring the project on [GitHub](h
 #### <span style="font-family: neo;">Readable Typography</span>
 - Text styling tuned for readability in Chinese and English
 - Optional colors for headings and lists make them easier to distinguish
-- Colorful Selection: selection highlights take their color from the text
 - List Bullet Line: shows guide lines to make nested lists easier to follow
 ## <span style="font-family: neo;">Cautions</span>
 Some features substantially change SiYuan's default styling and may cause compatibility issues that **cannot be fixed**. Disable any feature that causes problems. Others can affect performance, so enable them with care.
@@ -60,8 +61,6 @@ Some features substantially change SiYuan's default styling and may cause compat
     - Increases rendering load; if you notice lag, turn it off or select the Light setting
 - Fluid Cursor
     - Its cursor trail can significantly slow down the interface; enable it with care
-- Colorful Selection
-    - Its CSS selectors may slow down the app; enable it with care
 ## <span style="font-family: neo;">Final Notes</span>
 - Performance: Neo's changes throughout the interface use more resources than the default theme, although we have optimized them where we can (including Neo+'s `performancetuning` module). Responsiveness also depends on your device, plugins, and code snippets. Suppose the default theme's smoothness is 1 and Neo's is 0.9. A demanding plugin could bring the combined result to 0.9 × 0.9 = 0.81. Lag may have more than one cause.
 - Easter eggs: Neo has many small details to discover. For example, change an entire blockquote's text color from the block menu under Appearance and see what happens.

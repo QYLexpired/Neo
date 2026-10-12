@@ -13,9 +13,20 @@
 .av__cell--header {
     border-color: transparent;
 }
-.av__cell--select::after {
-    @include superellipse(4px);
-    box-shadow: 0 0 0 2px var(--neo-input-primary);
+.av__cell--select {
+    background-color: transparent !important;
+    &::after {
+        @include superellipse-use(2px);
+        border-radius: 0;
+        outline: 1px solid oklch(from var(--b3-theme-accent) l c h / 0.6);
+        outline-offset: -1px;
+        background-color: oklch(from var(--b3-theme-accent) l c h / 0.12);
+        box-shadow: none;
+        inset: 0;
+    }
+    .av__drag-fill {
+        border-color: oklch(from var(--b3-theme-accent) l c h / 0.6);
+    }
 }
 .av__cell--active {
     background-color: var(--b3-list-active);
