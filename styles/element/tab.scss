@@ -4,6 +4,9 @@
 .b3-typography .tabs[data-node-id][data-tabs-ready=true],
 .mindmap-view__content .tabs[data-tabs-ready=true] {
     border: unset;
+    &.protyle-wysiwyg--select-mode {
+        outline: none;
+    }
     & > .tabs-header {
         border-radius: 0;
         scrollbar-width: none;
@@ -29,6 +32,7 @@
                     }
                 }
                 &.protyle-wysiwyg--hl,
+                &.protyle-wysiwyg--select-mode,
                 &.protyle-wysiwyg--select {
                     & > .tabs-header {
                         background-color: transparent;

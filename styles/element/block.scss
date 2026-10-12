@@ -3,6 +3,7 @@
 .mindmap-view__content .mindmap-view__preview-block {
     @include superellipse(10px);
     &.protyle-wysiwyg--select,
+    &.protyle-wysiwyg--select-mode,
     &.protyle-wysiwyg--hl {
         &::after {
             border-radius: inherit;
