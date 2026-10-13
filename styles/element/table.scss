@@ -1,6 +1,6 @@
 @use "../utils" as *;
 @use "../tooltip" as *;
-$table-border-color: oklch(from currentColor l c h / 0.15);
+$table-border-color: oklch(from currentColor l c h / 0.2);
 .b3-typography table,
 .protyle-wysiwyg table,
 .mindmap-view__content table {
@@ -10,7 +10,7 @@ $table-border-color: oklch(from currentColor l c h / 0.15);
     border: none;
     padding: 1px;
     overflow: hidden;
-    @include superellipse-use(10px);
+    @include superellipse-use(6px);
     caption {
         border-bottom: 1px solid $table-border-color;
         &[style*="caption-side: bottom"] {
@@ -23,8 +23,8 @@ $table-border-color: oklch(from currentColor l c h / 0.15);
         border: none;
     }
     thead th,
-    tbody tr:nth-child(2n) {
-        background-color: var(--b3-table-even-background);
+    thead td {
+        font-weight: normal;
     }
     th {
         border-bottom: 1px solid $table-border-color;
@@ -48,20 +48,13 @@ $table-border-color: oklch(from currentColor l c h / 0.15);
         border: unset;
     }
 }
-// 转置
 .b3-typography,
 .protyle-wysiwyg,
 .mindmap-view__content {
-    [data-type=NodeTable][custom-sy-table-header-column=true] table {
+    [data-type=NodeTable] {
         thead th,
-        tbody tr {
-            background-color: transparent;
-        }
-        tr > th,
-        tr > td {
-            &:nth-child(2n+1) {
-                background-color: var(--b3-table-even-background);
-            }
+        thead td {
+            font-weight: bold;
         }
     }
 }
