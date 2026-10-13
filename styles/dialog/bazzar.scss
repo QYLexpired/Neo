@@ -28,7 +28,7 @@
         .config-bazaar__content .b3-card {
             display: grid;
             grid-template-areas: "img info" "buttons buttons";
-            grid-template-columns: 90px 1fr !important;
+            grid-template-columns: 90px minmax(0, 1fr) !important;
             & > .b3-card__img {
                 grid-area: img !important;
                 align-self: stretch !important;
@@ -50,18 +50,30 @@
                 padding: 3px 11px 11px 16px !important;
                 align-self: flex-end;
                 max-width: none !important;
+                min-width: 0;
                 min-height: 0 !important;
                 width: auto !important;
                 flex-wrap: nowrap !important;
-                justify-content: flex-start !important;
+                justify-content: flex-end !important;
                 white-space: nowrap;
-                & > .block__icon:not(.fn__none) {
-                    margin-left: auto;
+                // 让按钮间距随可用宽度收缩，开关保持完整尺寸。
+                & > .block__icon {
+                    flex: 0 1 28px;
+                    min-width: 16px;
+                    margin-left: 0;
+                    padding-inline: 0;
+                    justify-content: center;
                 }
                 & > .block__icon.fn__hidden {
-                    width: 0;
+                    display: none;
                 }
-                & > .block__icon:not(.fn__none) ~ .block__icon:not(.fn__none) {
+                & > .config-bazaar__publish-controls .block__icon {
+                    margin-left: 0;
+                }
+                & > .fn__space {
+                    display: none;
+                }
+                & > .b3-switch {
                     margin-left: 8px;
                 }
             }
@@ -73,7 +85,7 @@
         outline: 1px solid var(--b3-border-color-trans);
         outline-offset: -1px;
         background-color: transparent;
-        @include superellipse(18px);
+        @include superellipse-use(18px);
         transition: var(--b3-transition);
         &.b3-card--current,
         &:hover {
@@ -90,6 +102,8 @@
             }
         }
         .b3-card__img {
+            display: flex;
+            align-items: center;
             margin-left: unset;
             margin-inline-start: 16px;
             img {
