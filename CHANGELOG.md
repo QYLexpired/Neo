@@ -1,3 +1,18 @@
+### v1.7.2 / 2026-10-14
+- 适配思源3.8.7
+- 适配新版集市已下载项目布局
+- 布局菜单选择控件改用专用类名匹配，让复选框和单选框均应用高亮对比色
+- 修复导出为PDF时页边距区域背景色与文档背景色不一致的问题
+- 文字选区背景统一跟随主题色，移除彩色选区特性
+- 修复Windows端PDF查看器选中文字出现重影的问题
+- 移除表格奇数行的背景色
+- Added support for SiYuan 3.8.7
+- Added support for the updated layout of downloaded Bazaar packages
+- Layout menu selection controls now use their dedicated class selector, applying contrasting colors to both checkboxes and radio buttons when the menu item is highlighted
+- Fixed mismatched background colors between page margins and document content in PDF exports
+- Text selection backgrounds now follow the theme accent color; removed Colorful Selection
+- Fixed duplicate text rendering when selecting text in the PDF viewer on Windows
+- Removed the background color from odd-numbered table rows
 ### v1.7.1 / 2026-10-09
 - 重新设计Neo的图标和预览图
 - 优化部分样式

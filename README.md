@@ -4,6 +4,7 @@
 ## <span style="font-family: neo;">Changelog</span>
 See the [CHANGELOG](https://github.com/QYLexpired/Neo/blob/main/CHANGELOG.md) for the full update history.
 ### <span style="font-family: neo;">1.7.2</span>
+- Added support for SiYuan 3.8.7
 - Added support for the updated layout of downloaded Bazaar packages
 - Fixed mismatched background colors between page margins and document content in PDF exports
 - Text selection backgrounds now follow the theme accent color; removed Colorful Selection

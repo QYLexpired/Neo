@@ -4,6 +4,7 @@
 ## 更新日誌
 完整更新紀錄可於 [CHANGELOG](https://github.com/QYLexpired/Neo/blob/main/CHANGELOG.md) 查看
 ### <span style="font-family: neo;">1.7.2</span>
+- 適配思源 3.8.7
 - 適配新版集市已下載項目的版面配置
 - 修復匯出為 PDF 時頁邊距區域背景色與文件背景色不一致的問題
 - 文字選取範圍的背景統一跟隨主題色，移除彩色選取特性

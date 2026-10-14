@@ -15,7 +15,7 @@
 }
 @mixin menu-item-child-bg {
     // 菜单项的子元素（更改background-color）
-    & > .window-workspace__selection input[type="checkbox"]:not(.b3-switch) {
+    & > .window-workspace__selection .window-workspace__check {
         @content;
     }
 }
