@@ -1,5 +1,8 @@
+@use "../utils/icon" as *;
 @use "sass:string";
 @use "sass:list";
+$neo-task-icon-font-size: 16px;
+$neo-task-tab-icon-font-size: 12px;
 $neo-task-codes: string.split(
     "20 21 22 23 24 25 26 27 28 29 2a 2b 2c 2d 2e 2f 30 31 32 33 34 35 36 37 38 39 3a 3b 3c 3d 3e 3f 40 41 42 43 44 45 46 47 48 49 4a 4b 4c 4d 4e 4f 50 51 52 53 54 55 56 57 58 59 5a 5c 5e 5f 60 61 62 63 64 65 66 67 68 69 6a 6b 6c 6d 6e 6f 70 71 72 73 74 75 76 77 78 79 7a 7b 7c 7d 7e",
     " "
@@ -127,9 +130,9 @@ $neo-custom-task-codes: neo-list-exclude($neo-task-codes, $neo-standard-task-cod
     width: 1.2em;
     height: 1.2em;
     border-radius: 50%;
-    font-size: inherit !important;
+    font-size: $neo-task-icon-font-size !important;
     background-color: var(--_list-action-color, var(--b3-theme-on-surface));
-    mask-image: url('data:image/svg+xml,\<svg xmlns="http\://www\.w3.org/2000/svg" viewBox="0 0 1024 1024">\<path d="M512 903.110656c216.004608 0 391.110656-175.106048 391.110656-391.110656S728.004608 120.889344 512 120.889344 120.889344 295.995392 120.889344 512 295.995392 903.110656 512 903.110656z m0 64C260.64896 967.110656 56.889344 763.35104 56.889344 512S260.64896 56.889344 512 56.889344 967.110656 260.64896 967.110656 512 763.35104 967.110656 512 967.110656z"/>\</svg>');
+    mask-image: $checkbox-unchecked-mask;
     -webkit-mask-repeat: no-repeat;
     mask-repeat: no-repeat;
     -webkit-mask-size: 100% 100%;
@@ -140,13 +143,14 @@ $neo-custom-task-codes: neo-list-exclude($neo-task-codes, $neo-standard-task-cod
     vertical-align: unset;
 }
 .tabs-task::before {
+    font-size: $neo-task-tab-icon-font-size !important;
     left: unset;
     transform: translateY(-50%) !important;
 }
 .protyle-wysiwyg .li[data-subtype=t].protyle-task--done > .protyle-action--task::before,
 .tabs-task[aria-checked="true"]::before {
     background-color: var(--_list-fold-color, var(--b3-theme-accent));
-    mask-image: url('data:image/svg+xml,\<svg xmlns="http\://www\.w3.org/2000/svg" viewBox="0 0 1024 1024">\<path d="M512.45568 57.344c251.35104 0 455.11168 203.76064 455.11168 455.11168 0 251.35104-203.76064 455.11168-455.11168 455.11168C261.10464 967.56736 57.344 763.80672 57.344 512.45568 57.344 261.10464 261.10464 57.344 512.45568 57.344z m272.444416 288.876544c-5.842944-5.445632-16.21504-5.953536-22.995968-1.074176l-0.315392 0.232448-301.232128 228.097024c-5.515264 4.176896-15.601664 4.72064-21.655552 1.186816l-0.320512-0.193536-113.998848-71.015424c-7.031808-4.380672-16.93696-2.89792-22.390784 3.219456l-0.24576 0.2816-13.169664 15.497216c-5.553152 6.53312-4.62848 15.625216 1.519616 21.586944l0.27136 0.258048 140.93312 131.342336c10.247168 9.550848 26.529792 10.051584 36.615168 0.9728l0.313344-0.28672 323.310592-301.310976c6.679552-6.223872 7.225344-15.606784 1.036288-21.63712l-0.254976-0.241664-7.419904-6.915072z"/>\</svg>');
+    mask-image: $checkbox-checked-mask;
 }
 // 进行中
 .protyle-wysiwyg .li[data-subtype=t].protyle-task--done[data-task="/"] > .protyle-action--task,
@@ -202,7 +206,7 @@ $neo-custom-task-codes: neo-list-exclude($neo-task-codes, $neo-standard-task-cod
                 -webkit-mask: none;
                 mask: none;
                 background-color: var(--_list-fold-color, var(--b3-theme-accent)) !important;
-                font-size: 0.9em !important;
+                font-size: $neo-task-icon-font-size * 0.9 !important;
                 font-family: inherit !important;
             }
         }
@@ -224,7 +228,7 @@ $neo-custom-task-codes: neo-list-exclude($neo-task-codes, $neo-standard-task-cod
         height: 1.335em;
         @include task-marker-text;
         background-color: transparent;
-        font-size: 0.9em;
+        font-size: $neo-task-tab-icon-font-size * 0.9;
         font-family: inherit;
         position: absolute;
     }
@@ -260,9 +264,9 @@ $neo-custom-task-codes: neo-list-exclude($neo-task-codes, $neo-standard-task-cod
         width: 1.2em;
         height: 1.2em;
         border-radius: 50%;
-        font-size: inherit !important;
+        font-size: $neo-task-icon-font-size !important;
         background-color: var(--_list-action-color, var(--b3-theme-on-surface));
-        mask-image: url('data:image/svg+xml,\<svg xmlns="http\://www\.w3.org/2000/svg" viewBox="0 0 1024 1024">\<path d="M512 903.110656c216.004608 0 391.110656-175.106048 391.110656-391.110656S728.004608 120.889344 512 120.889344 120.889344 295.995392 120.889344 512 295.995392 903.110656 512 903.110656z m0 64C260.64896 967.110656 56.889344 763.35104 56.889344 512S260.64896 56.889344 512 56.889344 967.110656 260.64896 967.110656 512 763.35104 967.110656 512 967.110656z"/>\</svg>');
+        mask-image: $checkbox-unchecked-mask;
         -webkit-mask-repeat: no-repeat;
         mask-repeat: no-repeat;
         -webkit-mask-size: 100% 100%;
@@ -279,7 +283,7 @@ $neo-custom-task-codes: neo-list-exclude($neo-task-codes, $neo-standard-task-cod
     .mindmap-view__task[data-task="x"]::before,
     .mindmap-view__task[data-task="X"]::before {
         background-color: var(--_list-fold-color, var(--b3-theme-accent));
-        mask-image: url('data:image/svg+xml,\<svg xmlns="http\://www\.w3.org/2000/svg" viewBox="0 0 1024 1024">\<path d="M512.45568 57.344c251.35104 0 455.11168 203.76064 455.11168 455.11168 0 251.35104-203.76064 455.11168-455.11168 455.11168C261.10464 967.56736 57.344 763.80672 57.344 512.45568 57.344 261.10464 261.10464 57.344 512.45568 57.344z m272.444416 288.876544c-5.842944-5.445632-16.21504-5.953536-22.995968-1.074176l-0.315392 0.232448-301.232128 228.097024c-5.515264 4.176896-15.601664 4.72064-21.655552 1.186816l-0.320512-0.193536-113.998848-71.015424c-7.031808-4.380672-16.93696-2.89792-22.390784 3.219456l-0.24576 0.2816-13.169664 15.497216c-5.553152 6.53312-4.62848 15.625216 1.519616 21.586944l0.27136 0.258048 140.93312 131.342336c10.247168 9.550848 26.529792 10.051584 36.615168 0.9728l0.313344-0.28672 323.310592-301.310976c6.679552-6.223872 7.225344-15.606784 1.036288-21.63712l-0.254976-0.241664-7.419904-6.915072z"/>\</svg>');
+        mask-image: $checkbox-checked-mask;
     }
     .mindmap-view__task[data-task="/"] {
         --_list-fold-color: oklch(from var(--b3-theme-accent) l c 60);
@@ -313,7 +317,7 @@ $neo-custom-task-codes: neo-list-exclude($neo-task-codes, $neo-standard-task-cod
             -webkit-mask: none;
             mask: none;
             background-color: var(--_list-fold-color, var(--b3-theme-accent)) !important;
-            font-size: 0.9em !important;
+            font-size: $neo-task-icon-font-size * 0.9 !important;
             font-family: inherit !important;
         }
     }
@@ -333,7 +337,7 @@ $neo-custom-task-codes: neo-list-exclude($neo-task-codes, $neo-standard-task-cod
             height: 1.335em;
             @include task-marker-text;
             background-color: transparent;
-            font-size: 0.9em;
+            font-size: $neo-task-tab-icon-font-size * 0.9;
             font-family: inherit;
             position: absolute;
         }
