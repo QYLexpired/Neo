@@ -147,7 +147,8 @@
     }
     .tabs-title-editor {
         @include input-common;
-        background-color: oklch(from var(--b3-theme-on-background) l c h / 0.12) !important;
+        background-color: var(--b3-theme-background) !important;
+        animation: neo-input-focus-ring 0.2s var(--neo-ease-out-3) forwards;
         clip-path: unset !important; //覆盖内联
         [neo-focusblock]::before {
             display: none;
