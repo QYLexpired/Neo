@@ -77,7 +77,6 @@
     --b3-menu-icon-color: var(--b3-theme-on-surface);
     // neo
     --neo-input-primary: oklch(from var(--b3-theme-base) clamp(0, l, 0.8) c h / 0.7);
-    --neo-input-background: var(--b3-list-hover);
     --neo-button-primary: oklch(from var(--b3-theme-base) clamp(0, l, 0.92) c h);
     --neo-switch-primary: oklch(from var(--b3-theme-base) clamp(0, l, 0.9) c h);
     --neo-menu-item-primary: oklch(from var(--b3-theme-base) clamp(0, l, 0.9) c h);
@@ -147,7 +146,6 @@
     --b3-menu-icon-color: var(--b3-theme-on-surface);
     // neo
     --neo-input-primary: oklch(from var(--b3-theme-base) clamp(0.4, l, 1) c h / 0.7);
-    --neo-input-background: var(--b3-list-hover);
     --neo-button-primary: oklch(from var(--b3-theme-base) clamp(0.4, l, 1) c h);
     --neo-switch-primary: oklch(from var(--b3-theme-base) clamp(0.38, l, 0.8) c h);
     --neo-menu-item-primary: oklch(from var(--b3-theme-base) clamp(0.4, l, 1) c h);

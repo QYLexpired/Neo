@@ -292,7 +292,7 @@
 // 条件颜色
 .av__panel .av__conditional-colors {
     .av__conditional-rule {
-        @include superellipse-use(7px);
+        @include superellipse-use(8px);
         background-color: transparent;
         outline: 1px solid var(--b3-border-color-trans);
         outline-offset: -1px;

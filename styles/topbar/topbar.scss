@@ -57,7 +57,7 @@
             background-clip: text;
             -webkit-background-clip: text;
             transition: color 0s;
-            animation: neo-barWorkspace-sweep 0.95s var(--neo-ease-out-2) 0.15s both;
+            animation: neo-barWorkspace-sweep 0.75s var(--neo-ease-out-2) both;
         }
     }
     .toolbar__svg {
