@@ -5,10 +5,13 @@
 完整更新历史可查看[CHANGELOG](https://github.com/QYLexpired/Neo/blob/main/CHANGELOG.md)
 ### <span style="font-family: neo;">1.7.3</span>
 - 优化不同编辑器字体大小下列表子弹线的表现
+- 在Neo主题中屏蔽思源（3.8.8）的紧凑模式
+- 适配数据库自动化面板
 ## 说明
 - 主题的部分样式和功能无法仅通过CSS实现，因此必须安装并启用主题的配套插件：[Neo+](https://github.com/QYLexpired/Neo-Plus)
 - Neo主题和Neo+插件均不会对文档数据进行任何修改，可随时启用或停用，不存在迁移负担
 - 使用过程中有任何问题或建议，可通过[Neo 主题介绍及反馈综合帖](https://ld246.com/article/1783158376401)或[GitHub](https://github.com/QYLexpired/Neo/issues)进行反馈
+- 基于设计理念、适配难度及维护周期等考虑，Neo主题屏蔽了思源的紧凑模式（屏蔽指的是：若思源启用紧凑模式，Neo主题在前端取消相关样式，不会修改任何思源的配置）
 ## 支持我
 Neo主题是完全免费的，如果喜欢这个主题，欢迎在[GitHub](https://github.com/QYLexpired/Neo)为我点亮小星星，也可以[请我喝杯咖啡](https://icnmjy02sv9g.feishu.cn/wiki/FekNwrtB7ia1WckYelRckwzZnig?from=from_copylink)
 ## 特性

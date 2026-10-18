@@ -5,22 +5,8 @@
         @include button-transparent-hover-translucent;
     }
 }
-.protyle .b3-chips__doctag .b3-chip {
-    @include superellipse(24px);
-    corner-shape: unset;
-    background-color: oklch(from currentColor l c h / 0.12);
-    color: var(--neo-tag-color);
-    outline: 0.5px solid oklch(from currentColor l c h / 0.25);
-    outline-offset: -0.5px;
-    &::before {
-        content: "#";
-        display: inline-block;
-        margin-inline-end: 4px;
-    }
-    &:hover {
-        background-color: oklch(from currentColor l c h / 0.18);
-        color: var(--neo-tag-color);
-    }
+.protyle-background .b3-chips__doctag .b3-chip {
+    @include chip-tag;
 }
 .protyle-background--enable .protyle-background__icon {
     transition: var(--_emoji-transiton);

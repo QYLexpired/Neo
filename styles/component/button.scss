@@ -123,6 +123,46 @@
         @include contrast-color($var);
     }
 }
+@mixin chip-removable {
+    transition: var(--b3-transition);
+    $offset: 16px;
+    padding: 4px 14px;
+    .b3-chip__close {
+        opacity: 0;
+        margin-right: -$offset;
+        margin-left: 0;
+        padding-right: 0;
+        transition: inherit;
+        &:hover {
+            background-color: transparent;
+            color: var(--b3-theme-error);
+        }
+    }
+    &:hover {
+        padding: 4px 6px;
+        .b3-chip__close {
+            opacity: 1;
+            margin-right: 0;
+        }
+    }
+}
+@mixin chip-tag {
+    @include superellipse(24px);
+    corner-shape: unset;
+    background-color: oklch(from currentColor l c h / 0.12);
+    color: var(--neo-tag-color);
+    outline: 0.5px solid oklch(from currentColor l c h / 0.25);
+    outline-offset: -0.5px;
+    &::before {
+        content: "#";
+        display: inline-block;
+        margin-inline-end: 4px;
+    }
+    &:hover {
+        background-color: oklch(from currentColor l c h / 0.18);
+        color: var(--neo-tag-color);
+    }
+}
 // chip
 .b3-chip {
     @include superellipse-use(7px);
@@ -131,27 +171,7 @@
     transition: var(--b3-transition);
     opacity: 1;
     .b3-chips & {
-        transition: var(--b3-transition);
-        $offset: 16px;
-        padding: 4px 14px;
-        .b3-chip__close {
-            opacity: 0;
-            margin-right: -$offset;
-            margin-left: 0;
-            padding-right: 0;
-            transition: inherit;
-            &:hover {
-                background-color: transparent;
-                color: var(--b3-theme-error);
-            }
-        }
-        &:hover {
-            padding: 4px 6px;
-            .b3-chip__close {
-                opacity: 1;
-                margin-right: 0;
-            }
-        }
+        @include chip-removable;
     }
     // 部分情况没有.b3-chip__close
     .b3-chips#editor\.spellcheckLanguages &,

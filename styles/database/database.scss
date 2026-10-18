@@ -129,7 +129,7 @@
     @include button-transparent-hover-translucent;
     padding: 3px 6px;
 }
-// filter
+// 筛选
 .av__panel .b3-menu {
     .av__filter-rowinner {
         overflow: visible;
@@ -148,8 +148,36 @@
         background-color: unset;
         outline: 1px solid var(--b3-border-color-trans);
         outline-offset: -1px;
-        @include superellipse-use(7px);
+        @include superellipse-use(8px);
     }
+}
+// 自动化
+.av__panel .av__automation-chips .b3-chip {
+    @include superellipse-use(7px);
+    @include chip-removable;
+    outline: none;
+}
+.av__panel .av__automation-control [data-tags] .b3-chip {
+    @include chip-removable;
+    @include chip-tag;
+}
+.av__automation-source-action[data-action="rules"] {
+    @include button-translucent;
+    padding-left: 8px;
+    padding-right: 4px;
+    color: var(--b3-theme-on-background) !important;
+    & > svg {
+        margin-left: auto;
+    }
+}
+.av__automation-action[data-index],
+.av__automation-action > .av__automation-control {
+    padding: 12px;
+    border: unset;
+    background-color: unset;
+    outline: 1px solid var(--b3-border-color-trans);
+    outline-offset: -1px;
+    @include superellipse-use(8px);
 }
 // 复选框
 .av__cell-check .av__checkbox,
