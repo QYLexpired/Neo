@@ -3,17 +3,18 @@
 - Neo owes much of its design and ideas to the [Asri theme](https://github.com/mustakshif/Asri). Thank you, [mustakshif](https://github.com/mustakshif) — your eye for design, technical skill, and creativity made Neo possible.
 ## <span style="font-family: neo;">Changelog</span>
 See the [CHANGELOG](https://github.com/QYLexpired/Neo/blob/main/CHANGELOG.md) for the full update history.
-### <span style="font-family: neo;">1.7.2</span>
-- Added support for SiYuan 3.8.7
-- Added support for the updated layout of downloaded Bazaar packages
-- Fixed mismatched background colors between page margins and document content in PDF exports
-- Text selection backgrounds now follow the theme accent color; removed Colorful Selection
-- Fixed duplicate text rendering when selecting text in the PDF viewer on Windows
-- Removed the background color from odd-numbered table rows
+### <span style="font-family: neo;">1.7.3</span>
+- Added support for SiYuan 3.8.8
+- Made global transitions faster
+- Improved list bullet lines at different editor font sizes
+- Disabled SiYuan's Compact Mode (3.8.8) in the Neo theme
+- Adapted the styling of the database automation panel
+- Reworked input control styles to fix clipped outer shadows
 ## <span style="font-family: neo;">Notes</span>
 - [Neo+](https://github.com/QYLexpired/Neo-Plus) is required because some of Neo's features cannot be implemented with CSS alone. Install and enable the plugin before using the theme.
 - Neither the Neo theme nor the Neo+ plugin modifies document data. You can enable or disable them at any time without any migration.
 - Have a question or suggestion? Post in the [Neo theme discussion thread](https://ld246.com/article/1783158376401) or open an issue on [GitHub](https://github.com/QYLexpired/Neo/issues)
+- For reasons including design philosophy, adaptation effort, and maintenance, the Neo theme disables SiYuan's Compact Mode. "Disables" here means that when Compact Mode is enabled in SiYuan, the Neo theme removes the related styles on the front end; it does not modify any SiYuan settings.
 ## <span style="font-family: neo;">Support Me</span>
 Neo is free to use. If you enjoy it, consider starring the project on [GitHub](https://github.com/QYLexpired/Neo) or [buying me a coffee](https://icnmjy02sv9g.feishu.cn/wiki/FekNwrtB7ia1WckYelRckwzZnig?from=from_copylink)
 ## <span style="font-family: neo;">Features</span>

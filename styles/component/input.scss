@@ -1,6 +1,6 @@
 @use "../utils" as *;
 @use "button" as *;
-@mixin input-common {
+@mixin input-common($focus: focus) {
     @include superellipse-use(7px);
     height: 28px;
     min-height: 28px;
@@ -9,6 +9,7 @@
     caret-color: currentColor;
     color: var(--b3-theme-on-background);
     background-color: var(--neo-input-background);
+    --_neo-input-focus-shadow: 0 0 0 2px var(--neo-input-primary);
     box-shadow: unset;
     outline: unset;
     transition: box-shadow var(--b3-transition);
@@ -22,36 +23,17 @@
             outline: unset;
         }
     }
-    &:focus {
-        animation: neo-input-focus-ring 0.2s var(--neo-ease-out-3) forwards;
+    &:#{$focus} {
+        box-shadow: unset;
         background-color: var(--neo-input-background);
         outline: unset;
         &:not(.b3-text-field--text) {
-            box-shadow: unset;
+            box-shadow: var(--_neo-input-focus-shadow);
             outline: unset;
         }
     }
     .status & {
-        animation-name: neo-input-focus-ring-inset;
-    }
-}
-@keyframes neo-input-focus-ring {
-    0% {
-        box-shadow: 0 0 20px 20px oklch(from var(--neo-input-primary) l c h / 0);
-    }
-    20% {
-        box-shadow: 0 0 10px 10px oklch(from var(--neo-input-primary) l c h / 0.15);
-    }
-    100% {
-        box-shadow: 0 0 0 2px var(--neo-input-primary);
-    }
-}
-@keyframes neo-input-focus-ring-inset {
-    from {
-        box-shadow: 0 0 0 0px var(--neo-input-primary) inset;
-    }
-    to {
-        box-shadow: 0 0 0 2px var(--neo-input-primary) inset;
+        --_neo-input-focus-shadow: 0 0 0 2px var(--neo-input-primary) inset;
     }
 }
 .b3-select,

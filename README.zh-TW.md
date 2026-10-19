@@ -3,17 +3,18 @@
 - Neo 主題大量參考了 [Asri 主題](https://github.com/mustakshif/Asri) 的設計和創意，非常感謝 [mustakshif](https://github.com/mustakshif)，沒有你超強的審美、技術力和令人驚嘆的創意，就不會有 Neo 的出現
 ## 更新日誌
 完整更新紀錄可於 [CHANGELOG](https://github.com/QYLexpired/Neo/blob/main/CHANGELOG.md) 查看
-### <span style="font-family: neo;">1.7.2</span>
-- 適配思源 3.8.7
-- 適配新版集市已下載項目的版面配置
-- 修復匯出為 PDF 時頁邊距區域背景色與文件背景色不一致的問題
-- 文字選取範圍的背景統一跟隨主題色，移除彩色選取特性
-- 修復 Windows 端 PDF 檢視器選取文字時出現重影的問題
-- 移除表格奇數行的背景色
+### <span style="font-family: neo;">1.7.3</span>
+- 適配思源 3.8.8
+- 加快全域轉場速度
+- 最佳化不同編輯器字型大小下列表子彈線的表現
+- 在 Neo 主題中停用思源（3.8.8）的緊湊模式
+- 適配資料庫自動化面板
+- 重做輸入框控制項樣式，解決外陰影被裁切的問題
 ## 說明
 - 主題的部分樣式和功能無法僅透過 CSS 實現，因此必須安裝並啟用主題的配套外掛：[Neo+](https://github.com/QYLexpired/Neo-Plus)
 - Neo 主題和 Neo+ 外掛均不會對文件資料進行任何修改，可隨時啟用或停用，不存在遷移負擔
 - 使用過程中有任何問題或建議，可透過 [Neo 主題介紹及回饋討論串](https://ld246.com/article/1783158376401) 或 [GitHub](https://github.com/QYLexpired/Neo/issues) 提出回饋
+- 基於設計理念、適配難度及維護週期等考量，Neo 主題停用了思源的緊湊模式（停用是指：若思源啟用緊湊模式，Neo 主題會在前端移除相關樣式，不會修改任何思源設定）
 ## 贊助我
 Neo 主題完全免費，如果喜歡這個主題，歡迎在 [GitHub](https://github.com/QYLexpired/Neo) 幫我按顆星星，也可以[請我喝杯咖啡](https://icnmjy02sv9g.feishu.cn/wiki/FekNwrtB7ia1WckYelRckwzZnig?from=from_copylink)
 ## 特性

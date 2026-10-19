@@ -36,6 +36,7 @@
 #sidebar > .toolbar > .toolbar__icon,
 #sidebarRight > .toolbar > .toolbar__icon,
 #menu > .toolbar > .toolbar__icon,
+#menu > .toolbar > .toolbar__button,
 #model > .toolbar > .toolbar__icon,
 .b3-menu--sheet > .b3-menu__title:not(.b3-menu__title--root) > .b3-menu__icon {
     box-shadow: var(--neo-main-shadow);
@@ -56,6 +57,16 @@
         transition: var(--b3-transition), 0.65s var(--neo-ease-spring-4);
     }
 }
+#menu > .toolbar > .toolbar__button {
+    box-sizing: content-box;
+    > svg {
+        width: 16px;
+        height: 16px;
+    }
+    &[data-type="menu-search-open"] {
+        margin-left: auto;
+    }
+}
 #sidebar > .toolbar,
 #sidebarRight > .toolbar,
 #menu > .toolbar,
@@ -67,6 +78,7 @@
     padding: 0 10px;
 }
 #model > .toolbar > .toolbar__text:not(.toolbar__text--search),
+.mobile-main-menu__title,
 .b3-menu--sheet > .b3-menu__title:not(.b3-menu__title--root) .b3-menu__label {
     display: none;
 }

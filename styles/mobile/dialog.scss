@@ -2,13 +2,14 @@
 .neo-mobile {
     .b3-dialog__container:not(.mobile-bottom-sheet) {
         max-width: 95vw !important;
-        max-height: 95vh !important;
+        // 键盘弹出时，弹窗高度不能超过思源提供的可用空间。
+        max-height: min(95vh, 100%) !important;
         min-width: 300px !important;
     }
     [data-key="dialog-opencard"] .b3-dialog__container,
     .config__view  {
         max-width: 100vw !important;
-        max-height: 100vh !important;
+        max-height: 100% !important;
         box-shadow: none;
         border-radius: 0;
         corner-shape: unset;

@@ -146,9 +146,8 @@
         padding: 6px 12px;
     }
     .tabs-title-editor {
-        @include input-common;
+        @include input-common($focus: focus-within);
         background-color: var(--b3-theme-background) !important;
-        animation: neo-input-focus-ring 0.2s var(--neo-ease-out-3) forwards;
         clip-path: unset !important; //覆盖内联
         [neo-focusblock]::before {
             display: none;

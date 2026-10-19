@@ -1,3 +1,16 @@
+### v1.7.3 / 2026-10-19
+- 适配思源3.8.8
+- 加快全局过渡速度
+- 优化不同编辑器字体大小下列表子弹线的表现
+- 在Neo主题中屏蔽思源（3.8.8）的紧凑模式
+- 适配数据库自动化面板
+- 重做输入框控件样式以解决外阴影被截断的问题
+- Added support for SiYuan 3.8.8
+- Made global transitions faster
+- Improved list bullet lines at different editor font sizes
+- Disabled SiYuan's Compact Mode (3.8.8) in the Neo theme
+- Adapted the styling of the database automation panel
+- Reworked input control styles to fix clipped outer shadows
 ### v1.7.2 / 2026-10-14
 - 适配思源3.8.7
 - 适配新版集市已下载项目布局
