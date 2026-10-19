@@ -4,6 +4,7 @@
 ## 更新日志
 完整更新历史可查看[CHANGELOG](https://github.com/QYLexpired/Neo/blob/main/CHANGELOG.md)
 ### <span style="font-family: neo;">1.7.3</span>
+- 适配思源3.8.8
 - 加快全局过渡速度
 - 优化不同编辑器字体大小下列表子弹线的表现
 - 在Neo主题中屏蔽思源（3.8.8）的紧凑模式

@@ -47,6 +47,10 @@
         box-shadow: var(--b3-menu-shadow);
         margin: 0 2px -2px 2px;
         transition: 0.15s var(--neo-ease-out-3);
+        &.b3-menu--expanded {
+            border-radius: 0;
+            corner-shape: unset;
+        }
         .neo-frostedglass & {
             background-color: transparent;
             box-shadow: var(--b3-menu-shadow-blur);

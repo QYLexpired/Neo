@@ -14,31 +14,29 @@
     &:not(.fullscreen) {
         .mindmap-view__toolbar {
             opacity: 1;
-            .block__icon,
-            .mindmap-view__zoom-control {
+            .mindmap-view__toolbar-group {
                 filter: blur(6px);
-                transform: scale(1.2);
+                transform: scale(1.05);
                 opacity: 0;
-                transition: 1.2s var(--neo-ease-spring-2);
-                &[disabled] {
-                    opacity: 0;
-                }
+                transition: 0.8s var(--neo-ease-spring-2);
             }
         }
-        &:hover {
+        &:hover,
+        &.mindmap-view--active {
+            outline: unset;
             .mindmap-view__toolbar {
-                .block__icon,
-                .mindmap-view__zoom-control {
+                .mindmap-view__toolbar-group {
                     filter: none;
                     transform: none;
                     opacity: 1;
-                    &[disabled] {
-                        opacity: 0.38;
-                    }
                 }
             }
         }
     }
+}
+.mindmap-view__toolbar-group {
+    @include superellipse-use(10px);
+    background-color: oklch(from var(--b3-theme-background) l c h / 0.8);
 }
 .mindmap-view__zoom-actions {
     @include menu-container-common-simple;

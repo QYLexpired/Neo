@@ -51,11 +51,10 @@
 .av__new,
 .av__views--mobile > .av__mobile-view {
     @include superellipse(7px);
-    outline: 1px solid var(--b3-border-color-trans);
-    outline-offset: -1px;
+    overflow: hidden;
     .b3-button {
-        @include button-transparent-hover-translucent;
-        border-color: var(--b3-border-color-trans) !important;
+        @include button-solid;
+        border-color: oklch(from var(--b3-theme-background) l c h / 0.3) !important;
     }
     @at-root {
         .av__views--mobile > .av__mobile-view {

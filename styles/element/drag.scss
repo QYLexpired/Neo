@@ -18,11 +18,11 @@
 .protyle-wysiwyg [data-node-id] .img,
 .protyle-wysiwyg[data-readonly] [data-node-id].iframe {
     &:hover {
-        .protyle-action__drag:not(.protyle-block-resize) {
+        .protyle-action__drag:not(.protyle-block-resize):not(.protyle-image-resize) {
             opacity: 0.5;
         }
     }
-    .protyle-action__drag:not(.protyle-block-resize) {
+    .protyle-action__drag:not(.protyle-block-resize):not(.protyle-image-resize) {
         @include protyle-action__drag-common;
         display: inline-block;
         opacity: 0;
@@ -43,6 +43,17 @@
         color: #ffffff;
     }
 }
+// 图片容器有独立的层叠上下文，需要在容器层与背景进行反差混合。
+.protyle-image-resize {
+    mix-blend-mode: difference;
+    .protyle-block-resize {
+        mix-blend-mode: normal;
+    }
+}
+.protyle-wysiwyg [data-node-id] .img:hover,
+.protyle-wysiwyg [data-table-cell-node] .img:hover,
+.table__cell-rich [data-node-id] .img:hover,
+.table__cell-rich [data-table-cell-node] .img:hover,
 .protyle-wysiwyg[data-readonly="false"] [data-node-id].iframe:hover,
 .mindmap-view:hover {
     .protyle-block-resize {
