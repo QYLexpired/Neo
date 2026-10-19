@@ -50,11 +50,11 @@
 }
 .av__new,
 .av__views--mobile > .av__mobile-view {
-    @include superellipse(7px);
+    @include superellipse-use(6px);
     overflow: hidden;
     .b3-button {
         @include button-solid;
-        border-color: oklch(from var(--b3-theme-background) l c h / 0.3) !important;
+        border-color: oklch(from var(--b3-theme-background) l c h / 0.5) !important;
     }
     @at-root {
         .av__views--mobile > .av__mobile-view {

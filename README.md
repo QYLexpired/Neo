@@ -9,7 +9,6 @@ See the [CHANGELOG](https://github.com/QYLexpired/Neo/blob/main/CHANGELOG.md) fo
 - Improved list bullet lines at different editor font sizes
 - Disabled SiYuan's Compact Mode (3.8.8) in the Neo theme
 - Adapted the styling of the database automation panel
-- Reworked input control styles to fix clipped outer shadows
 ## <span style="font-family: neo;">Notes</span>
 - [Neo+](https://github.com/QYLexpired/Neo-Plus) is required because some of Neo's features cannot be implemented with CSS alone. Install and enable the plugin before using the theme.
 - Neither the Neo theme nor the Neo+ plugin modifies document data. You can enable or disable them at any time without any migration.
