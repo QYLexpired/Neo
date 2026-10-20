@@ -3,6 +3,10 @@
 - Neo 主題大量參考了 [Asri 主題](https://github.com/mustakshif/Asri) 的設計和創意，非常感謝 [mustakshif](https://github.com/mustakshif)，沒有你超強的審美、技術力和令人驚嘆的創意，就不會有 Neo 的出現
 ## 更新日誌
 完整更新紀錄可於 [CHANGELOG](https://github.com/QYLexpired/Neo/blob/main/CHANGELOG.md) 查看
+### <span style="font-family: neo;">1.7.4</span>
+- 重做任務列表樣式
+- 重做單選控制項樣式
+- 修復任務列表自訂狀態在匯出時樣式未生效的問題
 ### <span style="font-family: neo;">1.7.3</span>
 - 適配思源 3.8.8
 - 加快全域轉場速度

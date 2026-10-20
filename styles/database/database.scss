@@ -190,7 +190,7 @@
     width: 1.2em;
     height: 1.2em;
     background-color: var(--b3-theme-on-surface);
-    mask-image: $checkbox-unchecked-mask;
+    mask-image: $input-checkbox-unchecked-mask;
     -webkit-mask-repeat: no-repeat;
     mask-repeat: no-repeat;
     -webkit-mask-size: 100% 100%;
@@ -200,7 +200,7 @@
 }
 .av__cell-check::before {
     background-color: var(--b3-theme-accent);
-    mask-image: $checkbox-checked-mask;
+    mask-image: $input-checkbox-checked-mask;
 }
 .av__calendar-field.av__cell-check,
 .av__calendar-field.av__cell-uncheck,

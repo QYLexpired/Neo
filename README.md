@@ -3,6 +3,10 @@
 - Neo owes much of its design and ideas to the [Asri theme](https://github.com/mustakshif/Asri). Thank you, [mustakshif](https://github.com/mustakshif) — your eye for design, technical skill, and creativity made Neo possible.
 ## <span style="font-family: neo;">Changelog</span>
 See the [CHANGELOG](https://github.com/QYLexpired/Neo/blob/main/CHANGELOG.md) for the full update history.
+### <span style="font-family: neo;">1.7.4</span>
+- Redesigned task list styling
+- Redesigned radio button styling
+- Fixed custom task status styles not being applied on export
 ### <span style="font-family: neo;">1.7.3</span>
 - Added support for SiYuan 3.8.8
 - Made global transitions faster

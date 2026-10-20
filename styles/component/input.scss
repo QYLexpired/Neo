@@ -181,11 +181,11 @@ input[type="checkbox"]:not(.b3-switch) {
     background-color: var(--b3-theme-on-surface);
     animation: neo-ratio-entrance 0.6s var(--neo-ease-spring-3);
     transform-origin: 30% 70%;
-    mask-image: $checkbox-unchecked-mask;
+    mask-image: $input-checkbox-unchecked-mask;
     &:checked {
         background-color: var(--b3-theme-primary);
         animation: neo-ratio-checked-entrance 0.6s var(--neo-ease-spring-3);
-        mask-image: $checkbox-checked-mask;
+        mask-image: $input-checkbox-checked-mask;
     }
     &:disabled {
         background-color: var(--b3-theme-on-surface);
@@ -197,6 +197,17 @@ input[type="checkbox"]:not(.b3-switch) {
             background-color: var(--b3-theme-primary);
             opacity: 1;
         }
+    }
+}
+input[type="radio" i] {
+    background-color: var(--b3-theme-on-surface);
+    mask-image: $input-radio-unchecked-mask;
+    &:checked {
+        background-color: var(--b3-theme-accent);
+        mask-image: $input-radio-checked-mask;
+    }
+    &:disabled {
+        background-color: var(--b3-theme-on-surface);
     }
 }
 @keyframes neo-ratio-entrance {

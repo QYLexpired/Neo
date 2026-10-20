@@ -22,6 +22,19 @@ $neo-lowercase-task-codes: string.split(
     @return $result;
 }
 $neo-custom-task-codes: neo-list-exclude($neo-task-codes, $neo-standard-task-codes);
+// 状态可位于任务列表项或按钮上。
+@function neo-task-list-actions($state: "") {
+    $selectors: list.append((), ".protyle-wysiwyg .li[data-subtype=t]#{$state} > .protyle-action--task", comma);
+    @if $state != "" {
+        $selectors: list.append($selectors, ".protyle-wysiwyg .li[data-subtype=t] > .protyle-action--task#{$state}", comma);
+    }
+    @return $selectors;
+}
+// 正文预览与 Markdown HTML 导出的任务输入控件。
+@function neo-task-export-inputs($state: "") {
+    @return ".protyle-wysiwyg .protyle-task > input[type=checkbox][data-task]#{$state}",
+        ".b3-typography .protyle-task > input[type=checkbox][data-task]#{$state}";
+}
 @mixin list-common {
     --b3-list-icon-hover: transparent;
     &::before {
@@ -69,11 +82,67 @@ $neo-custom-task-codes: neo-list-exclude($neo-task-codes, $neo-standard-task-cod
     align-content: center;
     line-height: 1;
     box-sizing: border-box;
-    color: var(--b3-theme-background);
+    color: var(--_list-fold-color, var(--b3-theme-accent));
+    font-weight: 500;
     top: 50%;
     left: 50%;
     transform: translateX(-50%) translateY(-50%) !important;
     z-index: 2;
+}
+@mixin task-custom-marker {
+    width: $neo-task-icon-font-size * 1.2;
+    height: $neo-task-icon-font-size * 1.2;
+    @include task-marker-text;
+    mask: none;
+    background-color: transparent !important;
+    font-size: $neo-task-icon-font-size * 0.9 !important;
+    font-family: inherit !important;
+}
+// 原生 SVG 绘制外框，::before 显示文字，保留 ::after 的折叠背景。
+@mixin task-custom-outline {
+    position: absolute;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    width: $neo-task-icon-font-size * 1.2;
+    height: $neo-task-icon-font-size * 1.2;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    visibility: visible;
+    background-color: var(--_list-fold-color, var(--b3-theme-accent));
+    mask-image: $input-checkbox-unchecked-mask;
+    mask-repeat: no-repeat;
+    mask-size: 100% 100%;
+    border-radius: 0;
+    pointer-events: none;
+    z-index: 1;
+    & > use {
+        visibility: hidden;
+    }
+}
+@mixin task-custom-tab {
+    position: relative;
+    &::before {
+        content: "" !important;
+        mask-image: $input-checkbox-unchecked-mask;
+        background-color: var(--_list-fold-color, var(--b3-theme-accent)) !important;
+        left: 50%;
+        transform: translateX(-50%) translateY(-50%) !important;
+    }
+    & > svg {
+        visibility: hidden;
+    }
+    & > span {
+        width: $neo-task-tab-icon-font-size * 1.2;
+        height: $neo-task-tab-icon-font-size * 1.2;
+        @include task-marker-text;
+        background-color: transparent;
+        font-size: $neo-task-tab-icon-font-size * 0.9;
+        font-family: inherit;
+        position: absolute;
+    }
 }
 @mixin task-entrance-keyframes($name) {
     @keyframes #{$name} {
@@ -119,20 +188,19 @@ $neo-custom-task-codes: neo-list-exclude($neo-task-codes, $neo-standard-task-cod
 .protyle-task--done .mindmap-view__content .p {
     text-decoration: none !important;
 }
-.protyle-wysiwyg .li[data-subtype=t] .protyle-action--task,
+#{neo-task-list-actions()},
 .tabs-task {
     color: transparent !important;
 }
-.protyle-wysiwyg .li[data-subtype=t] > .protyle-action--task::before,
-.tabs-task::before {
+@mixin task-control {
     content: "" !important;
     position: absolute;
     width: 1.2em;
     height: 1.2em;
-    border-radius: 50%;
+    border-radius: 0;
     font-size: $neo-task-icon-font-size !important;
     background-color: var(--_list-action-color, var(--b3-theme-on-surface));
-    mask-image: $checkbox-unchecked-mask;
+    mask-image: $input-checkbox-unchecked-mask;
     -webkit-mask-repeat: no-repeat;
     mask-repeat: no-repeat;
     -webkit-mask-size: 100% 100%;
@@ -142,101 +210,121 @@ $neo-custom-task-codes: neo-list-exclude($neo-task-codes, $neo-standard-task-cod
     transform: translateX(-50%) translateY(-50%) !important;
     vertical-align: unset;
 }
-.tabs-task::before {
-    font-size: $neo-task-tab-icon-font-size !important;
-    left: unset;
-    transform: translateY(-50%) !important;
+#{neo-task-list-actions()},
+.tabs-task {
+    &::before {
+        @include task-control;
+    }
 }
-.protyle-wysiwyg .li[data-subtype=t].protyle-task--done > .protyle-action--task::before,
-.tabs-task[aria-checked="true"]::before {
-    background-color: var(--_list-fold-color, var(--b3-theme-accent));
-    mask-image: $checkbox-checked-mask;
+.tabs-task {
+    position: relative;
+    &::before {
+        font-size: $neo-task-tab-icon-font-size !important;
+    }
+}
+// 独立思维导图也需要页签任务的原生占位尺寸。
+.mindmap-view .tabs-task {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    width: 16px;
+    height: 16px;
+    margin-right: 6px;
+    font-size: $neo-task-tab-icon-font-size;
+    & > svg {
+        width: 16px;
+        height: 16px;
+    }
+}
+#{neo-task-list-actions(".protyle-task--done")},
+.tabs-task[aria-checked="true"] {
+    &::before {
+        background-color: var(--_list-fold-color, var(--b3-theme-accent));
+        mask-image: $input-checkbox-checked-mask;
+    }
 }
 // 进行中
-.protyle-wysiwyg .li[data-subtype=t].protyle-task--done[data-task="/"] > .protyle-action--task,
+#{neo-task-list-actions('[data-task="/"]')},
 .tabs-task[data-task="/"] {
-    --_list-fold-color: oklch(from var(--b3-theme-accent) l c 60);
+    --_list-fold-color: var(--b3-theme-warning);
     &::before {
-        mask-image: url('data:image/svg+xml,\<svg xmlns="http\://www\.w3.org/2000/svg" viewBox="-64 -64 1152 1152">\<path d="M512 1024C229.241263 1024 0 794.758737 0 512S229.241263 0 512 0s512 229.241263 512 512-229.241263 512-512 512z m202.058-375.176l-132.634947-101.456842V225.010526a44.005053 44.005053 0 0 0-88.010106 0v346.408421l192.599 147.306a44.005053 44.005053 0 0 0 53.463579-69.901474z"/>\</svg>');
+        mask-image: $task-progress-mask;
     }
     &::after {
         --_list-fold-bg: oklch(from var(--_list-fold-color) l c h / 0.18); // 重置作用域
     }
 }
 // 放弃
-.protyle-wysiwyg .li[data-subtype=t].protyle-task--done[data-task="-"] > .protyle-action--task,
+#{neo-task-list-actions('[data-task="-"]')},
 .tabs-task[data-task="-"] {
-    --_list-fold-color: oklch(from var(--b3-theme-accent) l c 15);
+    --_list-fold-color: var(--b3-theme-error);
     &::before {
-        mask-image: url('data:image/svg+xml,\<svg xmlns="http\://www\.w3.org/2000/svg" viewBox="32 32 960 960">\<path d="M512 85.333333C277.333333 85.333333 85.333333 277.333333 85.333333 512s192 426.666667 426.666667 426.666667 426.666667-192 426.666667-426.666667S746.666667 85.333333 512 85.333333z m170.666667 469.333334H341.333333c-25.6 0-42.666667-17.066667-42.666666-42.666667s17.066667-42.666666 42.666666-42.666666h341.333334c25.6 0 42.666667 17.066667 42.666667 42.666667s-17.066667 42.666667-42.666667 42.666667z"/>\</svg>');
+        mask-image: $task-cancelled-mask;
     }
     &::after {
         --_list-fold-bg: oklch(from var(--_list-fold-color) l c h / 0.18);
     }
 }
-.protyle-wysiwyg .li[data-subtype="t"]:not([data-task]) > .protyle-action--task::before {
-    animation: neo-task-default-entrance 0.6s var(--neo-ease-spring-3);
-    transform-origin: center;
+#{neo-task-list-actions(":not([data-task])")} {
+    &::before {
+        animation: neo-task-default-entrance 0.6s var(--neo-ease-spring-3);
+        transform-origin: center;
+    }
 }
 @include task-entrance-keyframes(neo-task-default-entrance);
-.protyle-wysiwyg .li[data-subtype="t"][data-task=""] > .protyle-action--task::before {
-    animation: neo-task-empty-entrance 0.6s var(--neo-ease-spring-3);
-    transform-origin: center;
+#{neo-task-list-actions('[data-task=""]')} {
+    &::before {
+        animation: neo-task-empty-entrance 0.6s var(--neo-ease-spring-3);
+        transform-origin: center;
+    }
 }
 @include task-entrance-keyframes(neo-task-empty-entrance);
 @each $code in $neo-task-codes {
-    .protyle-wysiwyg .li[data-subtype="t"][data-task="#{'\\'}#{$code}"] > .protyle-action--task::before {
-        animation: neo-task-#{$code}-entrance 0.6s var(--neo-ease-spring-3);
-        transform-origin: center;
+    #{neo-task-list-actions('[data-task="#{"\\"}#{$code}"]')} {
+        &::before {
+            animation: neo-task-#{$code}-entrance 0.6s var(--neo-ease-spring-3);
+            transform-origin: center;
+        }
     }
     @include task-entrance-keyframes(neo-task-#{$code}-entrance);
 }
 // 自定义任务状态
-.protyle-wysiwyg .li[data-subtype="t"][data-task] {
-    &:not([data-task=" "]):not([data-task="x"]):not([data-task="X"]):not([data-task="/"]):not([data-task="-"]) {
-        & > .protyle-action--task {
-            & > svg {
-                visibility: hidden;
-            }
-            &::before {
-                content: var(--task-marker, attr(data-task)) !important;
-                width: 1.125em;
-                height: 1.125em;
-                @include task-marker-text;
-                -webkit-mask: none;
-                mask: none;
-                background-color: var(--_list-fold-color, var(--b3-theme-accent)) !important;
-                font-size: $neo-task-icon-font-size * 0.9 !important;
-                font-family: inherit !important;
-            }
-        }
+#{neo-task-list-actions('[data-task]:not([data-task=" "]):not([data-task="x"]):not([data-task="X"]):not([data-task="/"]):not([data-task="-"])')} {
+    & > svg {
+        @include task-custom-outline;
+    }
+    &::before {
+        content: var(--task-marker, attr(data-task)) !important;
+        @include task-custom-marker;
     }
 }
-.protyle-wysiwyg .tabs-task--custom {
-    position: relative;
-    &::before {
-        content: "" !important;
-        -webkit-mask: none;
-        mask: none;
-        background-color: var(--_list-fold-color, var(--b3-theme-accent)) !important;
+.tabs-task.tabs-task--custom {
+    @include task-custom-tab;
+}
+#{neo-task-export-inputs()} {
+    opacity: 1;
+    background-color: var(--_list-action-color, var(--b3-theme-on-surface));
+    &:checked {
+        background-color: var(--_list-fold-color, var(--b3-theme-accent));
     }
-    & > svg {
-        visibility: hidden;
-    }
-    & > span {
-        width: 1.335em;
-        height: 1.335em;
-        @include task-marker-text;
-        background-color: transparent;
-        font-size: $neo-task-tab-icon-font-size * 0.9;
-        font-family: inherit;
-        position: absolute;
-    }
+}
+#{neo-task-export-inputs('[data-task="/"]')} {
+    --_list-fold-color: var(--b3-theme-warning);
+    mask-image: $task-progress-mask;
+}
+#{neo-task-export-inputs('[data-task="-"]')} {
+    --_list-fold-color: var(--b3-theme-error);
+    mask-image: $task-cancelled-mask;
 }
 @each $code in $neo-lowercase-task-codes {
     @if list.index($neo-custom-task-codes, $code) {
-        .protyle-wysiwyg .li[data-subtype="t"][data-task="#{'\\'}#{$code}"] > .protyle-action--task::before,
-        .protyle-wysiwyg .tabs-task[data-task="#{'\\'}#{$code}"] > span {
+        #{neo-task-list-actions('[data-task="#{"\\"}#{$code}"]')} {
+            &::before {
+                text-box: trim-both ex alphabetic;
+            }
+        }
+        .tabs-task[data-task="#{'\\'}#{$code}"] > span {
             text-box: trim-both ex alphabetic;
         }
     }
@@ -244,12 +332,16 @@ $neo-custom-task-codes: neo-list-exclude($neo-task-codes, $neo-standard-task-cod
 @for $i from 1 through list.length($neo-custom-task-codes) {
     $code: list.nth($neo-custom-task-codes, $i);
     $hue: (($i - 1) * 137.508) % 360;
-    .protyle-wysiwyg .li[data-subtype="t"][data-task="#{'\\'}#{$code}"] > .protyle-action--task,
+    #{neo-task-list-actions('[data-task="#{"\\"}#{$code}"]')},
     .tabs-task[data-task="#{'\\'}#{$code}"] {
         --_list-fold-color: oklch(0.68 0.16 #{$hue});
         &::after {
             --_list-fold-bg: oklch(from var(--_list-fold-color) l c h / 0.18);
         }
+    }
+    #{neo-task-export-inputs('[data-task="#{"\\"}#{$code}"]')} {
+        --_list-fold-color: oklch(0.68 0.16 #{$hue});
+        mask-image: task-export-marker-mask($code);
     }
 }
 // 思维导图任务列表
@@ -263,10 +355,10 @@ $neo-custom-task-codes: neo-list-exclude($neo-task-codes, $neo-standard-task-cod
         position: absolute;
         width: 1.2em;
         height: 1.2em;
-        border-radius: 50%;
+        border-radius: 0;
         font-size: $neo-task-icon-font-size !important;
         background-color: var(--_list-action-color, var(--b3-theme-on-surface));
-        mask-image: $checkbox-unchecked-mask;
+        mask-image: $input-checkbox-unchecked-mask;
         -webkit-mask-repeat: no-repeat;
         mask-repeat: no-repeat;
         -webkit-mask-size: 100% 100%;
@@ -283,70 +375,44 @@ $neo-custom-task-codes: neo-list-exclude($neo-task-codes, $neo-standard-task-cod
     .mindmap-view__task[data-task="x"]::before,
     .mindmap-view__task[data-task="X"]::before {
         background-color: var(--_list-fold-color, var(--b3-theme-accent));
-        mask-image: $checkbox-checked-mask;
+        mask-image: $input-checkbox-checked-mask;
     }
     .mindmap-view__task[data-task="/"] {
-        --_list-fold-color: oklch(from var(--b3-theme-accent) l c 60);
+        --_list-fold-color: var(--b3-theme-warning);
         &::before {
             background-color: var(--_list-fold-color);
-            mask-image: url('data:image/svg+xml,\<svg xmlns="http\://www\.w3.org/2000/svg" viewBox="-64 -64 1152 1152">\<path d="M512 1024C229.241263 1024 0 794.758737 0 512S229.241263 0 512 0s512 229.241263 512 512-229.241263 512-512 512z m202.058-375.176l-132.634947-101.456842V225.010526a44.005053 44.005053 0 0 0-88.010106 0v346.408421l192.599 147.306a44.005053 44.005053 0 0 0 53.463579-69.901474z"/>\</svg>');
+            mask-image: $task-progress-mask;
         }
         &::after {
             --_list-fold-bg: oklch(from var(--_list-fold-color) l c h / 0.18);
         }
     }
     .mindmap-view__task[data-task="-"] {
-        --_list-fold-color: oklch(from var(--b3-theme-accent) l c 15);
+        --_list-fold-color: var(--b3-theme-error);
         &::before {
             background-color: var(--_list-fold-color);
-            mask-image: url('data:image/svg+xml,\<svg xmlns="http\://www\.w3.org/2000/svg" viewBox="32 32 960 960">\<path d="M512 85.333333C277.333333 85.333333 85.333333 277.333333 85.333333 512s192 426.666667 426.666667 426.666667 426.666667-192 426.666667-426.666667S746.666667 85.333333 512 85.333333z m170.666667 469.333334H341.333333c-25.6 0-42.666667-17.066667-42.666666-42.666667s17.066667-42.666666 42.666666-42.666666h341.333334c25.6 0 42.666667 17.066667 42.666667 42.666667s-17.066667 42.666667-42.666667 42.666667z"/>\</svg>');
+            mask-image: $task-cancelled-mask;
         }
         &::after {
             --_list-fold-bg: oklch(from var(--_list-fold-color) l c h / 0.18);
         }
     }
     .mindmap-view__task[data-task]:not([data-task=" "]):not([data-task="x"]):not([data-task="X"]):not([data-task="/"]):not([data-task="-"]) {
+        // 外框 SVG 使用绝对定位，保留原生 SVG 原本撑开的按钮尺寸。
+        min-width: max(14px, 1em - 4px);
+        min-height: max(14px, 1em - 4px);
         > svg {
-            visibility: hidden;
+            @include task-custom-outline;
         }
         &::before {
             content: var(--task-marker, attr(data-task)) !important;
-            width: 1.125em;
-            height: 1.125em;
-            @include task-marker-text;
-            -webkit-mask: none;
-            mask: none;
-            background-color: var(--_list-fold-color, var(--b3-theme-accent)) !important;
-            font-size: $neo-task-icon-font-size * 0.9 !important;
-            font-family: inherit !important;
-        }
-    }
-    .tabs-task--custom {
-        position: relative;
-        &::before {
-            content: "" !important;
-            -webkit-mask: none;
-            mask: none;
-            background-color: var(--_list-fold-color, var(--b3-theme-accent)) !important;
-        }
-        > svg {
-            visibility: hidden;
-        }
-        > span {
-            width: 1.335em;
-            height: 1.335em;
-            @include task-marker-text;
-            background-color: transparent;
-            font-size: $neo-task-tab-icon-font-size * 0.9;
-            font-family: inherit;
-            position: absolute;
+            @include task-custom-marker;
         }
     }
 }
 @each $code in $neo-lowercase-task-codes {
     @if list.index($neo-custom-task-codes, $code) {
-        .mindmap-view .mindmap-view__task[data-task="#{'\\'}#{$code}"]::before,
-        .mindmap-view .tabs-task[data-task="#{'\\'}#{$code}"] > span {
+        .mindmap-view .mindmap-view__task[data-task="#{'\\'}#{$code}"]::before {
             text-box: trim-both ex alphabetic;
         }
     }
