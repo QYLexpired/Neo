@@ -1,3 +1,10 @@
+### v1.7.4 / 2026-10-20
+- 重做任务列表样式
+- 重做单选控件样式
+- 修复任务列表自定义状态在导出时样式不生效的问题
+- Redesigned task list styling
+- Redesigned radio button styling
+- Fixed custom task status styles not being applied on export
 ### v1.7.3 / 2026-10-19
 - 适配思源3.8.8
 - 加快全局过渡速度

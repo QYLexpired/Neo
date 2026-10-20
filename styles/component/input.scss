@@ -183,7 +183,7 @@ input[type="checkbox"]:not(.b3-switch) {
     transform-origin: 30% 70%;
     mask-image: $input-checkbox-unchecked-mask;
     &:checked {
-        background-color: var(--b3-theme-primary);
+        background-color: var(--b3-theme-accent);
         animation: neo-ratio-checked-entrance 0.6s var(--neo-ease-spring-3);
         mask-image: $input-checkbox-checked-mask;
     }
@@ -193,8 +193,8 @@ input[type="checkbox"]:not(.b3-switch) {
     }
     .protyle-task & {
         top: 0.4em;
-        &:checked {
-            background-color: var(--b3-theme-primary);
+        &:checked:not(:disabled) {
+            background-color: var(--b3-theme-accent);
             opacity: 1;
         }
     }
