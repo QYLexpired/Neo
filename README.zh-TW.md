@@ -3,16 +3,12 @@
 - Neo 主題大量參考了 [Asri 主題](https://github.com/mustakshif/Asri) 的設計和創意，非常感謝 [mustakshif](https://github.com/mustakshif)，沒有你超強的審美、技術力和令人驚嘆的創意，就不會有 Neo 的出現
 ## 更新日誌
 完整更新紀錄可於 [CHANGELOG](https://github.com/QYLexpired/Neo/blob/main/CHANGELOG.md) 查看
+### <span style="font-family: neo;">1.7.5</span>
+- 最佳化部分細節
 ### <span style="font-family: neo;">1.7.4</span>
 - 重做任務列表樣式
 - 重做單選控制項樣式
 - 修復任務列表自訂狀態在匯出時樣式未生效的問題
-### <span style="font-family: neo;">1.7.3</span>
-- 適配思源 3.8.8
-- 加快全域轉場速度
-- 最佳化不同編輯器字型大小下列表子彈線的表現
-- 在 Neo 主題中停用思源（3.8.8）的緊湊模式
-- 適配資料庫自動化面板
 ## 說明
 - 主題的部分樣式和功能無法僅透過 CSS 實現，因此必須安裝並啟用主題的配套外掛：[Neo+](https://github.com/QYLexpired/Neo-Plus)
 - Neo 主題和 Neo+ 外掛均不會對文件資料進行任何修改，可隨時啟用或停用，不存在遷移負擔
