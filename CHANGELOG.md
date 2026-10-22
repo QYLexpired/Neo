@@ -1,3 +1,18 @@
+### v1.7.6 / 2026-10-22
+- 为详情组件增加展开/收起动效
+- 重做全部链接样式
+- 重做行内备注样式
+- 重做标签样式
+- 重做数据库标题样式
+- 优化部分动效
+- 移除页签关闭动效
+- Added expand/collapse animations to details elements
+- Redesigned all link styles
+- Redesigned inline memo styling
+- Redesigned tag styling
+- Redesigned database title styling
+- Refined some animations
+- Removed the tab closing animation
 ### v1.7.5 / 2026-10-21
 - 优化了一些细节
 - Refined various details

@@ -9,15 +9,22 @@
     border-color: var(--b3-border-color);
 }
 $database-title-mask: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5V19A9 3 0 0 0 21 19V5"/><path d="M3 12A9 3 0 0 0 21 12"/></svg>');
+.av__header {
+    display: flex;
+    flex-direction: column;
+    & > .av__title {
+        order: -1;
+    }
+}
 .av__title {
-    color: var(--b3-theme-on-surface);
-    padding-inline-start: 2.2em;
+    font-size: 1.15em;
+    padding-inline-start: 1.6em;
     position: relative;
     &::before {
         content: "";
         pointer-events: none;
         position: absolute;
-        inset-inline-start: 0.8em;
+        inset-inline-start: 0.2em;
         top: 50%;
         width: 1em;
         height: 1em;
@@ -104,6 +111,27 @@ $database-title-mask: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000
     }
 }
 // cell
+.av__celltext--ref {
+    border-bottom: unset;
+    padding: 0 0.2em;
+    margin: 0 0.1em;
+    @include superellipse-use(4px);
+    background-color: oklch(from currentColor l c h / 0.05);
+    outline: 0.5px solid oklch(from currentColor l c h / 0.15);
+    outline-offset: -0.5px;
+    .neo-mode-dark & {
+        background-color: oklch(from currentColor l c h / 0.08);
+        outline-color: oklch(from currentColor l c h / 0.18);
+    }
+    &:hover {
+        background-color: oklch(from currentColor l c h / 0.1);
+        outline-color: oklch(from currentColor l c h / 0.2);
+        .neo-mode-dark & {
+            background-color: oklch(from currentColor l c h / 0.15);
+            outline-color: oklch(from currentColor l c h / 0.25);
+        }
+    }
+}
 .av__cell .b3-chip,
 .av__panel .b3-menu__item .b3-chip,
 .av__panel .b3-chips .b3-chip,

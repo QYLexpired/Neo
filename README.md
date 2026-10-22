@@ -3,12 +3,14 @@
 - Neo owes much of its design and ideas to the [Asri theme](https://github.com/mustakshif/Asri). Thank you, [mustakshif](https://github.com/mustakshif) — your eye for design, technical skill, and creativity made Neo possible.
 ## <span style="font-family: neo;">Changelog</span>
 See the [CHANGELOG](https://github.com/QYLexpired/Neo/blob/main/CHANGELOG.md) for the full update history.
-### <span style="font-family: neo;">1.7.5</span>
-- Refined various details
-### <span style="font-family: neo;">1.7.4</span>
-- Redesigned task list styling
-- Redesigned radio button styling
-- Fixed custom task status styles not being applied on export
+### <span style="font-family: neo;">1.7.6</span>
+- Added expand/collapse animations to details elements
+- Redesigned all link styles
+- Redesigned inline memo styling
+- Redesigned tag styling
+- Redesigned database title styling
+- Refined some animations
+- Removed the tab closing animation
 ## <span style="font-family: neo;">Notes</span>
 - [Neo+](https://github.com/QYLexpired/Neo-Plus) is required because some of Neo's features cannot be implemented with CSS alone. Install and enable the plugin before using the theme.
 - Neither the Neo theme nor the Neo+ plugin modifies document data. You can enable or disable them at any time without any migration.

@@ -115,6 +115,12 @@
         }
     }
 }
+.b3-card__info {
+    font-weight: bold;
+    .b3-card__desc {
+        font-weight: normal;
+    }
+}
 .config-bazaar__readme {
     @include superellipse-use(18px);
     overflow: hidden;
@@ -250,6 +256,7 @@
 #modelMain .config-bazaar__title {
     .b3-button {
         @include button-transparent;
+        font-weight: bold;
         padding: 0 4px;
         box-shadow: none !important; // 覆盖粗野主义
         &:not(.b3-button--outline) {

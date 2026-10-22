@@ -12,7 +12,7 @@
     --_neo-input-focus-shadow: 0 0 0 2px var(--neo-input-primary);
     box-shadow: unset;
     outline: unset;
-    transition: box-shadow var(--b3-transition);
+    transition: box-shadow 200ms var(--neo-ease-out-3);
     box-sizing: border-box !important;
     &:hover {
         background-color: var(--neo-input-background);

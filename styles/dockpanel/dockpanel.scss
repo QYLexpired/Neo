@@ -74,3 +74,6 @@
 .file-tree__item--icon-expand > .b3-list-item__icon::before {
     display: none !important;
 }
+.sy__file .b3-list--background > .b3-list-item {
+    font-weight: bold;
+}

@@ -16,6 +16,12 @@
         height: 18px;
     }
 }
+.config-title {
+    color: var(--b3-theme-on-surface);
+}
+.config-name {
+    font-weight: bold;
+}
 .config__drag-anchor {
     opacity: 0
 }

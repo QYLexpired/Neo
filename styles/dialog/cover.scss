@@ -24,6 +24,7 @@
     .b3-chip {
         @include button-transparent;
         padding: 0 8px;
+        font-weight: bold;
         &.b3-chip--current {
             color: var(--b3-theme-accent);
         }

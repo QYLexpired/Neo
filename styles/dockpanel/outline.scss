@@ -1,6 +1,10 @@
 @use "sass:list";
 .sy__outline,
 .fn__flex-column[data-type="sidebar-outline"] {
+    & > .b3-list-item .b3-list-item__text {
+        font-weight: bold;
+        color: var(--b3-theme-on-surface-light);
+    }
     .b3-list-item[data-type="NodeHeading"] {
         .b3-list-item__graphic {
             opacity: 0;

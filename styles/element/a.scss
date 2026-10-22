@@ -19,7 +19,7 @@ a {
         text-decoration: none;
     }
 }
-a[href]:not(.b3-button, .block__icon) {
+a[href]:not(.b3-button, .block__icon, #menuFeedback) {
     @include link.link-common;
     @include link.link-types(href);
     &[href="https://cdn.jsdelivr.net" i]::before,
