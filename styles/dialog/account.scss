@@ -3,11 +3,16 @@
     overflow: visible
 }
 .config-account__profile-avatar {
-    @include superellipse-use(9px);
+    @include superellipse-use(9px, true);
     border: none;
-    background-color: transparent;
-    margin-right: 8px;
-    transition: 0.65s var(--neo-ease-spring-4);
+    background-color: transparent !important;
+    padding: 0 !important;
+    margin: 0 8px 0 0 !important;
+    outline: none !important;
+    transition: 0.65s var(--neo-ease-spring-4) !important;
+    &::before {
+        content: none !important;
+    }
     &:hover {
         scale: 1.12;
     }

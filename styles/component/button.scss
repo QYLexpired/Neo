@@ -147,16 +147,13 @@
     }
 }
 @mixin chip-tag {
-    @include superellipse(24px);
-    corner-shape: unset;
+    @include superellipse(capsule);
     background-color: oklch(from currentColor l c h / 0.12);
     color: var(--neo-tag-color);
     outline: 0.5px solid oklch(from currentColor l c h / 0.25);
     outline-offset: -0.5px;
     &::before {
-        content: "#";
-        display: inline-block;
-        margin-inline-end: 4px;
+        @include tag-icon;
     }
     &:hover {
         background-color: oklch(from currentColor l c h / 0.18);
@@ -165,7 +162,7 @@
 }
 // chip
 .b3-chip {
-    @include superellipse-use(7px);
+    @include superellipse-use(4px);
     color: var(--b3-theme-on-surface);
     background-color: oklch(from currentColor l c h / 0.08);
     transition: var(--b3-transition);

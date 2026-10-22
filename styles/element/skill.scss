@@ -1,7 +1,8 @@
+@use "../utils" as *;
 .agent-chat__composer-host span[data-type~=text][custom-agent-skill=true],
 .agent-chat__msg--user span[data-type~=text][custom-agent-skill=true] {
     border: unset;
-    border-radius: 24px;
+    @include superellipse(capsule);
     padding: 2px 8px;
     color: var(--b3-theme-accent);
     background-color: oklch(from currentColor l c h / 0.12);

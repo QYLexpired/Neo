@@ -7,7 +7,7 @@
 .b3-typography span[data-type~=tag],
 .agent-chat__body.b3-typography span[data-type~=tag],
 .b3-list-item[data-treetype=outline] > .b3-list-item__text span[data-type~=tag] {
-    @include superellipse(24px);
+    @include superellipse(capsule);
     background-color: oklch(from currentColor l c h / 0.12);
     color: var(--neo-tag-color);
     outline: 0.5px solid oklch(from currentColor l c h / 0.25);
@@ -18,8 +18,7 @@
     margin: 0 0.35em;
     transition: var(--b3-transition);
     &::before {
-        content: "#";
-        margin-inline-end: 4px;
+        @include tag-icon;
     }
     &:hover {
         background-color: oklch(from currentColor l c h / 0.18);

@@ -78,7 +78,7 @@
         opacity: 0;
         transition: var(--b3-transition);
         pointer-events: none;
-        border-radius: 999px;
+        @include superellipse(capsule);
     }
     &::before {
         content: "";

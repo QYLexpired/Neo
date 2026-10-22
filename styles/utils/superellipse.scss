@@ -1,6 +1,5 @@
 // reference: https://github.com/mustakshif/Asri
 @use "sass:list";
-$layout-border-radius: 8px;
 $k: 1.4;
 @mixin _border-radius($value, $important: false) {
     @if $important {
@@ -10,29 +9,42 @@ $k: 1.4;
     }
 }
 @mixin superellipse($r: (), $important: false) {
-    $out-plus: ();
-    $out-mul: ();
-    @each $i in $r {
-        $out-plus: list.append($out-plus, $i + 1px, space);
-        $out-mul: list.append($out-mul, $i * $k, space);
+    @if $r == capsule {
+        @include _border-radius(32px, $important);
+        @if $important {
+            corner-shape: unset !important;
+        } @else {
+            corner-shape: unset;
+        }
+    } @else {
+        $out-plus: ();
+        $out-mul: ();
+        @each $i in $r {
+            $out-plus: list.append($out-plus, $i + 1px, space);
+            $out-mul: list.append($out-mul, $i * $k, space);
+        }
+        @include _border-radius($out-plus, $important);
+    //    superellipse尚不稳定
+    //    @supports (corner-shape: superellipse(1.4)) {
+    //        corner-shape: superellipse($k);
+    //        @include _border-radius($out-mul, $important);
+    //    }
     }
-    @include _border-radius($out-plus, $important);
-//    superellipse尚不稳定
-//    @supports (corner-shape: superellipse(1.4)) {
-//        corner-shape: superellipse($k);
-//        @include _border-radius($out-mul, $important);
-//    }
 }
 @mixin superellipse-use($r: (), $important: false) {
-    $out-plus: ();
-    $out-mul: ();
-    @each $i in $r {
-        $out-plus: list.append($out-plus, $i + 1px, space);
-        $out-mul: list.append($out-mul, $i * $k, space);
-    }
-    @include _border-radius($out-plus, $important);
-    @supports (corner-shape: superellipse(1.4)) {
-        corner-shape: superellipse($k);
-        @include _border-radius($out-mul, $important);
+    @if $r == capsule {
+        @include superellipse(capsule, $important);
+    } @else {
+        $out-plus: ();
+        $out-mul: ();
+        @each $i in $r {
+            $out-plus: list.append($out-plus, $i + 1px, space);
+            $out-mul: list.append($out-mul, $i * $k, space);
+        }
+        @include _border-radius($out-plus, $important);
+        @supports (corner-shape: superellipse(1.4)) {
+            corner-shape: superellipse($k);
+            @include _border-radius($out-mul, $important);
+        }
     }
 }

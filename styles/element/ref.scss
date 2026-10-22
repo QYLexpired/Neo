@@ -1,34 +1,80 @@
 @use "../utils" as *;
+$ref-mask: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="19" r="3"/><path d="M9 19h8.5a3.5 3.5 0 0 0 0-7h-11a3.5 3.5 0 0 1 0-7H15"/><circle cx="18" cy="5" r="3"/></svg>');
+$ref-static-mask: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="19" r="3" fill="black"/><path d="M9 19h8.5a3.5 3.5 0 0 0 0-7h-11a3.5 3.5 0 0 1 0-7H15"/><circle cx="18" cy="5" r="3" fill="black"/></svg>');
+$ref-virtual-mask: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="19" r="3"/><path d="M9 19h8.5a3.5 3.5 0 0 0 0-7h-11a3.5 3.5 0 0 1 0-7H15" stroke-dasharray="3 3"/><circle cx="18" cy="5" r="3"/></svg>');
+$ref-annotation-mask: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M2.4 15.6 14.4 3.6a4.25 4.25 0 0 1 6 6l-12 12h-6Z"/><path d="m12.4 5.6 6 6M2.4 15.6a6 6 0 0 1 6 6"/></svg>');
 .protyle-wysiwyg [data-node-id] span[data-type~=block-ref]:not(.av__celltext),
 .protyle-wysiwyg [data-node-id] span[data-type~=file-annotation-ref],
-.protyle-wysiwyg [data-node-id] span[data-type=virtual-block-ref],
+.protyle-wysiwyg [data-node-id] span[data-type~=virtual-block-ref],
 .mindmap-view__content span[data-type~=block-ref]:not(.av__celltext),
 .mindmap-view__content span[data-type~=file-annotation-ref],
-.mindmap-view__content span[data-type=virtual-block-ref],
+.mindmap-view__content span[data-type~=virtual-block-ref],
 .b3-typography span[data-type~=block-ref]:not(.av__celltext), // 数据库属性面板中的块引
 .b3-typography span[data-type~=file-annotation-ref],
-.b3-typography span[data-type=virtual-block-ref],
+.b3-typography span[data-type~=virtual-block-ref],
 .b3-list-item[data-treetype=outline] > .b3-list-item__text span[data-type~=block-ref],
-.b3-list-item[data-treetype=outline] > .b3-list-item__text span[data-type~=file-annotation-ref] {
-    --_ref-underline-color: var(--b3-theme-accent);
+.b3-list-item[data-treetype=outline] > .b3-list-item__text span[data-type~=file-annotation-ref],
+.b3-list-item[data-treetype=outline] > .b3-list-item__text span[data-type~=virtual-block-ref] {
     color: inherit;
     border-radius: 0;
     opacity: 1;
     transition: var(--b3-transition);
-    border-bottom: 1px dashed var(--_ref-underline-color);
+    border-bottom: none;
     background-image: unset;
-    padding-bottom: 1.5px;
-    &:hover {
-        color: var(--_ref-underline-color);
-        border-radius: 0;
-        background-color: transparent;
+    padding: 0 0.2em;
+    margin: 0 0.1em;
+    @include superellipse-use(4px);
+    background-color: oklch(from currentColor l c h / 0.05);
+    outline: 0.5px solid oklch(from currentColor l c h / 0.15);
+    outline-offset: -0.5px;
+    .neo-mode-dark & {
+        background-color: oklch(from currentColor l c h / 0.08);
+        outline-color: oklch(from currentColor l c h / 0.18);
     }
-    &[data-subtype="s"] { // 静态锚文本
-        --_ref-underline-color: var(--b3-theme-secondary);
+    &:hover {
+        color: inherit;
+        @include superellipse-use(4px);
+        background-color: oklch(from currentColor l c h / 0.1);
+        outline-color: oklch(from currentColor l c h / 0.2);
+        .neo-mode-dark & {
+            background-color: oklch(from currentColor l c h / 0.15);
+            outline-color: oklch(from currentColor l c h / 0.25);
+        }
     }
 }
-.protyle-wysiwyg [data-node-id] span[data-type=virtual-block-ref],
-.mindmap-view__content span[data-type=virtual-block-ref],
-.b3-typography span[data-type=virtual-block-ref] {
-    --_ref-underline-color: var(--b3-theme-on-background);
+.protyle-wysiwyg [data-node-id] span[data-type~=block-ref]:not(.av__celltext),
+.protyle-wysiwyg [data-node-id] span[data-type~=file-annotation-ref],
+.protyle-wysiwyg [data-node-id] span[data-type~=virtual-block-ref],
+.mindmap-view__content span[data-type~=block-ref]:not(.av__celltext),
+.mindmap-view__content span[data-type~=file-annotation-ref],
+.mindmap-view__content span[data-type~=virtual-block-ref],
+.b3-typography span[data-type~=block-ref]:not(.av__celltext),
+.b3-typography span[data-type~=file-annotation-ref],
+.b3-typography span[data-type~=virtual-block-ref],
+.b3-list-item[data-treetype=outline] > .b3-list-item__text span[data-type~=block-ref],
+.b3-list-item[data-treetype=outline] > .b3-list-item__text span[data-type~=file-annotation-ref],
+.b3-list-item[data-treetype=outline] > .b3-list-item__text span[data-type~=virtual-block-ref] {
+    &::before {
+        content: "";
+        pointer-events: none;
+        display: inline-block;
+        width: 0.85em;
+        height: 0.85em;
+        margin-inline-end: 0.3em;
+        vertical-align: -0.05em;
+        background-color: currentColor;
+        mask-image: $ref-mask;
+        mask-position: center;
+        mask-size: contain;
+        mask-repeat: no-repeat;
+    }
+    &[data-subtype="s"]::before {
+        mask-image: $ref-static-mask;
+    }
+    &[data-type~=virtual-block-ref]::before {
+        mask-image: $ref-virtual-mask;
+    }
+    &[data-type~=file-annotation-ref]::before {
+        mask-image: $ref-annotation-mask;
+    }
 }

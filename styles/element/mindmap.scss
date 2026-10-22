@@ -57,8 +57,7 @@
     border: unset;
     padding: 4px 12px;
     box-shadow: var(--neo-main-shadow);
-    @include superellipse(32px);
-    corner-shape: unset;
+    @include superellipse(capsule);
     bottom: 12px;
 }
 // 线条

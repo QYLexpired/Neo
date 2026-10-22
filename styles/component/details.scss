@@ -1,0 +1,52 @@
+@use "../utils" as *;
+$details-marker-mask: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 12"><path d="M3 2.5L9 6L3 9.5Z" fill="black" stroke="black" stroke-width="1.8" stroke-linejoin="round"/></svg>');
+details > summary:not(.b3-button) {
+    @include superellipse-use(7px);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 4px 8px;
+    list-style: none;
+    cursor: pointer;
+    color: var(--b3-theme-on-surface);
+    transition: var(--b3-transition);
+    &::-webkit-details-marker {
+        display: none;
+    }
+    &::before {
+        content: "";
+        flex: 0 0 auto;
+        width: 12px;
+        height: 12px;
+        background-color: currentColor;
+        mask-image: $details-marker-mask;
+        mask-position: center;
+        mask-size: contain;
+        mask-repeat: no-repeat;
+        transform: rotate(0deg);
+        transition: transform 0.15s linear;
+    }
+    &:hover {
+        background-color: var(--b3-list-hover);
+        color: var(--b3-theme-on-background);
+    }
+}
+details[open] > summary:not(.b3-button)::before {
+    transform: rotate(90deg);
+}
+@supports selector(details::details-content) and (interpolate-size: allow-keywords) and (transition-behavior: allow-discrete) {
+    details::details-content {
+        interpolate-size: allow-keywords;
+        height: 0;
+        overflow: clip;
+        opacity: 0;
+        transition:
+            height 0.2s var(--neo-ease-in-out-1),
+            opacity 0.2s var(--neo-ease-in-out-1),
+            content-visibility 0.2s linear allow-discrete;
+    }
+    details[open]::details-content {
+        height: auto;
+        opacity: 1;
+    }
+}

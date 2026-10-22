@@ -1,4 +1,5 @@
 @use "superellipse" as *;
+$tag-mask: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12.586 2.586A2 2 0 0 0 11.172 2H4a2 2 0 0 0-2 2v7.172a2 2 0 0 0 .586 1.414l8.704 8.704a2.426 2.426 0 0 0 3.42 0l6.58-6.58a2.426 2.426 0 0 0 0-3.42z"/><circle cx="7.5" cy="7.5" r=".5" fill="black"/></svg>');
 $input-control-stroke-width: 1.5;
 $input-radio-outline: '<circle cx="9.6" cy="9.6" r="7.8" fill="none" stroke="black" stroke-width="#{$input-control-stroke-width}" vector-effect="non-scaling-stroke"/>';
 $input-radio-unchecked-mask: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.2 19.2">#{$input-radio-outline}</svg>');
@@ -13,6 +14,21 @@ $task-progress-mask: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/
 $task-cancelled-mask: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.2 19.2">#{$input-checkbox-outline}<path d="M5.8 9.6h7.6" fill="none" stroke="black" stroke-width="#{$input-control-stroke-width}" vector-effect="non-scaling-stroke" stroke-linecap="round"/></svg>');
 @function task-export-marker-mask($code) {
     @return url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.2 19.2">#{$input-checkbox-outline}<text x="9.6" y="9.6" text-anchor="middle" dominant-baseline="central" font-family="system-ui,sans-serif" font-size="14.4" font-weight="500">%26%23x#{$code};</text></svg>');
+}
+@mixin tag-icon {
+    content: "";
+    pointer-events: none;
+    display: inline-block;
+    flex-shrink: 0;
+    width: 0.85em;
+    height: 0.85em;
+    margin-inline-end: 0.3em;
+    vertical-align: -0.05em;
+    background-color: currentColor;
+    mask-image: $tag-mask;
+    mask-position: center;
+    mask-size: contain;
+    mask-repeat: no-repeat;
 }
 // 辅助：根据 $important 决定是否输出 !important
 @mixin _maybe-important($prop, $value, $important: false) {

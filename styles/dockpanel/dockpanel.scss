@@ -37,16 +37,16 @@
 }
 .layout__dockl,
 .layout__dockr {
-    transition: width 0.1s var(--neo-ease-in-out-1);
+    transition: width 0.15s var(--neo-ease-out-5);
     & > .fn__flex {
-        transition: display 0.1s;
+        transition: display 0.15s;
         transition-behavior: allow-discrete;
     }
 }
 .layout__dockb {
-    transition: height 0.1s var(--neo-ease-in-out-1);
+    transition: height 0.15s var(--neo-ease-out-5);
     & > .fn__flex {
-        transition: display 0.1s;
+        transition: display 0.15s;
         transition-behavior: allow-discrete;
     }
 }

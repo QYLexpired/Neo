@@ -16,6 +16,10 @@ body:not(.body--toolbar-hide) [data-type="wnd"] > .fn__flex:first-child {
             margin: 6px 3px !important;
             background-color: transparent;
             min-height: 30px;
+            // 思源关闭页签时先设置 max-width，直接隐藏以立即补位。
+            &[style*="max-width: 0px"] {
+                display: none;
+            }
             .item__graphic {
                 padding: 4px 0 4px 8px;
             }
@@ -28,8 +32,11 @@ body:not(.body--toolbar-hide) [data-type="wnd"] > .fn__flex:first-child {
             .item__close {
                 transition: var(--b3-transition);
                 opacity: 0;
+                pointer-events: none;
+                overflow: clip;
                 svg {
                     color: var(--b3-theme-on-surface);
+                    transform: translateX(11px);
                 }
                 &:hover {
                     svg {
@@ -56,6 +63,10 @@ body:not(.body--toolbar-hide) [data-type="wnd"] > .fn__flex:first-child {
                 }
                 .item__close {
                     opacity: 1;
+                    pointer-events: auto;
+                    svg {
+                        transform: translateX(0px);
+                    }
                 }
             }
             &.item--focus {

@@ -3,7 +3,7 @@
     --mobile-bottom-bar-offset: 0;
 }
 #mobileBottomBar {
-    border-radius: 32px;
+    @include superellipse(capsule);
     justify-self: center;
     border: unset;
     box-shadow: var(--neo-main-shadow);

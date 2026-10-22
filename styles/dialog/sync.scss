@@ -8,28 +8,6 @@
         backdrop-filter: blur(2px);
     }
 }
-.sync-checkout__progress {
-    appearance: none;
-    display: block;
-    height: 8px;
-    border: none;
-    border-radius: 6px;
-    overflow: hidden;
-    background-color: var(--b3-list-hover);
-    accent-color: var(--b3-theme-accent);
-    &::-webkit-progress-bar {
-        border-radius: inherit;
-        background-color: var(--b3-list-hover);
-    }
-    &::-webkit-progress-value {
-        border-radius: inherit;
-        background-color: var(--b3-theme-accent);
-    }
-    &::-moz-progress-bar {
-        border-radius: inherit;
-        background-color: var(--b3-theme-accent);
-    }
-}
 .sync-checkout__notice {
     color: var(--b3-theme-on-surface);
 }

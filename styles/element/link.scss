@@ -1,33 +1,69 @@
 @use "../utils" as *;
-@mixin neo-link-common {
+$link-mask: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg>');
+$link-asset-mask: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="6" height="18.5" rx="1.5"/><path d="M8 4.5A1.5 1.5 0 0 1 9.5 3h3A1.5 1.5 0 0 1 14 4.5V20a1.5 1.5 0 0 1-1.5 1.5h-3A1.5 1.5 0 0 1 8 20"/><rect x="14" y="3.5" width="5" height="18.5" rx="1.5" transform="rotate(-10 14 3.5)"/></svg>');
+$link-siyuan-mask: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M7.75 3.4 12 7.65v11.5l-4.25-4.25ZM16.25 3.4 22 9.15v11.5l-5.75-5.75Z" fill="black" stroke="none"/><path d="M2 9.15 7.75 3.4 12 7.65 16.25 3.4 22 9.15v11.5l-5.75-5.75L12 19.15l-4.25-4.25L2 20.65Z"/><path d="M7.75 3.4v11.5M12 7.65v11.5M16.25 3.4v11.5"/></svg>');
+$link-local-mask: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="2.6" y="2.6" width="18.8" height="13.2" rx="2.35"/><path d="M12 15.8v5.6M6.4 21.4h11.2"/></svg>');
+@mixin link-common {
     color: inherit;
+    border-radius: 0;
+    opacity: 1;
     transition: var(--b3-transition);
     text-decoration: none;
-    border-bottom: 1px solid var(--b3-theme-accent);
-    padding-bottom: 1.5px;
+    border-bottom: none;
+    background-image: unset;
+    padding: 0 0.2em;
+    margin: 0 0.1em;
+    @include superellipse-use(4px);
+    background-color: oklch(from currentColor l c h / 0.05);
+    outline: 0.5px solid oklch(from currentColor l c h / 0.15);
+    outline-offset: -0.5px;
+    .neo-mode-dark & {
+        background-color: oklch(from currentColor l c h / 0.08);
+        outline-color: oklch(from currentColor l c h / 0.18);
+    }
     &:hover {
-        color: var(--b3-theme-accent);
+        color: inherit;
         text-decoration: none;
+        @include superellipse-use(4px);
+        background-color: oklch(from currentColor l c h / 0.1);
+        outline-color: oklch(from currentColor l c h / 0.2);
+        .neo-mode-dark & {
+            background-color: oklch(from currentColor l c h / 0.15);
+            outline-color: oklch(from currentColor l c h / 0.25);
+        }
+    }
+    &::before {
+        content: "";
+        pointer-events: none;
+        display: inline-block;
+        width: 0.85em;
+        height: 0.85em;
+        margin-inline-end: 0.3em;
+        vertical-align: -0.05em;
+        background-color: currentColor;
+        mask-image: $link-mask;
+        mask-position: center;
+        mask-size: contain;
+        mask-repeat: no-repeat;
+    }
+}
+@mixin link-types($attribute: data-href) {
+    &[#{$attribute}^="assets/"]::before,
+    &[#{$attribute}^="./assets/"]::before,
+    &[#{$attribute}^="/assets/"]::before {
+        mask-image: $link-asset-mask;
+    }
+    &[#{$attribute}^="siyuan://" i]::before {
+        mask-image: $link-siyuan-mask;
+    }
+    &[#{$attribute}^="file://" i]::before {
+        mask-image: $link-local-mask;
     }
 }
 .protyle-wysiwyg [data-node-id] span[data-type~=a],
 .mindmap-view__content span[data-type~=a],
-.b3-typography a,
+.b3-typography span[data-type~=a],
 .b3-list-item[data-treetype=outline] > .b3-list-item__text span[data-type~=a] {
-    @include neo-link-common;
-}
-a {
-    color: inherit;
-    transition: var(--b3-transition);
-    text-decoration: underline;
-    text-decoration-color: var(--b3-theme-accent);
-    &:hover {
-        color: var(--b3-theme-accent);
-    }
-    &.fn__a:hover {
-        color: var(--b3-theme-accent);
-    }
-    &.b3-button {
-        text-decoration: none;
-    }
+    @include link-common;
+    @include link-types;
 }

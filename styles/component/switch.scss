@@ -7,7 +7,7 @@ $switch-width: 36px;
 .b3-switch {
     width: $switch-width;
     height: calc($switch-thumb-height + $switch-border-width * 2);
-    border-radius: 24px;
+    @include superellipse(capsule);
     border: none;
     background-color: oklch(from var(--b3-theme-on-background) 0.65 0.01 h / 0.4);
     box-shadow: 0 4px 8px -3px rgba(0, 0, 0, 0.15) inset;
@@ -18,7 +18,7 @@ $switch-width: 36px;
     &::after {
         width: $switch-thumb-width !important;
         height: $switch-thumb-height !important;
-        border-radius: 24px;
+        @include superellipse(capsule);
         top: 50%;
         left: 0;
         transform: translateX(2px) translateY(-50%);
@@ -30,7 +30,7 @@ $switch-width: 36px;
         &::after {
             width: $switch-thumb-width;
             height: $switch-thumb-height;
-            border-radius: 24px;
+            @include superellipse(capsule);
             top: 50%;
             left: 0;
             transform: translateX(13px) translateY(-50%);

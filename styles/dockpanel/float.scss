@@ -6,7 +6,7 @@
         box-shadow: unset;
         border-radius: unset;
         background-color: transparent;
-        transition: transform 0.2s;
+        transition: transform 150ms var(--neo-ease-out-5);
         opacity: 1 !important; // 覆盖内联
         margin: calc(var(--_layout-gap) / -2);
         & > .fn__flex {

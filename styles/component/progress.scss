@@ -1,0 +1,27 @@
+@mixin progress-track {
+    display: block;
+    height: 8px;
+    border: none;
+    border-radius: 6px;
+    overflow: hidden;
+    background-color: var(--b3-list-hover);
+}
+@mixin progress-fill {
+    border-radius: inherit;
+    background-color: var(--b3-theme-accent);
+}
+progress {
+    @include progress-track;
+    appearance: none;
+    accent-color: var(--b3-theme-accent);
+    &::-webkit-progress-bar {
+        border-radius: inherit;
+        background-color: var(--b3-list-hover);
+    }
+    &::-webkit-progress-value {
+        @include progress-fill;
+    }
+    &::-moz-progress-bar {
+        @include progress-fill;
+    }
+}

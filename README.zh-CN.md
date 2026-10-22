@@ -3,12 +3,13 @@
 - Neo主题大量参考了[Asri主题](https://github.com/mustakshif/Asri)的设计和创意，非常感谢[mustakshif](https://github.com/mustakshif)，没有你超强的审美、技术力和让人惊叹的创意，就不会有Neo的出现
 ## 更新日志
 完整更新历史可查看[CHANGELOG](https://github.com/QYLexpired/Neo/blob/main/CHANGELOG.md)
-### <span style="font-family: neo;">1.7.5</span>
-- 优化了一些细节
-### <span style="font-family: neo;">1.7.4</span>
-- 重做任务列表样式
-- 重做单选控件样式
-- 修复任务列表自定义状态在导出时样式不生效的问题
+### <span style="font-family: neo;">1.7.6</span>
+- 为详情组件增加展开/收起动效
+- 重做全部链接样式
+- 重做行内备注样式
+- 重做标签样式
+- 重做数据库标题样式
+- 移除页签关闭动效
 ## 说明
 - 主题的部分样式和功能无法仅通过CSS实现，因此必须安装并启用主题的配套插件：[Neo+](https://github.com/QYLexpired/Neo-Plus)
 - Neo主题和Neo+插件均不会对文档数据进行任何修改，可随时启用或停用，不存在迁移负担

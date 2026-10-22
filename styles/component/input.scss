@@ -147,7 +147,7 @@ $slider-track-height: 6px;
         -webkit-appearance: none;
         height: $slider-thumb-height;
         width: $slider-thumb-width;
-        border-radius: 24px;
+        @include superellipse(capsule);
         background: #ffffff;
         box-shadow: var(--neo-main-shadow);
         transition: 0.8s var(--neo-ease-spring-4);

@@ -1,4 +1,5 @@
 @use "../utils" as *;
+@use "../component/progress" as *;
 .b3-dialog__scrim {
     background-color: transparent !important;
     backdrop-filter: none;
@@ -70,6 +71,12 @@
 }
 .b3-dialog__loading {
     @include dialog-container-common;
+}
+.b3-dialog__progress {
+    @include progress-track;
+}
+.b3-dialog__progressbar {
+    @include progress-fill;
 }
 .b3-dialog__close {
     display: none;

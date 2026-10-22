@@ -2,13 +2,39 @@
 @use "../tooltip" as *;
 @use "../component" as *;
 @use "../menu/menu" as *;
+@use "../element/link" as link;
 .av__cell,
 .av__row,
 .av__row--footer {
     border-color: var(--b3-border-color);
 }
+$database-title-mask: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5V19A9 3 0 0 0 21 19V5"/><path d="M3 12A9 3 0 0 0 21 12"/></svg>');
 .av__title {
-    color: var(--b3-theme-accent);
+    color: var(--b3-theme-on-surface);
+    padding-inline-start: 2.2em;
+    position: relative;
+    &::before {
+        content: "";
+        pointer-events: none;
+        position: absolute;
+        inset-inline-start: 0.8em;
+        top: 50%;
+        width: 1em;
+        height: 1em;
+        background-color: currentColor;
+        mask-image: $database-title-mask;
+        mask-position: center;
+        mask-size: contain;
+        mask-repeat: no-repeat;
+        transition: var(--b3-transition);
+        transform: translateY(-50%);
+    }
+    &:empty {
+        color: var(--b3-empty-color);
+        &::before {
+            background-color: var(--b3-empty-color);
+        }
+    }
 }
 .av__cell--header {
     border-color: transparent;
@@ -29,6 +55,14 @@
     }
 }
 .av__cell--active {
+    background-color: var(--b3-list-active);
+}
+.av__row--hl:not(.av__row--header) .av__cell,
+.av__row--hl:not(.av__row--header) .av__firstcol {
+    background-color: var(--b3-list-hover);
+}
+.av__row--select:not(.av__row--header) .av__cell,
+.av__row--select:not(.av__row--header) .av__firstcol {
     background-color: var(--b3-list-active);
 }
 .av__group-icon {
@@ -70,14 +104,6 @@
     }
 }
 // cell
-.av__celltext--url,
-.av__celltext--ref {
-    border-bottom: 1px solid var(--b3-theme-accent);
-    transition: var(--b3-transition);
-    &:hover {
-        color: var(--b3-theme-accent);
-    }
-}
 .av__cell .b3-chip,
 .av__panel .b3-menu__item .b3-chip,
 .av__panel .b3-chips .b3-chip,
@@ -89,18 +115,68 @@
     line-height: 16px;
     padding: 2px 6px;
 }
-.av__celltext--url.b3-chip {
+$database-email-mask: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7"/><rect x="2" y="4" width="20" height="16" rx="2"/></svg>');
+$database-phone-mask: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384"/></svg>');
+.av__celltext--url {
+    @include superellipse(4px);
+    line-height: 16px;
+    padding: 2px 6px;
+    border: unset;
     color: var(--b3-theme-on-surface);
     background-color: transparent;
-    outline: 0.5px solid oklch(from currentColor l c h / 0.32);
+    outline: 0.5px solid oklch(from currentColor l c h / 0.25) !important;
     outline-offset: -0.5px;
     transition: var(--b3-transition);
     line-height: 18px;
     padding: 2px 6px;
     &:hover {
-        color: var(--b3-theme-accent);
-        background-color: oklch(from currentColor l c h / 0.1);
-        outline-color: oklch(from currentColor l c h / 0.18);
+        color: var(--b3-theme-on-surface);
+        background-color: oklch(from currentColor l c h / 0.05);
+        outline-color: oklch(from currentColor l c h / 0.25) !important;
+        .neo-mode-dark & {
+            background-color: oklch(from currentColor l c h / 0.1);
+        }
+    }
+    &:empty {
+        display: none;
+    }
+}
+span.av__celltext--url:not(:empty) {
+    &::before {
+        content: "";
+        pointer-events: none;
+        display: inline-block;
+        width: 0.85em;
+        height: 0.85em;
+        margin-inline-end: 0.3em;
+        vertical-align: -0.05em;
+        background-color: currentColor;
+        mask-image: link.$link-mask;
+        mask-position: center;
+        mask-size: contain;
+        mask-repeat: no-repeat;
+    }
+    &[data-href^="assets/"]::before,
+    &[data-href^="./assets/"]::before,
+    &[data-href^="/assets/"]::before,
+    &[data-url^="assets/"]::before,
+    &[data-url^="./assets/"]::before,
+    &[data-url^="/assets/"]::before {
+        mask-image: link.$link-asset-mask;
+    }
+    &[data-href^="siyuan://" i]::before,
+    &[data-url^="siyuan://" i]::before {
+        mask-image: link.$link-siyuan-mask;
+    }
+    &[data-href^="file://" i]::before,
+    &[data-url^="file://" i]::before {
+        mask-image: link.$link-local-mask;
+    }
+    &[data-type="email"]::before {
+        mask-image: $database-email-mask;
+    }
+    &[data-type="phone"]::before {
+        mask-image: $database-phone-mask;
     }
 }
 .av__layout-item {
@@ -234,6 +310,14 @@
         transition: var(--b3-transition);
         background-color: transparent;
     }
+}
+// 冻结列拖拽
+.av__freeze-drag:hover::after,
+.av__freeze-drag:active::after {
+    background-color: var(--_resize-hl);
+}
+.av__freeze-preview {
+    box-shadow: inset -2px 0 0 var(--_resize-hl) !important;
 }
 .av__width-tip {
     @include tooltip-common;

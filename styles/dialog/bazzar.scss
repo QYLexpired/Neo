@@ -217,6 +217,9 @@
         color: var(--b3-theme-warning);
     }
 }
+#configBazaarReadme .item__meta-funding {
+    display: inline;
+}
 .config-bazaar__rating-summary {
     color: var(--b3-theme-on-surface);
     font-weight: normal;

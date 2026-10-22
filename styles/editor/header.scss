@@ -6,7 +6,12 @@
     }
 }
 .protyle-background .b3-chips__doctag .b3-chip {
+    align-self: flex-start;
     @include chip-tag;
+    .b3-chip__close {
+        // 与 chip-removable 的 16px 负边距保持一致，避免锁定时宽度变化。
+        padding-right: 2px;
+    }
 }
 .protyle-background--enable .protyle-background__icon {
     transition: var(--_emoji-transiton);
@@ -45,6 +50,15 @@
         height: 16px;
         width: 16px;
         margin: 0 2px 0 0;
+    }
+}
+.protyle-attr--av {
+    transition: var(--b3-transition);
+    &:hover {
+        svg,
+        span {
+            color: var(--b3-theme-accent);
+        }
     }
 }
 .layout__empty {
