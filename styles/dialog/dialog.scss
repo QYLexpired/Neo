@@ -75,6 +75,7 @@
     display: none;
 }
 .b3-dialog__header {
+    line-height: 28px; // 与按钮高度一致
     text-align: center;
     border: unset;
     & > .fn__flex {

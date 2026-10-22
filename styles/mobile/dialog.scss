@@ -31,3 +31,21 @@
         }
     }
 }
+// 移动端底部对话框
+.neo-mobile .mobile-bottom-sheet-dialog {
+    &.b3-dialog--open .b3-dialog__scrim {
+        .neo-frostedglass & {
+            z-index: -2;
+            backdrop-filter: blur(2px);
+        }
+    }
+    .b3-dialog__container.mobile-bottom-sheet {
+        .neo-frostedglass & {
+            background-color: transparent;
+        }
+        &::before {
+            @include frostedglass-before;
+            @include frostedglass-dialog;
+        }
+    }
+}

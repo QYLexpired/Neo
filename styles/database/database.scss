@@ -58,13 +58,13 @@
     }
     @at-root {
         .av__views--mobile > .av__mobile-view {
-            padding: 0 0.25em 0 0.5em;
-            min-height: 24px;
+            overflow: visible;
+            gap: 12px;
             .fn__ellipsis {
-                min-height: 24px;
-                line-height: 24px;
-                border-right: 1px solid var(--b3-border-color-trans);
-                padding-right: 0.25em;
+                @include superellipse-use(8px);
+                padding: 6px 12px;
+                text-align: center;
+                box-shadow: var(--neo-main-shadow);
             }
         }
     }
