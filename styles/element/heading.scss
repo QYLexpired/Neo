@@ -8,7 +8,7 @@
     @for $i from 1 through 6 {
         h#{$i},
         .h#{$i} {
-            @include superellipse(10px);
+            @include superellipse-use($radius-block);
             color: var(--_heading-color);
             margin-top: 1.2em;
             line-height: 1.5;

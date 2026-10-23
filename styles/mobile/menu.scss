@@ -43,7 +43,7 @@
     }
     &.b3-menu--sheet {
         background-color: var(--b3-menu-background);
-        @include superellipse-use(22px 22px 0 0);
+        @include superellipse-use($radius-box $radius-box 0 0);
         box-shadow: var(--b3-menu-shadow);
         margin: 0 2px -2px 2px;
         transition: 0.15s var(--neo-ease-out-3);
@@ -89,7 +89,7 @@
         background-color: transparent;
     }
     .b3-menu__item {
-        @include superellipse-use(7px, $important: true);
+        @include superellipse-use($radius-item, $important: true);
         background-color: transparent;
         border: unset;
     }
@@ -107,7 +107,7 @@
 .b3-menu__group-items {
     background-color: oklch(from var(--b3-theme-surface) l c h / 0.7);
     padding: 10px 0;
-    @include superellipse-use(14px);
+    @include superellipse-use($radius-card);
     & .b3-menu__item {
         background-color: transparent;
         border: none !important;

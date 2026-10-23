@@ -6,7 +6,7 @@
     outline-color: transparent;
 }
 .counter {
-    @include superellipse(7px);
+    @include superellipse-use($radius-chip);
     &--bg,
     .block__icons & {
         background-color: var(--b3-list-hover);
@@ -23,7 +23,7 @@
     box-shadow: unset;
     background-color: transparent;
     transition: var(--b3-transition);
-    @include superellipse(10px);
+    @include superellipse-use($radius-card);
     &:hover {
         background-color: var(--b3-list-hover);
     }

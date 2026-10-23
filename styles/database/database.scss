@@ -49,7 +49,6 @@ $database-title-mask: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000
 .av__cell--select {
     background-color: transparent !important;
     &::after {
-        @include superellipse-use(2px);
         border-radius: 0;
         outline: 1px solid oklch(from var(--b3-theme-accent) l c h / 0.6);
         outline-offset: -1px;
@@ -91,7 +90,7 @@ $database-title-mask: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000
 }
 .av__new,
 .av__views--mobile > .av__mobile-view {
-    @include superellipse-use(6px);
+    @include superellipse-use($radius-item);
     overflow: hidden;
     .b3-button {
         @include button-solid;
@@ -102,7 +101,7 @@ $database-title-mask: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000
             overflow: visible;
             gap: 12px;
             .fn__ellipsis {
-                @include superellipse-use(8px);
+                @include superellipse-use($radius-item);
                 padding: 6px 12px;
                 text-align: center;
                 box-shadow: var(--neo-main-shadow);
@@ -115,7 +114,7 @@ $database-title-mask: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000
     border-bottom: unset;
     padding: 0 0.2em;
     margin: 0 0.1em;
-    @include superellipse-use(4px);
+    @include superellipse-use($radius-chip);
     background-color: oklch(from currentColor l c h / 0.05);
     outline: 0.5px solid oklch(from currentColor l c h / 0.15);
     outline-offset: -0.5px;
@@ -139,14 +138,14 @@ $database-title-mask: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000
 .av__group-name .b3-chip {
     outline: 0.5px solid oklch(from currentColor l c h / 0.15);
     outline-offset: -0.5px;
-    @include superellipse(4px);
+    @include superellipse-use($radius-chip);
     line-height: 16px;
     padding: 2px 6px;
 }
 $database-email-mask: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7"/><rect x="2" y="4" width="20" height="16" rx="2"/></svg>');
 $database-phone-mask: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384"/></svg>');
 .av__celltext--url {
-    @include superellipse(4px);
+    @include superellipse-use($radius-chip);
     line-height: 16px;
     padding: 2px 6px;
     border: unset;
@@ -208,7 +207,7 @@ span.av__celltext--url:not(:empty) {
     }
 }
 .av__layout-item {
-    @include superellipse(10px);
+    @include superellipse-use($radius-item);
     border: unset;
     outline: 1px solid var(--b3-border-color-trans);
     outline-offset: -1px;
@@ -222,7 +221,7 @@ span.av__celltext--url:not(:empty) {
 .av__cell [data-type=block-more] {
     background-color: var(--b3-theme-background);
     color: var(--b3-theme-on-surface);
-    @include superellipse(5px);
+    @include superellipse-use($radius-chip);
     line-height: 16px;
     &:hover {
         color: var(--b3-theme-on-background);
@@ -251,12 +250,12 @@ span.av__celltext--url:not(:empty) {
         background-color: unset;
         outline: 1px solid var(--b3-border-color-trans);
         outline-offset: -1px;
-        @include superellipse-use(8px);
+        @include superellipse-use($radius-card);
     }
 }
 // 自动化
 .av__panel .av__automation-chips .b3-chip {
-    @include superellipse-use(7px);
+    @include superellipse-use($radius-chip);
     @include chip-removable;
     outline: none;
 }
@@ -280,7 +279,7 @@ span.av__celltext--url:not(:empty) {
     background-color: unset;
     outline: 1px solid var(--b3-border-color-trans);
     outline-offset: -1px;
-    @include superellipse-use(8px);
+    @include superellipse-use($radius-card);
 }
 // 复选框
 .av__cell-check .av__checkbox,
@@ -403,13 +402,13 @@ span.av__celltext--url:not(:empty) {
 // 条件颜色
 .av__panel .av__conditional-colors {
     .av__conditional-rule {
-        @include superellipse-use(8px);
+        @include superellipse-use($radius-card);
         background-color: transparent;
         outline: 1px solid var(--b3-border-color-trans);
         outline-offset: -1px;
     }
     .av__conditional-swatch {
-        border-radius: 50%;
+        @include superellipse-use($circle);
         outline: .5px solid oklch(from currentColor l c h / 0.18);
         outline-offset: -0.5px;
     }

@@ -1,7 +1,7 @@
 @use "../utils" as *;
 @use "button" as *;
 @mixin input-common($focus: focus) {
-    @include superellipse-use(7px);
+    @include superellipse-use($radius-item);
     height: 28px;
     min-height: 28px;
     line-height: 20px;
@@ -52,7 +52,7 @@ body.body--linux .b3-select { // body用来覆盖思源样式
         border: none;
         padding: 8px;
         background-color: var(--b3-theme-background);
-        @include superellipse-use(12px);
+        @include superellipse-use($radius-card);
         @include frostedglass-menu;
         box-shadow: var(--b3-menu-shadow);
         .neo-frostedglass-luminous & {
@@ -60,7 +60,7 @@ body.body--linux .b3-select { // body用来覆盖思源样式
         }
     }
     option {
-        @include superellipse(7px);
+        @include superellipse-use($radius-item);
         display: flex;
         align-items: center;
         padding: 0 8px;
@@ -91,7 +91,7 @@ body.body--linux .b3-select { // body用来覆盖思源样式
         background-color: var(--neo-input-background);
         box-shadow: unset;
         border: unset;
-        @include superellipse(7px);
+        @include superellipse-use($radius-item);
         &:hover {
             background-color: var(--neo-input-background);
             box-shadow: unset;
@@ -119,7 +119,7 @@ body.body--linux .b3-select { // body用来覆盖思源样式
         background-color: var(--b3-theme-background) !important;
     }
     .av__mask & {
-        @include superellipse-use(2px);
+        @include superellipse-use($radius-chip);
         background-color: var(--b3-theme-background) !important;
     }
     .neo-mobile .toolbar--dark & {
@@ -139,7 +139,7 @@ $slider-track-height: 6px;
     -webkit-appearance: none;
     &::-webkit-slider-runnable-track {
         height: $slider-track-height;
-        border-radius: 6px;
+        @include superellipse-use($capsule);
         background-color: var(--neo-input-background);
         -webkit-appearance: none;
     }
@@ -147,7 +147,7 @@ $slider-track-height: 6px;
         -webkit-appearance: none;
         height: $slider-thumb-height;
         width: $slider-thumb-width;
-        @include superellipse(capsule);
+        @include superellipse-use($capsule);
         background: #ffffff;
         box-shadow: var(--neo-main-shadow);
         transition: 0.8s var(--neo-ease-spring-4);
@@ -238,7 +238,7 @@ input[type="color"] {
     min-height: unset !important;
     min-width: unset !important;
     flex: unset !important;
-    border-radius: 50%;
+    @include superellipse-use($circle);
     corner-shape: unset !important;
     overflow: hidden;
     cursor: pointer;
@@ -247,7 +247,7 @@ input[type="color"] {
     }
     &::-webkit-color-swatch {
         border: none;
-        border-radius: 50%;
+        @include superellipse-use($circle);
     }
     &.b3-text-field {
         &:hover,

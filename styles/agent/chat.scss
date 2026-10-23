@@ -7,7 +7,7 @@
     box-shadow: var(--neo-main-shadow);
     margin: 0 16px 16px 16px;
     caret-color: currentColor;
-    @include superellipse-use(12px);
+    @include superellipse-use($radius-card);
     padding: 0;
     .protyle-wysiwyg {
         padding: 4px 8px !important; 
@@ -22,7 +22,7 @@
 // 对话气泡
 .agent-chat__msg--user .agent-chat__body {
     background-color: var(--b3-list-hover);
-    @include superellipse-use(12px);
+    @include superellipse-use($radius-card);
     padding: 0;
     &.protyle-wysiwyg {
         padding: 4px 12px !important;
@@ -39,7 +39,7 @@
     outline: 0.5px solid var(--b3-border-color-trans);
     outline-offset: -0.5px;
     border: unset;
-    @include superellipse-use(12px);
+    @include superellipse-use($radius-card);
 }
 .agent-chat__question-item,
 .agent-chat__question-submit,
@@ -60,7 +60,7 @@
     }
 }
 .agent-chat__question-option {
-    @include superellipse(7px);
+    @include superellipse-use($radius-item);
     &:hover,
     &:focus,
     &:focus-visible {

@@ -2,7 +2,7 @@
 .agent-chat__composer-host span[data-type~=text][custom-agent-skill=true],
 .agent-chat__msg--user span[data-type~=text][custom-agent-skill=true] {
     border: unset;
-    @include superellipse(capsule);
+    @include superellipse-use($capsule);
     padding: 2px 8px;
     color: var(--b3-theme-accent);
     background-color: oklch(from currentColor l c h / 0.12);

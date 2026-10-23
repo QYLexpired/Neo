@@ -1,7 +1,7 @@
 @use "../utils" as *;
 .av[data-av-type="list"] {
     .av__row[data-id] {
-        @include superellipse(8px);
+        @include superellipse-use($radius-item);
         &:hover {
             background-color: var(--b3-av-item-background, var(--b3-list-hover));
         }

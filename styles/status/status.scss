@@ -7,7 +7,7 @@
         position: absolute;
         bottom: calc(anchor(--anchor-layout-center bottom) + calc(var(--_layout-gap) * var(--_status-position-factor, 1.5)));
         right: calc(anchor(--anchor-layout-center right) + calc(var(--_layout-gap) * var(--_status-position-factor, 1.5)));
-        @include superellipse(18px);
+        @include superellipse-use($capsule);
         background-color: var(--b3-menu-background);
         @include frostedglass-menu;
         box-shadow: var(--neo-main-shadow);

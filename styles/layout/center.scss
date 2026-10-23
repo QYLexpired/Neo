@@ -5,7 +5,7 @@ body:not(.body--window) {
         .neo-haswnd {
             padding: calc(var(--_layout-gap) / 2);
             & > [data-type="wnd"] {
-                @include superellipse(10px);
+                @include superellipse($radius-layout);
                 box-shadow: var(--neo-layout-shadow-blur);
                 position: relative;
                 &::before {
@@ -37,7 +37,7 @@ body:not(.body--window) {
                     display: none;
                 }
                 & > .layout-tab-container {
-                    @include superellipse(10px);
+                    @include superellipse($radius-layout);
                     box-shadow: var(--neo-layout-shadow-blur);
                     position: relative;
                     &::before {

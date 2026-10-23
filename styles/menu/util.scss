@@ -46,7 +46,7 @@
     box-shadow: unset;
     outline: 0.5px solid oklch(from currentColor l c h / 0.18);
     outline-offset: -0.5px;
-    border-radius: 50%;
+    @include superellipse-use($circle);
     transition: var(--_emoji-transiton);
     &:hover {
         box-shadow: unset !important;

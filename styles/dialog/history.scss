@@ -63,7 +63,7 @@
     100% { opacity: 1; }
 }
 .history__compare-panel [data-history-diff~=modified] {
-    @include superellipse-use(10px, $important: true);
+    @include superellipse-use($radius-block, $important: true);
     box-shadow: none;
     background-color: oklch(from var(--b3-theme-accent) l c h / 0.2) !important;
     animation: neo-diff-focus 0.7s ease-in-out 3;

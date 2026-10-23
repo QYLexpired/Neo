@@ -9,7 +9,7 @@
         min-height: 0;
         min-width: 0;
         & > [data-type="wnd"] {
-            @include superellipse(10px);
+            @include superellipse($radius-layout);
             background-color: var(--b3-theme-background);
             box-shadow: var(--neo-layout-shadow-blur);
             position: relative;

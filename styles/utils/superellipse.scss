@@ -1,5 +1,6 @@
 // reference: https://github.com/mustakshif/Asri
 @use "sass:list";
+@use "variables/radius" as *;
 $k: 1.4;
 @mixin _border-radius($value, $important: false) {
     @if $important {
@@ -9,21 +10,19 @@ $k: 1.4;
     }
 }
 @mixin superellipse($r: (), $important: false) {
-    @if $r == capsule {
-        @include _border-radius(32px, $important);
+    @if $r == $capsule or $r == $circle {
+        @include _border-radius($r, $important);
         @if $important {
             corner-shape: unset !important;
         } @else {
             corner-shape: unset;
         }
     } @else {
-        $out-plus: ();
         $out-mul: ();
         @each $i in $r {
-            $out-plus: list.append($out-plus, $i + 1px, space);
             $out-mul: list.append($out-mul, $i * $k, space);
         }
-        @include _border-radius($out-plus, $important);
+        @include _border-radius($r, $important);
     //    superellipse尚不稳定
     //    @supports (corner-shape: superellipse(1.4)) {
     //        corner-shape: superellipse($k);
@@ -32,16 +31,14 @@ $k: 1.4;
     }
 }
 @mixin superellipse-use($r: (), $important: false) {
-    @if $r == capsule {
-        @include superellipse(capsule, $important);
+    @if $r == $capsule or $r == $circle {
+        @include superellipse($r, $important);
     } @else {
-        $out-plus: ();
         $out-mul: ();
         @each $i in $r {
-            $out-plus: list.append($out-plus, $i + 1px, space);
             $out-mul: list.append($out-mul, $i * $k, space);
         }
-        @include _border-radius($out-plus, $important);
+        @include _border-radius($r, $important);
         @supports (corner-shape: superellipse(1.4)) {
             corner-shape: superellipse($k);
             @include _border-radius($out-mul, $important);

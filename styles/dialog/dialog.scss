@@ -42,7 +42,7 @@
     border: unset;
     box-shadow: var(--b3-dialog-shadow);
     background-color: var(--b3-theme-background);
-    @include superellipse-use(18px);
+    @include superellipse-use($radius-box);
     .neo-frostedglass-global & {
         background-color: transparent;
         box-shadow: var(--b3-dialog-shadow-blur);

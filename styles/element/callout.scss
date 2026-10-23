@@ -24,7 +24,7 @@
     outline-offset: -0.5px;
     padding: 16px 16px 10px 16px;
     margin: 0.4em 0;
-    @include superellipse-use(10px);
+    @include superellipse-use($radius-block);
     @at-root {
         .b3-typography .callout-title,
         .protyle-wysiwyg .callout-title,

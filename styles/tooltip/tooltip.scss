@@ -2,7 +2,7 @@
 @mixin tooltip-common($luminous: true) {
     color: var(--b3-theme-on-background);
     background-color: var(--b3-menu-background);
-    @include superellipse-use(8px);
+    @include superellipse-use($radius-item);
     @include frostedglass-tooltip;
     box-shadow: var(--neo-main-shadow);
     line-height: 16px;

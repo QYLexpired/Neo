@@ -27,7 +27,7 @@
 }
 .config__panel .config__side,
 .config__panel .b3-tab-bar {
-    @include superellipse-use(14px);
+    @include superellipse-use($radius-card);
     margin: var(--_sidebar-gap);
     margin-right: 0;
     padding: var(--_sidebar-gap) 0;
@@ -35,7 +35,7 @@
     background-color: transparent !important; // 覆盖内联
     overflow-y: auto;
     .b3-list-item {
-        @include superellipse-use(7px);
+        @include superellipse-use($radius-item);
         line-height: 26px;
         padding: 0 4px; // default
         margin: 4px 8px;
@@ -68,7 +68,7 @@
     background-color: transparent;
 }
 .config-group {
-    @include superellipse-use(16px);
+    @include superellipse-use($radius-card);
     margin: 24px;
 }
 .config-items {
@@ -119,7 +119,7 @@
             left: 12px;
             top: 12px;
             box-shadow: var(--neo-main-shadow);
-            border-radius: 50%;
+            @include superellipse-use($circle);
             width: 32px;
             height: 32px;
             justify-content: center;

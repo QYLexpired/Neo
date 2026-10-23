@@ -53,7 +53,7 @@
         }
     }
     .tabs-tab {
-        @include superellipse-use(8px);
+        @include superellipse-use($radius-item);
         margin: 6px 3px;
         background-color: transparent;
         min-height: 30px;
@@ -141,7 +141,7 @@
         display: none !important;
     }
     & > .tab-item {
-        @include superellipse-use(10px);
+        @include superellipse-use($radius-block);
         background-color: oklch(from var(--b3-theme-on-background) l c h / 0.05);
         padding: 6px 12px;
     }
@@ -161,7 +161,7 @@
 .protyle-wysiwyg > .tab-item > .tab-item-info {
     border-bottom: unset;
     .tab-item-title {
-        @include superellipse-use(8px);
+        @include superellipse-use($radius-item);
         font-size: 1em;
         padding: 2px 12px;
         box-shadow: var(--neo-main-shadow);
@@ -170,7 +170,7 @@
 // pdf导出
 .protyle-wysiwyg .tabs[data-node-id],
 .b3-typography .tabs[data-node-id] {
-    @include superellipse-use(10px);
+    @include superellipse-use($radius-block);
     border: 1px solid var(--b3-border-color-trans);
     padding: 4px 8px;
 }

@@ -4,7 +4,7 @@
 @mixin button-common {
     padding: 4px 16px;
     line-height: 20px;
-    @include superellipse-use(7px);
+    @include superellipse-use($radius-item);
     box-shadow: none;
     outline: none;
     transition: var(--b3-transition), transform 0.45s var(--neo-ease-spring-3);
@@ -147,7 +147,7 @@
     }
 }
 @mixin chip-tag {
-    @include superellipse(capsule);
+    @include superellipse-use($capsule);
     background-color: oklch(from currentColor l c h / 0.12);
     color: var(--neo-tag-color);
     outline: 0.5px solid oklch(from currentColor l c h / 0.25);
@@ -162,7 +162,7 @@
 }
 // chip
 .b3-chip {
-    @include superellipse-use(4px);
+    @include superellipse-use($radius-chip);
     color: var(--b3-theme-on-surface);
     background-color: oklch(from currentColor l c h / 0.08);
     transition: var(--b3-transition);
@@ -241,7 +241,7 @@
     outline: 1px solid var(--b3-border-color-trans) !important;
     & > span {
         height: inherit;
-        @include superellipse-use(7px 0 0 7px);
+        @include superellipse-use($radius-item 0 0 $radius-item);
         background-color: var(--b3-theme-accent);
     }
 }

@@ -8,7 +8,7 @@
         margin: 0 12px 3px 12px;
         width: calc(100% - 24px);
         justify-self: center;
-        @include superellipse(capsule);
+        @include superellipse-use($capsule);
         box-shadow: var(--neo-main-shadow);
         background-color: var(--b3-menu-background);
         @include frostedglass-menu;

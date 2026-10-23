@@ -8,7 +8,7 @@
     background-color: var(--b3-list-hover);
     border: unset;
     transition: var(--b3-transition);
-    @include superellipse(12px);
+    @include superellipse-use($radius-item);
     &:hover {
         background-color: var(--b3-list-active);
         border: unset;        

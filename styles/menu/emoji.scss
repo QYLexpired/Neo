@@ -14,7 +14,7 @@
     }
     .emojis__type {
         @include icon;
-        @include superellipse(12px);
+        @include superellipse-use($radius-item);
         transition: var(--_emoji-transiton);
         &:hover,
         &.emojis__type--current {
@@ -26,7 +26,7 @@
     }
     .emojis__item {
         @include icon;
-        @include superellipse(12px);
+        @include superellipse-use($radius-item);
         color: unset;
         transition: var(--_emoji-transiton);
         &:hover {
@@ -50,7 +50,7 @@
 .emojis__title {
     max-width: fit-content;
     padding: 4px 12px !important;
-    @include superellipse-use(7px);
+    @include superellipse-use($radius-item);
     background-color: var(--b3-menu-background);
     @include frostedglass($blur: t, $color: menu);
     outline: 0.5px solid var(--b3-border-color-trans);
@@ -82,7 +82,7 @@
 }
 .emojis__link-sample {
     border: unset;
-    @include superellipse(10px);
+    @include superellipse-use($radius-item);
 }
 .emojis .emoji__dynamic-item {
     &:hover {

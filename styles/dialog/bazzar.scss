@@ -88,7 +88,7 @@
         outline: 1px solid var(--b3-border-color-trans);
         outline-offset: -1px;
         background-color: transparent;
-        @include superellipse-use(18px);
+        @include superellipse-use($radius-card);
         transition: var(--b3-transition);
         &.b3-card--current,
         &:hover {
@@ -110,7 +110,7 @@
             margin-left: unset;
             margin-inline-start: 16px;
             img {
-                @include superellipse-use(14px);
+                @include superellipse-use($radius-card);
             }
         }
     }
@@ -122,7 +122,7 @@
     }
 }
 .config-bazaar__readme {
-    @include superellipse-use(18px);
+    @include superellipse-use($radius-box);
     overflow: hidden;
     .item__header {
         top: 12px;
@@ -132,7 +132,7 @@
         font-size: 16px;
         position: absolute;
         box-shadow: var(--neo-main-shadow);
-        border-radius: 50%;
+        @include superellipse-use($circle);
         width: 32px;
         height: 32px;
         justify-content: center;
@@ -161,7 +161,7 @@
         }
     }
     .item__side {
-        @include superellipse-use(18px 0 0 18px);
+        @include superellipse-use($radius-box 0 0 $radius-box);
         padding: 0;
         margin: 1px 0 1px 1px;
         background-color: oklch(from var(--b3-theme-surface) l c h / 0.7);
@@ -174,7 +174,7 @@
         }
         .item__img {
             margin: 8px auto;
-            @include superellipse-use(16px);
+            @include superellipse-use($radius-card);
         }
         .item__meta-title {
             color: var(--b3-theme-on-background);

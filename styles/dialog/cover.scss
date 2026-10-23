@@ -6,7 +6,7 @@
 .b3-cover__cards {
     padding-top: 0; 
     .b3-card {
-        @include superellipse-use(16px);
+        @include superellipse-use($radius-card);
         img {
             transition: 0.3s;
         }

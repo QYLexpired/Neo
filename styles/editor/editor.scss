@@ -12,7 +12,7 @@
     padding: 0 4px;
     max-width: max-content;
     transition: var(--b3-transition);
-    @include superellipse(18px);
+    @include superellipse-use($capsule);
     box-shadow: var(--neo-main-shadow);
     mix-blend-mode: luminosity;
     background-color: var(--b3-theme-background);
@@ -78,7 +78,7 @@
         opacity: 0;
         transition: var(--b3-transition);
         pointer-events: none;
-        @include superellipse(capsule);
+        @include superellipse-use($capsule);
     }
     &::before {
         content: "";

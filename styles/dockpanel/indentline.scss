@@ -79,7 +79,7 @@
                     transform: translateY(-50%);
                     width: 4px;
                     height: 4px;
-                    border-radius: 50%;
+                    @include superellipse-use($circle);
                     background-color: var(--_indentline-color);
                     visibility: visible;
                 }

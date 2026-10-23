@@ -6,7 +6,7 @@
     .neo-frostedglass-global.neo-frostedglass-luminous & {
         @include frostedglass-luminous(menu-simple);
     }
-    @include superellipse-use(16px 16px 0 0);
+    @include superellipse-use($radius-box $radius-box 0 0);
     box-shadow: var(--b3-menu-shadow);
     margin: 0 2px -2px 2px;
     width: calc(100% - 4px);
@@ -26,7 +26,7 @@
     background-color: transparent;
 }
 .keyboard__slash-item {
-    @include superellipse-use(12px);
+    @include superellipse-use($radius-item);
     background-color: transparent;
     outline: 1px solid var(--b3-border-color-trans);
     outline-offset: -1px;

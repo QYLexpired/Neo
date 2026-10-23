@@ -1,4 +1,6 @@
 @use "../utils/icon" as *;
+@use "../utils/superellipse" as *;
+@use "../utils/variables/radius" as *;
 @use "sass:string";
 @use "sass:list";
 $neo-task-icon-font-size: 16px;
@@ -66,7 +68,7 @@ $neo-custom-task-codes: neo-list-exclude($neo-task-codes, $neo-standard-task-cod
             height: 1.5em;
             transform: translate(-50%, -50%);
             margin: unset;
-            border-radius: 50%;
+            @include superellipse-use($circle);
             background-color: var(--_list-fold-bg);
         }
         &:hover {

@@ -6,7 +6,7 @@
         border-radius: 0 !important;
     }
     .av__calendar-grid--empty {
-        @include superellipse-use(12px, $important: true);
+        @include superellipse-use($radius-card, $important: true);
     }
     .av__calendar-week {
         border-left: 0;
@@ -15,7 +15,7 @@
         border-right: 1px solid var(--b3-border-color);
     }
     .av__calendar-day > span {
-        @include superellipse-use(8px);
+        @include superellipse-use($radius-chip);
     }
     .av__calendar-day--today > span {
         background-color: var(--neo-base-bg);
@@ -41,13 +41,13 @@
             --_av__calendar-item-hover-outline: oklch(from var(--b3-av-calendar-background) calc(l + 0.3) c h);
         }
         &.av__calendar-item--start {
-            @include superellipse-use(8px 0 0 8px);
+            @include superellipse-use($radius-chip 0 0 $radius-chip);
         }
         &.av__calendar-item--end {
-            @include superellipse-use(0 8px 8px 0);
+            @include superellipse-use(0 $radius-chip $radius-chip 0);
         }
         &.av__calendar-item--start.av__calendar-item--end {
-            @include superellipse-use(8px);
+            @include superellipse-use($radius-chip);
         }
         border: unset;
         transition: var(--b3-transition);

@@ -3,7 +3,7 @@
 @use "../component" as *;
 .av__gallery-item {
     box-shadow: var(--neo-main-shadow);
-    @include superellipse-use(10px);
+    @include superellipse-use($radius-card);
     &::before {
         border-radius: inherit;
         corner-shape: inherit;
@@ -23,11 +23,11 @@
 }
 .av__gallery-add {
     @include button-transparent-hover-translucent;
-    @include superellipse(10px);
+    @include superellipse-use($radius-card);
 }
 .av__gallery-cover {
     border-bottom: 0.75px solid var(--b3-border-color-trans);
-    @include superellipse(10px);
+    @include superellipse-use($radius-card);
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
 }
@@ -69,7 +69,7 @@
     @include overflow-fade-mask($fade-mask-m, "left right");
 }
 .av__kanban-group {
-    @include superellipse-use(12px);
+    @include superellipse-use($radius-card);
     &::before {
         border-radius: inherit;
         corner-shape: inherit;
@@ -92,6 +92,7 @@
     }
     .av__gallery-add {
         @include button-transparent-hover-translucent;
+        @include superellipse-use($radius-card);
         &::before {
             display: none;
         }

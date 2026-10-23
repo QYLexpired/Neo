@@ -1,7 +1,7 @@
 @use "../utils" as *;
 .protyle-wysiwyg [data-node-id],
 .mindmap-view__content .mindmap-view__preview-block {
-    @include superellipse(10px);
+    @include superellipse-use($radius-block);
     &.protyle-wysiwyg--select,
     &.protyle-wysiwyg--select-mode,
     &.protyle-wysiwyg--hl {

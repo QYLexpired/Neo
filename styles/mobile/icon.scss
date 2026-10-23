@@ -1,6 +1,6 @@
 @use "../utils" as *;
 .toolbar__icon {
-    @include superellipse(8px);
+    @include superellipse-use($radius-item);
     color: var(--b3-theme-on-surface);
     transition: var(--b3-transition);
     &:not(.toolbar__icon--active) {
@@ -21,7 +21,7 @@
     }
 }
 #toolbarTabs {
-    @include superellipse(8px);
+    @include superellipse-use($radius-item);
     color: var(--b3-theme-on-surface);
     transition: var(--b3-transition);
     &:hover,
@@ -42,7 +42,7 @@
     box-shadow: var(--neo-main-shadow);
     background-color: var(--b3-theme-background);
     @include frostedglass-tooltip;
-    border-radius: 50%;
+    @include superellipse-use($circle);
     padding: 8px;
     margin: 2px;
     height: 16px;

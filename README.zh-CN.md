@@ -3,6 +3,8 @@
 - Neo主题大量参考了[Asri主题](https://github.com/mustakshif/Asri)的设计和创意，非常感谢[mustakshif](https://github.com/mustakshif)，没有你超强的审美、技术力和让人惊叹的创意，就不会有Neo的出现
 ## 更新日志
 完整更新历史可查看[CHANGELOG](https://github.com/QYLexpired/Neo/blob/main/CHANGELOG.md)
+### <span style="font-family: neo;">1.7.7</span>
+- 减小界面圆角弧度
 ### <span style="font-family: neo;">1.7.6</span>
 - 为详情组件增加展开/收起动效
 - 重做全部链接样式

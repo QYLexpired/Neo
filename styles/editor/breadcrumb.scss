@@ -59,7 +59,7 @@ svg.protyle-breadcrumb__arrow {
         height: 15.5px;
         width: 15.5px;
         padding: 2px;
-        @include superellipse(4px);
+        @include superellipse-use($radius-item);
     }
     &--active {
         background-color: transparent;

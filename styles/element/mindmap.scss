@@ -2,7 +2,7 @@
 @use "../menu/menu" as *;
 @use "../component" as *;
 .mindmap-view {
-    @include superellipse-use(10px);
+    @include superellipse-use($radius-block);
     border: unset;
     box-shadow: var(--neo-main-shadow);
     background-color: transparent;
@@ -35,7 +35,7 @@
     }
 }
 .mindmap-view__toolbar-group {
-    @include superellipse-use(10px);
+    @include superellipse-use($radius-card);
     background-color: oklch(from var(--b3-theme-background) l c h / 0.8);
 }
 .mindmap-view__zoom-actions {
@@ -57,7 +57,7 @@
     border: unset;
     padding: 4px 12px;
     box-shadow: var(--neo-main-shadow);
-    @include superellipse(capsule);
+    @include superellipse-use($capsule);
     bottom: 12px;
 }
 // 线条
@@ -83,7 +83,7 @@
 }
 // 节点
 .mindmap-view__node {
-    @include superellipse-use(8px);
+    @include superellipse-use($radius-block);
     outline: 2px solid;
     outline-offset: -2px;
     outline-color: transparent;
@@ -113,7 +113,7 @@
 }
 .mindmap-view__fold.block__icon,
 .mindmap-view__add-child.block__icon {
-    border-radius: 50% !important;
+    @include superellipse-use($circle, $important: true);
     background-color: var(--b3-menu-background) !important;
     box-shadow: var(--neo-main-shadow);
     border: unset;

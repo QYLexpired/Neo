@@ -1,8 +1,10 @@
+@use "../utils/superellipse" as *;
+@use "../utils/variables/radius" as *;
 @mixin progress-track {
     display: block;
     height: 8px;
     border: none;
-    border-radius: 6px;
+    @include superellipse-use($capsule);
     overflow: hidden;
     background-color: var(--b3-list-hover);
 }

@@ -22,7 +22,7 @@
     }
 }
 .protyle-attr--refcount {
-    @include superellipse(6px);
+    @include superellipse-use($radius-chip);
     right: -40px;
     top: 0px;
     padding: 2px 7px;

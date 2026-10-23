@@ -60,7 +60,7 @@
     border: unset;
     box-shadow: var(--b3-menu-shadow);
     background-color: var(--b3-menu-background);
-    @include superellipse-use(12px);
+    @include superellipse-use($radius-card);
     .neo-frostedglass & {
         background-color: transparent;
         box-shadow: var(--b3-menu-shadow-blur);
@@ -75,7 +75,7 @@
     }
 }
 @mixin menu-container-common-simple($luminous-type: menu-simple) {
-    @include superellipse-use(12px);
+    @include superellipse-use($radius-card);
     background-color: var(--b3-menu-background);
     @include frostedglass-menu;
     border: unset;
@@ -137,7 +137,7 @@
 }
 .b3-menu__item {
     line-height: 24px;
-    @include superellipse-use(7px);
+    @include superellipse-use($radius-item);
     @include menu-item-child-trans-origin;
     @include menu-item-child {
         transition-property: none !important;

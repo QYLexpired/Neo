@@ -39,7 +39,7 @@
     width: 32px;
     height: 32px;
     transition: color var(--b3-transition), 0.65s var(--neo-ease-spring-3);
-    @include superellipse(18px);
+    @include superellipse-use($circle);
     box-shadow: var(--neo-main-shadow);
     mix-blend-mode: luminosity;
     background-color: var(--b3-theme-background);
@@ -110,7 +110,7 @@
 .table__cell-rich [data-node-id] .img__net,
 .table__cell-rich [data-table-cell-node] .img__net {
     transition: var(--b3-transition);
-    @include superellipse(18px);
+    @include superellipse-use($circle);
     box-shadow: var(--neo-main-shadow);
     background-color: var(--b3-theme-background);
     @include frostedglass-tooltip;

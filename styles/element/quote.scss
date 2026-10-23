@@ -10,7 +10,7 @@
     outline-offset: -0.5px;
     padding: 10px 16px;
     margin: 0.4em 0;
-    @include superellipse-use(10px);
+    @include superellipse-use($radius-block);
     &::before {
         display: none;
     }
