@@ -1,6 +1,29 @@
 @use "../utils" as *;
+@mixin heading-colored($level, $lightness: var(--_element-heading-colored-l)) {
+    --_heading-color: var(--_element-heading-colored-fixed-color, oklch(from var(--_element-heading-colored-base) #{$lightness} var(--_element-heading-colored-c) calc(var(--_element-heading-colored-initial-hue) + #{($level - 1) * 50})));
+}
 :root {
     --_heading-color: var(--b3-theme-on-background);
+}
+.neo-element-heading-colored-on {
+    --_element-heading-colored-base: oklch(from var(--b3-theme-base) clamp(0.55, l, 0.68) max(c, 0.2) h);
+    --_element-heading-colored-initial-hue: h;
+    --_element-heading-colored-l: l;
+    --_element-heading-colored-c: 0.08;
+    --_element-heading-colored-outline-l: calc(var(--_element-heading-colored-l) - 0.05);
+    &.neo-mode-dark {
+        --_element-heading-colored-base: oklch(from var(--b3-theme-base) max(l, 0.7) max(c, 0.18) h);
+        --_element-heading-colored-outline-l: calc(var(--_element-heading-colored-l) + 0.05);
+    }
+    &.neo-element-heading-colored-color-style-soft {
+        --_element-heading-colored-c: 0.05;
+    }
+    &.neo-element-heading-colored-color-style-vivid {
+        --_element-heading-colored-c: 0.2;
+    }
+    &.neo-element-heading-colored-initial-hue-rule-accent {
+        --_element-heading-colored-fixed-color: var(--b3-theme-accent);
+    }
 }
 .b3-typography,
 .protyle-wysiwyg,
@@ -25,6 +48,65 @@
         & > .h#{$i}:first-child {
             margin-top: 0;
         }
+        .neo-element-heading-colored-on & {
+            h#{$i},
+            [data-type=NodeHeading].h#{$i},
+            [data-type=NodeHeading][data-subtype=h#{$i}] [spellcheck],
+            [data-type=NodeHeading][data-subtype=h#{$i}] > .mindmap-view__text {
+                @include heading-colored($i);
+                color: var(--_heading-color);
+            }
+        }
+    }
+}
+.neo-element-heading-colored-on.neo-element-heading-colored-outline-on {
+    .sy__outline,
+    .fn__flex-column[data-type="sidebar-outline"] {
+        @for $i from 1 through 6 {
+            .b3-list-item[data-type=NodeHeading][data-subtype=h#{$i}] {
+                .b3-list-item__graphic,
+                .b3-list-item__number,
+                .b3-list-item__text {
+                    @include heading-colored($i, var(--_element-heading-colored-outline-l));
+                    color: var(--_heading-color) !important;
+                }
+            }
+        }
+    }
+}
+.neo-element-heading-level-on {
+    .b3-typography,
+    .protyle-wysiwyg,
+    .table__cell-rich,
+    .mindmap-view__content {
+        h1::after,
+        h2::after,
+        h3::after,
+        h4::after,
+        h5::after,
+        h6::after,
+        [data-type=NodeHeading] > [spellcheck]::after,
+        [data-type=NodeHeading] > .mindmap-view__text::after {
+            display: inline-block;
+            margin-inline-start: 0.5em;
+            font-family: neo;
+            font-size: 0.5em;
+            font-weight: bold;
+            font-style: normal;
+            line-height: 1;
+            vertical-align: baseline;
+            white-space: nowrap;
+            opacity: 0.75;
+            user-select: none;
+            pointer-events: none;
+        }
+        @for $i from 1 through 6 {
+            h#{$i}::after,
+            [data-type=NodeHeading][data-subtype=h#{$i}] > [spellcheck]::after,
+            [data-type=NodeHeading][data-subtype=h#{$i}] > .mindmap-view__text::after {
+                content: "H#{$i}";
+            }
+        }
     }
 }
 //@property --_title-angle {
@@ -38,6 +120,9 @@
     line-height: 1.4;
     padding-inline-start: 0.8em;
     position: relative;
+    .neo-element-heading-colored-on & {
+        --_heading-color: var(--b3-theme-accent);
+    }
     .protyle[data-loading="finished"] & {
         &::before {
             content: "";

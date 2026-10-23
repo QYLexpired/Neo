@@ -149,7 +149,7 @@
 @mixin chip-tag {
     @include superellipse-use($capsule);
     background-color: oklch(from currentColor l c h / 0.12);
-    color: var(--neo-tag-color);
+    color: var(--b3-theme-accent);
     outline: 0.5px solid oklch(from currentColor l c h / 0.25);
     outline-offset: -0.5px;
     &::before {
@@ -157,7 +157,7 @@
     }
     &:hover {
         background-color: oklch(from currentColor l c h / 0.18);
-        color: var(--neo-tag-color);
+        color: var(--b3-theme-accent);
     }
 }
 // chip

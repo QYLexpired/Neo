@@ -44,10 +44,6 @@
         &[data-subtype="#{$name}"] {
             $var: --b3-callout-#{string.to-lower-case($name)};
             color: var(#{$var});
-            --neo-kbd-color: var(#{$var});
-            --neo-inline-code-color: var(#{$var});
-            --neo-tag-color: var(#{$var});
-            --neo-inline-memo-color: var(#{$var});
             .callout-info {
                 color: var(#{$var});
             }

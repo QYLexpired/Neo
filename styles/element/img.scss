@@ -108,7 +108,12 @@
 .protyle-wysiwyg [data-node-id] .img__net,
 .protyle-wysiwyg [data-table-cell-node] .img__net,
 .table__cell-rich [data-node-id] .img__net,
-.table__cell-rich [data-table-cell-node] .img__net {
+.table__cell-rich [data-table-cell-node] .img__net,
+.mindmap-view__content .img__net {
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    padding: 4px;
     transition: var(--b3-transition);
     @include superellipse-use($circle);
     box-shadow: var(--neo-main-shadow);
@@ -117,5 +122,10 @@
     color: var(--b3-theme-accent);
     .neo-frostedglass-luminous & {
         @include frostedglass-luminous(toolbar);
+    }
+    svg {
+        width: 12px;
+        height: 12px;
+        float: left;
     }
 }

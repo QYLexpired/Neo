@@ -49,7 +49,7 @@ Neo is free to use. If you enjoy it, consider starring the project on [GitHub](h
 - Multicolumn Slash Menu: expands into multiple columns, navigable with the arrow keys
 #### <span style="font-family: neo;">Readable Typography</span>
 - Text styling tuned for readability in Chinese and English
-- Optional colors for headings and lists make them easier to distinguish
+- Optional colors make headings easier to distinguish
 - List Bullet Line: shows guide lines to make nested lists easier to follow
 ## <span style="font-family: neo;">Cautions</span>
 Some features substantially change SiYuan's default styling and may cause compatibility issues that **cannot be fixed**. Disable any feature that causes problems. Others can affect performance, so enable them with care.
