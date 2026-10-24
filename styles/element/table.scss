@@ -111,3 +111,31 @@ table + .protyle-action__table .table__resize {
         outline-offset: -0.5px;
     }
 }
+.protyle-table-control__height,
+.protyle-table-control__width {
+    &::before {
+        background-color: transparent;
+        transition: background-color var(--b3-transition);
+    }
+    &:hover::before,
+    &:active::before,
+    &.protyle-table-control__handle--active::before {
+        opacity: 1;
+        background-color: var(--_resize-hl);
+        @starting-style {
+            background-color: transparent;
+        }
+    }
+}
+.protyle-table-control__height::before,
+.protyle-table-control__height-guide {
+    height: 1px;
+}
+.protyle-table-control__width::before,
+.protyle-table-control__width-guide {
+    width: 1px;
+}
+.protyle-table-control__height-guide,
+.protyle-table-control__width-guide {
+    background-color: var(--_resize-hl);
+}

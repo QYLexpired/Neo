@@ -50,14 +50,14 @@ $database-title-mask: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000
     background-color: transparent !important;
     &::after {
         border-radius: 0;
-        outline: 1px solid oklch(from var(--b3-theme-accent) l c h / 0.6);
+        outline: 1px solid oklch(from var(--b3-theme-accent) l c h / 0.25);
         outline-offset: -1px;
         background-color: oklch(from var(--b3-theme-accent) l c h / 0.12);
         box-shadow: none;
         inset: 0;
     }
     .av__drag-fill {
-        border-color: oklch(from var(--b3-theme-accent) l c h / 0.6);
+        border-color: oklch(from var(--b3-theme-accent) l c h / 0.25);
     }
 }
 .av__cell--active {

@@ -1,4 +1,5 @@
 @use "../utils" as *;
+@use "sass:list";
 @mixin heading-colored($level, $lightness: var(--_element-heading-colored-l)) {
     --_heading-color: var(--_element-heading-colored-fixed-color, oklch(from var(--_element-heading-colored-base) #{$lightness} var(--_element-heading-colored-c) calc(var(--_element-heading-colored-initial-hue) + #{($level - 1) * 50})));
 }
@@ -51,8 +52,7 @@
         .neo-element-heading-colored-on & {
             h#{$i},
             [data-type=NodeHeading].h#{$i},
-            [data-type=NodeHeading][data-subtype=h#{$i}] [spellcheck],
-            [data-type=NodeHeading][data-subtype=h#{$i}] > .mindmap-view__text {
+            [data-type=NodeHeading][data-subtype=h#{$i}] [spellcheck] {
                 @include heading-colored($i);
                 color: var(--_heading-color);
             }
@@ -87,24 +87,23 @@
         h6::after,
         [data-type=NodeHeading] > [spellcheck]::after,
         [data-type=NodeHeading] > .mindmap-view__text::after {
-            display: inline-block;
-            margin-inline-start: 0.5em;
-            font-family: neo;
+            display: inline;
+            font-family: "SF Pro";
             font-size: 0.5em;
             font-weight: bold;
             font-style: normal;
             line-height: 1;
             vertical-align: baseline;
-            white-space: nowrap;
             opacity: 0.75;
             user-select: none;
             pointer-events: none;
         }
+        $heading-numbers: "❶", "❷", "❸", "❹", "❺", "❻";
         @for $i from 1 through 6 {
             h#{$i}::after,
             [data-type=NodeHeading][data-subtype=h#{$i}] > [spellcheck]::after,
             [data-type=NodeHeading][data-subtype=h#{$i}] > .mindmap-view__text::after {
-                content: "H#{$i}";
+                content: "\2060\00a0#{list.nth($heading-numbers, $i)}";
             }
         }
     }
@@ -123,7 +122,8 @@
     .neo-element-heading-colored-on & {
         --_heading-color: var(--b3-theme-accent);
     }
-    .protyle[data-loading="finished"] & {
+    // 标题初始化时含有空格，需等标题数据渲染后再显示装饰线。
+    .protyle[data-loading="finished"] .protyle-title[data-render="true"] > & {
         &::before {
             content: "";
             pointer-events: none;
@@ -147,6 +147,10 @@
                 background-color: var(--b3-empty-color);
             }
         }
+    }
+    // 嵌套预览不能借用外层编辑器的加载完成状态。
+    .protyle:not([data-loading="finished"]) &::before {
+        display: none;
     }
 }
 /*.layout__wnd--active .protyle-title__input {

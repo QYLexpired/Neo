@@ -27,10 +27,10 @@ $neo-custom-task-codes: neo-list-exclude($neo-task-codes, $neo-standard-task-cod
 // 状态可位于任务列表项或按钮上。
 @function neo-task-list-actions($state: "") {
     $selectors: ();
-    @each $container in ".protyle-wysiwyg", ".table__cell-rich", ".mindmap-view__content" {
-        $selectors: list.append($selectors, "#{$container} .li[data-subtype=t]#{$state} > .protyle-action--task", comma);
+    @each $item in ".protyle-wysiwyg .li", ".table__cell-rich .li", ".mindmap-view__content .li[data-table-cell-node]" {
+        $selectors: list.append($selectors, "#{$item}[data-subtype=t]#{$state} > .protyle-action--task", comma);
         @if $state != "" {
-            $selectors: list.append($selectors, "#{$container} .li[data-subtype=t] > .protyle-action--task#{$state}", comma);
+            $selectors: list.append($selectors, "#{$item}[data-subtype=t] > .protyle-action--task#{$state}", comma);
         }
     }
     @return $selectors;

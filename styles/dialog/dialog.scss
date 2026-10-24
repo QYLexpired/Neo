@@ -71,6 +71,7 @@
 }
 .b3-dialog__loading {
     @include dialog-container-common;
+    @include superellipse-use($radius-card);
 }
 .b3-dialog__progress {
     @include progress-track;

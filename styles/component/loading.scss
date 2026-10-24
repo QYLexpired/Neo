@@ -1,0 +1,59 @@
+$loading-gradient: linear-gradient(currentColor, currentColor);
+$loading-duration: 1s;
+$loading-stagger: $loading-duration * 0.15;
+$loading-stroke: 10%;
+$loading-scale: 0.3;
+$loading-opacity: 0.32;
+.b3-loading {
+    color: var(--b3-theme-accent);
+    height: auto;
+    aspect-ratio: 10 / 9;
+    background: $loading-gradient no-repeat center;
+    background-size: $loading-stroke ($loading-scale * 100%);
+    animation: neo-loading-center $loading-duration ease-in-out infinite;
+    animation-delay: -$loading-stagger;
+    &::before,
+    &::after {
+        content: "";
+        position: absolute;
+        inset: 0 auto;
+        width: $loading-stroke;
+        height: 100%;
+        border: 0;
+        border-radius: 0;
+        background: var(--b3-theme-accent);
+        -webkit-mask: none;
+        mask: none;
+        transform-origin: center;
+        animation: neo-loading $loading-duration ease-in-out infinite;
+    }
+    &::before {
+        left: 0;
+        animation-delay: -2 * $loading-stagger;
+    }
+    &::after {
+        right: 0;
+    }
+}
+@keyframes neo-loading {
+    0%,
+    100% {
+        transform: scaleY($loading-scale);
+        opacity: $loading-opacity;
+    }
+    50% {
+        transform: scaleY(1);
+        opacity: 1;
+    }
+}
+@keyframes neo-loading-center {
+    0%,
+    100% {
+        background-size: $loading-stroke ($loading-scale * 100%);
+        color: oklch(from var(--b3-theme-accent) l c h / #{$loading-opacity});
+    }
+    50% {
+        background-size: $loading-stroke 100%;
+        color: var(--b3-theme-accent);
+    }
+}

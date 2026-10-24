@@ -5,12 +5,13 @@
 完整更新历史可查看[CHANGELOG](https://github.com/QYLexpired/Neo/blob/main/CHANGELOG.md)
 ### <span style="font-family: neo;">1.7.7</span>
 - 回退链接默认样式，支持通过Neo+菜单-外观-配置元素来使用链接图标样式
-- 减小界面圆角弧度
+- 减小全局界面圆角弧度
 - 出于主题的可维护性考虑，移除彩色列表特性
 - 将彩色标题移入元素配置
 - 将多列斜杠菜单、卡片式搜索列表移入外观子菜单
 - 移除行内备注图标并固定颜色
 - 支持配置显示标题层级
+- 优化加载动效（思维3.8.9）
 ### <span style="font-family: neo;">1.7.6</span>
 - 为详情组件增加展开/收起动效
 - 重做全部链接样式

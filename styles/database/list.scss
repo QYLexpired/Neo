@@ -12,7 +12,7 @@
                 box-shadow: none;
                 border-radius: inherit;
                 corner-shape: inherit;
-                outline: 1px solid oklch(from var(--b3-theme-accent) l c h / 0.12);
+                outline: 1px solid oklch(from var(--b3-theme-accent) l c h / 0.25);
                 outline-offset: -1px;
                 background-color: oklch(from var(--b3-theme-accent) l c h / 0.12);
             }

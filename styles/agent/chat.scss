@@ -19,6 +19,9 @@
 .agent-chat__button-options {
     overflow: visible;
 }
+.agent-chat__composer-host .protyle-content {
+    padding: 0;
+}
 // 对话气泡
 .agent-chat__msg--user .agent-chat__body {
     background-color: var(--b3-list-hover);
@@ -207,4 +210,112 @@
     width: 10px;
     height: 10px;
     background-color: var(--b3-theme-accent);
+}
+$agent-session-status-size: 10px;
+$agent-session-status-stroke: 1.8px;
+$agent-session-status-mult: calc($agent-session-status-size / $agent-session-status-stroke);
+$agent-session-status-duration: 3.5s;
+$agent-session-status-line: no-repeat linear-gradient(var(--b3-theme-accent), var(--b3-theme-accent));
+.agent-session-status--running {
+    position: relative;
+    display: inline-block;
+    width: $agent-session-status-size;
+    height: $agent-session-status-size;
+    border-radius: 0;
+    background: $agent-session-status-line center;
+    background-size: $agent-session-status-stroke $agent-session-status-stroke;
+    animation: neo-agent-session-hatch-center $agent-session-status-duration ease infinite;
+    &::before,
+    &::after {
+        content: "";
+        position: absolute;
+        width: $agent-session-status-stroke;
+        height: $agent-session-status-stroke;
+        background-color: var(--b3-theme-accent);
+        animation: neo-agent-session-hatch $agent-session-status-duration ease infinite;
+        transition: background-color 0.3s ease;
+    }
+    &::after {
+        animation-delay: $agent-session-status-duration * -0.5;
+    }
+}
+@keyframes neo-agent-session-hatch {
+    0%,
+    100% {
+        transform: scale(1, 1);
+        transform-origin: top left;
+        inset: 0 auto auto 0;
+    }
+    12.5% {
+        transform: scale($agent-session-status-mult, 1);
+        transform-origin: top left;
+        inset: 0 auto auto 0;
+    }
+    12.50001% {
+        transform: scale($agent-session-status-mult, 1);
+        transform-origin: top right;
+        inset: 0 0 auto auto;
+    }
+    25% {
+        transform: scale(1, 1);
+        transform-origin: top right;
+        inset: 0 0 auto auto;
+    }
+    37.5% {
+        transform: scale(1, $agent-session-status-mult);
+        transform-origin: top right;
+        inset: 0 0 auto auto;
+    }
+    37.50001% {
+        transform: scale(1, $agent-session-status-mult);
+        transform-origin: bottom right;
+        inset: auto 0 0 auto;
+    }
+    50% {
+        transform: scale(1, 1);
+        transform-origin: bottom right;
+        inset: auto 0 0 auto;
+    }
+    62.5% {
+        transform: scale($agent-session-status-mult, 1);
+        transform-origin: bottom right;
+        inset: auto 0 0 auto;
+    }
+    62.50001% {
+        transform: scale($agent-session-status-mult, 1);
+        transform-origin: bottom left;
+        inset: auto auto 0 0;
+    }
+    75% {
+        transform: scale(1, 1);
+        transform-origin: bottom left;
+        inset: auto auto 0 0;
+    }
+    87.5% {
+        transform: scale(1, $agent-session-status-mult);
+        transform-origin: bottom left;
+        inset: auto auto 0 0;
+    }
+    87.50001% {
+        transform: scale(1, $agent-session-status-mult);
+        transform-origin: top left;
+        inset: 0 auto auto 0;
+    }
+}
+@keyframes neo-agent-session-hatch-center {
+    0%,
+    25%,
+    50%,
+    75%,
+    100% {
+        background-size: $agent-session-status-stroke $agent-session-status-stroke;
+    }
+    12.5%,
+    62.5% {
+        background-size: $agent-session-status-size $agent-session-status-stroke;
+    }
+    37.5%,
+    87.5% {
+        background-size: $agent-session-status-stroke $agent-session-status-size;
+    }
 }
