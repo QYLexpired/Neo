@@ -19,6 +19,13 @@
     .toolbar--dark {
         background-color: transparent;
     }
+    .toolbar__text,
+    .sy__backlink > .block__icons > .block__logo--counter,
+    .sy__agentChat--mobile .agent-chat__title {
+        font-size: 15px;
+        font-weight: bold;
+        color: var(--b3-theme-on-surface);
+    }
 }
 #sidebar.side-panel--swiping {
     @include sidebar-edge-shadow(1);
@@ -28,4 +35,9 @@
 }
 .sy__agentChat--mobile {
     background-color: transparent;
+}
+.sy__agentChat--mobile .block__icon {
+    filter: none !important;
+    transform: none !important;
+    opacity: 1 !important;
 }

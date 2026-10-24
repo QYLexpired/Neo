@@ -2,13 +2,11 @@
 .mobile-tabs__item {
     @include superellipse-use($radius-item);
     border: unset;
-    outline: 1px solid var(--b3-border-color-trans);
-    outline-offset: -1px;
+    outline: none;
     background-color: transparent;
     &.mobile-tabs__item--active {
-        outline-color: oklch(from var(--b3-theme-base) clamp(0.4, l, 1) c h / 0.3);
-        background-color: oklch(from var(--b3-theme-base) clamp(0.4, l, 1) c h / 0.12);
-        box-shadow: none;
+        background-color: oklch(from var(--b3-theme-background) l c h / 0.7);
+        box-shadow: var(--neo-main-shadow);
     }
 }
 .mobile-tabs__item-pin {

@@ -3,6 +3,16 @@
 - Neo 主題大量參考了 [Asri 主題](https://github.com/mustakshif/Asri) 的設計和創意，非常感謝 [mustakshif](https://github.com/mustakshif)，沒有你超強的審美、技術力和令人驚嘆的創意，就不會有 Neo 的出現
 ## 更新日誌
 完整更新紀錄可於 [CHANGELOG](https://github.com/QYLexpired/Neo/blob/main/CHANGELOG.md) 查看
+### <span style="font-family: neo;">1.7.7</span>
+- 還原預設連結樣式，可透過 Neo+ 選單 → 外觀 → 設定元素使用連結圖示樣式
+- 縮小全域介面圓角半徑
+- 新增置頂預設配色：柔和
+- 基於主題的可維護性考量，移除彩色列表特性
+- 將彩色標題移至元素設定
+- 將多欄斜線選單、卡片式搜尋列表移至外觀子選單
+- 移除行內備註圖示並固定顏色
+- 支援設定顯示標題層級
+- 最佳化載入動畫（思源 3.8.9）
 ### <span style="font-family: neo;">1.7.6</span>
 - 為詳情元件新增展開/收合動畫
 - 重做所有連結樣式

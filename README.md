@@ -3,6 +3,16 @@
 - Neo owes much of its design and ideas to the [Asri theme](https://github.com/mustakshif/Asri). Thank you, [mustakshif](https://github.com/mustakshif) — your eye for design, technical skill, and creativity made Neo possible.
 ## <span style="font-family: neo;">Changelog</span>
 See the [CHANGELOG](https://github.com/QYLexpired/Neo/blob/main/CHANGELOG.md) for the full update history.
+### <span style="font-family: neo;">1.7.7</span>
+- Restored the default link style; enable link icons via Neo+ Menu → Appearance → Configure Elements
+- Reduced corner radii throughout the interface
+- Added a new pinned preset palette: Soft
+- Removed colored lists to simplify theme maintenance
+- Moved colored headings to the element settings
+- Moved Multicolumn Slash Menu and Card Style Search List to the Appearance submenu
+- Removed the inline memo icon and set a fixed color
+- Added an option to show heading levels
+- Refined loading animations (SiYuan 3.8.9)
 ### <span style="font-family: neo;">1.7.6</span>
 - Added expand/collapse animations to details elements
 - Redesigned all link styles
