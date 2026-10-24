@@ -9,7 +9,8 @@ a {
     transition: var(--b3-transition);
     text-decoration: underline;
     text-decoration-color: var(--b3-theme-accent);
-    text-decoration-thickness: 1.5px;
+    text-decoration-thickness: 1px;
+    padding-bottom: 1px;
     &:hover {
         color: var(--b3-theme-accent);
     }
@@ -83,7 +84,7 @@ a:has(> img) {
     margin: 0 !important;
     border-radius: 0 !important;
     corner-shape: round !important;
-    border-bottom: none !important;
+    border: none !important;
     text-decoration: none !important;
     background-color: transparent !important;
     outline: none !important;

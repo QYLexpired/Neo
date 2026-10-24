@@ -8,9 +8,9 @@ $link-local-mask: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg
     border-radius: 0;
     transition: var(--b3-transition);
     text-decoration: none;
-    border-bottom: 1.5px $style var(--b3-theme-accent);
+    border-bottom: 1px $style var(--b3-theme-accent);
     background-image: unset;
-    padding-bottom: 1.5px;
+    padding-bottom: 1px;
     &:hover {
         color: var(--b3-theme-accent);
         border-radius: 0;
@@ -19,24 +19,25 @@ $link-local-mask: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg
     }
 }
 @mixin link-icon($mask: $link-mask) {
+    --_link-border-color: oklch(from currentColor l c h / 0.15);
     color: inherit;
     opacity: 1;
     transition: var(--b3-transition);
     text-decoration: none;
-    border-bottom: none;
+    border: 0.5px solid var(--_link-border-color);
     background-image: unset;
     padding: 0 0.2em;
     margin: 0 0.1em;
     @include superellipse-use($radius-chip);
     background-color: oklch(from currentColor l c h / 0.05);
-    outline: 0.5px solid oklch(from currentColor l c h / 0.15);
-    outline-offset: -0.5px;
+    -webkit-box-decoration-break: slice;
+    box-decoration-break: slice;
     &:hover {
         color: inherit;
         text-decoration: none;
         @include superellipse-use($radius-chip);
         background-color: oklch(from currentColor l c h / 0.1);
-        outline-color: oklch(from currentColor l c h / 0.2);
+        --_link-border-color: oklch(from currentColor l c h / 0.2);
     }
     &::before {
         content: "";
@@ -76,10 +77,10 @@ $link-local-mask: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg
     }
     .neo-element-link-style-icon.neo-mode-dark & {
         background-color: oklch(from currentColor l c h / 0.08);
-        outline-color: oklch(from currentColor l c h / 0.18);
+        --_link-border-color: oklch(from currentColor l c h / 0.18);
         &:hover {
             background-color: oklch(from currentColor l c h / 0.15);
-            outline-color: oklch(from currentColor l c h / 0.25);
+            --_link-border-color: oklch(from currentColor l c h / 0.25);
         }
     }
 }
