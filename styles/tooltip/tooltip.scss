@@ -7,7 +7,7 @@
     box-shadow: var(--neo-main-shadow);
     line-height: 16px;
     @if $luminous {
-        .neo-frostedglass-luminous & {
+        .neo-frostedglass-luminous-on & {
             @include frostedglass-luminous(tooltip);
         }
     }

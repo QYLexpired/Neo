@@ -371,7 +371,7 @@ span.av__celltext--url:not(:empty) {
     .av__relation-table-check {
         background-color: var(--b3-menu-background);
         @include frostedglass($blur: s, $color: menu);
-        .neo-frostedglass-luminous & {
+        .neo-frostedglass-luminous-on & {
             @include frostedglass-luminous(menu-simple);
         }
     }

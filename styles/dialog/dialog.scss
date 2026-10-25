@@ -10,12 +10,12 @@
         .neo-mode-dark & {
             backdrop-filter: brightness(0.5);
         }
-        .neo-frostedglass-global & {
+        .neo-frostedglass-scope-global & {
             z-index: -2;
             backdrop-filter: blur(2px);
         }
     }
-    .neo-frostedglass-global & {
+    .neo-frostedglass-scope-global & {
         transition: 0.25s;
     }
 }
@@ -43,11 +43,11 @@
     box-shadow: var(--b3-dialog-shadow);
     background-color: var(--b3-theme-background);
     @include superellipse-use($radius-box);
-    .neo-frostedglass-global & {
+    .neo-frostedglass-scope-global & {
         background-color: transparent;
         box-shadow: var(--b3-dialog-shadow-blur);
     }
-    .neo-frostedglass-global.neo-frostedglass-luminous & {
+    .neo-frostedglass-scope-global.neo-frostedglass-luminous-on & {
         @include frostedglass-luminous(dialog);
     }
     &::before {

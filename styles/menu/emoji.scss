@@ -55,7 +55,7 @@
     @include frostedglass($blur: t, $color: menu);
     outline: 0.5px solid var(--b3-border-color-trans);
     outline-offset: -0.5px;
-    .neo-frostedglass-luminous & {
+    .neo-frostedglass-luminous-on & {
         @include frostedglass-luminous(tooltip);
     }
 }

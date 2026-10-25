@@ -31,7 +31,7 @@
     border-radius: 0;
     corner-shape: unset;
     box-shadow: unset;
-    .neo-frostedglass-global & {
+    .neo-frostedglass-scope-global & {
         background-color: transparent;
     }
     &::before {

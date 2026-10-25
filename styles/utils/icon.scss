@@ -13,9 +13,33 @@ $checkbox-check-contour: "c-5.842944-5.445632-16.21504-5.953536-22.995968-1.0741
 $input-checkbox-checked-mask: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.2 19.2">#{$input-checkbox-outline}<path d="M784.900096 346.220544#{$checkbox-check-contour}" transform="scale(0.01875)" stroke="black" stroke-width="0.6" vector-effect="non-scaling-stroke" stroke-linejoin="round"/></svg>');
 $task-progress-mask: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.2 19.2">#{$input-checkbox-outline}<path d="M9.6 5.3v4.4l2.8 2.1" fill="none" stroke="black" stroke-width="#{$input-control-stroke-width}" vector-effect="non-scaling-stroke" stroke-linecap="round" stroke-linejoin="round"/></svg>');
 $task-cancelled-mask: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.2 19.2">#{$input-checkbox-outline}<path d="M5.8 9.6h7.6" fill="none" stroke="black" stroke-width="#{$input-control-stroke-width}" vector-effect="non-scaling-stroke" stroke-linecap="round"/></svg>');
-@function task-export-marker-mask($code) {
-    @return url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.2 19.2">#{$input-checkbox-outline}<text x="9.6" y="9.6" text-anchor="middle" dominant-baseline="central" font-family="system-ui,sans-serif" font-size="14.4" font-weight="500">%26%23x#{$code};</text></svg>');
+@function task-export-marker-mask($code, $outline: true) {
+    $frame: "";
+    @if $outline {
+        $frame: $input-checkbox-outline;
+    }
+    @return url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.2 19.2">#{$frame}<text x="9.6" y="9.6" text-anchor="middle" dominant-baseline="central" font-family="system-ui,sans-serif" font-size="14.4" font-weight="500">%26%23x#{$code};</text></svg>');
 }
+$input-checkbox-content-mask: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.2 19.2"><path d="M784.900096 346.220544#{$checkbox-check-contour}" transform="scale(0.01875)" stroke="black" stroke-width="0.6" vector-effect="non-scaling-stroke" stroke-linejoin="round"/></svg>');
+$task-progress-content-mask: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.2 19.2"><path d="M9.6 5.3v4.4l2.8 2.1" fill="none" stroke="black" stroke-width="#{$input-control-stroke-width}" vector-effect="non-scaling-stroke" stroke-linecap="round" stroke-linejoin="round"/></svg>');
+$task-cancelled-content-mask: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.2 19.2"><path d="M5.8 9.6h7.6" fill="none" stroke="black" stroke-width="#{$input-control-stroke-width}" vector-effect="non-scaling-stroke" stroke-linecap="round"/></svg>');
+@mixin checkbox-content-shown {
+    opacity: 1;
+    animation: var(--_checkbox-animation, neo-checkbox-content-entrance) 0.75s var(--neo-ease-spring-3);
+}
+@mixin checkbox-content-keyframes($name) {
+    @keyframes #{$name} {
+        from {
+            translate: -8px 0;
+            opacity: 0;
+        }
+        to {
+            translate: 0;
+            opacity: 1;
+        }
+    }
+}
+@include checkbox-content-keyframes(neo-checkbox-content-entrance);
 @mixin tag-icon {
     content: "";
     pointer-events: none;

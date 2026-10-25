@@ -2,9 +2,6 @@
 :root::selection {
     background-color: oklch(from var(--b3-theme-accent) l c h / 0.25);
 }
-:focus {
-    outline-color: transparent;
-}
 .counter {
     @include superellipse-use($radius-chip);
     &--bg,

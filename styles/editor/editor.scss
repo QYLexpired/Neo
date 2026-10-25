@@ -17,7 +17,7 @@
     mix-blend-mode: luminosity;
     background-color: var(--b3-theme-background);
     @include frostedglass-tooltip;
-    .neo-frostedglass-luminous & {
+    .neo-frostedglass-luminous-on & {
         @include frostedglass-luminous(toolbar);
     }
     & > .protyle-icon:only-child:not(.protyle-icon--text) {
@@ -87,7 +87,7 @@
         box-shadow: var(--neo-main-shadow);
         @include frostedglass-tooltip;
     }
-    .neo-frostedglass-luminous & {
+    .neo-frostedglass-luminous-on & {
         --neo-main-shadow: var(--_frostedglass-luminous-tooltip-shadow);
         &::after {
             content: "";

@@ -45,7 +45,7 @@
     background-color: var(--b3-theme-background);
     color: var(--b3-theme-on-surface);
     @include frostedglass-tooltip;
-    .neo-frostedglass-luminous & {
+    .neo-frostedglass-luminous-on & {
         @include frostedglass-luminous(toolbar);
     }
     &:hover,
@@ -115,7 +115,7 @@
     background-color: var(--b3-theme-background);
     @include frostedglass-tooltip;
     color: var(--b3-theme-accent);
-    .neo-frostedglass-luminous & {
+    .neo-frostedglass-luminous-on & {
         @include frostedglass-luminous(toolbar);
     }
 }

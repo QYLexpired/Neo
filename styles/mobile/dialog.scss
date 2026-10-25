@@ -20,7 +20,7 @@
     .b3-dialog__container.mobile-bottom-sheet {
         @include superellipse-use($radius-box $radius-box 0 0);
         box-shadow: var(--b3-menu-shadow);
-        .neo-frostedglass-global.neo-frostedglass-luminous & {
+        .neo-frostedglass-scope-global.neo-frostedglass-luminous-on & {
             box-shadow: var(--b3-dialog-shadow-blur);
         }
         margin: 0 2px -2px 2px;

@@ -65,7 +65,7 @@
         background-color: transparent;
         box-shadow: var(--b3-menu-shadow-blur);
     }
-    .neo-frostedglass-luminous & {
+    .neo-frostedglass-luminous-on & {
         @include frostedglass-luminous(menu);
     }
     &::before {
@@ -80,7 +80,7 @@
     @include frostedglass-menu;
     border: unset;
     box-shadow: var(--b3-menu-shadow);
-    .neo-frostedglass-luminous & {
+    .neo-frostedglass-luminous-on & {
         @include frostedglass-luminous($luminous-type);
     }
 }

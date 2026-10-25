@@ -55,7 +55,7 @@ body.body--linux .b3-select { // body用来覆盖思源样式
         @include superellipse-use($radius-card);
         @include frostedglass-menu;
         box-shadow: var(--b3-menu-shadow);
-        .neo-frostedglass-luminous & {
+        .neo-frostedglass-luminous-on & {
             @include frostedglass-luminous(select-picker);
         }
     }
@@ -176,17 +176,8 @@ input[type="checkbox"]:not(.b3-switch) {
     width: 1.2em;
     height: 1.2em;
     align-self: center;
-    mask-repeat: no-repeat;
     flex-shrink: 0;
-    background-color: var(--b3-theme-on-surface);
-    animation: neo-ratio-entrance 0.6s var(--neo-ease-spring-3);
-    transform-origin: 30% 70%;
-    mask-image: $input-checkbox-unchecked-mask;
-    &:checked {
-        background-color: var(--b3-theme-accent);
-        animation: neo-ratio-checked-entrance 0.6s var(--neo-ease-spring-3);
-        mask-image: $input-checkbox-checked-mask;
-    }
+    background-color: transparent;
     &:disabled {
         background-color: var(--b3-theme-on-surface);
         opacity: 0.5;
@@ -194,36 +185,101 @@ input[type="checkbox"]:not(.b3-switch) {
     .protyle-task & {
         top: 0.4em;
         &:checked:not(:disabled) {
-            background-color: var(--b3-theme-accent);
             opacity: 1;
         }
     }
 }
-input[type="radio" i] {
-    background-color: var(--b3-theme-on-surface);
-    mask-image: $input-radio-unchecked-mask;
-    &:checked {
+input[type="checkbox"]:not(.b3-switch) {
+    position: relative;
+    .protyle-task & {
+        position: absolute;
+    }
+    &::before,
+    &::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        mask-repeat: no-repeat;
+        mask-size: 100% 100%;
+        pointer-events: none;
+    }
+    &::before {
+        background-color: var(--b3-theme-on-surface);
+        mask-image: $input-checkbox-unchecked-mask;
+    }
+    &::after {
         background-color: var(--b3-theme-accent);
-        mask-image: $input-radio-checked-mask;
+        mask-image: var(--_checkbox-content-mask, #{$input-checkbox-content-mask});
+        opacity: 0;
+    }
+    &:checked {
+        &::before {
+            background-color: var(--b3-theme-accent);
+        }
+        &::after {
+            @include checkbox-content-shown;
+        }
     }
     &:disabled {
+        background-color: transparent;
+        &::before,
+        &::after {
+            background-color: var(--b3-theme-on-surface);
+        }
+    }
+}
+input[type="radio" i] {
+    --_radio-outline-mask: #{$input-radio-unchecked-mask};
+    position: relative;
+    border-radius: 50%;
+    background-color: transparent;
+    mask: none;
+    animation: none;
+    &::before,
+    &::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        mask-repeat: no-repeat;
+        mask-size: 100% 100%;
+        pointer-events: none;
+    }
+    &::before {
         background-color: var(--b3-theme-on-surface);
+        mask-image: var(--_radio-outline-mask),
+            radial-gradient(circle closest-side, black 50%, transparent 51%);
+        mask-composite: subtract;
+        transition: background-color 120ms var(--neo-ease-out-3);
     }
-}
-@keyframes neo-ratio-entrance {
-    from {
-        transform: scale(1.2);
+    &::after {
+        background-color: var(--b3-theme-accent);
+        mask-image: $input-radio-checked-mask;
+        clip-path: circle(25% at 50% 50%);
+        transform: scale(0);
+        transform-origin: center;
+        opacity: 0;
+        transition: transform 160ms var(--neo-ease-out-3), opacity 120ms var(--neo-ease-out-3);
     }
-    to {
-        transform: scale(1);
+    &:checked {
+        --_radio-outline-mask: #{$input-radio-checked-mask};
+        background-color: transparent;
+        mask: none;
+        animation: none;
+        &::before {
+            background-color: var(--b3-theme-accent);
+        }
+        &::after {
+            transform: scale(1);
+            opacity: 1;
+            transition: transform 0.75s var(--neo-ease-spring-5), opacity 100ms var(--neo-ease-out-3);
+        }
     }
-}
-@keyframes neo-ratio-checked-entrance {
-    from {
-        transform: scale(1.2);
-    }
-    to {
-        transform: scale(1);
+    &:disabled {
+        background-color: transparent;
+        &::before,
+        &::after {
+            background-color: var(--b3-theme-on-surface);
+        }
     }
 }
 // 颜色选择器

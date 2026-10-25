@@ -18,7 +18,7 @@
         overflow: hidden;
         z-index: 5;
         max-width: max(anchor-size(--anchor-layout-center) - 16px, 200px);
-        .neo-frostedglass-luminous & {
+        .neo-frostedglass-luminous-on & {
             @include frostedglass-luminous(status);
         }
         .toolbar__item {

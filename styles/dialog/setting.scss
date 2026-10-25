@@ -133,7 +133,7 @@
             color: var(--b3-theme-on-surface);
             background-color: var(--b3-theme-background);
             @include frostedglass-tooltip;
-            .neo-frostedglass-luminous & {
+            .neo-frostedglass-luminous-on & {
                 @include frostedglass-luminous(tooltip);
             }
             transition: color var(--b3-transition), 0.65s var(--neo-ease-spring-3);
