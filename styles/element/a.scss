@@ -39,6 +39,9 @@ a[href]:not(.b3-button, .block__icon, #menuFeedback) {
     .b3-typography & {
         @include link.link-underline;
     }
+    .av__celltext--rich & {
+        @include link.link-underline-hover;
+    }
     @include link.link-style(href) {
         &[href="https://cdn.jsdelivr.net" i]::before,
         &[href^="https://cdn.jsdelivr.net/" i]::before,

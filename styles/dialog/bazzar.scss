@@ -24,6 +24,13 @@
     .b3-cards {
         grid-template-columns: repeat(auto-fill, minmax(min(100%, 355px), 1fr));
     }
+    &:not([data-type=downloaded]) .config-bazaar__cards {
+        grid-auto-rows: 106px;
+        .b3-card__desc {
+            max-height: 18px;
+            -webkit-line-clamp: 1;
+        }
+    }
     &[data-type=downloaded] {
         .config-bazaar__tools {
             min-height: 28px;
@@ -104,6 +111,22 @@
             img {
                 @include superellipse-use($radius-card);
             }
+        }
+        .b3-card__actions > .b3-chip--warning {
+            white-space: nowrap;
+        }
+        [data-rating-card-slot] + .block__icon--text {
+            flex-shrink: 1;
+            min-width: 0;
+            overflow: hidden;
+            svg {
+                flex-shrink: 0;
+            }
+        }
+        .b3-card__author {
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
         }
     }
 }

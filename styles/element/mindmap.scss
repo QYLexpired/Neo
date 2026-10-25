@@ -24,12 +24,16 @@
         &:hover,
         &.mindmap-view--active {
             outline: unset;
-            .mindmap-view__toolbar {
-                .mindmap-view__toolbar-group {
-                    filter: none;
-                    transform: none;
-                    opacity: 1;
-                }
+        }
+        &:hover .mindmap-view__toolbar,
+        &.mindmap-view--active .mindmap-view__toolbar,
+        &.mindmap-view--locked .mindmap-view__toolbar,
+        &.mindmap-view--pan .mindmap-view__toolbar,
+        .mindmap-view__toolbar:focus-within {
+            .mindmap-view__toolbar-group {
+                filter: none;
+                transform: none;
+                opacity: 1;
             }
         }
     }

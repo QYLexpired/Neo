@@ -3,6 +3,21 @@ $link-mask: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" view
 $link-asset-mask: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="6" height="18.5" rx="1.5"/><path d="M8 4.5A1.5 1.5 0 0 1 9.5 3h3A1.5 1.5 0 0 1 14 4.5V20a1.5 1.5 0 0 1-1.5 1.5h-3A1.5 1.5 0 0 1 8 20"/><rect x="14" y="3.5" width="5" height="18.5" rx="1.5" transform="rotate(-10 14 3.5)"/></svg>');
 $link-siyuan-mask: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M7.75 3.4 12 7.65v11.5l-4.25-4.25ZM16.25 3.4 22 9.15v11.5l-5.75-5.75Z" fill="black" stroke="none"/><path d="M2 9.15 7.75 3.4 12 7.65 16.25 3.4 22 9.15v11.5l-5.75-5.75L12 19.15l-4.25-4.25L2 20.65Z"/><path d="M7.75 3.4v11.5M12 7.65v11.5M16.25 3.4v11.5"/></svg>');
 $link-local-mask: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="2.6" y="2.6" width="18.8" height="13.2" rx="2.35"/><path d="M12 15.8v5.6M6.4 21.4h11.2"/></svg>');
+@mixin link-underline-hover {
+    .neo-element-link-style-underline & {
+        transition: color var(--b3-transition), background-size 0.2s;
+        background-image: linear-gradient(oklch(from currentColor l c h / 0.12), oklch(from currentColor l c h / 0.12));
+        background-position: right center;
+        background-size: 0% 100%;
+        background-repeat: no-repeat;
+        -webkit-box-decoration-break: clone;
+        box-decoration-break: clone;
+        &:hover {
+            background-position: left center;
+            background-size: 100% 100%;
+        }
+    }
+}
 @mixin link-underline($style: solid) {
     color: inherit;
     border-radius: 0;
@@ -84,10 +99,21 @@ $link-local-mask: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg
         }
     }
 }
-:is(.protyle-wysiwyg, .table__cell-rich) :is([data-node-id], [data-table-cell-node]) span[data-type~=a],
+.protyle-wysiwyg [data-node-id] span[data-type~=a],
+.protyle-wysiwyg [data-table-cell-node] span[data-type~=a],
+.table__cell-rich [data-node-id] span[data-type~=a],
+.table__cell-rich [data-table-cell-node] span[data-type~=a],
 .mindmap-view__content span[data-type~=a],
 .b3-typography span[data-type~=a],
 .b3-list-item[data-treetype=outline] > .b3-list-item__text span[data-type~=a] {
     @include link-underline;
     @include link-style;
+}
+.protyle-wysiwyg [data-node-id] span[data-type~=a],
+.protyle-wysiwyg [data-table-cell-node] span[data-type~=a],
+.table__cell-rich [data-node-id] span[data-type~=a],
+.table__cell-rich [data-table-cell-node] span[data-type~=a],
+.mindmap-view__content span[data-type~=a],
+.av__celltext--rich span[data-type~=a] {
+    @include link-underline-hover;
 }

@@ -1,3 +1,28 @@
+### v1.7.7 / 2026-10-25
+- 回退链接默认样式，支持通过Neo+菜单-外观-配置元素来使用链接图标样式
+- 减小全局界面圆角弧度
+- 新增置顶预设配色：柔和
+- 出于主题的可维护性考虑，移除彩色列表特性
+- 将彩色标题移入元素配置
+- 将多列斜杠菜单、卡片式搜索列表移入外观子菜单
+- 移除行内备注图标并固定颜色
+- 支持配置显示标题层级
+- 重新设计任务复选框、单选控件的动效
+- 重新设计列表子弹线的动效
+- 为右上角消息队列添加依次进场和平滑退场效果
+- 优化加载动效（思源3.8.9）
+- Restored the default link style; enable link icons via Neo+ Menu → Appearance → Configure Elements
+- Reduced corner radii throughout the interface
+- Added a new pinned preset palette: Soft
+- Removed colored lists to simplify theme maintenance
+- Moved colored headings to the element settings
+- Moved Multicolumn Slash Menu and Card Style Search List to the Appearance submenu
+- Removed the inline memo icon and set a fixed color
+- Added an option to show heading levels
+- Redesigned animations for task checkboxes and radio buttons
+- Redesigned List Bullet Line animations
+- Added staggered entrance and smooth exit animations to the notification queue in the upper right corner
+- Refined loading animations (SiYuan 3.8.9)
 ### v1.7.6 / 2026-10-22
 - 为详情组件增加展开/收起动效
 - 重做全部链接样式

@@ -13,13 +13,8 @@
         padding-right: 2px;
     }
 }
-.protyle-background--enable .protyle-background__icon {
-    transition: var(--_emoji-transiton);
-    &:hover {
-        opacity: 1;
-        scale: 1.05;
-        transform: translateY(-2px);
-    }
+.protyle-background--enable .protyle-background__icon:hover {
+    opacity: 1;
 }
 .protyle-attr--refcount {
     @include superellipse-use($radius-chip);

@@ -3,9 +3,18 @@ $ref-mask: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewB
 $ref-static-mask: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="19" r="3" fill="black"/><path d="M9 19h8.5a3.5 3.5 0 0 0 0-7h-11a3.5 3.5 0 0 1 0-7H15"/><circle cx="18" cy="5" r="3" fill="black"/></svg>');
 $ref-virtual-mask: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="19" r="3"/><path d="M9 19h8.5a3.5 3.5 0 0 0 0-7h-11a3.5 3.5 0 0 1 0-7H15" stroke-dasharray="3 3"/><circle cx="18" cy="5" r="3"/></svg>');
 $ref-annotation-mask: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M2.4 15.6 14.4 3.6a4.25 4.25 0 0 1 6 6l-12 12h-6Z"/><path d="m12.4 5.6 6 6M2.4 15.6a6 6 0 0 1 6 6"/></svg>');
-:is(.protyle-wysiwyg, .table__cell-rich) :is([data-node-id], [data-table-cell-node]) span[data-type~=block-ref]:not(.av__celltext),
-:is(.protyle-wysiwyg, .table__cell-rich) :is([data-node-id], [data-table-cell-node]) span[data-type~=file-annotation-ref],
-:is(.protyle-wysiwyg, .table__cell-rich) :is([data-node-id], [data-table-cell-node]) span[data-type~=virtual-block-ref],
+.protyle-wysiwyg [data-node-id] span[data-type~=block-ref]:not(.av__celltext),
+.protyle-wysiwyg [data-table-cell-node] span[data-type~=block-ref]:not(.av__celltext),
+.table__cell-rich [data-node-id] span[data-type~=block-ref]:not(.av__celltext),
+.table__cell-rich [data-table-cell-node] span[data-type~=block-ref]:not(.av__celltext),
+.protyle-wysiwyg [data-node-id] span[data-type~=file-annotation-ref],
+.protyle-wysiwyg [data-table-cell-node] span[data-type~=file-annotation-ref],
+.table__cell-rich [data-node-id] span[data-type~=file-annotation-ref],
+.table__cell-rich [data-table-cell-node] span[data-type~=file-annotation-ref],
+.protyle-wysiwyg [data-node-id] span[data-type~=virtual-block-ref],
+.protyle-wysiwyg [data-table-cell-node] span[data-type~=virtual-block-ref],
+.table__cell-rich [data-node-id] span[data-type~=virtual-block-ref],
+.table__cell-rich [data-table-cell-node] span[data-type~=virtual-block-ref],
 .mindmap-view__content span[data-type~=block-ref]:not(.av__celltext),
 .mindmap-view__content span[data-type~=file-annotation-ref],
 .mindmap-view__content span[data-type~=virtual-block-ref],
@@ -39,4 +48,24 @@ $ref-annotation-mask: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000
             mask-image: $ref-annotation-mask;
         }
     }
+}
+.protyle-wysiwyg [data-node-id] span[data-type~=block-ref]:not(.av__celltext),
+.protyle-wysiwyg [data-table-cell-node] span[data-type~=block-ref]:not(.av__celltext),
+.table__cell-rich [data-node-id] span[data-type~=block-ref]:not(.av__celltext),
+.table__cell-rich [data-table-cell-node] span[data-type~=block-ref]:not(.av__celltext),
+.protyle-wysiwyg [data-node-id] span[data-type~=file-annotation-ref],
+.protyle-wysiwyg [data-table-cell-node] span[data-type~=file-annotation-ref],
+.table__cell-rich [data-node-id] span[data-type~=file-annotation-ref],
+.table__cell-rich [data-table-cell-node] span[data-type~=file-annotation-ref],
+.protyle-wysiwyg [data-node-id] span[data-type~=virtual-block-ref],
+.protyle-wysiwyg [data-table-cell-node] span[data-type~=virtual-block-ref],
+.table__cell-rich [data-node-id] span[data-type~=virtual-block-ref],
+.table__cell-rich [data-table-cell-node] span[data-type~=virtual-block-ref],
+.mindmap-view__content span[data-type~=block-ref]:not(.av__celltext),
+.mindmap-view__content span[data-type~=file-annotation-ref],
+.mindmap-view__content span[data-type~=virtual-block-ref],
+.av__celltext--rich span[data-type~=block-ref]:not(.av__celltext),
+.av__celltext--rich span[data-type~=file-annotation-ref],
+.av__celltext--rich span[data-type~=virtual-block-ref] {
+    @include link.link-underline-hover;
 }

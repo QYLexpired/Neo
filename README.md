@@ -12,6 +12,9 @@ See the [CHANGELOG](https://github.com/QYLexpired/Neo/blob/main/CHANGELOG.md) fo
 - Moved Multicolumn Slash Menu and Card Style Search List to the Appearance submenu
 - Removed the inline memo icon and set a fixed color
 - Added an option to show heading levels
+- Redesigned animations for task checkboxes and radio buttons
+- Redesigned List Bullet Line animations
+- Added staggered entrance and smooth exit animations to the notification queue in the upper right corner
 - Refined loading animations (SiYuan 3.8.9)
 ### <span style="font-family: neo;">1.7.6</span>
 - Added expand/collapse animations to details elements

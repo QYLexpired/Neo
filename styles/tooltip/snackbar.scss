@@ -1,8 +1,14 @@
 @use "../utils" as *;
 @use "../component" as *;
 .b3-snackbar {
+    --_message-entrance-delay: 0.3s;
     transition: none !important;
     transform: none !important;
+    @for $index from 1 through 4 {
+        &:nth-last-child(#{$index}) {
+            --_message-entrance-delay: #{($index - 1) * 0.08s};
+        }
+    }
 }
 .b3-snackbars {
     top: 20px;
@@ -27,6 +33,21 @@
         top: 30px;
         right: -15px;
     }
+    @supports (interpolate-size: allow-keywords) {
+        .b3-snackbar {
+            interpolate-size: allow-keywords;
+            height: auto;
+            margin: 0 0 16px;
+            transition:
+                height 0.2s var(--neo-ease-out-3),
+                margin-bottom 0.2s var(--neo-ease-out-3) !important;
+            &--hide {
+                height: 0;
+                margin-bottom: 0;
+                pointer-events: none;
+            }
+        }
+    }
 }
 .b3-snackbar__close {
     display: none;
@@ -41,17 +62,24 @@
         @include frostedglass-luminous(snackbar);
     }
     padding: 12px 24px !important; // 覆盖内联
+    opacity: 1;
+    filter: none;
     transition: none;
     transform: none;
     transform-origin: center;
-    .b3-snackbar--hide &,
-    .b3-snackbar--hide:not(:only-child) & {
-        animation: neo-message-out 1.2s var(--neo-ease-spring-2);
-        transition: display 1.2s;
-        transition-behavior: allow-discrete;
+    .b3-snackbars--show .b3-snackbar:not(.b3-snackbar--hide) > & {
+        animation: neo-message-entrance 0.2s var(--neo-ease-out-3) var(--_message-entrance-delay, 0s) backwards;
     }
-    .b3-snackbars--show & {
-        animation: neo-message-entrance 0.2s var(--neo-ease-out-3);
+    .b3-snackbar--hide & {
+        opacity: 0;
+        filter: blur(12px);
+        transform: scale(1.2);
+        transition:
+            opacity 1.2s var(--neo-ease-spring-2),
+            filter 1.2s var(--neo-ease-spring-2),
+            transform 1.2s var(--neo-ease-spring-2),
+            display 1.2s;
+        transition-behavior: allow-discrete;
     }
     .b3-snackbar--error & {
         &::after {
@@ -69,18 +97,6 @@
         opacity: 1;
         filter: none;
         transform: none;
-    }
-}
-@keyframes neo-message-out {
-    0% {
-        opacity: 1;
-        filter: none;
-        transform: none;
-    }
-    100% {
-        opacity: 0;
-        filter: blur(12px);
-        transform: scale(1.2);
     }
 }
 .b3-snackbars {
