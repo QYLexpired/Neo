@@ -42,6 +42,19 @@
     border-radius: inherit;
     corner-shape: inherit;
 }
+.mindmap-view__document-viewport {
+    @include superellipse-use($radius-block);
+    color: var(--b3-theme-on-background);
+    border: unset;
+    outline: 1px solid oklch(from currentColor l c h / 0.12);
+    outline-offset: -1px;
+    background-image: radial-gradient(circle, oklch(from currentColor l c h / 0.12) 1px, transparent 1px);
+    &::before,
+    &::after {
+        border-color: oklch(from currentColor l c h / 0.12);
+        opacity: 1;
+    }
+}
 .mindmap-view__toolbar-group {
     @include superellipse-use($radius-card);
     background-color: oklch(from var(--b3-theme-background) l c h / 0.8);

@@ -13,6 +13,9 @@
         padding: 4px 8px !important; 
     }
 }
+.agent-chat__input-resize .protyle-block-resize[data-resize-axis="height"] {
+    top: -12px;
+}
 .agent-chat__buttons {
     margin: 6px;
 }
