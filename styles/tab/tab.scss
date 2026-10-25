@@ -108,6 +108,7 @@ body:not(.body--toolbar-hide) [data-type="wnd"] > .fn__flex:first-child {
                 .item__text {
                     color: var(--b3-theme-on-surface);
                 }
+                &.item--focus,
                 &:hover {
                     .item__text {
                         color: var(--b3-theme-on-background);

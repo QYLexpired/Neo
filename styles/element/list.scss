@@ -304,7 +304,7 @@ $neo-custom-task-codes: neo-list-exclude($neo-task-codes, $neo-standard-task-cod
     --_list-accent-color: var(--b3-theme-error);
     --_checkbox-content-mask: #{$task-cancelled-content-mask};
 }
-#{neo-task-export-inputs(':where(:not([data-task=" "]):not([data-task=""]):not([data-task="x"]):not([data-task="X"]):not([data-task="/"]):not([data-task="-"]))')} {
+#{neo-task-export-inputs(':not([data-task=" "], [data-task=""], [data-task="x"], [data-task="X"], [data-task="/"], [data-task="-"])')} {
     &::after {
         content: attr(data-task);
         mask-image: none;
