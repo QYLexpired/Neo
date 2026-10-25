@@ -48,6 +48,9 @@
 }
 .mindmap-view__toolbar .block__icon[aria-pressed=true] {
     @include icon-accent($important: true);
+    &[data-subtype="lock"] {
+        @include icon($important: true);
+    }
 }
 .mindmap-view__summary-actions {
     .b3-button {

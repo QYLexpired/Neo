@@ -3,7 +3,8 @@
 - Neo owes much of its design and ideas to the [Asri theme](https://github.com/mustakshif/Asri). Thank you, [mustakshif](https://github.com/mustakshif) — your eye for design, technical skill, and creativity made Neo possible.
 ## <span style="font-family: neo;">Changelog</span>
 See the [CHANGELOG](https://github.com/QYLexpired/Neo/blob/main/CHANGELOG.md) for the full update history.
-### <span style="font-family: neo;">1.7.7</span>
+### <span style="font-family: neo;">1.8.0</span>
+- Added support for native window controls on Windows (SiYuan 3.8.9)
 - Restored the default link style; enable link icons via Neo+ Menu → Appearance → Configure Elements
 - Reduced corner radii throughout the interface
 - Added a new pinned preset palette: Soft
@@ -15,6 +16,8 @@ See the [CHANGELOG](https://github.com/QYLexpired/Neo/blob/main/CHANGELOG.md) fo
 - Redesigned animations for task checkboxes and radio buttons
 - Redesigned List Bullet Line animations
 - Added staggered entrance and smooth exit animations to the notification queue in the upper right corner
+- Removed document lock/unlock animations
+- Fixed an extra scrollbar when editor panes are stacked vertically
 - Refined loading animations (SiYuan 3.8.9)
 ### <span style="font-family: neo;">1.7.6</span>
 - Added expand/collapse animations to details elements

@@ -3,7 +3,8 @@
 - Neo主题大量参考了[Asri主题](https://github.com/mustakshif/Asri)的设计和创意，非常感谢[mustakshif](https://github.com/mustakshif)，没有你超强的审美、技术力和让人惊叹的创意，就不会有Neo的出现
 ## 更新日志
 完整更新历史可查看[CHANGELOG](https://github.com/QYLexpired/Neo/blob/main/CHANGELOG.md)
-### <span style="font-family: neo;">1.7.7</span>
+### <span style="font-family: neo;">1.8.0</span>
+- 适配Windows原生控制组件（思源3.8.9）
 - 回退链接默认样式，支持通过Neo+菜单-外观-配置元素来使用链接图标样式
 - 减小全局界面圆角弧度
 - 新增置顶预设配色：柔和
@@ -16,6 +17,7 @@
 - 重新设计列表子弹线的动效
 - 为右上角消息队列添加依次进场和平滑退场效果
 - 移除文档解锁/锁定动效
+- 修复上下分屏时出现异常滚动条的问题
 - 优化加载动效（思源3.8.9）
 ### <span style="font-family: neo;">1.7.6</span>
 - 为详情组件增加展开/收起动效

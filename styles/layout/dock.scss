@@ -19,7 +19,10 @@
     }
     body.body--toolbar-hide & {
         margin-top: 0;
-        padding-top: 42px;
+        padding-top: var(--neo-topbar-fusion-height);
         height: 100% !important; // 覆盖原生停靠栏高度，避免底部留空。
+    }
+    html.window-controls-overlay body.body--windows.body--toolbar-hide & {
+        margin-top: 0;
     }
 }

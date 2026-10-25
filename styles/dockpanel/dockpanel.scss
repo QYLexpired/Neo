@@ -16,11 +16,11 @@
 }
 .dockPanel.fullscreen > .block__icons {
     &  > .fn__flex-1 {
-        height: 32px;
-        line-height: 32px;
+        height: var(--neo-topbar-height);
+        line-height: var(--neo-topbar-height);
         .body--toolbar-hide & {
-            height: 42px;
-            line-height: 42px;
+            height: var(--neo-topbar-fusion-height);
+            line-height: var(--neo-topbar-fusion-height);
         }
     }
 }

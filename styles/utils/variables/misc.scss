@@ -1,4 +1,6 @@
 :root {
+    --neo-topbar-fusion-height: var(--b3-window-controls-top-height, 42px);
+    --neo-topbar-height: max(32px, var(--b3-window-controls-height, 0px));
     --b3-layout-space: 6px;
     --b3-transition: 0.15s;
     --b3-width-transition: width var(--b3-transition);

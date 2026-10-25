@@ -1,4 +1,5 @@
-### v1.7.7 / 2026-10-25
+### v1.8.0 / 2026-10-25
+- 适配Windows原生控制组件（思源3.8.9）
 - 回退链接默认样式，支持通过Neo+菜单-外观-配置元素来使用链接图标样式
 - 减小全局界面圆角弧度
 - 新增置顶预设配色：柔和
@@ -10,7 +11,10 @@
 - 重新设计任务复选框、单选控件的动效
 - 重新设计列表子弹线的动效
 - 为右上角消息队列添加依次进场和平滑退场效果
+- 移除文档解锁/锁定动效
+- 修复上下分屏时出现异常滚动条的问题
 - 优化加载动效（思源3.8.9）
+- Added support for native window controls on Windows (SiYuan 3.8.9)
 - Restored the default link style; enable link icons via Neo+ Menu → Appearance → Configure Elements
 - Reduced corner radii throughout the interface
 - Added a new pinned preset palette: Soft
@@ -22,6 +26,8 @@
 - Redesigned animations for task checkboxes and radio buttons
 - Redesigned List Bullet Line animations
 - Added staggered entrance and smooth exit animations to the notification queue in the upper right corner
+- Removed document lock/unlock animations
+- Fixed an extra scrollbar when editor panes are stacked vertically
 - Refined loading animations (SiYuan 3.8.9)
 ### v1.7.6 / 2026-10-22
 - 为详情组件增加展开/收起动效

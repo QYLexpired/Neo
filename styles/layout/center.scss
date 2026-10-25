@@ -4,6 +4,7 @@ body:not(.body--window) {
         border-radius: unset;
         .neo-haswnd {
             padding: calc(var(--_layout-gap) / 2);
+            min-height: 0;
             & > [data-type="wnd"] {
                 @include superellipse($radius-layout);
                 box-shadow: var(--neo-layout-shadow-blur);

@@ -99,7 +99,7 @@
 #windowControls {
     z-index: 5 !important;
 }
-html[data-frontend="desktop"] {
+html[data-frontend="desktop"]:not(.window-controls-overlay) {
     body.body--windows,
     body.body--linux {
         .fullscreen {

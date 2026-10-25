@@ -3,7 +3,8 @@
 - Neo 主題大量參考了 [Asri 主題](https://github.com/mustakshif/Asri) 的設計和創意，非常感謝 [mustakshif](https://github.com/mustakshif)，沒有你超強的審美、技術力和令人驚嘆的創意，就不會有 Neo 的出現
 ## 更新日誌
 完整更新紀錄可於 [CHANGELOG](https://github.com/QYLexpired/Neo/blob/main/CHANGELOG.md) 查看
-### <span style="font-family: neo;">1.7.7</span>
+### <span style="font-family: neo;">1.8.0</span>
+- 適配 Windows 原生視窗控制項（思源 3.8.9）
 - 還原預設連結樣式，可透過 Neo+ 選單 → 外觀 → 設定元素使用連結圖示樣式
 - 縮小全域介面圓角半徑
 - 新增置頂預設配色：柔和
@@ -15,6 +16,8 @@
 - 重新設計任務核取方塊與單選按鈕的動畫
 - 重新設計列表引導線的動畫
 - 為右上角訊息佇列新增依序進場與平滑退場效果
+- 移除文件解鎖/鎖定動畫
+- 修正上下分割畫面時出現多餘捲軸的問題
 - 最佳化載入動畫（思源 3.8.9）
 ### <span style="font-family: neo;">1.7.6</span>
 - 為詳情元件新增展開/收合動畫
