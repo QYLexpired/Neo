@@ -1,3 +1,8 @@
+### v1.8.1 / 2026-10-26
+- 优化复选框样式以提升插件兼容性
+- 修复部分编辑器元素穿透超级融合遮罩的问题
+- Refined checkbox styling to improve plugin compatibility
+- Fixed some editor elements appearing above the Super Fusion overlay
 ### v1.8.0 / 2026-10-25
 - 适配Windows原生控制组件（思源3.8.9）
 - 回退链接默认样式，支持通过Neo+菜单-外观-配置元素来使用链接图标样式

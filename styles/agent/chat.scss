@@ -18,9 +18,15 @@
 }
 .agent-chat__buttons {
     margin: 6px;
+    .b3-button--icon {
+        padding: 4px 6px;
+    }
 }
 .agent-chat__button-options {
-    overflow: visible;
+    // 修复 https://github.com/QYLexpired/Neo/issues/80
+    padding: 2px;
+    margin: -2px;
+    scroll-padding: 2px;
 }
 .agent-chat__composer-host .protyle-content {
     padding: 0;
