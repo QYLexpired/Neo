@@ -18,8 +18,8 @@
         @include superellipse-use($radius-chip);
     }
     .av__calendar-day--today > span {
-        background-color: var(--neo-base-bg);
-        @include contrast-color(--neo-base-bg);
+        background-color: var(--b3-base-fill);
+        @include contrast-color(--b3-base-fill);
     }
     .av__calendar-item {
         --_av__calendar-item-default-bg: oklch(from var(--b3-theme-accent) l c h / 0.15);

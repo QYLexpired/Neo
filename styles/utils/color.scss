@@ -32,7 +32,10 @@
     --b3-theme-surface: var(--neo-base-surface, var(--neo-default-surface));
     --b3-theme-on-background: var(--neo-base-on-background, var(--neo-default-on-background));
     // derived
-    // primary兼容思源固有变量和插件的引用，在accent的基础上限制亮度，兼顾白字在primary上、primary在background上的可读性（accent只需确保在background的可读性）
+    // neo不主动使用primary，primary仅用于兼容思源固有变量和插件引用，在accent的基础上限制亮度，兼顾白字在primary上、primary在background上的可读性（accent只需确保在background的可读性）
+    // accent代表强调内容（文字可读），用contrast-color处理accent背景上文字可读性
+    // --b3-base-fill代表base语义背景（填充色），用contrast-color处理该背景上文字可读性
+    --b3-base-fill: oklch(from var(--b3-theme-base) clamp(0, l, 0.9) c h);
     --b3-theme-primary: oklch(from var(--b3-theme-accent) clamp(0.5, l, 0.56) c h);
     --b3-theme-primary-light: oklch(from var(--b3-theme-primary) l c h / 0.56);
     --b3-theme-primary-lighter: oklch(from var(--b3-theme-primary) l c h / 0.38);
@@ -76,12 +79,10 @@
     --b3-protyle-inline-link-color: var(--b3-theme-accent);
     --b3-menu-icon-color: var(--b3-theme-on-surface);
     // neo
-    // neo-base-bg作为base语义的背景色（其上的文字颜色通过使用contrast-color自动适应），限制亮度以确保在background上的可见性
-    --neo-base-bg: oklch(from var(--b3-theme-base) clamp(0, l, 0.9) c h);
     --neo-input-primary: oklch(from var(--b3-theme-base) clamp(0, l, 0.76) c h / 0.7);
-    --neo-button-primary: var(--neo-base-bg);
-    --neo-switch-primary: var(--neo-base-bg);
-    --neo-menu-primary: var(--neo-base-bg);
+    --neo-button-primary: var(--b3-base-fill);
+    --neo-switch-primary: var(--b3-base-fill);
+    --neo-menu-primary: var(--b3-base-fill);
 }
 @mixin dark-color {
     // default
@@ -103,6 +104,7 @@
     --b3-theme-surface: var(--neo-base-surface, var(--neo-default-surface));
     --b3-theme-on-background: var(--neo-base-on-background, var(--neo-default-on-background));
     // derived
+    --b3-base-fill: oklch(from var(--b3-theme-base) clamp(0.5, l, 1) c h);
     --b3-theme-primary: oklch(from var(--b3-theme-accent) clamp(0.6, l, 0.62) c h);
     --b3-theme-primary-light: oklch(from var(--b3-theme-primary) l c h / 0.56);
     --b3-theme-primary-lighter: oklch(from var(--b3-theme-primary) l c h / 0.38);
@@ -146,11 +148,10 @@
     --b3-protyle-inline-link-color: var(--b3-theme-accent);
     --b3-menu-icon-color: var(--b3-theme-on-surface);
     // neo
-    --neo-base-bg: oklch(from var(--b3-theme-base) clamp(0.5, l, 1) c h);
     --neo-input-primary: oklch(from var(--b3-theme-base) clamp(0.5, l, 1) c h / 0.7);
-    --neo-button-primary: var(--neo-base-bg);
+    --neo-button-primary: var(--b3-base-fill);
     --neo-switch-primary: oklch(from var(--b3-theme-base) clamp(0.42, l, 0.76) c h);
-    --neo-menu-primary: var(--neo-base-bg);
+    --neo-menu-primary: var(--b3-base-fill);
 }
 @mixin light-font-color {
     $font-l-light: 0.58;
