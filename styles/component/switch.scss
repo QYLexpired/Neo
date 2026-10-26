@@ -49,7 +49,7 @@ $switch-width: 36px;
             }
         }
     }
-    .neo-mode-dark & {
+    [data-theme-mode="dark"] & {
         --_switch-thumb-color: var(--b3-theme-on-background);
         box-shadow: inset 0 0 0 1px oklch(from var(--b3-theme-on-background) l c h / 0.12);
         &:checked {

@@ -3,6 +3,9 @@
 - Neo 主題大量參考了 [Asri 主題](https://github.com/mustakshif/Asri) 的設計和創意，非常感謝 [mustakshif](https://github.com/mustakshif)，沒有你超強的審美、技術力和令人驚嘆的創意，就不會有 Neo 的出現
 ## 更新日誌
 完整更新紀錄可於 [CHANGELOG](https://github.com/QYLexpired/Neo/blob/main/CHANGELOG.md) 查看
+### <span style="font-family: neo;">1.8.1</span>
+- 最佳化核取方塊樣式，提升外掛相容性
+- 修正部分編輯器元素穿透超級融合遮罩的問題
 ### <span style="font-family: neo;">1.8.0</span>
 - 適配 Windows 原生視窗控制項（思源 3.8.9）
 - 還原預設連結樣式，可透過 Neo+ 選單 → 外觀 → 設定元素使用連結圖示樣式
@@ -19,14 +22,6 @@
 - 移除文件解鎖/鎖定動畫
 - 修正上下分割畫面時出現多餘捲軸的問題
 - 最佳化載入動畫（思源 3.8.9）
-### <span style="font-family: neo;">1.7.6</span>
-- 為詳情元件新增展開/收合動畫
-- 重做所有連結樣式
-- 重做行內備註樣式
-- 重做標籤樣式
-- 重做資料庫標題樣式
-- 最佳化部分動畫
-- 移除頁籤關閉動畫
 ## 說明
 - 主題的部分樣式和功能無法僅透過 CSS 實現，因此必須安裝並啟用主題的配套外掛：[Neo+](https://github.com/QYLexpired/Neo-Plus)
 - Neo 主題和 Neo+ 外掛均不會對文件資料進行任何修改，可隨時啟用或停用，不存在遷移負擔

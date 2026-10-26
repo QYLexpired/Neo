@@ -34,39 +34,39 @@ $link-local-mask: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg
     }
 }
 @mixin link-icon($mask: $link-mask) {
-    --_link-border-color: oklch(from currentColor l c h / 0.15);
     color: inherit;
     opacity: 1;
     transition: var(--b3-transition);
     text-decoration: none;
-    border: 0.5px solid var(--_link-border-color);
+    border: 0.5px solid oklch(from currentColor l c h / 0.15);
     background-image: unset;
     padding: 0 0.2em;
     margin: 0 0.1em;
     @include superellipse-use($radius-chip);
-    background-color: oklch(from currentColor l c h / 0.05);
+    background-color: oklch(from currentColor l c h / 0.075);
     -webkit-box-decoration-break: slice;
     box-decoration-break: slice;
     &:hover {
         color: inherit;
         text-decoration: none;
         @include superellipse-use($radius-chip);
-        background-color: oklch(from currentColor l c h / 0.1);
-        --_link-border-color: oklch(from currentColor l c h / 0.2);
+        background-color: oklch(from currentColor l c h / 0.125);
     }
-    &::before {
-        content: "";
-        pointer-events: none;
-        display: inline-block;
-        width: 0.85em;
-        height: 0.85em;
-        margin-inline-end: 0.3em;
-        vertical-align: -0.05em;
-        background-color: currentColor;
-        mask-image: $mask;
-        mask-position: center;
-        mask-size: contain;
-        mask-repeat: no-repeat;
+    @if $mask != null {
+        &::before {
+            content: "";
+            pointer-events: none;
+            display: inline-block;
+            width: 0.85em;
+            height: 0.85em;
+            margin-inline-end: 0.3em;
+            vertical-align: -0.05em;
+            background-color: currentColor;
+            mask-image: $mask;
+            mask-position: center;
+            mask-size: contain;
+            mask-repeat: no-repeat;
+        }
     }
 }
 @mixin link-types($attribute: data-href) {
@@ -91,11 +91,10 @@ $link-local-mask: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg
         @content;
     }
     .neo-element-link-style-icon.neo-mode-dark & {
-        background-color: oklch(from currentColor l c h / 0.08);
-        --_link-border-color: oklch(from currentColor l c h / 0.18);
+        background-color: oklch(from currentColor l c h / 0.1);
+        border-color: oklch(from currentColor l c h / 0.185);
         &:hover {
-            background-color: oklch(from currentColor l c h / 0.15);
-            --_link-border-color: oklch(from currentColor l c h / 0.25);
+            background-color: oklch(from currentColor l c h / 0.18);
         }
     }
 }

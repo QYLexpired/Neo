@@ -1,0 +1,9 @@
+[data-key="dialog-commandpanel"] {
+    .b3-dialog__container,
+    .b3-dialog__scrim {
+        transition: none;
+    }
+    .b3-dialog__scrim {
+        opacity: 0;
+    }
+}

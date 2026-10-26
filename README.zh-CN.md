@@ -5,6 +5,7 @@
 完整更新历史可查看[CHANGELOG](https://github.com/QYLexpired/Neo/blob/main/CHANGELOG.md)
 ### <span style="font-family: neo;">1.8.1</span>
 - 优化复选框样式以提升插件兼容性
+- 修复部分编辑器元素穿透超级融合遮罩的问题
 ### <span style="font-family: neo;">1.8.0</span>
 - 适配Windows原生控制组件（思源3.8.9）
 - 回退链接默认样式，支持通过Neo+菜单-外观-配置元素来使用链接图标样式
