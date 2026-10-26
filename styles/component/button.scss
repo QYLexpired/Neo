@@ -185,15 +185,15 @@
     }
     &.b3-chip--primary,
     &.b3-chip--current {
-        background-color: var(--neo-button-primary);
-        @include contrast-color(--neo-button-primary);
+        background-color: var(--neo-base-bg);
+        @include contrast-color(--neo-base-bg);
         .b3-chip__close {
-            @include contrast-color(--neo-button-primary);
+            @include contrast-color(--neo-base-bg);
         }
         /*&.history__compare-filter {
             & > span {
                 outline: 1px solid;
-                @include contrast-color(--neo-button-primary, outline-color, 0.8);
+                @include contrast-color(--neo-base-bg, outline-color, 0.8);
             }
         } 低效选择器导致性能降低*/
     }

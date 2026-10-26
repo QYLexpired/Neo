@@ -27,8 +27,8 @@
     --b3-graph-hl-point: var(--b3-theme-accent);
     --b3-graph-heading-point: oklch(from var(--b3-theme-accent) l 0.3 0);
     --b3-graph-list-point: oklch(from var(--b3-theme-accent) l 0.3 30);
-    --b3-graph-todo-point: oklch(from var(--b3-theme-accent) l 0.3 40)
-    --b3-graph-olist-point: boklch(from var(--b3-theme-accent) l 0.3 50);
+    --b3-graph-todo-point: oklch(from var(--b3-theme-accent) l 0.3 40);
+    --b3-graph-olist-point: oklch(from var(--b3-theme-accent) l 0.3 50);
     --b3-graph-listitem-point: oklch(from var(--b3-theme-accent) l 0.3 60);
     --b3-graph-bq-point: oklch(from var(--b3-theme-accent) l 0.3 90);
     --b3-graph-callout-point: oklch(from var(--b3-theme-accent) l 0.3 120);

@@ -42,13 +42,16 @@
     border-radius: inherit;
     corner-shape: inherit;
 }
-.mindmap-view__document-viewport {
+.mindmap-view__document-viewport,
+.mindmap-view__document-frame {
     @include superellipse-use($radius-block);
     color: var(--b3-theme-on-background);
     border: unset;
     outline: 1px solid oklch(from currentColor l c h / 0.12);
     outline-offset: -1px;
     background-image: radial-gradient(circle, oklch(from currentColor l c h / 0.12) 1px, transparent 1px);
+    background-size: 24px 24px;
+    background-position: center;
     &::before,
     &::after {
         border-color: oklch(from currentColor l c h / 0.12);
@@ -59,7 +62,8 @@
     @include superellipse-use($radius-card);
     background-color: oklch(from var(--b3-theme-background) l c h / 0.8);
 }
-.mindmap-view__toolbar .block__icon[aria-pressed=true] {
+.mindmap-view__toolbar .block__icon[aria-pressed=true],
+.mindmap-view__toolbar .block__icon--active {
     @include icon-accent($important: true);
     &[data-subtype="lock"] {
         @include icon($important: true);
@@ -87,10 +91,54 @@
 .mindmap-view__inspector {
     @include superellipse-use($capsule);
 }
+.mindmap-view .color__square--current {
+    outline: 2px solid var(--b3-theme-accent);
+    outline-offset: -2px;
+}
 .mindmap-view__inspector,
 .mindmap-view__route-status {
     padding: 4px 12px;
     bottom: 12px;
+}
+// 关系与路径控件
+.mindmap-view__relation {
+    @include superellipse-use($radius-item);
+    color: var(--b3-theme-accent);
+    outline: 2px solid transparent;
+    outline-offset: -2px;
+    transition: outline-color var(--b3-transition);
+    &--hover {
+        outline-color: oklch(from currentColor l c h / 0.18);
+        box-shadow: none;
+    }
+    &--selected {
+        outline-color: var(--b3-theme-accent);
+    }
+}
+.b3-text-field.mindmap-view__relation-editor,
+.b3-text-field.mindmap-view__summary-editor {
+    color: var(--b3-theme-on-background);
+    &,
+    &:hover,
+    &:focus {
+        background-color: var(--b3-theme-background);
+    }
+}
+.mindmap-view__route-handle {
+    &::before {
+        border-color: var(--b3-theme-accent);
+    }
+    &:hover::before,
+    &:focus-visible::before {
+        background-color: var(--b3-theme-accent);
+    }
+}
+.mindmap-view__route-endpoint[data-endpoint=to]::before {
+    background-color: var(--b3-theme-accent);
+}
+.mindmap-view__level-control:focus-within,
+.mindmap-view__task:focus-visible {
+    outline-color: var(--b3-theme-accent);
 }
 // 线条
 :root {
@@ -123,6 +171,10 @@
     &:hover {
         outline-color: oklch(from currentColor l c h / 0.18);
         box-shadow: none !important;
+    }
+    &:focus-visible {
+        outline: 2px solid var(--b3-theme-accent);
+        outline-offset: -2px;
     }
     &.mindmap-view__node--relation {
         box-shadow: none;
@@ -180,5 +232,13 @@
     }
     &.mindmap-view__node--selected {
         outline-color: var(--b3-theme-accent);
+    }
+}
+@media print {
+    .mindmap-view__node,
+    .mindmap-view__relation,
+    .mindmap-view__summary-editor {
+        outline: none !important;
+        box-shadow: none !important;
     }
 }

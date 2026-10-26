@@ -57,6 +57,9 @@ $brutalism-palettes: zine, retroconsole, bumblebee, glitch, acid, californiacoas
         }
     }
     &.neo-mode-dark .b3-switch {
+        &:not(:checked) {
+            background-color: oklch(from var(--b3-theme-on-background) l c h / 0.12);
+        }
         &::after {
             background-color: var(--b3-theme-on-surface);
         }
