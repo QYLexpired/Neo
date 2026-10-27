@@ -3,6 +3,9 @@
 - Neo主题大量参考了[Asri主题](https://github.com/mustakshif/Asri)的设计和创意，非常感谢[mustakshif](https://github.com/mustakshif)，没有你超强的审美、技术力和让人惊叹的创意，就不会有Neo的出现
 ## 更新日志
 完整更新历史可查看[CHANGELOG](https://github.com/QYLexpired/Neo/blob/main/CHANGELOG.md)
+### <span style="font-family: neo;">1.8.2</span>
+- 优化数据库看板视图样式
+- 优化数据库关联菜单样式
 ### <span style="font-family: neo;">1.8.1</span>
 - 优化复选框样式以提升插件兼容性
 - 修复部分编辑器元素穿透超级融合遮罩的问题

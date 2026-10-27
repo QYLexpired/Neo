@@ -9,6 +9,11 @@
         corner-shape: inherit;
         background-color: var(--b3-av-item-background, transparent) !important;
     }
+    &.av__gallery-item--select::before {
+        background-color: oklch(from var(--b3-theme-accent) l c h / 0.12) !important;
+        outline: 1px solid oklch(from var(--b3-theme-accent) l c h / 0.25);
+        outline-offset: -1px;
+    }
 }
 .av__gallery-fields:hover .b3-chip[data-type=block-more] {
     right: 70px;
@@ -25,7 +30,8 @@
     @include button-transparent-hover-translucent;
     @include superellipse-use($radius-card);
 }
-.av__gallery-cover {
+.av__gallery-cover,
+.av__kanban--bg .av__gallery-cover {
     border-bottom: 0.75px solid var(--b3-border-color-trans);
     @include superellipse-use($radius-card);
     border-bottom-left-radius: 0;
@@ -77,22 +83,54 @@
 }
 .av__kanban--bg {
     .av__kanban-group {
+        --_av-kanban-column-bg: color-mix(in srgb, var(--b3-av-kanban-background) 40%, var(--b3-theme-background));
+        --_av-kanban-card-bg: color-mix(in srgb, var(--b3-av-kanban-background) 65%, color-mix(in srgb, var(--b3-theme-background) 96%, var(--b3-theme-on-background)));
+        --_av-kanban-border: oklch(from var(--_av-kanban-add-color) l c h / 0.16);
+        --_av-kanban-add-color: oklch(from var(--b3-av-kanban-background) 0.58 clamp(0, calc(c * 1.6), 0.16) h);
+        .neo-mode-dark & {
+            --_av-kanban-column-bg: color-mix(in srgb, oklch(from var(--b3-av-kanban-background) calc(l - 0.04) c h) 45%, var(--b3-theme-background));
+            --_av-kanban-border: oklch(from var(--_av-kanban-add-color) l c h / 0.18);
+            --_av-kanban-add-color: oklch(from var(--b3-av-kanban-background) 0.82 clamp(0, calc(c * 4), 0.16) h);
+        }
+        // 思源将空分组的着色变量设为边框色，直接识别现有标记。
+        &[style*="--b3-border-color"] {
+            --_av-kanban-column-bg: color-mix(in srgb, var(--b3-theme-on-background) 4%, var(--b3-theme-background));
+            --_av-kanban-card-bg: color-mix(in srgb, var(--b3-theme-background) 96%, var(--b3-theme-on-background));
+            --_av-kanban-border: var(--b3-border-color-trans);
+            --_av-kanban-add-color: var(--b3-theme-on-surface);
+            .neo-mode-dark & {
+                --_av-kanban-column-bg: color-mix(in srgb, var(--b3-theme-on-background) 3%, var(--b3-theme-background));
+            }
+        }
         &::before {
-            --b3-border-color: var(--b3-theme-background) !important;
-            background-color: oklch(from var(--b3-av-kanban-background) l c h / 0.35);
+            background-color: var(--_av-kanban-column-bg);
             opacity: 1;
+            pointer-events: none;
         }
     }
     .av__gallery-item {
         box-shadow: none;
-        outline: 1px solid oklch(from var(--b3-av-kanban-background) calc(l - 0.1) c h / 0.55);
-        .neo-mode-dark & {
-            outline-color: oklch(from var(--b3-av-kanban-background) calc(l + 0.1) c h / 0.55);
+        background-color: var(--_av-kanban-card-bg);
+        outline: 1px solid var(--_av-kanban-border);
+        outline-offset: -1px;
+        &::before,
+        &:hover:not(.av__gallery-item--select)::before {
+            opacity: 1;
         }
     }
     .av__gallery-add {
         @include button-transparent-hover-translucent;
         @include superellipse-use($radius-card);
+        color: var(--_av-kanban-add-color);
+        outline: 1px solid oklch(from var(--_av-kanban-add-color) l c h / 0.12);
+        outline-offset: -1px;
+        &:hover,
+        &:active,
+        &:focus {
+            color: var(--_av-kanban-add-color);
+            outline-color: oklch(from var(--_av-kanban-add-color) l c h / 0.14);
+            background-color: oklch(from var(--_av-kanban-add-color) l c h / 0.1);
+        }
         &::before {
             display: none;
         }

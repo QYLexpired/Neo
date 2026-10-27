@@ -35,7 +35,8 @@
 }
 table,
 .av__scroll,
-.av__cell[data-dtype="number"] {
+.av__cell[data-dtype="number"],
+.av__calendar-field[data-dtype="number"] {
   font-variant-numeric: tabular-nums;
 }
 @for $i from 1 through 6 {

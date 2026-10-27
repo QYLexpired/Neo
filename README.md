@@ -3,6 +3,9 @@
 - Neo owes much of its design and ideas to the [Asri theme](https://github.com/mustakshif/Asri). Thank you, [mustakshif](https://github.com/mustakshif) — your eye for design, technical skill, and creativity made Neo possible.
 ## <span style="font-family: neo;">Changelog</span>
 See the [CHANGELOG](https://github.com/QYLexpired/Neo/blob/main/CHANGELOG.md) for the full update history.
+### <span style="font-family: neo;">1.8.2</span>
+- Refined database Kanban view styling
+- Refined database relation menu styling
 ### <span style="font-family: neo;">1.8.1</span>
 - Refined checkbox styling to improve plugin compatibility
 - Fixed some editor elements appearing above the Super Fusion overlay

@@ -95,6 +95,9 @@
 .b3-menu__item {
     background-color: transparent;
 }
+.b3-menu__action {
+    cursor: pointer;
+}
 .b3-menu__item--selected,
 .secondaryToolbarButton.toggled {
     color: var(--b3-theme-accent);

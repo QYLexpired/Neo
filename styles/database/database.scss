@@ -109,8 +109,16 @@ $database-title-mask: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000
         }
     }
 }
+.av__cell--header,
+.av__gallery-name,
+.av__calendar-field-name {
+    opacity: 1;
+    color: var(--b3-theme-on-surface-light);
+}
 // cell
-.av__celltext--ref {
+// 日历字段的原生引用规则优先级更高，所有视图仍共用同一套引用样式。
+.av__celltext--ref,
+.av[data-av-type="calendar"] .av__calendar-field .av__celltext--ref {
     @include link.link-underline(dashed);
     @include link.link-underline-hover;
     &[data-subtype="s"] {
@@ -122,6 +130,7 @@ $database-title-mask: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000
     @include link.link-style($attribute: null, $mask: null);
 }
 .av__cell .b3-chip,
+.av__calendar-field .b3-chip,
 .av__panel .b3-menu__item .b3-chip,
 .av__panel .b3-chips .b3-chip,
 .custom-attr .av__row .b3-chip,
@@ -343,7 +352,19 @@ span.av__celltext--url:not(:empty) {
     background-color: transparent;
 }
 // 关联字段
-// 关联字段
+@mixin relation-menu-content-color($color) {
+    color: var(#{$color}) !important;
+    .b3-menu__label,
+    .b3-menu__icon,
+    .b3-menu__avemoji,
+    .b3-menu__avemoji svg,
+    .av__celltext--url,
+    .av__checkbox,
+    .ft__on-surface,
+    .popover__block {
+        color: var(#{$color}) !important;
+    }
+}
 .av__relation .b3-menu__item .b3-form__icona ~ .popover__block.fn__ellipsis {
     display: flex;
     align-items: center;
@@ -353,32 +374,196 @@ span.av__celltext--url:not(:empty) {
     word-break: break-all;
     transition: var(--b3-transition);
 }
+.av__relation .b3-menu__item .b3-form__icona ~ .popover__block.fn__ellipsis,
+.av__relation-panel .av__relation-table-footer .popover__block {
+    position: relative;
+    padding-inline-start: 1.6em;
+    &:not(:empty)::before {
+        content: "";
+        pointer-events: none;
+        position: absolute;
+        inset-inline-start: 0.2em;
+        top: 50%;
+        width: 1em;
+        height: 1em;
+        background-color: currentColor;
+        mask-image: $database-title-mask;
+        mask-position: center;
+        mask-size: contain;
+        mask-repeat: no-repeat;
+        transform: translateY(-50%);
+    }
+}
 .av__relation-panel {
+    .b3-menu__item {
+        &,
+        .b3-menu__label,
+        .b3-menu__icon,
+        .b3-menu__action,
+        .b3-menu__checked,
+        .b3-menu__avemoji,
+        .ft__on-surface,
+        .popover__block,
+        .av__relation-table-check,
+        .av__relation-table-cell,
+        .av__cell--relation,
+        .av__celltext,
+        .av__celltext--url,
+        .av__relation-row-icon,
+        .av__relation-row-open,
+        .b3-chip,
+        svg {
+            transition: none !important;
+        }
+    }
     .av__relation-table {
-        padding: 8px 0;
+        padding: 8px;
+        margin: 0;
+        @include superellipse-use($radius-card);
+        .b3-menu__separator {
+            margin-block: 12px;
+        }
+    }
+    .av__relation-table-header {
+        @include superellipse-use($radius-item);
+        background-color: transparent;
+        backdrop-filter: none;
+        position: static;
+        top: auto;
+        z-index: auto;
+        border: unset;
+        margin-bottom: 4px;
+        color: var(--b3-theme-on-surface-light);
+        .av__relation-table-cell {
+            font-weight: 500;
+            color: var(--b3-theme-on-surface);
+            transition: color var(--b3-transition);
+            &:hover {
+                color: var(--b3-theme-on-background);
+            }
+        }
+    }
+    .av__relation-table-cell {
+        border-right: unset;
+        &:last-child {
+            @include superellipse-use(0 $radius-item $radius-item 0);
+        }
     }
     .av__relation-table-primary,
     .av__relation-table-check {
-        background-color: var(--b3-menu-background);
-        @include frostedglass($blur: s, $color: menu);
-        .neo-frostedglass-luminous-on & {
-            @include frostedglass-luminous(menu-simple);
-        }
+        background-color: transparent;
+        backdrop-filter: none;
+        box-shadow: none;
     }
-    .av__relation-table-row {
+    // sticky 的起点已包含滚动容器内边距，不再重复偏移。
+    .av__relation-table-check {
+        left: 0;
+        @include superellipse-use($radius-item 0 0 $radius-item);
+    }
+    .av__relation-table-primary {
+        left: 32px;
+    }
+    // 覆盖原生 .av__panel .b3-menu__item:not([data-type=nobg]):hover，避免整行底色与固定列高亮分离。
+    .av__relation-table-row.b3-menu__item {
+        @include superellipse-use($radius-item);
+        border: unset;
+        margin: 2px 0;
         &[data-relation-type=selected] {
-            background-color: var(--b3-list-active);
-            .av__relation-table-primary,
-            .av__relation-table-check {
-                box-shadow: inset 0 0 0 9999px var(--b3-list-active);
-            }
+            &,
             &:hover,
             &.b3-menu__item--current {
-                background-color: var(--b3-list-active);
+                @include menu-item-current-style;
+                .av__relation-table-primary,
+                .av__relation-table-check {
+                    box-shadow: none;
+                    color: inherit;
+                }
+                .av__relation-table-cell {
+                    @include contrast-color(--neo-menu-primary, --neo-menu-item-child-color);
+                    @include relation-menu-content-color(--neo-menu-item-child-color);
+                }
+                .av__relation-row-open {
+                    &,
+                    svg {
+                        @include contrast-color(--neo-menu-primary);
+                    }
+                }
             }
         }
-        &:last-child {
-            border-bottom: none;
+        &[data-relation-type=candidate] {
+            &.b3-menu__item--current:not(:hover) {
+                background-color: transparent;
+                .av__relation-table-check,
+                .av__relation-table-primary {
+                    box-shadow: none;
+                }
+            }
+            &:hover {
+                background-color: var(--b3-list-hover);
+                color: var(--b3-theme-on-background);
+                .av__relation-table-check,
+                .av__relation-table-primary {
+                    box-shadow: none;
+                    color: inherit;
+                }
+                .av__relation-table-cell {
+                    @include relation-menu-content-color(--b3-theme-on-background);
+                }
+            }
+        }
+    }
+    .av__relation-table-row.b3-menu__item .av__relation-row-open {
+        @include icon;
+        opacity: 1;
+    }
+    .av__relation-table-footer.b3-menu__item {
+        @include superellipse-use($radius-item);
+        margin: 2px 0;
+        padding: 4px 8px;
+        &.b3-menu__item--current:not(:hover) {
+            background-color: transparent;
+            color: var(--b3-theme-on-background);
+            > .b3-menu__label {
+                --b3-protyle-inline-blockref-color: inherit;
+                color: inherit !important;
+            }
+        }
+        &:hover {
+            @include menu-item-current-style;
+            @include contrast-color(--neo-menu-primary, --neo-menu-item-child-color);
+            @include relation-menu-content-color(--neo-menu-item-child-color);
+        }
+    }
+}
+.b3-menu[data-name="av-relation-fields"] {
+    .b3-menu__item[data-column] {
+        &.dragover__top::after,
+        &.dragover__bottom::after {
+            content: "";
+            position: absolute;
+            inset-inline: 0;
+            height: 4px;
+            background-color: var(--b3-theme-secondary);
+            pointer-events: none;
+            z-index: 3;
+        }
+        &.dragover__top::after {
+            top: -2px;
+        }
+        &.dragover__bottom::after {
+            bottom: -2px;
+        }
+        &[aria-disabled="true"] {
+            cursor: not-allowed;
+            color: var(--b3-theme-on-surface-light);
+            &,
+            &:hover,
+            &.b3-menu__item--current {
+                background-color: transparent;
+            }
+            @include menu-item-child {
+                color: var(--b3-theme-on-surface-light) !important;
+            }
         }
     }
 }
@@ -388,6 +573,15 @@ span.av__celltext--url:not(:empty) {
 }
 .av__richtext-editor {
     @include menu-container-common;
+    &.av__richtext-editor--mobile {
+        border-radius: 0;
+        corner-shape: round;
+        box-shadow: none;
+        &::before,
+        &::after {
+            box-shadow: none;
+        }
+    }
 }
 // 条件颜色
 .av__panel .av__conditional-colors {
