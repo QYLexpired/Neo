@@ -90,6 +90,13 @@
 }
 .mindmap-view__inspector {
     @include superellipse-use($capsule);
+    width: calc(8 * 34px + 24px);
+    &--relation {
+        width: max-content;
+        .mindmap-view__palette-row {
+            width: calc(6 * 34px);
+        }
+    }
 }
 .mindmap-view .color__square--current {
     outline: 2px solid var(--b3-theme-accent);
