@@ -273,10 +273,15 @@
 }
 // action按钮
 .b3-dialog__action,
-.config-account__center,
+.config-account__row-actions,
 #action,
 .emojis__link-footer,
-.ai-editor-panel__actions {
+.ai-editor-panel__actions,
+.sync-checkout__actions,
+.agent-chat__confirm-actions,
+.agent-chat__question-submit,
+.agent-chat__msg--editing .agent-chat__msg-actions,
+.av__richtext-actions {
     .b3-button {
         @include button-translucent(on-surface);
     }
