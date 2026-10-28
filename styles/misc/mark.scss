@@ -2,9 +2,29 @@
     color: var(--b3-highlight-color);
     background-color: var(--b3-highlight-background);
 }
+// 搜索命中与引用定位共用高亮色，行内 mark 保留独立的标注样式。
+#searchAssetPreview mark,
+.protyle-wysiwyg [data-node-id] span[data-type~=search-mark],
+.protyle-wysiwyg [data-table-cell-node] span[data-type~=search-mark],
+.table__cell-rich [data-node-id] span[data-type~=search-mark],
+.table__cell-rich [data-table-cell-node] span[data-type~=search-mark],
+.mindmap-view__content span[data-type~=search-mark],
 .protyle-wysiwyg [data-node-id] .def--mark,
+.protyle-wysiwyg [data-table-cell-node] .def--mark,
+.table__cell-rich [data-node-id] .def--mark,
+.table__cell-rich [data-table-cell-node] .def--mark,
 .mindmap-view__content .def--mark {
     color: var(--b3-highlight-color) !important;
-    background-color: var(--b3-highlight-background);
+    // 高亮覆盖链接的图标底色、悬停背景和行内 mark 阴影。
+    background-color: var(--b3-highlight-background) !important;
     background-image: unset !important;
+    box-shadow: none !important;
+}
+#searchAssetPreview mark.mark--hl,
+.protyle-wysiwyg [data-node-id] span[data-type~=search-mark].search-mark--hl,
+.protyle-wysiwyg [data-table-cell-node] span[data-type~=search-mark].search-mark--hl,
+.table__cell-rich [data-node-id] span[data-type~=search-mark].search-mark--hl,
+.table__cell-rich [data-table-cell-node] span[data-type~=search-mark].search-mark--hl,
+.mindmap-view__content span[data-type~=search-mark].search-mark--hl {
+    background-color: var(--b3-highlight-current-background) !important;
 }

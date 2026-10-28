@@ -6,6 +6,7 @@ See the [CHANGELOG](https://github.com/QYLexpired/Neo/blob/main/CHANGELOG.md) fo
 ### <span style="font-family: neo;">1.8.2</span>
 - Refined database Kanban view styling
 - Refined database relation menu styling
+- Disabled the Focus Block Indicator in agent chats
 ### <span style="font-family: neo;">1.8.1</span>
 - Refined checkbox styling to improve plugin compatibility
 - Fixed some editor elements appearing above the Super Fusion overlay
@@ -26,7 +27,7 @@ See the [CHANGELOG](https://github.com/QYLexpired/Neo/blob/main/CHANGELOG.md) fo
 - Fixed an extra scrollbar when editor panes are stacked vertically
 - Refined loading animations (SiYuan 3.8.9)
 ## <span style="font-family: neo;">Notes</span>
-- [Neo+](https://github.com/QYLexpired/Neo-Plus) is required because some of Neo's features cannot be implemented with CSS alone. Install and enable the plugin before using the theme.
+- [Neo+](https://github.com/QYLexpired/Neo-Plus) is required because some of Neo's features cannot be implemented with CSS alone. Install and enable the plugin before using the theme ([open its Bazaar page](siyuan://bazaar/plugins/Neo-Plus/readme)).
 - Neither the Neo theme nor the Neo+ plugin modifies document data. You can enable or disable them at any time without any migration.
 - Have a question or suggestion? Post in the [Neo theme discussion thread](https://ld246.com/article/1783158376401) or open an issue on [GitHub](https://github.com/QYLexpired/Neo/issues)
 - For reasons including design philosophy, adaptation effort, and maintenance, the Neo theme disables SiYuan's Compact Mode. "Disables" here means that when Compact Mode is enabled in SiYuan, the Neo theme removes the related styles on the front end; it does not modify any SiYuan settings.

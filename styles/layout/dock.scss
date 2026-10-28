@@ -1,4 +1,13 @@
 @use "../utils" as *;
+.dock__backdrop {
+    --b3-border-radius-b: #{$radius-layout};
+    top: var(--neo-topbar-height) !important;
+    bottom: var(--_layout-gap) !important;
+    background-color: var(--b3-theme-surface);
+    .body--toolbar-hide & {
+        top: var(--neo-topbar-fusion-height) !important;
+    }
+}
 #dockLeft {
     margin-right: calc(var(--_layout-gap) / -2);
 }
@@ -20,7 +29,9 @@
     body.body--toolbar-hide & {
         margin-top: 0;
         padding-top: var(--neo-topbar-fusion-height);
-        height: 100% !important; // 覆盖原生停靠栏高度，避免底部留空。
+        &:not(.dock--float) {
+            height: 100% !important; // 覆盖原生停靠栏高度，避免底部留空。
+        }
     }
     html.window-controls-overlay body.body--windows.body--toolbar-hide & {
         margin-top: 0;

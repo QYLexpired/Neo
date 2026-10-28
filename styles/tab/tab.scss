@@ -186,6 +186,9 @@ body:not(.body--toolbar-hide) [data-type="wnd"] > .fn__flex:first-child {
         }
     }
 }
+[data-name="tabList"] :not(.b3-menu__item--current) > .b3-menu__label {
+    mask-image: none !important;
+}
 @keyframes neo-tab-focus {
     0% {
         transform: scale(1);

@@ -6,6 +6,7 @@
 ### <span style="font-family: neo;">1.8.2</span>
 - 优化数据库看板视图样式
 - 优化数据库关联菜单样式
+- 在智能体中禁用聚焦块指示
 ### <span style="font-family: neo;">1.8.1</span>
 - 优化复选框样式以提升插件兼容性
 - 修复部分编辑器元素穿透超级融合遮罩的问题
@@ -26,7 +27,7 @@
 - 修复上下分屏时出现异常滚动条的问题
 - 优化加载动效（思源3.8.9）
 ## 说明
-- 主题的部分样式和功能无法仅通过CSS实现，因此必须安装并启用主题的配套插件：[Neo+](https://github.com/QYLexpired/Neo-Plus)
+- 主题的部分样式和功能无法仅通过CSS实现，因此必须安装并启用主题的配套插件：[Neo+](https://github.com/QYLexpired/Neo-Plus)（点击[此处](siyuan://bazaar/plugins/Neo-Plus/readme)跳转至Neo+集市页）
 - Neo主题和Neo+插件均不会对文档数据进行任何修改，可随时启用或停用，不存在迁移负担
 - 使用过程中有任何问题或建议，可通过[Neo 主题介绍及反馈综合帖](https://ld246.com/article/1783158376401)或[GitHub](https://github.com/QYLexpired/Neo/issues)进行反馈
 - 基于设计理念、适配难度及维护周期等考虑，Neo主题屏蔽了思源的紧凑模式（屏蔽指的是：若思源启用紧凑模式，Neo主题在前端取消相关样式，不会修改任何思源的配置）

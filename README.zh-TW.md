@@ -6,6 +6,7 @@
 ### <span style="font-family: neo;">1.8.2</span>
 - 最佳化資料庫看板檢視樣式
 - 最佳化資料庫關聯選單樣式
+- 在智能體中停用聚焦區塊指示
 ### <span style="font-family: neo;">1.8.1</span>
 - 最佳化核取方塊樣式，提升外掛相容性
 - 修正部分編輯器元素穿透超級融合遮罩的問題
@@ -26,7 +27,7 @@
 - 修正上下分割畫面時出現多餘捲軸的問題
 - 最佳化載入動畫（思源 3.8.9）
 ## 說明
-- 主題的部分樣式和功能無法僅透過 CSS 實現，因此必須安裝並啟用主題的配套外掛：[Neo+](https://github.com/QYLexpired/Neo-Plus)
+- 主題的部分樣式和功能無法僅透過 CSS 實現，因此必須安裝並啟用主題的配套外掛：[Neo+](https://github.com/QYLexpired/Neo-Plus)（點擊[此處](siyuan://bazaar/plugins/Neo-Plus/readme)前往 Neo+ 市集頁面）
 - Neo 主題和 Neo+ 外掛均不會對文件資料進行任何修改，可隨時啟用或停用，不存在遷移負擔
 - 使用過程中有任何問題或建議，可透過 [Neo 主題介紹及回饋討論串](https://ld246.com/article/1783158376401) 或 [GitHub](https://github.com/QYLexpired/Neo/issues) 提出回饋
 - 基於設計理念、適配難度及維護週期等考量，Neo 主題停用了思源的緊湊模式（停用是指：若思源啟用緊湊模式，Neo 主題會在前端移除相關樣式，不會修改任何思源設定）

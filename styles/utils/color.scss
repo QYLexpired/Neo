@@ -75,8 +75,9 @@
     --b3-tooltips-color: var(--b3-theme-on-background);
     --b3-tooltips-second-color: var(--b3-theme-on-surface);
     --b3-protyle-inline-mark-background: #ffbb00;
-    --b3-protyle-inline-blockref-color: var(--b3-theme-accent);
-    --b3-protyle-inline-link-color: var(--b3-theme-accent);
+    --b3-protyle-inline-blockref-color: currentColor;
+    --b3-protyle-inline-fileref-color: var(--b3-protyle-inline-blockref-color);
+    --b3-protyle-inline-link-color: currentColor;
     --b3-menu-icon-color: var(--b3-theme-on-surface);
     // neo
     --neo-input-primary: oklch(from var(--b3-theme-base) clamp(0, l, 0.76) c h / 0.7);
@@ -144,8 +145,9 @@
     --b3-tooltips-color: var(--b3-theme-on-background);
     --b3-tooltips-second-color: var(--b3-theme-on-surface);
     --b3-protyle-inline-mark-background: #ffbb00;
-    --b3-protyle-inline-blockref-color: var(--b3-theme-accent);
-    --b3-protyle-inline-link-color: var(--b3-theme-accent);
+    --b3-protyle-inline-blockref-color: currentColor;
+    --b3-protyle-inline-fileref-color: var(--b3-protyle-inline-blockref-color);
+    --b3-protyle-inline-link-color: currentColor;
     --b3-menu-icon-color: var(--b3-theme-on-surface);
     // neo
     --neo-input-primary: oklch(from var(--b3-theme-base) clamp(0.5, l, 1) c h / 0.7);

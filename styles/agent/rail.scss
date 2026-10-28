@@ -1,27 +1,13 @@
-@use "../utils" as *;
-@use "../menu/menu" as *;
 .agent-chat__nav-rail {
-    border: unset;
+    right: 4px;
 }
 .agent-chat__nav-rail-marker {
-    transition-timing-function: var(--neo-ease-spring-1);
-    transition-duration: 0.15s;
-    transition-behavior: allow-discrete;
-    .agent-chat__nav-rail--expanded & {
-        transition-property: width, height, padding;
-        transition-duration: 0.15s;
-        transition-timing-function: var(--neo-ease-spring-1);
-    }
+    transition: var(--b3-transition);
 }
 .agent-chat__nav-rail-marker--active {
     background-color: var(--b3-theme-accent);
-    .agent-chat__nav-rail--expanded & {
-        background-color: var(--b3-list-active);
-        &:hover {
-            background-color: var(--b3-list-active);
-        }
-    }
 }
-.agent-chat__nav-rail--expanded {
-    @include menu-container-common-simple;
+.tooltip.tooltip--agent-nav {
+    animation-delay: 0s;
+    overflow: hidden;
 }

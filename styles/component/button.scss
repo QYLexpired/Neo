@@ -255,19 +255,7 @@
     .b3-button--outline {
         @include button-outline-hover-solid(primary);
     }
-    .b3-button--remove,
-    #removeAll,
-    #removeAVAll,
-    #clearSearchBtn,
-    #clearHistory,
-    #clearTempFiles,
-    #resetLayout,
-    #pandocBinReset,
-    #keymapResetBtn,
-    #purgeCloudData,
-    #resetRepo,
-    #purgeRepo,
-    #resetSettings {
+    .b3-button--remove {
         @include button-outline-hover-solid(error);  
     }
 }

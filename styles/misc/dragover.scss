@@ -18,6 +18,7 @@
 .layout-tab-bar .item--document-drop > .item__document-drop .item__document-drop-option--active,
 .config-entry-visibility__dock-group--drop,
 .config-bazaar__drop,
+.custom-attr .av__row[data-av-drag-preview="true"],
 .custom-attr__avvalue--active,
 .custom-attr__avvalue.custom-attr__avvalue--active:hover {
     outline: 1px solid oklch(from var(--b3-theme-secondary) l c h / 0.25);

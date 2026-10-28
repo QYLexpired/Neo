@@ -89,6 +89,7 @@
     @include menu-container-common;
 }
 .b3-menu__items {
+    box-sizing: border-box; // 修复 https://github.com/QYLexpired/Neo/issues/83
     padding: 8px;
     margin: -8px 0; // 解决部分菜单内输入框外阴影被裁剪的问题
 }

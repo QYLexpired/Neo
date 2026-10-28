@@ -150,7 +150,13 @@
     outline-offset: -1px;
     background-color: oklch(from var(--pdf-annotation-color) l c h / 0.35);
 }
-// 搜索
-.textLayer .highlight.selected {
-    background-color: var(--b3-highlight-background);
+@media (forced-colors: none) {
+    .textLayer .highlight,
+    .xfaLayer .highlight {
+        background-color: oklch(from var(--b3-highlight-background) l c h / 0.75);
+    }
+    .textLayer .highlight.selected,
+    .xfaLayer .highlight.selected {
+        background-color: oklch(from var(--b3-highlight-current-background) l c h / 0.95);
+    }
 }
