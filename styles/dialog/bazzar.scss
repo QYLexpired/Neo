@@ -97,8 +97,12 @@
         background-color: transparent;
         @include superellipse-use($radius-card);
         transition: var(--b3-transition);
-        &.b3-card--current,
         &:hover {
+            box-shadow: unset;
+            outline-color: var(--b3-border-color-trans);
+            background-color: var(--b3-list-hover);
+        }
+        &.b3-card--current {
             box-shadow: unset;
             outline-color: oklch(from var(--b3-list-active) l c h / 0.32);
             background-color: var(--b3-list-active);
