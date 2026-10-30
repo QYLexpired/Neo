@@ -4,28 +4,15 @@
 ## <span style="font-family: neo;">Changelog</span>
 See the [CHANGELOG](https://github.com/QYLexpired/Neo/blob/main/CHANGELOG.md) for the full update history.
 ### <span style="font-family: neo;">1.8.2</span>
+- Added a new Trail motion to Smooth Caret
+- Redesigned the Fluid Cursor wave effect
+- Added a brush tip effect to the Fluid Cursor trail and made the trail color configurable
 - Refined database Kanban view styling
 - Refined database relation menu styling
 - Disabled the Focus Block Indicator in agent chats
-### <span style="font-family: neo;">1.8.1</span>
-- Refined checkbox styling to improve plugin compatibility
-- Fixed some editor elements appearing above the Super Fusion overlay
-### <span style="font-family: neo;">1.8.0</span>
-- Added support for native window controls on Windows (SiYuan 3.8.9)
-- Restored the default link style; enable link icons via Neo+ Menu → Appearance → Configure Elements
-- Reduced corner radii throughout the interface
-- Added a new pinned preset palette: Soft
-- Removed colored lists to simplify theme maintenance
-- Moved colored headings to the element settings
-- Moved Multicolumn Slash Menu and Card Style Search List to the Appearance submenu
-- Removed the inline memo icon and set a fixed color
-- Added an option to show heading levels
-- Redesigned animations for task checkboxes and radio buttons
-- Redesigned List Bullet Line animations
-- Added staggered entrance and smooth exit animations to the notification queue in the upper right corner
-- Removed document lock/unlock animations
-- Fixed an extra scrollbar when editor panes are stacked vertically
-- Refined loading animations (SiYuan 3.8.9)
+- Refined neutral color handling in Custom Base Color mode
+- Removed the Camouflage texture
+- Added support for SiYuan 3.8.9
 ## <span style="font-family: neo;">Notes</span>
 - [Neo+](https://github.com/QYLexpired/Neo-Plus) is required because some of Neo's features cannot be implemented with CSS alone. Install and enable the plugin before using the theme ([open its Bazaar page](siyuan://bazaar/plugins/Neo-Plus/readme)).
 - Neither the Neo theme nor the Neo+ plugin modifies document data. You can enable or disable them at any time without any migration.

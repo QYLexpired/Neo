@@ -2,7 +2,20 @@
     right: 4px;
 }
 .agent-chat__nav-rail-marker {
+    position: relative;
     transition: var(--b3-transition);
+    // 伪元素用于解决间隔区域无法触发hover的问题
+    &::after {
+        content: "";
+        position: absolute;
+        top: 100%;
+        right: 0;
+        width: 100%;
+        height: var(--nav-gap, 3px);
+    }
+    &:hover {
+        width: 15px;
+    }
 }
 .agent-chat__nav-rail-marker--active {
     background-color: var(--b3-theme-accent);

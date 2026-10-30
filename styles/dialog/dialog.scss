@@ -78,6 +78,9 @@
 }
 .b3-dialog__progressbar {
     @include progress-fill;
+    &::before {
+        color: var(--b3-theme-accent);
+    }
 }
 .b3-dialog__close {
     display: none;
