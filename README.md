@@ -3,6 +3,9 @@
 - Neo owes much of its design and ideas to the [Asri theme](https://github.com/mustakshif/Asri). Thank you, [mustakshif](https://github.com/mustakshif) — your eye for design, technical skill, and creativity made Neo possible.
 ## <span style="font-family: neo;">Changelog</span>
 See the [CHANGELOG](https://github.com/QYLexpired/Neo/blob/main/CHANGELOG.md) for the full update history.
+### <span style="font-family: neo;">1.8.3</span>
+- Fixed incorrect mobile menu styling in some cases
+- Simplified enabling IDE Style and Vertical Tabs
 ### <span style="font-family: neo;">1.8.2</span>
 - Added a new Trail motion to Smooth Caret
 - Redesigned the Fluid Cursor wave effect
@@ -10,7 +13,6 @@ See the [CHANGELOG](https://github.com/QYLexpired/Neo/blob/main/CHANGELOG.md) fo
 - Refined database Kanban view styling
 - Refined database relation menu styling
 - Disabled the Focus Block Indicator in agent chats
-- Refined neutral color handling in Custom Base Color mode
 - Removed the Camouflage texture
 - Added support for SiYuan 3.8.9
 ## <span style="font-family: neo;">Notes</span>

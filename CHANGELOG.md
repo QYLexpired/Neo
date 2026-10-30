@@ -1,3 +1,8 @@
+### v1.8.3 / 2026-10-31
+- 修复部分情况下的移动端菜单样式异常
+- 简化 IDE 风格和垂直页签的开启方法
+- Fixed incorrect mobile menu styling in some cases
+- Simplified enabling IDE Style and Vertical Tabs
 ### v1.8.2 / 2026-10-30
 - 全新平滑光标动效：拖尾
 - 重做流体光标的波纹效果
@@ -5,7 +10,6 @@
 - 优化数据库看板视图样式
 - 优化数据库关联菜单样式
 - 在智能体中禁用聚焦块指示
-- 优化自定义基色模式下中性色的配色逻辑
 - 移除材质：迷彩
 - 适配思源3.8.9
 - Added a new Trail motion to Smooth Caret
@@ -14,7 +18,6 @@
 - Refined database Kanban view styling
 - Refined database relation menu styling
 - Disabled the Focus Block Indicator in agent chats
-- Refined neutral color handling in Custom Base Color mode
 - Removed the Camouflage texture
 - Added support for SiYuan 3.8.9
 ### v1.8.1 / 2026-10-26

@@ -3,6 +3,9 @@
 - Neo主题大量参考了[Asri主题](https://github.com/mustakshif/Asri)的设计和创意，非常感谢[mustakshif](https://github.com/mustakshif)，没有你超强的审美、技术力和让人惊叹的创意，就不会有Neo的出现
 ## 更新日志
 完整更新历史可查看[CHANGELOG](https://github.com/QYLexpired/Neo/blob/main/CHANGELOG.md)
+### <span style="font-family: neo;">1.8.3</span>
+- 修复部分情况下的移动端菜单样式异常
+- 简化IDE风格和垂直页签的开启方法
 ### <span style="font-family: neo;">1.8.2</span>
 - 全新平滑光标动效：拖尾
 - 重做流体光标的波纹效果
@@ -10,7 +13,6 @@
 - 优化数据库看板视图样式
 - 优化数据库关联菜单样式
 - 在智能体中禁用聚焦块指示
-- 优化自定义基色模式下中性色的配色逻辑
 - 移除材质：迷彩
 - 适配思源3.8.9
 ## 说明

@@ -87,6 +87,8 @@
     }
     .b3-menu__items {
         background-color: transparent;
+        // 移动端不需要桌面菜单为输入框阴影预留的负边距。
+        margin: 0;
     }
     .b3-menu__item {
         @include superellipse-use($radius-item, $important: true);
