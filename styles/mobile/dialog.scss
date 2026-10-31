@@ -18,6 +18,7 @@
         }
     }
     .b3-dialog__container.mobile-bottom-sheet {
+        background-color: var(--b3-menu-background);
         @include superellipse-use($radius-box $radius-box 0 0);
         box-shadow: var(--b3-menu-shadow);
         .neo-frostedglass-scope-global.neo-frostedglass-luminous-on & {
