@@ -1,20 +1,11 @@
 # <span style="font-family: neo;">✦ Neo: A Refined Interface for Free-Flowing Ideas</span>
 - Neo is a third-party theme for SiYuan Notes inspired by Apple's macOS and iOS design language. It brings a cohesive, polished look to your workspace.
 - Neo owes much of its design and ideas to the [Asri theme](https://github.com/mustakshif/Asri). Thank you, [mustakshif](https://github.com/mustakshif) — your eye for design, technical skill, and creativity made Neo possible.
+> **Requires the [Neo+](siyuan://bazaar/plugins/Neo-Plus/readme) companion plugin.** Make sure it's installed and enabled before you start.
 ## <span style="font-family: neo;">Changelog</span>
 See the [CHANGELOG](https://github.com/QYLexpired/Neo/blob/main/CHANGELOG.md) for the full update history.
-### <span style="font-family: neo;">1.8.3</span>
-- Fixed incorrect mobile menu styling in some cases
-- Simplified enabling IDE Style and Vertical Tabs
-### <span style="font-family: neo;">1.8.2</span>
-- Added a new Trail motion to Smooth Caret
-- Redesigned the Fluid Cursor wave effect
-- Added a brush tip effect to the Fluid Cursor trail and made the trail color configurable
-- Refined database Kanban view styling
-- Refined database relation menu styling
-- Disabled the Focus Block Indicator in agent chats
-- Removed the Camouflage texture
-- Added support for SiYuan 3.8.9
+### <span style="font-family: neo;">1.8.4</span>
+- Refined some details
 ## <span style="font-family: neo;">Notes</span>
 - [Neo+](https://github.com/QYLexpired/Neo-Plus) is required because some of Neo's features cannot be implemented with CSS alone. Install and enable the plugin before using the theme ([open its Bazaar page](siyuan://bazaar/plugins/Neo-Plus/readme)).
 - Neither the Neo theme nor the Neo+ plugin modifies document data. You can enable or disable them at any time without any migration.

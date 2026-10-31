@@ -1,20 +1,11 @@
 # <span style="font-family: neo;">✦ Neo </span>精心打磨的界面，灵动自由的思维
 - Neo是专为思源笔记设计的第三方主题，以 Apple（macOS/iOS）设计语言为灵感，营造统一、精致且赏心悦目的笔记空间
 - Neo主题大量参考了[Asri主题](https://github.com/mustakshif/Asri)的设计和创意，非常感谢[mustakshif](https://github.com/mustakshif)，没有你超强的审美、技术力和让人惊叹的创意，就不会有Neo的出现
+> 重要提醒：必须安装并启用主题的配套插件[Neo+](siyuan://bazaar/plugins/Neo-Plus/readme)
 ## 更新日志
 完整更新历史可查看[CHANGELOG](https://github.com/QYLexpired/Neo/blob/main/CHANGELOG.md)
-### <span style="font-family: neo;">1.8.3</span>
-- 修复部分情况下的移动端菜单样式异常
-- 简化IDE风格和垂直页签的开启方法
-### <span style="font-family: neo;">1.8.2</span>
-- 全新平滑光标动效：拖尾
-- 重做流体光标的波纹效果
-- 为流体光标的拖尾增加“笔锋”效果，并支持配置拖尾颜色
-- 优化数据库看板视图样式
-- 优化数据库关联菜单样式
-- 在智能体中禁用聚焦块指示
-- 移除材质：迷彩
-- 适配思源3.8.9
+### <span style="font-family: neo;">1.8.4</span>
+- 优化了一些细节
 ## 说明
 - 主题的部分样式和功能无法仅通过CSS实现，因此必须安装并启用主题的配套插件：[Neo+](https://github.com/QYLexpired/Neo-Plus)（点击[此处](siyuan://bazaar/plugins/Neo-Plus/readme)跳转至Neo+集市页）
 - Neo主题和Neo+插件均不会对文档数据进行任何修改，可随时启用或停用，不存在迁移负担
