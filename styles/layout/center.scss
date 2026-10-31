@@ -60,3 +60,37 @@ body:not(.body--window) {
         }
     }
 }
+.layout__empty,
+#empty.b3-list--mobile {
+    .b3-list-item {
+        --_layout__empty-color: var(--b3-theme-on-surface);
+        transition: var(--b3-transition);
+        color: var(--_layout__empty-color);
+        .b3-list-item__graphic,
+        .b3-list-item__meta,
+        .b3-list-item__text {
+            transition: var(--b3-transition);
+            color: var(--_layout__empty-color);
+        }
+        &:hover {
+            --_layout__empty-color: var(--b3-theme-on-background);
+        }
+    }
+}
+// 让手机端空白页导航视觉居中
+#empty.b3-list--mobile {
+    display: grid;
+    grid-template-columns: fit-content(200px);
+    grid-auto-rows: max-content;
+    place-content: center;
+    & > .b3-list-item {
+        width: auto;
+        min-width: 0;
+        justify-content: flex-start;
+        & > .b3-list-item__text {
+            flex: 1;
+            min-width: 0;
+            text-align: left;
+        }
+    }
+}
