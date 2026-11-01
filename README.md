@@ -5,7 +5,8 @@
 ## <span style="font-family: neo;">Changelog</span>
 See the [CHANGELOG](https://github.com/QYLexpired/Neo/blob/main/CHANGELOG.md) for the full update history.
 ### <span style="font-family: neo;">1.8.4</span>
-- Refined some details
+- Removed branching guide lines from the document tree, as the structure introduced in SiYuan 3.8.10 is incompatible with this design
+- Removed the Colored Document Tree feature for the same reason
 ## <span style="font-family: neo;">Notes</span>
 - [Neo+](https://github.com/QYLexpired/Neo-Plus) is required because some of Neo's features cannot be implemented with CSS alone. Install and enable the plugin before using the theme ([open its Bazaar page](siyuan://bazaar/plugins/Neo-Plus/readme)).
 - Neither the Neo theme nor the Neo+ plugin modifies document data. You can enable or disable them at any time without any migration.
@@ -36,7 +37,6 @@ Neo is free to use. If you enjoy it, consider starring the project on [GitHub](h
 - Sidebar Mute: tones down the sidebars to draw attention to the editor
 - Vertical Tabs: stack your tabs vertically for easier viewing and switching
 - Choose from built-in textures or use your own images as textures or backgrounds
-- Add color to the document tree
 #### <span style="font-family: neo;">Fluid Interactions</span>
 - Smooth Caret and Fluid Cursor animations
 - Focus Block Indicator highlights the block you are editing

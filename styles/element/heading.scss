@@ -114,11 +114,14 @@
     line-height: 1.4;
     padding-inline-start: 0.8em;
     position: relative;
+    .protyle-title__rich .protyle-wysiwyg > [data-type="NodeParagraph"] > & {
+        min-height: 1lh;
+    }
     .neo-element-heading-colored-on & {
         --_heading-color: var(--b3-theme-accent);
     }
     // 标题初始化时含有空格，需等标题数据渲染后再显示装饰线。
-    .protyle[data-loading="finished"] .protyle-title[data-render="true"] > & {
+    .protyle[data-loading="finished"] .protyle-title[data-render="true"] & {
         &::before {
             content: "";
             pointer-events: none;
@@ -130,7 +133,8 @@
             background-color: currentColor;
             transform: translateY(-50%);
         }
-        &:empty {
+        &:empty,
+        &.protyle-wysiwyg--empty {
             color: var(--b3-empty-color);
             &::before {
                 background-color: var(--b3-empty-color);

@@ -1,100 +1,61 @@
-@use "../utils" as *;
 :root {
     --_indentline-color: var(--b3-border-color-trans);
 }
-.file-tree > .fn__flex-1 > ul, // 文档树、大纲、标签等
-.file-tree .file-tree__pins > ul, // 置顶文档树
-.file-tree .file-tree__pins ~ ul { // 已关闭的笔记本
-    & > .b3-list-item {
-        margin-inline-start: 6px;
-        margin-inline-end: 6px;
-        .b3-list-item__toggle {
-            padding-left: 2px !important;
+.file-tree,
+.fn__flex-column[data-type="sidebar-file"],
+.fn__flex-column[data-type="sidebar-outline"],
+.fn__flex-column[data-type="sidebar-tag"],
+.fn__flex-column[data-type="sidebar-bookmark"] {
+    --_indentline-step: 18px;
+    .b3-list-item {
+        --_indent-offset: calc(var(--file-toggle-width, var(--_indentline-step)) - var(--_indentline-step));
+        margin-inline: 6px;
+        & > .b3-list-item__toggle {
+            padding-left: var(--_indent-offset) !important;
+        }
+        &::before {
+            content: "";
+            position: absolute;
+            pointer-events: none;
+            top: -1px;
+            bottom: -1px;
+            left: 10.5px;
+            width: max(0px, calc(var(--_indent-offset) - var(--_indentline-step) + 1px));
+            background: repeating-linear-gradient(to right, var(--_indentline-color) 0 1px, transparent 1px var(--_indentline-step));
         }
     }
-    & > ul {
-        background: unset !important;
-    }
-    & ul {
-        background: linear-gradient(var(--_indentline-color), var(--_indentline-color)) calc(var(--neo-indent-offset) - var(--_indentline-ul-trans, 18px)) 0 / 1px no-repeat;
-        &:last-child {
-            background: unset;
-        }
-        & > li {
-            position: relative;
-            &::before {
-                content: "";
-                position: absolute;
-                left: calc(var(--neo-indent-offset) - var(--_indentline-li-trans, 8px));
-                bottom: -1px;
-                width: 1px;
-                height: 29.5px;
-                background-color: var(--_indentline-color);
-            }
-            &:first-child {
-                &::before {
-                    height: 34.5px;
-                }
-            }
-            &:last-of-type {
-                &::before {
-                    bottom: 20.5px;
-                    height: 8.5px;
-                }
-                &:first-child {
-                    &::before {
-                        height: 13.5px;
-                    }
-                }
-            }
-        }
-        .b3-list-item__toggle {
-            position: relative;
-            &::before {
-                content: "";
-                position: absolute;
-                border-bottom-left-radius: 6px;
-                border-left: 1px solid var(--_indentline-color);
-                border-bottom: 1px solid var(--_indentline-color);
-                left: unset;
-                right: unset;
-                top: unset;
-                bottom: 10.5px;
-                height: 6px;
-                width: 8px;
-                margin-inline-start: var(--_indentline-dot-trans, -12px);
-                background-color: transparent;
-                visibility: visible;
-            }
-            &.fn__hidden {
-                &::before {
-                    border-bottom-left-radius: 12px;
-                    width: 16px;
-                }
-                &::after {
-                    content: "";
-                    position: absolute;
-                    top: 50%;
-                    right: 8px;
-                    transform: translateY(-50%);
-                    width: 4px;
-                    height: 4px;
-                    @include superellipse-use($circle);
-                    background-color: var(--_indentline-color);
-                    visibility: visible;
-                }
-            }
+    .b3-list-item__toggle.fn__hidden {
+        position: relative;
+        &::after {
+            content: "";
+            position: absolute;
+            pointer-events: none;
+            top: 50%;
+            left: calc(var(--_indent-offset) + 5px);
+            transform: translateY(-50%);
+            width: 4px;
+            height: 4px;
+            border-radius: 50%;
+            background-color: oklch(from var(--b3-theme-on-background) l c h / 0.42);
+            visibility: visible;
         }
     }
-    $selector: "& > ul";
-    @for $i from 1 through 16 {
-        #{$selector} {
-        --neo-indent-offset: #{$i * 18}px;
-        }
-        $selector: "#{$selector} > ul";
+    & > .fn__flex-1 > .b3-list > .b3-list-item:not([role=treeitem]),
+    .file-tree__pins > .b3-list > .b3-list-item,
+    & > .b3-list > .b3-list-item,
+    [role=tree] .b3-list-item[aria-level="1"]:not([data-pin-row]) {
+        --_indent-offset: 0px;
+    }
+    & > .b3-list > ul > .b3-list-item {
+        --_indent-offset: var(--_indentline-step);
     }
 }
-// 已关闭的笔记本
-.file-tree .file-tree__pins ~ ul ul > .b3-list-item > .b3-list-item__toggle {
-    padding-left: 18px !important;
+.fn__flex-column[data-type="sidebar-file"],
+.fn__flex-column[data-type="sidebar-outline"],
+.fn__flex-column[data-type="sidebar-tag"],
+.fn__flex-column[data-type="sidebar-bookmark"] {
+    --_indentline-step: 20px;
+    .b3-list-item[data-treetype] {
+        --_indent-offset: calc((var(--file-toggle-width, 18px) - 18px) * 20 / 18);
+    }
 }
