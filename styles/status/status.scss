@@ -4,12 +4,11 @@
 }
 @supports (bottom: anchor(--a bottom)) {
     body:not(.neo-mobile) .status {
-        position: absolute;
-        bottom: calc(anchor(--anchor-layout-center bottom) + calc(var(--_layout-gap) * var(--_status-position-factor, 1.5)));
-        right: calc(anchor(--anchor-layout-center right) + calc(var(--_layout-gap) * var(--_status-position-factor, 1.5)));
-        @include superellipse-use($capsule);
         background-color: var(--b3-menu-background);
-        @include frostedglass-menu;
+        &:not(.status--floating),
+        &.status--floating-open {
+            @include frostedglass-menu;
+        }
         box-shadow: var(--neo-main-shadow);
         height: 28px;
         line-height: 28px;
@@ -17,7 +16,29 @@
         padding: 0 2px;
         overflow: hidden;
         z-index: 5;
-        max-width: max(anchor-size(--anchor-layout-center) - 16px, 200px);
+        &.status--floating {
+            --_floating-status-motion: 500ms var(--neo-ease-spring-3);
+            @include superellipse-use($radius-item 0 0 0);
+            clip-path: inset(42% 0 0 60% round $radius-item 0 0 0);
+            opacity: 0;
+            transition: clip-path var(--_floating-status-motion), opacity 150ms ease, visibility 0s 150ms;
+            &.status--floating-open {
+                --_floating-status-motion: 400ms var(--neo-ease-spring-2);
+                clip-path: inset(-24px 0 0 -24px round 0);
+                opacity: 1;
+                transition-delay: 0s;
+            }
+            @media (prefers-reduced-motion: reduce) {
+                transition: none;
+            }
+        }
+        &:not(.status--floating) {
+            @include superellipse-use($capsule);
+            position: absolute;
+            bottom: calc(anchor(--anchor-layout-center bottom) + calc(var(--_layout-gap) * var(--_status-position-factor, 1.5)));
+            right: calc(anchor(--anchor-layout-center right) + calc(var(--_layout-gap) * var(--_status-position-factor, 1.5)));
+            max-width: max(anchor-size(--anchor-layout-center) - 16px, 200px);
+        }
         .neo-frostedglass-luminous-on & {
             @include frostedglass-luminous(status);
         }

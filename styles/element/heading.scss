@@ -112,7 +112,7 @@
     color: var(--_heading-color);
     font-size: 2.4em;
     line-height: 1.4;
-    padding-inline-start: 0.8em;
+    padding-inline-start: 0.8em !important;
     position: relative;
     .protyle-title__rich .protyle-wysiwyg > [data-type="NodeParagraph"] > & {
         min-height: 1lh;
