@@ -53,20 +53,28 @@
 }
 #sidebar > .toolbar > .toolbar__icon,
 #sidebarRight > .toolbar > .toolbar__icon,
+#mobileTopBar > #toolbarSidebarLeft,
+#mobileTopBar > #toolbarSidebarRight,
 #menu > .toolbar > .toolbar__icon,
 #menu > .toolbar > .toolbar__button,
 #model > .toolbar > .toolbar__icon {
     @include mobile-panel-icon;
 }
+#mobileTopBar > #toolbarSidebarLeft,
+#mobileTopBar > #toolbarSidebarRight,
 #menu > .toolbar > .toolbar__button {
     box-sizing: content-box;
     > svg {
         width: 16px;
         height: 16px;
     }
-    &[data-type="menu-search-open"] {
-        margin-left: auto;
-    }
+}
+#mobileTopBar > #toolbarSidebarLeft > svg,
+#mobileTopBar > #toolbarSidebarRight > svg {
+    color: inherit;
+}
+#menu > .toolbar > .toolbar__button[data-type="menu-search-open"] {
+    margin-left: auto;
 }
 #sidebar > .toolbar,
 #sidebarRight > .toolbar,
