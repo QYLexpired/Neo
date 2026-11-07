@@ -7,6 +7,10 @@
     margin: 0 2px -2px 2px;
     width: calc(100% - 4px);
     transform: translateY(4px); // 遮挡下阴影
+    @include frostedglass-menu($scope: global);
+    .neo-frostedglass-scope-global.neo-frostedglass-luminous-on & {
+        @include frostedglass-luminous(menu-simple);
+    }
 }
 .keyboard__bar {
     border-bottom: unset;

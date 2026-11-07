@@ -1,16 +1,20 @@
 :root {
     --_indentline-color: var(--b3-border-color-trans);
 }
+.file-tree__pins-list {
+    --_file-tree-depth-offset: 1;
+}
 .file-tree,
 .fn__flex-column[data-type="sidebar-file"],
 .fn__flex-column[data-type="sidebar-outline"],
 .fn__flex-column[data-type="sidebar-tag"],
 .fn__flex-column[data-type="sidebar-bookmark"] {
-    --_indentline-step: 18px;
+    --_indentline-step-number: 16;
+    --_indentline-step: calc(var(--_indentline-step-number) * 1px);
     .b3-list-item {
         --_indent-offset: 0px;
         margin-inline: 6px;
-        &:not(.file-tree__row[role="treeitem"]) > .b3-list-item__toggle {
+        &:not(.file-tree__row) > .b3-list-item__toggle {
             padding-left: var(--_indent-offset) !important;
         }
         &::before {
@@ -23,11 +27,13 @@
             width: max(0px, calc(var(--_indent-offset) - var(--_indentline-step) + 1px));
             background: repeating-linear-gradient(to right, var(--_indentline-color) 0 1px, transparent 1px var(--_indentline-step));
         }
-        &.file-tree__row[role="treeitem"] {
-            --file-tree-indent: 24px;
+        &.file-tree__row {
+            --file-tree-indent: calc(var(--_indentline-step-number) * 1px);
             --_indentline-step: var(--file-tree-indent);
-            --_indent-offset: calc(var(--file-tree-depth) * var(--file-tree-indent));
+            --_indent-offset: calc((var(--file-tree-depth) + var(--_file-tree-depth-offset, 0)) * var(--file-tree-indent));
             --_indent-toggle-center: calc(var(--file-tree-toggle-size) / 2);
+            --file-tree-toggle-left: calc(var(--_indent-offset) + var(--file-tree-toggle-padding));
+            --file-toggle-width: calc(var(--_indent-offset) + var(--file-tree-toggle-size));
         }
     }
     .b3-list-item__toggle.fn__hidden {
@@ -46,7 +52,7 @@
             visibility: visible;
         }
     }
-    & > .b3-list > ul > .b3-list-item {
+    & > .b3-list > ul > .b3-list-item:not(.file-tree__row) {
         --_indent-offset: var(--_indentline-step);
     }
 }
@@ -54,8 +60,9 @@
 .fn__flex-column[data-type="sidebar-outline"],
 .fn__flex-column[data-type="sidebar-tag"],
 .fn__flex-column[data-type="sidebar-bookmark"] {
+    --_indentline-source-step: 18;
     .b3-list-item {
-        --_indent-offset: calc(var(--file-toggle-width, var(--_indentline-step)) - var(--_indentline-step));
+        --_indent-offset: max(0px, calc((var(--file-toggle-width, 0px) - var(--_indentline-source-step) * 1px) * var(--_indentline-step-number) / var(--_indentline-source-step)));
     }
     & > .fn__flex-1 > .b3-list > .b3-list-item:not([role=treeitem]),
     & > .b3-list > .b3-list-item,
@@ -70,16 +77,25 @@
     & > .b3-list > .b3-list-item[data-type="toggle"] > .b3-list-item__toggle {
         padding-inline: var(--_file-tree-heading-toggle-padding) !important;
     }
+    & > .b3-list > ul > .file-tree__row[data-type="navigation-closed"] {
+        // 关闭的笔记本在分组标题下显示为一级子项。
+        --_file-tree-depth-offset: 1;
+    }
 }
 .fn__flex-column[data-type="sidebar-file"] {
-    --_indentline-step: 20px;
     --_file-tree-heading-toggle-padding: 8px;
+}
+.fn__flex-column[data-type="sidebar-file"],
+.fn__flex-column[data-type="sidebar-outline"],
+.fn__flex-column[data-type="sidebar-tag"],
+.fn__flex-column[data-type="sidebar-bookmark"] {
+    --_indentline-step-number: 24;
 }
 .fn__flex-column[data-type="sidebar-outline"],
 .fn__flex-column[data-type="sidebar-tag"],
 .fn__flex-column[data-type="sidebar-bookmark"] {
-    --_indentline-step: 20px;
+    --_indentline-source-step: 20;
     .b3-list-item[data-treetype] {
-        --_indent-offset: calc((var(--file-toggle-width, 18px) - 18px) * 20 / 18);
+        --_indentline-source-step: 18;
     }
 }

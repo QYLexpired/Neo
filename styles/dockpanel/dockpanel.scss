@@ -83,14 +83,17 @@
     display: none !important;
 }
 .sy__file > .b3-list > .b3-list-item[data-type="toggle"],
+.fn__flex-column[data-type="sidebar-file"] > .b3-list > .b3-list-item[data-type="toggle"],
 .sy__file .b3-list--background > .b3-list-item:not([role=treeitem]),
 .sy__file .b3-list--background > .b3-list-item[role=treeitem][aria-level="1"]:not(.file-tree__pins .b3-list-item) {
     font-weight: bold;
 }
-.sy__file .b3-list-item > .counter {
+.sy__file .b3-list-item > .counter,
+.fn__flex-column[data-type="sidebar-file"] > .b3-list > .b3-list-item[data-type="toggle"] > .counter {
     font-weight: normal;
 }
-.sy__file > .b3-list > .b3-list-item[data-type="toggle"] > .b3-list-item__text::before {
+.sy__file > .b3-list > .b3-list-item[data-type="toggle"] > .b3-list-item__text::before,
+.fn__flex-column[data-type="sidebar-file"] > .b3-list > .b3-list-item[data-type="toggle"] > .b3-list-item__text::before {
     content: "";
     display: inline-block;
     width: 16px;
@@ -100,4 +103,9 @@
     pointer-events: none;
     background-color: var(--b3-theme-on-surface);
     mask: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="4" rx="1"/><path d="M5 7v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7M10 11h4"/></svg>') center / contain no-repeat;
+}
+.fn__flex-column[data-type="sidebar-file"] > .b3-list > .b3-list-item[data-type="toggle"] > .b3-list-item__text::before {
+    width: 20px;
+    height: 20px;
+    vertical-align: -4px;
 }

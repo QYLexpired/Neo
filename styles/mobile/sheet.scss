@@ -9,6 +9,31 @@
         box-shadow: var(--b3-menu-shadow);
         margin: 0;
     }
+    .b3-dialog__container.mobile-bottom-sheet {
+        .neo-frostedglass & {
+            background-color: transparent;
+        }
+        .neo-frostedglass-scope-global.neo-frostedglass-luminous-on & {
+            box-shadow: var(--b3-dialog-shadow-blur);
+        }
+        &::before {
+            @include frostedglass($blur: t, $color: background);
+            .neo-frostedglass & {
+                content: "";
+            }
+        }
+    }
+    .mobile-sheet-layout--standalone > .mobile-sheet-panel {
+        .neo-frostedglass & {
+            background-color: var(--b3-theme-background);
+            box-shadow: var(--b3-dialog-shadow);
+        }
+        .neo-frostedglass-scope-global & {
+            background-color: transparent;
+            box-shadow: var(--b3-dialog-shadow-blur);
+            z-index: 0;
+        }
+    }
     @supports (container-type: size) and (height: 1cqh) and (border-top-left-radius: 1px round(up, 100dvh - 100%, 1px)) {
         .mobile-bottom-sheet-dialog > .b3-dialog.mobile-sheet-layout,
         .mobile-sheet-layout--standalone {
@@ -38,15 +63,24 @@
         }
     }
     .b3-menu.b3-menu--sheet {
+        .neo-frostedglass & {
+            background-color: transparent;
+            box-shadow: var(--b3-menu-shadow-blur);
+        }
         .b3-menu__title:not(.b3-menu__title--root) {
             border-radius: inherit;
             corner-shape: inherit;
             background-color: var(--b3-menu-background);
+            @include frostedglass-menu;
         }
         .b3-menu__submenu {
             background-color: var(--b3-menu-background);
             transition: none;
             box-shadow: none;
+            @include frostedglass-menu;
+            .neo-frostedglass &::before {
+                display: none;
+            }
         }
     }
     .b3-menu--sheet .b3-menu__title::before,
@@ -75,5 +109,39 @@
     }
     .mobile-bottom-sheet-dialog:not(.b3-dialog--open) > .b3-dialog > .b3-dialog__scrim {
         opacity: 0;
+    }
+    .neo-frostedglass & {
+        .av__panel > .b3-dialog__scrim[data-type="close"] {
+            background-color: transparent !important;
+        }
+        @supports (backdrop-filter: blur(2px)) {
+            .b3-menu__scrim--open {
+                background-color: transparent;
+                backdrop-filter: blur(2px);
+                opacity: 1;
+            }
+            .mobile-bottom-sheet-dialog.b3-dialog--open > .b3-dialog > .b3-dialog__scrim {
+                background-color: transparent !important;
+                backdrop-filter: blur(2px);
+                z-index: -2;
+            }
+        }
+        .mobile-bottom-sheet-dialog.b3-dialog--open[data-key="dialog-opencard"] > .b3-dialog > .b3-dialog__scrim,
+        .mobile-bottom-sheet-dialog.b3-dialog--open[data-key="dialog-viewcards"] > .b3-dialog > .b3-dialog__scrim {
+            background-color: oklch(from var(--b3-theme-background) l c h / 0.8) !important;
+        }
+    }
+    .mobile-sheet-layout--standalone > .sync-checkout__scrim {
+        .neo-frostedglass & {
+            background-color: transparent !important;
+            backdrop-filter: brightness(0.75);
+        }
+        .neo-mode-dark.neo-frostedglass & {
+            backdrop-filter: brightness(0.5);
+        }
+        .neo-frostedglass.neo-frostedglass-scope-global & {
+            backdrop-filter: blur(2px);
+            z-index: -2;
+        }
     }
 }

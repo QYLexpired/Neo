@@ -1,6 +1,8 @@
+@use "../utils" as *;
 #model {
     background-color: var(--b3-theme-background);
     transition: 0.15s var(--neo-ease-out-3);
+    @include frostedglass-menu($scope: global);
     #modelMain > .fn__flex-column {
         background-color: transparent !important;
     }

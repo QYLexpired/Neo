@@ -11,6 +11,19 @@
     border-radius: 0;
     corner-shape: unset;
     box-shadow: unset;
+    .neo-mobile &:not(.b3-menu--sheet) {
+        .neo-frostedglass-scope-global & {
+            background-color: transparent;
+        }
+        &::before {
+            @include frostedglass-menu($scope: global);
+            .neo-frostedglass-scope-global & {
+                border-radius: 0;
+                corner-shape: unset;
+                box-shadow: unset;
+            }
+        }
+    }
     .b3-menu__title {
         border-bottom: unset;
         background-color: transparent;
