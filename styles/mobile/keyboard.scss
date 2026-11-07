@@ -4,9 +4,9 @@
     border-top: unset;
     @include superellipse-use($radius-box $radius-box 0 0);
     box-shadow: var(--b3-menu-shadow);
-    margin: 0 2px -2px 2px;
-    width: calc(100% - 4px);
-    transform: translateY(4px); // 遮挡下阴影
+    &.keyboard--sheet-open {
+        border-radius: 0;
+    }
     @include frostedglass-menu($scope: global);
     .neo-frostedglass-scope-global.neo-frostedglass-luminous-on & {
         @include frostedglass-luminous(menu-simple);
