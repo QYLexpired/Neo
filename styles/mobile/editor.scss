@@ -10,14 +10,6 @@
 }
 #editor {
     background-color: var(--b3-theme-background);
-    .neo-frostedglass-scope-global & {
-        min-height: 100%;
-    }
-    @at-root {
-        .neo-frostedglass-scope-global .neo-mobile {
-            padding-bottom: 0 !important;
-        }
-    }
     & > .protyle-breadcrumb {
         background-color: var(--b3-theme-background);
     }

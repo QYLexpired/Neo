@@ -8,9 +8,9 @@
 .fn__flex-column[data-type="sidebar-bookmark"] {
     --_indentline-step: 18px;
     .b3-list-item {
-        --_indent-offset: calc(var(--file-toggle-width, var(--_indentline-step)) - var(--_indentline-step));
+        --_indent-offset: 0px;
         margin-inline: 6px;
-        & > .b3-list-item__toggle {
+        &:not(.file-tree__row[role="treeitem"]) > .b3-list-item__toggle {
             padding-left: var(--_indent-offset) !important;
         }
         &::before {
@@ -19,9 +19,15 @@
             pointer-events: none;
             top: -1px;
             bottom: -1px;
-            left: 10.5px;
+            left: calc(4px + var(--_indent-toggle-center, 7px) - 0.5px);
             width: max(0px, calc(var(--_indent-offset) - var(--_indentline-step) + 1px));
             background: repeating-linear-gradient(to right, var(--_indentline-color) 0 1px, transparent 1px var(--_indentline-step));
+        }
+        &.file-tree__row[role="treeitem"] {
+            --file-tree-indent: 24px;
+            --_indentline-step: var(--file-tree-indent);
+            --_indent-offset: calc(var(--file-tree-depth) * var(--file-tree-indent));
+            --_indent-toggle-center: calc(var(--file-tree-toggle-size) / 2);
         }
     }
     .b3-list-item__toggle.fn__hidden {
@@ -31,7 +37,7 @@
             position: absolute;
             pointer-events: none;
             top: 50%;
-            left: calc(var(--_indent-offset) + 5px);
+            left: calc(var(--_indent-offset) + var(--_indent-toggle-center, 7px) - 2px);
             transform: translateY(-50%);
             width: 4px;
             height: 4px;
@@ -40,17 +46,26 @@
             visibility: visible;
         }
     }
-    & > .fn__flex-1 > .b3-list > .b3-list-item:not([role=treeitem]),
-    .file-tree__pins > .b3-list > .b3-list-item,
-    & > .b3-list > .b3-list-item,
-    [role=tree] .b3-list-item[aria-level="1"]:not([data-pin-row]) {
-        --_indent-offset: 0px;
-    }
     & > .b3-list > ul > .b3-list-item {
         --_indent-offset: var(--_indentline-step);
     }
 }
-.fn__flex-column[data-type="sidebar-file"],
+.file-tree:not(.sy__file, [data-type="sidebar-file"]),
+.fn__flex-column[data-type="sidebar-outline"],
+.fn__flex-column[data-type="sidebar-tag"],
+.fn__flex-column[data-type="sidebar-bookmark"] {
+    .b3-list-item {
+        --_indent-offset: calc(var(--file-toggle-width, var(--_indentline-step)) - var(--_indentline-step));
+    }
+    & > .fn__flex-1 > .b3-list > .b3-list-item:not([role=treeitem]),
+    & > .b3-list > .b3-list-item,
+    [role=tree] .b3-list-item[aria-level="1"] {
+        --_indent-offset: 0px;
+    }
+}
+.fn__flex-column[data-type="sidebar-file"] {
+    --_indentline-step: 20px;
+}
 .fn__flex-column[data-type="sidebar-outline"],
 .fn__flex-column[data-type="sidebar-tag"],
 .fn__flex-column[data-type="sidebar-bookmark"] {

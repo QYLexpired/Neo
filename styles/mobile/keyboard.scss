@@ -2,10 +2,6 @@
 #keyboardToolbar {
     background-color: var(--b3-menu-background);
     border-top: unset;
-    @include frostedglass-menu($scope: global);
-    .neo-frostedglass-scope-global.neo-frostedglass-luminous-on & {
-        @include frostedglass-luminous(menu-simple);
-    }
     @include superellipse-use($radius-box $radius-box 0 0);
     box-shadow: var(--b3-menu-shadow);
     margin: 0 2px -2px 2px;

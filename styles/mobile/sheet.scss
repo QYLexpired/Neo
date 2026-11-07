@@ -1,0 +1,79 @@
+@use "../utils" as *;
+@use "icon" as *;
+.neo-mobile {
+    .b3-menu.b3-menu--sheet,
+    .b3-dialog__container.mobile-bottom-sheet,
+    .mobile-sheet-layout--standalone > .mobile-sheet-panel {
+        background-color: var(--b3-menu-background);
+        @include superellipse-use($radius-box $radius-box 0 0);
+        box-shadow: var(--b3-menu-shadow);
+        margin: 0;
+    }
+    @supports (container-type: size) and (height: 1cqh) and (border-top-left-radius: 1px round(up, 100dvh - 100%, 1px)) {
+        .mobile-bottom-sheet-dialog > .b3-dialog.mobile-sheet-layout,
+        .mobile-sheet-layout--standalone {
+            container-type: size;
+        }
+        .b3-menu.b3-menu--sheet,
+        .mobile-sheet-layout > .b3-dialog__container.mobile-bottom-sheet,
+        .mobile-sheet-layout--standalone > .mobile-sheet-panel {
+            --_sheet-available-height: 100cqh;
+            --_sheet-radius: #{$radius-box};
+            @supports (corner-shape: superellipse(1.4)) {
+                --_sheet-radius: #{$radius-box * $k};
+            }
+            --_sheet-radius-y: round(up, clamp(0px, var(--_sheet-available-height) - 100%, var(--_sheet-radius)), var(--_sheet-radius));
+            border-top-left-radius: var(--_sheet-radius) var(--_sheet-radius-y);
+            border-top-right-radius: var(--_sheet-radius) var(--_sheet-radius-y);
+            // 全高抽屉下拉时仍保持原有布局高度，需要按位移恢复顶部圆角
+            &[style*="translateY("]:not([style*="translateY(0px)"]) {
+                --_sheet-radius-y: var(--_sheet-radius);
+            }
+        }
+        .b3-menu.b3-menu--sheet {
+            --_sheet-available-height: calc(100dvh - var(--mobile-top-safe-area, 0px));
+        }
+        .av__panel > .b3-menu.b3-menu--sheet {
+            --_sheet-available-height: calc(100dvh - var(--b3-menu-sheet-bottom, 0px));
+        }
+    }
+    .b3-menu.b3-menu--sheet {
+        .b3-menu__title:not(.b3-menu__title--root) {
+            border-radius: inherit;
+            corner-shape: inherit;
+            background-color: var(--b3-menu-background);
+        }
+        .b3-menu__submenu {
+            background-color: var(--b3-menu-background);
+            transition: none;
+            box-shadow: none;
+        }
+    }
+    .b3-menu--sheet .b3-menu__title::before,
+    .mobile-bottom-sheet > .b3-menu__title--root::before {
+        background-color: oklch(from var(--b3-theme-on-background) l c h / 0.5);
+    }
+    .b3-menu--sheet > .b3-menu__title:not(.b3-menu__title--root) {
+        padding: 0 10px;
+        > .b3-menu__icon {
+            @include mobile-panel-icon;
+        }
+        .b3-menu__label {
+            display: none;
+        }
+    }
+    // 菜单手势直接控制黑色遮罩的透明度，常态上限是 0.2
+    .b3-menu__scrim {
+        background-color: #000;
+    }
+    .mobile-bottom-sheet-dialog > .b3-dialog > .b3-dialog__scrim,
+    .av__panel > .b3-dialog__scrim[data-type="close"],
+    .mobile-sheet-layout--standalone > .sync-checkout__scrim {
+        background-color: rgb(0 0 0 / 0.2) !important;
+        backdrop-filter: none;
+        transition: opacity 150ms linear;
+    }
+    .mobile-bottom-sheet-dialog:not(.b3-dialog--open) > .b3-dialog > .b3-dialog__scrim {
+        opacity: 0;
+    }
+}

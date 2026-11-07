@@ -20,7 +20,7 @@ Neo is free to use. If you enjoy it, consider starring the project on [GitHub](h
 #### <span style="font-family: neo;">Refined Design</span>
 - Uses the OKLCH color space to support flexible palettes while keeping text readable
 - Introduces smooth superellipse corners
-- Frosted glass adds translucency and depth across the interface
+- Frosted glass adds translucency and depth on non-mobile frontends
 - Overflow fades soften the edges of scrollable content
 - Spring easing gives transitions and interactions a more natural feel
 #### <span style="font-family: neo;">Expressive Color Schemes</span>

@@ -2,16 +2,16 @@
 .neo-mobile {
     --mobile-bottom-bar-offset: 0;
 }
+html[data-frontend="mobile"] body.neo-mobile.body--android::after {
+    // 安全区渐变保留在正文之上，避免覆盖浮动底栏
+    z-index: 2;
+}
 #mobileBottomBar {
     @include superellipse-use($capsule);
     justify-self: center;
     border: unset;
     box-shadow: var(--neo-main-shadow);
     background-color: var(--b3-menu-background);
-    @include frostedglass-menu;
-    .neo-frostedglass-luminous-on & {
-        @include frostedglass-luminous(toolbar);
-    }
 }
 .mobile-bottom-bar__item {
     @include icon($important: true);

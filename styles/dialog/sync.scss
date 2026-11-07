@@ -1,4 +1,4 @@
-.sync-checkout__scrim {
+:not(.mobile-sheet-layout--standalone) > .sync-checkout__scrim {
     backdrop-filter: brightness(0.75);
     .neo-mode-dark & {
         backdrop-filter: brightness(0.5);

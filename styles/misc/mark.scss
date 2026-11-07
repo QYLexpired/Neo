@@ -2,7 +2,7 @@
     color: var(--b3-highlight-color);
     background-color: var(--b3-highlight-background);
 }
-// 搜索命中与引用定位共用高亮色，行内 mark 保留独立的标注样式。
+// 搜索命中与引用定位共用高亮色，行内 mark 保留独立的标注样式
 #searchAssetPreview mark,
 .protyle-wysiwyg [data-node-id] span[data-type~=search-mark],
 .protyle-wysiwyg [data-table-cell-node] span[data-type~=search-mark],
@@ -19,7 +19,7 @@
 .b3-typography.document-title-preview .def--mark,
 .b3-typography.outline-document-title .def--mark {
     color: var(--b3-highlight-color) !important;
-    // 高亮覆盖链接的图标底色、悬停背景和行内 mark 阴影。
+    // 高亮覆盖链接的图标底色、悬停背景和行内 mark 阴影
     background-color: var(--b3-highlight-background) !important;
     background-image: unset !important;
     box-shadow: none !important;

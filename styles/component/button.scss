@@ -270,8 +270,7 @@
 .memory-manager__actions,
 .agent-chat__confirm-actions,
 .agent-chat__question-submit,
-.agent-chat__msg--editing .agent-chat__msg-actions,
-.av__richtext-actions {
+.agent-chat__msg--editing .agent-chat__msg-actions {
     .b3-button {
         @include button-translucent(on-surface);
     }

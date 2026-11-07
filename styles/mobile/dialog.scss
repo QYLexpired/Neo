@@ -1,12 +1,11 @@
-@use "../utils" as *;
 .neo-mobile {
     .b3-dialog__container:not(.mobile-bottom-sheet) {
         max-width: 95vw !important;
-        // 键盘弹出时，弹窗高度不能超过思源提供的可用空间。
+        // 键盘弹出时，弹窗高度不能超过思源提供的可用空间
         max-height: min(95vh, 100%) !important;
         min-width: 300px !important;
     }
-    [data-key="dialog-opencard"] .b3-dialog__container,
+    [data-key="dialog-opencard"] .b3-dialog__container:not(.mobile-bottom-sheet),
     .config__view  {
         max-width: 100vw !important;
         max-height: 100% !important;
@@ -15,38 +14,6 @@
         corner-shape: unset;
         &::before {
             box-shadow: none;
-        }
-    }
-    .b3-dialog__container.mobile-bottom-sheet {
-        background-color: var(--b3-menu-background);
-        @include superellipse-use($radius-box $radius-box 0 0);
-        box-shadow: var(--b3-menu-shadow);
-        .neo-frostedglass-scope-global.neo-frostedglass-luminous-on & {
-            box-shadow: var(--b3-dialog-shadow-blur);
-        }
-        margin: 0 2px -2px 2px;
-        transition: 0.15s var(--neo-ease-out-3);
-        max-width: calc(100vw - 4px);
-        .mobile-bottom-sheet__handle::before {
-            background-color: oklch(from var(--b3-theme-on-background) l c h / 0.5);
-        }
-    }
-}
-// 移动端底部对话框
-.neo-mobile .mobile-bottom-sheet-dialog {
-    &.b3-dialog--open .b3-dialog__scrim {
-        .neo-frostedglass & {
-            z-index: -2;
-            backdrop-filter: blur(2px);
-        }
-    }
-    .b3-dialog__container.mobile-bottom-sheet {
-        .neo-frostedglass & {
-            background-color: transparent;
-        }
-        &::before {
-            @include frostedglass-before;
-            @include frostedglass-dialog;
         }
     }
 }

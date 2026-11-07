@@ -92,7 +92,7 @@
             --_av-kanban-border: oklch(from var(--_av-kanban-add-color) l c h / 0.18);
             --_av-kanban-add-color: oklch(from var(--b3-av-kanban-background) 0.82 clamp(0, calc(c * 4), 0.16) h);
         }
-        // 思源将空分组的着色变量设为边框色，直接识别现有标记。
+        // 思源将空分组的着色变量设为边框色，直接识别现有标记
         &[style*="--b3-border-color"] {
             --_av-kanban-column-bg: color-mix(in srgb, var(--b3-theme-on-background) 4%, var(--b3-theme-background));
             --_av-kanban-card-bg: color-mix(in srgb, var(--b3-theme-background) 96%, var(--b3-theme-on-background));

@@ -25,7 +25,7 @@ $neo-lowercase-task-codes: string.split(
     @return $result;
 }
 $neo-custom-task-codes: neo-list-exclude($neo-task-codes, $neo-standard-task-codes);
-// 状态可位于任务列表项或按钮上。
+// 状态可位于任务列表项或按钮上
 @function neo-task-actions($state: "", $text: false) {
     $selectors: ();
     $body: "";
@@ -51,7 +51,7 @@ $neo-custom-task-codes: neo-list-exclude($neo-task-codes, $neo-standard-task-cod
     }
     @return $selectors;
 }
-// 正文预览与 Markdown HTML 导出的任务输入控件。
+// 正文预览与 Markdown HTML 导出的任务输入控件
 @function neo-task-export-inputs($state: "") {
     @return ".protyle-wysiwyg .protyle-task > input[type=checkbox][data-task]#{$state}",
         ".b3-typography .protyle-task > input[type=checkbox][data-task]#{$state}";
@@ -119,7 +119,7 @@ $neo-custom-task-codes: neo-list-exclude($neo-task-codes, $neo-standard-task-cod
     font-size: calc(var(--_task-icon-font-size, #{$neo-task-icon-font-size}) * 0.9) !important;
     font-family: inherit !important;
 }
-// 原生 SVG 绘制外框，::before 显示文字，保留 ::after 的折叠背景。
+// 原生 SVG 绘制外框，::before 显示文字，保留 ::after 的折叠背景
 @mixin task-custom-outline {
     position: absolute;
     box-sizing: border-box;
@@ -251,7 +251,7 @@ $neo-custom-task-codes: neo-list-exclude($neo-task-codes, $neo-standard-task-cod
     --_task-icon-font-size: #{$neo-task-tab-icon-font-size};
     position: relative;
 }
-// 独立思维导图也需要页签任务的原生占位尺寸。
+// 独立思维导图也需要页签任务的原生占位尺寸
 .mindmap-view .tabs-task {
     display: inline-flex;
     align-items: center;

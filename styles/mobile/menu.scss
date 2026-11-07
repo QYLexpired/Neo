@@ -6,88 +6,18 @@
         margin: 0 6px;
     }
 }
-.b3-menu__scrim {
-    opacity: 0 !important;
-    background-color: transparent;
-    backdrop-filter: none;
-    transition: backdrop-filter 0.45s;
-    &.b3-menu__scrim--open {
-        opacity: 1 !important;
-        backdrop-filter: brightness(0.75);
-        .neo-mode-dark & {
-            backdrop-filter: brightness(0.5);
-        }
-        .neo-frostedglass & {
-            z-index: -2;
-            backdrop-filter: blur(2px);
-        }
-    }
-    .neo-frostedglass & {
-        transition: backdrop-filter 0.45s;
-    }
-}
 .b3-menu.b3-menu--fullscreen {
     background-color: var(--b3-theme-background);
     border-radius: 0;
     corner-shape: unset;
     box-shadow: unset;
-    .neo-frostedglass-scope-global & {
-        background-color: transparent;
-    }
-    &::before {
-        @include frostedglass-before($scope: global);
-        @include frostedglass-menu($scope: global);
-        border-radius: 0;
-        corner-shape: unset;
-        box-shadow: unset;
-    }
-    &.b3-menu--sheet {
-        background-color: var(--b3-menu-background);
-        @include superellipse-use($radius-box $radius-box 0 0);
-        box-shadow: var(--b3-menu-shadow);
-        margin: 0 2px -2px 2px;
-        transition: 0.15s var(--neo-ease-out-3);
-        &.b3-menu--expanded {
-            border-radius: 0;
-            corner-shape: unset;
-        }
-        .neo-frostedglass & {
-            background-color: transparent;
-            box-shadow: var(--b3-menu-shadow-blur);
-        }
-        &::before {
-            @include frostedglass-before;
-            @include frostedglass-menu;
-            box-shadow: var(--b3-menu-shadow-inset);
-        }
-        .b3-menu__title {
-            &::before {
-                background-color: oklch(from var(--b3-theme-on-background) l c h / 0.5);
-            }
-            &:not(.b3-menu__title--root) {
-                border-radius: inherit;
-                corner-shape: inherit;
-                background-color: var(--b3-menu-background);
-                @include frostedglass-menu;
-            }
-        }
-        .b3-menu__submenu {
-            background-color: var(--b3-menu-background);
-            @include frostedglass-menu;
-            transition: none;
-            box-shadow: none;
-            &::before {
-                display: none;
-            }
-        }
-    }
     .b3-menu__title {
         border-bottom: unset;
         background-color: transparent;
     }
     .b3-menu__items {
         background-color: transparent;
-        // 移动端不需要桌面菜单为输入框阴影预留的负边距。
+        // 移动端不需要桌面菜单为输入框阴影预留的负边距
         margin: 0;
     }
     .b3-menu__item {

@@ -120,7 +120,7 @@
     .neo-element-heading-colored-on & {
         --_heading-color: var(--b3-theme-accent);
     }
-    // 标题初始化时含有空格，需等标题数据渲染后再显示装饰线。
+    // 标题初始化时含有空格，需等标题数据渲染后再显示装饰线
     .protyle[data-loading="finished"] .protyle-title[data-render="true"] & {
         &::before {
             content: "";
@@ -141,7 +141,7 @@
             }
         }
     }
-    // 嵌套预览不能借用外层编辑器的加载完成状态。
+    // 嵌套预览不能借用外层编辑器的加载完成状态
     .protyle:not([data-loading="finished"]) &::before {
         display: none;
     }

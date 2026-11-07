@@ -116,7 +116,7 @@ $database-title-mask: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000
     color: var(--b3-theme-on-surface-light);
 }
 // cell
-// 日历字段的原生引用规则优先级更高，所有视图仍共用同一套引用样式。
+// 日历字段的原生引用规则优先级更高，所有视图仍共用同一套引用样式
 .av__celltext--ref,
 .av[data-av-type="calendar"] .av__calendar-field .av__celltext--ref {
     @include link.link-underline(dashed);
@@ -455,7 +455,7 @@ span.av__celltext--url:not(:empty) {
         backdrop-filter: none;
         box-shadow: none;
     }
-    // sticky 的起点已包含滚动容器内边距，不再重复偏移。
+    // sticky 的起点已包含滚动容器内边距，不再重复偏移
     .av__relation-table-check {
         left: 0;
         @include superellipse-use($radius-item 0 0 $radius-item);
@@ -463,7 +463,7 @@ span.av__celltext--url:not(:empty) {
     .av__relation-table-primary {
         left: 32px;
     }
-    // 覆盖原生 .av__panel .b3-menu__item:not([data-type=nobg]):hover，避免整行底色与固定列高亮分离。
+    // 覆盖原生 .av__panel .b3-menu__item:not([data-type=nobg]):hover，避免整行底色与固定列高亮分离
     .av__relation-table-row.b3-menu__item {
         @include superellipse-use($radius-item);
         border: unset;
@@ -570,18 +570,6 @@ span.av__celltext--url:not(:empty) {
 // 富文本
 .av__richtext-mask {
     background-color: transparent;
-}
-.av__richtext-editor {
-    @include menu-container-common;
-    &.av__richtext-editor--mobile {
-        border-radius: 0;
-        corner-shape: round;
-        box-shadow: none;
-        &::before,
-        &::after {
-            box-shadow: none;
-        }
-    }
 }
 // 条件颜色
 .av__panel .av__conditional-colors {
