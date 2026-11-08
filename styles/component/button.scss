@@ -2,11 +2,13 @@
 @use "../brutalism" as *;
 @use "sass:map";
 @mixin button-common {
+    min-height: unset;
     padding: 4px 16px;
     line-height: 20px;
     @include superellipse-use($radius-item);
     box-shadow: none;
     outline: none;
+    font-size: 100%;
     transition: var(--b3-transition), transform 0.45s var(--neo-ease-spring-3);
     box-sizing: border-box !important;
     &:hover,

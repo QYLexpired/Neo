@@ -1,6 +1,20 @@
 ### v1.8.4 / 2026-10-31
-- 优化了一些细节
-- Refined some details
+- 适配思源 3.8.10
+    - 适配新版侧栏结构
+    - 移除侧栏树杈状层级线
+    - 移除彩色文档树
+    - 适配文档富文本标题
+    - 适配全局面包屑
+- 平滑光标的外观和形状可独立设置
+- 平滑光标支持自定义缓动参数
+- Added support for SiYuan 3.8.10
+    - Updated styling for the new sidebar structure
+    - Removed branching guide lines from the sidebar tree
+    - Removed the Colored Document Tree feature
+    - Added support for rich-text document titles
+    - Added support for global breadcrumbs
+- Smooth Caret appearance and shape can now be configured independently
+- Smooth Caret now supports custom easing parameters
 ### v1.8.3 / 2026-10-31
 - 修复部分情况下的移动端菜单样式异常
 - 简化 IDE 风格和垂直页签的开启方法

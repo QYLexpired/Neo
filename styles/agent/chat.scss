@@ -162,6 +162,7 @@
 }
 .agent-chat__thinking-header {
     color: var(--b3-theme-on-background);
+    background-color: transparent;
     @at-root {
         .agent-chat__thinking-arrow {
             color: var(--b3-theme-on-background);

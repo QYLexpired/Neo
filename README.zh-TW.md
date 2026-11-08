@@ -5,8 +5,14 @@
 ## 更新日誌
 完整更新紀錄可於 [CHANGELOG](https://github.com/QYLexpired/Neo/blob/main/CHANGELOG.md) 查看
 ### <span style="font-family: neo;">1.8.4</span>
-- 移除文件樹區域的分支式層級線設計（思源 3.8.10 更改了文件樹結構，此設計無法在新結構下實現）
-- 移除彩色文件樹功能（原因同上）
+- 適配思源 3.8.10
+    - 適配新版側欄結構
+    - 移除側欄樹狀分支的層級線
+    - 移除彩色文件樹功能
+    - 支援文件的富文字標題
+    - 支援全域麵包屑
+- 平滑游標的外觀與形狀可分別設定
+- 平滑游標支援自訂緩動參數
 ## 說明
 - 主題的部分樣式和功能無法僅透過 CSS 實現，因此必須安裝並啟用主題的配套外掛：[Neo+](https://github.com/QYLexpired/Neo-Plus)（點擊[此處](siyuan://bazaar/plugins/Neo-Plus/readme)前往 Neo+ 市集頁面）
 - Neo 主題和 Neo+ 外掛均不會對文件資料進行任何修改，可隨時啟用或停用，不存在遷移負擔

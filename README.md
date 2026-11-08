@@ -5,8 +5,14 @@
 ## <span style="font-family: neo;">Changelog</span>
 See the [CHANGELOG](https://github.com/QYLexpired/Neo/blob/main/CHANGELOG.md) for the full update history.
 ### <span style="font-family: neo;">1.8.4</span>
-- Removed branching guide lines from the document tree, as the structure introduced in SiYuan 3.8.10 is incompatible with this design
-- Removed the Colored Document Tree feature for the same reason
+- Added support for SiYuan 3.8.10
+    - Updated styling for the new sidebar structure
+    - Removed branching guide lines from the sidebar tree
+    - Removed the Colored Document Tree feature
+    - Added support for rich-text document titles
+    - Added support for global breadcrumbs
+- Smooth Caret appearance and shape can now be configured independently
+- Smooth Caret now supports custom easing parameters
 ## <span style="font-family: neo;">Notes</span>
 - [Neo+](https://github.com/QYLexpired/Neo-Plus) is required because some of Neo's features cannot be implemented with CSS alone. Install and enable the plugin before using the theme ([open its Bazaar page](siyuan://bazaar/plugins/Neo-Plus/readme)).
 - Neither the Neo theme nor the Neo+ plugin modifies document data. You can enable or disable them at any time without any migration.
