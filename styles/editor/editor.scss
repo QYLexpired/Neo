@@ -183,6 +183,10 @@
     &::before {
         opacity: 0 !important;
     }
+    &[data-type="NodeAttributeViewRow"],
+    &[data-type="NodeAttributeViewRowMenu"] {
+        animation: none;
+    }
     &[data-type="fold"] {
         svg {
             transition: color var(--b3-transition), transform var(--_rotate-transition);

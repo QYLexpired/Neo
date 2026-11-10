@@ -4,6 +4,8 @@
 > 重要提醒：必须安装并启用主题的配套插件[Neo+](siyuan://bazaar/plugins/Neo-Plus/readme)
 ## 更新日志
 完整更新历史可查看[CHANGELOG](https://github.com/QYLexpired/Neo/blob/main/CHANGELOG.md)
+### <span style="font-family: neo;">1.8.5</span>
+- 优化了一些细节
 ### <span style="font-family: neo;">1.8.4</span>
 - 适配思源3.8.10
     - 适配新版侧栏结构

@@ -4,6 +4,8 @@
 > **Requires the [Neo+](siyuan://bazaar/plugins/Neo-Plus/readme) companion plugin.** Make sure it's installed and enabled before you start.
 ## <span style="font-family: neo;">Changelog</span>
 See the [CHANGELOG](https://github.com/QYLexpired/Neo/blob/main/CHANGELOG.md) for the full update history.
+### <span style="font-family: neo;">1.8.5</span>
+- Polished a few details
 ### <span style="font-family: neo;">1.8.4</span>
 - Added support for SiYuan 3.8.10
     - Updated styling for the new sidebar structure

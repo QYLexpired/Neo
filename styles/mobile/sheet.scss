@@ -96,9 +96,11 @@
             display: none;
         }
     }
-    // 菜单手势直接控制黑色遮罩的透明度，常态上限是 0.2
     .b3-menu__scrim {
         background-color: #000;
+        &--open {
+            opacity: 0.2 !important;
+        }
     }
     .mobile-bottom-sheet-dialog > .b3-dialog > .b3-dialog__scrim,
     .av__panel > .b3-dialog__scrim[data-type="close"],
@@ -107,27 +109,34 @@
         backdrop-filter: none;
         transition: opacity 150ms linear;
     }
-    .mobile-bottom-sheet-dialog:not(.b3-dialog--open) > .b3-dialog > .b3-dialog__scrim {
-        opacity: 0;
+    .mobile-bottom-sheet-dialog {
+        > .b3-dialog > .b3-dialog__scrim {
+            opacity: 0 !important;
+        }
+        &.b3-dialog--open > .b3-dialog > .b3-dialog__scrim {
+            opacity: 1 !important;
+        }
     }
     .neo-frostedglass & {
         .av__panel > .b3-dialog__scrim[data-type="close"] {
             background-color: transparent !important;
         }
         @supports (backdrop-filter: blur(2px)) {
-            .b3-menu__scrim--open {
+            .b3-menu__scrim {
                 background-color: transparent;
                 backdrop-filter: blur(2px);
-                opacity: 1;
+                &--open {
+                    opacity: 1 !important;
+                }
             }
-            .mobile-bottom-sheet-dialog.b3-dialog--open > .b3-dialog > .b3-dialog__scrim {
+            .mobile-bottom-sheet-dialog > .b3-dialog > .b3-dialog__scrim {
                 background-color: transparent !important;
                 backdrop-filter: blur(2px);
                 z-index: -2;
             }
         }
-        .mobile-bottom-sheet-dialog.b3-dialog--open[data-key="dialog-opencard"] > .b3-dialog > .b3-dialog__scrim,
-        .mobile-bottom-sheet-dialog.b3-dialog--open[data-key="dialog-viewcards"] > .b3-dialog > .b3-dialog__scrim {
+        .mobile-bottom-sheet-dialog[data-key="dialog-opencard"] > .b3-dialog > .b3-dialog__scrim,
+        .mobile-bottom-sheet-dialog[data-key="dialog-viewcards"] > .b3-dialog > .b3-dialog__scrim {
             background-color: oklch(from var(--b3-theme-background) l c h / 0.8) !important;
         }
     }

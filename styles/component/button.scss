@@ -2,7 +2,7 @@
 @use "../brutalism" as *;
 @use "sass:map";
 @mixin button-common {
-    min-height: unset;
+    min-height: unset !important;
     padding: 4px 16px;
     line-height: 20px;
     @include superellipse-use($radius-item);
