@@ -90,13 +90,17 @@ $database-title-mask: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000
 }
 .av__new,
 .av__views--mobile > .av__mobile-view {
-    @include superellipse-use($radius-item);
     overflow: hidden;
     .b3-button {
         @include button-solid;
         border-color: oklch(from var(--b3-theme-background) l c h / 0.5) !important;
         &:first-child {
+            @include superellipse-use($radius-item 0 0 $radius-item);
             padding: 2px 8px;
+        }
+        &:last-child {
+            @include superellipse-use(0 $radius-item $radius-item 0);
+            padding: 2px 4px;
         }
     }
     @at-root {
