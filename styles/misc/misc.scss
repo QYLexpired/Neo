@@ -5,6 +5,9 @@
 :focus-visible {
     outline-color: var(--neo-input-primary);
 }
+.ft__primary {
+    color: var(--b3-theme-accent);
+}
 .counter {
     @include superellipse-use($radius-chip);
     &--bg,

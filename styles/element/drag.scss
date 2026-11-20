@@ -29,14 +29,26 @@
     }
 }
 .protyle-block-resize {
-    @include protyle-action__drag-common;
+    box-shadow: none;
     background-color: transparent;
     color: var(--b3-theme-on-background);
-    &[data-resize-axis="width"] {
-        transform-origin: 5.5px 0;
+    transition: 0.3s;
+    &::after {
+        transition: scale 0.6s var(--neo-ease-spring-3);
     }
-    &[data-resize-axis="height"] {
-        transform-origin: 0 5.5px;
+    &[data-resize-axis="width"]::after {
+        translate: 0 -50%;
+        transform: none;
+    }
+    &[data-resize-axis="height"]::after {
+        translate: -50% 0;
+        transform: none;
+    }
+    &:hover {
+        opacity: 1;
+        &::after {
+            scale: 1.2;
+        }
     }
     &:hover,
     &:focus-visible,

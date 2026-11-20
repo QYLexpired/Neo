@@ -102,7 +102,7 @@ body.body--linux .b3-select { // body用来覆盖思源样式
         }
     }
 }
-.b3-text-field {
+.b3-text-field:where(:not(.mindmap-view__relation-editor, .mindmap-view__summary-editor)) {
     @include input-common;
     .search__header & {
         box-shadow: none !important;
@@ -315,6 +315,13 @@ input[type="color"] {
         }
     }
 }
+.color-picker__swatch {
+    outline: 0.5px solid var(--b3-border-color-trans);
+    outline-offset: -0.5px;
+    width: 20px;
+    height: 20px;
+    @include superellipse-use(3px);
+}
 // 日期输入框
 input[type="datetime-local"],
 input[type="date"],
@@ -322,6 +329,18 @@ input[type="month"],
 input[type="week"] {
     &::-webkit-calendar-picker-indicator {
         filter: invert(0);
+    }
+}
+.date-picker__calendar {
+    .b3-button--outline { // 代表今天
+        @include button-translucent(accent);
+    }
+    td {
+        &[aria-selected="true"] {
+            .b3-button {
+                @include button-solid(primary);
+            }
+        }
     }
 }
 // 文件选择输入框

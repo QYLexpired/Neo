@@ -95,6 +95,9 @@ $database-title-mask: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000
     .b3-button {
         @include button-solid;
         border-color: oklch(from var(--b3-theme-background) l c h / 0.5) !important;
+        &:first-child {
+            padding: 2px 8px;
+        }
     }
     @at-root {
         .av__views--mobile > .av__mobile-view {
@@ -570,6 +573,9 @@ span.av__celltext--url:not(:empty) {
 // 富文本
 .av__richtext-mask {
     background-color: transparent;
+    > .av__richtext-editor {
+        @include menu-container-common;
+    }
 }
 // 条件颜色
 .av__panel .av__conditional-colors {

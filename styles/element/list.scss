@@ -30,11 +30,9 @@ $neo-custom-task-codes: neo-list-exclude($neo-task-codes, $neo-standard-task-cod
     $selectors: ();
     $body: "";
     $label: "";
-    $mindmap: "";
     @if $text {
         $body: " ~ .p";
         $label: " ~ .tabs-tab-label";
-        $mindmap: " ~ .mindmap-view__content > .p";
     }
     @each $item in ".protyle-wysiwyg .li", ".table__cell-rich .li", ".mindmap-view__content .li[data-table-cell-node]" {
         $selectors: list.append($selectors, "#{$item}[data-subtype=t]#{$state} > .protyle-action--task#{$body}", comma);
@@ -42,14 +40,7 @@ $neo-custom-task-codes: neo-list-exclude($neo-task-codes, $neo-standard-task-cod
             $selectors: list.append($selectors, "#{$item}[data-subtype=t] > .protyle-action--task#{$state}#{$body}", comma);
         }
     }
-    $selectors: list.join($selectors, (
-        ".tabs-task#{$state}#{$label}",
-        ".mindmap-view .mindmap-view__task#{$state}#{$mindmap}"
-    ), comma);
-    @if $text {
-        $selectors: list.append($selectors, ".mindmap-view .mindmap-view__task#{$state} ~ .mindmap-view__content.mindmap-view__editor .protyle-wysiwyg > .p", comma);
-    }
-    @return $selectors;
+    @return list.append($selectors, ".tabs-task#{$state}#{$label}", comma);
 }
 // 正文预览与 Markdown HTML 导出的任务输入控件
 @function neo-task-export-inputs($state: "") {
@@ -200,8 +191,7 @@ $neo-custom-task-codes: neo-list-exclude($neo-task-codes, $neo-standard-task-cod
 }
 // 取消任务状态删除线
 .li[data-subtype="t"] > .p,
-.tabs-task ~ .tabs-tab-label,
-.protyle-task--done .mindmap-view__content .p {
+.tabs-task ~ .tabs-tab-label {
     text-decoration: none !important;
 }
 #{neo-task-actions($text: true)},
@@ -347,12 +337,6 @@ $neo-custom-task-codes: neo-list-exclude($neo-task-codes, $neo-standard-task-cod
         --_list-accent-color: oklch(from var(--b3-theme-accent) l c calc(h + #{$hue}));
         mask-image: task-export-marker-mask($code);
     }
-}
-// 思维导图任务列表
-.mindmap-view .mindmap-view__task {
-    --b3-list-icon-hover: transparent;
-    min-width: max(14px, 1em - 4px);
-    min-height: max(14px, 1em - 4px);
 }
 @include task-entrance-keyframes(neo-task-default-entrance);
 @each $code in $neo-task-codes {
