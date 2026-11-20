@@ -274,7 +274,7 @@
 .agent-chat__question-submit,
 .agent-chat__msg--editing .agent-chat__msg-actions {
     .b3-button {
-        @include button-translucent(on-surface);
+        @include button-solid(primary);
     }
     .b3-button--text {
         @include button-solid(primary);

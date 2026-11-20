@@ -110,6 +110,28 @@ body.body--linux .b3-select { // body用来覆盖思源样式
 }
 .b3-text-field {
     @include input-common;
+    .protyle-hint > &,
+    .b3-menu__filter > .fn__flex > &,
+    .b3-menu__filter > &,
+    .b3-menu > & {
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        margin-top: -8px !important;
+        padding: 8px;
+        height: auto;
+        min-height: unset;
+        border-radius: 0;
+        border-bottom: 1px solid var(--b3-border-color-trans);
+        outline: none !important;
+        box-shadow: none !important;
+        background-color: transparent;
+        @include superellipse-use($radius-card $radius-card 0 0);
+    }
+    .b3-menu__filter > .fn__flex > &,
+    .b3-menu__filter > & {
+        margin-left: -8px !important;
+        margin-right: -8px !important;
+    }
     .search__header & {
         box-shadow: none !important;
         outline: none !important;
@@ -140,7 +162,6 @@ $slider-thumb-width: 20px;
 $slider-track-height: 6px;
 .b3-slider,
 .protyle-scroll__bar .b3-slider {
-    padding: 0 1px;
     height: 26px;
     transition: 0.8s var(--neo-ease-spring-4);
     -webkit-appearance: none;

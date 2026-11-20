@@ -9,6 +9,7 @@ See the [CHANGELOG](https://github.com/QYLexpired/Neo/blob/main/CHANGELOG.md) fo
     - Removed Neo's custom styling for mind map nodes
     - Updated styling for the built-in color picker
     - Updated styling for the built-in date picker
+- Redesigned text fields in menus
 ## <span style="font-family: neo;">Notes</span>
 - [Neo+](https://github.com/QYLexpired/Neo-Plus) is required because some of Neo's features cannot be implemented with CSS alone. Install and enable the plugin before using the theme ([open its Bazaar page](siyuan://bazaar/plugins/Neo-Plus/readme)).
 - Neither the Neo theme nor the Neo+ plugin modifies document data. You can enable or disable them at any time without any migration.

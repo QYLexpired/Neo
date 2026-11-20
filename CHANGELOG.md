@@ -3,10 +3,12 @@
     - 移除主题对思维导图节点样式的修改
     - 适配内置颜色选择器
     - 适配内置日期选择器
+- 重做菜单内输入框样式
 - Added support for SiYuan 3.8.11
     - Removed Neo's custom styling for mind map nodes
     - Updated styling for the built-in color picker
     - Updated styling for the built-in date picker
+- Redesigned text fields in menus
 ### v1.8.5 / 2026-11-10
 - 优化了一些细节
 - Refined various details

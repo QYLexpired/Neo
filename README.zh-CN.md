@@ -9,6 +9,7 @@
     - 移除主题对思维导图节点样式的修改
     - 适配内置颜色选择器
     - 适配内置日期选择器
+- 重做菜单内输入框样式
 ## 说明
 - 主题的部分样式和功能无法仅通过CSS实现，因此必须安装并启用主题的配套插件：[Neo+](https://github.com/QYLexpired/Neo-Plus)（点击[此处](siyuan://bazaar/plugins/Neo-Plus/readme)跳转至Neo+集市页）
 - Neo主题和Neo+插件均不会对文档数据进行任何修改，可随时启用或停用，不存在迁移负担

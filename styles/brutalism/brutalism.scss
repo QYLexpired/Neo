@@ -1,5 +1,4 @@
 @use "../utils/variables/ease" as *;
-
 $brutalism-palettes: zine, retroconsole, bumblebee, glitch, acid, californiacoast, bubblegum;
 @mixin brutalism-palette {
     @each $p in $brutalism-palettes {

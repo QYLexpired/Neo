@@ -9,6 +9,7 @@
     - 移除主題對心智圖節點樣式的修改
     - 適配內建色彩選擇器
     - 適配內建日期選擇器
+- 重做選單內輸入框樣式
 ## 說明
 - 主題的部分樣式和功能無法僅透過 CSS 實現，因此必須安裝並啟用主題的配套外掛：[Neo+](https://github.com/QYLexpired/Neo-Plus)（點擊[此處](siyuan://bazaar/plugins/Neo-Plus/readme)前往 Neo+ 市集頁面）
 - Neo 主題和 Neo+ 外掛均不會對文件資料進行任何修改，可隨時啟用或停用，不存在遷移負擔
