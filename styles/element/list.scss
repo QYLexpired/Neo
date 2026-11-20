@@ -40,7 +40,11 @@ $neo-custom-task-codes: neo-list-exclude($neo-task-codes, $neo-standard-task-cod
             $selectors: list.append($selectors, "#{$item}[data-subtype=t] > .protyle-action--task#{$state}#{$body}", comma);
         }
     }
-    @return list.append($selectors, ".tabs-task#{$state}#{$label}", comma);
+    $selectors: list.append($selectors, ".tabs-task#{$state}#{$label}", comma);
+    @if not $text {
+        $selectors: list.append($selectors, ".mindmap-view .mindmap-view__task#{$state}", comma);
+    }
+    @return $selectors;
 }
 // 正文预览与 Markdown HTML 导出的任务输入控件
 @function neo-task-export-inputs($state: "") {
@@ -336,6 +340,14 @@ $neo-custom-task-codes: neo-list-exclude($neo-task-codes, $neo-standard-task-cod
     #{neo-task-export-inputs('[data-task="#{"\\"}#{$code}"]')} {
         --_list-accent-color: oklch(from var(--b3-theme-accent) l c calc(h + #{$hue}));
         mask-image: task-export-marker-mask($code);
+    }
+}
+.mindmap-view .mindmap-view__task {
+    --b3-list-icon-hover: transparent;
+    min-width: max(14px, 1em - 4px);
+    min-height: max(14px, 1em - 4px);
+    &:focus-visible {
+        outline-color: var(--b3-theme-accent);
     }
 }
 @include task-entrance-keyframes(neo-task-default-entrance);

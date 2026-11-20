@@ -1,3 +1,5 @@
+@use "../utils/variables/ease" as *;
+
 $brutalism-palettes: zine, retroconsole, bumblebee, glitch, acid, californiacoast, bubblegum;
 @mixin brutalism-palette {
     @each $p in $brutalism-palettes {
@@ -70,7 +72,8 @@ $brutalism-palettes: zine, retroconsole, bumblebee, glitch, acid, californiacoas
     .b3-text-field,
     .b3-select {
         box-shadow: var(--neo-main-shadow);
-        transition: background-color var(--b3-transition);
+        transition: background-color var(--b3-transition), $input-outline-transition;
+        transition-behavior: allow-discrete;
         &:hover,
         &:focus {
             animation: none;

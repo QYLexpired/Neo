@@ -4,17 +4,11 @@
 > 重要提醒：必須安裝並啟用主題的配套外掛 [Neo+](siyuan://bazaar/plugins/Neo-Plus/readme)
 ## 更新日誌
 完整更新紀錄可於 [CHANGELOG](https://github.com/QYLexpired/Neo/blob/main/CHANGELOG.md) 查看
-### <span style="font-family: neo;">1.8.5</span>
-- 最佳化了一些細節
-### <span style="font-family: neo;">1.8.4</span>
-- 適配思源 3.8.10
-    - 適配新版側欄結構
-    - 移除側欄樹狀分支的層級線
-    - 移除彩色文件樹功能
-    - 支援文件的富文字標題
-    - 支援全域麵包屑
-- 平滑游標的外觀與形狀可分別設定
-- 平滑游標支援自訂緩動參數
+### <span style="font-family: neo;">1.8.6</span>
+- 適配思源 3.8.11
+    - 移除主題對心智圖節點樣式的修改
+    - 適配內建色彩選擇器
+    - 適配內建日期選擇器
 ## 說明
 - 主題的部分樣式和功能無法僅透過 CSS 實現，因此必須安裝並啟用主題的配套外掛：[Neo+](https://github.com/QYLexpired/Neo-Plus)（點擊[此處](siyuan://bazaar/plugins/Neo-Plus/readme)前往 Neo+ 市集頁面）
 - Neo 主題和 Neo+ 外掛均不會對文件資料進行任何修改，可隨時啟用或停用，不存在遷移負擔

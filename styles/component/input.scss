@@ -1,5 +1,11 @@
 @use "../utils" as *;
 @use "button" as *;
+@mixin input-outline {
+    outline: 2px none transparent;
+    outline-offset: -3px;
+    transition: $input-outline-transition;
+    transition-behavior: allow-discrete;
+}
 @mixin input-common($focus: focus) {
     @include superellipse-use($radius-item);
     height: 28px;
@@ -9,31 +15,27 @@
     caret-color: currentColor;
     color: var(--b3-theme-on-background);
     background-color: var(--b3-list-hover);
-    --_neo-input-focus-shadow: 0 0 0 2px var(--neo-input-primary);
     box-shadow: unset;
-    outline: unset;
-    transition: box-shadow 200ms var(--neo-ease-out-3);
+    @include input-outline;
     box-sizing: border-box !important;
     &:hover {
         background-color: var(--b3-list-hover);
         box-shadow: unset;
-        outline: unset;
+        outline-style: none;
         &:not(.b3-text-field--text) {
             box-shadow: unset;
-            outline: unset;
+            outline-style: none;
         }
     }
     &:#{$focus} {
         box-shadow: unset;
         background-color: var(--b3-list-hover);
-        outline: unset;
+        outline-style: none;
+        transition-delay: 0s;
         &:not(.b3-text-field--text) {
-            box-shadow: var(--_neo-input-focus-shadow);
-            outline: unset;
+            outline: 2px solid var(--neo-input-primary);
+            outline-offset: -1px;
         }
-    }
-    .status & {
-        --_neo-input-focus-shadow: 0 0 0 2px var(--neo-input-primary) inset;
     }
 }
 .b3-select,
@@ -92,17 +94,21 @@ body.body--linux .b3-select { // body用来覆盖思源样式
         box-shadow: unset;
         border: unset;
         @include superellipse-use($radius-item);
+        @include input-outline;
         &:hover {
             background-color: var(--b3-list-hover);
             box-shadow: unset;
         }
         &:focus {
             background-color: var(--b3-list-hover);
-            box-shadow: 0 0 0 2px var(--neo-input-primary);
+            box-shadow: unset;
+            outline: 2px solid var(--neo-input-primary);
+            outline-offset: -1px;
+            transition-delay: 0s;
         }
     }
 }
-.b3-text-field:where(:not(.mindmap-view__relation-editor, .mindmap-view__summary-editor)) {
+.b3-text-field {
     @include input-common;
     .search__header & {
         box-shadow: none !important;
@@ -111,6 +117,7 @@ body.body--linux .b3-select { // body用来覆盖思源样式
     }
     .block__icons + & {
         box-shadow: none !important;
+        outline: none !important;
     }
     .b3-text-field__mask & {
         background-color: var(--b3-theme-background) !important;

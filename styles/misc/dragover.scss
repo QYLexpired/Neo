@@ -103,6 +103,12 @@
 .mindmap-view__node[data-mindmap-drop=after]::after {
     background-color: var(--b3-theme-secondary);
 }
+.mindmap-view__node[data-mindmap-drop=child] {
+    outline: 2px solid var(--b3-theme-secondary);
+    outline-offset: -2px;
+    background-color: transparent !important;
+    box-shadow: none !important;
+}
 // Dock 与顶栏排序预览
 #dockMoveItem,
 .toolbar__item[data-topbar-drag-placeholder] {

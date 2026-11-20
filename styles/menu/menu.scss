@@ -38,12 +38,11 @@
     & > .b3-menu__label .b3-text-field,
     & > .b3-select,
     & > .b3-menu__label .b3-select {
-        @include contrast-color(--neo-menu-primary, --_b3-text-field-box-shadow-reverse, 0.3);
-        box-shadow: 0 0 0 2px var(--_b3-text-field-box-shadow-reverse);
+        @include contrast-color(--neo-menu-primary, --_b3-text-field-outline-reverse, 0.3);
         @include contrast-color(--neo-menu-primary);
-        &:focus,
-        &:hover {
-            box-shadow: 0 0 0 2px var(--_b3-text-field-box-shadow-reverse) !important;
+        &:focus {
+            outline: 2px solid var(--_b3-text-field-outline-reverse) !important;
+            outline-offset: -1px;
         }
     }
 }
@@ -92,7 +91,7 @@
 .b3-menu__items {
     box-sizing: border-box; // 修复 https://github.com/QYLexpired/Neo/issues/83
     padding: 8px;
-    margin: -8px 0; // 解决部分菜单内输入框外阴影被裁剪的问题
+    margin: -8px 0; // 给贴边的菜单输入框留出聚焦环空间
 }
 .b3-menu__item {
     background-color: transparent;

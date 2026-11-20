@@ -6,7 +6,7 @@
 完整更新历史可查看[CHANGELOG](https://github.com/QYLexpired/Neo/blob/main/CHANGELOG.md)
 ### <span style="font-family: neo;">1.8.6</span>
 - 适配思源3.8.11
-    - 移除主题对思维导图样式的修改
+    - 移除主题对思维导图节点样式的修改
     - 适配内置颜色选择器
     - 适配内置日期选择器
 ## 说明
