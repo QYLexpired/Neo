@@ -6,6 +6,10 @@
 .protyle-breadcrumb__bar {
     @include overflow-fade-mask($fade-mask-m, "left right");
     scrollbar-width: none;
+    flex: unset !important;
+    & + .protyle-breadcrumb__space {
+        flex: 1 !important;
+    }
 }
 button.protyle-breadcrumb__arrow {
     position: relative;
